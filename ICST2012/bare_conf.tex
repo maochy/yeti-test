@@ -250,20 +250,30 @@ All tests were performed using 64-bit Mac OS X Version 10.7.4 running on Intel(R
 Experimental finding indicate that in 10\% cases DSSR strategy performs better than pure random and random plus strategy, in 2\% of cases pure random performs better, in 50\% cases DSSR and random plus are equivalent and in 38\% random plus performs better. 
 
 
-\begin{table} [ht]
-\caption{Summary of the total 9000 experiments }
-\center
-\begin{tabular} {|c|c|c|c|c|c|}
+
+\begin{center}
+\begin{table*}[ht]
+{\small
+\hfill{}
+\begin{tabular} {|l|c|c|c|c|c|c|c|}
 \hline\hline
-Strategy Name & Mean & Median & Standard Deviation & Min & Max \\[1ex]
+ & PR = DSSR = RP & PR & DSSR & RP & PR = DSSR & PR = RP & DSSR = RP  \\[1ex]
 \hline
-Random  &   &  &  &  & \\
-Random Plus  &   &  &  &  & \\
-DSSR &  &  &  &  & \\
+No of Faults &   &  &  &  & &  &   \\
+Mean  &   &  &  &  & &  &   \\
+Median &  &  &  &  & &  &   \\
+Standard Deviation &   &  &  & &  &  & \\
+Min No of Faults &   &   &  & &  &  & \\
+Max No of Faults &   &  &  & &  &  & \\
 \hline
 \end{tabular}
-\label{table:TestResults}
-\end{table}
+}
+\hfill{}
+\label{tb:results}
+\end{table*}
+\end{center}
+
+
 
 From the above table we can see that DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
 
@@ -274,12 +284,12 @@ From the above table we can see that DSSR has the highest Mean value of finding 
 \caption{Test Results of 34 classes from 16 Java projects.}
 \label{fig:Result1}
 \end{figure}
-\end{comment}
+
 
 
 Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
 
-
+\end{comment}
 %%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
 
 \section{Discussion}
