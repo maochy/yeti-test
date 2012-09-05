@@ -5,6 +5,8 @@
 \usepackage{graphics}
 \usepackage{rotating}
 \usepackage{verbatim}
+\usepackage{float}
+\restylefloat{table}
 \ifCLASSINFOpdf
 \else
 \fi
@@ -37,8 +39,8 @@ This paper presents an enhanced and improved form of automated random testing, c
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 Strategies in automated software testing tools are used with the aim to detect maximum number of faults in minimum possible time. This can be achieved if test strategy selects more fault targeted test cases from the input domain for the given Software Under Test (SUT). However, it is difficult to produce such targeted test cases because each system has its own requirements and functionality.\\
-\indent Chen et al.  \cite{Chen2008} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance of random testing increases by up to 50\% when test input is selected evenly across the whole input domain. Similarly Restricted Random Testing \cite{Chan2002}, Feedback directed Random Test Generation \cite{Pacheco2007a}, Mirror Adaptive Random Testing \cite{Chen2003} and Quasi Random Testing \cite{Chen2005} also stress on the need of test case selection covering the whole input domain for better results. \\
-\indent To produce more relevant and fault targeted test data for random testing, we developed an enhanced technique called Dirt Spot Sweeping Random (DSSR) strategy.  The following research issues about the DSSR strategy were considered and subsequently addressed:
+\indent Chen et al.  \cite{Chen2008} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance of random testing increases by up to 50\% when test input is selected evenly across the whole input domain. Similarly Restricted Random Testing \cite{Chan2002}, Feedback directed Random Test Generation \cite{Pacheco2007a}, Mirror Adaptive Random Testing \cite{Chen2003} and Quasi Random Testing \cite{Chen2005} also stress on the need of test case selection covering the whole input domain to get better results. \\
+\indent To produce more relevant and fault targeted test input data for random testing, we developed an enhanced technique called Dirt Spot Sweeping Random (DSSR) strategy.  The following research issues about the DSSR strategy were considered and subsequently addressed:
 \begin{enumerate}
 
 \item To get highly efficient algorithm for coping with the combination of strategies including pure random, random plus and spot sweeping.
@@ -59,7 +61,7 @@ The rest of this paper is organised as follows. Sections, II to X describe Dirt 
 %%%%%%%%%%%%%%%%%    DIRT SPOT SWEEPING STRATEGY  %%%%%%%%%%%%%%%
 
 \section{Dirt Spot Sweeping Random Strategy}
-Dirt Spot Sweeping Random (DSSR) strategy is a new strategy developed during present study. It is combination of the two existing strategies i.e. pure random and random plus with the addition of one new strategy called spot sweeping. It is based on two intuitions. One is that boundaries have interesting values and using these values in isolation can provide high impact on test results, the other is that faults can reside in block and strip pattern thus using neighbouring values of the fault finding value can lead us to the next fault in the same block or strip. This might increase the performance of the test strategy in terms of executing fewer number of test cases with more number of faults. Each component is briefly explained as follows.
+Dirt Spot Sweeping Random (DSSR) strategy is a new strategy developed during present study. It is combination of the two existing strategies i.e. pure random and random plus with the addition of one new strategy called spot sweeping. It is based on two intuitions. One is that boundaries have interesting values and using these values in isolation can provide high impact on test results, the other is that faults can reside in block and strip pattern thus using neighbouring values of the fault finding value can lead us to the next fault in the same block or strip. This might increase the performance of the test strategy in terms of executing fewer number of test cases with more number of faults. Each component is briefly explained as follows. 
 
 \subsection{Random Testing Strategy}
 Random testing is a black-box testing technique in which the SUT is executed against randomly selected test data. Test results obtained are compared against the oracle defined using SUT specifications in the form of contracts or assertions. In the absence of contracts/assertions the exceptions defined by the programming language in which the program is developed are used as test oracle. According to Beizer \cite{Beizer1990}, software performance is directly dependant on the combination of two main factors, correctness and robustness. Correctness is the expected behaviour of the software based on its specifications while robustness is the behaviour of the software which is not defined in its specifications. Since random testing generates test data randomly without any specific pattern therefore it effectively tests the performance of software by evaluating it for both correctness and robustness. This strategy because of its black-box testing nature is particularly effective in testing softwares where the developers want to keep the source code secret \cite{Chen2010}. The generation of random test data is comparatively cheap and does not require too much intellectual and computation efforts \cite{Ciupa2009}, \cite{Ciupa2008}. It is mainly for this reason that various researchers have recommended this strategy for incorporation in automatic testing tools \cite{Ciupa2008a}. YETI \cite{Oriol2010a}, \cite{Oriol2010}, AutoTest \cite{Leitner2007}, \cite{Ciupa2007}, QuickCheck \cite{Claessen2000}, Randoop \cite{Pacheco2007}, JArtage \cite{Oriat2004} are a few of the most common automated testing tools based on random strategy.\\
@@ -78,7 +80,7 @@ Random plus strategy \cite{Leitner2007} is extension of the pure random strategy
 Similarly the tester might also add some other special values that he considers effective in finding faults for the current SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5, 45 to 55 etc to the pre-defined list of special values in order to be selected for a test.This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of its more relevance and high chances of finding faults for the given SUT. It is reported that these special values have high impact on the results particularly detecting problems in specifications \cite{Ciupa2008}.
 
 \subsection{Dirt Spot Sweeping}
-Chen et al. \cite{Chen2008} found that there are patterns of failure-causing inputs across the input domain as shown in Figure \ref{fig:patterns}. They divided these patterns into three types called block, point and strip patterns. They also argued that a strategy can get more chances of hitting these fault patterns if test cases far away from each other are selected. Other researchers \cite{Chan2002}, \cite{Chen2003} and \cite{Chen2005} also tried to generate test cases further away from one another targeting these patterns and achieved higher performance.\\
+Chen et al. \cite{Chen2008} found that there are patterns of failure-causing inputs across the input domain. Figure \ref{fig:patterns} show these patterns for two diminutional input domain. They divided these patterns into three types called block, point and strip patterns. Black points, boxes and strips inside the box show the input that causes the system to fail while white space inside the box represent the non failure-causing or genuine input. Black square box represent the boundary values. They also argued that a strategy can get more chances of hitting these fault patterns if test cases far away from each other are selected. Other researchers \cite{Chan2002}, \cite{Chen2003} and \cite{Chen2005} also tried to generate test cases further away from one another targeting these patterns and achieved higher performance.\\
 \begin{figure}[ht]                                    
 \centering
 \includegraphics[width= 8cm,height=2.5cm]{ART_Patterns.png}
@@ -178,6 +180,7 @@ When test start all 3 faults are quickly discovered by DSSR strategy in the foll
 \indent From the above execution process we can understand that, in this example, pre-defined values including border values, fault finding values and its surrounding values lead us quickly to the available faults and in less number of tests as compared to Random and Random plus strategy which takes longer to discover the same faults because they try to find faults randomly even when the first fault found is very close to the second.
 
 
+
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
 
 
@@ -244,40 +247,162 @@ All tests were performed using 64-bit Mac OS X Version 10.7.4 running on Intel(R
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 
 \section{Results}
+Experimental finding indicate that in XX\% experiments DSSR strategy performs better than pure random and random plus strategy, in YY\% experiment pure random performs better, in ZZ\% experiments DSSR and random plus are equivalent and in XYZ\% random plus performs better. 
 
-Experimental finding indicate that in 10\% cases DSSR strategy performs better than pure random and random plus strategy, in 2\% of cases pure random performs better, in 50\% cases DSSR and random plus are equivalent and in 38\% random plus performs better. 
 
 
-\begin{table} [ht]
-\caption{Summary of the total 9000 experiments }
-\center
-\begin{tabular} {|c|c|c|c|c|c|}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{49 Experiments where Pure random and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|}
 \hline\hline
-Strategy Name & Mean & Median & Standard Deviation & Min & Max \\[1ex]
-\hline
-Random  &   &  &  &  & \\
-Random Plus  &   &  &  &  & \\
-DSSR &  &  &  &  & \\
+No of Experiments 	& 49  	\\
+Mean  			& 12.32  	\\
+Median 			& 5 		\\
+Standard Deviation 	& 17.73  	\\
+Min No of Faults	&  0  		\\
+Max No of Faults 	& 68  	\\
 \hline
 \end{tabular}
-\label{table:TestResults}
+\label{table:nonlin}
 \end{table}
 
-From the above table we can see that DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\caption{1 out of 80 Experiments where Pure random and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline\hline
+ 				& RP = DSSR			&  PR \\[1ex]
+\hline
+Mean  			&    11				&  10.06\\
+Median 			&    11 				&  11\\
+Standard Deviation 	&    0					&  2.42\\
+Min No of Faults	&    11				&  4\\
+Max No of Faults 	&    11				&  11\\
+\hline
+\end{tabular}
+\label{table:result5}
+\end{table}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{table}[H]
+\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    16.78		&  16.65			&  16.6\\
+Median 			&    17    		&  17				&  17 \\
+Standard Deviation 	&    8.91		&  8.95			&  9.03\\
+Min No of Faults	&    1			&  1				&  1\\
+Max No of Faults 	&    17		&  17				& 17\\
+\hline
+\end{tabular}
+\label{table:result1}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{7 out of 80 Experiments where DSSR strategy performed better than Pure Random and Random Plus}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    23.44		&  26.36			&  26.32\\
+Median 			&    12 		&  12 			&  12 \\
+Standard Deviation 	&    15.81		&  14.70			&  14.85\\
+Min No of Faults	&    0			&  4				&  4\\
+Max No of Faults 	&    45		&  45				&  46\\
+\hline
+\end{tabular}
+\label{table:result2}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    26.32		&  26.68			&  26.95\\
+Median 			&    7 		&  7.5 			&  8 \\
+Standard Deviation 	&    31.39		&  31.02			&  31.15\\
+Min No of Faults	&    1			&  2				&  1\\
+Max No of Faults 	&    83		&  83				&  83\\
+\hline
+\end{tabular}
+\label{table:result3}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{4 out of 80 Experiments where Random Plus and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline\hline
+ 				& RP = DSSR			&  PR \\[1ex]
+\hline
+Mean  			&    13.76				&  11.18\\
+Median 			&    7 				&  5\\
+Standard Deviation 	&    15.22				&  11.60\\
+Min No of Faults	&    3					&  0\\
+Max No of Faults 	&    40				&  31\\
+\hline
+\end{tabular}
+\label{table:result4}
+\end{table}
+
+
+
+
+
+Note mian ( write that there was no case Pure Random is equal to Random Plus.\\
+
+
+From the table \ref{table:results} we can see that in 49 out of 80 experiments all three strategies found equal number of faults. Which means that each strategy is capable enough to find all the faults in one lac test calls. In 11 out of remaining 31 classes Pure Random found highest number of faults. In 7 experiments DSSR found the highest number of faults while in same number of cases Random Plus performed better than DSSR and Pure Random. In 5 experiments both DSSR and Random Plus performed equally well while in only 1 experiment PR and DSSR performed better than Random Plus. 
 
 \begin{comment}
+DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
+
 \begin{figure}[ht]
 \centering
 \includegraphics[width=9cm,height=7cm]{newResults.png}
 \caption{Test Results of 34 classes from 16 Java projects.}
 \label{fig:Result1}
 \end{figure}
-\end{comment}
+
 
 
 Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
 
+\end{comment}
 
+\newpage
 %%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
 
 \section{Discussion}
