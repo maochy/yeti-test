@@ -38,7 +38,7 @@ This paper presents an enhanced and improved form of automated random testing, c
 
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-Strategies in automated software testing tools are used with the aim to detect maximum number of faults in minimum possible time. This can be achieved if test strategy selects more fault targeted test cases from the input domain for the given Software Under Test (SUT). However, it is difficult to produce such targeted test cases because each system has its own requirements and functionality.\\
+Success of software testing is based mainly on the number of faults it discovers in the Software Under Test (SUT). An efficient testing process would discover maximum number of faults in minimum possible time. Exhaustive testing where software is tested against all possible inputs is not feasible in most cases because of large amount of inputs, limited resources and strict time constraints. Therefore, strategies in automated software testing tools are developed with the aim to selects more of the fault finding test cases from the input domain for the given SUT. However, it is difficult to produce such targeted test cases because each system has its own requirements and functionality.\\
 \indent Chen et al.  \cite{Chen2008} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance of random testing increases by up to 50\% when test input is selected evenly across the whole input domain. Similarly Restricted Random Testing \cite{Chan2002}, Feedback directed Random Test Generation \cite{Pacheco2007a}, Mirror Adaptive Random Testing \cite{Chen2003} and Quasi Random Testing \cite{Chen2005} also stress on the need of test case selection covering the whole input domain to get better results. \\
 \indent To produce more relevant and fault targeted test input data for random testing, we developed an enhanced technique called Dirt Spot Sweeping Random (DSSR) strategy.  The following research issues about the DSSR strategy were considered and subsequently addressed:
 \begin{enumerate}
@@ -385,6 +385,73 @@ Note mian ( write that there was no case Pure Random is equal to Random Plus.\\
 
 
 From the table \ref{table:results} we can see that in 49 out of 80 experiments all three strategies found equal number of faults. Which means that each strategy is capable enough to find all the faults in one lac test calls. In 11 out of remaining 31 classes Pure Random found highest number of faults. In 7 experiments DSSR found the highest number of faults while in same number of cases Random Plus performed better than DSSR and Pure Random. In 5 experiments both DSSR and Random Plus performed equally well while in only 1 experiment PR and DSSR performed better than Random Plus. 
+Table \ref{table:DSS_Faults} include names of all the faults that DSSR strategy found in respective classes. Duplicate faults were removed for simplicity.
+
+
+
+
+%%%%%%%%%%%    UNIQUE FAULTS FOUND BY YETI      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\caption{Unique faults found by DSS in respective class} % title of Table
+\centering % used for centering table
+\begin{tabular}{| l | l |} % centered columns (4 columns)
+\hline\hline %inserts double horizontal lines
+Class Name & Unique Fault Name \\ [0.5ex] % inserts table
+%heading
+\hline % inserts single horizontal line
+\multirow{3}{*}{java.lang.ProcessBuilder} & NullPointerException\\ % inserting body of the table
+& YetiSecurityException\\ % inserting body of the table
+& ArrayIndexOutOfBoundsException\\ % inserting body of the table
+\hline
+\multirow{2}{*}{java.lang.ClassLoader} & NoClassDefFoundError\\ % inserting body of the table
+& IndexOutOfBoundsException\\ % inserting body of the table
+\hline
+\multirow{3}{*}{java.lang.Character} & StringIndexOutOfBoundsException\\ % inserting body of the table
+& ArrayIndexOutOfBoundsException\\ % inserting body of the table
+& IllegalArgumentException\\ % inserting body of the table
+\hline
+\multirow{7}{*}{java.util.Scanner} & IllegalArgumentException\\ % inserting body of the table
+& NoSuchElementException\\ % inserting body of the table
+& PatternSyntaxException\\ % inserting body of the table
+& IllegalStateException\\ % inserting body of the table
+& StringIndexOutOfBoundsException\\ % inserting body of the table
+& InputMismatchException\\ % inserting body of the table
+& UnsupportedOperationException\\ % inserting body of the table
+\hline
+\multirow{2}{*}{java.util.Properties} & NullPointerException\\ % inserting body of the table
+& ClassCastException\\ % inserting body of the table
+\hline
+\multirow{2}{*}{java.util.Calendar} & ArrayIndexOutOfBoundsException\\ % inserting body of the table
+& IllegalArgumentException\\ % inserting body of the table
+\hline
+java.lang.Double & NullPointerException\\ % inserting body of the table
+\hline
+\multirow{3}{*}{java.lang.Thread} & IllegalArgumentException\\ % inserting body of the table
+& IllegalThreadStateException\\ % inserting body of the table
+& NoSuchMethodError\\ % inserting body of the table
+\hline
+\multirow{4}{*}{java.lang.String}& PatternSyntaxException\\ % inserting body of the table
+& IndexOutOfBoundsException\\ % inserting body of the table
+& StringIndexOutOfBoundsException\\% inserting body of the table % [1ex] adds vertical space
+\hline
+\multirow{5}{*}{java.lang.Collections}& ClassCasteException\\ % inserting body of the table
+& IndexOutOfBoundsException\\ % inserting body of the table
+& UnsupportedOperationException\\
+& IllegalArgumentException\\
+& OutOfMemoryError\\ [1ex]% inserting body of the table % [1ex] adds vertical space
+\hline
+\hline %inserts single line
+\end{tabular}
+\label{table:DSS_Faults} % is used to refer this table in the text
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{comment}
 DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
