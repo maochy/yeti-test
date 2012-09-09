@@ -10,42 +10,42 @@ Database file #1: bare_conf.bib
 Done.
 You've used 30 entries,
             4039 wiz_defined-function locations,
-            1049 strings with 13736 characters,
-and the built_in function-call counts, 24569 in all, are:
-= -- 1977
-> -- 517
-< -- 193
-+ -- 281
-- -- 84
-* -- 1223
-:= -- 3693
-add.period$ -- 77
+            1049 strings with 13767 characters,
+and the built_in function-call counts, 24740 in all, are:
+= -- 1995
+> -- 528
+< -- 198
++ -- 287
+- -- 86
+* -- 1233
+:= -- 3717
+add.period$ -- 76
 call.type$ -- 30
 change.case$ -- 28
-chr.to.int$ -- 474
+chr.to.int$ -- 483
 cite$ -- 30
-duplicate$ -- 1755
-empty$ -- 2129
-format.name$ -- 107
-if$ -- 5703
+duplicate$ -- 1761
+empty$ -- 2119
+format.name$ -- 109
+if$ -- 5742
 int.to.chr$ -- 0
 int.to.str$ -- 30
 missing$ -- 309
 newline$ -- 149
 num.names$ -- 30
-pop$ -- 730
+pop$ -- 725
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1880
+skip$ -- 1895
 stack$ -- 0
-substring$ -- 1148
-swap$ -- 1412
-text.length$ -- 35
+substring$ -- 1169
+swap$ -- 1429
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 30
 warning$ -- 0
-while$ -- 115
+while$ -- 114
 width$ -- 32
-write$ -- 360
+write$ -- 361
