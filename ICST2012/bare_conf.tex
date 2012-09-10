@@ -257,7 +257,7 @@ Experimental finding indicate that in XX\% experiments DSSR strategy performs be
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{49 Experiments where Pure random and DSSR performed equally better}
+\caption{49 Experiments where each strategy performed equally better}
 \centering
 \begin{tabular}{|l|c|}
 \hline\hline
@@ -319,6 +319,13 @@ Max No of Faults 	&    17		&  17				& 17\\
 \label{table:result1}
 \end{table}
 
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6cm,height=6cm]{RandomBetter.png}
+\caption{Pure Random showing better results.}
+\label{fig:Result1}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -339,6 +346,15 @@ Max No of Faults 	&    45		&  45				&  46\\
 \label{table:result2}
 \end{table}
 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6cm,height=6cm]{DSSRBetter.png}
+\caption{DSSR showing better results.}
+\label{fig:Result1}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
@@ -358,6 +374,13 @@ Max No of Faults 	&    83		&  83				&  83\\
 \label{table:result3}
 \end{table}
 
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6cm,height=6cm]{RandomPlusBetter.png}
+\caption{Random plus showing better results.}
+\label{fig:Result1}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -517,6 +540,11 @@ From the research we came to know that random testing is not very good in genera
 \endgroup
 \indent We also know that if the fault finding value is not in the list than DSSR has to wait for random testing to generate the fault finding value and only after that DSSR strategy will add that value and its surrounding values to the list of interesting values. To decrease the dependancy of DSSR strategy on random and random plus strategy, further work is in progress to add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained either from .java or .class files of the SUT. We are also working to add  neighbouring values of the literals to the list of interesting values. \\
 \indent Thus if we have the above example then the value 34.4445 and its surrounding values will be added to the list of interesting values before the test starts and DSSR strategy will no more be dependent on random testing to find the first fault. Finally, it will also be interesting to evaluate the DSSR strategy in terms of coverage because the newly added values are most suitable for test cases and therefore can increase branch coverage. 
+
+
+%%%%%%%%%%%%%%%%%    ACKNOWDLEGEMENT   %%%%%%%%%%%%%%%%%%%%
+\section{Acknowledgment}
+The auther would like to acknowldge with thanks the Department of Computer Science, University of York for the financial support extended as Departmental Overseas Research Scholarship (DORS) which enabled him to continue higher studies leading to PhD. We extend our sincere thanks and appreciation to Prof. Richard Page, Head of the Enterprise System's group of the Department of Computer Science for his valuable help and generous support.\\
 
 \bibliographystyle{IEEEtran}
 \bibliography{bare_conf}
