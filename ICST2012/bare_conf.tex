@@ -215,17 +215,38 @@ If no particular strategy is defined during test initialization then YETI uses R
 
 \section{Evaluation}
 
-\subsection{Use of Qualitas Corpus for evaluation}
-To evaluate the performance of DSSR strategy we performed extensive testing of programs that cover full set of Java applications. Qualitas corpus \cite{Tempero2010a} is a curated collection of such open source java projects built with the aim to help testers in empirical research. These projects are collected in an organized form containing both the source and binary form. The reason for including source code is that most of the binaries do not include infrastructure code like code for demonstrating aspects of the system, testing, installation and building or management tasks. In its latest version 20101126, it contains 106 open source java projects. It is available in two distributions. The release version ``r'' and the evolution version ``e''. The release version is compact size that contain only the recent version of the projects while the evolution version is more detailed which consists of more than 10 different versions of each project.\\
+To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random plus (R+)~\cite{Oriol2010} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability are respectively set to 0.5 and XXX.\\
 
-\subsection{Evaluation by comparison under identical conditions}
-The comparative performance of DSSR strategy was determined with pure random strategy and random plus strategy by applying them to similar systems under identical conditions. The general factors like system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability were kept constant for each test strategy. For all experiments, where applicable, the interesting value injection probability was set at 0.5, so that 50\% of the test values are selected from the list of interesting values and the remaining 50\% are selected randomly.\\
+\subsection{Experiments}
+To evaluate the performances of the DSSR strategy we performed extensive testing of programs from the Qualitas Corpus \cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 80 classes at random from all classes in the Qualitas Corpus and test each of them thirty times with each strategy.
+%It is available in two distributions. The release version ``r'' and the evolution version ``e''. The release version is compact size that contain only the recent version of the projects while the evolution version is more detailed which consists of more than 10 different versions of each project.\\
+%Extensive experiments were carried out to evaluate the performance of DSSR strategy. Every class was tested 30 times by random, random plus and DSSR strategy. 
+%The total number of testing sessions performed is 80 x 30 x 3 = 7200. 
+Each class is evaluated through $10^5$ calls in each testing session.\footnote{The total number of tests is thus $80\times 30\times 3 \times 10^5 = 720\times 10^6~tests$.} 
+Because of the absence of the contracts and assertions in the code under test, similarly to previous approaches~\cite{Oriol2012}, we use undeclared exceptions to compute unique failures found.
 
-\subsection{Minimizing the effect of randomness}
-\indent Random strategy is characterized by random input and random output. In random strategy all the faults found in one test run may not necessarily be found in the second test run. Therefore the performance of random strategy cannot be evaluated with a few test sessions. To minimize the random behaviour of random testing every class was tested 30 times by each pure random, random plus and DSSR strategy. This was achieved by creating a batch executable script with the handy feature of YETI called Compact Report which logs each test report to a file for later evaluation.
+%\indent Commands for executing the experiments using pure random, random plus and DSSR strategies were as follows. Prog1 is the name of the class and nTests is the number of tests set to be executed during this experiment.\\
+%
+%\begingroup
+%    \fontsize{7pt}{10pt}\selectfont
+%\begin{itemize}
+%\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -random.
+%\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -randomPlus.
+%\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -DSSR.\\
+%\end{itemize}
+%\endgroup
+%
+%
+
+All tests are performed using a 64-bit Mac OS X Version 10.7.4 running on Intel(R) Core(TM)2 Duo CPU E8400 @ 3.00GHz with 6.00 GB RAM. Yeti runs on top of the Java(SE) Runtime Environment [Version 6.1.7601]. The machine took approximately 100 hours to process the experimental data.\\
+
+
+%\subsection{Stability of experiments}
+%Random strategies are characterized by using random input. In random strategy all the faults found in one test run may not necessarily be found in the second test run. Thus, the performance of random strategy cannot be evaluated with a few test sessions. To minimize the random behaviour of random testing every class was tested 30 times by each pure random, random plus and DSSR strategy. This was achieved by creating a batch executable script with the handy feature of YETI called Compact Report which logs each test report to a file for later evaluation.
 
 \subsection{Performance measurement criteria}
-Various measures including E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) received criticism from researchers \cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. F-measure (number of test cases used to find the first fault) has been often used by researchers  \cite{Chen1996}, \cite{Chen2004}. In our initial experiments F-measure was used to calculate the efficiency. Soon after a few experiments, it was realized that this was not the right choice because in some experiments the first strategy found first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. Preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair. Moreover, for random testing F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
+// WE NEED TO SHORTEN THIS
+Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were hevily criticized~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996,Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realized that this was not the right choice because in some experiments the first strategy found first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. Preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair. Moreover, for random testing F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
 
 \begingroup
     \fontsize{7pt}{8pt}\selectfont
@@ -238,27 +259,31 @@ Various measures including E-measure, P-measure and F-measure have been used by 
   
 The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured in terms of finding maximum number of faults in a particular number of test calls  \cite{Ciupa2007}, \cite{Pacheco2007a}, \cite{Ciupa2008b} which was 10,0000 calls per class. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
 
-\subsection{Experiments}
-\indent Extensive experiments were carried out to evaluate the performance of DSSR strategy. Every class was tested 30 times by random, random plus and DSSR strategy. The total experiments performed is 80 x 30 x 3 = 7200. Each class was evaluated by 1 lac test cases in each experiment so the total number of test cases in 7200 experiments are 7200 x 100000 = 720,000,000. The automated oracle used for all experiments was the defined exception of the language because of the absence of the contracts and assertions in the code under test.\\
-\indent Commands for executing the experiments using pure random, random plus and DSSR strategies were as follows. Prog1 is the name of the class and nTests is the number of tests set to be executed during this experiment.\\
 
-\begingroup
-    \fontsize{7pt}{10pt}\selectfont
-\begin{itemize}
-\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -random.
-\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -randomPlus.
-\item java yeti.Yeti -java -testModules=Prog1 -nTests=10000 -nologs -gui -DSSR.\\
-\end{itemize}
-\endgroup
-
-
-
-All tests were performed using 64-bit Mac OS X Version 10.7.4 running on Intel(R) Core(TM)2 Duo CPU E8400 @ 3.00GHz with 6.00 GB RAM. Furthermore, Java(SE) Runtime Environment [Version 6.1.7601] was used. The machine took 100 hours to process the experimental data.\\
 
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 
 \section{Results}
+// HERE IS THE NEW STRUCTURE
+
+Present the data with the graphs that Mian generated using Excel.
+
+Add data about the number of classes that are best served with each strategy and which are equivalently in the caption of the figure and in the text.
+
+Present basic statistical data (max min, mean, std deviation) about each strategy aggregated over all classes.
+
+Present each of the 6 categories (best with R, best with R+, best with DSSR, R=R+>DSSR, DSSR=R>R+, and DSSR=R+>R)
+
+Conclusions: 
+- we show that for roughly 10% of classes R+ works best, for 10% DSSR works best, 10% RT works best
+- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
+
+
+Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
+
+// END NEW STRUCTURE
+
 Experimental finding indicate that in XX\% experiments DSSR strategy performs better than pure random and random plus strategy, in YY\% experiment pure random performs better, in ZZ\% experiments DSSR and random plus are equivalent and in XYZ\% random plus performs better. 
 
 
