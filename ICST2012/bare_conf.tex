@@ -298,11 +298,8 @@ The literature review revealed that F-measure is used where testing stops after 
 
 Present the data with the graphs that Mian generated using Excel.
 
-Add data about the number of classes that are best served with each strategy and which are equivalently in the caption of the figure and in the text.
 
-Present basic statistical data (max min, mean, std deviation) about each strategy aggregated over all classes.
 
-Present each of the 6 categories (best with R, best with R+, best with DSSR, R=R+>DSSR, DSSR=R>R+, and DSSR=R+>R)
 
 Conclusions: 
 - we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
@@ -311,158 +308,245 @@ Conclusions:
 
 Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
 
-%%%%%%%%%%%%%%%%%%%%%%% Stat Data %%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Present each of the 6 categories (best with R, best with R+, best with DSSR, R=R+>DSSR, DSSR=R>R+, and DSSR=R+>R)
+%  Add data about the number of classes that are best served with each strategy and which are equivalently in the caption of the figure and in the text.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{49 Experiments where each strategy performed equally better}
+\centering
+\begin{tabular}{|l|c|}
+\hline\hline
+No of Experiments 	& 49  	\\
+Mean  			& 12.32  	\\
+Median 			& 5 		\\
+Standard Deviation 	& 17.73  	\\
+Min No of Faults	&  0  		\\
+Max No of Faults 	& 68  	\\
+\hline
+\end{tabular}
+\label{table:nonlin}
+\end{table}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{table}[H]
+\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    16.78		&  16.65			&  16.6\\
+Median 			&    17    		&  17				&  17 \\
+Standard Deviation 	&    8.91		&  8.95			&  9.03\\
+Min No of Faults	&    1			&  1				&  1\\
+Max No of Faults 	&    17		&  17				& 17\\
+\hline
+\end{tabular}
+\label{table:result1}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5cm,height=4cm]{Randombetter5.png}
+\caption{Random better.}
+\label{fig:Randombetter}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    26.32		&  26.68			&  26.95\\
+Median 			&    7 		&  7.5 			&  8 \\
+Standard Deviation 	&    31.39		&  31.02			&  31.15\\
+Min No of Faults	&    1			&  2				&  1\\
+Max No of Faults 	&    83		&  83				&  83\\
+\hline
+\end{tabular}
+\label{table:result3}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{RandomPlusbetter5.png}
+\caption{Random Plus better.}
+\label{fig:RandomPlusbetter}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{7 out of 80 Experiments where DSSR strategy performed better than Pure Random and Random Plus}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    23.44		&  26.36			&  26.32\\
+Median 			&    12 		&  12 			&  12 \\
+Standard Deviation 	&    15.81		&  14.70			&  14.85\\
+Min No of Faults	&    0			&  4				&  4\\
+Max No of Faults 	&    45		&  45				&  46\\
+\hline
+\end{tabular}
+\label{table:result2}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{DSSRbetter5.png}
+\caption{DSSR Better.}
+\label{fig:DSSRbetter}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{table}[H]
+\caption{1 out of 80 Experiments where Pure random and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline\hline
+ 				& RP = DSSR			&  PR \\[1ex]
+\hline
+Mean  			&    11				&  10.06\\
+Median 			&    11 				&  11\\
+Standard Deviation 	&    0					&  2.42\\
+Min No of Faults	&    11				&  4\\
+Max No of Faults 	&    11				&  11\\
+\hline
+\end{tabular}
+\label{table:result5}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{DSSRequaltoPureRandom5.png}
+\caption{DSSR equal to Pure Random.}
+\label{fig:DSSRequaltoPureRandom}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{table}[H]
+\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    16.78		&  16.65			&  16.6\\
+Median 			&    17    		&  17				&  17 \\
+Standard Deviation 	&    8.91		&  8.95			&  9.03\\
+Min No of Faults	&    1			&  1				&  1\\
+Max No of Faults 	&    17		&  17				& 17\\
+\hline
+\end{tabular}
+\label{table:result1}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{Randombetter5.png}
+\caption{Random better.}
+\label{fig:Randombetter}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline\hline
+ 				& PR			&  DSSR 			& RP \\[1ex]
+\hline
+Mean  			&    26.32		&  26.68			&  26.95\\
+Median 			&    7 		&  7.5 			&  8 \\
+Standard Deviation 	&    31.39		&  31.02			&  31.15\\
+Min No of Faults	&    1			&  2				&  1\\
+Max No of Faults 	&    83		&  83				&  83\\
+\hline
+\end{tabular}
+\label{table:result3}
+\end{table}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{RandomPlusbetter5.png}
+\caption{Random Plus better.}
+\label{fig:RandomPlusbetter}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{4 out of 80 Experiments where Random Plus and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline\hline
+ 				& RP = DSSR			&  PR \\[1ex]
+\hline
+Mean  			&    13.76				&  11.18\\
+Median 			&    7 				&  5\\
+Standard Deviation 	&    15.22				&  11.60\\
+Min No of Faults	&    3					&  0\\
+Max No of Faults 	&    40				&  31\\
+\hline
+\end{tabular}
+\label{table:result4}
+\end{table}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=5cm,height=4cm]{DSSRequaltoRandomPlus5.png}
+\caption{DSSR equal to RandomPlus.}
+\label{fig:DSSR equal to Random Plus}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Present basic statistical data (max min, mean, std deviation) about each strategy aggregated over all classes.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
-needs formatting.
-\newpage
- \scriptsize
-    \begin{tabular}{|c|l|c|c|c|c|c|c|c|c|c|c|c|}
-      \hline
-      \multirow{2}{*}{S. No}	&\multirow{2}{*}{Class Name}	&\multirow{2}{*}{DSSR}	&	\multirow{2}{*}{R}	&	\multirow{2}{*}{R+}	& \multicolumn{2}{|c|}{Mean}	&\multicolumn{2}{|c|}{Std. Dev} & \multicolumn{2}{|c|}{Min} & \multicolumn{2}{|c|}{max}\\
-      \cline{6-13}
-             	& 			&&&		& DSSR/R		& DSSR/R+		& DSSR/R		& DSSR/R+		& DSSR/R		& DSSR/R+		& DSSR/R	 &	DSSR/R+	\\
-	 \hline
-      
-      1		& Routine				&&&& 1		& 1		&  0		& 0		& 1		& 1		& 1		& 1	\\
-      2		& Response			&&&& 1		& 1		&  0		& 0		& 1		& 1		& 1		& 1	\\
-      3		& Repository			&&&& 1.2	& 1		&  0		& 0		& 1.29	& 1		& 1.29	& 1	\\
-      4		& Rectangle			&&&& 1		& 1		&  0		& 0		& 1		& 1		& 1		& 1	\\
-      5		& Project				&&&& 1.05	& 1.03	&  1.29	& 1.6	& 1.06	& 1.03	& 1.09	& 1	\\
-      6		& ProjectFactory		&&&& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      7		& PersistentSet			&&&& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      8		& PersistentMap	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      9		& PersistentList		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      10	& PersistentBag	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      1	1	& NodeSet	 	&&&	& 0.98	& 0.99	& 0		& 0		& 1		& 1		& 1		& 1	\\ 
-      1	2	& NodeSequence	&&&	& 0.96	& 0.99	& 1.26	& 0.9	& 1		& 1		& 0.95	& 0.97	\\
-      1	3	& NameEntry 		&&&	& 1		& 1		& 0.89	& 0.81	& 1		& 1		& 1		& 1	\\
-      1	4	& MultiCast		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      1	5	& Mat4			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      1	6	& List			&&&	& 1.01	& 0.94	& 0		& 0		& 0.5	&  0.5	& 1		& 1	\\
-      1	7	& JMXUtilities		&&&	& 1.02	& 0.99	& 1.62	& 1.55	& 1.16	& 1		& 1		& 1	\\
-      1	8	& JavaWrapper		&&&	& 1.98	& 1		& 0.64	& 1.13	& 1.5	& 1		& 1		& 1	\\
-      1	9	& ItemSet			&&&	& 1		& 1		& 0.71	& 0.71	& 1		& 1		& 1		& 1	\\
-      20	& IntHolder		&&&	& 1		& 1		& 0		& 0		& 0		& 0		& 0		& 0	\\
-      21	& InstrumentTask	&&&	& 1.03	& 1.01	& 0		& 0		& 2		& 2		& 1		& 1	\\
-      22	& Image			&&&	& 0.91	& 1.04	& 0		& 0		& 0.71	& 1.25	& 0.83	& 1.07	\\
-      23	& HttpAuth 		&&&	& 1		& 1		& 0.71	& 1		& 1		& 1		& 1		& 1	\\
-      24	& Group			&&&	& 1		& 1.09	& 0.81	& 0.69	& 1		& 2.75	& 1		& 1	\\
-      25	& Generator		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      26	& FPGrowth		&&&	& 1		& 1		& 0		& 0		& 1		& 1		&  1		& 1	\\
-      27	& Font 			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      28	& FileUtil			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      29	& Files			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      30	& FileHandler		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      31	& Facade			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      32	& Entry			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      33	& EntryComparator	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      34	& EntityDecoder	&&&	& 1.02	& 1.00	& 1.02	& 0.96	&  1		& 1		& 1		& 1	\\
-      35	& Entities			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      36	& DOMParser		&&&	& 1.03	& 1		& 0		& 0		& 0		& 1		& 1		& 1	\\
-      37	& DiskIO			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      38	& Scanner		&&&	& 1.08	& 1		& 0.17	& 1.06	& 0		& 1.03	& 1		& 1.02	\\
-      39	& Debug			&&&	& 1.05	& 1.06	& 1.48	& 1.62	& 1		& 1		& 1.33	& 1.33	\\
-      40	& ColumbaClient	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      41	& ClassLoaderLogM.&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      42	& CheckAssociator	&&&	& 0.98	& 1.08	& 1.10 	& 0.59	& 1		& 1		&  1.12	& 1	\\
-      43	& CatalogManager	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      44	& Capabilities		&&&	& 1.08	& 0.90	& 1.10	& 0.90	& 1		& 1		& 1		& 1	\\
-      45	& BitSet			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      46	& BaseColor		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      47	& ArchiveUtil		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      48	& Apriori			&&&	& 1.02	& 0.97	& 1.24	& 0.88	& 1		& 1		& 1		& 1	\\
-      49	& AntTypeDefinition	&&&	& 0.96	& 1.01	& 0.82	& 0.82	& 1		& 1		& 1		& 1	\\
-      50	& AjTypeImpl		&&&	& 0.99	& 0.99	& 0.73	& 0.72	& 1		& 1		& 1		& 1	\\
-      51	& AdminCore		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      52	& ActionTranslator	&&&	& 1		& 1		& 0		& 0		& 1.01	& 1		& 1		& 1	\\
-      53	& RubyBigDecimal	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      54	& Scanner		&&&	& 0.93	& 1.09	& 1.35	& 1.14	& 1		& 1		& 1		& 1	\\
-      55	& Scene			&&&	& 0.99	& 1		& 0.99	& 1		& 1		& 1		& 1		& 1	\\
-      56	& SelectionManager	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      57	& Server			&&&	& 1.07	& 0.9	& 0.89	& 1.01	& 0.90	& 0.83	& 0.90	& 0.83	\\
-      58	& Sorter			&&&	& 1.52	& 1		& 0		& 0		& 3		& 1		& 1.5	& 1	\\
-      59	& Sorting			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      60	& SSL			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      61	& Statistics		&&&	& 1.58	& 1		& 0		& 1.2	& 0		& 1		& 0		& 1	\\
-      62	& Status			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      63	& Stopwords		&&&	& 1.08	& 0.99	& 2.68	& 1.02	& 1		& 1		& 1		& 1	\\
-      64	& StringHelper		&&&	& 1		& 0.98	& 1.04	& 1		& 1.02	& 1		& 1		& 0.97	\\
-      65	& StringUtils		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      66	& TextImpl		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      67	& TouchCollector	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      68	& Trie			&&&	& 0.99	& 0.99	& 0.48	& 0.59	& 1		& 1		& 1		& 1	\\
-      69	& URI			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      70	& Utilities			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      71	& WebMacro		&&&	& 1.01	& 1		& 0		& 1.43	& 1		& 1		& 1.4	& 1.16	\\
-      72	& XMLAttributesImpl	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      73	& XMLChar		&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      74	& XMLEntityManager&&&	& 0.99	& 1		& 1		& 1		& 0.94	& 1		& 0.94	& 1	\\
-      75	& XMLEntityScanner	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      76	& XMLErrorReporter	&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      77	& XObject			&&&	& 1		& 1		& 0		& 0		& 1		& 1		& 1		& 1	\\
-      78	& XString			&&&	& 0.99	& 1		& 1.24	& 0.85	& 1		& 1		& 1		& 1	\\
-      79	& 			&&&	& 	& 		& 	& 	& 		& 		& 		& 	\\
-      80	& 			&&&	& 	& 		& 	& 	& 		& 		& 		& 	\\     
-         \hline
-    \end{tabular}
 
-\newpage.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%% R+ = DSSR %%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-needs formatting.
-\newpage
- \scriptsize
-    \begin{tabular}{|c|l|c|c|c|c|c|c|}
-      \hline
-     				S. No	&	Class Name	&	DSSR	&	R 	&  R+ 	&	DSSR/R 	& 	DSSR/R+	\\
-	 \hline
-      
-      				1		& Repository			& 1		& 1		&  0		& 0		& 1	\\
-     				1		& Response			& 1		& 1		&  0		& 0		& 1	\\
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         \hline
-    \end{tabular}
-
-\newpage.
-
-
-\end{comment}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\newpage
-needs formatting.
-\newpage
- \scriptsize
+ \begin{table*} [ht] {
+  \scriptsize
     \begin{tabular}{|c|l|c|c|c|c|c|c|c|c|c|c|c|c|}
       \hline
       \multirow{2}{*}{S. No}		& \multirow{2}{*}{Class Name}		& \multicolumn{4}{|c|}{R}							&	\multicolumn{4}{|c|}{R+}							&	\multicolumn{4}{|c|}{DSSR}	\\
@@ -554,49 +638,15 @@ needs formatting.
     						& Total						&1165.53	& 1181	&    1055	&		5.56					& 1188.73		&	1224	&	1127	&	6.46			& 1192.55		& 1234		& 1126		& 	5.86\\
    \hline
      \end{tabular}
-
+     }
+     \end{table*}
 \newpage.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=4cm]{combineMean.png}
 \caption{Combined Mean.}
@@ -604,7 +654,7 @@ needs formatting.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=4cm]{combineMin.png}
 \caption{Combined Min.}
@@ -612,7 +662,7 @@ needs formatting.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=4cm]{combineMax.png}
 \caption{Combined Max.}
@@ -620,7 +670,7 @@ needs formatting.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=4cm]{combineStdDev.png}
 \caption{Combined StdDev.}
@@ -630,170 +680,9 @@ needs formatting.
 
 
 
-
-
-
-
-
-
-
-
-
 // END NEW STRUCTURE
 
-Experimental finding indicate that in XX\% experiments DSSR strategy performs better than pure random and random plus strategy, in YY\% experiment pure random performs better, in ZZ\% experiments DSSR and random plus are equivalent and in XYZ\% random plus performs better. 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{49 Experiments where each strategy performed equally better}
-\centering
-\begin{tabular}{|l|c|}
-\hline\hline
-No of Experiments 	& 49  	\\
-Mean  			& 12.32  	\\
-Median 			& 5 		\\
-Standard Deviation 	& 17.73  	\\
-Min No of Faults	&  0  		\\
-Max No of Faults 	& 68  	\\
-\hline
-\end{tabular}
-\label{table:nonlin}
-\end{table}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{table}[H]
-\caption{1 out of 80 Experiments where Pure random and DSSR performed equally better}
-\centering
-\begin{tabular}{|l|c|c|}
-\hline\hline
- 				& RP = DSSR			&  PR \\[1ex]
-\hline
-Mean  			&    11				&  10.06\\
-Median 			&    11 				&  11\\
-Standard Deviation 	&    0					&  2.42\\
-Min No of Faults	&    11				&  4\\
-Max No of Faults 	&    11				&  11\\
-\hline
-\end{tabular}
-\label{table:result5}
-\end{table}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\begin{table}[H]
-\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
-\hline
-Mean  			&    16.78		&  16.65			&  16.6\\
-Median 			&    17    		&  17				&  17 \\
-Standard Deviation 	&    8.91		&  8.95			&  9.03\\
-Min No of Faults	&    1			&  1				&  1\\
-Max No of Faults 	&    17		&  17				& 17\\
-\hline
-\end{tabular}
-\label{table:result1}
-\end{table}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=6cm,height=6cm]{RandomBetter.png}
-\caption{Pure Random showing better results.}
-\label{fig:Result1}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{7 out of 80 Experiments where DSSR strategy performed better than Pure Random and Random Plus}
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
-\hline
-Mean  			&    23.44		&  26.36			&  26.32\\
-Median 			&    12 		&  12 			&  12 \\
-Standard Deviation 	&    15.81		&  14.70			&  14.85\\
-Min No of Faults	&    0			&  4				&  4\\
-Max No of Faults 	&    45		&  45				&  46\\
-\hline
-\end{tabular}
-\label{table:result2}
-\end{table}
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=6cm,height=6cm]{DSSRBetter.png}
-\caption{DSSR showing better results.}
-\label{fig:Result1}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
-\hline
-Mean  			&    26.32		&  26.68			&  26.95\\
-Median 			&    7 		&  7.5 			&  8 \\
-Standard Deviation 	&    31.39		&  31.02			&  31.15\\
-Min No of Faults	&    1			&  2				&  1\\
-Max No of Faults 	&    83		&  83				&  83\\
-\hline
-\end{tabular}
-\label{table:result3}
-\end{table}
-
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=6cm,height=6cm]{RandomPlusBetter.png}
-\caption{Random plus showing better results.}
-\label{fig:Result1}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{4 out of 80 Experiments where Random Plus and DSSR performed equally better}
-\centering
-\begin{tabular}{|l|c|c|}
-\hline\hline
- 				& RP = DSSR			&  PR \\[1ex]
-\hline
-Mean  			&    13.76				&  11.18\\
-Median 			&    7 				&  5\\
-Standard Deviation 	&    15.22				&  11.60\\
-Min No of Faults	&    3					&  0\\
-Max No of Faults 	&    40				&  31\\
-\hline
-\end{tabular}
-\label{table:result4}
-\end{table}
-
-
-
 
 
 Note mian ( write that there was no case Pure Random is equal to Random Plus.\\
