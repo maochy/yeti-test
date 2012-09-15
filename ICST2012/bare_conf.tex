@@ -294,19 +294,27 @@ The literature review revealed that F-measure is used where testing stops after 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 
 \section{Results}\label{sec:res}
-// HERE IS THE NEW STRUCTURE
 
-Present the data with the graphs that Mian generated using Excel.
+Table \ref{table:Results} presents the results of 80 randomly selected classes evaluated by R, R+ and DSSR strategies. Table \ref{table:Results} figures contain name of the class (.class file), mean value, maximum number of faults, minimum number of faults and relative standard deviation for each of the 80 classes found by R, R+ and DSSR strategy. Total (table \ref{table:Results} last row) shows DSSR has higher mean value (1192.55) than R (1165.53) and R+ (1188.73). It also shows that DSSR found higher number of maximum faults (1234) and minimum faults (1126) than R (1181), (1055) and R+ (1224), (1127) respectively.\\
 
-
-
-
-Conclusions: 
-- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
-- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
+On analysis of the available data we found that results can be split up into six different categories as shown in figure \ref{fig:pie} . First category is the largest where each strategy performed equally well and found same number of faults after 1 lac tests. It contain 50 classes (62\% experiments) given in table \ref{table:equal}. Second category contain classes where R performed better than DSSR and R+. It contain 11 classes (14\% experiments) given in table \ref{fig:Randombetter}, figure \ref{fig:Randombetter}. Third category contain classes where R+ performed better than DSSR and R. It contain 7 classes (9\% experiments) given in table \ref{table:RandomPlusbetter}, figure \ref{fig:RandomPlusbetter}. Fourth Category contain classes where DSSR performed better than R and R+. It contain 7 classes (9\% experiments) given in table \ref{table:Randombetter}, figure \ref{fig:Randombetter}. Fifth Category contain only one class (1\%) where both DSSR and R found equal number of faults and performed better than R+ shown in table \ref{table:DSSRequaltoRandom}, figure \ref{fig:DSSRequaltoRandom} . Sixth Category contain classes where DSSR and R+ found equal number of faults and performed better than R. There are 4 classes (5\%) as shown in table \ref{table:DSSRequaltoRandomPlus}, figure \ref{fig:DSSRequaltoRandomPlus}. No class is found where R performs equal to R+.\\ 
 
 
-Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
+\begin{figure}[ht]
+\centering
+\includegraphics[width=6cm,height=4.5cm]{pie1.png}
+\caption{Result Categories.}
+\label{fig:pie}
+\end{figure}
+
+
+
+
+
+
+% // HERE IS THE NEW STRUCTURE
+% Present the data with the graphs that Mian generated using Excel.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -314,22 +322,22 @@ Please check if there are more conclusions something with the standard deviation
 %  Present each of the 6 categories (best with R, best with R+, best with DSSR, R=R+>DSSR, DSSR=R>R+, and DSSR=R+>R)
 %  Add data about the number of classes that are best served with each strategy and which are equivalently in the caption of the figure and in the text.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{49 Experiments where each strategy performed equally better}
+\caption{Category 1: 50 Experiments where each strategy performed equally well and found same number of faults}
 \centering
 \begin{tabular}{|l|c|}
 \hline\hline
-No of Experiments 	& 49  	\\
+No of Experiments 	& 50  	\\
 Mean  			& 12.32  	\\
 Median 			& 5 		\\
 Standard Deviation 	& 17.73  	\\
 Min No of Faults	&  0  		\\
-Max No of Faults 	& 68  	\\
+Max No of Faults 	& 96  	\\
 \hline
 \end{tabular}
-\label{table:nonlin}
+\label{table:equal}
 \end{table}
 
 
@@ -339,20 +347,20 @@ Max No of Faults 	& 68  	\\
 
 
 \begin{table}[H]
-\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
+\caption{11 out of 80 Experiments where Random strategy performed better than DSSR and Random Plus.}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
+ 				& R			& R+				&  DSSR	\\
 \hline
-Mean  			&    16.78		&  16.65			&  16.6\\
-Median 			&    17    		&  17				&  17 \\
-Standard Deviation 	&    8.91		&  8.95			&  9.03\\
+Mean  			&    16.78		&  16.6			&  16.65	\\
+Median 			&    17    		&  17				&  17 	\\
+Standard Deviation 	&    8.91		&  9.03			&  8.95	\\		
 Min No of Faults	&    1			&  1				&  1\\
 Max No of Faults 	&    17		&  17				& 17\\
 \hline
 \end{tabular}
-\label{table:result1}
+\label{table:Randombetter}
 \end{table}
 
 \begin{figure}[ht]
@@ -367,20 +375,20 @@ Max No of Faults 	&    17		&  17				& 17\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
+\caption{7 out of 80 Experiments where Random Plus strategy performed better than Random and DSSR}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
+ 				& R			& R+				&  DSSR 	\\
 \hline
-Mean  			&    26.32		&  26.68			&  26.95\\
-Median 			&    7 		&  7.5 			&  8 \\
-Standard Deviation 	&    31.39		&  31.02			&  31.15\\
-Min No of Faults	&    1			&  2				&  1\\
+Mean  			&    26.32		&  26.95			&  26.68\\
+Median 			&    7 		&  8	 			&  7.5 \\
+Standard Deviation 	&    31.39		&  31.15			&  31.02\\
+Min No of Faults	&    1			&  1				&  2\\
 Max No of Faults 	&    83		&  83				&  83\\
 \hline
 \end{tabular}
-\label{table:result3}
+\label{table:RandomPlusbetter}
 \end{table}
 
 
@@ -396,20 +404,20 @@ Max No of Faults 	&    83		&  83				&  83\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{7 out of 80 Experiments where DSSR strategy performed better than Pure Random and Random Plus}
+\caption{7 out of 80 Experiments where DSSR strategy performed better than Random and Random Plus}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
+ 				& R			& R+ 			& DSSR \\
 \hline
-Mean  			&    23.44		&  26.36			&  26.32\\
+Mean  			&    23.44		&  26.32			&  26.36\\
 Median 			&    12 		&  12 			&  12 \\
-Standard Deviation 	&    15.81		&  14.70			&  14.85\\
+Standard Deviation 	&    15.81		&  14.85			&  14.70\\
 Min No of Faults	&    0			&  4				&  4\\
-Max No of Faults 	&    45		&  45				&  46\\
+Max No of Faults 	&    45		&  46				&  45\\
 \hline
 \end{tabular}
-\label{table:result2}
+\label{table:DSSRbetter}
 \end{table}
 
 
@@ -426,11 +434,11 @@ Max No of Faults 	&    45		&  45				&  46\\
 
 
 \begin{table}[H]
-\caption{1 out of 80 Experiments where Pure random and DSSR performed equally better}
+\caption{1 out of 80 Experiments where Random and DSSR performed equally better}
 \centering
 \begin{tabular}{|l|c|c|}
 \hline\hline
- 				& RP = DSSR			&  PR \\[1ex]
+ 				& P = DSSR			&  R+ \\
 \hline
 Mean  			&    11				&  10.06\\
 Median 			&    11 				&  11\\
@@ -439,85 +447,24 @@ Min No of Faults	&    11				&  4\\
 Max No of Faults 	&    11				&  11\\
 \hline
 \end{tabular}
-\label{table:result5}
+\label{table:DSSRequaltoRandom}
 \end{table}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=5cm,height=4cm]{DSSRequaltoPureRandom5.png}
 \caption{DSSR equal to Pure Random.}
-\label{fig:DSSRequaltoPureRandom}
+\label{fig:DSSRequaltoRandom}
 \end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\begin{table}[H]
-\caption{11 out of 80 Experiments where Pure Random (PR) strategy performed better than DSSR and Random Plus.}
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
-\hline
-Mean  			&    16.78		&  16.65			&  16.6\\
-Median 			&    17    		&  17				&  17 \\
-Standard Deviation 	&    8.91		&  8.95			&  9.03\\
-Min No of Faults	&    1			&  1				&  1\\
-Max No of Faults 	&    17		&  17				& 17\\
-\hline
-\end{tabular}
-\label{table:result1}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{Randombetter5.png}
-\caption{Random better.}
-\label{fig:Randombetter}
-\end{figure}
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{7 out of 80 Experiments where Random Plus strategy performed better than Pure Random and DSSR}
-\centering
-\begin{tabular}{|l|c|c|c|}
-\hline\hline
- 				& PR			&  DSSR 			& RP \\[1ex]
-\hline
-Mean  			&    26.32		&  26.68			&  26.95\\
-Median 			&    7 		&  7.5 			&  8 \\
-Standard Deviation 	&    31.39		&  31.02			&  31.15\\
-Min No of Faults	&    1			&  2				&  1\\
-Max No of Faults 	&    83		&  83				&  83\\
-\hline
-\end{tabular}
-\label{table:result3}
-\end{table}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{RandomPlusbetter5.png}
-\caption{Random Plus better.}
-\label{fig:RandomPlusbetter}
-\end{figure}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
 \caption{4 out of 80 Experiments where Random Plus and DSSR performed equally better}
 \centering
 \begin{tabular}{|l|c|c|}
 \hline\hline
- 				& RP = DSSR			&  PR \\[1ex]
+ 				& R+ = DSSR			&  R \\[1ex]
 \hline
 Mean  			&    13.76				&  11.18\\
 Median 			&    7 				&  5\\
@@ -526,14 +473,14 @@ Min No of Faults	&    3					&  0\\
 Max No of Faults 	&    40				&  31\\
 \hline
 \end{tabular}
-\label{table:result4}
+\label{table:DSSRequaltoRandomPlus}
 \end{table}
 
 \begin{figure}[ht]
 \centering
 \includegraphics[width=5cm,height=4cm]{DSSRequaltoRandomPlus5.png}
 \caption{DSSR equal to RandomPlus.}
-\label{fig:DSSR equal to Random Plus}
+\label{fig:DSSRequaltoRandomPlus}
 \end{figure}
 
 
@@ -638,12 +585,26 @@ Max No of Faults 	&    40				&  31\\
     						& Total						&1165.53	& 1181	&    1055	&		5.56					& 1188.73		&	1224	&	1127	&	6.46			& 1192.55		& 1234		& 1126		& 	5.86\\
    \hline
      \end{tabular}
+    \label{table:Results}
      }
      \end{table*}
 \newpage.
 
 
+
+
+
+Conclusions: 
+- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
+- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
+
+
+Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+
+
 
 
 \begin{figure}[H]
@@ -679,20 +640,15 @@ Max No of Faults 	&    40				&  31\\
 
 
 
-
+\end{comment}
 // END NEW STRUCTURE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{comment}
 
-Note mian ( write that there was no case Pure Random is equal to Random Plus.\\
 
-
-From the table \ref{table:results} we can see that in 49 out of 80 experiments all three strategies found equal number of faults. Which means that each strategy is capable enough to find all the faults in one lac test calls. In 11 out of remaining 31 classes Pure Random found highest number of faults. In 7 experiments DSSR found the highest number of faults while in same number of cases Random Plus performed better than DSSR and Pure Random. In 5 experiments both DSSR and Random Plus performed equally well while in only 1 experiment PR and DSSR performed better than Random Plus. 
 Table \ref{table:DSS_Faults} include names of all the faults that DSSR strategy found in respective classes. Duplicate faults were removed for simplicity.
-
-
-
 
 %%%%%%%%%%%    UNIQUE FAULTS FOUND BY YETI      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -758,7 +714,6 @@ java.lang.Double & NullPointerException\\ % inserting body of the table
 
 
 
-\begin{comment}
 DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
 
 \begin{figure}[ht]
