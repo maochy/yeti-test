@@ -56,7 +56,7 @@ Chan et al.~\cite{Chan1996} discovered that there are patterns of failure causin
 
 In this paper we take the assumption that in a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy to insist on places where dirt has been found in large amount.} Random strategy (DSSR) which starts as a random+ strategy --- random strategy focusing more on boundary values. When it finds a new failure, it then increases the chances of testing using neighbouring values. Of course, since this strategy is also a random testing strategy, it has the potential to find all failures in the program, but we expect it to be faster at finding unique failures for classes in which failure domains are contiguous than the pure random (R) and random+ (R+) strategies.
 
-We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 80 classes from the Qualitas Corpus\footnote{\url{http://...}} with each of the three strategies DSSR, R, and R+. We found that in 68\% of the cases all three strategies all find the same faults, in 10\% of cases random+ perfroms better, in 12\% pure random performs better, and 10\% DSSR performed better.
+We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 80 classes from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies DSSR, R, and R+. We found that in 68\% of the cases all three strategies all find the same faults, in 10\% of cases random+ perfroms better, in 12\% pure random performs better, and 10\% DSSR performed better.
 Overall, DSSR also found 5\% more failures than other strategies.
 
 %//MANUEL: WHAT IS THIS??
@@ -295,8 +295,7 @@ The literature review revealed that F-measure is used where testing stops after 
 
 \section{Results}\label{sec:res}
 
-Table \ref{table:Results} presents the results of 80 randomly selected classes evaluated by R, R+ and DSSR strategies. Table \ref{table:Results} figures contain name of the class (.class file), mean value, maximum number of faults, minimum number of faults and relative standard deviation for each of the 80 classes found by R, R+ and DSSR strategy. Total (table \ref{table:Results} last row) shows DSSR has higher mean value (1192.55) than R (1165.53) and R+ (1188.73). It also shows that DSSR found higher number of maximum faults (1234) and minimum faults (1126) than R (1181), (1055) and R+ (1224), (1127) respectively.\\
-
+Table \ref{table:Results} presents the results of 80 randomly selected classes evaluated by R, R+ and DSSR strategies. Table \ref{table:Results} figures contain name of the class (.class file), mean value, maximum number of faults, minimum number of faults and relative standard deviation for each of the 80 classes found by R, R+ and DSSR strategy. Total (table \ref{table:Results} last row) shows DSSR has higher mean value (1192.55) than R (1165.53) and R+ (1188.73). It also shows that DSSR found higher number of maximum faults (1234) and minimum faults (1126) than R (1181), (1055) and R+ (1224), (1127) respectively. The difference shows that DSSR found 10 (1234 - 1224 = 10 ) new faults that R+ couldn't discover while it found 53 (1234 - 1181= 53) new faults that R couldn't discover.\\
 On analysis of the available data we found that results can be split up into six different categories as shown in figure \ref{fig:pie} . First category is the largest where each strategy performed equally well and found same number of faults after 1 lac tests. It contain 50 classes (62\% experiments) given in table \ref{table:equal}. Second category contain classes where R performed better than DSSR and R+. It contain 11 classes (14\% experiments) given in table \ref{fig:Randombetter}, figure \ref{fig:Randombetter}. Third category contain classes where R+ performed better than DSSR and R. It contain 7 classes (9\% experiments) given in table \ref{table:RandomPlusbetter}, figure \ref{fig:RandomPlusbetter}. Fourth Category contain classes where DSSR performed better than R and R+. It contain 7 classes (9\% experiments) given in table \ref{table:Randombetter}, figure \ref{fig:Randombetter}. Fifth Category contain only one class (1\%) where both DSSR and R found equal number of faults and performed better than R+ shown in table \ref{table:DSSRequaltoRandom}, figure \ref{fig:DSSRequaltoRandom} . Sixth Category contain classes where DSSR and R+ found equal number of faults and performed better than R. There are 4 classes (5\%) as shown in table \ref{table:DSSRequaltoRandomPlus}, figure \ref{fig:DSSRequaltoRandomPlus}. No class is found where R performs equal to R+.\\ 
 
 
@@ -640,79 +639,7 @@ Please check if there are more conclusions something with the standard deviation
 
 
 
-\end{comment}
 // END NEW STRUCTURE
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{comment}
-
-
-Table \ref{table:DSS_Faults} include names of all the faults that DSSR strategy found in respective classes. Duplicate faults were removed for simplicity.
-
-%%%%%%%%%%%    UNIQUE FAULTS FOUND BY YETI      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{table}[H]
-\small
-\caption{Unique faults found by DSS in respective class} % title of Table
-\centering % used for centering table
-\begin{tabular}{| l | l |} % centered columns (4 columns)
-\hline\hline %inserts double horizontal lines
-Class Name & Unique Fault Name \\ [0.5ex] % inserts table
-%heading
-\hline % inserts single horizontal line
-\multirow{3}{*}{java.lang.ProcessBuilder} & NullPointerException\\ % inserting body of the table
-& YetiSecurityException\\ % inserting body of the table
-& ArrayIndexOutOfBoundsException\\ % inserting body of the table
-\hline
-\multirow{2}{*}{java.lang.ClassLoader} & NoClassDefFoundError\\ % inserting body of the table
-& IndexOutOfBoundsException\\ % inserting body of the table
-\hline
-\multirow{3}{*}{java.lang.Character} & StringIndexOutOfBoundsException\\ % inserting body of the table
-& ArrayIndexOutOfBoundsException\\ % inserting body of the table
-& IllegalArgumentException\\ % inserting body of the table
-\hline
-\multirow{7}{*}{java.util.Scanner} & IllegalArgumentException\\ % inserting body of the table
-& NoSuchElementException\\ % inserting body of the table
-& PatternSyntaxException\\ % inserting body of the table
-& IllegalStateException\\ % inserting body of the table
-& StringIndexOutOfBoundsException\\ % inserting body of the table
-& InputMismatchException\\ % inserting body of the table
-& UnsupportedOperationException\\ % inserting body of the table
-\hline
-\multirow{2}{*}{java.util.Properties} & NullPointerException\\ % inserting body of the table
-& ClassCastException\\ % inserting body of the table
-\hline
-\multirow{2}{*}{java.util.Calendar} & ArrayIndexOutOfBoundsException\\ % inserting body of the table
-& IllegalArgumentException\\ % inserting body of the table
-\hline
-java.lang.Double & NullPointerException\\ % inserting body of the table
-\hline
-\multirow{3}{*}{java.lang.Thread} & IllegalArgumentException\\ % inserting body of the table
-& IllegalThreadStateException\\ % inserting body of the table
-& NoSuchMethodError\\ % inserting body of the table
-\hline
-\multirow{4}{*}{java.lang.String}& PatternSyntaxException\\ % inserting body of the table
-& IndexOutOfBoundsException\\ % inserting body of the table
-& StringIndexOutOfBoundsException\\% inserting body of the table % [1ex] adds vertical space
-\hline
-\multirow{5}{*}{java.lang.Collections}& ClassCasteException\\ % inserting body of the table
-& IndexOutOfBoundsException\\ % inserting body of the table
-& UnsupportedOperationException\\
-& IllegalArgumentException\\
-& OutOfMemoryError\\ [1ex]% inserting body of the table % [1ex] adds vertical space
-\hline
-\hline %inserts single line
-\end{tabular}
-\label{table:DSS_Faults} % is used to refer this table in the text
-\end{table}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
 DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
 
