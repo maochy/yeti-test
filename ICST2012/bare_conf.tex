@@ -677,6 +677,15 @@ During the experiments we found that if the fault finding value is not in the li
 
 \section{Related Work}\label{sec:rw}
 
+Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs \cite{Žclat} and java libraries \cite{crasher}. Its simplicity and efficiency make it a best choice for test automation \cite{}. Few of the well known automated tools based on random strategy includes Jtest \cite{}, Jartege \cite{}, Eclat \cite{}, JCrasher \cite{}, Autotest \cite{} and the latest YETI \cite{} which is used to conduct this research study.\\
+
+In pursuit of better results and lower overhead many variations of random strategy have been proposed. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs random but evenly spread across the input domain. Similarly Mirror ART and ART through dynamic partitioning increased performance by reducing the overhead of ART. Even spread of test input across the input domain also increases the chance of discovering the fault patterns (point, block, strip patterns) in the input domain \cite{}.\\
+
+Random plus (R+) strategy \cite{} is a variation of random strategy in which interesting values, beside pure random values, are added to the list of test inputs. These interesting values includes border values \cite{} which has high tendency of finding faults in the given SUT. Results conducted with R+ strategy show significant improvement of pure random strategy. DSSR strategy also rely on R+ strategy in the start until the fault is found where it switches to spot sweeping strategy. \\
+
+Qualitas Corpus a curated collection of programs have been used extensively in evaluating new strategies \cite{}. 
+ 
+
 %%%%%%%%%%%%%%%%%    CONCLUSION   %%%%%%%%%%%%%%%%%%%%
 
 
