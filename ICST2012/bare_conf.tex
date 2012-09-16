@@ -75,7 +75,8 @@ Overall, DSSR also found 5\% more failures than other strategies.
 %
 %\end{enumerate}
 The rest of this paper is organized as follows: \\
-Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:dssr} presents our implementation of the strategy. Section~\ref{sec:eval} explains our experimental setup. Section~\ref{sec:res} shows the results of our experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and we conclude in Section~\ref{sec:conc}.
+Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents our implementation of the strategy. Section~\ref{sec:eval} explains our experimental setup. Section~\ref{sec:res} shows the results of our experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and we conclude in Section~\ref{sec:conc}.
+
 
 
 
@@ -85,16 +86,16 @@ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:dssr} prese
 The Dirt Spot Sweeping Random (DSSR) strategy is a new strategy which combines the random+ strategy and with a dirt spot sweeping dunctionality. The strategy is based on two intuitions. One is that boundaries have interesting values and using these values in isolation can provide high impact on test results, the other is that faults reside in contiguous blocks and stripes. If this is the case, DSSR increases the performance of the test strategy in terms of executing fewer numbers of test cases with higher number of faults. Each strategy is briefly explained as follows.
 
 \subsection{Random (R)}
-The pure random strategy is a black-box testing technique in which the system under test (SUT) is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracle. 
+The pure random strategy is a black-box testing technique in which the SUT is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracle. 
 %According to Beizer \cite{Beizer1990}, software performance is directly dependent on the combination of two main factors, correctness and robustness. Correctness is the expected behaviour of the software based on its specifications while robustness is the behaviour of the software that is not defined in its specifications. 
 %Since random testing generates test data randomly, without any specific pattern, it effectively tests the performance of software by evaluating it for both correctness and robustness. 
-Because of its black-box testing nature, this strategy is particularly effective in testing softwares where the developers want to keep the source code secret~\cite{Chen2010}. The generation of random test data is comparatively cheap and does not require too much intellectual and computation efforts~\cite{Ciupa2009, Ciupa2008}. It is mainly for this reason that various researchers have recommended this strategy for incorporation in automatic testing tools \cite{Ciupa2008a}. YETI \cite{Oriol2010a}, \cite{Oriol2010}, AutoTest \cite{Leitner2007}, \cite{Ciupa2007}, QuickCheck \cite{Claessen2000}, Randoop \cite{Pacheco2007}, JArtage \cite{Oriat2004} are some of the most common automated testing tools based on random strategy.\\
+Because of its black-box testing nature, this strategy is particularly effective in testing softwares where the developers want to keep the source code secret~\cite{Chen2010}. The generation of random test data is comparatively cheap and does not require too much intellectual and computation efforts~\cite{Ciupa2009, Ciupa2008}. It is mainly for this reason that various researchers have recommended this strategy for incorporation in automatic testing tools \cite{Ciupa2008a}. YETI \cite{Oriol2010a}, \cite{Oriol2010}, AutoTest \cite{Leitner2007}, \cite{Ciupa2007}, QuickCheck \cite{Claessen2000}, Randoop \cite{Pacheco2007}, Jartage \cite{Oriat2004} are some of the most common automated testing tools based on random strategy.\\
 \indent Efficiency of random testing was made suspicious with the intuitive statement of Myers \cite{Myers2004} who termed random testing as one of the poorest methods for software testing. however, experiments performed by various researchers, \cite{Ciupa2007}, \cite{Duran1981}, \cite{Duran1984}, \cite{Hamlet1994} and \cite{Ntafos2001} have experimentally proved that random testing is simple to implement, cost effective, highly efficient and free from human bias as compared to its rival techniques.\
 
 Because programs tested at random typically fail a large number of times (there are a large number of calls), it is necessary to cluster failures that likely represent the same fault. The traditional way of doing it is to compare the full stack traces and error types and use this as an equivalence class~\cite{Ciupa2007,Oriol2012} called a unique failures. This way of grouping failures is also used in random+ and DSSR.
 
 
-\subsection{Random Plus Strategy}
+\subsection{Random Plus Strategy (R+)}
 The random+ strategy \cite{Leitner2007} is an extension of the pure random strategy. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values \cite{Beizer1990} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MIN_INT+, \verb-MIN_INT+1-, \verb+-1+, \verb+0+, \verb+1+.
 
 
@@ -107,7 +108,7 @@ The random+ strategy \cite{Leitner2007} is an extension of the pure random strat
 %\label{fig:boundaryValues}
 %\end{figure}
 
-Similarly the tester might also add some other special values that he considers effective in finding faults for the current SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5, 45 to 55 etc. to the pre-defined list of special values in order to be selected for a test. This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of it is more relevance and high chances of finding faults for the given SUT. These special values have high impact on the results particularly detecting problems in specifications \cite{Ciupa2008}.
+Similarly the tester might also add some other special values that he considers effective in finding faults for the current SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5, 45 to 55 etc. to the pre-defined list of special values in order to be selected for a test. This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of more relevance and high chances of finding faults for the given SUT. These special values have high impact on the results particularly detecting problems in specifications \cite{Ciupa2008}.
 
 
 \subsection{Dirt Spot Sweeping}
@@ -152,7 +153,7 @@ Border values and other special values that have high tendency of finding faults
 Type & Values to be added\\ [0.5ex] % inserts table
 %heading
 \hline % inserts single horizontal line
-\multirow{1}{*}{X is int, double, float, } & ~ X,  X+1, X-1 \\ % inserting body of the
+\multirow{1}{*}{X is int, double, float, } & ~ X,  X+1, X+2, X-1, X-2 \\ % inserting body of the
 \multirow{1}{*}{long, byte, short \& char} &  \\ 
 
 \hline
@@ -225,28 +226,28 @@ As the test starts, three faults are quickly discovered by DSSR strategy in the 
 
 
 \section{Implementation of DSSR strategy}\label{sec:imp}
-To avoid reinventing the wheel, an existing open-source automated random testing tool called YETI \cite{Oriol2011}, \cite{Oriol2012} is used for implementing the DSSR strategy. YETI is developed in Java and is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI includes easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies and auto generation of test report at the end of the test session. A number of hitherto faults have successfully been found by YETI in various production softwares \cite{Oriol2012}. \\
+To avoid reinventing the wheel, an existing open-source automated random testing tool called YETI \cite{Oriol2011}, \cite{Oriol2012} is used for implementing the DSSR strategy. YETI is developed in Java and is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI includes easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies and auto generation of test report at the end of the test session. A number of hitherto faults have successfully been found by YETI in various production softwares \cite{Oriol2012}, \cite{Oriol2012}. \\
 \indent YETI can be divided into three main sections including core infrastructure, language-specific bindings and strategies. The core infrastructure represents routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. Most common strategies are random and random plus while DSSR strategy is also added to this section with the class name YetiDSSRStrategy. It is extension of YetiRandomStrategy, which in itself is extension of an abstract class YetiStrategy. The class hierarchy is shown in Figure \ref{fig:hierarchyofDSSR}.
 
-\begin{figure}[ht]
+\begin{figure}[h]
 \centering
-\includegraphics[width=4cm,height=5cm]{hierarchy.pdf}
+\includegraphics[width=4cm,height=4.5cm]{hierarchy.pdf}
 \caption{Class Hierarchy of DSSR in YETI}
 \label{fig:hierarchyofDSSR}
 \end{figure}
 
 
-If no particular strategy is defined during test initialization then YETI uses Random plus strategy by default. To enable the user to control the probability of null values and the percentage of newly created objects.\\
-\indent YETI also provides an interactive Graphical User Interface (GUI) where user can see the progress of the current test in real time. Besides GUI, YETI also provides extensive logs of the test session, which are very helpful in fault tracking. For more details about YETI see references \cite{Oriol2010} and \cite{Oriol2010a}.
+By default YETI uses Random plus strategy if no particular strategy is defined during test initialization. It also enable the user to control the probability of null values and the percentage of newly created objects for each test session.\\
+\indent YETI also provides an interactive Graphical User Interface (GUI) where user can see the progress of the current test in real time. Besides GUI, YETI also provides extensive logs of the test session, which are very helpful in fault tracking. For more details about YETI see references \cite{Oriol2010a} and \cite{Oriol2010}.
 
 %%%%%%%%%%%%%%%%%    EVALUATION   %%%%%%%%%%%%%%%%%%%%
 
 
 \section{Evaluation}\label{sec:eval}
 
-To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random plus (R+)~\cite{Oriol2010} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability are respectively set to 0.5 and XXX.\\
-
+To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random plus (R+)~\cite{Oriol2010} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability are kept constant for all the experiments.\\
 \subsection{Experiments}
+
 To evaluate the performances of the DSSR strategy we performed extensive testing of programs from the Qualitas Corpus \cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 80 classes at random from all classes in the Qualitas Corpus and test each of them thirty times with each strategy.
 %It is available in two distributions. The release version ``r'' and the evolution version ``e''. The release version is compact size that contain only the recent version of the projects while the evolution version is more detailed which consists of more than 10 different versions of each project.\\
 %Extensive experiments were carried out to evaluate the performance of DSSR strategy. Every class was tested 30 times by random, random plus and DSSR strategy. 
@@ -274,8 +275,11 @@ All tests are performed using a 64-bit Mac OS X Version 10.7.4 running on Intel(
 %Random strategies are characterized by using random input. In random strategy all the faults found in one test run may not necessarily be found in the second test run. Thus, the performance of random strategy cannot be evaluated with a few test sessions. To minimize the random behaviour of random testing every class was tested 30 times by each pure random, random plus and DSSR strategy. This was achieved by creating a batch executable script with the handy feature of YETI called Compact Report which logs each test report to a file for later evaluation.
 
 \subsection{Performance measurement criteria}
-// WE NEED TO SHORTEN THIS
-Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were hevily criticized~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996,Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realized that this was not the right choice because in some experiments the first strategy found first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. Preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair. Moreover, for random testing F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
+Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were hevily criticized~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996,Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realized that this was not the right choice because in some experiments the first strategy found first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. Preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair.
+
+%%%%%%%%%% REMOVED as it is also present in future work. %%%%%%%%%%%%%%%%
+\begin{comment}
+Moreover, for random testing F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
 
 \begingroup
     \fontsize{7pt}{8pt}\selectfont
@@ -285,18 +289,18 @@ Various measures including the E-measure, P-measure and F-measure have been used
 \indent \{ 10/0 \} \\* 
 \} \\*
 \endgroup
+
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured in terms of finding maximum number of faults in a particular number of test calls  \cite{Ciupa2007}, \cite{Pacheco2007a}, \cite{Ciupa2008b} which was 10,0000 calls per class. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
-
-
+The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured in terms of finding maximum number of faults in a particular number of test calls   \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
 
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 
 \section{Results}\label{sec:res}
-
 Table \ref{table:Results} presents the results of 80 randomly selected classes evaluated by R, R+ and DSSR strategies. Table \ref{table:Results} figures contain name of the class (.class file), mean value, maximum number of faults, minimum number of faults and relative standard deviation for each of the 80 classes found by R, R+ and DSSR strategy. Total (table \ref{table:Results} last row) shows DSSR has higher mean value (1192.55) than R (1165.53) and R+ (1188.73). It also shows that DSSR found higher number of maximum faults (1234) and minimum faults (1126) than R (1181), (1055) and R+ (1224), (1127) respectively. The difference shows that DSSR found 10 (1234 - 1224 = 10 ) new faults that R+ couldn't discover while it found 53 (1234 - 1181= 53) new faults that R couldn't discover.\\
-On analysis of the available data we found that results can be split up into six different categories as shown in figure \ref{fig:pie} . First category is the largest where each strategy performed equally well and found same number of faults after 1 lac tests. It contain 50 classes (62\% experiments) given in table \ref{table:equal}. Second category contain classes where R performed better than DSSR and R+. It contain 11 classes (14\% experiments) given in table \ref{fig:Randombetter}, figure \ref{fig:Randombetter}. Third category contain classes where R+ performed better than DSSR and R. It contain 7 classes (9\% experiments) given in table \ref{table:RandomPlusbetter}, figure \ref{fig:RandomPlusbetter}. Fourth Category contain classes where DSSR performed better than R and R+. It contain 7 classes (9\% experiments) given in table \ref{table:Randombetter}, figure \ref{fig:Randombetter}. Fifth Category contain only one class (1\%) where both DSSR and R found equal number of faults and performed better than R+ shown in table \ref{table:DSSRequaltoRandom}, figure \ref{fig:DSSRequaltoRandom} . Sixth Category contain classes where DSSR and R+ found equal number of faults and performed better than R. There are 4 classes (5\%) as shown in table \ref{table:DSSRequaltoRandomPlus}, figure \ref{fig:DSSRequaltoRandomPlus}. No class is found where R performs equal to R+.\\ 
+On analysis of the available data we found that results can be split up into six different categories as shown in figure \ref{fig:pie}. First category is the largest where each strategy performed equally well and found same number of faults after 1 lac tests. It contain 50 classes (62\% experiments) given in table \ref{table:equal}. Second category contain classes where R performed better than DSSR and R+. It contain 11 classes (14\% experiments) given in table \ref{fig:Randombetter}, figure \ref{fig:Randombetter}. Third category contain classes where R+ performed better than DSSR and R. It contain 7 classes (9\% experiments) given in table \ref{table:RandomPlusbetter}, figure \ref{fig:RandomPlusbetter}. Fourth Category contain classes where DSSR performed better than R and R+. It contain 7 classes (9\% experiments) given in table \ref{table:Randombetter}, figure \ref{fig:Randombetter}. Fifth Category contain only one class (1\%) where both DSSR and R found equal number of faults and performed better than R+ shown in table \ref{table:DSSRequaltoRandom}, figure \ref{fig:DSSRequaltoRandom} . Sixth Category contain classes where DSSR and R+ found equal number of faults and performed better than R. There are 4 classes (5\%) as shown in table \ref{table:DSSRequaltoRandomPlus}, figure \ref{fig:DSSRequaltoRandomPlus}. No class is found where R performs equal to R+.\\ 
 
 
 \begin{figure}[ht]
@@ -346,7 +350,7 @@ Max No of Faults 	& 96  	\\
 
 
 \begin{table}[H]
-\caption{11 out of 80 Experiments where Random strategy performed better than DSSR and Random Plus.}
+\caption{Category 2: 11 out of 80 Experiments where Random strategy performed better than DSSR and Random Plus.}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
@@ -374,7 +378,7 @@ Max No of Faults 	&    17		&  17				& 17\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{7 out of 80 Experiments where Random Plus strategy performed better than Random and DSSR}
+\caption{Category 3: 7 out of 80 Experiments where Random Plus strategy performed better than Random and DSSR}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
@@ -403,7 +407,7 @@ Max No of Faults 	&    83		&  83				&  83\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}[H]
-\caption{7 out of 80 Experiments where DSSR strategy performed better than Random and Random Plus}
+\caption{Category 4: 7 out of 80 Experiments where DSSR strategy performed better than Random and Random Plus}
 \centering
 \begin{tabular}{|l|c|c|c|}
 \hline\hline
@@ -431,35 +435,8 @@ Max No of Faults 	&    45		&  46				&  45\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{table}[H]
-\caption{1 out of 80 Experiments where Random and DSSR performed equally better}
-\centering
-\begin{tabular}{|l|c|c|}
-\hline\hline
- 				& P = DSSR			&  R+ \\
-\hline
-Mean  			&    11				&  10.06\\
-Median 			&    11 				&  11\\
-Standard Deviation 	&    0					&  2.42\\
-Min No of Faults	&    11				&  4\\
-Max No of Faults 	&    11				&  11\\
-\hline
-\end{tabular}
-\label{table:DSSRequaltoRandom}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{DSSRequaltoPureRandom5.png}
-\caption{DSSR equal to Pure Random.}
-\label{fig:DSSRequaltoRandom}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{table}[H]
-\caption{4 out of 80 Experiments where Random Plus and DSSR performed equally better}
+\caption{Category 5: 4 out of 80 Experiments where Random Plus and DSSR performed equally better}
 \centering
 \begin{tabular}{|l|c|c|}
 \hline\hline
@@ -483,13 +460,177 @@ Max No of Faults 	&    40				&  31\\
 \end{figure}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}[H]
+\caption{Category 6: 1 out of 80 Experiments where Random and DSSR performed equally better}
+\centering
+\begin{tabular}{|l|c|c|}
+\hline\hline
+ 				& P = DSSR			&  R+ \\
+\hline
+Mean  			&    11				&  10.06\\
+Median 			&    11 				&  11\\
+Standard Deviation 	&    0					&  2.42\\
+Min No of Faults	&    11				&  4\\
+Max No of Faults 	&    11				&  11\\
+\hline
+\end{tabular}
+\label{table:DSSRequaltoRandom}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{DSSRequaltoPureRandom5.png}
+\caption{DSSR equal to Pure Random.}
+\label{fig:DSSRequaltoRandom}
+\end{figure}
+
+
+
+
+\begin{comment}
+
+Conclusions: 
+- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
+- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
+
+
+Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{combineMean.png}
+\caption{Combined Mean.}
+\label{fig:Mean}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{combineMin.png}
+\caption{Combined Min.}
+\label{fig:Min}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{combineMax.png}
+\caption{Combined Max.}
+\label{fig:Max}
+\end{figure}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=5cm,height=4cm]{combineStdDev.png}
+\caption{Combined StdDev.}
+\label{fig:StdDev}
+\end{figure}
+
+
+
+// END NEW STRUCTURE
+
+DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=9cm,height=7cm]{newResults.png}
+\caption{Test Results of 34 classes from 16 Java projects.}
+\label{fig:Result1}
+\end{figure}
+
+
+
+Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
+
+\end{comment}
+
+%%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
+
+\section{Discussion}\label{sec:discussion}
+\textbf{Performance of DSSR strategy, Random strategy and Random plus strategy in terms of finding faults:} 
+Analysis of results revealed that DSSR performs better than random and random plus in programs with block and strip pattern of faults. However, since not all the programs contain faults in the form of block and strip patterns therefore the results do not show a significant performance change. \\
+\indent \textbf{Time taken by DSSR strategy, Random strategy and Random plus strategy to execute tests:}
+To execute equal number of test cases, DSSR strategy took slightly more execution time than pure random and random plus test strategy. It is not unusual and we were expecting similar behaviour because pure random algorithm selects random input of the required type with minimum calculation and therefore its process is very quick. On the other hand random plus and DSSR strategy performs additional computation when it maintains the list of interesting values and selects the correct type test values from the list when required. The desired process of adding values to the list and selecting the required values from the list consumes extra time which is the main reason that DSSR strategy takes a little extra time. Thus in executing tests random strategy, random plus and DSSR strategy comes first, second and third respectively. \\
+\indent \textbf{Effect of test duration in terms of time and number of tests on test results:} 
+We found that test duration increases either because of  increase in time or number of test cases which results in improving the performance of DSSR strategy than random and random plus. It is because when test duration or number of tests increases, the list of interesting values also increases and in turn DSSR strategy get enough relevant values in the list of interesting values and can easily pick one from the list instead of selecting it randomly or from static list of random plus.\\
+\indent \textbf{Effect of number of faults on results:} 
+We also found that DSSR strategy performs better when the number of faults are more in the code. The reason is that when a fault is found in the code, DSSR strategy adds the neighbouring values of the fault finding value to the list of interesting values. Doing this increases the list of interesting values and the strategy is provided with more relevant test data resulting in higher chance of finding faults.\\
+\indent \textbf{Can Pure Random and Random Plus Testing perform better than DSSR strategy:}
+The experimental results indicated that pure random and random plus testing can perform better than DSSR strategy if the SUT contain point pattern of failures rather than block and strip pattern. It is due to the fact that in such cases faults don't lay in the neighbourhood of found fault and adding neighbouring values of the founded fault dont make any impact on performance therefore the extra computational time becomes a liability.\\
+\indent \textbf{DSSR strategy Dependance on Random and Random Plus Testing:}
+During the experiments we found that if the fault finding value is not in the list of interesting values then the test is dependant on random testing. In that case DSSR strategy has to wait for random testing to find the first fault and only then DSSR strategy will add its neighbouring values to the list of interesting values.
+
+
+%%%%%%%%%%%%%%%%%    RW   %%%%%%%%%%%%%%%%%%%%
+
+\section{Related Work}\label{sec:rw}
+
+Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and java libraries \cite{Pacheco2005}, \cite{Csallner2004} and \cite{Claessen2000a}. Its simplicity, ease of implementation and efficiency in generating test cases make it a best choice for test automation \cite{Hamlet1994}. Few of the well known automated tools based on random strategy includes Jartege \cite{Oriat2004}, Eclat \cite{Pacheco2005}, JCrasher \cite{Csallner2004}, AutoTest \cite{Ciupa2007}, \cite{Ciupa2008a} and the latest YETI \cite{Oriol2010}, \cite{Oriol2012}  that is used to conduct this research study.\\
+
+In pursuit of better results and lower overhead many variations of random strategy have been proposed \cite{Chen2010}, \cite{Chen2005}, \cite{Chan2002}, \cite{Chen2004a},\cite{Chen2003}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs random but evenly spread across the input domain. Similarly Mirror ART and ART through dynamic partitioning increased performance by reducing the overhead of ART. One of the main reason behind the better performance of these strategies is that even spread of test input increases the chance of exploring the fault patterns present in the input domain.\\ 
+
+Random plus (R+) strategy \cite{Leitner2007} is a variation of random strategy in which interesting values, beside pure random values, are added to the list of test inputs. These interesting values includes border values \cite{Beizer1990} which has high tendency of finding faults in the given SUT. Results conducted with R+ strategy show significant improvement of pure random strategy. DSSR strategy also rely on R+ strategy in the start until any fault is found where it switches to spot sweeping strategy. \\
+
+It is interesting that numerous efforts have been made to discover the fault patterns \cite{Chen2010}, \cite{Chen2005}, \cite{Chan2002}, \cite{Chen2004a},\cite{Chen2003}, etc. but in our knowledge, none has been published on covering/sweeping all the faults lying in a specific pattern once it has been discovered.\\
+
+A common practice to evaluate performance of newly created or existing strategies is to compare the results obtained (theoretically and empirically) after applying them to similar programs \cite{Gutjahr1999}, \cite{Duran1984}, \cite{Hamlet1990}. We followed similar procedure and evaluated DSSR against R and R+ under constant conditions. \\
+
+Qualitas Corpus \cite{Tempero2010}, a collection of open source java programs maintained for independent empirical research \cite{Oriol2012}, \cite{Tempero2010a}, \cite{Tempero2008}. These projects are carefully selected that spans across the whole set of java applications.
+
+%%%%%%%%%%%%%%%%%    CONCLUSION   %%%%%%%%%%%%%%%%%%%%
+
+
+\section{Conclusions}\label{sec:conc}
+The main goal of the present study was to develop a new random strategy which could find more faults in lower number of test cases and shorter execution time. The experimental findings revealed that DSSR strategy was up to 20\% more effective in finding faults as compared to random strategy and up to 10 \% more effective than random plus strategy. The DSSR strategy not only gave more consistent results but it proved more effective in terms of detecting faults as compared to random and random plus testing.\\
+\indent Improvement in performance of DSSR strategy over random strategy was achieved by taking advantage of Random Plus and fault neighbouring values. Random plus incorporated not only border values but it also added values having higher chances of finding faults in the SUT to the list of interesting values.\\
+\indent The DSSR strategy is highly effective in case of systems containing block and strip pattern of failure across the input domain.\\
+\indent Due to the additional steps of scanning the list of interesting values for better test values and addition of fault finding test value and its neighbour values, the DSSR strategy takes up to 5\% more time to execute equal number of test cases than pure random and random plus. \\
+\indent In the current version of DSSR strategy, it might depend on random or random plus strategy for finding the first fault if the fault test value was not in the list of interesting values. Once the first fault is found only then DSSR strategy could make an impact on the performance of test strategy.\\
+\indent The limitation of random plus strategy is that it maintains a static list of interesting values which remains the same for each program under test, and can be effective in many cases but not always. The better approach will be to have a dynamic list of interesting values that is automatically updated for every program which can be achieved by adding the program literals and its surrounding values to the list of interesting values prior to starting every new test session.
+
+
+%%%%%%%%%%%%%%%%%    FUTURE WORK   %%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Future Work}
+From the research we came to know that random testing is not very good in generating a test value when the scope of a variable is too narrow as in the following example.  \\
+\begingroup
+    \fontsize{7pt}{10pt}\selectfont
+\noindent
+\{ \\*   
+\indent if(value == 34.4445) \\*
+\indent \{ 10/0 \} \\* 
+\} \\*
+\endgroup
+\indent We also know that if the fault finding value is not in the list than DSSR has to wait for random testing to generate the fault finding value and only after that DSSR strategy will add that value and its surrounding values to the list of interesting values. To decrease the dependancy of DSSR strategy on random and random plus strategy, further work is in progress to add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained either from .java or .class files of the SUT. We are also working to add  neighbouring values of the literals to the list of interesting values. \\
+\indent Thus if we have the above example then the value 34.4445 and its surrounding values will be added to the list of interesting values before the test starts and DSSR strategy will no more be dependent on random testing to find the first fault. Finally, it will also be interesting to evaluate the DSSR strategy in terms of coverage because the newly added values are most suitable for test cases and therefore can increase branch coverage. 
+
+
+%%%%%%%%%%%%%%%%%    ACKNOWDLEGEMENT   %%%%%%%%%%%%%%%%%%%%
+\section{Acknowledgment}
+The auther would like to acknowldge with thanks the Department of Computer Science, University of York for the financial support extended as Departmental Overseas Research Scholarship (DORS) which enabled him to continue higher studies leading to PhD. We extend our sincere thanks and appreciation to Prof. Richard Page, Head of the Enterprise System's group of the Department of Computer Science for his valuable help and generous support.\\
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Present basic statistical data (max min, mean, std deviation) about each strategy aggregated over all classes.
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
+
 
  \begin{table*} [ht] {
   \scriptsize
@@ -587,141 +728,9 @@ Max No of Faults 	&    40				&  31\\
     \label{table:Results}
      }
      \end{table*}
-\newpage.
 
 
 
-
-
-Conclusions: 
-- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
-- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
-
-
-Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-
-
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMean.png}
-\caption{Combined Mean.}
-\label{fig:Mean}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMin.png}
-\caption{Combined Min.}
-\label{fig:Min}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMax.png}
-\caption{Combined Max.}
-\label{fig:Max}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineStdDev.png}
-\caption{Combined StdDev.}
-\label{fig:StdDev}
-\end{figure}
-
-
-
-// END NEW STRUCTURE
-
-DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=9cm,height=7cm]{newResults.png}
-\caption{Test Results of 34 classes from 16 Java projects.}
-\label{fig:Result1}
-\end{figure}
-
-
-
-Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
-
-\end{comment}
-
-%%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
-
-\section{Discussion}\label{sec:discussion}
-\textbf{Performance of DSSR strategy, Random strategy and Random plus strategy in terms of finding faults:} 
-Analysis of results revealed that DSSR performs better than random and random plus in programs with block and strip pattern of faults. However, since not all the programs contain faults in the form of block and strip patterns therefore the results do not show a significant performance change. \\
-\indent \textbf{Time taken by DSSR strategy, Random strategy and Random plus strategy to execute tests:}
-To execute equal number of test cases, DSSR strategy took slightly more execution time than pure random and random plus test strategy. It is not unusual and we were expecting similar behaviour because pure random algorithm selects random input of the required type with minimum calculation and therefore its process is very quick. On the other hand random plus and DSSR strategy performs additional computation when it maintains the list of interesting values and selects the correct type test values from the list when required. The desired process of adding values to the list and selecting the required values from the list consumes extra time which is the main reason that DSSR strategy takes a little extra time. Thus in executing tests random strategy, random plus and DSSR strategy comes first, second and third respectively. \\
-\indent \textbf{Effect of test duration in terms of time and number of tests on test results:} 
-We found that test duration increases either because of  increase in time or number of test cases which results in improving the performance of DSSR strategy than random and random plus. It is because when test duration or number of tests increases, the list of interesting values also increases and in turn DSSR strategy get enough relevant values in the list of interesting values and can easily pick one from the list instead of selecting it randomly or from static list of random plus.\\
-\indent \textbf{Effect of number of faults on results:} 
-We also found that DSSR strategy performs better when the number of faults are more in the code. The reason is that when a fault is found in the code, DSSR strategy adds the neighbouring values of the fault finding value to the list of interesting values. Doing this increases the list of interesting values and the strategy is provided with more relevant test data resulting in higher chance of finding faults.\\
-\indent \textbf{Can Pure Random and Random Plus Testing perform better than DSSR strategy:}
-The experimental results indicated that pure random and random plus testing can perform better than DSSR strategy if the SUT contain point pattern of failures rather than block and strip pattern. It is due to the fact that in such cases faults don't lay in the neighbourhood of found fault and adding neighbouring values of the founded fault dont make any impact on performance therefore the extra computational time becomes a liability.\\
-\indent \textbf{DSSR strategy Dependance on Random and Random Plus Testing:}
-During the experiments we found that if the fault finding value is not in the list of interesting values then the test is dependant on random testing. In that case DSSR strategy has to wait for random testing to find the first fault and only then DSSR strategy will add its neighbouring values to the list of interesting values.
-
-
-%%%%%%%%%%%%%%%%%    RW   %%%%%%%%%%%%%%%%%%%%
-
-\section{Related Work}\label{sec:rw}
-
-Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and java libraries \cite{Pacheco2005}, \cite{Csallner2004} and \cite{Claessen2000a}. Its simplicity, ease of implementation and efficiency in generating test cases make it a best choice for test automation \cite{Hamlet1994}. Few of the well known automated tools based on random strategy includes Jartege \cite{Oriat2004}, Eclat \cite{Pacheco2005}, JCrasher \cite{Csallner2004}, AutoTest \cite{Ciupa2007}, \cite{Ciupa2008a} and the latest YETI {Oriol2010}, \cite{Oriol2012}  that is used to conduct this research study.\\
-
-In pursuit of better results and lower overhead many variations of random strategy have been proposed \cite{Chen2010}, \cite{Chen2005}, \cite{Chan2002}, \cite{Chen2004a},\cite{Chen2003}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs random but evenly spread across the input domain. Similarly Mirror ART and ART through dynamic partitioning increased performance by reducing the overhead of ART. One of the main reason behind the better performance of these strategies is that even spread of test input increases the chance of exploring the fault patterns present in the input domain.\\ 
-
-Random plus (R+) strategy \cite{Leitner2007} is a variation of random strategy in which interesting values, beside pure random values, are added to the list of test inputs. These interesting values includes border values \cite{Beizer1990} which has high tendency of finding faults in the given SUT. Results conducted with R+ strategy show significant improvement of pure random strategy. DSSR strategy also rely on R+ strategy in the start until any fault is found where it switches to spot sweeping strategy. \\
-
-It is interesting that numerous efforts have been made to discover the fault patterns \cite{Chen2010}, \cite{Chen2005}, \cite{Chan2002}, \cite{Chen2004a},\cite{Chen2003}, etc. but in our knowledge, none has been published on covering/sweeping all the faults lying in a specific pattern once it has been discovered.\\
-
-A common practice to evaluate performance of newly created or existing strategies is to compare the results obtained (theoretically and empirically) after applying them to similar programs \cite{Gutjahr1999}, \cite{Duran1984}, \cite{Hamlet1990}. We followed similar procedure and evaluated DSSR against R and R+ under constant conditions. \\
-
-Qualitas Corpus \cite{Tempero2010}, a collection of open source java programs maintained for independent empirical research \cite{Oriol2012}, \cite{Tempero2010a}, \cite{Tempero2008}. These projects are carefully selected that spans across the whole set of java applications.
-
-%%%%%%%%%%%%%%%%%    CONCLUSION   %%%%%%%%%%%%%%%%%%%%
-
-
-\section{Conclusions}\label{sec:conc}
-The main goal of the present study was to develop a new random strategy which could find more faults in lower number of test cases and shorter execution time. The experimental findings revealed that DSSR strategy was up to 20\% more effective in finding faults as compared to random strategy and up to 10 \% more effective than random plus strategy. The DSSR strategy not only gave more consistent results but it proved more effective in terms of detecting faults as compared to random and random plus testing.\\
-\indent Improvement in performance of DSSR strategy over random strategy was achieved by taking advantage of Random Plus and fault neighbouring values. Random plus incorporated not only border values but it also added values having higher chances of finding faults in the SUT to the list of interesting values.\\
-\indent The DSSR strategy is highly effective in case of systems containing block and strip pattern of failure across the input domain.\\
-\indent Due to the additional steps of scanning the list of interesting values for better test values and addition of fault finding test value and its neighbour values, the DSSR strategy takes up to 5\% more time to execute equal number of test cases than pure random and random plus. \\
-\indent In the current version of DSSR strategy, it might depend on random or random plus strategy for finding the first fault if the fault test value was not in the list of interesting values. Once the first fault is found only then DSSR strategy could make an impact on the performance of test strategy.\\
-\indent The limitation of random plus strategy is that it maintains a static list of interesting values which remains the same for each program under test, and can be effective in many cases but not always. The better approach will be to have a dynamic list of interesting values that is automatically updated for every program which can be achieved by adding the program literals and its surrounding values to the list of interesting values prior to starting every new test session.
-
-
-%%%%%%%%%%%%%%%%%    FUTURE WORK   %%%%%%%%%%%%%%%%%%%%
-
-
-
-\section{Future Work}
-From the research we came to know that random testing is not very good in generating a test value when the scope of a variable is too narrow as in the following example.  \\
-\begingroup
-    \fontsize{7pt}{10pt}\selectfont
-\noindent
-\{ \\*   
-\indent if(value == 34.4445) \\*
-\indent \{ 10/0 \} \\* 
-\} \\*
-\endgroup
-\indent We also know that if the fault finding value is not in the list than DSSR has to wait for random testing to generate the fault finding value and only after that DSSR strategy will add that value and its surrounding values to the list of interesting values. To decrease the dependancy of DSSR strategy on random and random plus strategy, further work is in progress to add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained either from .java or .class files of the SUT. We are also working to add  neighbouring values of the literals to the list of interesting values. \\
-\indent Thus if we have the above example then the value 34.4445 and its surrounding values will be added to the list of interesting values before the test starts and DSSR strategy will no more be dependent on random testing to find the first fault. Finally, it will also be interesting to evaluate the DSSR strategy in terms of coverage because the newly added values are most suitable for test cases and therefore can increase branch coverage. 
-
-
-%%%%%%%%%%%%%%%%%    ACKNOWDLEGEMENT   %%%%%%%%%%%%%%%%%%%%
-\section{Acknowledgment}
-The auther would like to acknowldge with thanks the Department of Computer Science, University of York for the financial support extended as Departmental Overseas Research Scholarship (DORS) which enabled him to continue higher studies leading to PhD. We extend our sincere thanks and appreciation to Prof. Richard Page, Head of the Enterprise System's group of the Department of Computer Science for his valuable help and generous support.\\
 
 \bibliographystyle{IEEEtran}
 \bibliography{bare_conf}
