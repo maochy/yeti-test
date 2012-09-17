@@ -298,6 +298,17 @@ As mentioned previously, the implementation of the DSSR strategy is made in the 
 \section{Evaluation}\label{sec:eval}
 
 To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random+ (R+)~\cite{Oriol2010} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability are kept constant for all the experiments.\\
+
+\subsection{Research questions}
+To evaluate the DSSR strategy and its usefulness, we set out to answer the following research questions:
+\begin{enumerate}
+\item Is any of the three strategies R, R+ and DSSR provide better results than the other two?
+\item Is there a subset of the classes for which R, R+, or DSSR provide better results than the other two?
+\item If such categories exist, what are their sizes and how do they compare and can we pick a default strategy according to this citerion?
+\end{enumerate}
+
+
+
 \subsection{Experiments}
 
 To evaluate the performances of the DSSR strategy we performed extensive testing of programs from the Qualitas Corpus \cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 80 classes at random from all classes in 32 projects selected randomly from all projects in the Qualitas Corpus and test each of them thirty times with each strategy. Name and versions of the projects are given in table \ref{table:projects}.
@@ -390,7 +401,6 @@ Various measures including the E-measure, P-measure and F-measure have been used
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
 The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured by the maximum number of faults in a particular number of test calls \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
-
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 
