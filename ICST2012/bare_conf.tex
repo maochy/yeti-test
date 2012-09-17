@@ -275,11 +275,11 @@ The above execution process explains that the pre-defined values including borde
 
 
 \section{Implementation of the DSSR strategy}\label{sec:imp}
-As mentioned previously, the implementation of the DSSR strategy is made in the YETI open-source automated random testing tool \cite{Oriol2011, Oriol2012}. YETI is developed in Java and capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies and auto generation of test report at the end of the testing sessions. A number of hitherto faults have successfully been found by YETI in various production softwares \cite{Oriol2011, Oriol2012}.
+As mentioned previously, the implementation of the DSSR strategy is made in the YETI open-source automated random testing tool \cite{Oriol2011, Oriol2012}. YETI is developed in Java and capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies, and auto generation of test report at the end of the testing sessions. For large scale testing there is a cloud-enabled version of YETI that is capable of executing parallel test sessions in Cloud, \cite{Oriol2010}. A number of hitherto faults have successfully been found by YETI in various production softwares \cite{Oriol2011, Oriol2012}. \\
+\indent YETI can be divided into three decoupled main parts: core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. The most common strategies are random and random+. \\
+\indent By default, YETI uses the random+ strategy if no particular strategy is defined during test initialization. It also enables the user to control the probability of null values and the percentage of newly created objects for each test session. YETI provides an interactive Graphical User Interface (GUI) in which users can see the progress of the current test in real time. In addition to the GUI, YETI also provides extensive logs of the test session for more in-depth analysis.
 
-YETI can be divided into three decoupled main parts: core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. The most common strategies are random and random+. 
-
-The DSSR strategy has then been added as an extension of YetiRandomStrategy, which in itself is extension of an abstract class YetiStrategy. The class hierarchy is shown in Figure \ref{fig:hierarchyofDSSR}.
+\indent The DSSR strategy has then been added as an extension of YetiRandomStrategy, which in itself is extension of an abstract class YetiStrategy. The class hierarchy is shown in Figure \ref{fig:hierarchyofDSSR}.
 
 \begin{figure}[h]
 \centering
@@ -289,9 +289,7 @@ The DSSR strategy has then been added as an extension of YetiRandomStrategy, whi
 \end{figure}
 
 
-By default, YETI uses the random+ strategy if no particular strategy is defined during test initialization. It also enables the user to control the probability of null values and the percentage of newly created objects for each test session.
 
-YETI also provides an interactive Graphical User Interface (GUI) in which users can see the progress of the current test in real time. In addition to the GUI, YETI also provides extensive logs of the test session.
 
 
 %%%%%%%%%%%%%%%%%    EVALUATION   %%%%%%%%%%%%%%%%%%%%
@@ -332,22 +330,21 @@ All tests are performed using a 64-bit Mac OS X Version 10.7.4 running on Intel(
 Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were hevily criticized~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996,Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realized that this was not the right choice because in some experiments the first strategy found first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. Preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair.
 
 %%%%%%%%%% REMOVED as it is also present in future work. %%%%%%%%%%%%%%%%
-\begin{comment}
-Moreover, for random testing the F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
 
-\begingroup
-    \fontsize{7pt}{8pt}\selectfont
-\noindent
-\{ \\*
-\indent if ( (value $>$  3.3337) \&\& (value $<$ 3.3339) )\\*
-\indent \{ 10/0 \} \\* 
-\} \\*
-\endgroup
+%Moreover, for random testing the F-measure is quite unpredictable because its value can be easily increased by adding more narrow conditional statements in the SUT. For example in the following program it is difficult for random testing to generate the exact number (3.3338) quickly and therefore the F-measure will be high.\\*
 
-\end{comment}
+%\begingroup
+%    \fontsize{7pt}{8pt}\selectfont
+%\noindent
+%\{ \\*
+%\indent if ( (value $>$  3.3337) \&\& (value $<$ 3.3339) )\\*
+%\indent \{ 10/0 \} \\* 
+%\} \\*
+%\endgroup
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   
-The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured in terms of finding maximum number of faults in a particular number of test calls   \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
+The literature review revealed that F-measure is used where testing stops after identification of first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured in terms of finding maximum number of faults in a particular number of test calls \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
 
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
@@ -644,14 +641,12 @@ Max No of Faults 	&    11				&  11\\
 
 
 
-\begin{comment}
-
-Conclusions: 
-- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
-- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
+%Conclusions: 
+%- we show that for roughly 10\% of classes R+ works best, for 10\% DSSR works best, 10\% RT works best
+%- overall DSSR finds more faults in the same time or number of tests (but this is marginally more than other methods)
 
 
-Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
+%Please check if there are more conclusions something with the standard deviation (is it higher, lower etc...) and the minimum as well.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -659,55 +654,53 @@ Please check if there are more conclusions something with the standard deviation
 
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMean.png}
-\caption{Combined Mean.}
-\label{fig:Mean}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=5cm,height=4cm]{combineMean.png}
+%\caption{Combined Mean.}
+%\label{fig:Mean}
+%\end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMin.png}
-\caption{Combined Min.}
-\label{fig:Min}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=5cm,height=4cm]{combineMin.png}
+%\caption{Combined Min.}
+%\label{fig:Min}
+%\end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineMax.png}
-\caption{Combined Max.}
-\label{fig:Max}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=5cm,height=4cm]{combineMax.png}
+%\caption{Combined Max.}
+%\label{fig:Max}
+%\end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=5cm,height=4cm]{combineStdDev.png}
-\caption{Combined StdDev.}
-\label{fig:StdDev}
-\end{figure}
-
-
-
-// END NEW STRUCTURE
-
-DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=9cm,height=7cm]{newResults.png}
-\caption{Test Results of 34 classes from 16 Java projects.}
-\label{fig:Result1}
-\end{figure}
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=5cm,height=4cm]{combineStdDev.png}
+%\caption{Combined StdDev.}
+%\label{fig:StdDev}
+%\end{figure}
 
 
 
-Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
+%// END NEW STRUCTURE
 
-\end{comment}
+%DSSR has the highest Mean value of finding faults which means that DSSR performs better then random and Random plus. The reason for small improvement instead of 10 and 20\% is described in detail in Discussion section. Similarly the other noticeable improvement is the minimum number of faults DSSR can find is 376 while for random and random plus it is 340 and 344 respectively which means that DSSR strategy always find some of the faults which random and random plus might not. On the other hand DSSR finds maximum 574 faults versus 579 faults of random and random plus but this difference is very small and can be ignored. During the experiments we also found that in some classes like AntClassLoader (Ant project),  Server (Freecs project), BaseFont (itext project) and Util (JsXe project) DSSR strategy found higher number of minimum and maximum faults where as in the same classes random and random plus found 0 or very few faults.  \\
+
+%\begin{figure}[ht]
+%\centering
+%\includegraphics[width=9cm,height=7cm]{newResults.png}
+%\caption{Test Results of 34 classes from 16 Java projects.}
+%\label{fig:Result1}
+%\end{figure}
+
+
+
+%Figure \ref{fig:Result1} show the results of each experiments using bar chart. From the figure we can see that in few of the cases all the three strategies found equal number of faults while in most cases if not all DSSR performs better than random and random plus strategy.
 
 %%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
 
