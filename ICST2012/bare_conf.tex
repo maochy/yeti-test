@@ -300,7 +300,7 @@ As mentioned previously, the implementation of the DSSR strategy is made in the 
 To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random+ (R+)~\cite{Oriol2010} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability are kept constant for all the experiments.\\
 \subsection{Experiments}
 
-To evaluate the performances of the DSSR strategy we performed extensive testing of programs from the Qualitas Corpus \cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 80 classes at random from all classes in the Qualitas Corpus and test each of them thirty times with each strategy.
+To evaluate the performances of the DSSR strategy we performed extensive testing of programs from the Qualitas Corpus \cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 80 classes at random from all classes in 32 projects selected randomly from all projects in the Qualitas Corpus and test each of them thirty times with each strategy. Name and versions of the projects are given in table \ref{table:projects}.
 %It is available in two distributions. The release version ``r'' and the evolution version ``e''. The release version is compact size that contain only the recent version of the projects while the evolution version is more detailed which consists of more than 10 different versions of each project.\\
 %Extensive experiments were carried out to evaluate the performance of DSSR strategy. Every class was tested 30 times by random, random plus and DSSR strategy. 
 %The total number of testing sessions performed is 80 x 30 x 3 = 7200. 
@@ -309,15 +309,47 @@ Because of the absence of the contracts and assertions in the code under test, s
 
 
 \begin{table}[H]
-\caption{ Name and versions of 32 Projects randomly selected from QC for the experiments}
+\scriptsize
+\caption{ Name and versions of 32 Projects randomly selected from Qaulitas Corpus for the experiments}
 \centering
-\begin{tabular}{|c|}
+\begin{tabular}{|l|}
 \hline
-ant-1.8.1,antlr-3.2,aoi-2.8.1,argouml-0.30.2,\\*artofillusion281,aspectj-1.6.9,axion-1.0-M2,\\*azureus,castor-1.3.1,cayenne-3.0.1,cobertura-1.9.4.1,\\*colt-1.2.0,emma-2.0.5312,freecs-1.3.20100406,\\*hibernate-3.6.0,hsqldb-2.0.0,itext-5.0.3,jasml-0.10,\\*jmoney-0.4.4,jruby-1.5.2,jsXe-04\_beta,quartz1.8.3,\\*sandmark3.4,squirrel-sql-3.1.2,tapestry-5.1.0.5,\\*tomcat-7.0.2,trove-2.1.0,velocity-1.6.4,weka-3.7.2,\\*xalan-2.7.1,xerces-2.10.0,xmojo-5.0.0, \\
+ant-1.8.1,
+antlr-3.2,
+aoi-2.8.1,
+argouml-0.30.2,\\*
+artofillusion281,
+aspectj-1.6.9,
+axion-1.0-M2,\\*
+azureus,
+castor-1.3.1,
+cayenne-3.0.1,
+cobertura-1.9.4.1,\\*
+colt-1.2.0,
+emma-2.0.5312,
+freecs-1.3.20100406,\\*
+hibernate-3.6.0,
+hsqldb-2.0.0,
+itext-5.0.3,
+jasml-0.10,\\*
+jmoney-0.4.4,
+jruby-1.5.2,
+jsXe-04\_beta,
+quartz1.8.3,\\*
+sandmark3.4,
+squirrel-sql-3.1.2,
+tapestry-5.1.0.5,\\*
+tomcat-7.0.2,
+trove-2.1.0,
+velocity-1.6.4,
+weka-3.7.2,\\*
+xalan-2.7.1,
+xerces-2.10.0,
+xmojo-5.0.0, \\
 \hline
 
 \end{tabular}
-\label{table:equal}
+\label{table:projects}
 \end{table}
 
 %\indent Commands for executing the experiments using pure random, random plus and DSSR strategies were as follows. Prog1 is the name of the class and nTests is the number of tests set to be executed during this experiment.\\
@@ -740,6 +772,7 @@ To execute equal number of test cases, DSSR strategy took slightly more executio
 We found that test duration increases either because of  increase in time or number of test cases which results in improving the performance of DSSR strategy than random and random plus. It is because when test duration or number of tests increases, the list of interesting values also increases and in turn DSSR strategy get enough relevant values in the list of interesting values and can easily pick one from the list instead of selecting it randomly or from static list of random plus.\\
 \indent \textbf{Effect of number of faults on results:} 
 We also found that DSSR strategy performs better when the number of faults are more in the code. The reason is that when a fault is found in the code, DSSR strategy adds the neighbouring values of the fault finding value to the list of interesting values. Doing this increases the list of interesting values and the strategy is provided with more relevant test data resulting in higher chance of finding faults.\\
+
 \indent \textbf{Can Pure Random and Random Plus Testing perform better than DSSR strategy:}
 The experimental results indicated that pure random and random plus testing can perform better than DSSR strategy if the SUT contain point pattern of failures rather than block and strip pattern. It is due to the fact that in such cases faults don't lay in the neighbourhood of found fault and adding neighbouring values of the founded fault dont make any impact on performance therefore the extra computational time becomes a liability.\\
 \indent \textbf{DSSR strategy Dependance on Random and Random Plus Testing:}
@@ -801,7 +834,6 @@ The auther would like to acknowldge with thanks the Department of Computer Scien
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\newpage
 
 
 \bibliographystyle{IEEEtran}
