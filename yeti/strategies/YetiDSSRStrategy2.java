@@ -154,7 +154,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	public static long uid = 0;
 	String called = "";
 	public String args = "";
-	public int intIncrement = -25;
+	public int intIncrement = -50;
 	
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
@@ -174,7 +174,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 
 				if (yc.getType().getName().equals("int")) {
 					
-					for (int loop = 0; loop < 50; loop ++){
+					for (int loop = 0; loop < 100; loop ++){
 						String programBegin = programBeginPart();
 						String programMiddle = programMiddlePart();
 						called = callPart();
@@ -200,8 +200,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	}
 	
 	public String programBeginPart(){
-		String temp = "import java.io.*; \n"
-				+ "public class C"
+		String temp = "public class C"
 				+ uid++
 				+ " {\n  public static boolean startedByFailing = false;\n"
 				+ " public static int []boundaries = new int[100];\n"
@@ -284,8 +283,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "     isCurrentlyFailing=true;\n"
 				+ "    }\n   }\n  }"
 				+ " nBoundaries=k;\n"
-				+ " printRange();\n"
-				+ " printRangeToFile();"
+				+ " printRange();"
 				+ "\n }\n\n"
 				+ "public static void printRange(){\n"
 				+ " boolean isFailing = startedByFailing;\n"
@@ -297,22 +295,6 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "  if (isFailing) System.out.print(\"Fail ->\");"
 				+ "  else System.out.print(\"Pass ->\");"
 				+ "  isFailing=!isFailing;\n" + "  }" + "\n }"
-				// Now the part which will collect result in a single file.
-				+ " public static void printRangeToFile(){\n"
-				+ " boolean isFailing = startedByFailing;\n"
-				+ " try { \n"
-				+ " FileWriter fstream = new FileWriter(\"out.txt\"); \n"
-				+ " BufferedWriter out = new BufferedWriter(fstream); \n"
-				+ " for (int j=0;j<nBoundaries;j++){  \n"
-				+ " out.write(\"[ \"+boundaries[j]+\": \"); \n"
-				+ " if (isFailing) out.write(\"Fail ->\"); \n"
-				+ "  else out.write(\"Pass ->\"); \n"
-				+ " out.close();}\n"
-				+ " }catch (Exception p){\n"
-				+ " p.printStackTrace();}\n"
-				+ "  isFailing=!isFailing;\n" + "\n }"
-				
-				
 				+ "\n}";
 		return temp3;
 		}
