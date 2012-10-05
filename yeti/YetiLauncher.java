@@ -395,7 +395,7 @@ public class YetiLauncher extends JFrame {
 					}
 				});
 				
-				runButton.setBounds(58, 330, 444, 29);
+				runButton.setBounds(58, 330, 442, 29);
 				contentPane.add(runButton);
 				
 				JButton btnNewButton = new JButton("Count generated files");
@@ -556,10 +556,6 @@ public class YetiLauncher extends JFrame {
 				JLabel label_1 = new JLabel("Select Language of the program under test");
 				label_1.setBounds(571, 66, 403, 16);
 				contentPane.add(label_1);
-				
-				JButton btnNewButton_3 = new JButton("click button to plot xy graph");
-				btnNewButton_3.setBounds(58, 494, 444, 29);
-				contentPane.add(btnNewButton_3);
 				
 				
 				
