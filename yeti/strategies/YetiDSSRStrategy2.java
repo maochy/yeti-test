@@ -29,6 +29,7 @@ import yeti.environments.java.YetiJavaMethod;
 import yeti.environments.java.YetiJavaRoutine;
 import yeti.monitoring.YetiGUI;
 import yeti.monitoring.YetiUpdatableSlider;
+import yeti.YetiLauncher;
 
 public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 
@@ -299,9 +300,12 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		return temp3;
 		}
 	
+	
+	
+	
 	public void generateProgram(String program){
 		try {
-			PrintStream fos = new PrintStream("C" + (uid - 1)
+			PrintStream fos = new PrintStream(YetiLauncher.testFilePathInitial + "C" + (uid - 1)
 					+ ".java");
 			fos.println(program);
 

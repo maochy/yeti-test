@@ -64,9 +64,9 @@ public class YetiLauncher extends JFrame {
 	JCheckBox LogsCheckBox;
 	JComboBox time1ComboBox;
 	JComboBox time2ComboBox;
-	String testFilePath = "-yetiPath=.";
+	public static String testFilePathInitial = ".";
+	String testFilePathFinal = "-yetiPath=.";
 	Thread t1 = new Thread(new Threado());
-	String path = ".";
 	private JTextField textField;	
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -300,11 +300,11 @@ public class YetiLauncher extends JFrame {
 				
 				int sep = fullPath.lastIndexOf(pathSeperator); 
 				
-				testFilePath = "-yetiPath=" + fullPath.substring(0 , sep + 1);
+				testFilePathInitial = fullPath.substring(0, sep + 1);
+				testFilePathFinal = "-yetiPath=" + fullPath.substring(0 , sep + 1);
 				//FOLLOWING NOT WORKING FOR SOME REASON AND THE ABOVE WORKS. BIT STRANGE.
 				//testFilePath = testFilePath+ ":" + fullPath.substring(0 , sep + 1);
 				
-				path = fullPath.substring(0, sep + 1);
 				
 				int dot = fullPath.lastIndexOf(extentionSeperator);
 				int sept = fullPath.lastIndexOf(pathSeperator);
@@ -373,15 +373,15 @@ public class YetiLauncher extends JFrame {
 //						JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
 //						JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 //						JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, testFilePath, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
-						
+//						JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
+//						JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);						
 						list.add(language);
 						list.add(strategy);
 						list.add(time);
 						list.add(gui);
 						list.add(logs);
 						list.add(fileName);
-						list.add(testFilePath);
+						list.add(testFilePathFinal);
 						
 						
 						
@@ -402,7 +402,7 @@ public class YetiLauncher extends JFrame {
 				btnNewButton.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						String files;
-						File folder = new File(path);
+						File folder = new File(testFilePathInitial);
 						File[] listOfFiles = folder.listFiles();
 						
 						for (int i=0; i < listOfFiles.length; i++)
@@ -441,17 +441,20 @@ public class YetiLauncher extends JFrame {
 				contentPane.add(textField);
 				textField.setColumns(10);
 				
+				
+				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CODE TO COMPILE GENERATED FILES %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				
 				JButton btnNewButton_1 = new JButton("Compile Files");
 				btnNewButton_1.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
 						int count = 0;
-						for (int i = 0; i < filesToCompileArray.length; i ++){
+						for (int i = 0; i < filesToCompileArray.length; i++){
 							Process pro1;
 							try {
 //								String temp1 = "javac " + path + filesToCompileArray[i];
 //								JOptionPane.showMessageDialog(null, temp1);
 //								pro1 = Runtime.getRuntime().exec(temp1);
-								pro1 = Runtime.getRuntime().exec("javac " + path + filesToCompileArray[i]);
+								pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
 								count = count + 1;
 							} catch (IOException e) {
 								
@@ -486,7 +489,7 @@ public class YetiLauncher extends JFrame {
 //								String temp1 = "javac " + path + filesToCompileArray[i];
 //								JOptionPane.showMessageDialog(null, temp1);
 //								pro1 = Runtime.getRuntime().exec(temp1);
-								pro1 = Runtime.getRuntime().exec("java " + path + filesToCompileArray[i]);
+								pro1 = Runtime.getRuntime().exec("java " + testFilePathInitial + filesToCompileArray[i]);
 								count = count + 1;
 							} catch (IOException e1) {
 								
