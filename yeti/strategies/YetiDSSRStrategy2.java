@@ -201,7 +201,8 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	}
 	
 	public String programBeginPart(){
-		String temp = "public class C"
+		String temp = "import java.io.*;\n" 
+				+ "public class C"
 				+ uid++
 				+ " {\n  public static boolean startedByFailing = false;\n"
 				+ " public static int []boundaries = new int[100];\n"
@@ -288,6 +289,28 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "\n }\n\n"
 				+ "public static void printRange(){\n"
 				+ " boolean isFailing = startedByFailing;\n"
+				//%%%%%%%%%%%%%%%%%%%%% ADDITION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				
+				+ "try{ \n"
+					// Create file 
+				+	"FileWriter fstream = new FileWriter(\"Results.txt\");\n"
+				+	"BufferedWriter out = new BufferedWriter(fstream);\n"
+				+	"out.write(\"" + called + "\");\n"
+				+   "for (int j=0;j<nBoundaries;j++){"
+				+   "out.write(\"[ \"+boundaries[j]+\": \");\n"
+				//Close the output stream
+				+	"out.close();\n"
+				+ "}\n} catch (Exception e){ \n"
+				//Catch exception if any
+				+	"System.err.println(\"Error: \" + e.getMessage());\n"
+				+ "}\n}\n}\n";
+				return temp3;
+	}
+								
+				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				/**
+				
+				
 				+ " System.out.println(\""
 				+ called
 				+ "\");\n"
@@ -299,7 +322,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "\n}";
 		return temp3;
 		}
-	
+	**/
 	
 	
 	
