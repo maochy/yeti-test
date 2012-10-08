@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -175,13 +176,13 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 
 				if (yc.getType().getName().equals("int")) {
 					
-					for (int loop = 0; loop < 50; loop ++){
+					for (int loop = 0; loop < 5; loop ++){
 						String programBegin = programBeginPart();
 						String programMiddle = programMiddlePart();
 						called = callPart();
 						String programEnd = programEndPart();
 						
-						String generatedProgram = programBegin + called + programMiddle + "   " + called + ";" + programEnd;
+						String generatedProgram = programBegin + programMiddle + "   " + called + ";" + programEnd;
 						
 						generateProgram(generatedProgram);
 					
@@ -200,27 +201,26 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		return oldyt;
 	}
 	
+	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BEGIN PART %%%%%%%%%%%%%%%%%%%
+	
 	public String programBeginPart(){
-		String temp = "import java.io.*;\n" 
+		String temp = "import java.io.*;\n"
+				+ "import java.util.*;\n\n" 
 				+ "public class C"
-				+ uid++
-				+ " {\n  public static boolean startedByFailing = false;\n"
-				+ " public static int []boundaries = new int[100];\n"
-				+ " public static int nBoundaries = 1;\n"
-				+ " public static void main(String []argv){\n"
-				+ "  boolean isCurrentlyFailing = false;\n"
-				+ "  int k=0;\n"
-				+ "  boundaries[k++] = Integer.MIN_VALUE;\n"
-				+ " try{\n" + "int i=Integer.MIN_VALUE;\n";
+				+  uid++
+				+ " {\n" 
+				+ "public static ArrayList<String> pass = new ArrayList<String>();\n"
+				+ "public static ArrayList<String> fail = new ArrayList<String>();\n\n"
+				+ " public static void main(String []argv){\n";
 		return temp;
 	}
 	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%%% MIDDLE PART %%%%%%%%%%%%%%%%%%%%%
+	
 	public String programMiddlePart(){
-		String temp1 = ";} catch (Throwable t){\n"
-				+ "  startedByFailing = true;\n"
-				+ "  isCurrentlyFailing = true;\n"
-				+ " }\n"
-				+ "  for (int i=Integer.MIN_VALUE+1;i<Integer.MAX_VALUE;i++){\n   try{\n";
+		String temp1 = "    for (int i=-1000; i < 1000; i++) \n"
+					+	"    {\n    try{ \n ";
 		return temp1;
 	}
 	
@@ -275,56 +275,33 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		return call;
 	}
 	
+	//%%%%%%%%%%%%%%%%%%%%%%%%% END PART %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
 	public String programEndPart(){
-		String temp3 = "if (isCurrentlyFailing){"
-				+ "    isCurrentlyFailing=false;"
-				+ "boundaries[k++] = i;}\n"
-				+ "   } catch(Throwable t){\n"
-				+ "     if (!isCurrentlyFailing){\n"
-				+ "     boundaries[k++] = i;\n"
-				+ "     isCurrentlyFailing=true;\n"
-				+ "    }\n   }\n  }"
-				+ " nBoundaries=k;\n"
-				+ " printRange();"
-				+ "\n }\n\n"
-				+ "public static void printRange(){\n"
-				+ " boolean isFailing = startedByFailing;\n"
-				//%%%%%%%%%%%%%%%%%%%%% ADDITION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				
-				+ "try{ \n"
+		String temp3 = "\n    pass.add((\"\" + i)); \n"
+				+ "    } catch(Throwable t){\n"
+				+ "    fail.add((\"\" + i)); \n    }\n    }\n"
+				+ "    printRange();"
+				+ "   \n    }\n\n"
+				+ " public static void printRange(){\n"
+				+ "   try{ \n"
 					// Create file 
-				+	"FileWriter fstream = new FileWriter(\"Results.txt\");\n"
-				+	"BufferedWriter out = new BufferedWriter(fstream);\n"
-				+	"out.write(\"" + called + "\");\n"
-				+   "for (int j=0;j<nBoundaries;j++){"
-				+   "out.write(\"[ \"+boundaries[j]+\": \");\n"
+				+	"    PrintWriter pr = new PrintWriter(\"Results.txt\");\n"
+				+	"    pr.println(\"" + called + "\");\n"
+				+   "    for (String str: fail) {\n"
+				+   "    pr.println(str);\n    }\n"
 				//Close the output stream
-				+	"out.close();\n"
-				+ "}\n} catch (Exception e){ \n"
+				+	"    pr.close();\n"
+				+ "    } catch (Exception e){ \n"
 				//Catch exception if any
-				+	"System.err.println(\"Error: \" + e.getMessage());\n"
-				+ "}\n}\n}\n";
+				+	"    System.err.println(\"Error: \" + e.getMessage());\n"
+				+ "    }\n   }\n }\n";
 				return temp3;
-	}
+	} 
 								
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				/**
 				
-				
-				+ " System.out.println(\""
-				+ called
-				+ "\");\n"
-				+ " for (int j=0;j<nBoundaries;j++){"
-				+ "  System.out.print(\"[ \"+boundaries[j]+\": \");"
-				+ "  if (isFailing) System.out.print(\"Fail ->\");"
-				+ "  else System.out.print(\"Pass ->\");"
-				+ "  isFailing=!isFailing;\n" + "  }" + "\n }"
-				+ "\n}";
-		return temp3;
-		}
-	**/
 	
-	
+	//%%%%%%%%%%%%%%%%%%%% COMBINED PART %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	public void generateProgram(String program){
 		try {
