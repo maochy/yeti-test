@@ -484,12 +484,12 @@ public class YetiLauncher extends JFrame {
 						
 						int count = 0;
 						for (int i = 0; i < filesToCompileArray.length; i++){
-							Process pro1;
+							//Process pro1;
 							try {
-//								String temp1 = "javac " + path + filesToCompileArray[i];
-//								JOptionPane.showMessageDialog(null, temp1);
-//								pro1 = Runtime.getRuntime().exec(temp1);
-								pro1 = Runtime.getRuntime().exec("java " + testFilePathInitial + filesToCompileArray[i]);
+								Runtime.getRuntime().exec("java C"+ i);
+								//String temp = "java " + testFilePathInitial + filesToCompileArray[i];
+							    //Runtime.getRuntime().exec(temp);
+								//JOptionPane.showMessageDialog(null, temp, "program to execute is ", JOptionPane.PLAIN_MESSAGE);
 								count = count + 1;
 							} catch (IOException e1) {
 								
