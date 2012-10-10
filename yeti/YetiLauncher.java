@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.*;
 import java.util.ArrayList;
+import yeti.GraphingData;
 /**
  
  YETI - York Extensible Testing Infrastructure
@@ -510,9 +511,25 @@ public class YetiLauncher extends JFrame {
 				textField_3.setColumns(10);
 				
 				
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% End  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				
 				
+				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Code to Draw Graph %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				
+				JButton btnNewButton_3 = new JButton("Draw faulty values on x,y graphs");
+				btnNewButton_3.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						
+						GraphingData gd = new GraphingData();
+						gd.draw();
+
+
+					}
+				});
+				
+				btnNewButton_3.setBounds(58, 490, 442, 29);
+				contentPane.add(btnNewButton_3);
+				
+				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 				
 				JLabel lblNewLabel = new JLabel("Description of each field (Temporary)");
 				lblNewLabel.setBounds(571, 94, 403, 16);
