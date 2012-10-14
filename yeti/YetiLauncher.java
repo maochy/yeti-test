@@ -2,6 +2,8 @@ package yeti;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+
+import org.jfree.ui.RefineryUtilities;
 //import java.awt.Toolkit;
 import java.awt.*;
 import java.awt.event.*;
@@ -520,6 +522,10 @@ public class YetiLauncher extends JFrame {
 						
 						//GraphingData gd = new GraphingData();
 						//gd.draw();
+						 final LogGraph demo = new LogGraph("Line Chart Demo 6");
+					     demo.pack();
+					     RefineryUtilities.centerFrameOnScreen(demo);
+					     demo.setVisible(true);
 
 
 					}
