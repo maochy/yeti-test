@@ -9,7 +9,6 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.*;
 import java.util.ArrayList;
-import yeti.GraphingData;
 /**
  
  YETI - York Extensible Testing Infrastructure
@@ -519,8 +518,8 @@ public class YetiLauncher extends JFrame {
 				btnNewButton_3.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						
-						GraphingData gd = new GraphingData();
-						gd.draw();
+						//GraphingData gd = new GraphingData();
+						//gd.draw();
 
 
 					}
