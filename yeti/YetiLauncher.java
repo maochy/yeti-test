@@ -522,7 +522,10 @@ public class YetiLauncher extends JFrame {
 						
 						//GraphingData gd = new GraphingData();
 						//gd.draw();
-						 final LogGraph demo = new LogGraph("Line Chart Demo 6");
+						
+						 GraphDataRead Gdr = new GraphDataRead();
+						 Gdr.readDataFromFile();
+						 final LogGraph demo = new LogGraph("Failing values");
 					     demo.pack();
 					     RefineryUtilities.centerFrameOnScreen(demo);
 					     demo.setVisible(true);

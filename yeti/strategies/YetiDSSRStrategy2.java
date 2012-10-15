@@ -210,8 +210,8 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "public class C"
 				+  uid++
 				+ " {\n" 
-				+ "public static ArrayList<String> pass = new ArrayList<String>();\n"
-				+ "public static ArrayList<String> fail = new ArrayList<String>();\n\n"
+				+ "public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+				+ "public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 				+ " public static void main(String []argv){\n";
 		return temp;
 	}
@@ -278,18 +278,18 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	//%%%%%%%%%%%%%%%%%%%%%%%%% END PART %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	public String programEndPart(){
-		String temp3 = "\n    pass.add((\"\" + i)); \n"
+		String temp3 = "\n    pass.add(i); \n"
 				+ "    } catch(Throwable t){\n"
-				+ "    fail.add((\"\" + i)); \n    }\n    }\n"
+				+ "    fail.add(i); \n    }\n    }\n"
 				+ "    printRange();"
 				+ "   \n    }\n\n"
 				+ " public static void printRange(){\n"
 				+ "   try{ \n"
 					// Create file 
 				+	"    PrintWriter pr = new PrintWriter(\"Results.txt\");\n"
-				+	"    pr.println(\"" + called + "\");\n"
-				+   "    for (String str: fail) {\n"
-				+   "    pr.println(str);\n    }\n"
+				//+	"    pr.println(\"" + called + "\");\n"
+				+   "    for (Integer i1: fail) {\n"
+				+   "    pr.println(i1);\n    }\n"
 				//Close the output stream
 				+	"    pr.close();\n"
 				+ "    } catch (Exception e){ \n"
