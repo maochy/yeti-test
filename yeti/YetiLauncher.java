@@ -480,6 +480,8 @@ public class YetiLauncher extends JFrame {
 				
 				
 				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Code to Execute C0, C1, .... files %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+				
+				
 				JButton btnNewButton_2 = new JButton("Execute Files");
 				btnNewButton_2.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
@@ -523,9 +525,10 @@ public class YetiLauncher extends JFrame {
 						//GraphingData gd = new GraphingData();
 						//gd.draw();
 						
-						 GraphDataRead Gdr = new GraphDataRead();
-						 Gdr.readDataFromFile();
-						 final LogGraph demo = new LogGraph("Failing values");
+						 GraphDataScanner Gdr = new GraphDataScanner();
+						 Gdr.readFailDataFromFile();
+						 Gdr.readPassDataFromFile();
+						 final LogGraph demo = new LogGraph("Failing and Passing values");
 					     demo.pack();
 					     RefineryUtilities.centerFrameOnScreen(demo);
 					     demo.setVisible(true);

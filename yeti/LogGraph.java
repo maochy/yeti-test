@@ -49,14 +49,14 @@ public class LogGraph extends ApplicationFrame {
      */
     private XYDataset createDataset() {
         
-        final XYSeries series1 = new XYSeries("First");
+        final XYSeries series1 = new XYSeries("Failing input");
         
 //        int [] exampledata = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 //        for (int i =0; i < exampledata.length; i++ )
 //        	series1.add((double)exampledata[i],0);
         
-        for (int i =0; i < GraphDataRead.graphDataInt.length; i++ )
-        	series1.add((double)GraphDataRead.graphDataInt[i],0);
+        for (int i =0; i < GraphDataScanner.graphDataIntFail.length; i++ )
+        	series1.add((double)GraphDataScanner.graphDataIntFail[i],0);
         
 //        series1.add(1.0, 1.0);
 //        series1.add(2.0, 4.0);
@@ -67,7 +67,11 @@ public class LogGraph extends ApplicationFrame {
 //        series1.add(7.0, 7.0);
 //        series1.add(8.0, 8.0);
 
-//        final XYSeries series2 = new XYSeries("Second");
+        final XYSeries series2 = new XYSeries("Passing input");
+        
+        for (int j =0; j < GraphDataScanner.graphDataIntPass.length; j++ )
+        	series2.add((double)GraphDataScanner.graphDataIntPass[j],0);
+        
 //        series2.add(1.0, 5.0);
 //        series2.add(2.0, 7.0);
 //        series2.add(3.0, 6.0);
@@ -89,7 +93,7 @@ public class LogGraph extends ApplicationFrame {
 
         final XYSeriesCollection dataset = new XYSeriesCollection();
         dataset.addSeries(series1);
-//        dataset.addSeries(series2);
+        dataset.addSeries(series2);
 //        dataset.addSeries(series3);
                 
         return dataset;

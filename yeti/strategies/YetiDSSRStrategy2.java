@@ -281,15 +281,29 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		String temp3 = "\n    pass.add(i); \n"
 				+ "    } catch(Throwable t){\n"
 				+ "    fail.add(i); \n    }\n    }\n"
-				+ "    printRange();"
+				+ "    printRangeFail();"
+				+ "    printRangePass();"
 				+ "   \n    }\n\n"
-				+ " public static void printRange(){\n"
+				+ " public static void printRangeFail(){\n"
 				+ "   try{ \n"
 					// Create file 
-				+	"    PrintWriter pr = new PrintWriter(\"Results.txt\");\n"
+				+	"    PrintWriter pr = new PrintWriter(\"Fail.txt\");\n"
 				//+	"    pr.println(\"" + called + "\");\n"
 				+   "    for (Integer i1: fail) {\n"
 				+   "    pr.println(i1);\n    }\n"
+				//Close the output stream
+				+	"    pr.close();\n"
+				+ "    } catch (Exception e){ \n"
+				//Catch exception if any
+				+	"    System.err.println(\"Error: \" + e.getMessage());\n"
+				+ "    }\n   }\n"
+				+ " public static void printRangePass(){\n"
+				+ "   try{ \n"
+					// Create file 
+				+	"    PrintWriter pr = new PrintWriter(\"Pass.txt\");\n"
+				//+	"    pr.println(\"" + called + "\");\n"
+				+   "    for (Integer i2: pass) {\n"
+				+   "    pr.println(i2);\n    }\n"
 				//Close the output stream
 				+	"    pr.close();\n"
 				+ "    } catch (Exception e){ \n"
