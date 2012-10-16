@@ -199,10 +199,17 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		return oldyt;
 	}
 	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
+	
 	public String programBeginPart(){
-		String temp = "public class C"
-				+ uid++
-				+ " {\n  public static boolean startedByFailing = false;\n"
+		String temp = "import java.io.*;\n"
+				+ "import java.util.*;\n\n" 
+				+ "public class C"
+				+  uid++
+				+ " {\n" 
+				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+				+ " public static boolean startedByFailing = false;\n"
 				+ " public static int []boundaries = new int[100];\n"
 				+ " public static int nBoundaries = 1;\n"
 				+ " public static void main(String []argv){\n"
@@ -212,6 +219,9 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ " try{\n" + "int i=Integer.MIN_VALUE;\n";
 		return temp;
 	}
+	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%   MIDDLE PART %%%%%%%%%%%%%%%%%%%%//
+	
 	
 	public String programMiddlePart(){
 		String temp1 = ";} catch (Throwable t){\n"
@@ -272,6 +282,9 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 		intIncrement++;
 		return call;
 	}
+	
+	
+	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
 	
 	public String programEndPart(){
 		String temp3 = "if (isCurrentlyFailing){"
