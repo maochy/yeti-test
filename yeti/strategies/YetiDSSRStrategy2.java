@@ -179,8 +179,9 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 						String programMiddle = programMiddlePart();
 						called = callPart();
 						String programEnd = programEndPart();
+						String programEnd2 = programEndPart2();
 						
-						String generatedProgram = programBegin + called + programMiddle + "   " + called + ";" + programEnd;
+						String generatedProgram = programBegin + called + programMiddle  + programEnd  + "   " + called + ";" + programEnd2;
 						
 						generateProgram(generatedProgram);
 					
@@ -209,14 +210,18 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ " {\n" 
 				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
 				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+				
 				+ " public static boolean startedByFailing = false;\n"
-				+ " public static int []boundaries = new int[100];\n"
-				+ " public static int nBoundaries = 1;\n"
+				+ " public static boolean isCurrentlyFailing = false;\n"
+				
+				+ " public static int start = Integer.MIN_VALUE;\n"
+				+ " public static int stop = Integer.MAX_VALUE;\n"
+				
 				+ " public static void main(String []argv){\n"
-				+ "  boolean isCurrentlyFailing = false;\n"
-				+ "  int k=0;\n"
-				+ "  boundaries[k++] = Integer.MIN_VALUE;\n"
-				+ " try{\n" + "int i=Integer.MIN_VALUE;\n";
+				
+				+ "  checkFirstAndLast(start);\n"
+				
+				+ "  for (int i=start+1;i<stop;i++){\n   try{\n";
 		return temp;
 	}
 	
@@ -224,11 +229,27 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	
 	
 	public String programMiddlePart(){
-		String temp1 = ";} catch (Throwable t){\n"
-				+ "  startedByFailing = true;\n"
-				+ "  isCurrentlyFailing = true;\n"
-				+ " }\n"
-				+ "  for (int i=Integer.MIN_VALUE+1;i<Integer.MAX_VALUE;i++){\n   try{\n";
+		String temp1 = 
+				";\n "
+				+ "  if (isCurrentlyFailing) \n"
+				+ "  { \n"
+				+ "  fail.add(i-1); \n"
+				+ "  pass.add(i); \n"
+				+ "  isCurrentlyFailing=false; \n"
+				+ "  } \n } \n"
+				+ "  catch(Throwable t) { \n"
+				+ "  if (!isCurrentlyFailing) \n"
+				+ "  { \n"
+				+ "  pass.add(i-1); \n"
+				+ "  fail.add(i); \n"
+				+ "  isCurrentlyFailing = true; \n"
+				+ " }  \n } \n } \n"
+				+ " checkFirstAndLast(stop); \n"
+				+ "  printRangeFail(); \n"
+				+ "  printRangePass();  \n"
+				+ "  }\n";
+				
+				;
 		return temp1;
 	}
 	
@@ -287,30 +308,47 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
 	
 	public String programEndPart(){
-		String temp3 = "if (isCurrentlyFailing){"
-				+ "    isCurrentlyFailing=false;"
-				+ "boundaries[k++] = i;}\n"
-				+ "   } catch(Throwable t){\n"
-				+ "     if (!isCurrentlyFailing){\n"
-				+ "     boundaries[k++] = i;\n"
-				+ "     isCurrentlyFailing=true;\n"
-				+ "    }\n   }\n  }"
-				+ " nBoundaries=k;\n"
-				+ " printRange();"
-				+ "\n }\n\n"
-				+ "public static void printRange(){\n"
-				+ " boolean isFailing = startedByFailing;\n"
-				+ " System.out.println(\""
-				+ called
-				+ "\");\n"
-				+ " for (int j=0;j<nBoundaries;j++){"
-				+ "  System.out.print(\"[ \"+boundaries[j]+\": \");"
-				+ "  if (isFailing) System.out.print(\"Fail ->\");"
-				+ "  else System.out.print(\"Pass ->\");"
-				+ "  isFailing=!isFailing;\n" + "  }" + "\n }"
-				+ "\n}";
+		String temp3 = "\n public static void printRangeFail() { \n"
+				+"   try { \n"
+				+"   PrintWriter pr = new PrintWriter(\"/Users/mian/inclaspath/Fail.txt\"); \n"
+				+"   for (Integer i1 : fail) { \n"
+				+"      pr.println(i1); \n"
+				+"   } \n"
+				+"   pr.close(); \n"
+				+"   } \n"
+				+"   catch(Exception e) { \n"
+				+"   System.err.println(\" Error : e.getMessage() \"); \n"
+				+"   } \n"
+				+" } \n"
+				+"  public static void printRangePass() { \n"
+				+"   try { \n"
+				+"   PrintWriter pr = new PrintWriter(\"/Users/mian/inclaspath/Pass.txt\"); \n"
+				+"   for (Integer i2 : pass) { \n"
+				+"      pr.println(i2); \n"
+				+"   } \n"
+				+"   pr.close(); \n"
+				+"   } \n"
+				+"   catch(Exception e) { \n"
+				+"   System.err.println(\" Error : e.getMessage() \"); \n"
+				+"   } \n"
+				+" } \n"
+				+"   public static void checkFirstAndLast(int i) { \n"
+				+"   try { \n";
 		return temp3;
+	}
+		
+		
+		
+		public String programEndPart2(){
+			String temp4 = "\n pass.add(i); \n"
+					+  "  } \n"
+					+  "  catch (Throwable t) { \n"
+					+  "  startedByFailing = true; \n"
+					+  "  isCurrentlyFailing = true; \n"
+					+  "  fail.add(i); \n } \n } \n}";
+				return temp4;
 		}
+				
 	
 	public void generateProgram(String program){
 		try {
