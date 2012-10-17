@@ -528,10 +528,15 @@ public class YetiLauncher extends JFrame {
 						 GraphDataScanner Gdr = new GraphDataScanner();
 						 Gdr.readFailDataFromFile();
 						 Gdr.readPassDataFromFile();
-						 final LogGraph demo = new LogGraph("Failing and Passing values");
-					     demo.pack();
-					     RefineryUtilities.centerFrameOnScreen(demo);
-					     demo.setVisible(true);
+//						 final LogGraph demo = new LogGraph("Failing and Passing values");
+//					     demo.pack();
+//					     RefineryUtilities.centerFrameOnScreen(demo);
+//					     demo.setVisible(true);
+						 //%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+		                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+		                demo.pack();
+		                demo.setLocationRelativeTo(null);
+		                demo.setVisible(true);
 
 
 					}
