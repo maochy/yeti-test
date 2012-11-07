@@ -81,19 +81,11 @@ public class YetiLauncher extends JFrame {
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				//try {
 					YetiLauncher frame = new YetiLauncher();
-					
-					//instructions to make the application run full screen.
-					//Toolkit tk = Toolkit.getDefaultToolkit();
-					//int xSize = ((int) tk.getScreenSize().getWidth());
-					//int ySize = ((int) tk.getScreenSize().getHeight());
-					// finish here. dont forget to import toolkit.
-					//frame.setSize(xSize,ySize);
+					frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
 					frame.setVisible(true);
-			//	} catch (Exception e) {
-			//		e.printStackTrace();
-			//	}
+					
+			
 			}
 		});
 	}
@@ -169,7 +161,7 @@ public class YetiLauncher extends JFrame {
 	languageComboBox.setToolTipText("Please select the language in which the test file is written.");
 	
 	languageComboBox.setModel(new DefaultComboBoxModel(new String[] {"Java", ".Net", "JML", "Pharo"}));
-	languageComboBox.setBounds(148, 90, 137, 27);
+	languageComboBox.setBounds(148, 90, 170, 27);
 	contentPane.add(languageComboBox);
 		
 	languageComboBox.addActionListener(new ActionListener() {
@@ -197,7 +189,7 @@ public class YetiLauncher extends JFrame {
 		final JComboBox strategyComboBox = new JComboBox();
 		strategyComboBox.setToolTipText("Please select the strategy for the current test session");
 		strategyComboBox.setModel(new DefaultComboBoxModel(new String[] {"Random", "DSSR", "Random Plus", "DSSR Plus"}));
-		strategyComboBox.setBounds(148, 118, 137, 27);
+		strategyComboBox.setBounds(148, 118, 170, 27);
 		contentPane.add(strategyComboBox);
 		
 		strategyComboBox.addActionListener(new ActionListener() {
@@ -234,7 +226,7 @@ public class YetiLauncher extends JFrame {
 				time2ComboBox.setToolTipText("Select test duration in Minutes or seconds");
 
 				time2ComboBox.setModel(new DefaultComboBoxModel(new String[] {"Seconds", "Minutes"}));
-				time2ComboBox.setBounds(214, 146, 108, 27);
+				time2ComboBox.setBounds(214, 146, 103, 27);
 				contentPane.add(time2ComboBox);
 				
 	}
@@ -317,12 +309,7 @@ public class YetiLauncher extends JFrame {
 				txtItDisplayThe.setText(fileName);
 				
 				fileName = "-testModules="+fileName;
-				
-				
-							
-				//str = str.substring(0, str.lastIndexOf('.'));
-				//str = "-testModules="+str;
-				//fileName = (str.replaceAll("/", "."));
+
 			}
 		});
 		browseButton.setBounds(148, 229, 117, 29);
@@ -331,7 +318,7 @@ public class YetiLauncher extends JFrame {
 		txtItDisplayThe = new JTextField();
 		txtItDisplayThe.setText("yeti.test.YetiTest");
 		txtItDisplayThe.setToolTipText("It display the path of the file that is selected for testing.");
-		txtItDisplayThe.setBounds(151, 262, 349, 28);
+		txtItDisplayThe.setBounds(151, 262, 165, 28);
 		contentPane.add(txtItDisplayThe);
 		txtItDisplayThe.setColumns(10);
 
@@ -397,7 +384,7 @@ public class YetiLauncher extends JFrame {
 					}
 				});
 				
-				runButton.setBounds(58, 330, 442, 29);
+				runButton.setBounds(148, 330, 170, 29);
 				contentPane.add(runButton);
 				
 				JButton btnNewButton = new JButton("Count generated files");
@@ -544,58 +531,6 @@ public class YetiLauncher extends JFrame {
 				
 				btnNewButton_3.setBounds(58, 490, 442, 29);
 				contentPane.add(btnNewButton_3);
-				
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				
-				JLabel lblNewLabel = new JLabel("Description of each field (Temporary)");
-				lblNewLabel.setBounds(571, 94, 403, 16);
-				contentPane.add(lblNewLabel);
-				
-				JLabel lblSelectStrategyFor = new JLabel("Select Strategy for the Test Session");
-				lblSelectStrategyFor.setBounds(571, 122, 403, 16);
-				contentPane.add(lblSelectStrategyFor);
-				
-				JLabel lblSelectDurationIn = new JLabel("Select duration in minutes or seconds");
-				lblSelectDurationIn.setBounds(571, 150, 403, 16);
-				contentPane.add(lblSelectDurationIn);
-				
-				JLabel lblCheckTheBox = new JLabel("Check the box to see GUI test session");
-				lblCheckTheBox.setBounds(571, 178, 403, 16);
-				contentPane.add(lblCheckTheBox);
-				
-				JLabel lblCheckTheBox_1 = new JLabel("Check the box to save the logs of test session");
-				lblCheckTheBox_1.setBounds(571, 206, 403, 16);
-				contentPane.add(lblCheckTheBox_1);
-				
-				JLabel lblSelectBinaryFile = new JLabel("Select binary file \".class\" to test");
-				lblSelectBinaryFile.setBounds(571, 234, 403, 16);
-				contentPane.add(lblSelectBinaryFile);
-				
-				JLabel lblDisplayTheName = new JLabel("Display the name of the selected file without extention");
-				lblDisplayTheName.setBounds(571, 268, 403, 16);
-				contentPane.add(lblDisplayTheName);
-				
-				JLabel lblClickToRun = new JLabel("Click to run YETI test on selected file ");
-				lblClickToRun.setBounds(571, 335, 403, 16);
-				contentPane.add(lblClickToRun);
-				
-				JLabel lblInCaseOf = new JLabel();
-				lblInCaseOf.setText("<HTML>In DSSR Plus strategy, on click it counts number of generated files starting with name C in current folder and display it in text field</HTML>");
-				lblInCaseOf.setBounds(571, 360, 423, 48);
-				contentPane.add(lblInCaseOf);
-				
-				JLabel label = new JLabel();
-				label.setText("<HTML>In DSSR Plus strategy, on click it compile the files starting with name C in current folder and display it in text field</HTML>");
-				label.setBounds(571, 417, 423, 48);
-				contentPane.add(label);
-				
-				JLabel label_1 = new JLabel("Select Language of the program under test");
-				label_1.setBounds(571, 66, 403, 16);
-				contentPane.add(label_1);
-				
-				
-				
-				
 			
 	}
 }
