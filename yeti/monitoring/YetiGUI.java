@@ -73,6 +73,7 @@ import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import yeti.YetiLauncher;
 
 import yeti.Yeti;
 import yeti.YetiLog;
@@ -194,7 +195,7 @@ public class YetiGUI implements Runnable {
 		f.setVisible(true);
 
 		mainGUI=this;
-
+		//mainGUI= YetiLauncher.frame;
 		new Thread(this).start();
 		new Thread(sampler).start();
 
