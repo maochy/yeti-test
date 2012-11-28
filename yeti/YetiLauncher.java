@@ -82,7 +82,10 @@ public class YetiLauncher extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 					YetiLauncher frame = new YetiLauncher();
-					frame.setExtendedState(frame.getExtendedState() | JFrame.MAXIMIZED_BOTH);
+					Toolkit tk = Toolkit.getDefaultToolkit();
+					int xSize = ((int) tk.getScreenSize().getWidth());
+					int ySize = ((int) tk.getScreenSize().getHeight());
+					frame.setSize(xSize,ySize);
 					frame.setVisible(true);
 					
 			
