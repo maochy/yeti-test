@@ -73,7 +73,7 @@ import javax.swing.JToolBar;
 import javax.swing.KeyStroke;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import yeti.YetiLauncher;
+//import yeti.YetiLauncher;
 
 import yeti.Yeti;
 import yeti.YetiLog;

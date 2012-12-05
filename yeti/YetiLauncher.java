@@ -1,291 +1,225 @@
 package yeti;
 
-import javax.swing.*;
-import javax.swing.border.EmptyBorder;
-
-import org.jfree.ui.RefineryUtilities;
-//import java.awt.Toolkit;
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.IOException;
-import java.lang.*;
 import java.util.ArrayList;
-/**
- 
- YETI - York Extensible Testing Infrastructure
- 
- Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York
- All rights reserved.
- 
- Redistribution and use in source and binary forms, with or without
- modification, are permitted provided that the following conditions are met:
- 1. Redistributions of source code must retain the above copyright
- notice, this list of conditions and the following disclaimer.
- 2. Redistributions in binary form must reproduce the above copyright
- notice, this list of conditions and the following disclaimer in the
- documentation and/or other materials provided with the distribution.
- 3. All advertising materials mentioning features or use of this software
- must display the following acknowledgment:
- This product includes software developed by the University of York.
- 4. Neither the name of the University of York nor the
- names of its contributors may be used to endorse or promote products
- derived from this software without specific prior written permission.
- 
- THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY
- EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
- DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
- DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
- (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
- LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
- ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
- (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- 
- **/ 
 
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import javax.swing.border.TitledBorder;
 
+import com.lowagie.text.Font;
 
+public class YetiLauncher extends JFrame{
 
-public class YetiLauncher extends JFrame {
+	private JPanel panel1 = new JPanel();
+	private JPanel panel2 = new JPanel();
+	private JPanel panel3 = new JPanel();
+	private JPanel panel4 = new JPanel(new BorderLayout());
 
-	private JPanel contentPane;
-	private JTextField txtItDisplayThe;
-	String language = "-java";
-	String time = "-time=5mn";
-	String strategy = "-random";
-	String gui = "-gui";
-	String fileName = "-testModules=yeti.test.YetiTest"; 
-	String logs = "-nologs";
-	public String[] command;
-	ArrayList<String> list = new ArrayList<String>();
-	ArrayList<String> filesToCompile = new ArrayList<String>();
-	String[] filesToCompileArray;
-	JCheckBox GuiCheckBox;
-	JCheckBox LogsCheckBox;
-	JComboBox time1ComboBox;
-	JComboBox time2ComboBox;
 	public static String testFilePathInitial = ".";
-	String testFilePathFinal = "-yetiPath=.";
-	Thread t1 = new Thread(new Threado());
-	private JTextField textField;	
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
-	
-	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-					YetiLauncher frame = new YetiLauncher();
-					Toolkit tk = Toolkit.getDefaultToolkit();
-					int xSize = ((int) tk.getScreenSize().getWidth());
-					int ySize = ((int) tk.getScreenSize().getHeight());
-					frame.setSize(xSize,ySize);
-					frame.setVisible(true);
-					
-			
+
+	String 		testFilePathFinal 	 = "-yetiPath=.";
+	String 		fileName			 = "-testModules=yeti.test.YetiTest"; 
+	String 		language 			 = "-java";
+	String 		strategy 			 = "-ADFD";
+	String 		gui 				 = "-gui";
+	String 		logs 				 = "-nologs";
+	String 		time 				 = "-time=5s";
+
+	String[] languages = {"Java", ".Net", "JML", "Pharo" };
+	String[] strategies = {"ADFD", "DSSR", "Random", "RandomPlus" };
+	String[] time1 = {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
+	String[] time2 = {"Seconds", "Minutes" };
+	String[] command;
+
+	ArrayList<String> list = new ArrayList<String>();
+
+	Thread thread1 = new Thread(new Threado());
+
+
+
+	public static void main(String[] args){
+
+		new YetiLauncher();
+
+
+
+
+	}
+
+
+
+
+	public void drawAllComponents(){
+
+		GridBagConstraints gbc = new GridBagConstraints();
+		panel1.setBorder(new TitledBorder("Test Settings"));
+		panel1.setLayout(new GridBagLayout());
+		panel1.setBackground(Color.LIGHT_GRAY);
+		gbc.insets = new Insets(2, 2, 2, 2);
+		gbc.anchor = GridBagConstraints.NORTH;
+		gbc.fill = GridBagConstraints.BOTH;
+
+
+		/////////// Language Label, ComboBox and ActionListener //////////
+
+		JLabel language_Label = new JLabel("Language:");
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		panel1.add(language_Label, gbc);
+
+		final JComboBox language_ComboBox = new JComboBox(languages);
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		panel1.add(language_ComboBox, gbc);
+
+		language_ComboBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(language_ComboBox.getSelectedItem().equals("Java")){
+					language = "-java";
+				} else if(language_ComboBox.getSelectedItem().equals(".Net")){
+					language = "-dotnet";
+				}else if(language_ComboBox.getSelectedItem().equals("JML")){
+					language = "-jml";
+				}
+				else
+					language = "-pharo";
+
 			}
 		});
-	}
+		//////////////////////////////////////////////////////////////////
 
-	/**
-	 * Create the frame.
-	 */
-	public YetiLauncher() {
-		
-		displayLabels();
-		languageComboBoxMethod();
-		strategyComboBoxMethod();
-		timeComboBoxMethod();
-		logsCheckBoxMethod();
-		guiCheckBoxMethod();
-		browseButtonMethod();
-		runButtonMethod();
-		
-	}
-	
-	
-	
-	//@@@@@@@@@@@@@@@@@@@@@@@@ Method to Display All Labels @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void displayLabels(){
-						
-		setTitle("YETI");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(700, 100, 1000, 617);
-		contentPane = new JPanel();
-		contentPane.setBackground(new Color(169, 169, 169));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
-		JLabel lblYorkExtensibleTesting = new JLabel("York Extensible Testing Infrastructure");
-		lblYorkExtensibleTesting.setFont(new Font("Lucida Grande", Font.BOLD, 16));
-		lblYorkExtensibleTesting.setBounds(111, 25, 389, 16);
-		contentPane.add(lblYorkExtensibleTesting);
-		
-		JLabel lblLanguage = new JLabel("Language:");
-		lblLanguage.setBounds(58, 94, 88, 16);
-		contentPane.add(lblLanguage);
-		
-		JLabel lblStrategy = new JLabel("Strategy:");
-		lblStrategy.setBounds(58, 122, 88, 16);
-		contentPane.add(lblStrategy);
-		
-		JLabel lblDuration = new JLabel("Duration:");
-		lblDuration.setBounds(58, 150, 88, 16);
-		contentPane.add(lblDuration);
-		
-		JLabel lblGui = new JLabel("GUI:");
-		lblGui.setBounds(58, 178, 88, 16);
-		contentPane.add(lblGui);
-		
-		JLabel lblLogs = new JLabel("Logs:");
-		lblLogs.setBounds(58, 206, 88, 16);
-		contentPane.add(lblLogs);
-		
-		JLabel lblTestFile = new JLabel("Test File:");
-		lblTestFile.setBounds(58, 234, 88, 16);
-		contentPane.add(lblTestFile);
-		
-		}
 
-	
-	//@@@@@@@@@@@@@@@@@@@@@@ Method to show Language Combo Box @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void languageComboBoxMethod(){
-	
-	final JComboBox languageComboBox = new JComboBox();
-	languageComboBox.setToolTipText("Please select the language in which the test file is written.");
-	
-	languageComboBox.setModel(new DefaultComboBoxModel(new String[] {"Java", ".Net", "JML", "Pharo"}));
-	languageComboBox.setBounds(148, 90, 170, 27);
-	contentPane.add(languageComboBox);
-		
-	languageComboBox.addActionListener(new ActionListener() {
-		public void actionPerformed(ActionEvent arg0) {
-			if(languageComboBox.getSelectedItem().equals("Java")){
-				language = "-java";
-			} else if(languageComboBox.getSelectedItem().equals(".Net")){
-				language = "-dotnet";
-			}else if(languageComboBox.getSelectedItem().equals("JML")){
-				language = "-jml";
-			}
-			else
-				language = "-pharo";
-			
-		}
-	});
-	}
-	
-	
-	
-	//@@@@@@@@@@@@@@@@@@ Method to show Strategy Combo Box @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void strategyComboBoxMethod(){
-		
-		final JComboBox strategyComboBox = new JComboBox();
-		strategyComboBox.setToolTipText("Please select the strategy for the current test session");
-		strategyComboBox.setModel(new DefaultComboBoxModel(new String[] {"Random", "DSSR", "Random Plus", "DSSR Plus"}));
-		strategyComboBox.setBounds(148, 118, 170, 27);
-		contentPane.add(strategyComboBox);
-		
-		strategyComboBox.addActionListener(new ActionListener() {
+		/////////// Strategy Label, ComboBox and ActionListener //////////
+
+		JLabel strategy_Label = new JLabel("Strategy:");
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		panel1.add(strategy_Label, gbc);
+
+		final JComboBox strategy_ComboBox = new JComboBox(strategies);
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		panel1.add(strategy_ComboBox, gbc);
+
+		strategy_ComboBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(strategyComboBox.getSelectedItem().equals("Random")){
+				if(strategy_ComboBox.getSelectedItem().equals("Random")){
 					strategy = "-random";
-				}else if (strategyComboBox.getSelectedItem().equals("Random Plus")){
+				}else if (strategy_ComboBox.getSelectedItem().equals("Random Plus")){
 					strategy = "-randomPlus";
-				} else if (strategyComboBox.getSelectedItem().equals("DSSR")){
+				} else if (strategy_ComboBox.getSelectedItem().equals("DSSR")){
 					strategy = "-DSSR";
 				}else
-					strategy = "-DSSR2";
-			
+					strategy = "-ADFD";
+
 			}
 		});
-	}
-	
-	
-	//@@@@@@@@@@@@@@@@@@@@@@@@ Method to show TWO Time Combo Box @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void timeComboBoxMethod(){
-			
-		
-				time1ComboBox = new JComboBox();
-				time1ComboBox.setToolTipText("Select test duration in numbers");
-				
-				time1ComboBox.setModel(new DefaultComboBoxModel(new String[] {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100"}));
-				time1ComboBox.setBounds(148, 146, 71, 27);
-				contentPane.add(time1ComboBox);
-				
-				//@@@@@@@@@@@@@@@@@@@@@  Minutes or Second Combo Box @@@@@@@@@@@@@@@@@@@@@@@@@//
-				
-				time2ComboBox = new JComboBox();
-				time2ComboBox.setToolTipText("Select test duration in Minutes or seconds");
 
-				time2ComboBox.setModel(new DefaultComboBoxModel(new String[] {"Seconds", "Minutes"}));
-				time2ComboBox.setBounds(214, 146, 103, 27);
-				contentPane.add(time2ComboBox);
-				
-	}
-	
-	
-	//@@@@@@@@@@@@@@@@@@@@@@@@ Method to show GUI Check Box @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-		public void guiCheckBoxMethod(){
-			
-			GuiCheckBox = new JCheckBox("");
-			GuiCheckBox.setToolTipText("Select it if you want to see the progress of test execution in GUI window");
-			GuiCheckBox.setSelected(true);
-			GuiCheckBox.setBounds(148, 174, 128, 23);
-			contentPane.add(GuiCheckBox);
-			
-			GuiCheckBox.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				
-				if (GuiCheckBox.isSelected())
-				gui = "-gui";
-				}
-				});
-		}
-	
-	
-	//@@@@@@@@@@@@@@@@@@@@@@@ Method to show LOGS Check Box @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-		
-	public void logsCheckBoxMethod(){
-	
-		LogsCheckBox = new JCheckBox("");
-		LogsCheckBox.setToolTipText("Select it if you want to see the logs.");
-		LogsCheckBox.setBounds(148, 202, 128, 23);
-		contentPane.add(LogsCheckBox);
-		
-		LogsCheckBox.addActionListener(new ActionListener() {
+		//////////////////////////////////////////////////////////////////
+
+
+		JLabel duration_Label = new JLabel("Duration:");
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		panel1.add(duration_Label, gbc);
+
+		final JComboBox time1_ComboBox = new JComboBox(time1);
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		panel1.add(time1_ComboBox, gbc);
+
+		final JComboBox time2_ComboBox = new JComboBox(time2);
+		gbc.gridx = 2;
+		gbc.gridy = 2;
+		panel1.add(time2_ComboBox, gbc);
+
+
+		/////////// GUI Label, check box and ActionListener //////////
+
+		JLabel gui_Label = new JLabel("GUI:");
+		gbc.gridx = 0;
+		gbc.gridy = 3;
+		panel1.add(gui_Label, gbc);
+
+		final JCheckBox gui_CheckBox = new JCheckBox();
+		gui_CheckBox.setSelected(true);
+		gbc.gridx = 1;
+		gbc.gridy = 3;
+		panel1.add(gui_CheckBox, gbc);
+
+		gui_CheckBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-		if (LogsCheckBox.isSelected()){
-			logs = "-rawlogs";
-		}
-		else {
-			logs = "-nologs";
-		}
-		} 
-		
+
+				if (gui_CheckBox.isSelected())
+					gui = "-gui";
+			}
 		});
-		
-	}
-	
-	
-	//@@@@@@@@@@@@@@@@@@@@@@ Method to show Browse Button   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void browseButtonMethod(){
-		
-		JButton browseButton = new JButton("Browse");
-		browseButton.setToolTipText("Select the file that you want to test in the current test session.");
-		browseButton.addActionListener(new ActionListener() {
+
+		//////////////////////////////////////////////////////////////////
+
+
+		/////////// Logs Label, check box and ActionListener //////////
+
+		JLabel logs_Label = new JLabel("Logs:");
+		gbc.gridx = 0;
+		gbc.gridy = 4;
+		panel1.add(logs_Label, gbc);
+
+		final JCheckBox logs_CheckBox = new JCheckBox();
+		gbc.gridx = 1;
+		gbc.gridy = 4;
+		panel1.add(logs_CheckBox, gbc);
+
+		logs_CheckBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (logs_CheckBox.isSelected()){
+					logs = "-rawlogs";
+				}
+				else {
+					logs = "-nologs";
+				}
+			} 
+
+		});
+
+		//////////////////////////////////////////////////////////////////
+
+		/////////// Browse button Label and ActionListener //////////
+
+		JLabel browse_Label = new JLabel("Test File:");
+		gbc.gridx = 0;
+		gbc.gridy = 5;
+		panel1.add(browse_Label, gbc);
+
+		JButton browse_Button = new JButton("Browse");
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		panel1.add(browse_Button, gbc);
+
+		final JTextField browse_TextField = new JTextField("yeti.test.YetiTest");
+		gbc.gridx = 2;
+		gbc.gridy = 5;
+		panel1.add(browse_TextField, gbc);
+
+		browse_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JFileChooser chooser = new JFileChooser();
 				chooser.showOpenDialog(null);
@@ -293,251 +227,164 @@ public class YetiLauncher extends JFrame {
 				String fullPath = file.getAbsolutePath();
 				char extentionSeperator = '.';
 				char pathSeperator = '/';
-				
-				
+
+
 				int sep = fullPath.lastIndexOf(pathSeperator); 
-				
+
 				testFilePathInitial = fullPath.substring(0, sep + 1);
 				testFilePathFinal = "-yetiPath=" + fullPath.substring(0 , sep + 1);
-				//FOLLOWING NOT WORKING FOR SOME REASON AND THE ABOVE WORKS. BIT STRANGE.
-				//testFilePath = testFilePath+ ":" + fullPath.substring(0 , sep + 1);
-				
-				
+
 				int dot = fullPath.lastIndexOf(extentionSeperator);
 				int sept = fullPath.lastIndexOf(pathSeperator);
 				fileName = fullPath.substring(sept+1,dot);
-				
-				
-				
-				txtItDisplayThe.setText(fileName);
-				
+
+
+
+				browse_TextField.setText(fileName);
+
 				fileName = "-testModules="+fileName;
 
 			}
 		});
-		browseButton.setBounds(148, 229, 117, 29);
-		contentPane.add(browseButton);
-		
-		txtItDisplayThe = new JTextField();
-		txtItDisplayThe.setText("yeti.test.YetiTest");
-		txtItDisplayThe.setToolTipText("It display the path of the file that is selected for testing.");
-		txtItDisplayThe.setBounds(151, 262, 165, 28);
-		contentPane.add(txtItDisplayThe);
-		txtItDisplayThe.setColumns(10);
+
+		//////////////////////////////////////////////////////////////////
+
+		/////////// Run button Label and ActionListener //////////
+		JButton run_Button = new JButton("Run Test");
+		gbc.gridx = 1;
+		gbc.gridy = 6;
+		gbc.gridwidth = 2;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(run_Button, gbc);
+
+		run_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				time = "-time=" + time1_ComboBox.getSelectedItem().toString();
+				if(time2_ComboBox.getSelectedItem().equals("Minutes")){
+					time = time + "mn";
+				} else {
+					time = time + "s";
+				}
+
+				// @@@@@@@ Output the values to see correct or not @@@@@@ //
+				//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
+				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);						
+				list.add(language);
+				list.add(strategy);
+				list.add(time);
+				list.add(gui);
+				list.add(logs);
+				list.add(fileName);
+				list.add(testFilePathFinal);
+
+
+
+
+				command = list.toArray(new String[list.size()]);
+
+
+				thread1.start();
+
+
+			}
+		});
+
+
+		JLabel generated_Label = new JLabel("Generated Files:");
+		gbc.gridx = 0;
+		gbc.gridy = 7;
+		panel1.add(generated_Label, gbc);
+
+		JTextField generated_TextField = new JTextField("");
+		gbc.gridx = 1;
+		gbc.gridy = 7;
+		gbc.gridwidth = 1;
+		panel1.add(generated_TextField, gbc);
+
+
+		JLabel compile_Label = new JLabel("Compiled Files:");
+		gbc.gridx = 0;
+		gbc.gridy = 8;
+		panel1.add(compile_Label, gbc);
+
+		JTextField compile_TextField = new JTextField("");
+		gbc.gridx = 1;
+		gbc.gridy = 8;
+		gbc.gridwidth = 1;
+		panel1.add(compile_TextField, gbc);
+
+
+		JLabel execute_Label = new JLabel("Executed Files:");
+		gbc.gridx = 0;
+		gbc.gridy = 9;
+		panel1.add(execute_Label, gbc);
+
+		JTextField execute_TextField = new JTextField("");
+		gbc.gridx = 1;
+		gbc.gridy = 9;
+		gbc.gridwidth = 1;
+		panel1.add(execute_TextField, gbc);
+
+		JButton plot_Button = new JButton("Draw Fault Domain");
+		gbc.gridx = 1;
+		gbc.gridy = 10;
+		gbc.gridwidth = 2;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(plot_Button, gbc);
+
+
+		JLabel heading_Label = new JLabel("YORK EXTENSIBLE TESTING INFRASTRUCTURE");
+		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
+		panel2.add(heading_Label);
+		panel2.setBackground(Color.LIGHT_GRAY);
+
+		panel3.setBorder(new TitledBorder("Plot Fault Domain "));
+		panel3.setBackground(Color.LIGHT_GRAY);
 
 
 	}
-	
 
-	//@@@@@@@@@@@@@@@@@@@@@@@@ Thread to start YETI @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-		
+
+	public YetiLauncher(){
+
+		this.setTitle("Yeti Launcher");
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension dim = new Dimension();
+		dim = tk.getScreenSize();
+		int xPos = dim.width;
+		int yPos = dim.height;
+		this.setSize(xPos, yPos);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		drawAllComponents();
+		panel4.setBackground(Color.LIGHT_GRAY);
+		panel4.add(panel1, BorderLayout.NORTH);
+		this.add(panel4, BorderLayout.WEST);
+		this.add(panel2, BorderLayout.NORTH);
+		this.add(panel3, BorderLayout.CENTER); 
+		this.setVisible(true);
+		//this.pack();
+
+
+	}
+
+	@SuppressWarnings("unused")
 	private class Threado implements Runnable{
-        public void run(){
-                try{
-                        Yeti.YetiRun(command);
-                }
-                catch(Exception e){
+		public void run(){
+			try{
+				Yeti.YetiRun(command);
+			}
+			catch(Exception e){
 
-                }
-        }
-}
-	
-		
-	//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ RUN Test Button @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
-	
-	public void runButtonMethod(){
-		
-				JButton runButton = new JButton("Run Yeti Test");
-				runButton.setToolTipText("Click the button to start the test");
-				runButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						
-						time = "-time=" + time1ComboBox.getSelectedItem().toString();
-						if(time2ComboBox.getSelectedItem().equals("Minutes")){
-							time = time + "mn";
-						} else {
-							time = time + "s";
-						}
-						
-						// @@@@@@@ Output the values to see correct or not @@@@@@ //
-//						JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
-//						JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);						
-						list.add(language);
-						list.add(strategy);
-						list.add(time);
-						list.add(gui);
-						list.add(logs);
-						list.add(fileName);
-						list.add(testFilePathFinal);
-						
-						
-						
-										
-						 command = list.toArray(new String[list.size()]);
-						
-						
-						t1.start();
-		           
-						
-					}
-				});
-				
-				runButton.setBounds(148, 330, 170, 29);
-				contentPane.add(runButton);
-				
-				JButton btnNewButton = new JButton("Count generated files");
-				btnNewButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						String files;
-						File folder = new File(testFilePathInitial);
-						File[] listOfFiles = folder.listFiles();
-						
-						for (int i=0; i < listOfFiles.length; i++)
-						{
-							if(listOfFiles[i].isFile()){
-								files = listOfFiles[i].getName();
-								if((files.startsWith("C"))&&(files.endsWith(".java"))){
-									filesToCompile.add(files);
-									
-								}
-								
-							}
-						}
-						
-								
-						filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
-												
-//						for (int z = 0; z < filesToCompileArray.length; z++)
-//						{
-//							String temp1;
-//							temp1 = filesToCompileArray[z];
-//							// JOptionPane.showMessageDialog(null, temp1);
-//						}
-
-						textField.setText(filesToCompileArray.length + " files generated") ;
-				
-					}
-					
-					
-				});
-				btnNewButton.setBounds(58, 371, 207, 29);
-				contentPane.add(btnNewButton);
-				
-				textField = new JTextField();
-				textField.setBounds(273, 369, 227, 30);
-				contentPane.add(textField);
-				textField.setColumns(10);
-				
-				
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  CODE TO COMPILE GENERATED FILES %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				
-				JButton btnNewButton_1 = new JButton("Compile Files");
-				btnNewButton_1.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						int count = 0;
-						for (int i = 0; i < filesToCompileArray.length; i++){
-							Process pro1;
-							try {
-//								String temp1 = "javac " + path + filesToCompileArray[i];
-//								JOptionPane.showMessageDialog(null, temp1);
-//								pro1 = Runtime.getRuntime().exec(temp1);
-								pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
-								count = count + 1;
-							} catch (IOException e) {
-								
-								e.printStackTrace();
-							}
-						    
-						}
-						
-						textField_1.setText(count + " files compiled");
-					}
-				});
-				btnNewButton_1.setBounds(58, 412, 207, 29);
-				contentPane.add(btnNewButton_1);
-				
-				textField_1 = new JTextField();
-				textField_1.setBounds(273, 411, 227, 28);
-				contentPane.add(textField_1);
-				textField_1.setColumns(10);
-				
-				
-				
-				
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Code to Execute C0, C1, .... files %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				
-				
-				JButton btnNewButton_2 = new JButton("Execute Files");
-				btnNewButton_2.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						
-						int count = 0;
-						for (int i = 0; i < filesToCompileArray.length; i++){
-							//Process pro1;
-							try {
-								Runtime.getRuntime().exec("java C"+ i);
-								//String temp = "java " + testFilePathInitial + filesToCompileArray[i];
-							    //Runtime.getRuntime().exec(temp);
-								//JOptionPane.showMessageDialog(null, temp, "program to execute is ", JOptionPane.PLAIN_MESSAGE);
-								count = count + 1;
-							} catch (IOException e1) {
-								
-								e1.printStackTrace();
-							}
-						    
-						}
-						
-						textField_3.setText(count + " files executed");
-					}
-				});
-				btnNewButton_2.setBounds(58, 453, 207, 29);
-				contentPane.add(btnNewButton_2);
-				
-				textField_3 = new JTextField();
-				textField_3.setBounds(273, 452, 227, 28);
-				contentPane.add(textField_3);
-				textField_3.setColumns(10);
-				
-				
-				
-				
-				//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Code to Draw Graph %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-				
-				JButton btnNewButton_3 = new JButton("Draw faulty values on x,y graphs");
-				btnNewButton_3.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						
-						//GraphingData gd = new GraphingData();
-						//gd.draw();
-						
-						 GraphDataScanner Gdr = new GraphDataScanner();
-						 Gdr.readFailDataFromFile();
-						 Gdr.readPassDataFromFile();
-//						 final LogGraph demo = new LogGraph("Failing and Passing values");
-//					     demo.pack();
-//					     RefineryUtilities.centerFrameOnScreen(demo);
-//					     demo.setVisible(true);
-						 //%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-		                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-		                demo.pack();
-		                demo.setLocationRelativeTo(null);
-		                demo.setVisible(true);
-
-
-					}
-				});
-				
-				btnNewButton_3.setBounds(58, 490, 442, 29);
-				contentPane.add(btnNewButton_3);
-			
+			}
+		}
 	}
+
+
 }
-
-
-
 

@@ -306,7 +306,7 @@ public class Yeti {
 		boolean isRandomPlusPeriodic = false;
 		boolean isRandomPlusDecreasing = false;
 		boolean isDSSR = false;
-		boolean isDSSR2 = false;
+		boolean isADFD = false;
 		boolean isEvolutionary = false;
 		boolean isRunningFromChromosome = false;
 		String chromosomePath = null;
@@ -538,8 +538,8 @@ public class Yeti {
 			}
 
 			// we can use the Dirt Spot Sweeping strategy
-			if (s0.equals("-DSSR2")) {
-				isDSSR2 = true;
+			if (s0.equals("-ADFD")) {
+				isADFD = true;
 				continue;
 			}
 
@@ -827,7 +827,7 @@ public class Yeti {
 		if (isDSSR) {
 			strategy = new YetiDSSRStrategy(testManager);
 		}
-		if (isDSSR2) {
+		if (isADFD) {
 			strategy = new YetiDSSRStrategy2(testManager);
 		}
 
