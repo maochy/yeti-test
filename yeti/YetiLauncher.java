@@ -26,12 +26,52 @@ import javax.swing.border.TitledBorder;
 
 import com.lowagie.text.Font;
 
+/**
+
+YETI - York Extensible Testing Infrastructure
+
+Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+must display the following acknowledgment:
+This product includes software developed by the University of York.
+4. Neither the name of the University of York nor the
+names of its contributors may be used to endorse or promote products
+derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ **/ 
+
+
+
 public class YetiLauncher extends JFrame{
 
 	private JPanel panel1 = new JPanel();
 	private JPanel panel2 = new JPanel();
 	private JPanel panel3 = new JPanel();
 	private JPanel panel4 = new JPanel(new BorderLayout());
+
+	JTextField 		generated_TextField;
+	JLabel 			compile_Label;
+	JTextField 		execute_TextField;
 
 	public static String testFilePathInitial = ".";
 
@@ -48,24 +88,52 @@ public class YetiLauncher extends JFrame{
 	String[] time1 = {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 	String[] time2 = {"Seconds", "Minutes" };
 	String[] command;
+	String[] filesToCompileArray;
 
-	ArrayList<String> list = new ArrayList<String>();
+	ArrayList<String> 	list 			 = new ArrayList<String>();
+	ArrayList<String> 	filesToCompile	 = new ArrayList<String>();
 
-	Thread thread1 = new Thread(new Threado());
+	Thread thread1 = new Thread(new Thread1());
+	Thread thread2 = new Thread(new Thread2());
+	Thread thread3 = new Thread(new Thread3());
+	Thread thread4 = new Thread(new Thread4());
 
 
+
+	// Constructor of the class to create frame and draw components on the frame. //////
+
+	public YetiLauncher(){
+
+		this.setTitle("Yeti Launcher");
+		Toolkit tk = Toolkit.getDefaultToolkit();
+		Dimension dim = new Dimension();
+		dim = tk.getScreenSize();
+		int xPos = dim.width;
+		int yPos = dim.height;
+		this.setSize(xPos, yPos);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		drawAllComponents();
+		panel4.setBackground(Color.LIGHT_GRAY);
+		panel4.add(panel1, BorderLayout.NORTH);
+		this.add(panel4, BorderLayout.WEST);
+		this.add(panel2, BorderLayout.NORTH);
+		this.add(panel3, BorderLayout.CENTER); 
+		this.setVisible(true);
+		//this.pack();
+
+
+	}
+
+	// Main method of the class.
 
 	public static void main(String[] args){
 
 		new YetiLauncher();
 
 
-
-
 	}
 
-
-
+	// Method draw all the components on the frame. 
 
 	public void drawAllComponents(){
 
@@ -135,6 +203,8 @@ public class YetiLauncher extends JFrame{
 
 		//////////////////////////////////////////////////////////////////
 
+		///////// Time label, Time1 Combo Box and Time2 Combo Box ////////
+
 
 		JLabel duration_Label = new JLabel("Duration:");
 		gbc.gridx = 0;
@@ -150,6 +220,8 @@ public class YetiLauncher extends JFrame{
 		gbc.gridx = 2;
 		gbc.gridy = 2;
 		panel1.add(time2_ComboBox, gbc);
+
+		///////////////////////////////////////////////////////////////
 
 
 		/////////// GUI Label, check box and ActionListener //////////
@@ -202,7 +274,7 @@ public class YetiLauncher extends JFrame{
 
 		//////////////////////////////////////////////////////////////////
 
-		/////////// Browse button Label and ActionListener //////////
+		/////////// Browse Label, Button, TextField and ActionListener ///
 
 		JLabel browse_Label = new JLabel("Test File:");
 		gbc.gridx = 0;
@@ -249,7 +321,8 @@ public class YetiLauncher extends JFrame{
 
 		//////////////////////////////////////////////////////////////////
 
-		/////////// Run button Label and ActionListener //////////
+		/////////// Run Label, Button and ActionListener //////////
+
 		JButton run_Button = new JButton("Run Test");
 		gbc.gridx = 1;
 		gbc.gridy = 6;
@@ -268,13 +341,15 @@ public class YetiLauncher extends JFrame{
 				}
 
 				// @@@@@@@ Output the values to see correct or not @@@@@@ //
+
 				//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);						
+				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);			
+
 				list.add(language);
 				list.add(strategy);
 				list.add(time);
@@ -289,26 +364,51 @@ public class YetiLauncher extends JFrame{
 				command = list.toArray(new String[list.size()]);
 
 
-				thread1.start();
+
+				try {
+					thread1.start();
+					thread1.join();
+					thread2.start();
+					thread2.join();
+					thread3.start();
+					thread3.join();
+					thread4.start();
+					thread4.join();
+				} catch (InterruptedException e1) {
+					e1.printStackTrace();
+				}
+
+
 
 
 			}
 		});
 
+		//////////////////////////////////////////////////////////////////////////////
+
+
+
+		////// After Execution of YETI this code will execute //////////////////////
+		////// Label and TextField for the number of generated Files ///////////////
+		////// Thread 2 will add number of files to this text field ////////////////
 
 		JLabel generated_Label = new JLabel("Generated Files:");
 		gbc.gridx = 0;
 		gbc.gridy = 7;
 		panel1.add(generated_Label, gbc);
 
-		JTextField generated_TextField = new JTextField("");
+		generated_TextField = new JTextField("");
 		gbc.gridx = 1;
 		gbc.gridy = 7;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
 
-		JLabel compile_Label = new JLabel("Compiled Files:");
+		///////////////////////////////////////////////////////////////////////////
+		////// Label and TextField for the number of compiled Files ///////////////
+
+
+		compile_Label = new JLabel("Compiled Files:");
 		gbc.gridx = 0;
 		gbc.gridy = 8;
 		panel1.add(compile_Label, gbc);
@@ -319,17 +419,25 @@ public class YetiLauncher extends JFrame{
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
+		///////////////////////////////////////////////////////////////////////////
+
+		///////////////////////////////////////////////////////////////////////////
+		////// Label and TextField for the number of compiled Files ///////////////
+
 
 		JLabel execute_Label = new JLabel("Executed Files:");
 		gbc.gridx = 0;
 		gbc.gridy = 9;
 		panel1.add(execute_Label, gbc);
 
-		JTextField execute_TextField = new JTextField("");
+		execute_TextField = new JTextField("");
 		gbc.gridx = 1;
 		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
+
+
+		///////////////////////////////////////////////////////////////////////////
 
 		JButton plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
@@ -350,38 +458,95 @@ public class YetiLauncher extends JFrame{
 
 	}
 
-
-	public YetiLauncher(){
-
-		this.setTitle("Yeti Launcher");
-		Toolkit tk = Toolkit.getDefaultToolkit();
-		Dimension dim = new Dimension();
-		dim = tk.getScreenSize();
-		int xPos = dim.width;
-		int yPos = dim.height;
-		this.setSize(xPos, yPos);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		drawAllComponents();
-		panel4.setBackground(Color.LIGHT_GRAY);
-		panel4.add(panel1, BorderLayout.NORTH);
-		this.add(panel4, BorderLayout.WEST);
-		this.add(panel2, BorderLayout.NORTH);
-		this.add(panel3, BorderLayout.CENTER); 
-		this.setVisible(true);
-		//this.pack();
-
-
-	}
-
+	//////Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable ///////////////
 	@SuppressWarnings("unused")
-	private class Threado implements Runnable{
+	private class Thread1 implements Runnable{
 		public void run(){
 			try{
 				Yeti.YetiRun(command);
 			}
 			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+	//////Thread 2 to count the number of CX.java files, where X is int variable ///////////////
+	@SuppressWarnings("unused")
+	private class Thread2 implements Runnable{
+		public void run(){
+			try{
+
+				String files;
+				File folder = new File(testFilePathInitial);
+				File[] listOfFiles = folder.listFiles();
+
+				for (int i=0; i < listOfFiles.length; i++)
+				{
+					if(listOfFiles[i].isFile()){
+						files = listOfFiles[i].getName();
+						if((files.startsWith("C"))&&(files.endsWith(".java"))){
+							filesToCompile.add(files);
+
+						}
+
+					}
+				}
+
+
+				filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
+
+				generated_TextField.setText(filesToCompileArray.length + " files generated") ;
 
 			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+
+	//////Thread 3 to compile CX.java files, where X is int variable ///////////////
+
+	@SuppressWarnings("unused")
+	private class Thread3 implements Runnable{
+		public void run(){
+			try{
+				int count = 0;
+				for (int i = 0; i < filesToCompileArray.length; i++){
+					Process pro1;
+					pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
+					count = count + 1;
+				}
+				compile_Label.setText(count + " files compiled");
+			}
+
+			catch(Exception e){
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+
+	//////Thread 4 to execute CX.class files, where X is int variable. ///////////////
+
+	@SuppressWarnings("unused")
+	private class Thread4 implements Runnable{
+		public void run(){
+			try{
+				int count = 0;
+				for (int i = 0; i < filesToCompileArray.length; i++){
+					Runtime.getRuntime().exec("java C"+ i);
+				}
+
+				execute_TextField.setText(count + " files executed");
+			}
+
+
+			catch(Exception e){
+				e.printStackTrace();
+			}
+
 		}
 	}
 
