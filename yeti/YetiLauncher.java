@@ -97,6 +97,7 @@ public class YetiLauncher extends JFrame{
 	Thread thread2 = new Thread(new Thread2());
 	Thread thread3 = new Thread(new Thread3());
 	Thread thread4 = new Thread(new Thread4());
+	Thread thread5 = new Thread(new Thread5());
 
 
 
@@ -368,12 +369,18 @@ public class YetiLauncher extends JFrame{
 				try {
 					thread1.start();
 					thread1.join();
-					thread2.start();
-					thread2.join();
-					thread3.start();
-					thread3.join();
-					thread4.start();
-					thread4.join();
+
+					if ( strategy.equals("-strategy=ADFD"))
+					{
+						thread2.start();
+						thread2.join();
+						thread3.start();
+						thread3.join();
+						thread4.start();
+						thread4.join();
+						thread5.start();
+						thread5.join();
+					}
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}
@@ -549,6 +556,37 @@ public class YetiLauncher extends JFrame{
 
 		}
 	}
+
+	//////Thread 5 to plot the faults domain. ///////////////
+
+	@SuppressWarnings("unused")
+	private class Thread5 implements Runnable{
+		public void run(){
+			try{
+				//GraphingData gd = new GraphingData();
+				//gd.draw();
+
+				GraphDataScanner Gdr = new GraphDataScanner();
+				Gdr.readFailDataFromFile();
+				Gdr.readPassDataFromFile();
+				// final LogGraph demo = new LogGraph("Failing and Passing values");
+				// demo.pack();
+				// RefineryUtilities.centerFrameOnScreen(demo);
+				// demo.setVisible(true);
+				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+				LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+				demo.pack();
+				demo.setLocationRelativeTo(null);
+				demo.setVisible(true);
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+
 
 
 }
