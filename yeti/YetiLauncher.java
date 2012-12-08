@@ -96,6 +96,7 @@ public class YetiLauncher extends JFrame{
 
 	Thread thread1 = new Thread(new Thread1());
 
+
 	// Constructor of the class to create frame and draw components on the frame. //////
 
 	public YetiLauncher(){
@@ -245,9 +246,7 @@ public class YetiLauncher extends JFrame{
 			}
 		});
 
-		//////////////////////////////////////////////////////////////////
-
-
+		///////////////////////////////////////////////////////////////
 		/////////// Logs Label, check box and ActionListener //////////
 
 		JLabel logs_Label = new JLabel("Logs:");
@@ -273,7 +272,6 @@ public class YetiLauncher extends JFrame{
 		});
 
 		//////////////////////////////////////////////////////////////////
-
 		/////////// Browse Label, Button, TextField and ActionListener ///
 
 		JLabel browse_Label = new JLabel("Test File:");
@@ -320,8 +318,7 @@ public class YetiLauncher extends JFrame{
 		});
 
 		//////////////////////////////////////////////////////////////////
-
-		/////////// Run Label, Button and ActionListener //////////
+		/////////// Run Label, Button and ActionListener /////////////////
 
 		JButton run_Button = new JButton("Run Test");
 		gbc.gridx = 1;
@@ -366,74 +363,140 @@ public class YetiLauncher extends JFrame{
 
 
 				try{
-					thread1.start();
+					thread1.run();
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
 				}
-
-
-
-
-
-
 			}
 		});
 
+		
+		
 		//////////////////////////////////////////////////////////////////////////////
+	////// Button, TextField and action listener for the number of generated Files //////
 
-
-
-		////// After Execution of YETI this code will execute //////////////////////
-		////// Label and TextField for the number of generated Files ///////////////
-		////// Thread 2 will add number of files to this text field ////////////////
-
-		JLabel generated_Label = new JLabel("Generated Files:");
-		gbc.gridx = 0;
+		JButton generated_Button = new JButton("Count Files:");
+		gbc.gridx = 1;
 		gbc.gridy = 7;
-		panel1.add(generated_Label, gbc);
+		gbc.gridwidth = 1;
+		panel1.add(generated_Button, gbc);
 
 		generated_TextField = new JTextField("");
-		gbc.gridx = 1;
+		gbc.gridx = 2;
 		gbc.gridy = 7;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
+		generated_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+
+					String files;
+					File folder = new File(testFilePathInitial);
+					File[] listOfFiles = folder.listFiles();
+
+					for (int i=0; i < listOfFiles.length; i++)
+					{
+						if(listOfFiles[i].isFile()){
+							files = listOfFiles[i].getName();
+							if((files.startsWith("C"))&&(files.endsWith(".java"))){
+								filesToCompile.add(files);
+
+							}
+
+						}
+					}
+
+
+					filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
+
+					generated_TextField.setText(filesToCompileArray.length + " files generated") ;
+
+				}
+				catch(Exception e1){
+					e1.printStackTrace();
+				}
+			}
+		});
+
 
 		///////////////////////////////////////////////////////////////////////////
-		////// Label and TextField for the number of compiled Files ///////////////
+		////// Button, TextField and action listener for the number of compiled Files //////
 
 
-		JLabel compile_Label = new JLabel("Compiled Files:");
-		gbc.gridx = 0;
+		JButton compile_Button = new JButton("Compile Files:");
+		gbc.gridx = 1;
 		gbc.gridy = 8;
-		panel1.add(compile_Label, gbc);
+		panel1.add(compile_Button, gbc);
 
 		compile_TextField = new JTextField("");
-		gbc.gridx = 1;
+		gbc.gridx = 2;
 		gbc.gridy = 8;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
-		///////////////////////////////////////////////////////////////////////////
+		compile_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+					int count = 0;
+					for (int i = 0; i < filesToCompileArray.length; i++){
+						Process pro1;
+						pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
+						count = count + 1;
+					}
+					compile_TextField.setText(count + " files compiled");
+				}
 
-		///////////////////////////////////////////////////////////////////////////
-		////// Label and TextField for the number of compiled Files ///////////////
+				catch(Exception e1){
+					e1.printStackTrace();
+				}
+
+			}
+		});
 
 
-		JLabel execute_Label = new JLabel("Executed Files:");
-		gbc.gridx = 0;
+
+		/////////////////////////////////////////////////////////////////////////////////
+		////// Button, TextField and actionlistener for the number of executed Files /////
+
+
+		JButton execute_Button = new JButton("Execute Files:");
+		gbc.gridx = 1;
 		gbc.gridy = 9;
-		panel1.add(execute_Label, gbc);
+		panel1.add(execute_Button, gbc);
 
 		execute_TextField = new JTextField("");
-		gbc.gridx = 1;
+		gbc.gridx = 2;
 		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
+		execute_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
+					int count = 0;
+					for (int i = 0; i < filesToCompileArray.length; i++){
+						Runtime.getRuntime().exec("java C"+ i);
+						count++;
+					}
+
+					execute_TextField.setText(count + " files executed");
+				}
+
+
+				catch(Exception e1){
+					e1.printStackTrace();
+				}
+
+			}
+
+		});
+
+
 
 		///////////////////////////////////////////////////////////////////////////
+	////// Button and actionlistener for plotting graph /////
 
 		JButton plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
@@ -442,8 +505,36 @@ public class YetiLauncher extends JFrame{
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot_Button, gbc);
 
+		execute_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try{
 
-		JLabel heading_Label = new JLabel("YORK EXTENSIBLE TESTING INFRASTRUCTURE");
+					//				GraphingData gd = new GraphingData();
+					//				gd.draw();
+
+					//				GraphDataScanner Gdr = new GraphDataScanner();
+					//				Gdr.readFailDataFromFile();
+					//				Gdr.readPassDataFromFile();
+					//				 final LogGraph demo = new LogGraph("Failing and Passing values");
+					//				 demo.pack();
+					//				 RefineryUtilities.centerFrameOnScreen(demo);
+					//				 demo.setVisible(true);
+					//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+					LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+					demo.pack();
+					demo.setLocationRelativeTo(null);
+					demo.setVisible(true);
+				}
+				catch(Exception e1){
+					e1.printStackTrace();
+				}
+
+			}
+
+		});
+
+
+		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
 		panel2.add(heading_Label);
 		panel2.setBackground(Color.LIGHT_GRAY);
@@ -460,135 +551,15 @@ public class YetiLauncher extends JFrame{
 		public void run(){
 			try{
 				Yeti.YetiRun(command);
-				
+
 			}
 			catch(Exception e){
 				e.printStackTrace();
 			}
-			countFiles();
-			compileFiles();
-			executeFiles();
-			plotGraph();
 		}
-	}
-
-	//////Thread 2 to count the number of CX.java files, where X is int variable ///////////////
-	//	@SuppressWarnings("unused")
-	//	private class Thread2 implements Runnable{
-	//		public void run(){
-	public void countFiles(){
-		try{
-
-			String files;
-			File folder = new File(testFilePathInitial);
-			File[] listOfFiles = folder.listFiles();
-
-			for (int i=0; i < listOfFiles.length; i++)
-			{
-				if(listOfFiles[i].isFile()){
-					files = listOfFiles[i].getName();
-					if((files.startsWith("C"))&&(files.endsWith(".java"))){
-						filesToCompile.add(files);
-
-					}
-
-				}
-			}
-
-
-			filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
-
-			generated_TextField.setText(filesToCompileArray.length + " files generated") ;
-
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-	}
-
-
-	//////Thread 3 to compile CX.java files, where X is int variable ///////////////
-
-	//	@SuppressWarnings("unused")
-	//	private class Thread3 implements Runnable{
-	//		public void run(){
-	public void compileFiles(){
-		try{
-			int count = 0;
-			for (int i = 0; i < filesToCompileArray.length; i++){
-				Process pro1;
-				pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
-				count = count + 1;
-			}
-			compile_TextField.setText(count + " files compiled");
-		}
-
-		catch(Exception e){
-			e.printStackTrace();
-		}
-
-	}
-
-
-
-
-	//////Thread 4 to execute CX.class files, where X is int variable. ///////////////
-	//	@SuppressWarnings("unused")
-	//	private class Thread4 implements Runnable{
-	//		public void run(){
-	public void executeFiles(){
-		try{
-			int count = 0;
-			for (int i = 0; i < filesToCompileArray.length; i++){
-				Runtime.getRuntime().exec("java C"+ i);
-				count++;
-			}
-
-			execute_TextField.setText(count + " files executed");
-		}
-
-
-		catch(Exception e){
-			e.printStackTrace();
-		}
-
-	}
-
-
-
-	//	//////Thread 5 to plot the faults domain. ///////////////
-	//	@SuppressWarnings("unused")
-	//	private class Thread5 implements Runnable{
-	//		public void run(){
-	public void plotGraph(){
-		try{
-
-			//				GraphingData gd = new GraphingData();
-			//				gd.draw();
-
-			//				GraphDataScanner Gdr = new GraphDataScanner();
-			//				Gdr.readFailDataFromFile();
-			//				Gdr.readPassDataFromFile();
-			//				 final LogGraph demo = new LogGraph("Failing and Passing values");
-			//				 demo.pack();
-			//				 RefineryUtilities.centerFrameOnScreen(demo);
-			//				 demo.setVisible(true);
-			//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-			LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-			demo.pack();
-			demo.setLocationRelativeTo(null);
-			demo.setVisible(true);
-		}
-		catch(Exception e){
-			e.printStackTrace();
-		}
-
 	}
 
 }
-
-
-
 
 
 
