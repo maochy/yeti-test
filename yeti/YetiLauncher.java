@@ -95,10 +95,6 @@ public class YetiLauncher extends JFrame{
 	ArrayList<String> 	filesToCompile	 = new ArrayList<String>();
 
 	Thread thread1 = new Thread(new Thread1());
-	Thread thread2 = new Thread(new Thread2());
-	Thread thread3 = new Thread(new Thread3());
-	Thread thread4 = new Thread(new Thread4());
-	//Thread thread5 = new Thread(new Thread5());
 
 	// Constructor of the class to create frame and draw components on the frame. //////
 
@@ -371,14 +367,6 @@ public class YetiLauncher extends JFrame{
 
 				try{
 					thread1.start();
-					thread1.join();
-					thread2.start();
-					thread2.join();
-					thread3.start();
-					thread3.join();
-					thread4.start();
-					thread4.join();
-				//	thread5.start();
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
@@ -472,121 +460,131 @@ public class YetiLauncher extends JFrame{
 		public void run(){
 			try{
 				Yeti.YetiRun(command);
+				
 			}
 			catch(Exception e){
 				e.printStackTrace();
 			}
+			countFiles();
+			compileFiles();
+			executeFiles();
+			plotGraph();
 		}
 	}
 
 	//////Thread 2 to count the number of CX.java files, where X is int variable ///////////////
-	@SuppressWarnings("unused")
-	private class Thread2 implements Runnable{
-		public void run(){
-			try{
+	//	@SuppressWarnings("unused")
+	//	private class Thread2 implements Runnable{
+	//		public void run(){
+	public void countFiles(){
+		try{
 
-				String files;
-				File folder = new File(testFilePathInitial);
-				File[] listOfFiles = folder.listFiles();
+			String files;
+			File folder = new File(testFilePathInitial);
+			File[] listOfFiles = folder.listFiles();
 
-				for (int i=0; i < listOfFiles.length; i++)
-				{
-					if(listOfFiles[i].isFile()){
-						files = listOfFiles[i].getName();
-						if((files.startsWith("C"))&&(files.endsWith(".java"))){
-							filesToCompile.add(files);
-
-						}
+			for (int i=0; i < listOfFiles.length; i++)
+			{
+				if(listOfFiles[i].isFile()){
+					files = listOfFiles[i].getName();
+					if((files.startsWith("C"))&&(files.endsWith(".java"))){
+						filesToCompile.add(files);
 
 					}
+
 				}
-
-
-				filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
-
-				generated_TextField.setText(filesToCompileArray.length + " files generated") ;
-
 			}
-			catch(Exception e){
-				e.printStackTrace();
-			}
+
+
+			filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
+
+			generated_TextField.setText(filesToCompileArray.length + " files generated") ;
+
+		}
+		catch(Exception e){
+			e.printStackTrace();
 		}
 	}
+
 
 	//////Thread 3 to compile CX.java files, where X is int variable ///////////////
 
-	@SuppressWarnings("unused")
-	private class Thread3 implements Runnable{
-		public void run(){
-			try{
-				int count = 0;
-				for (int i = 0; i < filesToCompileArray.length; i++){
-					Process pro1;
-					pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
-					count = count + 1;
-				}
-				compile_TextField.setText(count + " files compiled");
+	//	@SuppressWarnings("unused")
+	//	private class Thread3 implements Runnable{
+	//		public void run(){
+	public void compileFiles(){
+		try{
+			int count = 0;
+			for (int i = 0; i < filesToCompileArray.length; i++){
+				Process pro1;
+				pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
+				count = count + 1;
 			}
-
-			catch(Exception e){
-				e.printStackTrace();
-			}
-
+			compile_TextField.setText(count + " files compiled");
 		}
+
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
 	}
+
 
 
 
 	//////Thread 4 to execute CX.class files, where X is int variable. ///////////////
-	@SuppressWarnings("unused")
-	private class Thread4 implements Runnable{
-		public void run(){
-			try{
-				int count = 0;
-				for (int i = 0; i < filesToCompileArray.length; i++){
-					Runtime.getRuntime().exec("java C"+ i);
-				}
-
-				execute_TextField.setText(count + " files executed");
+	//	@SuppressWarnings("unused")
+	//	private class Thread4 implements Runnable{
+	//		public void run(){
+	public void executeFiles(){
+		try{
+			int count = 0;
+			for (int i = 0; i < filesToCompileArray.length; i++){
+				Runtime.getRuntime().exec("java C"+ i);
+				count++;
 			}
 
-
-			catch(Exception e){
-				e.printStackTrace();
-			}
-
+			execute_TextField.setText(count + " files executed");
 		}
+
+
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
 	}
 
 
-//	//////Thread 5 to plot the faults domain. ///////////////
-//	@SuppressWarnings("unused")
-//	private class Thread5 implements Runnable{
-//		public void run(){
-//			try{
-//
-//				//				GraphingData gd = new GraphingData();
-//				//				gd.draw();
-//
-//				//				GraphDataScanner Gdr = new GraphDataScanner();
-//				//				Gdr.readFailDataFromFile();
-//				//				Gdr.readPassDataFromFile();
-//				//				 final LogGraph demo = new LogGraph("Failing and Passing values");
-//				//				 demo.pack();
-//				//				 RefineryUtilities.centerFrameOnScreen(demo);
-//				//				 demo.setVisible(true);
-//				//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-//				LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-//				demo.pack();
-//				demo.setLocationRelativeTo(null);
-//				demo.setVisible(true);
-//			}
-//			catch(Exception e){
-//				e.printStackTrace();
-//			}
-//
-//		}
-//	}    
+
+	//	//////Thread 5 to plot the faults domain. ///////////////
+	//	@SuppressWarnings("unused")
+	//	private class Thread5 implements Runnable{
+	//		public void run(){
+	public void plotGraph(){
+		try{
+
+			//				GraphingData gd = new GraphingData();
+			//				gd.draw();
+
+			//				GraphDataScanner Gdr = new GraphDataScanner();
+			//				Gdr.readFailDataFromFile();
+			//				Gdr.readPassDataFromFile();
+			//				 final LogGraph demo = new LogGraph("Failing and Passing values");
+			//				 demo.pack();
+			//				 RefineryUtilities.centerFrameOnScreen(demo);
+			//				 demo.setVisible(true);
+			//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+			LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+			demo.pack();
+			demo.setLocationRelativeTo(null);
+			demo.setVisible(true);
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
 }
 
 
