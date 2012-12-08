@@ -11,7 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
-
+import org.jfree.ui.RefineryUtilities;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -19,6 +19,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -70,7 +71,7 @@ public class YetiLauncher extends JFrame{
 	private JPanel panel4 = new JPanel(new BorderLayout());
 
 	JTextField 		generated_TextField;
-	JLabel 			compile_Label;
+	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
 
 	public static String testFilePathInitial = ".";
@@ -97,9 +98,7 @@ public class YetiLauncher extends JFrame{
 	Thread thread2 = new Thread(new Thread2());
 	Thread thread3 = new Thread(new Thread3());
 	Thread thread4 = new Thread(new Thread4());
-	Thread thread5 = new Thread(new Thread5());
-
-
+	//Thread thread5 = new Thread(new Thread5());
 
 	// Constructor of the class to create frame and draw components on the frame. //////
 
@@ -130,6 +129,10 @@ public class YetiLauncher extends JFrame{
 	public static void main(String[] args){
 
 		new YetiLauncher();
+
+
+
+
 
 
 	}
@@ -366,24 +369,22 @@ public class YetiLauncher extends JFrame{
 
 
 
-				try {
+				try{
 					thread1.start();
 					thread1.join();
-
-					if ( strategy.equals("-strategy=ADFD"))
-					{
-						thread2.start();
-						thread2.join();
-						thread3.start();
-						thread3.join();
-						thread4.start();
-						thread4.join();
-						thread5.start();
-						thread5.join();
-					}
-				} catch (InterruptedException e1) {
+					thread2.start();
+					thread2.join();
+					thread3.start();
+					thread3.join();
+					thread4.start();
+					thread4.join();
+				//	thread5.start();
+				}
+				catch(Exception e1){
 					e1.printStackTrace();
 				}
+
+
 
 
 
@@ -415,12 +416,12 @@ public class YetiLauncher extends JFrame{
 		////// Label and TextField for the number of compiled Files ///////////////
 
 
-		compile_Label = new JLabel("Compiled Files:");
+		JLabel compile_Label = new JLabel("Compiled Files:");
 		gbc.gridx = 0;
 		gbc.gridy = 8;
 		panel1.add(compile_Label, gbc);
 
-		JTextField compile_TextField = new JTextField("");
+		compile_TextField = new JTextField("");
 		gbc.gridx = 1;
 		gbc.gridy = 8;
 		gbc.gridwidth = 1;
@@ -524,7 +525,7 @@ public class YetiLauncher extends JFrame{
 					pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
 					count = count + 1;
 				}
-				compile_Label.setText(count + " files compiled");
+				compile_TextField.setText(count + " files compiled");
 			}
 
 			catch(Exception e){
@@ -535,8 +536,8 @@ public class YetiLauncher extends JFrame{
 	}
 
 
-	//////Thread 4 to execute CX.class files, where X is int variable. ///////////////
 
+	//////Thread 4 to execute CX.class files, where X is int variable. ///////////////
 	@SuppressWarnings("unused")
 	private class Thread4 implements Runnable{
 		public void run(){
@@ -557,37 +558,41 @@ public class YetiLauncher extends JFrame{
 		}
 	}
 
-	//////Thread 5 to plot the faults domain. ///////////////
 
-	@SuppressWarnings("unused")
-	private class Thread5 implements Runnable{
-		public void run(){
-			try{
-				//GraphingData gd = new GraphingData();
-				//gd.draw();
-
-				GraphDataScanner Gdr = new GraphDataScanner();
-				Gdr.readFailDataFromFile();
-				Gdr.readPassDataFromFile();
-				// final LogGraph demo = new LogGraph("Failing and Passing values");
-				// demo.pack();
-				// RefineryUtilities.centerFrameOnScreen(demo);
-				// demo.setVisible(true);
-				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-				LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-				demo.pack();
-				demo.setLocationRelativeTo(null);
-				demo.setVisible(true);
-			}
-			catch(Exception e){
-				e.printStackTrace();
-			}
-
-		}
-	}
-
-
-
-
+//	//////Thread 5 to plot the faults domain. ///////////////
+//	@SuppressWarnings("unused")
+//	private class Thread5 implements Runnable{
+//		public void run(){
+//			try{
+//
+//				//				GraphingData gd = new GraphingData();
+//				//				gd.draw();
+//
+//				//				GraphDataScanner Gdr = new GraphDataScanner();
+//				//				Gdr.readFailDataFromFile();
+//				//				Gdr.readPassDataFromFile();
+//				//				 final LogGraph demo = new LogGraph("Failing and Passing values");
+//				//				 demo.pack();
+//				//				 RefineryUtilities.centerFrameOnScreen(demo);
+//				//				 demo.setVisible(true);
+//				//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+//				LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+//				demo.pack();
+//				demo.setLocationRelativeTo(null);
+//				demo.setVisible(true);
+//			}
+//			catch(Exception e){
+//				e.printStackTrace();
+//			}
+//
+//		}
+//	}    
 }
+
+
+
+
+
+
+
 
