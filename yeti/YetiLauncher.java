@@ -142,7 +142,7 @@ public class YetiLauncher extends JFrame{
 		panel1.setBorder(new TitledBorder("Test Settings"));
 		panel1.setLayout(new GridBagLayout());
 		panel1.setBackground(Color.LIGHT_GRAY);
-		gbc.insets = new Insets(2, 2, 2, 2);
+		gbc.insets = new Insets(2, 2, 10, 2);
 		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.fill = GridBagConstraints.BOTH;
 
@@ -363,7 +363,7 @@ public class YetiLauncher extends JFrame{
 
 
 				try{
-					thread1.run();
+					thread1.start();
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
@@ -371,10 +371,10 @@ public class YetiLauncher extends JFrame{
 			}
 		});
 
-		
-		
+
+
 		//////////////////////////////////////////////////////////////////////////////
-	////// Button, TextField and action listener for the number of generated Files //////
+		////// Button, TextField and action listener for the number of generated Files //////
 
 		JButton generated_Button = new JButton("Count Files:");
 		gbc.gridx = 1;
@@ -496,7 +496,7 @@ public class YetiLauncher extends JFrame{
 
 
 		///////////////////////////////////////////////////////////////////////////
-	////// Button and actionlistener for plotting graph /////
+		////// Button and actionlistener for plotting graph /////
 
 		JButton plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
@@ -519,7 +519,8 @@ public class YetiLauncher extends JFrame{
 					//				 demo.pack();
 					//				 RefineryUtilities.centerFrameOnScreen(demo);
 					//				 demo.setVisible(true);
-					//				//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
+					
 					LogGraph2 demo = new LogGraph2("JFreeChartDemo");
 					demo.pack();
 					demo.setLocationRelativeTo(null);

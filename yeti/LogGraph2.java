@@ -16,7 +16,7 @@ package yeti;
  *
  * More than 150 demo applications are included with the JFreeChart
  * Developer Guide. For more information, see:
- * 
+ *
  * JFreeChart Developer's Guide
  */
 import java.awt.BasicStroke;
@@ -53,19 +53,19 @@ import org.jfree.ui.RefineryUtilities;
  * @author John B. Matthews
  */
 public class LogGraph2 extends JFrame {
-    
+   
     private static final int MAX = 8;
     private static final Random random = new Random();
 
     /**
-     * Construct a new frame 
+     * Construct a new frame
      *
      * @param title the frame title
      */
     public LogGraph2 (String title) {
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+       
         final XYDataset dataset = createDataset();
         final JFreeChart chart = createChart(dataset);
 //        final DefaultXYDataset dataset = new DefaultXYDataset();
@@ -95,24 +95,24 @@ public class LogGraph2 extends JFrame {
 //        });
 //        this.add(buttonPanel, BorderLayout.SOUTH);
     }
-    
-    
+   
+   
 private XYDataset createDataset() {
-        
+       
         final XYSeries series1 = new XYSeries("Failing input");
-        
+       
 
-        
+       
         for (int i =0; i < GraphDataScanner.graphDataIntFail.length; i++ )
-        	series1.add((double)GraphDataScanner.graphDataIntFail[i],0);
-        
+                series1.add((double)GraphDataScanner.graphDataIntFail[i],0);
+       
 
 
         final XYSeries series2 = new XYSeries("Passing input");
-        
+       
         for (int j =0; j < GraphDataScanner.graphDataIntPass.length; j++ )
-        	series2.add((double)GraphDataScanner.graphDataIntPass[j],0);
-        
+                series2.add((double)GraphDataScanner.graphDataIntPass[j],0);
+       
 
 
         final XYSeriesCollection dataset = new XYSeriesCollection();
@@ -120,12 +120,12 @@ private XYDataset createDataset() {
         dataset.addSeries(series2);
 
         return dataset;
-        
+       
     }
 
 //    /**
 //     * Create a series
-//     * 
+//     *
 //     * @ return the series
 //     */
 //    private double[][] createSeries(int mean) {
@@ -189,7 +189,7 @@ private XYDataset createDataset() {
         // label the points
         NumberFormat format = NumberFormat.getNumberInstance();
         format.setMaximumFractionDigits(2);
-        
+       
 //        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
 //        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
         XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
@@ -211,5 +211,7 @@ private XYDataset createDataset() {
          });
     }
 }
+
+
 
   
