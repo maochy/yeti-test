@@ -24,8 +24,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
+import yeti.LogGraph2;
 
-import com.lowagie.text.Font;
 
 /**
 
@@ -142,7 +142,7 @@ public class YetiLauncher extends JFrame{
 		panel1.setBorder(new TitledBorder("Test Settings"));
 		panel1.setLayout(new GridBagLayout());
 		panel1.setBackground(Color.LIGHT_GRAY);
-		gbc.insets = new Insets(2, 2, 10, 2);
+		gbc.insets = new Insets(2, 2, 8, 2);
 		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.fill = GridBagConstraints.BOTH;
 
@@ -505,7 +505,7 @@ public class YetiLauncher extends JFrame{
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot_Button, gbc);
 
-		execute_Button.addActionListener(new ActionListener() {
+		plot_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
 
@@ -520,11 +520,19 @@ public class YetiLauncher extends JFrame{
 					//				 RefineryUtilities.centerFrameOnScreen(demo);
 					//				 demo.setVisible(true);
 					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-					
-					LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+
+
+					final LogGraph2 demo = new LogGraph2("Failure Domains");
 					demo.pack();
-					demo.setLocationRelativeTo(null);
+					RefineryUtilities.centerFrameOnScreen(demo);
 					demo.setVisible(true);
+
+
+//					LogGraph2 demo = new LogGraph2("FailureDomains");
+//					demo.pack();
+//					demo.setLocationRelativeTo(null);
+//					demo.setVisible(true);
+//					JOptionPane.showMessageDialog(null, "working", " Mian", JOptionPane.PLAIN_MESSAGE);
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
@@ -545,6 +553,8 @@ public class YetiLauncher extends JFrame{
 
 
 	}
+
+
 
 	//////Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable ///////////////
 	@SuppressWarnings("unused")

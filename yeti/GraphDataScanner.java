@@ -5,35 +5,35 @@ import java.util.*;
 import java.util.Scanner;
 
 public class GraphDataScanner {
-public static int [] graphDataIntFail;
-public static int [] graphDataIntPass;
+static int [] graphDataIntFail;
+static int [] graphDataIntPass;
 
-public void readFailDataFromFile(){
+public static int[] readFailDataFromFile(){
 
 File f = null;
 Scanner scan = null;
 try{
-   f = new File("/Users/mian/inclaspath/fail.txt");
+   f = new File("/Users/mian/inclaspath/Fail.txt");
    scan = new Scanner(f);
 }
-catch(Exception e){
-   System.exit(0);
+catch(Exception e1){
+   e1.printStackTrace();
 }
 
-ArrayList<Integer> fa = new ArrayList<Integer>();
+ArrayList<Integer> fail = new ArrayList<Integer>();
 //Assuming you know all your data on the file are ints
 while(scan.hasNext())
-   fa.add(scan.nextInt());
+   fail.add(scan.nextInt());
 
-graphDataIntFail = convertIntegers(fa);
+return graphDataIntFail = convertIntegers(fail);
 
 
-//for(Integer str : x)
- //System.out.println(str);
+//for(int str : graphDataIntFail)
+// System.out.println(str);
 
 }
 
-public void readPassDataFromFile(){
+public static int[] readPassDataFromFile(){
 
 File f = null;
 Scanner scan = null;
@@ -41,16 +41,16 @@ try{
    f = new File("/Users/mian/inclaspath/Pass.txt");
    scan = new Scanner(f);
 }
-catch(Exception e){
-   System.exit(0);
+catch(Exception e1){
+   e1.printStackTrace();
 }
 
-ArrayList<Integer> x = new ArrayList<Integer>();
+ArrayList<Integer> temp = new ArrayList<Integer>();
 //Assuming you know all your data on the file are ints
 while(scan.hasNext())
-   x.add(scan.nextInt());
+   temp.add(scan.nextInt());
 
-graphDataIntPass = convertIntegers(x);
+return graphDataIntPass = convertIntegers(temp);
 
 
 //for(Integer str : x)

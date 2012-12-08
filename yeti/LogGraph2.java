@@ -48,6 +48,7 @@ import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RefineryUtilities;
+import yeti.GraphDataScanner;
 
 /**
  * @author John B. Matthews
@@ -75,7 +76,7 @@ public class LogGraph2 extends JFrame {
         ChartPanel chartPanel = new ChartPanel(chart, false);
         chartPanel.setPreferredSize(new Dimension(640, 480));
         this.add(chartPanel, BorderLayout.CENTER);
- 
+
 //        JPanel buttonPanel = new JPanel();
 //        JButton addButton = new JButton("Add Series");
 //        buttonPanel.add(addButton);
@@ -101,17 +102,18 @@ private XYDataset createDataset() {
        
         final XYSeries series1 = new XYSeries("Failing input");
        
-
+int failValues[] = GraphDataScanner.readFailDataFromFile();
        
-        for (int i =0; i < GraphDataScanner.graphDataIntFail.length; i++ )
-                series1.add((double)GraphDataScanner.graphDataIntFail[i],0);
+        for (int i =0; i < failValues.length; i++ )
+                series1.add((double)failValues[i],0);
        
 
 
         final XYSeries series2 = new XYSeries("Passing input");
+        int passValues[] = GraphDataScanner.readFailDataFromFile();
        
-        for (int j =0; j < GraphDataScanner.graphDataIntPass.length; j++ )
-                series2.add((double)GraphDataScanner.graphDataIntPass[j],0);
+        for (int j =0; j < passValues.length; j++ )
+                series2.add((double)passValues[j],0);
        
 
 
@@ -200,16 +202,16 @@ private XYDataset createDataset() {
     }
 
     /** Main method */
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-                demo.pack();
-                demo.setLocationRelativeTo(null);
-                demo.setVisible(true);
-            }
-         });
-    }
+//    public static void main(String[] args) {
+//        EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
+//                demo.pack();
+//                demo.setLocationRelativeTo(null);
+//                demo.setVisible(true);
+//            }
+//         });
+//    }
 }
 
 
