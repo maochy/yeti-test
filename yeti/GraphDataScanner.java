@@ -3,6 +3,7 @@ package yeti;
 import java.io.*;
 import java.util.*;
 import java.util.Scanner;
+import yeti.YetiLauncher;
 
 public class GraphDataScanner {
 static int [] graphDataIntFail;
@@ -13,7 +14,7 @@ public static int[] readFailDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File("/Users/mian/inclaspath/Fail.txt");
+   f = new File(YetiLauncher.testFilePathInitial + "Fail.txt");
    scan = new Scanner(f);
 }
 catch(Exception e1){
@@ -38,7 +39,7 @@ public static int[] readPassDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File("/Users/mian/inclaspath/Pass.txt");
+   f = new File(YetiLauncher.testFilePathInitial + "Pass.txt");
    scan = new Scanner(f);
 }
 catch(Exception e1){
@@ -67,5 +68,6 @@ public static int[] convertIntegers(List<Integer> integers)
     }
     return ret;
 }
+
 
 }

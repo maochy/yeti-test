@@ -133,6 +133,8 @@ public class YetiLauncher extends JFrame{
 
 
 	}
+	
+	
 
 	// Method draw all the components on the frame. 
 
@@ -337,7 +339,7 @@ public class YetiLauncher extends JFrame{
 					time = time + "s";
 				}
 
-				// @@@@@@@ Output the values to see correct or not @@@@@@ //
+				// @@@@@@@ Output the values to see correct or not for troubleshooting @@@@@@ //
 
 				//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
@@ -345,7 +347,7 @@ public class YetiLauncher extends JFrame{
 				//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
 				//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathTemp is", JOptionPane.PLAIN_MESSAGE);			
+				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
 
 				list.add(language);
 				list.add(strategy);
@@ -569,7 +571,6 @@ public class YetiLauncher extends JFrame{
 			}
 		}
 	}
-
 }
 
 
