@@ -21,6 +21,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
@@ -73,6 +74,8 @@ public class YetiLauncher extends JFrame{
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
+	JButton 		plot_Button;
+
 
 	public static String testFilePathInitial = ".";
 
@@ -83,6 +86,9 @@ public class YetiLauncher extends JFrame{
 	String 		gui 				 = "-gui";
 	String 		logs 				 = "-nologs";
 	String 		time 				 = "-time=5s";
+	static	int totalFiles 			 = 0;
+
+
 
 	String[] languages = {"Java", ".Net", "JML", "Pharo" };
 	String[] strategies = {"ADFD", "DSSR", "Random", "RandomPlus" };
@@ -95,6 +101,11 @@ public class YetiLauncher extends JFrame{
 	ArrayList<String> 	filesToCompile	 = new ArrayList<String>();
 
 	Thread thread1 = new Thread(new Thread1());
+	Thread thread2 = new Thread(new Thread2());
+	Thread thread3 = new Thread(new Thread3());
+	Thread thread4 = new Thread(new Thread4());
+	GridBagConstraints 	gbc;
+	JProgressBar 		execute_ProgressBar;
 
 
 	// Constructor of the class to create frame and draw components on the frame. //////
@@ -133,14 +144,14 @@ public class YetiLauncher extends JFrame{
 
 
 	}
-	
-	
+
+
 
 	// Method draw all the components on the frame. 
 
 	public void drawAllComponents(){
 
-		GridBagConstraints gbc = new GridBagConstraints();
+		gbc = new GridBagConstraints();
 		panel1.setBorder(new TitledBorder("Test Settings"));
 		panel1.setLayout(new GridBagLayout());
 		panel1.setBackground(Color.LIGHT_GRAY);
@@ -474,16 +485,30 @@ public class YetiLauncher extends JFrame{
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
+		execute_ProgressBar = new JProgressBar(0,100);
+		gbc.gridx = 1;
+		gbc.gridy = 10;
+		gbc.gridwidth = 2;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(execute_ProgressBar, gbc);
+
 		execute_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
-					int count = 0;
-					for (int i = 0; i < filesToCompileArray.length; i++){
-						Runtime.getRuntime().exec("java C"+ i);
-						count++;
-					}
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
+					thread2.start();
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
+					thread2.join();
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
+					thread3.start();
 
-					execute_TextField.setText(count + " files executed");
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
+					thread3.join();
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
+					thread4.start();
+					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
+					thread4.join();
+
 				}
 
 
@@ -495,14 +520,18 @@ public class YetiLauncher extends JFrame{
 
 		});
 
+		///////////////////////////////////// testing //////////////
+
 
 
 		///////////////////////////////////////////////////////////////////////////
 		////// Button and actionlistener for plotting graph /////
 
-		JButton plot_Button = new JButton("Draw Fault Domain");
+
+
+		plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
-		gbc.gridy = 10;
+		gbc.gridy = 11;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot_Button, gbc);
@@ -530,11 +559,11 @@ public class YetiLauncher extends JFrame{
 					demo.setVisible(true);
 
 
-//					LogGraph2 demo = new LogGraph2("FailureDomains");
-//					demo.pack();
-//					demo.setLocationRelativeTo(null);
-//					demo.setVisible(true);
-//					JOptionPane.showMessageDialog(null, "working", " Mian", JOptionPane.PLAIN_MESSAGE);
+					//					LogGraph2 demo = new LogGraph2("FailureDomains");
+					//					demo.pack();
+					//					demo.setLocationRelativeTo(null);
+					//					demo.setVisible(true);
+					//					JOptionPane.showMessageDialog(null, "working", " Mian", JOptionPane.PLAIN_MESSAGE);
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
@@ -556,7 +585,60 @@ public class YetiLauncher extends JFrame{
 
 	}
 
+	private class Thread2 implements Runnable{
 
+		public void run(){
+
+			try {
+				execute_ProgressBar.setIndeterminate(true);
+				execute_ProgressBar.setStringPainted(true);
+				plot_Button.setEnabled(false);
+
+			}
+
+			catch (Exception e1){
+				e1.printStackTrace();
+			}
+		}
+
+
+	}
+
+
+	private class Thread3 implements Runnable{
+		@SuppressWarnings("deprecation")
+		public void run(){
+			try {
+				int count = 0;
+				for (int i = 0; i < filesToCompileArray.length; i++){
+					Runtime.getRuntime().exec("java C"+ i);
+					count++;
+				}
+
+				totalFiles = count;
+			}
+
+			catch(Exception e1){
+				e1.printStackTrace();
+			}
+		}
+	}
+
+	private class Thread4 implements Runnable{
+		@SuppressWarnings("deprecation")
+		public void run(){
+			try {
+				execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
+				execute_ProgressBar.setIndeterminate(false);
+				execute_TextField.setText(totalFiles + " files executed");
+				plot_Button.setEnabled(true);
+
+			}
+			catch(Exception e1){
+				e1.printStackTrace();
+			}
+		}
+	}
 
 	//////Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable ///////////////
 	@SuppressWarnings("unused")
