@@ -68,13 +68,16 @@ public class YetiLauncher extends JFrame{
 
 	private JPanel panel1 = new JPanel();
 	private JPanel panel2 = new JPanel();
-	private JPanel panel3 = new JPanel();
+	 static JPanel panel3 = new JPanel();
 	private JPanel panel4 = new JPanel(new BorderLayout());
 
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
 	JButton 		plot_Button;
+	JButton 		execute_Button;
+	JButton 		compile_Button;
+	JButton 		generated_Button;
 
 
 	public static String testFilePathInitial = ".";
@@ -91,7 +94,7 @@ public class YetiLauncher extends JFrame{
 
 
 	String[] languages = {"Java", ".Net", "JML", "Pharo" };
-	String[] strategies = {"ADFD", "DSSR", "Random", "RandomPlus" };
+	String[] strategies = {"ADFD", "DSSR", "Random", "Random Plus" };
 	String[] time1 = {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 	String[] time2 = {"Seconds", "Minutes" };
 	String[] command;
@@ -205,15 +208,23 @@ public class YetiLauncher extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				if(strategy_ComboBox.getSelectedItem().equals("Random")){
 					strategy = "-random";
+					hideItems();
 				}else if (strategy_ComboBox.getSelectedItem().equals("Random Plus")){
 					strategy = "-randomPlus";
+					hideItems();
 				} else if (strategy_ComboBox.getSelectedItem().equals("DSSR")){
 					strategy = "-DSSR";
+					hideItems();
 				}else
+					{
 					strategy = "-ADFD";
+					unhideItems();
+					}
 
 			}
 		});
+		
+	
 
 		//////////////////////////////////////////////////////////////////
 		///////// Time label, Time1 Combo Box and Time2 Combo Box ////////
@@ -386,7 +397,7 @@ public class YetiLauncher extends JFrame{
 		//////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of generated Files //////
 
-		JButton generated_Button = new JButton("Count Files:");
+		generated_Button = new JButton("Count Files:");
 		gbc.gridx = 1;
 		gbc.gridy = 7;
 		gbc.gridwidth = 1;
@@ -435,7 +446,7 @@ public class YetiLauncher extends JFrame{
 		////// Button, TextField and action listener for the number of compiled Files //////
 
 
-		JButton compile_Button = new JButton("Compile Files:");
+		compile_Button = new JButton("Compile Files:");
 		gbc.gridx = 1;
 		gbc.gridy = 8;
 		panel1.add(compile_Button, gbc);
@@ -471,7 +482,7 @@ public class YetiLauncher extends JFrame{
 		////// Button, TextField and actionlistener for the number of executed Files /////
 
 
-		JButton execute_Button = new JButton("Execute Files:");
+		execute_Button = new JButton("Execute Files:");
 		gbc.gridx = 1;
 		gbc.gridy = 9;
 		panel1.add(execute_Button, gbc);
@@ -491,6 +502,7 @@ public class YetiLauncher extends JFrame{
 
 		execute_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				try{
 					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
 					thread2.start();
@@ -517,9 +529,7 @@ public class YetiLauncher extends JFrame{
 		});
 
 		///////////////////////////////////////////////////////////////////////////
-		////// Button and actionlistener for plotting graph /////
-
-
+		////// Button and action listener for plotting graph /////
 
 		plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
@@ -545,11 +555,12 @@ public class YetiLauncher extends JFrame{
 					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
 
 
-					final LogGraph2 demo = new LogGraph2("Failure Domains");
-					demo.pack();
-					RefineryUtilities.centerFrameOnScreen(demo);
+					LogGraph3 demo = new LogGraph3("Failure Domains");
+					//demo.pack();
+					//RefineryUtilities.centerFrameOnScreen(demo);
 					//panel3.add(demo);
-					demo.setVisible(true);
+					panel3.revalidate();
+					//demo.setVisible(true);
 
 
 					//					LogGraph2 demo = new LogGraph2("FailureDomains");
@@ -665,6 +676,33 @@ public class YetiLauncher extends JFrame{
 				e.printStackTrace();
 			}
 		}
+	}
+	
+	///// Method hides item in case strategy other than ADFD is selected for the current test session.
+	
+	public void hideItems(){
+		execute_TextField.setVisible(false);
+		execute_Button.setVisible(false);
+		execute_ProgressBar.setVisible(false);
+		plot_Button.setVisible(false);
+		compile_Button.setVisible(false);
+		compile_TextField.setVisible(false);
+		generated_Button.setVisible(false);
+		generated_TextField.setVisible(false);
+	
+		
+	}
+	public void unhideItems(){
+		execute_TextField.setVisible(true);
+		execute_Button.setVisible(true);
+		execute_ProgressBar.setVisible(true);
+		plot_Button.setVisible(true);
+		compile_Button.setVisible(true);
+		compile_TextField.setVisible(true);
+		generated_Button.setVisible(true);
+		generated_TextField.setVisible(true);
+	
+		
 	}
 }
 
