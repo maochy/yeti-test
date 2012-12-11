@@ -216,7 +216,6 @@ public class YetiLauncher extends JFrame{
 		});
 
 		//////////////////////////////////////////////////////////////////
-
 		///////// Time label, Time1 Combo Box and Time2 Combo Box ////////
 
 
@@ -236,8 +235,6 @@ public class YetiLauncher extends JFrame{
 		panel1.add(time2_ComboBox, gbc);
 
 		///////////////////////////////////////////////////////////////
-
-
 		/////////// GUI Label, check box and ActionListener //////////
 
 		JLabel gui_Label = new JLabel("GUI:");
@@ -495,19 +492,18 @@ public class YetiLauncher extends JFrame{
 		execute_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try{
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
 					thread2.start();
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
-					thread2.join();
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
+					//thread2.join();
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
 					thread3.start();
-
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
-					thread3.join();
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
+					//thread3.join();
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 					thread4.start();
-					JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
-					thread4.join();
+					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
+					//thread4.join();
 
 				}
 
@@ -519,10 +515,6 @@ public class YetiLauncher extends JFrame{
 			}
 
 		});
-
-		///////////////////////////////////// testing //////////////
-
-
 
 		///////////////////////////////////////////////////////////////////////////
 		////// Button and actionlistener for plotting graph /////
@@ -556,6 +548,7 @@ public class YetiLauncher extends JFrame{
 					final LogGraph2 demo = new LogGraph2("Failure Domains");
 					demo.pack();
 					RefineryUtilities.centerFrameOnScreen(demo);
+					//panel3.add(demo);
 					demo.setVisible(true);
 
 
@@ -585,6 +578,9 @@ public class YetiLauncher extends JFrame{
 
 	}
 
+
+	//////Thread 2 to initialize the progress bar to indeterminate state ///////////////
+
 	private class Thread2 implements Runnable{
 
 		public void run(){
@@ -604,6 +600,7 @@ public class YetiLauncher extends JFrame{
 
 	}
 
+	//////Thread 3 to execute javac files generated ///////////////
 
 	private class Thread3 implements Runnable{
 		@SuppressWarnings("deprecation")
@@ -624,9 +621,24 @@ public class YetiLauncher extends JFrame{
 		}
 	}
 
+
+
+	//////Thread 4 to update the status of progressbar when pass and fail files are generated ///////////////
+
 	private class Thread4 implements Runnable{
 		@SuppressWarnings("deprecation")
 		public void run(){
+
+
+			File file = new File(testFilePathInitial + "Pass.txt");
+			boolean exists = false;
+
+			while (!exists){
+				
+				exists = file.exists();
+
+
+			}
 			try {
 				execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
 				execute_ProgressBar.setIndeterminate(false);
@@ -637,6 +649,7 @@ public class YetiLauncher extends JFrame{
 			catch(Exception e1){
 				e1.printStackTrace();
 			}
+
 		}
 	}
 
