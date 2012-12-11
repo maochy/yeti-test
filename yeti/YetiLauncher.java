@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -26,6 +27,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import yeti.LogGraph2;
+import java.awt.*;
+import javax.swing.*;
 
 
 /**
@@ -68,8 +71,9 @@ public class YetiLauncher extends JFrame{
 
 	private JPanel panel1 = new JPanel();
 	private JPanel panel2 = new JPanel();
-	 static JPanel panel3 = new JPanel();
+	static JPanel panel3 = new JPanel();
 	private JPanel panel4 = new JPanel(new BorderLayout());
+
 
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
@@ -107,8 +111,12 @@ public class YetiLauncher extends JFrame{
 	Thread thread2 = new Thread(new Thread2());
 	Thread thread3 = new Thread(new Thread3());
 	Thread thread4 = new Thread(new Thread4());
+
 	GridBagConstraints 	gbc;
 	JProgressBar 		execute_ProgressBar;
+	ImageIcon 			duckImage;
+	JLabel				duckImageLabel;
+
 
 
 	// Constructor of the class to create frame and draw components on the frame. //////
@@ -162,8 +170,7 @@ public class YetiLauncher extends JFrame{
 		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.fill = GridBagConstraints.BOTH;
 
-
-		/////////// Language Label, ComboBox and ActionListener //////////
+		////////// Language Label, ComboBox and ActionListener //////////
 
 		JLabel language_Label = new JLabel("Language:");
 		gbc.gridx = 0;
@@ -216,15 +223,15 @@ public class YetiLauncher extends JFrame{
 					strategy = "-DSSR";
 					hideItems();
 				}else
-					{
+				{
 					strategy = "-ADFD";
 					unhideItems();
-					}
+				}
 
 			}
 		});
-		
-	
+
+
 
 		//////////////////////////////////////////////////////////////////
 		///////// Time label, Time1 Combo Box and Time2 Combo Box ////////
@@ -502,7 +509,7 @@ public class YetiLauncher extends JFrame{
 
 		execute_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				try{
 					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
 					thread2.start();
@@ -577,6 +584,7 @@ public class YetiLauncher extends JFrame{
 
 		});
 
+		roseImage();
 
 		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
@@ -645,7 +653,7 @@ public class YetiLauncher extends JFrame{
 			boolean exists = false;
 
 			while (!exists){
-				
+
 				exists = file.exists();
 
 
@@ -677,9 +685,9 @@ public class YetiLauncher extends JFrame{
 			}
 		}
 	}
-	
+
 	///// Method hides item in case strategy other than ADFD is selected for the current test session.
-	
+
 	public void hideItems(){
 		execute_TextField.setVisible(false);
 		execute_Button.setVisible(false);
@@ -689,8 +697,8 @@ public class YetiLauncher extends JFrame{
 		compile_TextField.setVisible(false);
 		generated_Button.setVisible(false);
 		generated_TextField.setVisible(false);
-	
-		
+
+
 	}
 	public void unhideItems(){
 		execute_TextField.setVisible(true);
@@ -701,9 +709,22 @@ public class YetiLauncher extends JFrame{
 		compile_TextField.setVisible(true);
 		generated_Button.setVisible(true);
 		generated_TextField.setVisible(true);
-	
-		
+
+
 	}
+	
+	public void roseImage(){
+		try{
+		duckImage = new ImageIcon("yeti/Rose.jpg");
+		duckImageLabel = new JLabel(duckImage);
+		panel2.add(duckImageLabel);
+		}
+		catch (Exception e1){
+			e1.printStackTrace();
+		}
+	}
+
+
 }
 
 
