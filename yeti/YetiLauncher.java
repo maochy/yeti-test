@@ -715,7 +715,7 @@ public class YetiLauncher extends JFrame{
 	
 	public void roseImage(){
 		try{
-		duckImage = new ImageIcon("yeti/Rose.jpg");
+		duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));
 		duckImageLabel = new JLabel(duckImage);
 		panel2.add(duckImageLabel);
 		}
