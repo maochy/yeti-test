@@ -97,8 +97,8 @@ public class YetiLauncher extends JFrame{
 
 
 
-	String[] languages = {"Java", ".Net", "JML", "Pharo" };
-	String[] strategies = {"ADFD", "DSSR", "Random", "Random Plus" };
+	String[] languages = {"Java", ".Net", "JML", "Pharo", "CoFoJa", "Kermeta" };
+	String[] strategies = {"ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 	String[] time1 = {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 	String[] time2 = {"Seconds", "Minutes" };
 	String[] command;
@@ -190,6 +190,10 @@ public class YetiLauncher extends JFrame{
 					language = "-dotnet";
 				}else if(language_ComboBox.getSelectedItem().equals("JML")){
 					language = "-jml";
+				}else if(language_ComboBox.getSelectedItem().equals("CoFoJa")){
+					language = "-cofoja";
+				}else if(language_ComboBox.getSelectedItem().equals("Kermeta")){
+					language = "-kermeta";
 				}
 				else
 					language = "-pharo";
@@ -222,7 +226,20 @@ public class YetiLauncher extends JFrame{
 				} else if (strategy_ComboBox.getSelectedItem().equals("DSSR")){
 					strategy = "-DSSR";
 					hideItems();
-				}else
+				} else if (strategy_ComboBox.getSelectedItem().equals("Random Plus Periodic")){
+					strategy = "-randomPlusPeriodic";
+					hideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("Random Plus Decreasing")){
+					strategy = "-randomPlusDecreasing";
+					hideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("Chromosome")){
+					strategy = "-chromosome";
+					hideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("Evolutionary")){
+					strategy = "-evolutionary";
+					hideItems();
+				}
+				else
 				{
 					strategy = "-ADFD";
 					unhideItems();
@@ -712,12 +729,12 @@ public class YetiLauncher extends JFrame{
 
 
 	}
-	
+
 	public void roseImage(){
 		try{
-		duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));
-		duckImageLabel = new JLabel(duckImage);
-		panel2.add(duckImageLabel);
+			duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));
+			duckImageLabel = new JLabel(duckImage);
+			panel2.add(duckImageLabel);
 		}
 		catch (Exception e1){
 			e1.printStackTrace();
