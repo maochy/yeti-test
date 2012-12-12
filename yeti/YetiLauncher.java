@@ -602,6 +602,40 @@ public class YetiLauncher extends JFrame{
 		});
 
 		roseImage();
+		
+		
+		
+		JButton help_Button = new JButton("Help");
+		gbc.gridx = 0;
+		gbc.gridy = 13;
+		gbc.gridwidth = 1;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(help_Button, gbc);
+
+		help_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				JOptionPane.showMessageDialog(null, "1.    In language combo box select the language of the program under test. \n" +
+						"2.    In strategy combo box select the strategy for the current test session.\n"+ 
+						"3.    For duration select time for the current test session either in minutes or seconds.\n"+ 
+						"4.    Select GUI checkbox if you want to see real time YETI GUI during test execution.\n"+
+						"5.    Select Log checkbox if you want to dump logs of the test session.\n"+
+						"6.    Click browse button to select the file you want to test. \n"+
+						"7.    Name of the file selected will appear in the text field without extension.\n"+
+						"8.    Run Button will run YETI on selected file.\n"+
+						"9.    ADFD specific, count button count the number of generated files.\n" +
+						"10.  ADFD speific, Compile button compiles generated files.\n"+
+						"11.  ADFD speific, Execute button executes the compiled files.\n"+
+						"12.  ADFD speific, Progress bar shows the progess of executing process.\n"+
+						"13.  ADFD speific, Plot button plots the fault domain on the graph.\n" +
+						"14.  For more detail write an email to manuel.oriol@ch.abb.com \n", "YETI GUI Help", JOptionPane.INFORMATION_MESSAGE);
+				
+				
+				
+			}
+		});
+		
+		
 
 		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
