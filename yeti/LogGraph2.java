@@ -100,27 +100,29 @@ public class LogGraph2 extends JFrame {
    
 private XYDataset createDataset() {
        
-        final XYSeries series1 = new XYSeries("Failing input");
+      //  final XYSeries series1 = new XYSeries("Failing input");
        
-int failValues[] = GraphDataScanner.readFailDataFromFile();
-       
-        for (int i =0; i < failValues.length; i++ )
-                series1.add((double)failValues[i],0);
-       
-
-
-        final XYSeries series2 = new XYSeries("Passing input");
-        int passValues[] = GraphDataScanner.readFailDataFromFile();
-       
-        for (int j =0; j < passValues.length; j++ )
-                series2.add((double)passValues[j],0);
-       
-
-
+        int failValues[] = GraphDataScanner.readFailDataFromFile();
         final XYSeriesCollection dataset = new XYSeriesCollection();
-        dataset.addSeries(series1);
-        dataset.addSeries(series2);
+        
+        for (int i =0; i < failValues.length; i=i+2 ){
+        		XYSeries tmpseries= new XYSeries("Failing input");
+                tmpseries.add((double)failValues[i],0);
+                tmpseries.add((double)failValues[i+1],0);
+                dataset.addSeries(tmpseries);
+        }
 
+
+ //       final XYSeries series2 = new XYSeries("Passing input");
+        int passValues[] = GraphDataScanner.readPassDataFromFile();
+       
+        for (int j =0; j < passValues.length; j=j+2){
+    		XYSeries tmpseries= new XYSeries("Passing input");
+       		tmpseries.add((double)passValues[j],0);
+       		tmpseries.add((double)passValues[j+1],0);
+       	    dataset.addSeries(tmpseries);
+    }
+       
         return dataset;
        
     }
