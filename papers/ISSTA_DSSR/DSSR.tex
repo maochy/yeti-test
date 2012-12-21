@@ -108,7 +108,6 @@ Manuel Oriol \\
 
 \maketitle
 \begin{abstract}
-While random testing has recently gained momentum, very little has been known on failure domains and their shape. 
 This paper presents an enhanced and improved form of automated random testing, called the Dirt Spot Sweeping Random (DSSR) strategy. DSSR is a new strategy that takes the assumption that a number of failure domains are contiguous.
 DSSR starts as a regular random+ testing session --- a random testing session with some preference for boundary values. 
 When a failure is found, it increases the chances of using neighbouring values in subsequent tests, thus slowly sweeping around the failure found in hope of finding failures from a different kind in its vicinity.
@@ -138,7 +137,7 @@ We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url
 Overall, DSSR also found 2.3\% more unique failures than random and .3\% more unique failures than random+.
 
 
-The rest of this paper is organized as follows:
+The rest of this paper is organised as follows:
 Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents our implementation of the strategy. Section~\ref{sec:eval} explains our experimental setup. Section~\ref{sec:res} shows the results of our experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and we conclude in Section~\ref{sec:conc}.
 
 
@@ -278,7 +277,7 @@ As mentioned previously, the implementation of the DSSR strategy is made in the 
 
 YETI can be divided into three decoupled main parts: the core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. The most common strategies are random and random+. 
 
-By default, YETI uses the random+ strategy if no particular strategy is defined during test initialization. It also enables the user to control the probability of using null values and the percentage of newly created objects for each test session. YETI provides an interactive Graphical User Interface (GUI) in which users can see the progress of the current test in real time. In addition to the GUI, YETI also provides extensive logs of the test session for more in-depth analysis.
+By default, YETI uses the random+ strategy if no particular strategy is defined during test initialisation. It also enables the user to control the probability of using null values and the percentage of newly created objects for each test session. YETI provides an interactive Graphical User Interface (GUI) in which users can see the progress of the current test in real time. In addition to the GUI, YETI also provides extensive logs of the test session for more in-depth analysis.
 
 The DSSR strategy has then been added as an extension of YetiRandomStrategy, which in itself is an extension of an abstract class YetiStrategy. The class hierarchy is shown in Figure \ref{fig:hierarchyofDSSR}.
 
@@ -305,14 +304,14 @@ To evaluate the DSSR strategy and its usefulness, we set out to answer the follo
 \begin{enumerate}
 \item Is any of the three strategies R, R+ and DSSR provide better results than the other two?
 \item Is there a subset of the classes for which R, R+, or DSSR provide better results than the other two?
-\item If such categories exist, what are their sizes and how do they compare and can we pick a default strategy according to this citerion?
+\item If such categories exist, what are their sizes and how do they compare and can we pick a default strategy according to this criterion?
 \end{enumerate}
 
 
 
 \subsection{Experiments}
 
-To evaluate the performances of DSSR we performed extensive testing of programs from the Qualitas Corpus~\cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organized form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 32 projects at random and picked 80 classes at random that produced at least 1 failure and did not timeout with a testing session of maximum 10 minutes. We tested each of the 80 classes thirty times with each strategy. Names and versions of the projects to which these classes belong are given in table~\ref{table:projects}.
+To evaluate the performances of DSSR we performed extensive testing of programs from the Qualitas Corpus~\cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects are collected in an organised form containing both the source and binary forms. The present evaluation uses version 20101126 which contains 106 open source java projects. We picked 32 projects at random and picked 80 classes at random that produced at least 1 failure and did not timeout with a testing session of maximum 10 minutes. We tested each of the 80 classes thirty times with each strategy. Total number of code lines in selected 80 classes are 40,213. Individual lines of code per class under test is given in column 3 of table~\ref{table:Results}. Names and versions of the projects to which these classes belong are given in table~\ref{table:projects}.
 
 Each class is evaluated through $10^5$ calls in each testing session.\footnote{The total number of tests is thus $80\times 30\times 3 \times 10^5 = 720\times 10^6~tests$.} 
 Because of the absence of the contracts and assertions in the code under test, similarly to previous approaches~\cite{Oriol2012}, we use undeclared exceptions to compute unique failures found.
@@ -369,13 +368,13 @@ Various measures including the E-measure, P-measure and F-measure have been used
 
 
   
-The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault found. In such cases it make sense but now a days automated random testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favorable choice. Therefore in our experiments, performance of the strategy was measured by the maximum number of faults in a particular number of test calls \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
+The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault found. In such cases it make sense to use F-measure but nowadays automated testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured by the maximum number of faults in a particular number of test calls \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=18cm]{StackedBar100PercentMean.png}
-\caption{Normalized stacked bar diagram of all tested classes.}
+\caption{Normalised stacked bar diagram of all tested classes.}
 \label{fig:stackedbar}
 \end{figure*}
 
@@ -486,9 +485,9 @@ The literature review revealed that the F-measure is used where testing stops af
 
 
 \subsection{Is there an absolute best for DSSR, R+ and R?}
-Figure~\ref{fig:stackedbar} presents the results of 80 randomly selected classes evaluated by the R, R+ and DSSR strategies in an intuitive normalized stacknar representation where projects are ranked according to the relative number of unique failures found by DSSR. As a first visual interpretation, it seems that, except in rare cases, all strategies find significantly the same number of uniques failures.
+Figure~\ref{fig:stackedbar} presents the results of 80 randomly selected classes evaluated by the R, R+ and DSSR strategies in an intuitive normalised stackbar representation where projects are ranked according to the relative number of unique failures found by DSSR. As a first visual interpretation, it seems that, except in rare cases, all strategies find significantly the same number of uniques failures.
 
-Table~\ref{table:Results} contains more detailed information: name of the classes, mean value, maximum number of unique failures, minimum number of unique failures and relative standard deviation for each of the 80 classes tested using R, R+ and DSSR strategy. The total value (table \ref{table:Results} last row) shows DSSR detects slightly more unique failuress (1192.55), on average, than R (1165.53) and R+ (1188.73). This represents 2.3\% on average than R and .3\% more than R+. It also shows that DSSR found a higher number of maximum unique failures (1234) and minimum unique failures (1126) than R (1181), (1055) and R+ (1224), (1127) respectively. This represents: 4.5\% improvements over R and .8\% over R+ for the maximum and 6.7\% improvement over R and .1\% decrease over R+ for the minimum. Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
+Table~\ref{table:Results} contains more detailed information: name of the classes, mean value, maximum number of unique failures, minimum number of unique failures and relative standard deviation for each of the 80 classes tested using R, R+ and DSSR strategy. The total value (table \ref{table:Results} last row) shows DSSR detects slightly more unique failures (1192.55), on average, than R (1165.53) and R+ (1188.73). This represents 2.3\% on average than R and .3\% more than R+. It also shows that DSSR found a higher number of maximum unique failures (1234) and minimum unique failures (1126) than R (1181), (1055) and R+ (1224), (1127) respectively. This represents: 4.5\% improvements over R and .8\% over R+ for the maximum and 6.7\% improvement over R and .1\% decrease over R+ for the minimum. Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
 
 The answer to this research question is thus that whereas DSSR produces a slightly higher number of unique failures, this is not significantly higher than R+. We can thus say that R+ and DSSR are better choices than R as an absolute strategy, but that neither significantly outperforms the other. 
 
@@ -516,15 +515,14 @@ The sixth category contain 4 classes (5\%) where DSSR and R+ found an equal numb
 
 No class is found for which R performs equal to R+.
 
-The answer to this research question is that most classes (62\%) did not exhibit significantly different behaviors independent of the strategy. In 38\% of the cases, though, one or two strategies work better than the other(s). In particular, 14\% of the classes performed better with R, 9\% of the classes performed better with R+ and 9\% with DSSR. This shows that the assumptions made when developing R+ --- some border values are more bug-prone --- and DSSR --- failure domains are connected --- only verify in a minority of cases and are code-dependent.
+The answer to this research question is that most classes (62\%) did not exhibit significantly different behaviours independent of the strategy. In 38\% of the cases, though, one or two strategies work better than the other(s). In particular, 14\% of the classes performed better with R, 9\% of the classes performed better with R+ and 9\% with DSSR. This shows that the assumptions made when developing R+ --- some border values are more bug-prone --- and DSSR --- failure domains are connected --- only verify in a minority of cases and are code-dependent.
 
 
 
 \subsection{Can we pick the best default strategy between R, R+ and DSSR?}
-With the data presented in this section, it is not possible to pick a best strategy for all classes. In most cases, results are not different from one strategy to another, but in the other cases, the best strategy is very much dependent on the tested code and none of R, R+ and DSSR are signifficantly better than the other two on larger classes. 
+With the data presented in this section, it is not possible to pick a best strategy for all classes. In most cases, results are not different from one strategy to another, but in the other cases, the best strategy is very much dependent on the tested code and none of R, R+ and DSSR are significantly better than the other two on larger classes. 
 
-In the next section we also discuss other factors that influence the outcome of such a question such as time and 
-
+In the next section we also discuss other factors that influence the outcome of such a question such as time taken by each strategy, effect of test duration, number of tests, number of faults and the effect of finding first by random strategy on DSSR performance.
 
 
 
@@ -532,7 +530,7 @@ In the next section we also discuss other factors that influence the outcome of 
 
 \section{Discussion}\label{sec:discussion}
 \textbf{Time taken by DSSR strategy, Random strategy and Random plus strategy to execute tests:}
-To execute an equal number of test cases, DSSR takes slightly more time (between 5 and 10\% overhead) than both pure random and random plus. This is due to maitaining sets of interesting values. The overhead is dependent on our implementation and could also be reduced if needed. 
+To execute an equal number of test cases, DSSR takes slightly more time (between 5 and 10\% overhead) than both pure random and random plus. This is due to maintaining sets of interesting values. The overhead is dependent on our implementation and could also be reduced if needed. 
 
 \textbf{Effect of test duration and number of tests on the results:}
 All three techniques have the same potential for finding bugs. If testing infinitely, all techniques should find the same number of unique failures.
