@@ -1,3 +1,4 @@
+
 % THIS IS SIGPROC-SP.TEX - VERSION 3.1
 % WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
 % APRIL 2009
@@ -95,7 +96,7 @@ Mian Asbat Ahmad\\
        \affaddr{The University of York}\\
        \affaddr{York, United Kingdom}\\
        \email{mian.ahmad@york.ac.uk}
-% 2nd. author
+% Please Dr. Manuel, add your abb details. I am not able to create table here because of the format. Thanks.
 \alignauthor
 Manuel Oriol \\
        \affaddr{Department of Computer Science}\\
@@ -145,7 +146,7 @@ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presen
 
 %%%%%%%%%%%%%%%%%    DIRT SPOT SWEEPING STRATEGY  %%%%%%%%%%%%%%%
 
-\section{Dirt Spot Sweeping Random Strategy}\label{sec:dssr}
+\section{Dirt Spot Sweeping Random \\ Strategy}\label{sec:dssr}
 The Dirt Spot Sweeping Random strategy (DSSR) is a new strategy which combines the random+ strategy with a dirt spot sweeping functionality. The strategy is based on two intuitions. First, boundaries have interesting values and using these values in isolation can provide high impact on test results. Second, faults and unique failures reside in contiguous blocks and stripes. If this is the case, DSSR increases the performance of the test strategy. Each strategy is briefly explained as follows.
 
 \subsection{Random Strategy (R)}
@@ -184,9 +185,9 @@ Dirt spot sweeping is the part of DSSR strategy that comes into action when a fa
 \label{fig:block2}
 \end{figure}
 
-Figure \ref{fig:block2} shows how dirst spot sweeping explores the failures residing in the block and strip patterns of a program. The failure coverage from the pattern is shown in spiral form because first failure will lead to second, second to third and so on till the end. In case the failure is positioned on the point pattern then the added values will not be very effective because point pattern is only an arbitrary failure point in the whole input domain.
+Figure \ref{fig:block2} shows how dirt spot sweeping explores the failures residing in the block and strip patterns of a program. The failure coverage from the pattern is shown in spiral form because first failure will lead to second, second to third and so on till the end. In case the failure is positioned on the point pattern then the added values will not be very effective because point pattern is only an arbitrary failure point in the whole input domain.
 
-\subsection{Structure of the Dirt Spot Sweeping Random Strategy}
+\subsection{Structure of the Dirt Spot Sweeping \\ Random Strategy}
 
 The DSSR strategy is explained with the help of a flow-chart in Figure~\ref{fig:Working_DSSS}. In this process, the strategy continuously tracks the number of failures during the execution of the test session. To keep the system fast this tracking is done in a very effective way with zero or minimum overhead~\cite{Leitner2009}. The execution of test is performed normally until a failure is found in the SUT. Then the program does not only copy the values that lead to the failure, but also copies its surrounding values to the variable list of interesting values. As presented in the flowchart, if the failure finding value is of primitive type then the DSSR finds the type of the value and add values only of that particular type to the interesting values. Addition of these values increases the size of the list of interesting values that provide relevant test data for the remaining test session and the new generated test cases are more targeted towards finding new failures in the given SUT around pre-existing failures.
 
@@ -235,7 +236,7 @@ Type & Values to be added\\ [0.5ex] % inserts table
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXPLANATION OF DSSR STRATEGY %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Explanation of DSSR on a concrete example}
+\subsection{Explanation of DSSR on a concrete \\ example}
 The DSSR strategy is explained through a simple program seeded with at least three faults. The first fault is a division by zero exception denoted 1 while the second and third are failing assertion statements denoted 2 and 3 in the following program.  Below we describe how the DSSR strategy perform execution when the following class is expose to testing.
 
 \begin{lstlisting}
@@ -273,7 +274,7 @@ The process above explains that the pre-defined values including border values, 
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
 
 
-\section{Implementation of the DSSR strategy}\label{sec:imp}
+\section{Implementation of the DSSR \\ strategy}\label{sec:imp}
 As mentioned previously, the implementation of the DSSR strategy is made in the YETI open-source automated random testing tool. YETI is developed in Java and capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies, and auto generation of test report at the end of the testing sessions. For large-scale testing there is a cloud-enabled version of YETI that is capable of executing parallel test sessions in Cloud~\cite{Oriol2010}. A number of hitherto faults have successfully been found by YETI in various production softwares~\cite{Oriol2012, Oriol2011}.
 
 YETI can be divided into three decoupled main parts: the core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. The most common strategies are random and random+. 
@@ -390,7 +391,7 @@ The literature review revealed that the F-measure is used where testing stops af
       %\cline{3-14} 
       						&						&		& mean 	& max		 & min 	& 	rel std dev				& mean 	& max 	& min 		&	 rel std dev 			& mean 		& max 		& min 			& rel std dev \\
 
- 1						& Rou tine					&1069		& 7		&	7	&	7	& 	0					& 7		&  7		& 7		& 		0			& 7			& 7			& 7			&	0	\\
+ 1						& Routine					&1069		& 7		&	7	&	7	& 	0					& 7		&  7		& 7		& 		0			& 7			& 7			& 7			&	0	\\
  2						& Response					&83		& 6		&	6	&	6	& 	0					& 6		&  6		& 6		& 		0			& 6			& 6			& 6			&	0	\\
  3						& Repository					&63		& 31		&	31	&	31	& 	0					& 40		&  40		& 40		& 		0			& 40			& 40			& 40			&	0	\\      
  4						& Rectangle					&71		& 3		&	3	&	3	& 	0					& 3		&  3 		& 3		& 		0			& 3			& 3			& 3			&	0	\\      
