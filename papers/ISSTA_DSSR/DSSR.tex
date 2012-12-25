@@ -113,9 +113,9 @@ This paper presents an enhanced and improved form of automated random testing, c
 DSSR starts as a regular random+ testing session --- a random testing session with some preference for boundary values. 
 When a failure is found, it increases the chances of using neighbouring values in subsequent tests, thus slowly sweeping around the failure found in hope of finding failures from a different kind in its vicinity.
 
-DSSR was implemented within the YETI random testing tool. We evaluate DSSR against random+ and pure random strategies by testing 80 classes with $10^5$ calls for each session 30 times for each strategy.
-We found that for 68\% of the classes all three strategies find the same unique failures, for 14\% of the classes random+ performs better, for 9\% pure random performs better, and for 9\% DSSR performs better.
-Overall, DSSR also found 2.3\% more unique failures than random and .3\% more unique failures than random+.
+DSSR was implemented within the YETI random testing tool. We evaluate DSSR against random+ and pure random strategies by testing 60 classes with one million ($10^5$) calls for each session 30 times for each strategy.
+We found that for 70\% of the classes all three strategies find the same unique failures, for remaining 30\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 16\%) then random+ strategy.
+Overall, DSSR also found 78 more unique failures than random and 11 more unique failures than random+.
 \end{abstract}
 
 %A category including the fourth, optional field follows...
@@ -134,8 +134,8 @@ Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causin
 
 In this paper we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random strategy (DSSR) which starts as a random+ strategy --- a random strategy focusing more on boundary values. When it finds a new failure, it then increases the chances of finding more faults using neighbouring values. Note that, similarly to previous studies~\cite{Oriol2012} we approximate faults with unique failures. Of course, since this strategy is also a random testing strategy, it has the potential to find all unique failures in the program, but we expect it to be faster at finding unique failures for classes in which failure domains are contiguous than the pure random (R) and random+ (R+) strategies.
 
-We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 80 classes from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies DSSR, R, and R+. We found that for 68\% of the classes all three strategies find the same unique failures, for 9\% of the classes random+ performs better, for 14\% pure random performs better, and for 9\% DSSR performs better.
-Overall, DSSR also found 2.3\% more unique failures than random and .3\% more unique failures than random+.
+We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 60 classes from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies DSSR, R, and R+. We found that for 70\% of the classes all three strategies find the same unique failures, for remaining 30\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 16\%) then random+ strategy.
+Overall, DSSR also found 78 more unique failures than random and 11 more unique failures than random+.
 
 
 The rest of this paper is organised as follows:
@@ -391,86 +391,66 @@ The literature review revealed that the F-measure is used where testing stops af
       %\cline{3-14} 
       						&						&		& mean 	& max		 & min 	& 	rel std dev				& mean 	& max 	& min 		&	 rel std dev 			& mean 		& max 		& min 			& rel std dev \\
 
- 1						& Routine					&1069		& 7		&	7	&	7	& 	0					& 7		&  7		& 7		& 		0			& 7			& 7			& 7			&	0	\\
- 2						& Response					&83		& 6		&	6	&	6	& 	0					& 6		&  6		& 6		& 		0			& 6			& 6			& 6			&	0	\\
- 3						& Repository					&63		& 31		&	31	&	31	& 	0					& 40		&  40		& 40		& 		0			& 40			& 40			& 40			&	0	\\      
- 4						& Rectangle					&71		& 3		&	3	&	3	& 	0					& 3		&  3 		& 3		& 		0			& 3			& 3			& 3			&	0	\\      
- 5						& Project					&470		& 65		&	71	&	60	& 	0.11					& 66		&  78		& 62		& 		0.17			& 69			& 78			& 64			&	0.14	\\      
- 6						& ProjectFactory				&84		& 1		&	1	&	1	& 	0					& 1		&  1		& 1		& 		0			& 1			& 1			& 1			&	0	\\      
- 7						& PersistentSet				&162		& 36		&	36	&	36	& 	0					& 36		&  36		& 36		& 		0			& 36			& 36			& 36 			&	0	\\      
- 8						& PersistentMap				&514		& 47		&	47	&	47	& 	0					& 47		&  47		& 47		& 		0			& 47			& 47			& 47			&	0	\\      
- 9						& PersistentList				&602		& 65		&	65	&	65	& 	0					& 65		&  65		& 65		& 		0			& 65			& 65			& 65			&	0	\\      
- 10						& PersistentBag				&571		& 68		&	68	&	68	& 	0					& 68		&  68		& 68		& 		0			& 68			& 68			& 68			&	0	\\      
- 11						& Coverage					&73		& 5		&	5	&	5	& 	0					& 5		& 5		& 5		& 		0			& 5			& 5			& 5			&	0	\\      
- 12						& NodeSet					&208		& 28		&	29	&	26	& 	0.07					& 28		& 29 		& 26		& 		0.05			& 28			& 29			& 26			&	0.07	\\      
- 13						& NodeSequence				&68		& 38		&	46	&	30	& 	0.29					& 36		& 45 		& 30		& 		0.29			& 38			& 45			& 30			&	0.27	\\      
- 14						& NameEntry					&172		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\      
- 15						& Response					&49		& 5		&	5	&	5	& 	0					& 5		& 5 		& 5		& 		0			& 5			& 5			& 5			&	0	\\      
- 16						& Mat4					&330		& 1		&	1	&	1	& 	0					& 1		&  1		& 1		& 		0			& 1			& 1			& 1			&	0	\\      
- 17						& List						&1718		& 5		&	6	&	4	& 	0.28					& 6		& 6 		& 4		& 		0.23			& 6			& 6			& 5			&	0.11\\      
- 18						& JmxUtilities					&645		& 8		&	8	&	6	& 	0.17					& 8		& 8 		& 7		& 		0.08			& 8			& 8			& 7			&	0.08\\      
- 19						& JavaWrapper				&513		& 3		&	2	&	2	& 	0					& 4		& 4 		& 3		& 		0.17			& 4			& 4			& 3			&	0.17\\      
- 20						& ItemSet					&234		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\      
- 21						& IntStack					&313		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\      
- 22						& IntHolder					&159		& 1		&	1	&	1	& 	0					& 1		& 1 		& 1		& 		0			& 1			& 1			& 1			&	0	\\      
- 23						& InstrumentTask				&71		& 2		&	2	&	1	& 	0.35					& 2		& 2 		& 1		& 		0.35			& 2			& 2			& 2			&	0	\\      
- 24						& Image					&2146		& 14		&	18	&	7	& 	0.55					& 12		& 14 		& 4		& 		0.58			& 14			& 15			& 11			&	0.20\\      
- 25						& HttpAuth					&221		& 2		&	2	&	2	& 	0					& 2		& 2 		& 2		& 		0			& 2			& 2			& 2			&	0	\\      
- 26						& Group					&88		& 11		&	11	&	11	& 	0					& 10		& 4 		& 11		& 		0.49			& 11			& 11			& 11			&	0	\\      
- 27						& Generator					&218		& 17		&	17	&	17	& 	0					& 17		& 17 		& 17		& 		0			& 17			& 17			& 17			&	0	\\      
- 28						& FPGrowth					&435		& 5		&	5	&	5	& 	0					& 5		&  5		& 5		& 		0			& 5			& 5			& 5			&	0	\\      
- 29						& Font					&184		&12		&	12	&	11	& 	0.05					& 12		& 12 		& 11		& 		0.05			& 12			& 12			& 11			&	0.05\\      
- 30						& FileUtil					&83		& 1		&	1	&	1	& 	0					& 1		& 1 		& 1		& 		0			& 1			& 1			& 1			&	0\\      
- 31						& Files						&507		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 31						& FileHandler					&90		& 2		&	2	&	2	& 	0					& 2		& 2 		& 2		& 		0			& 2			& 2			& 2			&	0\\      
- 33						& Facade					&3301		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 34						& Entry					&37		& 6		&	6	&	6	& 	0					& 6		& 6 		& 6		& 		0			& 6			& 6			& 6			&	0\\      
- 35						& EntryComparator				&163		& 13		&	13	&	13	& 	0					& 13		& 13 		& 13		& 		0			& 13			& 13			& 13			&	0\\      
- 36						& EntryDecoder				&675		& 8		&	9	&	7	& 	0.17					& 8		& 9 		& 7		& 		0.17			& 8			& 9			& 7			&	0.17\\ 
- 37						& Entities					&328		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 38						& DOMParser				&92		& 7		&	7	&	0	& 	0.70					& 7		& 7 		& 6		& 		0.10			& 7			& 7			& 7			&	0\\      
- 39						& DiskIO					&220		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0\\      
- 40						& DirectoryScanner				&1714		& 33		&	39	&	0	& 	0.83					& 35		& 38 		& 31		& 		0.14			& 36			& 39			& 32			&	0.13\\      
- 41						& Debug					&836		& 4		&	6	&	4	& 	0.35					& 5		& 6 		& 4		& 		0.28			& 5			& 8			& 4			&	0.56\\      
- 42						& ColumbaClient				&137		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 43						& ClassLoaderLogMan			&386		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 44						& CheckAssociator				&351		& 7		&	8	&	2	& 	0.60					& 6		& 9 		& 2		& 		0.82			& 7			& 9			& 2			&	0.70\\      
- 45						& CatalogManager				&538		& 7		&	7	&	7	& 	0					& 7		& 7 		& 7		& 		0			& 7			& 7			& 7			&	0\\      
- 46						& Capabilities				&513		& 1		&	2	&	1	& 	0.70					& 2		& 2 		& 1		& 		0.35			& 2			& 2			& 1			&	0.35\\      
- 47						& BitSet					&575		& 9		&	9	&	9	& 	0					& 9		& 9 		& 9		& 		0			& 9			& 9			& 9			&	0\\      
- 48						& BaseColor					&158		& 14		&	14	&	14	& 	0					& 14		& 14 		& 14		& 		0			& 14			& 14			& 14			&	0\\      
- 49						& ArchiveUtil					&66		& 2		&	2	&	2	& 	0					& 2		& 2 		& 2		& 		0			& 2			& 2			& 2			&	0\\      
- 50						& Apriori					&292		& 3		&	4	&	3	& 	0.23					& 3		& 4 		& 3		& 		0.23			& 3			& 4			& 3			&	0.23\\      
- 51						& AntTypeDefinition				&370		& 3		&	4	&	2	& 	0.47					& 3		& 4 		& 2		& 		0.47			& 3			& 4			& 2			&	0.47\\      
- 52						& AjTypeImpl					&1180		& 80		&	83	&	79	& 	0.03					& 80		& 83 		& 79		& 		0.03			& 80			& 83			& 79			&	0.03\\      
- 53						& AdminCore					&94		& 5		&	5	&	5	& 	0					& 5		& 5 		& 5		& 		0			& 5			& 5			& 5			&	0\\      
- 54						& ActionTranslator				&709		& 96		&	96	&	96	& 	0					& 96		& 96 		& 96		& 		0			& 96			& 96			& 96			&	0\\      
- 55						& RubyBigDecimal				&1564		& 4 		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0\\      
- 56						& Scanner					&94		& 3		&	5	&	2	& 	0.70					& 3		& 5 		& 2		& 		0.70			& 3			& 5			& 2			&	0.70\\      
- 57						& Scene					&1603		& 26		&	27	&	26	& 	0.02					& 26		& 27 		& 26		& 		0.02			& 27			& 27			& 26			&	0.02\\      
- 58						& SelectionManager				&431		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 59						& Server					&279		&15		&	21	&	11	& 	0.47					& 17		& 21 		& 12		& 		0.37			& 17			& 21			& 12			&	0.37\\      
- 60						& Sorter					&47		& 2		&	2	&	1	& 	0.35					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 61						& Sorting					&762		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 62						& SSL						&329		&13		&	13	&	13	& 	0					& 13		& 13 		& 13		& 		0			& 13			& 13			& 13			&	0\\      
- 63						& Statistics					&491		& 15		&	17	&	12	&	0.23					& 23		& 25 		& 22		& 		0.09			& 24			& 25			& 22			&	0.08\\      
- 64						& Status					&32		& 53		&	53	&	53	& 	0					& 53		& 53 		& 53		& 		0			& 53			& 53			& 53			&	0\\      
- 65						& Stopwords					&332		& 7		&	8	&	7	& 	0.10					& 7		&  8		& 6		& 		0.20			& 8			& 8			& 7			&	0.08\\      
- 66						& StringHelper				&178		& 43	 	& 	45	&	41	& 	0.06					& 44		&  46		& 42		& 		0.06			& 44			& 45			& 42			&	0.04\\      
- 67						& StringUtils					&119		& 19 		&	19	&	19	& 	0					& 19		& 19 		& 19		& 		0			& 19			& 19			& 19			&	0\\      
- 68						& TextImpl					&44		& 2 		&	2	&	2	& 	0					& 2		&  2		& 2		& 		0			& 2			& 2			& 2			&	0\\      
- 69						& TouchCollector				&222		& 3		&	3	&	3	& 	0					& 3		&  3		& 3		& 		0			& 3			& 3			& 3			&	0\\      
- 70						& Trie						&460		& 21		&	22	&	21	& 	0.03					& 21		&  22		& 21		& 		0.03			& 21			& 22			& 21			&	0.03\\      
- 71						& URI						&3970		& 5 		&	5	&	5	& 	0					& 5		&  5		& 5		& 		0			& 5			& 5			& 5			&	0\\      
- 72						& Itextpdf					&245		& 8		&	8	&	8	& 	0					& 8		&  8		& 8		& 		0			& 8			& 8			& 8			&	0\\      
- 73						& WebMacro					&311		& 5		&	5	&	5	& 	0					& 5		&  6		& 5		& 		0.14			& 5			& 7			& 5			&	0.28\\      
- 74						& XMLAttributesImpl			&277		& 8		&	8	&	8	& 	0					& 8		&  8		& 8		& 		0			& 8			& 8			& 8			&	0\\      
- 75						& XMLChar					&1031		& 13		&	13	&	13	& 	0					& 13		&  13		& 13		& 		0			& 13			& 13			& 13			&	0\\      
- 76						& XMLEntityManger				&763		& 17		&	18	&	17	& 	0.04					& 17		&  17		& 16		& 		0.04			& 17			& 17			& 17			&	0\\      
- 77						& XMLEntityScanner			&445		& 12		&	12	&	12	& 	0					& 12		&  12		& 12		& 		0			& 12			& 12			& 12			&	0\\      
- 78						& XMLErrorReporter			&371		& 5		&	5	&	5	& 	0					& 5		&  5		& 5		& 		0			& 5			& 5			& 5			&	0\\      
- 79						& XObject					&318		& 19		&	19	&	19	& 	0					& 19		&  19		& 19		& 		0			& 19			& 19			& 19			&	0\\      
- 80						& XString					&546		& 24		&	24	&	23	& 	0.02					& 23		&  24		& 23		& 		0.03			& 24			& 24			& 23			&	0.02\\      
+1						& ActionTranslator			&709		& 96		&	96	&	96	& 	0					& 96		& 96 		& 96		& 		0			& 96			& 96			& 96			&	0\\     
+2						& AjTypeImpl				&1180		& 80		&	83	&	79	& 	0.03					& 80		& 83 		& 79		& 		0.03			& 80			& 83			& 79			&	0.03\\      
+3						& Apriori					&292		& 3		&	4	&	3	& 	0.23					& 3		& 4 		& 3		& 		0.23			& 3			& 4			& 3			&	0.23\\      
+4						& BitSet					&575		& 9		&	9	&	9	& 	0					& 9		& 9 		& 9		& 		0			& 9			& 9			& 9			&	0\\       
+5						& CatalogManager			&538		& 7		&	7	&	7	& 	0					& 7		& 7 		& 7		& 		0			& 7			& 7			& 7			&	0\\    
+6						& CheckAssociator			&351		& 7		&	8	&	2	& 	0.60					& 6		& 9 		& 2		& 		0.82			& 7			& 9			& 2			&	0.70\\    
+7						& Debug					&836		& 4		&	6	&	4	& 	0.35					& 5		& 6 		& 4		& 		0.28			& 5			& 8			& 4			&	0.56\\       
+8						& DirectoryScanner			&1714		& 33		&	39	&	0	& 	0.83					& 35		& 38 		& 31		& 		0.14			& 36			& 39			& 32			&	0.13\\      
+9						& DiskIO					&220		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0\\      
+10						& DOMParser				&92			& 7		&	7	&	3	& 	0.70					& 7		& 7 		& 6		& 		0.10			& 7			& 7			& 7			&	0\\      
+11						& Entities					&328		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
+12						& EntryDecoder			&675		& 8		&	9	&	7	& 	0.17					& 8		& 9 		& 7		& 		0.17			& 8			& 9			& 7			&	0.17\\   
+13						& EntryComparator			&163		& 13		&	13	&	13	& 	0					& 13		& 13 		& 13		& 		0			& 13			& 13			& 13			&	0\\      
+14						& Entry					&37			& 6		&	6	&	6	& 	0					& 6		& 6 		& 6		& 		0			& 6			& 6			& 6			&	0\\   
+15						& Facade					&3301		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\   
+16						& FileUtil					&83			& 1		&	1	&	1	& 	0					& 1		& 1 		& 1		& 		0			& 1			& 1			& 1			&	0\\      
+17						& Font					&184		&12		&	12	&	11	& 	0.05					& 12		& 12 		& 11		& 		0.05			& 12			& 12			& 11			&	0.05\\        
+18						& FPGrowth				&435		& 5		&	5	&	5	& 	0					& 5		&  5		& 5		& 		0			& 5			& 5			& 5			&	0	\\       
+19						& Generator				&218		& 17		&	17	&	17	& 	0					& 17		& 17 		& 17		& 		0			& 17			& 17			& 17			&	0	\\      
+20						& Group					&88			& 11		&	11	&	11	& 	0					& 10		& 4 		& 11		& 		0.49			& 11			& 11			& 11			&	0	\\      
+21						& HttpAuth				&221		& 2		&	2	&	2	& 	0					& 2		& 2 		& 2		& 		0			& 2			& 2			& 2			&	0	\\         
+22						& Image					&2146		& 14		&	18	&	7	& 	0.55					& 12		& 14 		& 4		& 		0.58			& 14			& 15			& 11			&	0.20\\        
+23						& InstrumentTask			&71			& 2		&	2	&	1	& 	0.35					& 2		& 2 		& 1		& 		0.35			& 2			& 2			& 2			&	0	\\    
+24						& IntStack					&313		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\      
+25						& ItemSet					&234		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\       
+26						& JavaWrapper				&513		& 3		&	2	&	2	& 	0					& 4		& 4 		& 3		& 		0.17			& 4			& 4			& 3			&	0.17\\      
+27						& JmxUtilities				&645		& 8		&	8	&	6	& 	0.17					& 8		& 8 		& 7		& 		0.08			& 8			& 8			& 7			&	0.08\\      
+28						& List					&1718		& 5		&	6	&	4	& 	0.28					& 6		& 6 		& 4		& 		0.23			& 6			& 6			& 5			&	0.11\\      
+29						& NameEntry				&172		& 4		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0	\\  
+30						& NodeSequence			&68			& 38		&	46	&	30	& 	0.29					& 36		& 45 		& 30		& 		0.29			& 38			& 45			& 30			&	0.27	\\     
+31						& NodeSet				&208		& 28		&	29	&	26	& 	0.07					& 28		& 29 		& 26		& 		0.05			& 28			& 29			& 26			&	0.07	\\  
+32						& PersistentBag			&571		& 68		&	68	&	68	& 	0					& 68		&  68		& 68		& 		0			& 68			& 68			& 68			&	0	\\         
+33						& PersistentList				&602		& 65		&	65	&	65	& 	0					& 65		&  65		& 65		& 		0			& 65			& 65			& 65			&	0	\\    
+34						& PersistentSet				&162		& 36		&	36	&	36	& 	0					& 36		&  36		& 36		& 		0			& 36			& 36			& 36 			&	0	\\        
+35						& Project					&470		& 65		&	71	&	60	& 	0.11					& 66		&  78		& 62		& 		0.17			& 69			& 78			& 64			&	0.14	\\        
+36						& Repository				&63			& 31		&	31	&	31	& 	0					& 40		&  40		& 40		& 		0			& 40			& 40			& 40			&	0	\\         
+37						& Routine					&1069		& 7		&	7	&	7	& 	0					& 7		&  7		& 7		& 		0			& 7			& 7			& 7			&	0	\\
+38						& RubyBigDecimal			&1564		& 4 		&	4	&	4	& 	0					& 4		& 4 		& 4		& 		0			& 4			& 4			& 4			&	0\\      
+39						& Scanner				&94			& 3		&	5	&	2	& 	0.70					& 3		& 5 		& 2		& 		0.70			& 3			& 5			& 2			&	0.70\\      
+40						& Scene					&1603		& 26		&	27	&	26	& 	0.02					& 26		& 27 		& 26		& 		0.02			& 27			& 27			& 26			&	0.02\\      
+41						& SelectionManager			&431		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
+42						& Server					&279		&15		&	21	&	11	& 	0.47					& 17		& 21 		& 12		& 		0.37			& 17			& 21			& 12			&	0.37\\      
+43						& Sorter					&47			& 2		&	2	&	1	& 	0.35					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
+44						& Sorting					&762		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
+45						& Statistics				&491		& 15		&	17	&	12	&	0.23					& 23		& 25 		& 22		& 		0.09			& 24			& 25			& 22			&	0.08\\      
+46						& Status					&32			& 53		&	53	&	53	& 	0					& 53		& 53 		& 53		& 		0			& 53			& 53			& 53			&	0\\      
+47						& Stopwords				&332		& 7		&	8	&	7	& 	0.10					& 7		&  8		& 6		& 		0.20			& 8			& 8			& 7			&	0.08\\      
+48						& StringHelper				&178		& 43	 	& 	45	&	41	& 	0.06					& 44		&  46		& 42		& 		0.06			& 44			& 45			& 42			&	0.04\\      
+49						& StringUtils				&119		& 19 		&	19	&	19	& 	0					& 19		& 19 		& 19		& 		0			& 19			& 19			& 19			&	0\\      
+50						& TouchCollector			&222		& 3		&	3	&	3	& 	0					& 3		&  3		& 3		& 		0			& 3			& 3			& 3			&	0\\      
+51						& Trie					&460		& 21		&	22	&	21	& 	0.03					& 21		&  22		& 21		& 		0.03			& 21			& 22			& 21			&	0.03\\      
+52						& URI					&3970		& 5 		&	5	&	5	& 	0					& 5		&  5		& 5		& 		0			& 5			& 5			& 5			&	0\\      
+53						& Itextpdf					&245		& 8		&	8	&	8	& 	0					& 8		&  8		& 8		& 		0			& 8			& 8			& 8			&	0\\      
+54						& WebMacro				&311		& 5		&	5	&	5	& 	0					& 5		&  6		& 5		& 		0.14			& 5			& 7			& 5			&	0.28\\      
+55						& XMLAttributesImpl			&277		& 8		&	8	&	8	& 	0					& 8		&  8		& 8		& 		0			& 8			& 8			& 8			&	0\\      
+56						& XMLChar				&1031		& 13		&	13	&	13	& 	0					& 13		&  13		& 13		& 		0			& 13			& 13			& 13			&	0\\      
+57						& XMLEntityManger			&763		& 17		&	18	&	17	& 	0.04					& 17		&  17		& 16		& 		0.04			& 17			& 17			& 17			&	0\\      
+58						& XMLEntityScanner			&445		& 12		&	12	&	12	& 	0					& 12		&  12		& 12		& 		0			& 12			& 12			& 12			&	0\\      
+59						& XObject					&318		& 19		&	19	&	19	& 	0					& 19		&  19		& 19		& 		0			& 19			& 19			& 19			&	0\\      
+60						& XString					&546		& 24		&	24	&	23	& 	0.02					& 23		&  24		& 23		& 		0.03			& 24			& 24			& 23			&	0.02\\      
 
     						\multicolumn{2}{c}{\textbf{Total}}	&40,213	&1166		&	1217	&    1078	&	8.116					& 1187	&1233		&1137		&		6.877			& 1201		& 1244		& 1152		& 	5.504\\
    %\hline
