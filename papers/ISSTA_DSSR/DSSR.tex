@@ -114,8 +114,8 @@ DSSR starts as a regular random+ testing session --- a random testing session wi
 When a failure is found, it increases the chances of using neighbouring values in subsequent tests, thus slowly sweeping around the failure found in hope of finding failures from a different kind in its vicinity.
 
 DSSR was implemented within the YETI random testing tool. We evaluate DSSR against random+ and pure random strategies by testing 60 classes with one million ($10^5$) calls for each session 30 times for each strategy.
-We found that for 70\% of the classes all three strategies find the same unique failures, for remaining 30\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 16\%) then random+ strategy.
-Overall, DSSR also found 78 more unique failures than random and 11 more unique failures than random+.
+We found that for 72\% of the classes all three strategies find the same unique failures, for remaining 28\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 17\%) then random+ strategy.
+Overall, DSSR also found 27 more unique failures than random and 11 more unique failures than random+ strategy.
 \end{abstract}
 
 %A category including the fourth, optional field follows...
@@ -134,8 +134,8 @@ Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causin
 
 In this paper we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random strategy (DSSR) which starts as a random+ strategy --- a random strategy focusing more on boundary values. When it finds a new failure, it then increases the chances of finding more faults using neighbouring values. Note that, similarly to previous studies~\cite{Oriol2012} we approximate faults with unique failures. Of course, since this strategy is also a random testing strategy, it has the potential to find all unique failures in the program, but we expect it to be faster at finding unique failures for classes in which failure domains are contiguous than the pure random (R) and random+ (R+) strategies.
 
-We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies DSSR, R, and R+. We found that for 70\% of the classes all three strategies find the same unique failures, for remaining 30\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 16\%) then random+ strategy.
-Overall, DSSR also found 78 more unique failures than random and 11 more unique failures than random+.
+We implemented DSSR as a strategy for the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested thirty times each one of 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies DSSR, R, and R+. We found that for 72\% of the classes all three strategies find the same unique failures, for remaining 28\% DSSR perform better (up to as much as 33\%) then random strategy and (up to as much as 17\%) then random+ strategy.
+Overall, DSSR also found 27 more unique failures than random and 11 more unique failures than random+.
 
 
 The rest of this paper is organised as follows:
@@ -377,7 +377,7 @@ The literature review revealed that the F-measure is used where testing stops af
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=18cm]{DSSRBetter.png}
+\includegraphics[width=18cm]{DssrImprove.png}
 \caption{Improvement of DSSR strategy over Random and Random+ strategy.}
 \label{fig:stackedbar}
 \end{figure*}
