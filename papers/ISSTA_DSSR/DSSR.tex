@@ -189,7 +189,7 @@ Figure \ref{fig:block2} shows how dirt spot sweeping explores the failures resid
 
 \subsection{Structure of the Dirt Spot Sweeping \\ Random Strategy}
 
-The DSSR strategy is explained with the help of a flow-chart in Figure~\ref{fig:Working_DSSS}. In this process, the strategy continuously tracks the number of failures during the execution of the test session. To keep the system fast this tracking is done in a very effective way with zero or minimum overhead~\cite{Leitner2009}. The execution of test is performed normally until a failure is found in the SUT. Then the program does not only copy the values that lead to the failure, but also copies its surrounding values to the variable list of interesting values. As presented in the flowchart, if the failure finding value is of primitive type then the DSSR finds the type of the value and add values only of that particular type to the interesting values. Addition of these values increases the size of the list of interesting values that provide relevant test data for the remaining test session and the new generated test cases are more targeted towards finding new failures in the given SUT around pre-existing failures.
+In this process, the strategy continuously tracks the number of failures during the execution of the test session. To keep the system fast this tracking is done in a very effective way with zero or minimum overhead~\cite{Leitner2009}. The execution of test is performed normally until a failure is found in the SUT. Then the program does not only copy the values that lead to the failure, but also copies its surrounding values to the variable list of interesting values. 
 
 \begin{figure}[ht]
 \centering
@@ -197,6 +197,8 @@ The DSSR strategy is explained with the help of a flow-chart in Figure~\ref{fig:
 \caption{Working mechanism of DSSR Strategy}
 \label{fig:Working_DSSS}
 \end{figure}
+
+As presented in the flowchart in Figure~\ref{fig:Working_DSSS}, if the failure finding value is of primitive type then the DSSR finds the type of the value and add values only of that particular type to the interesting values. Addition of these values increases the size of the list of interesting values that provide relevant test data for the remaining test session and the new generated test cases are more targeted towards finding new failures in the given SUT around pre-existing failures.
 
 Boundary values and other special values that have a high tendency of finding faults in the SUT are added to the list by random plus strategy prior to the start of test session where as to sweep the failure pattern, the fault-finding value and its surrounding values are added at runtime after a failure is found. Table \ref{table:addvalues} presents the values that are added to the list of interesting values when a failure is found. In the table the test value is represented by X where X can be int, double, float, long, byte, short, char and String. All values are converted to their respective types before adding to the list of interesting values and vice versa.
 
@@ -257,16 +259,14 @@ public class Math1 {
 }
 \end{lstlisting}
 
-
-
-In the above code, one primitive variable of type \verb+int+ is used, therefore, the input domain for DSSR strategy is from \verb+-2,147,483,648 to 2,147,483,647+. The strategy further selects some values (\verb+0, Integer.MIN\_VALUE+ and \verb+Integer.MAX\_VALUE+) as interesting values which are prioritised for selection as inputs. 
+In the above code, one primitive variable of type \verb+int+ is used, therefore, the input domain for DSSR strategy is from \verb+-2,147,483,648 to 2,147,483,647+. The strategy further selects some values (\verb+0, Integer.MIN_VALUE+ and\\ \verb+Integer.MAX_VALUE+) as interesting values which are prioritised for selection as inputs. 
 As the test starts, three faults are quickly discovered by DSSR strategy in the following order.
 
 \indent \textbf{Fault 1:} The DSSR strategy might select value \verb+0+ for variable \verb+num1+  in the first test case because \verb+0+ is available in the list of interesting values and therefore its priority is higher than other values. This will cause Java to generate division by zero exception.
 
 \indent \textbf{Fault 2:} After catching the first fault, the strategy adds it and its surrounding values to the list of interesting values which includes \verb+0, 1, 2, 3 and -1, -2, -3+ in this case. In the second test case DSSR strategy may pick \verb+-3+ as a test value and lead to the second fault where assertion (2) fails because the square root of \verb+9+ will be \verb+3+ instead of the input value -3.
 
-\indent \textbf{Fault 3:} After few tests DSSR strategy may select \verb+Integer.MAX\_VALUE+ for variable \verb+num1+  from the list of interesting values which will lead to the 3rd fault because \verb+result1+ will not be able to store the square of \verb+Integer.MAX\_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
+\indent \textbf{Fault 3:} After few tests DSSR strategy may select \\ \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values which will lead to the 3rd fault because \verb+result1+ will not be able to store the square of \\ \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
 
 The process above explains that the pre-defined values including border values, fault-finding values and the surrounding values lead to the available faults quickly and in small number of tests as compared to random and random+ strategy. Random and random+ takes longer to discover the second and third fault because they start again searching for new unique failures randomly although the remaining faults are very close to the first one. 
 
@@ -275,6 +275,7 @@ The process above explains that the pre-defined values including border values, 
 
 
 \section{Implementation of the DSSR \\ strategy}\label{sec:imp}
+
 As mentioned previously, the implementation of the DSSR strategy is made in the YETI open-source automated random testing tool. YETI is developed in Java and capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, speed of up to one million calls per minute on java code, real time logging, real time GUI support, ability to test programs using multiple strategies, and auto generation of test report at the end of the testing sessions. For large-scale testing there is a cloud-enabled version of YETI that is capable of executing parallel test sessions in Cloud~\cite{Oriol2010}. A number of hitherto faults have successfully been found by YETI in various production softwares~\cite{Oriol2012, Oriol2011}.
 
 YETI can be divided into three decoupled main parts: the core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies section defines the procedure of how to select the modules (classes) from the project, how to select routines (methods) from these modules and how to generate values for the instances involved inside these routines. The most common strategies are random and random+. 
@@ -299,7 +300,7 @@ The DSSR strategy has then been added as an extension of YetiRandomStrategy, whi
 
 \section{Evaluation}\label{sec:eval}
 
-To evaluate the DSSR strategy, we compare its performances to the performances of both pure random testing (R) and the random+ (R+)~\cite{Leitner2007} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability have the same values for the experiments.
+To evaluate the DSSR strategy, we compare its performance to the performance of both pure random testing (R) and the random+ (R+)~\cite{Leitner2007} strategy. General factors such as system software and hardware as well as the YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability have the same values for the experiments.
 
 \subsection{Research questions}
 To evaluate the DSSR strategy and its usefulness, we set out to answer the following research questions:
@@ -367,17 +368,17 @@ All tests are performed using a 64-bit Mac OS X Lion Version 10.7.4 running on 2
 
 
 \subsection{Performance measurement criteria}
-Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were heavily criticized~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996,Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realised that this was not the right choice because in some experiments the first strategy found the first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. The preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair~\cite{Liu2012}.
+Various measures including the E-measure, P-measure and F-measure have been used by researchers to find the effectiveness of the random test strategy. The E-measure (expected number of failures detected) and P-measure (probability of detecting at least one failure) were heavily criticised~\cite{Chen2008} and are not considered effective techniques for measuring efficiency of test strategy. The F-measure (number of test cases used to find the first fault) has been often used by researchers~\cite{Chen1996, Chen2004}. In our initial experiments the F-measure was used to evaluate the efficiency. Soon after a few experiments, it was realised that this was not the right choice because in some experiments the first strategy found the first fault quickly than the second strategy but on the completion of test session the first strategy found lower number of total faults than the second strategy. The preference to a strategy only because it found the first fault better without giving due consideration to the total number of faults was not fair~\cite{Liu2012}.
 
 
   
-The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault found. In such cases it make sense to use F-measure but nowadays automated testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured by the maximum number of faults in a particular number of test calls \cite{Pacheco2007a}, \cite{Ciupa2007}, \cite{Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
+The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault found. In such cases it make sense to use F-measure but nowadays automated testing tools test the whole system and print all of the faults found in one go therefore F-measure is not the favourable choice. Therefore in our experiments, performance of the strategy was measured by the maximum number of faults in a particular number of test calls \cite{Pacheco2007a, Ciupa2007, Ciupa2008b}. This measurement was found effective because it clearly measured the performance of the strategy when all the other factors were kept constant.
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=18cm]{StackedBar100PercentMean.png}
-\caption{Normalised stacked bar diagram of all tested classes.}
+\includegraphics[width=18cm]{DSSRBetter.png}
+\caption{Improvement of DSSR strategy over Random and Random+ strategy.}
 \label{fig:stackedbar}
 \end{figure*}
 
@@ -437,7 +438,7 @@ The literature review revealed that the F-measure is used where testing stops af
 43						& Server					&279		&15		&	21	&	11	& 	0.47					& 17		& 21 		& 12		& 		0.37			& 17			& 21			& 12			&	0.37\\      
 44						& Sorter					&47			& 2		&	2	&	1	& 	0.35					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
 45						& Sorting					&762		& 3		&	3	&	3	& 	0					& 3		& 3 		& 3		& 		0			& 3			& 3			& 3			&	0\\      
-46						& Statistics				&491		& 15		&	17	&	12	&	0.23					& 23		& 25 		& 22		& 		0.09			& 24			& 25			& 22			&	0.08\\      
+46						& Statistics				&491		& 16		&	17	&	12	&	0.22					& 23		& 25 		& 22		& 		0.09			& 24			& 25			& 22			&	0.08\\      
 47						& Status					&32			& 53		&	53	&	53	& 	0					& 53		& 53 		& 53		& 		0			& 53			& 53			& 53			&	0\\      
 48						& Stopwords				&332		& 7		&	8	&	7	& 	0.10					& 7		&  8		& 6		& 		0.20			& 8			& 8			& 7			&	0.08\\      
 49						& StringHelper				&178		& 43	 	& 	45	&	41	& 	0.06					& 44		&  46		& 42		& 		0.06			& 44			& 45			& 42			&	0.04\\      
@@ -453,7 +454,7 @@ The literature review revealed that the F-measure is used where testing stops af
 59						& XObject					&318		& 19		&	19	&	19	& 	0					& 19		&  19		& 19		& 		0			& 19			& 19			& 19			&	0\\      
 60						& XString					&546		& 24		&	24	&	23	& 	0.02					& 23		&  24		& 23		& 		0.03			& 24			& 24			& 23			&	0.02\\      
 
-    						\multicolumn{2}{c}{\textbf{Total}}	&35,785	&1041	&	1090	&    957	&	6.6345				& 1061	&1106	&1013	&		6.0520		& 1075		& 1117		& 1028		& 	0.0585\\
+    						\multicolumn{2}{c}{\textbf{Total}}	&35,785	&1042	&	1090	&    957	&	6.6198				& 1061	&1106	&1013	&		6.0520		& 1075		& 1117		& 1028		& 	0.0585\\
    %\hline
      \end{tabularx} }
  	%\end{minipage}
