@@ -286,7 +286,7 @@ The DSSR strategy has then been added as an extension of YetiRandomStrategy, whi
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm,height=4.5cm]{hierarchy.pdf}
+\includegraphics[width=4cm,height=5cm]{hierarchy.pdf}
 \caption{Class Hierarchy of DSSR in YETI}
 \label{fig:hierarchyofDSSR}
 \end{figure}
@@ -379,12 +379,16 @@ The literature review revealed that the F-measure is used where testing stops af
 \centering
 \includegraphics[width=18cm]{DssrImprove.png}
 \caption{Improvement of DSSR strategy over Random and Random+ strategy.}
-\label{fig:stackedbar}
+\label{fig:LineChart}
 \end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \begin{table*} [htp!]
   \scriptsize
- \caption{Complete results for R, R+ and DSSR. Results present mean, max, min and relative standard deviation.}
+ \caption{Complete results for R, R+ and DSSR. Results present Serial Number (S.No), Class Name, Line of Code (LOC), mean, maximum number of faults, minimum number of faults and relative standard deviation for each Random (R), Random+ (R+) and Dirt Spot Sweeping Random (DSSR) strategies.}
 	%\begin{minipage}[h]{\textwidth}\centering
 	\noindent\makebox[\textwidth]{
  	\begin{tabularx}{1 \textwidth}{r l r r r r r r r r r r r r r}
@@ -463,49 +467,81 @@ The literature review revealed that the F-measure is used where testing stops af
 \end{table*}
 
 \section{Results}\label{sec:res}
+Detailed results of the experiments are presented in Table~\ref{table:Results}: name of the classes, Line of Code (LOC), mean value, maximum number of unique failures, minimum number of unique failures and relative standard deviation for each of the 60 classes tested using R, R+ and DSSR strategy. It shows that each strategy found the same number of faults in 43 classes while for 17 classes (bold rows of the Table~\ref{table:Results}) the strategies performed different from one another. The total value (Table \ref{table:Results} last row) show that DSSR detects more unique failures (1075), on average, than R (1042) and R+ (1061). This also shows that DSSR found a higher number of maximum unique failures (1117) than R (1090), and R+ (1106). This means that DSSR discovered 27 more new unique faults over R and 11 over R+ strategy. The minimum number of unique faults found by DSSR (1028) is also greater than R (957) and R+ (1013) that further confirm the efficiency of DSSR over R and R+ strategy.
 
-
-
+% How to write relative standard deviation.
+% Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
+To answer each research question separately, result section is further divided into three sub-sections.
 
 \subsection{Is there an absolute best for DSSR, R+ and R?}
-Figure~\ref{fig:stackedbar} presents the results of 80 randomly selected classes evaluated by the R, R+ and DSSR strategies in an intuitive normalised stackbar representation where projects are ranked according to the relative number of unique failures found by DSSR. As a first visual interpretation, it seems that, except in rare cases, all strategies find significantly the same number of uniques failures.
+Figure~\ref{fig:LineChart} presents the results of 17 classes where R, R+ and DSSR strategies shows different behaviour. The chart shows that DSSR performed up to 33\% better then R and up to 17\% better than R+. In few cases DSSR perform equal to R and R+ but in no case DSSR perform lower than R and R+. 
 
-Table~\ref{table:Results} contains more detailed information: name of the classes, mean value, maximum number of unique failures, minimum number of unique failures and relative standard deviation for each of the 80 classes tested using R, R+ and DSSR strategy. The total value (table \ref{table:Results} last row) shows DSSR detects slightly more unique failures (1192.55), on average, than R (1165.53) and R+ (1188.73). This represents 2.3\% on average than R and .3\% more than R+. It also shows that DSSR found a higher number of maximum unique failures (1234) and minimum unique failures (1126) than R (1181), (1055) and R+ (1224), (1127) respectively. This represents: 4.5\% improvements over R and .8\% over R+ for the maximum and 6.7\% improvement over R and .1\% decrease over R+ for the minimum. Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
-
-The answer to this research question is thus that whereas DSSR produces a slightly higher number of unique failures, this is not significantly higher than R+. We can thus say that R+ and DSSR are better choices than R as an absolute strategy, but that neither significantly outperforms the other. 
+The answer to this research question is thus that DSSR produces a higher number of unique failures than R and R+ strategy for equal number of test cases. We can thus say that DSSR is a better choice than R and R+ as an absolute strategy. 
 
 
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=10cm]{pie4.png}
 \caption{Result Categories.}
-\label{fig:pie}
+\label{fig:pie5}
 \end{figure*}
 
 \subsection{Are there classes for which either one of the strategies provides better results?}
 
-Results can be split into six different categories as shown in figure~\ref{fig:pie}. The first category is the largest where each strategy performed equally well and found the same number of unique failures after $10^5$ tests. It contain 50 classes (62\% of the experiments).
+Results given in Table~\ref{table:Results} can be split into eleven different categories as shown in Table~\ref{table:categories} and Figure~\ref{fig:pie5}.
 
-The second category contains 11 (14\%) classes where R performed better than DSSR and R+. 
+\begin{table}[h]
+\caption{Name and versions of 32 Projects randomly selected from the Qualitas Corpus for the experiments}
+\centering
+\begin{tabular}{rlr}
+S. No	& 	Category			& 	Result\\
 
-The third category contains 7 classes where (9\%) R+ performed better than DSSR and R. 
+1		&	DSSR > R			&	12 \\	
+2		&	DSSR > R+		&	10 \\	
+3		&	DSSR = R			&	5 \\	
+4		&	DSSR = R+		&	7 \\	
+5		&	R+ > R 			&	10 \\	
+6		&	R+ < R			&	5 \\	
+7		&	R+ = R			&	2 \\	
+8		&	R > R+			&	4 \\
+9		&	DSSR < R			&	0 \\	
+10		&	DSSR < R+		&	0 \\
+11		&	DSSR = R = R+	&	43 \\			
 
- The fourth category contain 7 classes (9\%) where DSSR performed better than R and R+. 
+\end{tabular}
+\bigskip
+\label{table:categories}
+\end{table}
 
-The fifth category contain only one class (1\%) where both DSSR and R found an equal number of unique failures and performed better than R+. 
 
-The sixth category contain 4 classes (5\%) where DSSR and R+ found an equal number of unique failures and performed better than R. 
 
-No class is found for which R performs equal to R+.
+The first category contain 12 classes where DSSR performed better than R. 
 
-The answer to this research question is that most classes (62\%) did not exhibit significantly different behaviours independent of the strategy. In 38\% of the cases, though, one or two strategies work better than the other(s). In particular, 14\% of the classes performed better with R, 9\% of the classes performed better with R+ and 9\% with DSSR. This shows that the assumptions made when developing R+ --- some border values are more bug-prone --- and DSSR --- failure domains are connected --- only verify in a minority of cases and are code-dependent.
+The second category contain 10 classes where DSSR performed better than R+. 
 
+The third category contain 5 classes where DSSR and R performed equally well.
+ 
+The fourth category contain 7 classes where DSSR and R+ performed equally well. 
+
+The fifth category contain 10 classes where R+ performed better than R.
+
+The sixth category contain 5 classes where R performed better than R+.
+
+The seventh category contain 2 classes where R and R+ performed equally well.
+
+The eighth category contain 4 classes where R performed better than R+.
+
+The last category is the largest where each strategy performed equally well and found the same number of unique failures after $10^5$ tests. It contain 43 classes.
+
+Finally, in not a single case DSSR performed lower than R and R+
+
+The answer to this research question is that most classes (72\%) did not exhibit significantly different behaviours independent of the strategy. In 28\% of the cases, the DSSR performed better than R and R+ because DSSR found the highest number of faults and in not a single case R and R+ performed better than DSSR. The result is not unusual because DSSR possess the qualities of both R and R+ strategy in addition to spot sweeping strategy. 
 
 
 \subsection{Can we pick the best default strategy between R, R+ and DSSR?}
-With the data presented in this section, it is not possible to pick a best strategy for all classes. In most cases, results are not different from one strategy to another, but in the other cases, the best strategy is very much dependent on the tested code and none of R, R+ and DSSR are significantly better than the other two on larger classes. 
+In most cases, results are not different from one strategy to another, but from the analysis of the experimental data we can assess that DSSR has an extra edge because of spot sweeping feature in addition to R and R+ features. 
 
-In the next section we also discuss other factors that influence the outcome of such a question such as time taken by each strategy, effect of test duration, number of tests, number of faults and the effect of finding first by random strategy on DSSR performance.
+In the next section we also discuss other factors that influence the outcome of such a question such as time taken by each strategy, effect of test duration, number of tests, number of faults and the effect of finding first fault by random strategy on DSSR performance.
 
 
 
