@@ -214,8 +214,8 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ " public static boolean startedByFailing = false;\n"
 				+ " public static boolean isCurrentlyFailing = false;\n"
 				
-				+ " public static int start = Integer.MIN_VALUE;\n"
-				+ " public static int stop = Integer.MAX_VALUE;\n"
+				+ " public static int start = -501;\n"
+				+ " public static int stop = 502;\n"
 				
 				+ " public static void main(String []argv){\n"
 				
