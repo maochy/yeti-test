@@ -26,7 +26,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
-import yeti.LogGraph2;
+import yeti.LogGraph5;
 import java.awt.*;
 import javax.swing.*;
 
@@ -579,7 +579,7 @@ public class YetiLauncher extends JFrame{
 					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
 
 
-					LogGraph3 demo = new LogGraph3("Failure Domains");
+					LogGraph5 demo = new LogGraph5("Failure Domains");
 					//demo.pack();
 					//RefineryUtilities.centerFrameOnScreen(demo);
 					//panel3.add(demo);
