@@ -26,7 +26,7 @@ import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
-import yeti.LogGrapher;
+import yeti.LogGrapher1;
 import java.awt.*;
 import javax.swing.*;
 
@@ -94,6 +94,7 @@ public class YetiLauncher extends JFrame{
 	String 		logs 				 = "-nologs";
 	String 		time 				 = "-time=5s";
 	static	int totalFiles 			 = 0;
+	int 		countCompileFiles;
 
 
 
@@ -456,7 +457,7 @@ public class YetiLauncher extends JFrame{
 
 					filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
 
-					generated_TextField.setText(filesToCompileArray.length + " files generated") ;
+					generated_TextField.setText(filesToCompileArray.length + " files") ;
 
 				}
 				catch(Exception e1){
@@ -490,7 +491,8 @@ public class YetiLauncher extends JFrame{
 						pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
 						count = count + 1;
 					}
-					compile_TextField.setText(count + " files compiled");
+					countCompileFiles = count;
+					compile_TextField.setText(count + " files");
 				}
 
 				catch(Exception e1){
@@ -578,8 +580,33 @@ public class YetiLauncher extends JFrame{
 					//				 demo.setVisible(true);
 					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
 
+					
+					/* I added this if statement to control the graphs
+					 * so if we get one fault then one C file will be generated and
+					 * thus one argument graph will be create 
+					 * For simplicity we are doing it as a separate class
+					 * Later we will try to do it using one class with different methods or 
+					 * method overloading kind of.
+					 */
+					
+					if (countCompileFiles == 1){
+						LogGrapher1 demo = new LogGrapher1("Failure Domains");
+						// added by mian for testing purpose.
+						JOptionPane.showMessageDialog(null, "LogGrapher1");
+					}
+					else if (countCompileFiles == 1){
+						LogGrapher2 demo = new LogGrapher2("Failure Domains");
+						// added by mian for testing purpose.
+						JOptionPane.showMessageDialog(null, "LogGrapher2");
+					}
+					else {
+						LogGrapher3 demo = new LogGrapher3("Failure Domains");
+						// added by mian for testing purpose.
+						JOptionPane.showMessageDialog(null, "LogGrapher3");
+					}
 
-					LogGrapher demo = new LogGrapher("Failure Domains");
+
+
 					//demo.pack();
 					//RefineryUtilities.centerFrameOnScreen(demo);
 					//panel3.add(demo);
@@ -602,9 +629,9 @@ public class YetiLauncher extends JFrame{
 		});
 
 		roseImage();
-		
-		
-		
+
+
+
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
 		gbc.gridy = 13;
@@ -614,7 +641,7 @@ public class YetiLauncher extends JFrame{
 
 		help_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				JOptionPane.showMessageDialog(null, "1.    In language combo box select the language of the program under test. \n" +
 						"2.    In strategy combo box select the strategy for the current test session.\n"+ 
 						"3.    For duration select time for the current test session either in minutes or seconds.\n"+ 
@@ -629,13 +656,13 @@ public class YetiLauncher extends JFrame{
 						"12.  ADFD speific, Progress bar shows the progess of executing process.\n"+
 						"13.  ADFD speific, Plot button plots the fault domain on the graph.\n" +
 						"14.  For more detail write an email to manuel.oriol@ch.abb.com \n", "YETI GUI Help", JOptionPane.INFORMATION_MESSAGE);
-				
-				
-				
+
+
+
 			}
 		});
-		
-		
+
+
 
 		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
