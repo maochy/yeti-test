@@ -110,7 +110,7 @@ private XYDataset createDataset() {
 		final XYSeries series1 = new XYSeries("Failing input");
 
 		for (int i =0; i < failValues.length; i=i+2 ){
-			series1.add((double)failValues[i],0);
+			series1.add((double)failValues[i], 0);
 			series1.add((double)failValues[i+1],0);
 			series1.add((double)failValues[i+1],null);
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
@@ -205,9 +205,14 @@ private XYDataset createDataset() {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+		// XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
+		// XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
+		
+		//XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+		// modified by mian to see only one labels
+		
+		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}", new DecimalFormat("0"),  new DecimalFormat("0") );
+		
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
 
