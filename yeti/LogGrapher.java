@@ -54,7 +54,7 @@ import yeti.GraphDataScanner;
 /**
  * @author John B. Matthews
  */
-public class LogGraph6 {
+public class LogGrapher {
 
 
 	/**
@@ -62,7 +62,7 @@ public class LogGraph6 {
 	 *
 	 * @param title the frame title
 	 */
-	public LogGraph6 (String title) {
+	public LogGrapher (String title) {
 
 
 		final XYDataset dataset = createDataset();
