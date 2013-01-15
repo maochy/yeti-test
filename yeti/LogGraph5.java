@@ -2,6 +2,8 @@ package yeti;
 
 
 import java.awt.Color;
+import java.awt.Dimension;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -34,8 +36,8 @@ public class LogGraph5 extends ApplicationFrame {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		final ChartPanel chartPanel = new ChartPanel(chart);
-		chartPanel.setPreferredSize(new java.awt.Dimension(500, 270));
-		setContentPane(chartPanel);
+		chartPanel.setPreferredSize(new Dimension(800, 600));
+		YetiLauncher.panel3.add(chartPanel);
 
 	}
 
@@ -129,30 +131,5 @@ public class LogGraph5 extends ApplicationFrame {
 		return chart;
 
 	}
-
-	// ****************************************************************************
-	// * JFREECHART DEVELOPER GUIDE                                               *
-	// * The JFreeChart Developer Guide, written by David Gilbert, is available   *
-	// * to purchase from Object Refinery Limited:                                *
-	// *                                                                          *
-	// * http://www.object-refinery.com/jfreechart/guide.html                     *
-	// *                                                                          *
-	// * Sales are used to provide funding for the JFreeChart project - please    * 
-	// * support us so that we can continue developing free software.             *
-	// ****************************************************************************
-
-	//    /**
-	//     * Starting point for the demonstration application.
-	//     *
-	//     * @param args  ignored.
-	//     */
-	//    public static void main(final String[] args) {
-	//
-	//        final TestGraph demo = new TestGraph("Line Chart Demo 6");
-	//        demo.pack();
-	//        RefineryUtilities.centerFrameOnScreen(demo);
-	//        demo.setVisible(true);
-	//
-	//    }
 
 }
