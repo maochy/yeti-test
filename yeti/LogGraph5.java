@@ -3,42 +3,57 @@ package yeti;
 
 import java.awt.Color;
 import java.awt.Dimension;
-
+import java.awt.BasicStroke;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.Stroke;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Random;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.TickUnitSource;
+import org.jfree.chart.labels.StandardXYItemLabelGenerator;
+import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.DeviationRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import org.jfree.ui.ApplicationFrame;
 import org.jfree.ui.RefineryUtilities;
+import yeti.GraphDataScanner;
 
-/**
- * A simple demonstration application showing how to create a line chart using data from an
- * {@link XYDataset}.
- *
- */
-public class LogGraph5 extends ApplicationFrame {
+
+public class LogGraph5 {
 
 	/**
 	 * Creates a new demo.
 	 *
 	 * @param title  the frame title.
 	 */
-	public LogGraph5(final String title) {
-
-		super(title);
+	
+	
+	public LogGraph5(String title) {
 
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
-		final ChartPanel chartPanel = new ChartPanel(chart);
+		
+		ChartPanel chartPanel = new ChartPanel(chart, false);
 		chartPanel.setPreferredSize(new Dimension(800, 600));
 		YetiLauncher.panel3.add(chartPanel);
-
+		//It is for testing purpose only.
+		//JOptionPane.showInputDialog(null, "Enter your full name: ");
 	}
 
 	/**
@@ -47,20 +62,17 @@ public class LogGraph5 extends ApplicationFrame {
 	 * @return a sample dataset.
 	 */
 	private XYDataset createDataset() {
-
-
-
-
-		int failValues[] = GraphDataScanner.readFailDataFromFile();
+		
 		
 		final XYSeriesCollection dataset = new XYSeriesCollection();
+		
+		int failValues[] = GraphDataScanner.readFailDataFromFile();
 
 		final XYSeries series1 = new XYSeries("Failing input");
 
 		for (int i =0; i < failValues.length; i=i+2 ){
 			series1.add((double)failValues[i],0);
 			series1.add((double)failValues[i+1],0);
-			dataset.addSeries(series1);
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 
@@ -71,13 +83,14 @@ public class LogGraph5 extends ApplicationFrame {
 		for (int j =0; j < passValues.length; j=j+2){
 			series2.add((double)passValues[j],0);
 			series2.add((double)passValues[j+1],0);
-			dataset.addSeries(series2);
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
 
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
+		
+	
 
 
 		return dataset;

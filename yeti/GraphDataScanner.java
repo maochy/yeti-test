@@ -2,7 +2,9 @@ package yeti;
 
 import java.io.*;
 import java.util.*;
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
 import yeti.YetiLauncher;
 
 public class GraphDataScanner {
@@ -10,6 +12,8 @@ static int [] graphDataIntFail;
 static int [] graphDataIntPass;
 
 public static int[] readFailDataFromFile(){
+	// It is for testing purpose only
+	//JOptionPane.showInputDialog(null, "Enter your full name: ");
 
 File f = null;
 Scanner scan = null;

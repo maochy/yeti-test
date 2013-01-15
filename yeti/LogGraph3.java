@@ -56,8 +56,6 @@ import yeti.GraphDataScanner;
  */
 public class LogGraph3 {
 
-	private static final int MAX = 8;
-	private static final Random random = new Random();
 
 	/**
 	 * Construct a new frame
@@ -68,12 +66,15 @@ public class LogGraph3 {
 
 
 		final XYDataset dataset = createDataset();
+		
 		final JFreeChart chart = createChart(dataset);
+		
 		//        final DefaultXYDataset dataset = new DefaultXYDataset();
 		//        dataset.addSeries("Series0", createSeries(0));
 		//        dataset.addSeries("Series1", createSeries(1));
 		//        JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
+
 		chartPanel.setPreferredSize(new Dimension(800, 600));
 		YetiLauncher.panel3.add(chartPanel);
 		//this.add(chartPanel, BorderLayout.CENTER);
@@ -104,6 +105,7 @@ public class LogGraph3 {
 		//  final XYSeries series1 = new XYSeries("Failing input");
 
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
+		
 		final XYSeriesCollection dataset = new XYSeriesCollection();
 
 		for (int i =0; i < failValues.length; i=i+2 ){
