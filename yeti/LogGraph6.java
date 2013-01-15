@@ -54,7 +54,7 @@ import yeti.GraphDataScanner;
 /**
  * @author John B. Matthews
  */
-public class LogGraph3 {
+public class LogGraph6 {
 
 
 	/**
@@ -62,7 +62,7 @@ public class LogGraph3 {
 	 *
 	 * @param title the frame title
 	 */
-	public LogGraph3 (String title) {
+	public LogGraph6 (String title) {
 
 
 		final XYDataset dataset = createDataset();
@@ -100,33 +100,39 @@ public class LogGraph3 {
 	}
 
 
-	private XYDataset createDataset() {
-
-		//  final XYSeries series1 = new XYSeries("Failing input");
-
-		int failValues[] = GraphDataScanner.readFailDataFromFile();
+private XYDataset createDataset() {
+		
 		
 		final XYSeriesCollection dataset = new XYSeriesCollection();
+		
+		int failValues[] = GraphDataScanner.readFailDataFromFile();
+
+		final XYSeries series1 = new XYSeries("Failing input");
 
 		for (int i =0; i < failValues.length; i=i+2 ){
-			XYSeries tmpseries= new XYSeries("Failing input "+(i/2+1));
-			tmpseries.add((double)failValues[i],0);
-			tmpseries.add((double)failValues[i+1],0);
-			dataset.addSeries(tmpseries);
+			series1.add((double)failValues[i],0);
+			series1.add((double)failValues[i+1],0);
+			series1.add((double)failValues[i+1],null);
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 
-
-		//       final XYSeries series2 = new XYSeries("Passing input");
+		final XYSeries series2 = new XYSeries("Passing input");
+		
 		int passValues[] = GraphDataScanner.readPassDataFromFile();
-
+		
 		for (int j =0; j < passValues.length; j=j+2){
-			XYSeries tmpseries= new XYSeries("Passing input "+(j/2+1));
-			tmpseries.add((double)passValues[j],0);
-			tmpseries.add((double)passValues[j+1],0);
-			dataset.addSeries(tmpseries);
+			series2.add((double)passValues[j],0);
+			series2.add((double)passValues[j+1],0);
+			series2.add((double)passValues[j+1],null);
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
+
+
+		dataset.addSeries(series1);
+		dataset.addSeries(series2);
+		
+	
+
 
 		return dataset;
 

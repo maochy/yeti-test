@@ -73,6 +73,7 @@ public class LogGraph5 {
 		for (int i =0; i < failValues.length; i=i+2 ){
 			series1.add((double)failValues[i],0);
 			series1.add((double)failValues[i+1],0);
+			series1.add((double)failValues[i+1],null);
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 
@@ -83,6 +84,7 @@ public class LogGraph5 {
 		for (int j =0; j < passValues.length; j=j+2){
 			series2.add((double)passValues[j],0);
 			series2.add((double)passValues[j+1],0);
+			series2.add((double)passValues[j+1],null);
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
