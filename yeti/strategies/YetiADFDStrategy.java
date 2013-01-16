@@ -244,7 +244,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+ "  fail.add(i); \n"
 				+ "  isCurrentlyFailing = true; \n"
 				+ " }  \n } \n } \n"
-				+ " checkFirstAndLast(stop); \n"
+				+ " checkStartAndStopValue(stop); \n"
 				+ "  printRangeFail(); \n"
 				+ "  printRangePass();  \n"
 				+ "  }\n";
@@ -269,8 +269,6 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 			}
 			call = call + ")";
 			
-			// added for testing purpose.
-			JOptionPane.showMessageDialog(null, "the if part in callPart method is executed"+ call);
 		} else {
 			
 		
@@ -305,8 +303,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				}
 			}
 		}
-		// added for testing purpose.
-		JOptionPane.showMessageDialog(null, "the else part in callPart method is executed"+ call);
+		
 		intIncrement++;
 		return call;
 	}
