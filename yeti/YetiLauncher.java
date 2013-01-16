@@ -594,7 +594,7 @@ public class YetiLauncher extends JFrame{
 						// added by mian for testing purpose.
 						JOptionPane.showMessageDialog(null, "LogGrapher1");
 					}
-					else if (countCompileFiles == 1){
+					else if (countCompileFiles == 2){
 						LogGrapher2 demo = new LogGrapher2("Failure Domains");
 						// added by mian for testing purpose.
 						JOptionPane.showMessageDialog(null, "LogGrapher2");
