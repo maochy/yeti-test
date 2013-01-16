@@ -8,6 +8,7 @@ import java.io.PrintStream;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.border.TitledBorder;
@@ -30,12 +31,12 @@ import yeti.environments.java.YetiJavaRoutine;
 import yeti.monitoring.YetiGUI;
 import yeti.monitoring.YetiUpdatableSlider;
 
-public class YetiDSSRStrategy2 extends YetiRandomStrategy {
+public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
-	public YetiDSSRStrategy2(YetiTestManager ytm) {
+	public YetiADFDStrategy(YetiTestManager ytm) {
 		super(ytm);
 
 	}
@@ -207,19 +208,18 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+ "import java.util.*;\n\n" 
 				+ "public class C"
 				+  uid++
-				+ " {\n" 
+				+ " \n{\n" 
 				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
-				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
-				
+				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n"
 				+ " public static boolean startedByFailing = false;\n"
 				+ " public static boolean isCurrentlyFailing = false;\n"
 				
 				+ " public static int start = -80;\n"
-				+ " public static int stop = 80;\n"
+				+ " public static int stop = 80;\n\n"
 				
 				+ " public static void main(String []argv){\n"
 				
-				+ "  checkFirstAndLast(start);\n"
+				+ "  checkStartAndStopValue(start);\n"
 				
 				+ "  for (int i=start+1;i<stop;i++){\n   try{\n";
 		return temp;
@@ -268,7 +268,12 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 						+ oldyt[k].getValue().toString();
 			}
 			call = call + ")";
+			
+			// added for testing purpose.
+			JOptionPane.showMessageDialog(null, "the if part in callPart method is executed"+ call);
 		} else {
+			
+		
 			if (jroutine instanceof YetiJavaMethod) {
 				YetiJavaMethod m = (YetiJavaMethod) jroutine;
 				if (m.isStatic) {
@@ -296,10 +301,12 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 								+ oldyt[k].getValue()
 										.toString();
 					}
-					call = call + ")";
+					call = call + ")";	
 				}
 			}
 		}
+		// added for testing purpose.
+		JOptionPane.showMessageDialog(null, "the else part in callPart method is executed"+ call);
 		intIncrement++;
 		return call;
 	}
@@ -332,7 +339,7 @@ public class YetiDSSRStrategy2 extends YetiRandomStrategy {
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
 				+" } \n"
-				+"   public static void checkFirstAndLast(int i) { \n"
+				+"   public static void checkStartAndStopValue(int i) { \n"
 				+"   try { \n";
 		return temp3;
 	}

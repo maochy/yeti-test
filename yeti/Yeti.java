@@ -79,7 +79,7 @@ import yeti.monitoring.YetiGUI;
 import yeti.stats.YetiDataSet;
 import yeti.stats.YetiMichaelisMentenEquation;
 import yeti.strategies.YetiDSSRStrategy;
-import yeti.strategies.YetiDSSRStrategy2;
+import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiRandomPlusDecreasing;
 import yeti.strategies.YetiRandomPlusPeriodicProbabilitiesStrategy;
 import yeti.strategies.YetiRandomPlusStrategy;
@@ -828,7 +828,7 @@ public class Yeti {
 			strategy = new YetiDSSRStrategy(testManager);
 		}
 		if (isADFD) {
-			strategy = new YetiDSSRStrategy2(testManager);
+			strategy = new YetiADFDStrategy(testManager);
 		}
 
 		if (isRunningFromChromosome) { // @YetiGeneticAlgorithmsStrategy
