@@ -630,11 +630,18 @@ public class YetiLauncher extends JFrame{
 
 		roseImage();
 
-
+		// this label are added to create a gap between exit and help from plot button.
+		
+		JLabel emptyLabel1 = new JLabel("");
+		gbc.gridx = 0;
+		gbc.gridy = 12;
+		gbc.gridwidth = 1;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(emptyLabel1, gbc);
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 13;
+		gbc.gridy = 14;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -662,7 +669,19 @@ public class YetiLauncher extends JFrame{
 			}
 		});
 
+		JButton exit_Button = new JButton("Exit");
+		gbc.gridx = 1;
+		gbc.gridy = 14;
+		gbc.gridwidth = 2;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(exit_Button, gbc);
 
+		exit_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				System.exit(0);
+			}
+		});
 
 		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
@@ -739,7 +758,7 @@ public class YetiLauncher extends JFrame{
 			try {
 				execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
 				execute_ProgressBar.setIndeterminate(false);
-				execute_TextField.setText(totalFiles + " files executed");
+				execute_TextField.setText(totalFiles + " files");
 				plot_Button.setEnabled(true);
 
 			}
