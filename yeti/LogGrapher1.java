@@ -75,7 +75,7 @@ public class LogGrapher1 {
 		//        JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 
-		chartPanel.setPreferredSize(new Dimension(800, 600));
+		chartPanel.setPreferredSize(new Dimension(900, 600));
 		YetiLauncher.panel3.add(chartPanel);
 		//this.add(chartPanel, BorderLayout.CENTER);
 
