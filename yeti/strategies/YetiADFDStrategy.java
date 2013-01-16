@@ -156,7 +156,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 	String called = "";
 	public String args = "";
 	public int intIncrement = -50;
-	
+
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
 			throws ImpossibleToMakeConstructorException {
@@ -166,43 +166,91 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
 		if (currentErrors > oldFaults1) {
-			
+
 			YetiLog.printDebugLog("found bug in the strategy", this);
 			oldFaults1 = currentErrors;
-			
-			for (int j = 0; j < oldyt.length; j++) {
-				YetiCard yc = oldyt[j];
+
+			for (int j1 = 0; j1 < oldyt.length; j1++) {
+				YetiCard yc = oldyt[j1];
 
 				if (yc.getType().getName().equals("int")) {
-					
-					
-						String programBegin = programBeginPart();
-						String programMiddle = programMiddlePart();
-						called = callPart();
-						String programEnd = programEndPart();
-						String programEnd2 = programEndPart2();
-						
-						String generatedProgram = programBegin + called + programMiddle  + programEnd  + "   " + called + ";" + programEnd2;
-						
-						generateProgram(generatedProgram);
-					
-					
-						args = args + yc.getValue() + ",";
-					
+
+
+
+					String call = "";
+
+					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
+					if (jroutine instanceof YetiJavaConstructor) {
+						YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
+						call = "new "
+								+ c.getOriginatingModule().getModuleName()
+								+ "(" + args + "i";
+						for (int k = j1 + 1; k < oldyt.length; k++) {
+							call = call + ","
+									+ oldyt[k].getValue().toString();
+						}
+						call = call + ")";
+
+					} else {
+
+
+						if (jroutine instanceof YetiJavaMethod) {
+							YetiJavaMethod m = (YetiJavaMethod) jroutine;
+							if (m.isStatic) {
+								call = ""
+										+ m.getOriginatingModule()
+										.getModuleName() + "."
+										+ m.getMethod().getName() + "("
+
+										+ args + "i";
+								for (int k = j1 + 1; k < oldyt.length; k++) {
+
+									call = call + "," + oldyt[k].getValue().toString();
+
+								}
+								call = call + ")";
+							} else {
+								call = "variable" + "."
+										+ m.getMethod().getName() + "("
+										+ args + "i";
+								for (int k = j1 + 1; k < oldyt.length; k++) {
+									call = call
+											+ ","
+											+ oldyt[k].getValue()
+											.toString();
+								}
+								call = call + ")";	
+							}
+						}
 					}
+
+
+					String programBegin = programBeginPart();
+					String programMiddle = programMiddlePart();
+					String programEnd = programEndPart();
+					String programEnd2 = programEndPart2();
+
+					String generatedProgram = programBegin + call + programMiddle  + programEnd  + "   " + call + ";" + programEnd2;
+
+					generateProgram(generatedProgram);
+
+
+					args = args + yc.getValue() + ",";
 
 				}
 
-			
+			}
+
+
 		}
 
 		oldyt = super.getAllCards(routine);
 		oldroutine = routine;
 		return oldyt;
 	}
-	
+
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
-	
+
 	public String programBeginPart(){
 		String temp = "import java.io.*;\n"
 				+ "import java.util.*;\n\n" 
@@ -213,104 +261,50 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n"
 				+ " public static boolean startedByFailing = false;\n"
 				+ " public static boolean isCurrentlyFailing = false;\n"
-				
+
 				+ " public static int start = -80;\n"
 				+ " public static int stop = 80;\n\n"
-				
+
 				+ " public static void main(String []argv){\n"
-				
+
 				+ "  checkStartAndStopValue(start);\n"
-				
+
 				+ "  for (int i=start+1;i<stop;i++){\n   try{\n";
 		return temp;
 	}
-	
+
 	//%%%%%%%%%%%%%%%%%%%%%%%%%   MIDDLE PART %%%%%%%%%%%%%%%%%%%%//
-	
-	
+
+
 	public String programMiddlePart(){
 		String temp1 = 
 				";\n "
-				+ "  if (isCurrentlyFailing) \n"
-				+ "  { \n"
-				+ "  fail.add(i-1); \n"
-				+ "  pass.add(i); \n"
-				+ "  isCurrentlyFailing=false; \n"
-				+ "  } \n } \n"
-				+ "  catch(Throwable t) { \n"
-				+ "  if (!isCurrentlyFailing) \n"
-				+ "  { \n"
-				+ "  pass.add(i-1); \n"
-				+ "  fail.add(i); \n"
-				+ "  isCurrentlyFailing = true; \n"
-				+ " }  \n } \n } \n"
-				+ " checkStartAndStopValue(stop); \n"
-				+ "  printRangeFail(); \n"
-				+ "  printRangePass();  \n"
-				+ "  }\n";
-				
-				;
+						+ "  if (isCurrentlyFailing) \n"
+						+ "  { \n"
+						+ "  fail.add(i-1); \n"
+						+ "  pass.add(i); \n"
+						+ "  isCurrentlyFailing=false; \n"
+						+ "  } \n } \n"
+						+ "  catch(Throwable t) { \n"
+						+ "  if (!isCurrentlyFailing) \n"
+						+ "  { \n"
+						+ "  pass.add(i-1); \n"
+						+ "  fail.add(i); \n"
+						+ "  isCurrentlyFailing = true; \n"
+						+ " }  \n } \n } \n"
+						+ " checkStartAndStopValue(stop); \n"
+						+ "  printRangeFail(); \n"
+						+ "  printRangePass();  \n"
+						+ "  }\n";
+
+		;
 		return temp1;
 	}
-	
-	public String callPart(){
-		String call = "";
-		int j = 0;
-	
-		YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
-		if (jroutine instanceof YetiJavaConstructor) {
-			YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
-			call = "new "
-					+ c.getOriginatingModule().getModuleName()
-					+ "(" + args + "i";
-			for (int k = j + 1; k < oldyt.length; k++) {
-				call = call + ","
-						+ oldyt[k].getValue().toString();
-			}
-			call = call + ")";
-			
-		} else {
-			
-		
-			if (jroutine instanceof YetiJavaMethod) {
-				YetiJavaMethod m = (YetiJavaMethod) jroutine;
-				if (m.isStatic) {
-					call = ""
-							+ m.getOriginatingModule()
-									.getModuleName() + "."
-							+ m.getMethod().getName() + "("
-							
-							+ args + "i";
-					for (int k = j + 1; k < oldyt.length; k++) {
-						
-						call = call + ",";
-								int temp = (Integer) oldyt[k].getValue() + intIncrement;
-								call = call + temp;
-							
-					}
-					call = call + ")";
-				} else {
-					call = "variable" + "."
-							+ m.getMethod().getName() + "("
-							+ args + "i";
-					for (int k = j + 1; k < oldyt.length; k++) {
-						call = call
-								+ ","
-								+ oldyt[k].getValue()
-										.toString();
-					}
-					call = call + ")";	
-				}
-			}
-		}
-		
-		intIncrement++;
-		return call;
-	}
-	
-	
+
+
+
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
-	
+
 	public String programEndPart(){
 		String temp3 = "\n public static void printRangeFail() { \n"
 				+"   try { \n"
@@ -340,20 +334,20 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+"   try { \n";
 		return temp3;
 	}
-		
-		
-		
-		public String programEndPart2(){
-			String temp4 = "\n pass.add(i); \n"
-					+  "  } \n"
-					+  "  catch (Throwable t) { \n"
-					+  "  startedByFailing = true; \n"
-					+  "  isCurrentlyFailing = true; \n"
-					+  "  fail.add(i); \n } \n } \n}";
-				return temp4;
-		}
-				
-	
+
+
+
+	public String programEndPart2(){
+		String temp4 = "\n pass.add(i); \n"
+				+  "  } \n"
+				+  "  catch (Throwable t) { \n"
+				+  "  startedByFailing = true; \n"
+				+  "  isCurrentlyFailing = true; \n"
+				+  "  fail.add(i); \n } \n } \n}";
+		return temp4;
+	}
+
+
 	public void generateProgram(String program){
 		try {
 			PrintStream fos = new PrintStream("C" + (uid - 1)
@@ -362,11 +356,11 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 
 		} catch (FileNotFoundException e) {
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 	}
-	
-	
+
+
 	@Override
 	public String getName() {
 		return "Dirt Spot Sweeping Strategy Two";
