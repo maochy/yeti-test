@@ -29,6 +29,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import yeti.LogGrapher1;
+import yeti.strategies.YetiADFDStrategy;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -69,7 +71,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 
-public class YetiLauncher extends JFrame{
+public class ADFDLauncher extends JFrame{
 
 	private JPanel panel1 = new JPanel();
 	private JPanel panel2 = new JPanel();
@@ -80,6 +82,8 @@ public class YetiLauncher extends JFrame{
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
+	JTextField		minValue_TextField;
+	JTextField		maxValue_TextField;
 	JButton 		plot_Button;
 	JButton 		execute_Button;
 	JButton 		compile_Button;
@@ -124,7 +128,7 @@ public class YetiLauncher extends JFrame{
 
 	// Constructor of the class to create frame and draw components on the frame. //////
 
-	public YetiLauncher(){
+	public ADFDLauncher(){
 		// A method is added to automatically delete the unwanted files before the next run.
 		deleteOldTestFiles();
 		this.setTitle("Yeti Launcher");
@@ -147,29 +151,29 @@ public class YetiLauncher extends JFrame{
 
 	}
 
-	
-	
+
+
 	public void deleteOldTestFiles(){
-		
+
 		File directory = new File(".");
 		File[] files = directory.listFiles();
 		for (File f : files)
 		{
-		    if ((f.getName().startsWith("C") || f.getName().startsWith("Pass") || f.getName().startsWith("Fail") ))
-		    {
-		      f.delete();
-		    }
-		    
+			if ((f.getName().startsWith("C") || f.getName().startsWith("Pass") || f.getName().startsWith("Fail") ))
+			{
+				f.delete();
+			}
+
 		}
 	}
-	
-	
-	
+
+
+
 	// Main method of the class.
 
 	public static void main(String[] args){
 
-		new YetiLauncher();
+		new ADFDLauncher();
 
 
 
@@ -385,11 +389,55 @@ public class YetiLauncher extends JFrame{
 		});
 
 		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+
+		JLabel minValue_Label = new JLabel("Lower Limit:");
+		gbc.gridx = 0;
+		gbc.gridy = 6;
+		gbc.gridwidth = 1;
+		panel1.add(minValue_Label, gbc);
+
+
+
+
+		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+		gbc.gridx = 1;
+		gbc.gridy = 6;
+		gbc.gridwidth = 1;
+		panel1.add(minValue_TextField, gbc);
+
+
+		/////////////////////////////////////////////////////////////////
+
+
+
+		JLabel maxValue_Label = new JLabel("Upper Limit:");
+		gbc.gridx = 0;
+		gbc.gridy = 7;
+		gbc.gridwidth = 1;
+		panel1.add(maxValue_Label, gbc);
+
+
+
+
+		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+		gbc.gridx = 1;
+		gbc.gridy = 7;
+		gbc.gridwidth = 1;
+		panel1.add(maxValue_TextField, gbc);
+
+
+
 		/////////// Run Label, Button and ActionListener /////////////////
 
 		JButton run_Button = new JButton("Run Test");
 		gbc.gridx = 1;
-		gbc.gridy = 6;
+		gbc.gridy = 8;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(run_Button, gbc);
@@ -421,9 +469,8 @@ public class YetiLauncher extends JFrame{
 				list.add(logs);
 				list.add(fileName);
 				list.add(testFilePathFinal);
-
-
-
+				YetiADFDStrategy.lowerLimit = minValue_TextField.getText();
+				YetiADFDStrategy.upperLimit = maxValue_TextField.getText();
 
 				command = list.toArray(new String[list.size()]);
 
@@ -445,13 +492,13 @@ public class YetiLauncher extends JFrame{
 
 		generated_Button = new JButton("Count Files:");
 		gbc.gridx = 1;
-		gbc.gridy = 7;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(generated_Button, gbc);
 
 		generated_TextField = new JTextField("");
 		gbc.gridx = 2;
-		gbc.gridy = 7;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
@@ -494,12 +541,12 @@ public class YetiLauncher extends JFrame{
 
 		compile_Button = new JButton("Compile Files:");
 		gbc.gridx = 1;
-		gbc.gridy = 8;
+		gbc.gridy = 10;
 		panel1.add(compile_Button, gbc);
 
 		compile_TextField = new JTextField("");
 		gbc.gridx = 2;
-		gbc.gridy = 8;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
@@ -531,18 +578,18 @@ public class YetiLauncher extends JFrame{
 
 		execute_Button = new JButton("Execute Files:");
 		gbc.gridx = 1;
-		gbc.gridy = 9;
+		gbc.gridy = 11;
 		panel1.add(execute_Button, gbc);
 
 		execute_TextField = new JTextField("");
 		gbc.gridx = 2;
-		gbc.gridy = 9;
+		gbc.gridy = 11;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
 		execute_ProgressBar = new JProgressBar(0,100);
 		gbc.gridx = 1;
-		gbc.gridy = 10;
+		gbc.gridy = 12;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(execute_ProgressBar, gbc);
@@ -580,7 +627,7 @@ public class YetiLauncher extends JFrame{
 
 		plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
-		gbc.gridy = 11;
+		gbc.gridy = 13;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot_Button, gbc);
@@ -601,7 +648,7 @@ public class YetiLauncher extends JFrame{
 					//				 demo.setVisible(true);
 					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
 
-					
+
 					/* I added this if statement to control the graphs
 					 * so if we get one fault then one C file will be generated and
 					 * thus one argument graph will be create 
@@ -609,7 +656,7 @@ public class YetiLauncher extends JFrame{
 					 * Later we will try to do it using one class with different methods or 
 					 * method overloading kind of.
 					 */
-					
+
 					if (countCompileFiles == 1){
 						LogGrapher1 demo = new LogGrapher1("Failure Domains");
 						// added by mian for testing purpose.
@@ -652,17 +699,17 @@ public class YetiLauncher extends JFrame{
 		roseImage();
 
 		// this label are added to create a gap between exit and help from plot button.
-		
+
 		JLabel emptyLabel1 = new JLabel("");
 		gbc.gridx = 0;
-		gbc.gridy = 12;
+		gbc.gridy = 14;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(emptyLabel1, gbc);
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 14;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -692,7 +739,7 @@ public class YetiLauncher extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 14;
+		gbc.gridy = 16;
 		gbc.gridwidth = 2;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);

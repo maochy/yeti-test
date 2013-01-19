@@ -5,7 +5,7 @@ import java.util.*;
 
 import javax.swing.JOptionPane;
 
-import yeti.YetiLauncher;
+import yeti.ADFDLauncher;
 
 public class GraphDataScanner {
 static int [] graphDataIntFail;
@@ -18,7 +18,7 @@ public static int[] readFailDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File(YetiLauncher.testFilePathInitial + "Fail.txt");
+   f = new File(ADFDLauncher.testFilePathInitial + "Fail.txt");
    scan = new Scanner(f);
 }
 catch(Exception e1){
@@ -43,7 +43,7 @@ public static int[] readPassDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File(YetiLauncher.testFilePathInitial + "Pass.txt");
+   f = new File(ADFDLauncher.testFilePathInitial + "Pass.txt");
    scan = new Scanner(f);
 }
 catch(Exception e1){

@@ -33,6 +33,9 @@ import yeti.monitoring.YetiUpdatableSlider;
 
 public class YetiADFDStrategy extends YetiRandomStrategy {
 
+	public static String lowerLimit = "" + Integer.MIN_VALUE;
+	public static String upperLimit = "" + Integer.MAX_VALUE;
+	
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
@@ -155,6 +158,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 	public static long uid = 0;
 	String argumentTwo = "";
 	public String args = "";
+	
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
 			throws ImpossibleToMakeConstructorException {
@@ -265,8 +269,8 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				//+ " public static int start = Integer.MIN_VALUE;\n"
 				//+ " public static int stop = Integer.MAX_VALUE;\n\n"
 				// reduce to 80 because the other one take a lot of time to process. In final version the value will be changed to max.
-				+ " public static int start = -80;\n"
-				+ " public static int stop = 80;\n\n"
+				+ " public static int start = " + lowerLimit + "\n;"
+				+ " public static int stop = "+ upperLimit +";\n\n"
 
 				+ " public static void main(String []argv){\n"
 
