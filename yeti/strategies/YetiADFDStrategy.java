@@ -153,10 +153,8 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 	YetiCard[] oldyt = null;
 	private YetiRoutine oldroutine;
 	public static long uid = 0;
-	String called = "";
+	String argumentTwo = "";
 	public String args = "";
-	public int intIncrement = -50;
-
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
 			throws ImpossibleToMakeConstructorException {
@@ -188,6 +186,8 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 						for (int k = j1 + 1; k < oldyt.length; k++) {
 							call = call + ","
 									+ oldyt[k].getValue().toString();
+
+							argumentTwo = oldyt[k].getValue().toString();
 						}
 						call = call + ")";
 
@@ -206,7 +206,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 								for (int k = j1 + 1; k < oldyt.length; k++) {
 
 									call = call + "," + oldyt[k].getValue().toString();
-
+									argumentTwo = oldyt[k].getValue().toString();
 								}
 								call = call + ")";
 							} else {
@@ -214,10 +214,10 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 										+ m.getMethod().getName() + "("
 										+ args + "i";
 								for (int k = j1 + 1; k < oldyt.length; k++) {
-									call = call
-											+ ","
-											+ oldyt[k].getValue()
-											.toString();
+									
+									call = call + "," + oldyt[k].getValue().toString();
+									argumentTwo = oldyt[k].getValue().toString();
+								
 								}
 								call = call + ")";	
 							}
@@ -289,7 +289,11 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 						+ "  if (!isCurrentlyFailing) \n"
 						+ "  { \n"
 						+ "  pass.add(i-1); \n"
+						// this statement will add second argument to the arraylist to be used for x y graphs.
+						+ " pass.add(" + argumentTwo + ");\n"
 						+ "  fail.add(i); \n"
+						// this statement will add second argument to the arraylist to be used for x y graphs.
+						+ " fail.add(" + argumentTwo + ");\n"
 						+ "  isCurrentlyFailing = true; \n"
 						+ " }  \n } \n } \n"
 						+ " checkStartAndStopValue(stop); \n"
@@ -339,11 +343,16 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	public String programEndPart2(){
 		String temp4 = "\n pass.add(i); \n"
+				// this statement will add second argument to the arraylist to be used for x y graphs.
+				+ " pass.add(" + argumentTwo + ");\n"
 				+  "  } \n"
 				+  "  catch (Throwable t) { \n"
 				+  "  startedByFailing = true; \n"
 				+  "  isCurrentlyFailing = true; \n"
-				+  "  fail.add(i); \n } \n } \n}";
+				+  "  fail.add(i); \n "
+				// this statement will add second argument to the arraylist to be used for x y graphs.
+				+ " fail.add(" + argumentTwo + ");\n } \n } \n}";
+		
 		return temp4;
 	}
 
