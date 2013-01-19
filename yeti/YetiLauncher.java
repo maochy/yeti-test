@@ -12,6 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
+
 import org.jfree.ui.RefineryUtilities;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -123,7 +125,8 @@ public class YetiLauncher extends JFrame{
 	// Constructor of the class to create frame and draw components on the frame. //////
 
 	public YetiLauncher(){
-
+		// A method is added to automatically delete the unwanted files before the next run.
+		deleteOldTestFiles();
 		this.setTitle("Yeti Launcher");
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension dim = new Dimension();
@@ -144,6 +147,24 @@ public class YetiLauncher extends JFrame{
 
 	}
 
+	
+	
+	public void deleteOldTestFiles(){
+		
+		File directory = new File(".");
+		File[] files = directory.listFiles();
+		for (File f : files)
+		{
+		    if ((f.getName().startsWith("C") || f.getName().startsWith("Pass") || f.getName().startsWith("Fail") ))
+		    {
+		      f.delete();
+		    }
+		    
+		}
+	}
+	
+	
+	
 	// Main method of the class.
 
 	public static void main(String[] args){
