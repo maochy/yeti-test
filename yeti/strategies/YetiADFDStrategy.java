@@ -174,7 +174,6 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				if (yc.getType().getName().equals("int")) {
 
 
-
 					String call = "";
 
 					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
@@ -187,7 +186,6 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 							call = call + ","
 									+ oldyt[k].getValue().toString();
 
-							argumentTwo = oldyt[k].getValue().toString();
 						}
 						call = call + ")";
 
@@ -203,10 +201,11 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 										+ m.getMethod().getName() + "("
 
 										+ args + "i";
+
 								for (int k = j1 + 1; k < oldyt.length; k++) {
 
 									call = call + "," + oldyt[k].getValue().toString();
-									argumentTwo = oldyt[k].getValue().toString();
+
 								}
 								call = call + ")";
 							} else {
@@ -214,13 +213,13 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 										+ m.getMethod().getName() + "("
 										+ args + "i";
 								for (int k = j1 + 1; k < oldyt.length; k++) {
-									
+
 									call = call + "," + oldyt[k].getValue().toString();
-									argumentTwo = oldyt[k].getValue().toString();
-								
+
 								}
 								call = call + ")";	
 							}
+
 						}
 					}
 
@@ -234,8 +233,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 					generateProgram(generatedProgram);
 
-
+					argumentTwo = ""+yc.getValue();
 					args = args + yc.getValue() + ",";
+
 
 				}
 
@@ -262,6 +262,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+ " public static boolean startedByFailing = false;\n"
 				+ " public static boolean isCurrentlyFailing = false;\n"
 
+				//+ " public static int start = Integer.MIN_VALUE;\n"
+				//+ " public static int stop = Integer.MAX_VALUE;\n\n"
+				// reduce to 80 because the other one take a lot of time to process. In final version the value will be changed to max.
 				+ " public static int start = -80;\n"
 				+ " public static int stop = 80;\n\n"
 
@@ -280,28 +283,62 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		String temp1 = 
 				";\n "
 						+ "  if (isCurrentlyFailing) \n"
-						+ "  { \n"
-						+ "  fail.add(i-1); \n"
-						+ "  pass.add(i); \n"
-						+ "  isCurrentlyFailing=false; \n"
-						+ "  } \n } \n"
-						+ "  catch(Throwable t) { \n"
-						+ "  if (!isCurrentlyFailing) \n"
-						+ "  { \n"
-						+ "  pass.add(i-1); \n"
-						// this statement will add second argument to the arraylist to be used for x y graphs.
-						+ " pass.add(" + argumentTwo + ");\n"
-						+ "  fail.add(i); \n"
-						// this statement will add second argument to the arraylist to be used for x y graphs.
-						+ " fail.add(" + argumentTwo + ");\n"
-						+ "  isCurrentlyFailing = true; \n"
-						+ " }  \n } \n } \n"
-						+ " checkStartAndStopValue(stop); \n"
-						+ "  printRangeFail(); \n"
-						+ "  printRangePass();  \n"
-						+ "  }\n";
+						+ "  {\n"
+						+ "fail.add(i-1);\n";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp1 = temp1 + "fail.add(0);\n"; 
+		}
+		else {
+			temp1 = temp1 +"fail.add("+argumentTwo+");\n";
+		}
 
-		;
+		temp1	=	temp1 + "pass.add(i);\n";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp1 = temp1 + "pass.add(0);\n";
+		}
+		else {
+			temp1 = temp1 + "pass.add("+argumentTwo+");\n";
+		}
+
+		temp1	=	temp1 
+				+ "  isCurrentlyFailing=false; \n"
+				+ "  } \n } \n"
+				+ "  catch(Throwable t) { \n"
+				+ "  if (!isCurrentlyFailing) \n"
+				+ "  {\n"
+				+ "pass.add(i-1);\n";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp1 = temp1 + "pass.add(0);\n";
+		}
+		else {
+			temp1 = temp1 + "pass.add("+argumentTwo+");\n";
+		}
+
+		temp1	=	temp1 + "fail.add(i);\n";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp1 = temp1 + "fail.add(0);\n";
+		}
+		else {
+			temp1 = temp1 + "fail.add("+argumentTwo+");\n";
+		}
+
+		temp1	=	temp1 
+				+ "isCurrentlyFailing = true;\n"
+				+ " }  \n } \n } \n"
+				+ " checkStartAndStopValue(stop); \n"
+				+ "  printRangeFail(); \n"
+				+ "  printRangePass();  \n"
+				+ "  }\n";
+
+
 		return temp1;
 	}
 
@@ -312,23 +349,33 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 	public String programEndPart(){
 		String temp3 = "\n public static void printRangeFail() { \n"
 				+"   try { \n"
-				+"   PrintWriter pr = new PrintWriter(\"/Users/mian/inclaspath/Fail.txt\"); \n"
+				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
+				+"   File fw = new File(\"Fail.txt\"); \n"
+				+"   if (fw.exists() == false) { \n"
+				+" 	 fw.createNewFile(); \n"	
+				+"   }\n"
+				+"	 PrintWriter pw = new PrintWriter(new FileWriter (fw, true));"
 				+"   for (Integer i1 : fail) { \n"
-				+"      pr.println(i1); \n"
+				+"      pw.append(i1+\"\\n\"); \n"
 				+"   } \n"
-				+"   pr.close(); \n"
+				+"   pw.close(); \n"
 				+"   } \n"
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
 				+" } \n"
+				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
 				+"  public static void printRangePass() { \n"
 				+"   try { \n"
-				+"   PrintWriter pr = new PrintWriter(\"/Users/mian/inclaspath/Pass.txt\"); \n"
+				+"   File fw1 = new File(\"Pass.txt\"); \n"
+				+"   if (fw1.exists() == false) { \n"
+				+" 	 fw1.createNewFile(); \n"	
+				+"   }\n"
+				+"	 PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));"
 				+"   for (Integer i2 : pass) { \n"
-				+"      pr.println(i2); \n"
+				+"      pw1.append(i2+\"\\n\");\n"
 				+"   } \n"
-				+"   pr.close(); \n"
+				+"   pw1.close(); \n"
 				+"   } \n"
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
@@ -342,17 +389,34 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 
 	public String programEndPart2(){
-		String temp4 = "\n pass.add(i); \n"
-				// this statement will add second argument to the arraylist to be used for x y graphs.
-				+ " pass.add(" + argumentTwo + ");\n"
+		String temp4 = "\n pass.add(i); \n";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp4 = temp4 + "pass.add(0);\n";
+		}
+		else {
+			temp4 = temp4 + " pass.add(" + argumentTwo + ");\n";
+		}
+
+		temp4	=	temp4
 				+  "  } \n"
 				+  "  catch (Throwable t) { \n"
 				+  "  startedByFailing = true; \n"
 				+  "  isCurrentlyFailing = true; \n"
-				+  "  fail.add(i); \n "
-				// this statement will add second argument to the arraylist to be used for x y graphs.
-				+ " fail.add(" + argumentTwo + ");\n } \n } \n}";
-		
+				+  "  fail.add(i); \n ";
+		// this statement will add second argument to the arraylist to be used for x y graphs.
+		// its sequence is x then 0 in case of empty and value of y if not empty
+		if (argumentTwo.equals("")){
+			temp4 = temp4 + "fail.add(0);\n";
+		}
+		else {
+			temp4 = temp4 + " fail.add(" + argumentTwo + ");\n";
+		}
+
+		temp4	=	temp4
+				+ " } \n } \n}";
+
 		return temp4;
 	}
 

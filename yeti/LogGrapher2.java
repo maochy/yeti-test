@@ -109,10 +109,10 @@ private XYDataset createDataset() {
 
 		final XYSeries series1 = new XYSeries("Failing input");
 
-		for (int i =0; i < failValues.length; i=i+2 ){
-			series1.add((double)failValues[i],0);
-			series1.add((double)failValues[i+1],0);
-			series1.add((double)failValues[i+1],null);
+		for (int i =0; i < failValues.length; i=i+4 ){
+			series1.add((double)failValues[i],(double)failValues[i+1]);
+			series1.add((double)failValues[i+2],(double)failValues[i+3]);
+			//series1.add((double)failValues[i+2],null);
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 
@@ -120,10 +120,10 @@ private XYDataset createDataset() {
 		
 		int passValues[] = GraphDataScanner.readPassDataFromFile();
 		
-		for (int j =0; j < passValues.length; j=j+2){
-			series2.add((double)passValues[j],0);
-			series2.add((double)passValues[j+1],0);
-			series2.add((double)passValues[j+1],null);
+		for (int j =0; j < passValues.length; j=j+4){
+			series2.add((double)passValues[j],(double)passValues[j+1]);
+			series2.add((double)passValues[j+2],(double)passValues[j+3]);
+			series2.add((double)passValues[j+2],null);
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
