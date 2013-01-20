@@ -121,9 +121,11 @@ private XYDataset createDataset() {
 		int passValues[] = GraphDataScanner.readPassDataFromFile();
 		
 		for (int j =0; j < passValues.length; j=j+4){
+			
 			series2.add((double)passValues[j],(double)passValues[j+1]);
 			series2.add((double)passValues[j+2],(double)passValues[j+3]);
 			series2.add((double)passValues[j+2],null);
+			
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
