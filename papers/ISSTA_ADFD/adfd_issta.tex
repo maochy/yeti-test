@@ -64,31 +64,7 @@ showstringspaces=false}
 \hyphenation{op-tical net-works semi-conduc-tor}
 \begin{document}
 
-\title{Automated Discovery and Analysis of Failure Domain with respect to Random Testing}
-%
-% You need the command \numberofauthors to handle the 'placement
-% and alignment' of the authors beneath the title.
-%
-% For aesthetic reasons, we recommend 'three authors at a time'
-% i.e. three 'name/affiliation blocks' be placed beneath the title.
-%
-% NOTE: You are NOT restricted in how many 'rows' of
-% "name/affiliations" may appear. We just ask that you restrict
-% the number of 'columns' to three.
-%
-% Because of the available 'opening page real-estate'
-% we ask you to refrain from putting more than six authors
-% (two rows with three columns) beneath the article title.
-% More than six makes the first-page appear very cluttered indeed.
-%
-% Use the \alignauthor commands to handle the names
-% and affiliations for an 'aesthetic maximum' of six authors.
-% Add names, affiliations, addresses for
-% the seventh etc. author(s) as the argument for the
-% \additionalauthors command.
-% These 'additional authors' will be output/set for you
-% without further effort on your part as the last section in
-% the body of your article BEFORE References or any Appendices.
+\title{Automated Discovery of Failure Domain}
 
 \numberofauthors{2} %  in this sample file, there are a *total*
 % of EIGHT authors. SIX appear on the 'first-page' (for formatting
@@ -120,17 +96,7 @@ Manuel Oriol \\
        \affaddr{York, United Kingdom}\\
        \email{manuel.oriol@york.ac.uk}
 }
-% There's nothing stopping you putting the seventh, eighth, etc.
-% author on the opening page (as the 'third row') but we ask,
-% for aesthetic reasons that you place these 'additional authors'
-% in the \additional authors block, viz.
-%\additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
-%email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
-%(The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
-%\date{30 July 1999}
-% Just remember to make sure that the TOTAL number of authors
-% is the number that will appear on the first page PLUS the
-% number that will appear in the \additionalauthors section.
+
 
 \maketitle
 \begin{abstract}
@@ -153,14 +119,14 @@ strategies for testing code. We applied our results by correlating our study wit
 %A category including the fourth, optional field follows...
 \category{D.2.5}{Software Engineering}{Testing and Debugging}[Testing Tools, Failure Domains, Random testing, Automated Testing]
 
-\section{Introduction}
+\section{Introduction}\label{sec:intro}
 
-Testing is fundamental requirement to assess the quality of any software.
-All dynamic testing techniques execute the System Under Test (SUT) with specific input 
+Testing is fundamental requirement to assess the quality of any software. Most if not all, modern testing techniques execute the System Under Test (SUT) with specific input 
 and compare the obtained results against the test oracle. A report is generated at the end of each test session which contain any 
-discovered faults with the input values, that lead to the generation of the fault. These reports are later evaluated by
-debuggers to fix the discovered faults. It is important to note that most if not all the existing testing 
-techniques identify the faults but ignores the failure domain containing the discovered fault.\\
+discovered faults with the input values, which lead to the generation of the fault. These reports are later evaluated by
+debuggers to fix the discovered faults. The system is given back to the testers to find more faults for rectification. This process is continue until a certain level of satisfaction is reached.\\
+
+It is important to note that these techniques only identify the instance of failure and don't focus on the  failure domain. This research can decrease the overall testing times by reducing the number of code exchanges between testers and debugger. It is achieved by tracking the failure domain and not only a single instance failure. Tracking failure domain provide more information about the behaviour of the fault.
 
 %that also served as regression testing. None of the testing techniques evaluate the nature of the fault and the pattern in which the fault reside. 
 
@@ -202,7 +168,7 @@ In Section II, we describe the automated technique of  discovering failure domai
 
 %The rest of this paper is organized as follows. The sections, II to X, describe automated strategy, Implementation, Experimental setup and analysis, Evaluation, Experimental results, discussion, conclusion and future work respectively.\\
 
-\section{Problems and Solutions}
+\section{Problems and Solutions}\label{sec:probl_and_sol}
 This paper address five. main problems in random testing. These are (1) Finding the whole domain of fault instead of only failing values, (2) Representation of fault values, (3) automation of the evaluation process, (4) Identification of fault domain for multi arguments methods and its representation, (5) Generation and classification of test values for Strings and complex (non scaler) arguments. This section elaborate each of the above mention problem and describe our proposed solution (if any) to them.
 
 \subsection{Finding the whole domain of fault instead of only failing values}
@@ -216,18 +182,30 @@ I think it is beyond the scope of this study to identify and represent more then
 It is difficult to find the domain for strings and complex (non scaler) data therefore they can be exempted from this study.
 
 
-\section{Automated Discovery of Failure Domain}
+\section{Automated Discovery of Failure Domain}\label{sec:adfd}
 
-Automated Discovery of Failure Domain (ADFD) is the process in which a failure domain is identified in an automated fashion across the whole input domain for a specific fault in a given system. The whole process is made automated until the results are generated. The process is divided into the following four major parts for simplification. Each part is explained below.
+Automated Discovery of Failure Domain (ADFD) strategy is a new technique that find a failure domain across the whole input domain in an automated fashion. The discovered failure domains are presented in the form of graphs at the end of the session. The process is divided into the following four major parts for simplification. Each part is explained below.
+
 \begin{enumerate}
-\item Use of automated testing tool to find the fault in the given SUT.
-\item Automated generation of modules at run time according to the found fault.
+\item Use of automated testing tool to find the failure in the given SUT.
+\item Automated generation of modules at run time according to the found failure.
 \item Automated compilation and execution of the generated modules.
 \item Analysis of results obtained and graphically plot the fault domain .\\
 \end{enumerate}
 
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=5cm,height=4cm]{ADFD.png}
+\caption{GUI of ADFD strategy}
+\label{fig:patterns}
+\end{figure}
+
+
+
+
 \noindent \textbf{Automated testing to find the fault in given SUT:}\\*
-\indent To find the failure domain for a specific fault first we need to identify the fault in the system. This required fault can be identified by manual testing but we selected automated testing system because it can saves time, resource and produce quick results. We could select any automated testing system for finding the fault in the given SUT because the research is focusing on the failure domains and not on the performance of finding faults and for that reason F-measure, E-measure and P-measure etc were not of particular concern. York Extensible Testing Infrastructure (YETI) is selected to test and find the fault in given SUT mainly for its simplicity, speed and proven capability of finding potentially hazardous faults in many systems. It is a complete automated testing system that is capable of calling millions of instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. YETI was executed with its default strategy of random testing for finding the fault in our experiments.\\
+\indent To find the failure domain for a specific fault first we need to identify the fault in the system. This required fault can be identified by manual testing but we selected automated testing system because it can saves time, resource and produce quick results. For this purpose we could select any automated testing system because the research is focusing on the failure domains and not on the performance of finding faults and for that reason F-measure, E-measure and P-measure etc were not of particular concern. York Extensible Testing Infrastructure (YETI) is selected to test and find the fault in given SUT mainly for its simplicity, speed and proven capability of finding potentially hazardous faults in many systems. It is a complete automated testing system that is capable of calling millions of instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. YETI was executed with its default strategy of random testing for finding the fault in our experiments.\\
 
 \noindent \textbf{Automated generation of modules at run time according to the fault found:}\\*
 \indent After finding the fault in the given SUT through an automated system we needed to write one, two or many modules based on the condition of the found fault. These modules are later executed to explore the nature of the failure domain for the found fault. To keep this process automated we used Java feature of generating dynamic code which is available in javax.tools package in Java language. We added additional functionality in YETI and now when the fault is found by YETI in the given SUT it stops testing and dynamically generate the required modules with .java extension and saves it to a file for further execution. This generated module can have one or more argument constant and one argument as variable.\\
@@ -250,12 +228,59 @@ The following flow chart clearly identify the workflow of the whole process and 
 \end{figure}
 
 
-\section{Motivating Example}
+\section{Motivating Example}\label{sec:example}
 The goal of ADFD is to find the fault in the SUT and its existence across the complete domain in an automated way. This helps the developers to debug the code keeping in view its every occurrence that may otherwise go unnoticed.
 Published programs from literature \cite{Chen2003}\cite{Chan1996}\cite{Chen2004} of point, block and strip failure patterns are tested to explain the working of ADFD . These programs were translated in to java language for this experiment (See appendix 1 for more details). \\
 %ADFD is a two step process where first step is to test the program through YETI and the second step is to execute the programs generated at the end of the first step. 
 
+\begin{lstlisting}
+/** 
+* Calculate square of given number 
+* and verify results. 
+* The code contain 3 faults.
+* @author (Mian and Manuel)
+*/
+public class Math1 {
+ public void calc (int num1) {
+  // Square num1 and store result. 
+  int result1 = num1 * num1;
+  int result2 = result1 / num1; // 1
+  assert Math.sqrt(result1) == num1; // 2
+  assert result1 >= num1; // 3
+ } 
+}
+\end{lstlisting}
+
 In step one each program was tested individually by YETI that discovered the existing faults and generated relevant program for each fault. The number of generated programs depend on the dimension of the program under test. Since all selected programs were two dimensional (containing two parameters) therefore two programs were generated for each found fault. Table \ref{tb:failtable} shows the programs generated and pass \& fail patterns discovered for each fault. For each test entire integer range i.e. -2147483648 to 2147483647 was selected as input domain.\\
+
+
+%\begin{center}
+\begin{table*}[t]
+%\renewcommand{\arraystretch}{2}
+\centering
+%{\small} %normalsize
+
+\begin{tabular}{|c|c|l|l|l|}
+
+\hline 
+
+\textbf{S. No}		& \textbf{Failure Pattern}	& \textbf{Specific Fault}	 		& \textbf{Pass Pattern} 			& \textbf{Fail Pattern} 			\\ \hline 
+
+
+\multirow{2}{*}{1} 	&\multirow{3}{*}{Point}	&\multirow{2}{*}{Prog1.test1(i)}	& 00 to 00				&\multirow{2}{*}{0}	  			\\ \cline{4-4} 
+				&					&							&00 to 00				&	                           			\\ \cline{3-5} \hline
+\multirow{2}{*}{2} 	&\multirow{3}{*}{Block}	&\multirow{2}{*}{Prog2.test2(i)}	&00 to 00				&\multirow{2}{*}{0}	  			\\ \cline{4-4} 
+				&					&							&00 to 00				&	                           			\\ \cline{3-5} \hline
+\multirow{2}{*}{3} 	&\multirow{3}{*}{Strip}	&\multirow{2}{*}{Prog3.test3(i)}	&00 to 00				&\multirow{2}{*}{0}	  			\\ \cline{4-4} 
+				&					&							&00 to 00				&	                           			\\ \cline{3-5} \hline
+\end{tabular}
+\caption{Failure domain with respect to one dimensional program}
+\label{tb:failtable}
+\end{table*}
+%\end{center}
+
+
+
 
 %\begin{center}
 \begin{table*}[t]
@@ -283,7 +308,7 @@ In step one each program was tested individually by YETI that discovered the exi
 				&					& \multirow{2}{*}{Prog3.test3(10,i)}	&-217483648 to 1				&\multirow{2}{*}{2 to 9}			\\ \cline{4-4}
 				&					&	 						&10 to 2147483647				&							\\ \hline
 \end{tabular}
-\caption{Failure pattern with respect to failure domain}
+\caption{Failure domain with respect to two dimensional program}
 \label{tb:failtable}
 \end{table*}
 %\end{center}

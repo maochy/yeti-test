@@ -751,7 +751,7 @@ public class ADFDLauncher extends JFrame{
 			}
 		});
 
-		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain, based on YETI");
+		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
 		panel2.add(heading_Label);
 		panel2.setBackground(Color.LIGHT_GRAY);
