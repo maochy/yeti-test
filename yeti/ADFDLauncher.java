@@ -362,7 +362,7 @@ public class ADFDLauncher extends JFrame{
 
 		browse_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JFileChooser chooser = new JFileChooser();
+				JFileChooser chooser = new JFileChooser(".");
 				chooser.showOpenDialog(null);
 				File file = chooser.getSelectedFile();
 				String fullPath = file.getAbsolutePath();
