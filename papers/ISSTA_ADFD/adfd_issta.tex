@@ -116,24 +116,24 @@ strategies for testing code. We applied our results by correlating our study wit
 
 \end{abstract}
 
-%A category including the fourth, optional field follows...
+
 \category{D.2.5}{Software Engineering}{Testing and Debugging}[Testing Tools, Failure Domains, Random testing, Automated Testing]
 
 \section{Introduction}\label{sec:intro}
 
-Testing is fundamental requirement to assess the quality of any software. Most if not all, modern testing techniques execute the System Under Test (SUT) with specific input 
-and compare the obtained results against the test oracle. A report is generated at the end of each test session which contain any 
-discovered faults with the input values, which lead to the generation of the fault. These reports are later evaluated by
-debuggers to fix the discovered faults. The system is given back to the testers to find more faults for rectification. This process is continue until a certain level of satisfaction is reached.\\
+Testing is fundamental requirement to assess the quality of any software. Most if not all, modern black-box testing techniques \cite{Beizer1995} execute the System Under Test (SUT) with specific input 
+and compare the obtained results against the test oracle. A report is generated at the end of each test session containing any discovered faults and the values which causes the fault. These reports are later evaluated by debuggers to fix the discovered faults. The system is given back to the testers to find more faults. This process is continue until a certain level of satisfaction is reached. It is important to note that these techniques only identify a single instance of failure and do not  focus on the failure domain. 
 
-It is important to note that these techniques only identify the instance of failure and don't focus on the  failure domain. This research can decrease the overall testing times by reducing the number of code exchanges between testers and debugger. It is achieved by tracking the failure domain and not only a single instance failure. Tracking failure domain provide more information about the behaviour of the fault.
+Random testing is a black-box testing technique in which parts (methods/modules) of SUT are selected randomly and then executed against randomly generated test data from the whole input domain. Results obtained from the execution are either compared to the specifications of the SUT or language exceptions which served as a test oracle. Any test output that fail to meet the oracle either because of failing to comply the specification or trigger the exceptions are considered as potential faults. In this paper we present a new tool, called Automated Discovery of Failure Domain (ADFD), based on a random testing tool called York Extensible Testing Infrastructure (YETI), for not only finding fault but also its domain. ADFD utilise YETI to discover the fault in the given SUT and then generate a dynamic code for finding its domain. The found domain -- point, block or strip are presented on the graph at the end of each test session
+
+
+ADFD has been designed to decrease the time of system testing. Knowing the domain of the fault the debuggers This research can decrease the overall testing time by reducing the number of code exchanges between testers and debugger. It is achieved by tracking the failure domain and not only a single instance failure. Tracking failure domain provide more information about the behaviour of the fault.
 
 %that also served as regression testing. None of the testing techniques evaluate the nature of the fault and the pattern in which the fault reside. 
 
 
 %The aim of this research study is to find not only find the values for which the system fails but also the domains of failure causing inputs which will help in automated generation of fault targeted test cases for any black-box testing technique.\\
 
-%Random testing is a black-box testing technique in which parts (methods/modules) of SUT are selected randomly and then executed against randomly generated test data according to the required type from the whole input domain. Results obtained from the execution are either compared to the specifications of the SUT or language exceptions which served as a test oracle. Any test output that fail to meet the oracle either because of failing to comply the specification or trigger the exceptions are considered as potential faults. The same report is used by the testers for debugging and regression testing.\\
 
 %Over the past few years there is a tremendous growth in development of hardware whose main focus is to increase the computer processing power. The computers that served as a mini and mainframe computers few years ago are turned into personal computer in todays modern age. To utilise this processing power various software development companies started to develop more sophisticated and processing hungry softwares. These softwares provide simple and easy to use Graphical User Interface (GUI) but on the back end they are equally complex and consist of thousands of instructions. This increase in size of the software also increases the difficulty of preserving high quality, reliability, portability, maintainability and efficiency of the software. These problems are mainly cater by software testing. The increase of complexity and size of softwares also forced the researchers to find new ways of software testing that are more efficient, reliable and speedy to cope with the ever increasing hardware and software industry.\\
 
@@ -193,14 +193,13 @@ Automated Discovery of Failure Domain (ADFD) strategy is a new technique that fi
 \item Analysis of results obtained and graphically plot the fault domain .\\
 \end{enumerate}
 
-
-\begin{figure}[htp]
-\centering
-\includegraphics[width=5cm,height=4cm]{ADFD.png}
+\begin{center}
+\begin{figure*}[htp]
+\includegraphics[width=17cm,height=10cm]{adfdFrontEnd.png}
 \caption{GUI of ADFD strategy}
 \label{fig:patterns}
-\end{figure}
-
+\end{figure*}
+\end{center}
 
 
 
@@ -220,7 +219,7 @@ Automated Discovery of Failure Domain (ADFD) strategy is a new technique that fi
 
 The following flow chart clearly identify the workflow of the whole process and the various steps involved in the process.
 
-\begin{figure}[htp]
+\begin{figure}[p]
 \centering
 \includegraphics[width=8cm,height=12cm]{automatedFail.png}
 \caption{Automated discovery of Failure Domain}
@@ -321,7 +320,7 @@ In step 2 the generated programs were executed in such a way that the variable p
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=4cm,height=4cm]{point_pattern.png}
+\includegraphics[width=4cm,height=4cm]{point_pattern.png}[scale=0.75]
 \caption{Point pattern failure domain}
 \label{fig:patterns}
 \end{figure}
