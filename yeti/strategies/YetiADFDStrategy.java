@@ -95,9 +95,11 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		// we generate a panel to contain both the label and the slider
 		JPanel p = new JPanel();
 		p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
-		JLabel txt = new JLabel("% DSS interesting values: YDS2040 ");
-		p.add(txt);
-		txt.setAlignmentX(0);
+		
+		//because we dont need interesting values here.
+		//JLabel txt = new JLabel("% interesting values: ");
+		//p.add(txt);
+		//txt.setAlignmentX(0);
 
 		// we create the slider, this slider is updated both ways
 		YetiUpdatableSlider useInterestingValuesSlider = new YetiUpdatableSlider(
@@ -139,7 +141,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		YetiGUI.allComponents.add(useInterestingValuesSlider);
 		useInterestingValuesSlider.setMaximumSize(new Dimension(130, 50));
 		useInterestingValuesSlider.setAlignmentX(0);
-		p.add(useInterestingValuesSlider);
+		
+		// Not required in ADFD i think.
+		//p.add(useInterestingValuesSlider);
 
 		TitledBorder title = BorderFactory.createTitledBorder(Yeti.strategy
 				.getName() + " Panel");
@@ -440,7 +444,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	@Override
 	public String getName() {
-		return "Dirt Spot Sweeping Strategy Two";
+		return "Automated Discovery of Failure Domain";
 	}
 
 }

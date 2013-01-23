@@ -121,13 +121,14 @@ strategies for testing code. We applied our results by correlating our study wit
 
 \section{Introduction}\label{sec:intro}
 
-Testing is fundamental requirement to assess the quality of any software. Most if not all, modern black-box testing techniques \cite{Beizer1995} execute the System Under Test (SUT) with specific input 
-and compare the obtained results against the test oracle. A report is generated at the end of each test session containing any discovered faults and the values which causes the fault. These reports are later evaluated by debuggers to fix the discovered faults. The system is given back to the testers to find more faults. This process is continue until a certain level of satisfaction is reached. It is important to note that these techniques only identify a single instance of failure and do not  focus on the failure domain. 
+Testing is fundamental requirement to assess the quality of any software. Manual process of software testing and test data generation is a labour-intensive, therefore emphasis is on the use of automated testing that significantly reduce the cost of software development process and its maintenance \cite{Beizer1995}. Most of the modern black-box testing techniques  execute the System Under Test (SUT) with specific input and compare the obtained results against the test oracle. A report is generated at the end of each test session containing any discovered faults and the values which causes the fault. These reports are later evaluated by debuggers to fix the discovered faults. The system is given back to the testers to find more faults and this process is continue till a certain level of satisfaction is achieved. It is important to note that these techniques only identify a single instance of failure and do not  focus on the failure domain. 
 
-Random testing is a black-box testing technique in which parts (methods/modules) of SUT are selected randomly and then executed against randomly generated test data from the whole input domain. Results obtained from the execution are either compared to the specifications of the SUT or language exceptions which served as a test oracle. Any test output that fail to meet the oracle either because of failing to comply the specification or trigger the exceptions are considered as potential faults. In this paper we present a new tool, called Automated Discovery of Failure Domain (ADFD), based on a random testing tool called York Extensible Testing Infrastructure (YETI), for not only finding fault but also its domain. ADFD utilise YETI to discover the fault in the given SUT and then generate a dynamic code for finding its domain. The found domain -- point, block or strip are presented on the graph at the end of each test session
+This paper describes Automated Discovery of Failure Domain (ADFD), a framework based on auotmated random testing tool, York Extensible Testing Infrastructure (YETI) \ref{}  for not only finding fault in java program but also its domain. To find the fault and its domain ADFD needs java method (byte code, .class file), lower and upper bound to limit the search for fault domain; for integer the default lower and upper bound is set to Integer.MIN\_VALUE and Integer.MAX\_VALUE. After a fault is found it search for the fault domain between the upper and lower bound. ADFD apply every value between the upper and lower bound to the method for finding a point, block or strip fault domain. The result obtained is produced in the form of graph at the end of the test session. 
+
+%Random testing is a black-box testing technique in which parts (methods/modules) of SUT are selected randomly and then executed against randomly generated test data from the whole input domain. Results obtained from the execution are either compared to the specifications of the SUT or language exceptions which served as a test oracle. Any test output that fail to meet the oracle either because of failing to comply the specification or trigger the exceptions are considered as potential faults. In this paper we present a new tool, called Automated Discovery of Failure Domain (ADFD), based on a random testing tool called York Extensible Testing Infrastructure (YETI), for not only finding fault but also its domain. ADFD utilise YETI to discover the fault in the given SUT and then generate a dynamic code for finding its domain. The found domain -- point, block or strip are presented on the graph at the end of each test session
 
 
-ADFD has been designed to decrease the time of system testing. Knowing the domain of the fault the debuggers This research can decrease the overall testing time by reducing the number of code exchanges between testers and debugger. It is achieved by tracking the failure domain and not only a single instance failure. Tracking failure domain provide more information about the behaviour of the fault.
+%ADFD has been designed to decrease the time of system testing. Knowing the domain of the fault the debuggers This research can decrease the overall testing time by reducing the number of code exchanges between testers and debugger. It is achieved by tracking the failure domain and not only a single instance failure. Tracking failure domain provide more information about the behaviour of the fault.
 
 %that also served as regression testing. None of the testing techniques evaluate the nature of the fault and the pattern in which the fault reside. 
 
@@ -152,14 +153,8 @@ Feedback-Directed Random Testing (FDRT) \cite{Pacheco2007},
 Restricted Random Testing (RRT) \cite{Chan2002} and Quasi Random Testing  (QRT) \cite{Chen2005} 
 are the strategies based on the same principle that found better results compared to ordinary random testing.
 
-Significant research has been done to utilise the failure domains 
-but their existence, nature and boundaries need further attention. 
-In this article we present an automated random technique to discover 
-and investigate the failure domains across the input domain. 
-Having this information prior to testing enables the tester to guide testing according 
-to the failure domain of the SUT, for example pure random testing is more effective 
-for point domain than block and strip domains where as ART, MART, FDRT, RRT 
-and QRT are more effective for block and strip fault domains than point fault domain.
+
+The main objective behind ADFD is to get an automated frame work that find the existence of fault and fault domain across the input domain, decrease debugging time and to discover any more faults missed by the testing system. Significant research has been done to utilise the failure domains but their existence, nature and boundaries need further attention. Having fault domain information prior to testing enables the tester to guide testing according to the failure domain of the SUT, for example pure random testing is more effective for point domain than block and strip domains where as ART, MART, FDRT, RRT and QRT are more effective for block and strip fault domains than point fault domain.
 
 %In our previous research we extended the same idea of the existence of different domains of failure across the whole input domain proposed by Chen et al, \cite{Chen2008} and accepted by various other researchers to develop a new strategy called Dirt Spot Sweeping Strategy [X]. However the experimental results showed not very considerable improvement then what we predicted. We performed 500 experiments in which we carried out 10000 tests but the results showed only 5\% improvement contrary to our prediction of 30\%. All the experiments were performed from a pool of open-source projects bundled in a repository called Qualitas Corpus \cite{Tempero2010}. Corpus contains more than 100 open-source java projects and maintained only for the purpose of unbiased research experiments. Therefore one of the conclusions derived from our experiments was that the patterns of failure may not exist in most of the software‚Äôs due to which our strategy which focus on these patterns didn‚Äôt produce much efficiency.\\
 %It was therefore very interesting for us to do further research to find about the existence and nature of these failure patterns. Our main focus in this research paper is to discover whether there exist failure patterns across the input domain or not and if they exist then how frequent and what pattern they follow.\\
@@ -168,18 +163,18 @@ In Section II, we describe the automated technique of  discovering failure domai
 
 %The rest of this paper is organized as follows. The sections, II to X, describe automated strategy, Implementation, Experimental setup and analysis, Evaluation, Experimental results, discussion, conclusion and future work respectively.\\
 
-\section{Problems and Solutions}\label{sec:probl_and_sol}
-This paper address five. main problems in random testing. These are (1) Finding the whole domain of fault instead of only failing values, (2) Representation of fault values, (3) automation of the evaluation process, (4) Identification of fault domain for multi arguments methods and its representation, (5) Generation and classification of test values for Strings and complex (non scaler) arguments. This section elaborate each of the above mention problem and describe our proposed solution (if any) to them.
+%X\section{Problems and Solutions}\label{sec:probl_and_sol}
+%This paper address five. main problems in random testing. These are (1) Finding the whole domain of fault instead of only failing values, (2) Representation of fault values, (3) automation of the evaluation process, (4) Identification of fault domain for multi arguments methods and its representation, (5) Generation and classification of test values for Strings and complex (non scaler) arguments. This section elaborate each of the above mention problem and describe our proposed solution (if any) to them.
 
-\subsection{Finding the whole domain of fault instead of only failing values}
-Most of the testing tools take into account only the fault finding values with out giving due consideration to the domain in which the values exist. \subsection{Representation of fault values and fault domains}
-points: instead of dumping logs and more complex reports we describe the fault domains with the help of charts. 
-\subsection{Automation of the testing process}
-We developed an automated system to test the system, generate the fault domain finding files, compile and execute them to find the fault domains if any. points: automation is achieved by combining the test tool and evaluation system e.g. yeti and ADFD.   
-\subsection{Identification and representation of multi arguments data}
-I think it is beyond the scope of this study to identify and represent more then 3 arguments method because at the moment we can show only three diminutional charts.
-\subsection{Generation and classification of test values for string and complex (non scaler) arguments}
-It is difficult to find the domain for strings and complex (non scaler) data therefore they can be exempted from this study.
+%\subsection{Finding the whole domain of fault instead of only failing values}
+%Most of the testing tools take into account only the fault finding values with out giving due consideration to the domain in which the values exist. \subsection{Representation of fault values and fault domains}
+%points: instead of dumping logs and more complex reports we describe the fault domains with the help of charts. 
+%\subsection{Automation of the testing process}
+%We developed an automated system to test the system, generate the fault domain finding files, compile and execute them to find the fault domains if any. points: automation is achieved by combining the test tool and evaluation system e.g. yeti and ADFD.   
+%\subsection{Identification and representation of multi arguments data}
+%I think it is beyond the scope of this study to identify and represent more then 3 arguments method because at the moment we can show only three diminutional charts.
+%\subsection{Generation and classification of test values for string and complex (non scaler) arguments}
+%It is difficult to find the domain for strings and complex (non scaler) data therefore they can be exempted from this study.
 
 
 \section{Automated Discovery of Failure Domain}\label{sec:adfd}
@@ -188,10 +183,27 @@ Automated Discovery of Failure Domain (ADFD) strategy is a new technique that fi
 
 \begin{enumerate}
 \item Use of automated testing tool to find the failure in the given SUT.
+\item Setting of Lower and Upper bound
 \item Automated generation of modules at run time according to the found failure.
 \item Automated compilation and execution of the generated modules.
 \item Analysis of results obtained and graphically plot the fault domain .\\
 \end{enumerate}
+
+\noindent \textbf{Automated testing to find the fault in given SUT:}\\*
+\indent To find the failure domain for a specific fault first we need to identify the fault in the system. This required fault can be identified by manual testing but we selected automated testing system because it can saves time, resource and produce quick results. For this purpose we could select any automated testing system because the research is focusing on the failure domains and not on the performance of finding faults and for that reason F-measure, E-measure and P-measure etc were not of particular concern. York Extensible Testing Infrastructure (YETI) is selected to test and find the fault in given SUT mainly for its simplicity, speed and proven capability of finding potentially hazardous faults in many systems. It is a complete automated testing system that is capable of calling millions of instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. YETI was executed with its default strategy of random testing for finding the fault in our experiments.\\
+
+\noindent \textbf{Setting Lower and Upper bound:}\\*
+One can specify the lower and upper bound to limit the search. ADFD will supply only the values enclosed in the upper and lower bound. By default this range is set to Integer.MAX\_VALUE and Integer.MIN\_VALUE.\\
+
+\noindent \textbf{Automated generation of modules at run time according to the fault found:}\\*
+\indent After finding the fault in the given SUT through an automated system we needed to write one, two or many modules based on the condition of the found fault. These modules are later executed to explore the nature of the failure domain for the found fault. To keep this process automated we used Java feature of generating dynamic code which is available in javax.tools package in Java language. We added additional functionality in YETI and now when the fault is found by YETI in the given SUT it stops testing and dynamically generate the required modules with .java extension and saves it to a file for further execution. This generated module can have one or more argument constant and one argument as variable.\\
+
+
+\noindent \textbf{Automated compilation and execution of these modules:}\\*
+\indent The testing process stops after the generated modules are written to a file with .java extension on some permanent media. A script is executed and the .java files produced earlier are fist compiled to get the binary .class file and then executed. During execution the static arguments of the module remain the same but the variable argument receive all the values of the whole input domain of that particular type. Once the execution of the generated modules is completed the results are produced by the system on the standard output.\\
+
+\noindent \textbf{Generation of results and analysis:}\\*
+\indent All the generated modules are executed by the system and the results obtained are saved and analysed. On the basis of analysis of these results we can identify that which particular domain that fault belongs to. If the module output a single value after few thousands of values then the fault belongs to the point domain. If it fails for a pool of value at some specific interval then it belongs to the block domain and if it fails to a large pool of continuos values than it belongs to a strip domain.\\
 
 \begin{center}
 \begin{figure*}[htp]
@@ -203,28 +215,17 @@ Automated Discovery of Failure Domain (ADFD) strategy is a new technique that fi
 
 
 
-\noindent \textbf{Automated testing to find the fault in given SUT:}\\*
-\indent To find the failure domain for a specific fault first we need to identify the fault in the system. This required fault can be identified by manual testing but we selected automated testing system because it can saves time, resource and produce quick results. For this purpose we could select any automated testing system because the research is focusing on the failure domains and not on the performance of finding faults and for that reason F-measure, E-measure and P-measure etc were not of particular concern. York Extensible Testing Infrastructure (YETI) is selected to test and find the fault in given SUT mainly for its simplicity, speed and proven capability of finding potentially hazardous faults in many systems. It is a complete automated testing system that is capable of calling millions of instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. YETI was executed with its default strategy of random testing for finding the fault in our experiments.\\
 
-\noindent \textbf{Automated generation of modules at run time according to the fault found:}\\*
-\indent After finding the fault in the given SUT through an automated system we needed to write one, two or many modules based on the condition of the found fault. These modules are later executed to explore the nature of the failure domain for the found fault. To keep this process automated we used Java feature of generating dynamic code which is available in javax.tools package in Java language. We added additional functionality in YETI and now when the fault is found by YETI in the given SUT it stops testing and dynamically generate the required modules with .java extension and saves it to a file for further execution. This generated module can have one or more argument constant and one argument as variable.\\
+%\subsection{Flow Chart of the process}
 
-\noindent \textbf{Automated compilation and execution of these modules:}\\*
-\indent The testing process stops after the generated modules are written to a file with .java extension on some permanent media. A script is executed and the .java files produced earlier are fist compiled to get the binary .class file and then executed. During execution the static arguments of the module remain the same but the variable argument receive all the values of the whole input domain of that particular type. Once the execution of the generated modules is completed the results are produced by the system on the standard output.\\
+%The following flow chart clearly identify the workflow of the whole process and the various steps involved in the process.
 
-\noindent \textbf{Generation of results and analysis:}\\*
-\indent All the generated modules are executed by the system and the results obtained are saved and analysed. On the basis of analysis of these results we can identify that which particular domain that fault belongs to. If the module output a single value after few thousands of values then the fault belongs to the point domain. If it fails for a pool of value at some specific interval then it belongs to the block domain and if it fails to a large pool of continuos values than it belongs to a strip domain.\\
-
-\subsection{Flow Chart of the process}
-
-The following flow chart clearly identify the workflow of the whole process and the various steps involved in the process.
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=8cm,height=12cm]{automatedFail.png}
-\caption{Automated discovery of Failure Domain}
-\label{fig:autofail}
-\end{figure}
+%\begin{figure}[p]
+%\centering
+%\includegraphics[width=8cm,height=12cm]{automatedFail.png}
+%\caption{Automated discovery of Failure Domain}
+%\label{fig:autofail}
+%\end{figure}
 
 
 \section{Motivating Example}\label{sec:example}
@@ -233,25 +234,38 @@ Published programs from literature \cite{Chen2003}\cite{Chan1996}\cite{Chen2004}
 %ADFD is a two step process where first step is to test the program through YETI and the second step is to execute the programs generated at the end of the first step. 
 
 \begin{lstlisting}
-/** 
-* Calculate square of given number 
-* and verify results. 
-* The code contain 3 faults.
+/**
+* Point Fault Domain example 
+* for one argument
 * @author (Mian and Manuel)
 */
-public class Math1 {
- public void calc (int num1) {
-  // Square num1 and store result. 
-  int result1 = num1 * num1;
-  int result2 = result1 / num1; // 1
-  assert Math.sqrt(result1) == num1; // 2
-  assert result1 >= num1; // 3
- } 
+public class PointDomainOneArgument{
+
+	public static void pointErrors (int x){
+     		if (x == -66 )
+       			abort();
+     
+     		if (x == -2 )
+     			abort();
+     
+     		if (x == 51 )
+     			abort();
+     
+     		if (x == 23 )
+     			abort();
+	}
 }
 \end{lstlisting}
 
-In step one each program was tested individually by YETI that discovered the existing faults and generated relevant program for each fault. The number of generated programs depend on the dimension of the program under test. Since all selected programs were two dimensional (containing two parameters) therefore two programs were generated for each found fault. Table \ref{tb:failtable} shows the programs generated and pass \& fail patterns discovered for each fault. For each test entire integer range i.e. -2147483648 to 2147483647 was selected as input domain.\\
+ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI tool. 
 
+In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
+
+The next button is compile which compile the generated files and generate the byte code (.class files). The execute button execute the byte code and test the method under test for all the values between upper and lower bound. At the end of execution it generates two files (pass.txt and fail.txt). Pass file contain all the values for which the method performed correctly while fail file contain all the values for which the method under test fail.
+
+The draw fault domain button reads the pass and fail files and plot them on the x, y graph where red line with squares show the failing values while the blue line with square shapes show the passing values.
+
+From the figure {} we can see that the use of ADFD not only found all the faults but from the graph we can also know that the program follows a point domain of failure.
 
 %\begin{center}
 \begin{table*}[t]
@@ -312,15 +326,12 @@ In step one each program was tested individually by YETI that discovered the exi
 \end{table*}
 %\end{center}
 
-
-In step 2 the generated programs were executed in such a way that the variable parameter receives all the values between -2147483648 to 2147483647 while static parameter remain constant. Results of the execution are demonstrated with the help of the following graphs. The graphs only scales to 100 values and not for complete integer range only to keep the fault patterns visible and more readable.
-
 %We found that it is better for the developer to see the range because the fault can be found once but it can generate errors at multiple locations.like point pattern in the first graph only generate fault at location 0 but if the same zero is assigned to second argument then the whole domain values can fail.\\
 
 
 \begin{figure}[htp]
 \centering
-\includegraphics[width=4cm,height=4cm]{point_pattern.png}[scale=0.75]
+\includegraphics[width=8.5cm,height=6cm]{oneArgumentPointDomain.png}
 \caption{Point pattern failure domain}
 \label{fig:patterns}
 \end{figure}
