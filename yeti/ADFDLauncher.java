@@ -660,17 +660,17 @@ public class ADFDLauncher extends JFrame{
 					if (countCompileFiles == 1){
 						LogGrapher1 demo = new LogGrapher1("Failure Domains");
 						// added by mian for testing purpose.
-						JOptionPane.showMessageDialog(null, "LogGrapher1");
+						//JOptionPane.showMessageDialog(null, "LogGrapher1");
 					}
 					else if (countCompileFiles == 2){
 						LogGrapher2 demo = new LogGrapher2("Failure Domains");
 						// added by mian for testing purpose.
-						JOptionPane.showMessageDialog(null, "LogGrapher2");
+						//JOptionPane.showMessageDialog(null, "LogGrapher2");
 					}
 					else {
 						LogGrapher3 demo = new LogGrapher3("Failure Domains");
 						// added by mian for testing purpose.
-						JOptionPane.showMessageDialog(null, "LogGrapher3");
+						//JOptionPane.showMessageDialog(null, "LogGrapher3");
 					}
 
 
