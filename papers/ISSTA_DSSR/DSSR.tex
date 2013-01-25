@@ -112,8 +112,8 @@ Manuel Oriol \\
 \begin{abstract}
 This paper presents a new, enhanced and improved form of automated random testing, named the Dirt Spot Sweeping Random (DSSR) strategy. It is based on the assumption that faults and unique failures reside in contiguous block and strip patterns. The DSSR strategy starts as a regular random+ testing strategy --- a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failure found in hope of finding failures of different kind in its vicinity.
 
-The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random and random+ strategies by testing 60 classes with one million ($10^5$) calls for each session, 30 times for each strategy.
-The results indicate that for 72\% of the classes tested all three strategies find the same unique failures while for the remaining 28\% classes DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy. Numerically, the DSSR strategy finds 27 more unique failures than random and 11 more unique failures than random+ strategy.
+The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random and random+ strategies by testing 60 classes (35, 785 line of code) with one million ($10^5$) calls for each session, 30 times for each strategy.
+The results indicate that for 72\% of the classes tested all three strategies find the same unique failures while for the remaining 28\% classes DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy. Numerically, the DSSR strategy finds 43 more unique failures than random and 12 more unique failures than random+ strategy.
 \end{abstract}
 
 %A category including the fourth, optional field follows...
@@ -133,7 +133,7 @@ Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causin
 In this paper we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random (DSSR) strategy  which starts as a random+ strategy --- a random strategy focusing more on boundary values. When a new failure is found, it increases the chances of finding more faults using neighbouring values. In accordance with previous studies~\cite{Oriol2012} we approximate faults with unique failures. Since this strategy is an extension of random testing strategy, it has the full potential to find all unique failures in the program, but additionally we expect it to be faster at finding unique failures, for classes in which failure domains are contiguous, as compared with random (R) and random+ (R+) strategies.
 
 We implemented DSSR strategy in the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies R, R+ and DSSR. We observed that for 72\% of the classes all three strategies find the same unique failures, for remaining 28\% DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy.
-Numerically, DSSR strategy found 27 more unique failures than R and 11 more unique failures than R+ strategy.
+Numerically, DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy.
 
 
 The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
@@ -393,7 +393,7 @@ The literature review revealed that the F-measure is used where testing stops af
 
 1						& ActionTranslator			&709		& 96		&	96	&	96	& 	0					& 96		& 96 		& 96		& 		0			& 96			& 96			& 96			&	0\\     
 2						& AjTypeImpl				&1180		& 80		&	83	&	79	& 	0.02					& 80		& 83 		& 79		& 		0.02			& 80			& 83			& 79			&	0.01\\      
-\textbf{3}					& \textbf{Apriori}			&\textbf{292}	& \textbf{3}&	\textbf{4}	&\textbf{3}	& \textbf{0.31}			& \textbf{3}& \textbf{4} 		& \textbf{3}& \textbf{0.43}	& \textbf{3}	& \textbf{4}	& \textbf{3}	&\textbf{0.47}\\      
+\textbf{3}					& \textbf{Apriori}			&\textbf{292}	& \textbf{3}&	\textbf{4}	&\textbf{3}	& \textbf{0.10}			& \textbf{3}& \textbf{4} 		& \textbf{3}& \textbf{0.13}	& \textbf{3}	& \textbf{4}	& \textbf{3}	&\textbf{0.14}\\      
 4						& BitSet					&575		& 9		&	9	&	9	& 	0					& 9		& 9 		& 9		& 		0			& 9			& 9			& 9			&	0\\       
 5						& CatalogManager			&538		& 7		&	7	&	7	& 	0					& 7		& 7 		& 7		& 		0			& 7			& 7			& 7			&	0\\    
 \textbf{6}					& \textbf{CheckAssociator}	&\textbf{351}	& \textbf{7}	&	\textbf{8}	&	\textbf{2}	& 	\textbf{0.16}					& \textbf{6}		& \textbf{9} 		& \textbf{2}		& 		\textbf{0.18}			& \textbf{7}			& \textbf{9}			& \textbf{6}			&	\textbf{0.73}\\    
@@ -452,7 +452,7 @@ The literature review revealed that the F-measure is used where testing stops af
 59						& XObject					&318		& 19		&	19	&	19	& 	0					& 19		&  19		& 19		& 		0			& 19			& 19			& 19			&	0\\      
 \textbf{60}						& \textbf{XString}					&\textbf{546}		& \textbf{23}		&	\textbf{24}	&	\textbf{21}	& 	\textbf{0.04}					& \textbf{23}		&  \textbf{24}		& \textbf{23}		& 		\textbf{0.02}			& \textbf{24}			& \textbf{24}			& \textbf{23}			&	\textbf{0.02}\\      
 
-    						\multicolumn{2}{c}{\textbf{Total}}	&35,785	&1042	&	1090	&    957	&	6.6198				& 1061	&1106	&1013	&		6.0520		& 1075		& 1117		& 1028		& 	0.0585\\
+    						\multicolumn{2}{c}{\textbf{Total}}	&35,785	&1040	&	1075	&    973	&	2.42				& 1061	&1106	&1009	&		2.35		& 1075		& 1118		& 1032		& 	1.82\\
    %\hline
      \end{tabularx} }
  	%\end{minipage}
@@ -461,7 +461,10 @@ The literature review revealed that the F-measure is used where testing stops af
 \end{table*}
 
 \section{Results}\label{sec:res}
-Results of the experiments including class name, Line of Code (LOC), mean value, maximum and minimum number of unique failures and relative standard deviation for each of the 60 classes tested using R, R+ and DSSR strategy are presented in Table~\ref{table:Results}. As evident from the table, each strategy found equal number of faults in 43 classes while in the remaining 17 classes the three strategies performed different from one another. The sum total of each column is revealed in the last row of Table~\ref{table:Results} which shows that the total of mean values of unique failures in DSSR (1075) is greater than that of R (1042) and R+ (1061) strategy. Results given in Table~\ref{table:Results} can be split into eleven different categories as shown in Table~\ref{table:categories}. It is also evident from the table that DSSR strategy finds a higher number of maximum unique failures (1117) than R (1090), and R+ (1106). Numerically, DSSR strategy finds 27 and 11 more unique faults as compared to R and R+ strategy respectively. The minimum number of unique faults found by DSSR strategy (1028) is also greater as compared to R (957) and R+ (1013) which attributes to higher efficiency of DSSR strategy over R and R+ strategies. TTest applied on the data reveals that the DSSR strategy is significantly better (P < .02) than R as well as R+ strategy (P < .03). Comparison between R+ and R shows statistically no significant difference (P > .05).
+Results of the experiments including class name, Line of Code (LOC), mean value, maximum and minimum number of unique failures and relative standard deviation for each of the 60 classes tested using R, R+ and DSSR strategy are presented in Table~\ref{table:Results}. As evident from the table, each strategy found equal number of faults in 43 classes while in the remaining 17 classes the three strategies performed different from one another. The sum total of each column is revealed in the last row of Table~\ref{table:Results} which shows that the total of mean values of unique failures in DSSR (1075) is greater than that of R (1040) and R+ (1061) strategy. 
+%Results given in Table~\ref{table:Results} can be split into eleven different categories as shown in Table~\ref{table:categories}. 
+It is also evident from the table that DSSR strategy finds a higher number of maximum unique failures (1118) than R (1070), and R+ (1106). Numerically, DSSR strategy finds 43 and 12 more unique faults as compared to R and R+ strategy respectively. The minimum number of unique faults found by DSSR strategy (1032) is also greater as compared to R (973) and R+ (1009) which attributes to higher efficiency of DSSR strategy over R and R+ strategies. 
+%TTest applied on the data reveals that the DSSR strategy is significantly better (P < .02) than R as well as R+ strategy (P < .03). Comparison between R+ and R shows statistically no significant difference (P > .05).
 
 % How to write relative standard deviation.
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
@@ -478,10 +481,61 @@ The improvement of DSSR over R and R+ strategy is calculated by applying the for
 
 The findings show that DSSR strategy perform up to 33\% better than R and up to 17\% better than R+ strategy. In some cases DSSR strategy perform equally well with R and R+ but in no case DSSR performed lower than R and R+ strategies. Based on the results it can be stated that DSSR strategy is a better choice than R and R+ strategy. 
 
+
+
+\begin{table*}[htp]
+\small
+\caption{T-test results of the classes showing different results}
+\centering
+\begin{tabular}{rlrrrl}
+ \multirow{2}{*} {S. No}	& \multirow{2}{*}{Class Name}	&  \multicolumn{3}{c}{T-test Results} & \multirow{2}{*}{Significance} \\
+
+								& & 	DSSR, R	& DSSR, R+	&  R, R+ 	& 		\\
+
+1		&	AjTypeImpl		&	1 				& 1 			& 1			& 		\\	
+2		&	Apriori			&	\textbf{0.03}	 	& 0.49		& 0.16		&		\\	
+3		&	CheckAssociator	&	\textbf{0.04}	 	& \textbf{0.05}	& 0.44		& DSSR better		\\	
+4		&	Debug			&	\textbf{0.03}	 	& 0.14		& 0.56		&		\\	
+5		&	DirectoryScanner	&	\textbf{0.04}	 	& \textbf{0.01}	& 0.43		& DSSR better		\\
+6		&	DomParser		&	\textbf{0.05}	 	& 0.23		& 0.13		&				\\
+7		&	EntityDecoder		&	\textbf{0.04}	 	& 0.28		& 0.3			&		\\			
+8		&	Font				&	0.18	 			& 0.18		& 1			&		\\
+9		&	Group			&	0.33	 			& \textbf{0.03}	& \textbf{0.04}	& DSSR = R > R+	\\
+10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61		& DSSR better \\		
+11		&	InstrumentTask		&	0.16				& 0.33		& 0.57		& \\
+12		&	JavaWrapper		&	\textbf{0.001}		& 0.57		& 0.004		& DSSR = R+ > R \\
+13		& 	JmxUtilities		&	0.13				& 0.71		& 0.08		&	\\
+14		&	List				& 	\textbf{0.01}		&0.25		&\textbf{0}		& DSSR = R+ > R \\
+15		&	NodeSequence	&	0.97				&\textbf{0.04}	&\textbf{0.06}	& DSSR = R > R+ \\
+16		&	NodeSet			&	\textbf{0.03}		&0.42		&0.26		& 	\\
+17		&	Project			&	\textbf{0.001}		&0.57		&\textbf{0.004}	& DSSR = better \\		
+18		&	Repository		&	\textbf{0}			&1			&\textbf{0}		& DSSR = R+ > R \\
+19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR better \\
+20		&	Scene			&	\textbf{0}			&\textbf{0}		& 1			& DSSR better \\
+21		&	Server			&	\textbf{0.03}		& 0.88		&\textbf{0.03} 	& DSSR = R+ > R \\
+22		&	Sorter			& 	\textbf{0}			& 0.33		&\textbf{0}		& DSSR = R+ > R \\
+23		&	Statistics			&	\textbf{0}			& 0.43		&\textbf{0}		& DSSR = R+ > R\\
+24		&	Stopwords		&	\textbf{0}			& 0.23		&\textbf{0}		& DSSR = R+ > R \\
+25		&	StringHelper		&	\textbf{0.03}		& 0.44		&0.44		& DSSR = R+ > R\\
+26		& 	Trie				&	0.1				& 0.33		&0.47		& DSSR better \\
+27		&	WebMacro		&	0.33				& 1			&0.16		& \\
+28		&	XMLEntityManager	&	0.33				& 0.33		&0.16		& \\
+29 		&	XString			&	0.14				&\textbf{0.03}	&0.86		& \\
+
+
+\end{tabular}
+\bigskip
+\label{table:categories}
+\end{table*}
+
+
+
+
+
 \subsection{Are there classes for which any of the three strategies provide better results?}
 
-Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
-
+%Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
+\begin{comment}
 \begin{table}[h]
 \caption{Results of the 60 classes are divided into 11 categories}
 \centering
@@ -505,7 +559,7 @@ S. No	& 	Category			& 	Result\\
 \bigskip
 \label{table:categories}
 \end{table}
-
+\end{comment}
 
 
 % pie chart is removed because the length of the paper is exceeding 10 pages and also it don't make much sense i believe.
