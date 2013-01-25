@@ -371,7 +371,7 @@ The literature review revealed that the F-measure is used where testing stops af
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=18cm]{DssrImprove.png}
+\includegraphics[width=17cm]{DssrImprove.png}
 \caption{Improvement of DSSR strategy over Random and Random+ strategy.}
 \label{fig:LineChart}
 \end{figure*}
@@ -462,9 +462,9 @@ The literature review revealed that the F-measure is used where testing stops af
 
 \section{Results}\label{sec:res}
 Results of the experiments including class name, Line of Code (LOC), mean value, maximum and minimum number of unique failures and relative standard deviation for each of the 60 classes tested using R, R+ and DSSR strategy are presented in Table~\ref{table:Results}. As evident from the table, each strategy found equal number of faults in 43 classes while in the remaining 17 classes the three strategies performed different from one another. The sum total of each column is revealed in the last row of Table~\ref{table:Results} which shows that the total of mean values of unique failures in DSSR (1075) is greater than that of R (1040) and R+ (1061) strategy. 
-%Results given in Table~\ref{table:Results} can be split into eleven different categories as shown in Table~\ref{table:categories}. 
+%Results given in Table~\ref{table:ttest} can be split into three different categories as shown in Table~\ref{table:categories}. 
 It is also evident from the table that DSSR strategy finds a higher number of maximum unique failures (1118) than R (1070), and R+ (1106). Numerically, DSSR strategy finds 43 and 12 more unique faults as compared to R and R+ strategy respectively. The minimum number of unique faults found by DSSR strategy (1032) is also greater as compared to R (973) and R+ (1009) which attributes to higher efficiency of DSSR strategy over R and R+ strategies. 
-%TTest applied on the data reveals that the DSSR strategy is significantly better (P < .02) than R as well as R+ strategy (P < .03). Comparison between R+ and R shows statistically no significant difference (P > .05).
+TTest applied on the data given in Table~\ref{table:ttest} reveals that the DSSR strategy is significantly better in 6 classes from R and R+ strategy, in 8 classes DSSR strategy performed equal to R+ strategy  but significantly greater than R strategy, in only 2 classes DSSR strategy performed equal to R strategy but significantly greater than R+ strategy while in no case R and R+ strategy performed significantly better than DSSR strategy.
 
 % How to write relative standard deviation.
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
@@ -525,7 +525,7 @@ The findings show that DSSR strategy perform up to 33\% better than R and up to 
 
 \end{tabular}
 \bigskip
-\label{table:categories}
+\label{table:ttest}
 \end{table*}
 
 
@@ -533,6 +533,10 @@ The findings show that DSSR strategy perform up to 33\% better than R and up to 
 
 
 \subsection{Are there classes for which any of the three strategies provide better results?}
+
+
+TTest applied on the data given in Table~\ref{table:ttest} reveals that the DSSR strategy is significantly better in 6 classes from R and R+ strategy, in 8 classes DSSR strategy performed equal to R+ strategy  but significantly greater than R strategy, in only 2 classes DSSR strategy performed equal to R strategy but significantly greater than R+ strategy while in no case R and R+ strategy performed significantly better than DSSR strategy. Expressing in percentage, 53\% classes do not show different behaviours whereas in 47\% of classes, the DSSR strategy performs better or equal than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
+
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
 \begin{comment}
