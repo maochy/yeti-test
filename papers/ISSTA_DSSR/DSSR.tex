@@ -113,7 +113,7 @@ Manuel Oriol \\
 This paper presents a new, enhanced and improved form of automated random testing, named the Dirt Spot Sweeping Random (DSSR) strategy. It is based on the assumption that faults and unique failures reside in contiguous block and strip patterns. The DSSR strategy starts as a regular random+ testing strategy --- a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failure found in hope of finding failures of different kind in its vicinity.
 
 The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random and random+ strategies by testing 60 classes (35, 785 line of code) with one million ($10^5$) calls for each session, 30 times for each strategy.
-The results indicate that for 72\% of the classes tested all three strategies find the same unique failures while for the remaining 28\% classes DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy. Numerically, the DSSR strategy finds 43 more unique failures than random and 12 more unique failures than random+ strategy.
+The results indicate that for 53\% of the classes tested all three strategies find the same unique failures while for the remaining 47\% classes DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy. Numerically, the DSSR strategy finds 43 more unique failures than random and 12 more unique failures than random+ strategy.
 \end{abstract}
 
 %A category including the fourth, optional field follows...
@@ -132,7 +132,7 @@ Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causin
 
 In this paper we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random (DSSR) strategy  which starts as a random+ strategy --- a random strategy focusing more on boundary values. When a new failure is found, it increases the chances of finding more faults using neighbouring values. In accordance with previous studies~\cite{Oriol2012} we approximate faults with unique failures. Since this strategy is an extension of random testing strategy, it has the full potential to find all unique failures in the program, but additionally we expect it to be faster at finding unique failures, for classes in which failure domains are contiguous, as compared with random (R) and random+ (R+) strategies.
 
-We implemented DSSR strategy in the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies R, R+ and DSSR. We observed that for 72\% of the classes all three strategies find the same unique failures, for remaining 28\% DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy.
+We implemented DSSR strategy in the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies find the same unique failures, for remaining 47\% DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy.
 Numerically, DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy.
 
 
@@ -471,7 +471,7 @@ It is also evident from the table that DSSR strategy finds a higher number of ma
 To answer the research question, results section is divided into three sub-sections.
 
 \subsection{Is there an absolute best among R, R+ and DSSR strategies?}
-To get the answer we concentrate on 17 out of 60 classes and ignore 43 classes in which all three strategies performed equally well. Figure~\ref{fig:LineChart} presents improvements of DSSR strategy over R and R+ strategy. The blue line with diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R+ strategy. these classes where blue line with diamond symbols show the improvement of DSSR over R and red line with square symbols show the improvement of DSSR over R+. 
+To get the answer we concentrate on 29 out of 60 classes and ignore 31 classes in which all three strategies performed equally well. Figure~\ref{fig:LineChart} presents improvements of DSSR strategy over R and R+ strategy. The blue line with diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R+ strategy. these classes where blue line with diamond symbols show the improvement of DSSR over R and red line with square symbols show the improvement of DSSR over R+. 
 
 The improvement of DSSR over R and R+ strategy is calculated by applying the formula (1) and (2) respectively.
 
@@ -559,8 +559,6 @@ S. No	& 	Category			& 	Result\\
 \bigskip
 \label{table:categories}
 \end{table}
-\end{comment}
-
 
 % pie chart is removed because the length of the paper is exceeding 10 pages and also it don't make much sense i believe.
 %\begin{figure}[h]
@@ -585,6 +583,8 @@ The seventh category contain 2 classes where R and R+ performs equally well.
 The eighth category contain 4 classes where R performs better than R+.
 Category 9 and 10 shows that neither R nor R+ performed better than DSSR strategy.
 The last category shows each strategy performing equally well for 43 classes. Expressing in percentage, 72\% classes do not show different behaviours whereas in 28\% of classes, the DSSR strategy performs better than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
+
+\end{comment}
 
 \subsection{Can we pick the best default strategy between R, R+ and DSSR strategies?}
 
@@ -658,7 +658,7 @@ In our experiments we selected projects from Qualitas Corpus~\cite{Tempero2010} 
 
 
 \section{Conclusions}\label{sec:conc}
-The main goal of the present study was to develop a new random strategy which could find more faults in lower number of test cases. We developed a new strategy named. ' 'DSSR strategy" as an extension of R+ strategy, based on the assumption that in a significant number of classes, failure domains are contiguous or located closely. The DSS strategy, a strategy which adds neighbouring value of the failure finding value to a list of interesting values, was implemented in the random testing tool YETI to test 60 classes, 30 times each, from Qualitas Corpus with each of the 3 strategies R, R+ and DSSR. The newly developed DSSR strategy uncovers more unique failures than both random and random+ strategies. However, the achievement involves up to 5\% overhead and this needs to be resolved in future studies. Overall, DSSR strategy yields encouraging results and advocates to develop the technique further for settings in which it is significantly better than both R and R+ strategies.
+The main goal of the present study was to develop a new random strategy which could find more faults in lower number of test cases. We developed a new strategy named. ''DSSR strategy" as an extension of R+ strategy, based on the assumption that in a significant number of classes, failure domains are contiguous or located closely. The DSS strategy, a strategy which adds neighbouring value of the failure finding value to a list of interesting values, was implemented in the random testing tool YETI to test 60 classes, 30 times each, from Qualitas Corpus with each of the 3 strategies R, R+ and DSSR. The newly developed DSSR strategy uncovers more unique failures than both random and random+ strategies. However, the achievement involves up to 5\% overhead and this needs to be resolved in future studies. Overall, DSSR strategy yields encouraging results and advocates to develop the technique further for settings in which it is significantly better than both R and R+ strategies.
 
 %%%%%%%%%%%%%%%%%    ACKNOWDLEGEMENT   %%%%%%%%%%%%%%%%%%%%
 \section{Acknowledgments}
