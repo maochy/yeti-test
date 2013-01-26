@@ -7,6 +7,16 @@ import javax.swing.JOptionPane;
 
 import yeti.ADFDLauncher;
 
+/*
+ * This class reads the two files Pass and Fail line and by line.
+ * From each line it gets the value and assign it to the one of the two arrays.
+ * The values from Pass.txt are stored in graphDataIntPass array
+ * The values from Fail.txt are stored in graphDataIntFail array
+ * 
+ */
+
+
+
 public class GraphDataScanner {
 static int [] graphDataIntFail;
 static int [] graphDataIntPass;
