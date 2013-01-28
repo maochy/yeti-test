@@ -404,8 +404,9 @@ public class ADFDLauncher extends JFrame{
 
 
 
-
-		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+// changed to 100 for test purpose.
+//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+		minValue_TextField = new JTextField("" + -100);
 		gbc.gridx = 1;
 		gbc.gridy = 6;
 		gbc.gridwidth = 1;
@@ -424,8 +425,9 @@ public class ADFDLauncher extends JFrame{
 
 
 
-
-		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+// changed to 100 for test purpose.
+//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+		maxValue_TextField = new JTextField("" + 100);
 		gbc.gridx = 1;
 		gbc.gridy = 7;
 		gbc.gridwidth = 1;

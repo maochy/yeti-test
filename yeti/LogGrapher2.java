@@ -56,7 +56,6 @@ import yeti.GraphDataScanner;
  */
 public class LogGrapher2 {
 
-
 	/**
 	 * Construct a new frame
 	 *
@@ -106,29 +105,36 @@ private XYDataset createDataset() {
 		final XYSeriesCollection dataset = new XYSeriesCollection();
 		
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
-
+		int passValues[] = GraphDataScanner.readPassDataFromFile();	
+		
 		final XYSeries series1 = new XYSeries("Failing input");
-
-		for (int i =0; i < failValues.length; i=i+4 ){
-			series1.add((double)failValues[i],(double)failValues[i+1]);
-			series1.add((double)failValues[i+2],(double)failValues[i+3]);
-			//series1.add((double)failValues[i+2],null);
-			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
-		}
-
 		final XYSeries series2 = new XYSeries("Passing input");
-		
-		int passValues[] = GraphDataScanner.readPassDataFromFile();
-		
+
 		for (int j =0; j < passValues.length; j=j+4){
 			
-			series2.add((double)passValues[j],(double)passValues[j+1]);
-			series2.add((double)passValues[j+2],(double)passValues[j+3]);
+			series2.add((double)passValues[j+1], (double)passValues[j]);
+			series2.add((double)passValues[j+3], (double)passValues[j+2]);
 			series2.add((double)passValues[j+2],null);
+			series2.add((double)passValues[j+3],null);
 			
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
+
+		for (int i =0; i < failValues.length; i=i+8 ){
+			series1.add((double)failValues[i],(double)failValues[i+1]);
+			series1.add((double)failValues[i+2],(double)failValues[i+3]);
+			series1.add((double)failValues[i+2],null);
+			//series1.add((double)failValues[i+3],null);
+			series1.add((double)failValues[i+5], (double)failValues[i+4]);
+			series1.add((double)failValues[i+7], (double)failValues[i+6]);
+			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
+		}
+
+
+		
+
+		
 
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
