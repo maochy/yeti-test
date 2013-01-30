@@ -128,6 +128,7 @@ private XYDataset createDataset() {
 			//series1.add((double)failValues[i+3],null);
 			series1.add((double)failValues[i+5], (double)failValues[i+4]);
 			series1.add((double)failValues[i+7], (double)failValues[i+6]);
+			
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 
