@@ -85,9 +85,11 @@ public class ADFDLauncher extends JFrame{
 	JTextField		minValue_TextField;
 	JTextField		maxValue_TextField;
 	JButton 		plot_Button;
-	JButton 		execute_Button;
-	JButton 		compile_Button;
-	JButton 		generated_Button;
+	JLabel 			execute_Label;
+	JLabel 			compile_Label;
+	JLabel 			generated_Label;
+	JComboBox 		time1_ComboBox;
+	JComboBox		time2_ComboBox;
 
 
 	public static String testFilePathInitial = ".";
@@ -101,12 +103,13 @@ public class ADFDLauncher extends JFrame{
 	String 		time 				 = "-time=5s";
 	static	int totalFiles 			 = 0;
 	int 		countCompileFiles;
+	int 		waitForYetiToFinish;
 
 
 
 	String[] languages = {"Java", ".Net", "JML", "Pharo", "CoFoJa", "Kermeta" };
 	String[] strategies = {"ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
-	String[] time1 = {"5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
+	String[] time1 = {"2", "5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 	String[] time2 = {"Seconds", "Minutes" };
 	String[] command;
 	String[] filesToCompileArray;
@@ -116,7 +119,7 @@ public class ADFDLauncher extends JFrame{
 
 	Thread thread1 = new Thread(new Thread1());
 	Thread thread2 = new Thread(new Thread2());
-	Thread thread3 = new Thread(new Thread3());
+	//Thread thread3 = new Thread(new Thread3());
 	Thread thread4 = new Thread(new Thread4());
 
 	GridBagConstraints 	gbc;
@@ -146,6 +149,7 @@ public class ADFDLauncher extends JFrame{
 		this.add(panel2, BorderLayout.NORTH);
 		this.add(panel3, BorderLayout.CENTER); 
 		this.setVisible(true);
+		//this.setAlwaysOnTop(true);
 		//this.pack();
 
 
@@ -285,12 +289,12 @@ public class ADFDLauncher extends JFrame{
 		gbc.gridy = 2;
 		panel1.add(duration_Label, gbc);
 
-		final JComboBox time1_ComboBox = new JComboBox(time1);
+		time1_ComboBox = new JComboBox(time1);
 		gbc.gridx = 1;
 		gbc.gridy = 2;
 		panel1.add(time1_ComboBox, gbc);
 
-		final JComboBox time2_ComboBox = new JComboBox(time2);
+		time2_ComboBox = new JComboBox(time2);
 		gbc.gridx = 2;
 		gbc.gridy = 2;
 		panel1.add(time2_ComboBox, gbc);
@@ -404,8 +408,8 @@ public class ADFDLauncher extends JFrame{
 
 
 
-// changed to 100 for test purpose.
-//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+		// changed to 100 for test purpose.
+		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
 		minValue_TextField = new JTextField("" + -100);
 		gbc.gridx = 1;
 		gbc.gridy = 6;
@@ -425,8 +429,8 @@ public class ADFDLauncher extends JFrame{
 
 
 
-// changed to 100 for test purpose.
-//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+		// changed to 100 for test purpose.
+		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
 		maxValue_TextField = new JTextField("" + 100);
 		gbc.gridx = 1;
 		gbc.gridy = 7;
@@ -437,140 +441,46 @@ public class ADFDLauncher extends JFrame{
 
 		/////////// Run Label, Button and ActionListener /////////////////
 
-		JButton run_Button = new JButton("Run Test");
-		gbc.gridx = 1;
-		gbc.gridy = 8;
-		gbc.gridwidth = 2;
-		gbc.fill = GridBagConstraints.HORIZONTAL;
-		panel1.add(run_Button, gbc);
-
-		run_Button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-				time = "-time=" + time1_ComboBox.getSelectedItem().toString();
-				if(time2_ComboBox.getSelectedItem().equals("Minutes")){
-					time = time + "mn";
-				} else {
-					time = time + "s";
-				}
-
-				// @@@@@@@ Output the values to see correct or not for troubleshooting @@@@@@ //
-
-				//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
-				//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
-
-				list.add(language);
-				list.add(strategy);
-				list.add(time);
-				list.add(gui);
-				list.add(logs);
-				list.add(fileName);
-				list.add(testFilePathFinal);
-				YetiADFDStrategy.lowerLimit = minValue_TextField.getText();
-				YetiADFDStrategy.upperLimit = maxValue_TextField.getText();
-
-				command = list.toArray(new String[list.size()]);
 
 
-
-				try{
-					thread1.start();
-				}
-				catch(Exception e1){
-					e1.printStackTrace();
-				}
-			}
-		});
 
 
 
 		//////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of generated Files //////
 
-		generated_Button = new JButton("Count Files:");
-		gbc.gridx = 1;
+		generated_Label = new JLabel("Count Files:");
+		gbc.gridx = 0;
 		gbc.gridy = 9;
 		gbc.gridwidth = 1;
-		panel1.add(generated_Button, gbc);
+		panel1.add(generated_Label, gbc);
 
 		generated_TextField = new JTextField("");
-		gbc.gridx = 2;
+		gbc.gridx = 1;
 		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
-		generated_Button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try{
-
-					String files;
-					File folder = new File(testFilePathInitial);
-					File[] listOfFiles = folder.listFiles();
-
-					for (int i=0; i < listOfFiles.length; i++)
-					{
-						if(listOfFiles[i].isFile()){
-							files = listOfFiles[i].getName();
-							if((files.startsWith("C"))&&(files.endsWith(".java"))){
-								filesToCompile.add(files);
-
-							}
-
-						}
-					}
-
-
-					filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
-
-					generated_TextField.setText(filesToCompileArray.length + " files") ;
-
-				}
-				catch(Exception e1){
-					e1.printStackTrace();
-				}
-			}
-		});
 
 
 		///////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of compiled Files //////
 
 
-		compile_Button = new JButton("Compile Files:");
-		gbc.gridx = 1;
+		compile_Label = new JLabel("Compile Files:");
+		gbc.gridx = 0;
 		gbc.gridy = 10;
-		panel1.add(compile_Button, gbc);
+		panel1.add(compile_Label, gbc);
 
 		compile_TextField = new JTextField("");
-		gbc.gridx = 2;
+		gbc.gridx = 1;
 		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
-		compile_Button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try{
-					int count = 0;
-					for (int i = 0; i < filesToCompileArray.length; i++){
-						Process pro1;
-						pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
-						count = count + 1;
-					}
-					countCompileFiles = count;
-					compile_TextField.setText(count + " files");
-				}
 
-				catch(Exception e1){
-					e1.printStackTrace();
-				}
 
-			}
-		});
+
 
 
 
@@ -578,13 +488,13 @@ public class ADFDLauncher extends JFrame{
 		////// Button, TextField and actionlistener for the number of executed Files /////
 
 
-		execute_Button = new JButton("Execute Files:");
-		gbc.gridx = 1;
+		execute_Label = new JLabel("Execute Files:");
+		gbc.gridx = 0;
 		gbc.gridy = 11;
-		panel1.add(execute_Button, gbc);
+		panel1.add(execute_Label, gbc);
 
 		execute_TextField = new JTextField("");
-		gbc.gridx = 2;
+		gbc.gridx = 1;
 		gbc.gridy = 11;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
@@ -592,37 +502,11 @@ public class ADFDLauncher extends JFrame{
 		execute_ProgressBar = new JProgressBar(0,100);
 		gbc.gridx = 1;
 		gbc.gridy = 12;
-		gbc.gridwidth = 2;
+		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(execute_ProgressBar, gbc);
 
-		execute_Button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
 
-				try{
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
-					thread2.start();
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
-					//thread2.join();
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
-					thread3.start();
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
-					//thread3.join();
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
-					thread4.start();
-					//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
-					//thread4.join();
-
-				}
-
-
-				catch(Exception e1){
-					e1.printStackTrace();
-				}
-
-			}
-
-		});
 
 		///////////////////////////////////////////////////////////////////////////
 		////// Button and action listener for plotting graph /////
@@ -630,71 +514,33 @@ public class ADFDLauncher extends JFrame{
 		plot_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
 		gbc.gridy = 13;
-		gbc.gridwidth = 2;
+		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot_Button, gbc);
 
 		plot_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
+
+
+
 				try{
-
-					//				GraphingData gd = new GraphingData();
-					//				gd.draw();
-
-					//				GraphDataScanner Gdr = new GraphDataScanner();
-					//				Gdr.readFailDataFromFile();
-					//				Gdr.readPassDataFromFile();
-					//				 final LogGraph demo = new LogGraph("Failing and Passing values");
-					//				 demo.pack();
-					//				 RefineryUtilities.centerFrameOnScreen(demo);
-					//				 demo.setVisible(true);
-					//%%%%%%%%%  code for graph2 test %%%%%%%%%%%%%
-
-
-					/* I added this if statement to control the graphs
-					 * so if we get one fault then one C file will be generated and
-					 * thus one argument graph will be create 
-					 * For simplicity we are doing it as a separate class
-					 * Later we will try to do it using one class with different methods or 
-					 * method overloading kind of.
-					 */
-
-					if (countCompileFiles == 1){
-						LogGrapher1 demo = new LogGrapher1("Failure Domains");
-						// added by mian for testing purpose.
-						//JOptionPane.showMessageDialog(null, "LogGrapher1");
-					}
-					else if (countCompileFiles == 2){
-						LogGrapher2 demo = new LogGrapher2("Failure Domains");
-						// added by mian for testing purpose.
-						//JOptionPane.showMessageDialog(null, "LogGrapher2");
-					}
-					else {
-						LogGrapher3 demo = new LogGrapher3("Failure Domains");
-						// added by mian for testing purpose.
-						//JOptionPane.showMessageDialog(null, "LogGrapher3");
-					}
+					runTest();
+					Thread.sleep(waitForYetiToFinish * 1000);
+					countFiles();
+					compileFiles();
+					executeFiles();
+					drawGraph();
 
 
 
-					//demo.pack();
-					//RefineryUtilities.centerFrameOnScreen(demo);
-					//panel3.add(demo);
-					panel3.revalidate();
-					//demo.setVisible(true);
-
-
-					//					LogGraph2 demo = new LogGraph2("FailureDomains");
-					//					demo.pack();
-					//					demo.setLocationRelativeTo(null);
-					//					demo.setVisible(true);
-					//					JOptionPane.showMessageDialog(null, "working", " Mian", JOptionPane.PLAIN_MESSAGE);
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
 				}
 
 			}
+			
 
 		});
 
@@ -742,7 +588,7 @@ public class ADFDLauncher extends JFrame{
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
 		gbc.gridy = 16;
-		gbc.gridwidth = 2;
+		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
 
@@ -764,6 +610,142 @@ public class ADFDLauncher extends JFrame{
 
 	}
 
+
+	///////////////////////////////////////
+
+
+	public void runTest() {
+
+		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
+		waitForYetiToFinish = Integer.parseInt(time1_ComboBox.getSelectedItem().toString());
+		if(time2_ComboBox.getSelectedItem().equals("Minutes")){
+			waitForYetiToFinish = waitForYetiToFinish * 60;
+			time = time + "mn";
+		} else {
+			time = time + "s";
+		}
+
+		// @@@@@@@ Output the values to see correct or not for troubleshooting @@@@@@ //
+
+		//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
+		//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
+
+		list.add(language);
+		list.add(strategy);
+		list.add(time);
+		list.add(gui);
+		list.add(logs);
+		list.add(fileName);
+		list.add(testFilePathFinal);
+		YetiADFDStrategy.lowerLimit = minValue_TextField.getText();
+		YetiADFDStrategy.upperLimit = maxValue_TextField.getText();
+
+		command = list.toArray(new String[list.size()]);
+
+
+
+		try{
+			thread1.start();
+		}
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+	}
+
+
+
+
+
+	///////////////////////////////////////
+
+
+
+	public void countFiles() {
+		try{
+
+			String files;
+			File folder = new File(testFilePathInitial);
+			File[] listOfFiles = folder.listFiles();
+
+			for (int i=0; i < listOfFiles.length; i++)
+			{
+				if(listOfFiles[i].isFile()){
+					files = listOfFiles[i].getName();
+					if((files.startsWith("C"))&&(files.endsWith(".java"))){
+						filesToCompile.add(files);
+						Thread.sleep(200);
+
+					}
+
+				}
+			}
+
+
+			filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
+
+			generated_TextField.setText(filesToCompileArray.length + " files") ;
+
+		}
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+	}
+	//////////////////////////////////////////
+
+
+
+	public void compileFiles() {
+		try{
+			int count = 0;
+			for (int i = 0; i < filesToCompileArray.length; i++){
+				Process pro1;
+				Thread.sleep(200);
+				pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
+				count = count + 1;
+			}
+			countCompileFiles = count;
+			compile_TextField.setText(count + " files");
+		}
+
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+
+	}
+
+	///////////////////////////////////////
+
+	public void executeFiles(){
+		try{
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
+			thread2.start();
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
+			//thread2.join();
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
+			executeJavaFiles();
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
+			//thread3.join();
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
+			thread4.start();
+			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
+			//thread4.join();
+
+		}
+
+
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+
+	}
+	//////////////////////////////////////////
+
+	
 
 	//////Thread 2 to initialize the progress bar to indeterminate state ///////////////
 
@@ -788,24 +770,25 @@ public class ADFDLauncher extends JFrame{
 
 	//////Thread 3 to execute javac files generated ///////////////
 
-	private class Thread3 implements Runnable{
-		@SuppressWarnings("deprecation")
-		public void run(){
-			try {
-				int count = 0;
-				for (int i = 0; i < filesToCompileArray.length; i++){
-					Runtime.getRuntime().exec("java C"+ i);
-					count++;
-				}
-
-				totalFiles = count;
+	//private class Thread3 implements Runnable{
+	@SuppressWarnings("deprecation")
+	public void executeJavaFiles(){
+		try {
+			int count = 0;
+			for (int i = 0; i < filesToCompileArray.length; i++){
+				Thread.sleep(200);
+				Runtime.getRuntime().exec("java C"+ i);
+				count++;
 			}
 
-			catch(Exception e1){
-				e1.printStackTrace();
-			}
+			totalFiles = count;
+		}
+
+		catch(Exception e1){
+			e1.printStackTrace();
 		}
 	}
+	//}
 
 
 
@@ -857,24 +840,24 @@ public class ADFDLauncher extends JFrame{
 
 	public void hideItems(){
 		execute_TextField.setVisible(false);
-		execute_Button.setVisible(false);
+		execute_Label.setVisible(false);
 		execute_ProgressBar.setVisible(false);
 		plot_Button.setVisible(false);
-		compile_Button.setVisible(false);
+		compile_Label.setVisible(false);
 		compile_TextField.setVisible(false);
-		generated_Button.setVisible(false);
+		generated_Label.setVisible(false);
 		generated_TextField.setVisible(false);
 
 
 	}
 	public void unhideItems(){
 		execute_TextField.setVisible(true);
-		execute_Button.setVisible(true);
+		execute_Label.setVisible(true);
 		execute_ProgressBar.setVisible(true);
 		plot_Button.setVisible(true);
-		compile_Button.setVisible(true);
+		compile_Label.setVisible(true);
 		compile_TextField.setVisible(true);
-		generated_Button.setVisible(true);
+		generated_Label.setVisible(true);
 		generated_TextField.setVisible(true);
 
 
@@ -889,6 +872,35 @@ public class ADFDLauncher extends JFrame{
 		catch (Exception e1){
 			e1.printStackTrace();
 		}
+	}
+
+	public void drawGraph(){
+
+		/* I added this if statement to control the graphs
+		 * so if we get one fault then one C file will be generated and
+		 * thus one argument graph will be create 
+		 * For simplicity we are doing it as a separate class
+		 * Later we will try to do it using one class with different methods or 
+		 * method overloading kind of.
+		 */
+
+		if (countCompileFiles == 1){
+			LogGrapher1 demo = new LogGrapher1("Failure Domains");
+
+		}
+		else if (countCompileFiles == 2){
+			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+
+		}
+		else {
+			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+
+		}
+
+
+
+		panel3.revalidate();
+
 	}
 
 
