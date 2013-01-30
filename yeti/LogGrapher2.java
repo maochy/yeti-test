@@ -68,34 +68,13 @@ public class LogGrapher2 {
 		
 		final JFreeChart chart = createChart(dataset);
 		
-		//        final DefaultXYDataset dataset = new DefaultXYDataset();
-		//        dataset.addSeries("Series0", createSeries(0));
-		//        dataset.addSeries("Series1", createSeries(1));
-		//        JFreeChart chart = createChart(dataset);
+
+		
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 
 		chartPanel.setPreferredSize(new Dimension(800, 600));
 		ADFDLauncher.panel3.add(chartPanel);
-		//this.add(chartPanel, BorderLayout.CENTER);
 
-		//        JPanel buttonPanel = new JPanel();
-		//        JButton addButton = new JButton("Add Series");
-		//        buttonPanel.add(addButton);
-		//        addButton.addActionListener(new ActionListener() {
-		//            public void actionPerformed(ActionEvent e) {
-		//                int n = dataset.getSeriesCount();
-		//                dataset.addSeries("Series" + n, createSeries(n));
-		//            }
-		//        });
-		//        JButton remButton = new JButton("Remove Series");
-		//        buttonPanel.add(remButton);
-		//        remButton.addActionListener(new ActionListener() {
-		//            public void actionPerformed(ActionEvent e) {
-		//                int n = dataset.getSeriesCount() - 1;
-		//                dataset.removeSeries("Series" + n);
-		//            }
-		//        });
-		//        this.add(buttonPanel, BorderLayout.SOUTH);
 	}
 
 

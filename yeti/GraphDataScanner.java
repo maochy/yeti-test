@@ -28,8 +28,10 @@ public static int[] readFailDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File(ADFDLauncher.testFilePathInitial + "Fail.txt");
-   scan = new Scanner(f);
+   //f = new File(ADFDLauncher.testFilePathInitial + "Fail.txt");
+   //testing purpose.
+	f = new File("." , "Fail.txt");
+	scan = new Scanner(f);
 }
 catch(Exception e1){
    e1.printStackTrace();
@@ -53,7 +55,8 @@ public static int[] readPassDataFromFile(){
 File f = null;
 Scanner scan = null;
 try{
-   f = new File(ADFDLauncher.testFilePathInitial + "Pass.txt");
+//   f = new File(ADFDLauncher.testFilePathInitial + "Pass.txt");
+	 f = new File("." , "Pass.txt");
    scan = new Scanner(f);
 }
 catch(Exception e1){

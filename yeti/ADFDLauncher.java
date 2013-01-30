@@ -29,6 +29,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import yeti.LogGrapher1;
+import yeti.LogGrapher2;
+import yeti.LogGrapher3;
 import yeti.strategies.YetiADFDStrategy;
 
 import java.awt.*;
@@ -84,7 +86,7 @@ public class ADFDLauncher extends JFrame{
 	JTextField 		execute_TextField;
 	JTextField		minValue_TextField;
 	JTextField		maxValue_TextField;
-	JButton 		plot_Button;
+	JButton 		plot1_Button;
 	JLabel 			execute_Label;
 	JLabel 			compile_Label;
 	JLabel 			generated_Label;
@@ -118,10 +120,8 @@ public class ADFDLauncher extends JFrame{
 	ArrayList<String> 	filesToCompile	 = new ArrayList<String>();
 
 	Thread thread1 = new Thread(new Thread1());
-	Thread thread2 = new Thread(new Thread2());
-	//Thread thread3 = new Thread(new Thread3());
-	Thread thread4 = new Thread(new Thread4());
 
+	
 	GridBagConstraints 	gbc;
 	JProgressBar 		execute_ProgressBar;
 	ImageIcon 			duckImage;
@@ -149,8 +149,10 @@ public class ADFDLauncher extends JFrame{
 		this.add(panel2, BorderLayout.NORTH);
 		this.add(panel3, BorderLayout.CENTER); 
 		this.setVisible(true);
+
 		//this.setAlwaysOnTop(true);
 		//this.pack();
+	
 
 
 	}
@@ -511,39 +513,56 @@ public class ADFDLauncher extends JFrame{
 		///////////////////////////////////////////////////////////////////////////
 		////// Button and action listener for plotting graph /////
 
-		plot_Button = new JButton("Draw Fault Domain");
+		plot1_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
 		gbc.gridy = 13;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
-		panel1.add(plot_Button, gbc);
+		panel1.add(plot1_Button, gbc);
 
-		plot_Button.addActionListener(new ActionListener() {
+		plot1_Button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-
-
-
 				try{
+					
+					
+					// The runTest method executes YETi 
+					
 					runTest();
-					Thread.sleep(waitForYetiToFinish * 1000);
-					countFiles();
-					compileFiles();
-					executeFiles();
-					drawGraph();
-
-
-
+					
+					// This time is used so that count etc dont execute untill yeti is finished 
+					// So once yeti is finished the count will execute to count the generated files
+					// then compile to compile it and execute to execute it.
+					// Each one also has some delay inside their for loop because
+					// creating text files and compiling etc takes some time.
+					
+					new java.util.Timer().schedule( 
+					        new java.util.TimerTask() {
+					            @Override
+					            public void run() {
+									countFiles();
+									compileFiles();
+									executeFiles();
+									drawGraph();
+									panel3.revalidate();
+								
+					            }
+					        }, 
+					        waitForYetiToFinish
+					);
+					
+					
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
 				}
-
+				
+				
 			}
 			
 
 		});
-
+		
 		roseImage();
 
 		// this label are added to create a gap between exit and help from plot button.
@@ -619,10 +638,11 @@ public class ADFDLauncher extends JFrame{
 		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
 		waitForYetiToFinish = Integer.parseInt(time1_ComboBox.getSelectedItem().toString());
 		if(time2_ComboBox.getSelectedItem().equals("Minutes")){
-			waitForYetiToFinish = waitForYetiToFinish * 60;
+			waitForYetiToFinish = waitForYetiToFinish * 60 * 1000;
 			time = time + "mn";
 		} else {
 			time = time + "s";
+			waitForYetiToFinish = waitForYetiToFinish * 1000;
 		}
 
 		// @@@@@@@ Output the values to see correct or not for troubleshooting @@@@@@ //
@@ -658,7 +678,35 @@ public class ADFDLauncher extends JFrame{
 	}
 
 
+////////////////////////////////////////////
+	public void drawGraph(){
+		
+	
+		JOptionPane.showMessageDialog(null,  " Graph is");
+	
+		/* I added this if statement to control the graphs
+		 * so if we get one fault then one C file will be generated and
+		 * thus one argument graph will be create 
+		 * For simplicity we are doing it as a separate class
+		 * Later we will try to do it using one class with different methods or 
+		 * method overloading kind of.
+		 */
 
+		if (countCompileFiles == 1){
+			LogGrapher1 demo = new LogGrapher1("Failure Domains");
+
+		}
+		else if (countCompileFiles == 2){
+			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+	
+		}
+		else {
+			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+
+		}
+		
+
+	}
 
 
 	///////////////////////////////////////
@@ -723,7 +771,7 @@ public class ADFDLauncher extends JFrame{
 	public void executeFiles(){
 		try{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
-			thread2.start();
+			progressStart();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
 			//thread2.join();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);
@@ -731,9 +779,11 @@ public class ADFDLauncher extends JFrame{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
-			thread4.start();
+			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
 			//thread4.join();
+
+
 
 		}
 
@@ -749,14 +799,12 @@ public class ADFDLauncher extends JFrame{
 
 	//////Thread 2 to initialize the progress bar to indeterminate state ///////////////
 
-	private class Thread2 implements Runnable{
 
-		public void run(){
+		public void progressStart(){
 
 			try {
 				execute_ProgressBar.setIndeterminate(true);
-				execute_ProgressBar.setStringPainted(true);
-				plot_Button.setEnabled(false);
+				execute_ProgressBar.setStringPainted(true); 
 
 			}
 
@@ -766,8 +814,6 @@ public class ADFDLauncher extends JFrame{
 		}
 
 
-	}
-
 	//////Thread 3 to execute javac files generated ///////////////
 
 	//private class Thread3 implements Runnable{
@@ -776,12 +822,13 @@ public class ADFDLauncher extends JFrame{
 		try {
 			int count = 0;
 			for (int i = 0; i < filesToCompileArray.length; i++){
-				Thread.sleep(200);
+				Thread.sleep(2000);
 				Runtime.getRuntime().exec("java C"+ i);
 				count++;
 			}
 
 			totalFiles = count;
+		
 		}
 
 		catch(Exception e1){
@@ -794,9 +841,7 @@ public class ADFDLauncher extends JFrame{
 
 	//////Thread 4 to update the status of progressbar when pass and fail files are generated ///////////////
 
-	private class Thread4 implements Runnable{
-		@SuppressWarnings("deprecation")
-		public void run(){
+		public void progressStop(){
 
 
 			File file = new File(testFilePathInitial + "Pass.txt");
@@ -812,7 +857,7 @@ public class ADFDLauncher extends JFrame{
 				execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
 				execute_ProgressBar.setIndeterminate(false);
 				execute_TextField.setText(totalFiles + " files");
-				plot_Button.setEnabled(true);
+		
 
 			}
 			catch(Exception e1){
@@ -820,7 +865,6 @@ public class ADFDLauncher extends JFrame{
 			}
 
 		}
-	}
 
 	//////Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable ///////////////
 	@SuppressWarnings("unused")
@@ -842,7 +886,7 @@ public class ADFDLauncher extends JFrame{
 		execute_TextField.setVisible(false);
 		execute_Label.setVisible(false);
 		execute_ProgressBar.setVisible(false);
-		plot_Button.setVisible(false);
+		plot1_Button.setVisible(false);
 		compile_Label.setVisible(false);
 		compile_TextField.setVisible(false);
 		generated_Label.setVisible(false);
@@ -854,7 +898,7 @@ public class ADFDLauncher extends JFrame{
 		execute_TextField.setVisible(true);
 		execute_Label.setVisible(true);
 		execute_ProgressBar.setVisible(true);
-		plot_Button.setVisible(true);
+		plot1_Button.setVisible(true);
 		compile_Label.setVisible(true);
 		compile_TextField.setVisible(true);
 		generated_Label.setVisible(true);
@@ -871,38 +915,14 @@ public class ADFDLauncher extends JFrame{
 		}
 		catch (Exception e1){
 			e1.printStackTrace();
+		
 		}
-	}
+		
 
-	public void drawGraph(){
-
-		/* I added this if statement to control the graphs
-		 * so if we get one fault then one C file will be generated and
-		 * thus one argument graph will be create 
-		 * For simplicity we are doing it as a separate class
-		 * Later we will try to do it using one class with different methods or 
-		 * method overloading kind of.
-		 */
-
-		if (countCompileFiles == 1){
-			LogGrapher1 demo = new LogGrapher1("Failure Domains");
-
-		}
-		else if (countCompileFiles == 2){
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-
-		}
-		else {
-			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-
-		}
-
-
-
-		panel3.revalidate();
 
 	}
 
+	
 
 }
 
