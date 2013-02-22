@@ -213,6 +213,38 @@ One can specify the lower and upper bound to limit the search. ADFD will supply 
 %\end{figure*}
 %\end{center}
 
+%\begin{center}
+\begin{table}[ht]
+%\renewcommand{\arraystretch}{2}
+\centering
+%{\small} %normalsize
+
+\begin{tabular}{|l|}
+
+\hline 
+current\_faults: INTEGER\\
+old\_faults: INTEGER\\
+...\\
+\\
+current\_faults := track\_number\_of\_errors\\
+old\_faults := 0\\
+if ( current\_faults > old\_faults)\\
+then \\
+old\_faults := current\_faults\\
+Generate a program dynamically \\
+with the following algorithm.\\
+ ...\\
+ \\
+ continue testing \\
+\hline
+
+
+\end{tabular}
+\caption{Algorithm 1 and 2}
+
+\label{tb:algorithm}
+\end{table}
+%\end{center}
 
 
 
@@ -229,6 +261,107 @@ One can specify the lower and upper bound to limit the search. ADFD will supply 
 
 
 
+
+%We found that it is better for the developer to see the range because the fault can be found once but it can generate errors at multiple locations.like point pattern in the first graph only generate fault at location 0 but if the same zero is assigned to second argument then the whole domain values can fail.\\
+
+
+%\begin{figure}[htp]
+%\centering
+%\includegraphics[width=8.5cm,height=6cm]{oneArgumentPointDomain.png}
+%\caption{Point pattern failure domain}
+%\label{fig:patterns}
+%\end{figure}
+
+
+%Figure \ref{fig:point} shows the example of point pattern. In sub figure \ref{fig1:a} test only fails for 0 out of the whole integer range where as in sub figure \ref{fig1:b} all test fails when static variable is assigned with 0 value.
+
+
+%\begin{figure}[htp]
+%\centering
+%\includegraphics[width=4cm,height=4cm]{block_pattern.png}
+%\caption{Block pattern failure domain}
+%\label{fig:patterns}
+%\end{figure}
+
+
+%Figure \ref{fig:block} shows the example of block pattern. Both sub figure \ref{fig1:a} and \ref{fig1:b} shows the block pattern of failure. The failure values are given in table \ref{tb:failtable}.
+
+%\begin{figure}[htp]
+%\centering
+%\begin{center}
+%  % Maximum length
+ %\subfloat[Test 1 A]{\label{fig1:a}\includegraphics[width=0.49\linewidth]{excel_png/strip_pattern_B.png}}\hfill
+ %\subfloat[Test 1 B]{\label{fig1:b}\includegraphics[width=0.49\linewidth]{excel_png/strip_pattern_A.png}}
+%  end{center}
+%\caption{Strip pattern failure domain}
+%%  \label{fig:strip}
+%\end{figure}
+
+%Figure shows the example of strip pattern. Here we have two strip failure pattern for test 1 shown in \ref{fig1:a} and \ref{fig1:b} while 1 other for test 2 given in . The failure values are given in table .\\
+
+\section{Implementation}
+ We implemented ADFD strategy in a tool called York Extensible Testing Infrastructure (YETI) \cite{Oriol2010a}. YETI is available in open-source at http://code.google.com/p/yeti-test/. In this section we give a brief overview of YETI, integration of ADFD strategy in YETI and a simple example to illustrate the working of ADFD strategy.
+
+ \subsection{York Extensible Testing Infrastructure}
+ It is a testing tool developed in Java that test programs in an automated fashion using random strategies. YETI meta model is language-agnostic which enables it to test programs written in multiple languages that include Java, C\#, JML, .Net and Pharo. YETI consist of three main parts that include the core infrastructure responsible for extendibility through specialisation, the strategies section to adjust multiple strategies and language-specific bindings to provide support for multiple languages \cite{Oriol2010}. 
+ 
+ \subsection{ADFD strategy in YETI}
+Strategies package in YETI contain all the strategies including random, random+ and DSSR that can be selected for testing according to the specific needs. The default test strategy for testing is simple random. On top of the hierarchy is an abstract class YetiStrategy which is extended by YetiRandomStrategy and it is further extended to get ADFD strategy as shown in figure \ref{fig:hierarchy}. 
+ 
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3cm,height=4cm]{Hierarchy1.png}
+\caption{Class Hierarchy of automated discovery of failure domains in YETI}
+\label{fig:hierarchy}
+\end{figure}
+
+\subsection{Example}\label{sec:example}
+The goal of ADFD is to find the fault in the SUT and its existence across the complete domain in an automated way. This helps the developers to debug the code keeping in view its every occurrence that may otherwise go unnoticed.
+Published programs from literature \cite{Chen2003}\cite{Chan1996}\cite{Chen2004} of point, block and strip failure patterns are tested to explain the working of ADFD . These programs were translated in to java language for this experiment (See appendix 1 for more details). \\
+%ADFD is a two step process where first step is to test the program through YETI and the second step is to execute the programs generated at the end of the first step. 
+
+\begin{lstlisting}
+/**
+* Point Fault Domain example 
+* for one argument
+* @author (Mian and Manuel)
+*/
+public class PointDomainOneArgument{
+
+	public static void pointErrors (int x){
+     		if (x == -66 )
+       			abort();
+     
+     		if (x == -2 )
+     			abort();
+     
+     		if (x == 51 )
+     			abort();
+     
+     		if (x == 23 )
+     			abort();
+	}
+}
+\end{lstlisting}
+
+ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI tool. 
+
+In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
+
+The next button is compile which compile the generated files and generate the byte code (.class files). The execute button execute the byte code and test the method under test for all the values between upper and lower bound. At the end of execution it generates two files (pass.txt and fail.txt). Pass file contain all the values for which the method performed correctly while fail file contain all the values for which the method under test fail.
+
+The draw fault domain button reads the pass and fail files and plot them on the x, y graph where red line with squares show the failing values while the blue line with square shapes show the passing values.
+
+From the figure {} we can see that the use of ADFD not only found all the faults but from the graph we can also know that the program follows a point domain of failure.
+
+
+\section{Experimental Results}
+\subsection{Experimental setup}
+\subsection{Results}
+
+\section{Discussion}
+
+\section{Related Work}
 %\begin{center}
 \begin{table*}[t]
 %\renewcommand{\arraystretch}{2}
@@ -287,107 +420,6 @@ One can specify the lower and upper bound to limit the search. ADFD will supply 
 \label{tb:failtable}
 \end{table*}
 %\end{center}
-
-%We found that it is better for the developer to see the range because the fault can be found once but it can generate errors at multiple locations.like point pattern in the first graph only generate fault at location 0 but if the same zero is assigned to second argument then the whole domain values can fail.\\
-
-
-%\begin{figure}[htp]
-%\centering
-%\includegraphics[width=8.5cm,height=6cm]{oneArgumentPointDomain.png}
-%\caption{Point pattern failure domain}
-%\label{fig:patterns}
-%\end{figure}
-
-
-%Figure \ref{fig:point} shows the example of point pattern. In sub figure \ref{fig1:a} test only fails for 0 out of the whole integer range where as in sub figure \ref{fig1:b} all test fails when static variable is assigned with 0 value.
-
-
-%\begin{figure}[htp]
-%\centering
-%\includegraphics[width=4cm,height=4cm]{block_pattern.png}
-%\caption{Block pattern failure domain}
-%\label{fig:patterns}
-%\end{figure}
-
-
-%Figure \ref{fig:block} shows the example of block pattern. Both sub figure \ref{fig1:a} and \ref{fig1:b} shows the block pattern of failure. The failure values are given in table \ref{tb:failtable}.
-
-%\begin{figure}[htp]
-%\centering
-%\begin{center}
-%  % Maximum length
- %\subfloat[Test 1 A]{\label{fig1:a}\includegraphics[width=0.49\linewidth]{excel_png/strip_pattern_B.png}}\hfill
- %\subfloat[Test 1 B]{\label{fig1:b}\includegraphics[width=0.49\linewidth]{excel_png/strip_pattern_A.png}}
-%  end{center}
-%\caption{Strip pattern failure domain}
-%%  \label{fig:strip}
-%\end{figure}
-
-%Figure shows the example of strip pattern. Here we have two strip failure pattern for test 1 shown in \ref{fig1:a} and \ref{fig1:b} while 1 other for test 2 given in . The failure values are given in table .\\
-
-\section{Implementation}
- We implemented ADFD strategy in a tool called York Extensible Testing Infrastructure (YETI) \cite{Oriol2010a}. YETI is available in open-source at http://code.google.com/p/yeti-test/. In this section we give a brief overview of YETI, integration of ADFD strategy in YETI and a simple example to illustrate the working of ADFD strategy.
-
- \subsection{York Extensible Testing Infrastructure}
- It is a testing tool developed in Java that test programs in an automated fashion using random strategies. YETI meta model is language-agnostic which enables it to test programs written in multiple languages that include Java, C\#, JML, .Net and Pharo. YETI consist of three main parts that include the core infrastructure responsible for extendibility through specialisation, the strategies section to adjust multiple strategies and language-specific bindings to provide support for multiple languages \cite{Oriol2010}. 
- 
- \subsection{ADFD in YETI}
-Strategies package in YETI contain all the strategies including random, random+ and DSSR that can be selected for testing according to the specific needs. The default test strategy for testing is simple random. On top of the hierarchy is an abstract class YetiStrategy which is extended by YetiRandomStrategy and it is further extended to get ADFD strategy as shown in figure \ref{fig:hierarchy}. 
- 
-\begin{figure}[htp]
-\centering
-\includegraphics[width=3cm,height=4cm]{Hierarchy1.png}
-\caption{Class Hierarchy of automated discovery of failure domains in YETI}
-\label{fig:hierarchy}
-\end{figure}
-
-\subsection{Example}\label{sec:example}
-The goal of ADFD is to find the fault in the SUT and its existence across the complete domain in an automated way. This helps the developers to debug the code keeping in view its every occurrence that may otherwise go unnoticed.
-Published programs from literature \cite{Chen2003}\cite{Chan1996}\cite{Chen2004} of point, block and strip failure patterns are tested to explain the working of ADFD . These programs were translated in to java language for this experiment (See appendix 1 for more details). \\
-%ADFD is a two step process where first step is to test the program through YETI and the second step is to execute the programs generated at the end of the first step. 
-
-\begin{lstlisting}
-/**
-* Point Fault Domain example 
-* for one argument
-* @author (Mian and Manuel)
-*/
-public class PointDomainOneArgument{
-
-	public static void pointErrors (int x){
-     		if (x == -66 )
-       			abort();
-     
-     		if (x == -2 )
-     			abort();
-     
-     		if (x == 51 )
-     			abort();
-     
-     		if (x == 23 )
-     			abort();
-	}
-}
-\end{lstlisting}
-
-ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI tool. 
-
-In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
-
-The next button is compile which compile the generated files and generate the byte code (.class files). The execute button execute the byte code and test the method under test for all the values between upper and lower bound. At the end of execution it generates two files (pass.txt and fail.txt). Pass file contain all the values for which the method performed correctly while fail file contain all the values for which the method under test fail.
-
-The draw fault domain button reads the pass and fail files and plot them on the x, y graph where red line with squares show the failing values while the blue line with square shapes show the passing values.
-
-From the figure {} we can see that the use of ADFD not only found all the faults but from the graph we can also know that the program follows a point domain of failure.
-
-
-\section{Experimental Results}
-\subsection{Experimental setup}
-\subsection{Results}
-
-\section{Discussion}
-
-\section{Related Work}
 
 \section{Conclusion}
 One conclusion is that ARDT helps in exploring new faults or you can say new failure test cases because if you see figure 3 (a, b, c) it gives 3 range of values for which the program fails. \\
