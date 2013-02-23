@@ -1,46 +1,47 @@
-This is BibTeX, Version 0.99d (TeX Live 2011)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: adfd_issta.aux
 The style file: abbrv.bst
 Database file #1: sigproc.bib
-You've used 10 entries,
+Warning--can't use both volume and number fields in Godefroid2005
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            581 strings with 5638 characters,
-and the built_in function-call counts, 4150 in all, are:
-= -- 442
-> -- 163
-< -- 7
-+ -- 64
-- -- 54
-* -- 266
-:= -- 644
-add.period$ -- 37
-call.type$ -- 10
-change.case$ -- 56
+            632 strings with 6724 characters,
+and the built_in function-call counts, 6934 in all, are:
+= -- 735
+> -- 251
+< -- 13
++ -- 101
+- -- 82
+* -- 445
+:= -- 1056
+add.period$ -- 61
+call.type$ -- 17
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 185
-empty$ -- 330
-format.name$ -- 54
-if$ -- 932
+cite$ -- 18
+duplicate$ -- 311
+empty$ -- 569
+format.name$ -- 82
+if$ -- 1562
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 11
-newline$ -- 53
-num.names$ -- 20
-pop$ -- 61
+int.to.str$ -- 17
+missing$ -- 18
+newline$ -- 88
+num.names$ -- 34
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 75
 quote$ -- 0
-skip$ -- 138
+skip$ -- 237
 stack$ -- 0
-substring$ -- 262
-swap$ -- 64
-text.length$ -- 7
+substring$ -- 472
+swap$ -- 114
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 38
-warning$ -- 0
-while$ -- 42
-width$ -- 12
-write$ -- 130
+type$ -- 66
+warning$ -- 1
+while$ -- 73
+width$ -- 19
+write$ -- 211
+(There was 1 warning)
