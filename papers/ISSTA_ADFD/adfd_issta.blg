@@ -2,46 +2,48 @@ This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: adfd_issta.aux
 The style file: abbrv.bst
 Database file #1: sigproc.bib
+Warning--entry type for "Oriol2011" isn't style-file defined
+--line 269 of file sigproc.bib
 Warning--can't use both volume and number fields in Godefroid2005
-You've used 17 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            632 strings with 6724 characters,
-and the built_in function-call counts, 6934 in all, are:
-= -- 735
-> -- 251
+            645 strings with 7003 characters,
+and the built_in function-call counts, 7397 in all, are:
+= -- 779
+> -- 249
 < -- 13
-+ -- 101
-- -- 82
-* -- 445
-:= -- 1056
-add.period$ -- 61
-call.type$ -- 17
-change.case$ -- 91
++ -- 102
+- -- 80
+* -- 454
+:= -- 1117
+add.period$ -- 65
+call.type$ -- 19
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 311
-empty$ -- 569
-format.name$ -- 82
-if$ -- 1562
+cite$ -- 20
+duplicate$ -- 338
+empty$ -- 628
+format.name$ -- 80
+if$ -- 1673
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 18
-newline$ -- 88
-num.names$ -- 34
-pop$ -- 101
+int.to.str$ -- 19
+missing$ -- 20
+newline$ -- 97
+num.names$ -- 38
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 75
+purify$ -- 78
 quote$ -- 0
-skip$ -- 237
+skip$ -- 265
 stack$ -- 0
-substring$ -- 472
-swap$ -- 114
+substring$ -- 514
+swap$ -- 125
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
+type$ -- 72
 warning$ -- 1
-while$ -- 73
-width$ -- 19
-write$ -- 211
-(There was 1 warning)
+while$ -- 78
+width$ -- 21
+write$ -- 227
+(There were 2 warnings)

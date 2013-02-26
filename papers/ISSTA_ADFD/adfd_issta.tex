@@ -198,7 +198,7 @@ The rest of this paper is organized as follows: \\ Section~\ref{sec:adfd} descri
 
 \section{Automated Discovery of Failure Domain}\label{sec:adfd}
 
-Automated Discovery of Failure Domain (ADFD) is a new test strategy where testing of SUT starts using Random+ (R+) strategy to find not only the fault but its complete domain across the whole input domain. The output produced at the end of test session is an (x,y) chart showing the passing value or range of values in green line and failing value or range of values in red line. The work flow of ADFD strategy is given in Figure \ref{fig:ADFD}.
+Automated Discovery of Failure Domain (ADFD) is a new test strategy where testing of SUT starts using Random+ (R+) strategy to find not only the fault but its complete domain across the whole input domain. The output produced at the end of test session is a chart showing the passing value or range of values in green and failing value or range of values in red. The complete workflow of ADFD strategy is given in Figure \ref{fig:ADFD}.
 
 \begin{figure}[ht]
 \centering
@@ -208,7 +208,7 @@ Automated Discovery of Failure Domain (ADFD) is a new test strategy where testin
 \end{figure}
 
 
-The process is divided into the following four major parts for simplification. Each part is explained below.
+The process is divided into the following five major parts for simplification. Each part is explained below.
 
 \begin{enumerate}
 \item Providing Input From GUI Front-end
@@ -226,21 +226,20 @@ The process is divided into the following four major parts for simplification. E
 \end{figure}
 
 \noindent \textbf{Providing Input From GUI Front-end:}\\*
-ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input including language of the program, strategy, duration, enable or disable YETI GUI, logs and a program to test in the form of java byte code. In addition it also takes minimum and maximum values for restricting ADFD strategy to search for fault domain in the specified range. Default range for minimum and maximum range is Integer.MIN\_INT and Integer.MAX\_INT respectively. 
+ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input including language of the program, strategy, duration, enable or disable YETI GUI, logs and a program to test in the form of java byte code. In addition to that it also takes minimum and maximum values for restricting ADFD strategy to search for fault domain in the specified range. Default range for minimum and maximum range is Integer.MIN\_INT and Integer.MAX\_INT respectively. Graph produced at the end of each test session is shown in the same front-end.
 
 \noindent \textbf{Automated Fault Finding:}\\*
-\indent To find the failure domain for a specific fault first we need to identify that fault in the system. ADFD strategy uses random+ strategy --- random strategy with preference to the boundary values for better performance to find the fault. ADFD strategy is implemented in York Extensible Testing Infrastructure (YETI). The ADFD strategy is implemented in automated testing tool YETI for its simplicity, speed and proven capability of finding potentially hazardous faults in many systems \ref{}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. 
+\indent To find the failure domain for a specific fault first we need to identify that fault in the system. ADFD strategy uses random+ strategy --- random strategy with preference to the boundary values for better performance to find the fault, for this purpose. ADFD strategy is implemented in York Extensible Testing Infrastructure (YETI) tool. YETI is famous for its simplicity, high speed and proven capability of finding potentially hazardous faults in many systems \cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. 
 
 
 \noindent \textbf{Automated generation of modules:}\\*
-\indent  After a fault is found in the SUT, ADFD strategy generate complete new Java program to search for fault domain in the given SUT.  These program with .java extension are generated through dynamic compiler API included with Java 6 under javax.tools package. The number of programs generated can be one or many depending on the number of arguments in the test module i.e. for module with one argument one program is generated, for two argument two programs and so on.
-To track fault domain we kept one or more argument constant and one argument variable in the generated program.
+\indent  After a fault is found in the SUT, ADFD strategy generate complete new Java program to search for fault domains in the given SUT.  These programs with (.java) extension are generated through dynamic compiler API included with Java 6 under javax.tools package. The number of programs generated can be one or many depending on the number of arguments in the test module i.e. for module with one argument one program is generated, for two argument two programs and so on. To track fault domain the program keeps one or more argument constant and one argument variable in the generated program.
 
 \noindent \textbf{Automated compilation and execution of modules:}\\*
-\indent  The java programs generated in previous step are compiled using javac command to get their binary (.class) files. After that the (java *) command is executed to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receive all the values specified at the start from minimum to maximum. After execution is complete we get two text files of pass and fail. Pass file contain all the values for which the module behave correctly while Fail file contain the values for which the modules failed.\\
+\indent  The java programs generated in previous step are compiled using (javac *) command to get their binary (.class) files. After that the (java *) command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receive all the values, from minimum to maximum, specified in the beginning of the test. After execution is complete we get two text files of pass and fail. Pass file contain all the values for which the module behave correctly while Fail file contain the values for which the modules failed.\\
 
 \noindent \textbf{Automated Generation of Graph:}\\*
-\indent The values from the pass and fail files are plotted on an (x y) graph using a free open source JFreeChart. For one argument program the y component is kept constant. The pass values are represented with green lines while the fault values are represented using red line on the chart.  Resultant graph clearly depicts the domain of the fault. The graph shows red points in case the program fails for only one value, blocks for failing multiple values and strip for failing long range of values.\\
+\indent The values from the pass and fail files are plotted on (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs in their applications \cite{Gilbert2008}. Green colour represent pass values while red colour represent the faulty values. Resultant graph clearly depicts both the pass and fail domain. The graph shows red points in case the program fails for only one value, blocks for failing multiple values and strip for failing long range of values.\\
 
 
 \begin{comment}
@@ -577,13 +576,13 @@ S. No		& Fault Domain	 				& Module Dimension 		& Specific Fault	 		& Pass Domai
 
 \section{Discussion} \label{sec:discussion}
 
-ADFD strategy with a simple graphical user interface is a completely automated process to identify and plot the pass and fault domains on the chart. Since the default settings are all set to optimum the user needs only to specify the module to be tested and click ''plot domain" button to plot domains.
+ADFD strategy with a simple graphical user interface is a completely automated process to identify and plot the pass and fault domains on the chart. Since the default settings are all set to optimum the user needs only to specify the module to be tested and click ''plot domain" button to start test execution. All the steps including Identification of fault, generation of dynamic java program to find domain of the identified fault, saving the program to a permanent media, compiling the program to get its binary, execution of binaries to get pass and fail domain and plotting these values on the graph are done completely automated without any human intervention.
 
-ADFD strategy can effectively identify faults and faults domain in a program. Identification of fault domain is simple for one and two dimension numerical program but the difficulty increases as the program dimension increases beyond two. Similarly no clear boundaries are defined for non numerical data therefore it is not possible to plot domains for non numerical data unless some boundary criteria is defined.
+In the experiments (section \ref{sec:experimentalResults}), the ADFD strategy effectively identified faults and faults domain in a program. Identification of fault domain is simple for one and two dimension numerical program but the difficulty increases as the program dimension increases beyond two. Similarly no clear boundaries are defined for non numerical data therefore it is not possible to plot domains for non numerical data unless some boundary criteria is defined.
 
 ADFD strategy initiate testing with random+ strategy to find the fault and later switch to brute-force testing to apply all the values between upper and lower bound for finding pass and fault domain.
 
-The main factor dependant on test execution time is the lower and upper bound. If the lower and upper bound is set to maximum or whole input domain then the test duration is maximum. Beside this test duration is also influenced by the identification of the fault and the complexity of module under test.
+The overhead in terms of execution time associated with ADFD strategy is dependant mainly on the lower and upper bound. If the lower and upper bound is set to maximum range ( i.e. maximum for int is Integer.Max\_Int and minimum is Integer.Min\_Int) then the test duration is maximum.    It is rightly so because for identification of fault domain the program is executed for every input available in the specified range. Similarly increasing the range also shrink the produced graph making it difficult to identify clearly point, block and strip domain unless they are of considerable size. Beside range factor, test duration is also influenced by the identification of the fault and the complexity of module under test.
 
 ADFD strategy can help the debuggers in two ways. First, it reduces the to and from movement of the project between the testers and debuggers as it identity all the faults in one go. Second, it identify locations of all fault domains across the input domain in a user friendly way helping debugger to fix the fault keeping in view its all occurrences.
 
