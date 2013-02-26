@@ -577,6 +577,20 @@ S. No		& Fault Domain	 				& Module Dimension 		& Specific Fault	 		& Pass Domai
 
 \section{Discussion} \label{sec:discussion}
 
+ADFD strategy with a simple graphical user interface is a completely automated process to identify and plot the pass and fault domains on the chart. Since the default settings are all set to optimum the user needs only to specify the module to be tested and click ''plot domain" button to plot domains.
+
+ADFD strategy can effectively identify faults and faults domain in a program. Identification of fault domain is simple for one and two dimension numerical program but the difficulty increases as the program dimension increases beyond two. Similarly no clear boundaries are defined for non numerical data therefore it is not possible to plot domains for non numerical data unless some boundary criteria is defined.
+
+ADFD strategy initiate testing with random+ strategy to find the fault and later switch to brute-force testing to apply all the values between upper and lower bound for finding pass and fault domain.
+
+The main factor dependant on test execution time is the lower and upper bound. If the lower and upper bound is set to maximum or whole input domain then the test duration is maximum. Beside this test duration is also influenced by the identification of the fault and the complexity of module under test.
+
+ADFD strategy can help the debuggers in two ways. First, it reduces the to and from movement of the project between the testers and debuggers as it identity all the faults in one go. Second, it identify locations of all fault domains across the input domain in a user friendly way helping debugger to fix the fault keeping in view its all occurrences.
+
+
+
+
+
 \section{Related Work} \label{sec:relatedWork}
 
 
