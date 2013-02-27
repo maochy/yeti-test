@@ -3,47 +3,50 @@ The top-level auxiliary file: adfd_issta.aux
 The style file: abbrv.bst
 Database file #1: sigproc.bib
 Warning--entry type for "Oriol2011" isn't style-file defined
---line 269 of file sigproc.bib
+--line 260 of file sigproc.bib
+Warning--I didn't find a database entry for "Chan2006"
+Warning--I didn't find a database entry for "manuel2010"
 Warning--can't use both volume and number fields in Godefroid2005
+Warning--empty note in Oriol2010b
 You've used 19 entries,
             2118 wiz_defined-function locations,
-            645 strings with 7003 characters,
-and the built_in function-call counts, 7397 in all, are:
-= -- 779
-> -- 249
-< -- 13
-+ -- 102
-- -- 80
-* -- 454
-:= -- 1117
+            643 strings with 6969 characters,
+and the built_in function-call counts, 7119 in all, are:
+= -- 748
+> -- 238
+< -- 12
++ -- 99
+- -- 76
+* -- 434
+:= -- 1086
 add.period$ -- 65
 call.type$ -- 19
-change.case$ -- 95
+change.case$ -- 93
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 338
-empty$ -- 628
-format.name$ -- 80
-if$ -- 1673
+cite$ -- 21
+duplicate$ -- 324
+empty$ -- 607
+format.name$ -- 76
+if$ -- 1603
 int.to.chr$ -- 0
 int.to.str$ -- 19
-missing$ -- 20
+missing$ -- 19
 newline$ -- 97
 num.names$ -- 38
-pop$ -- 116
+pop$ -- 112
 preamble$ -- 1
-purify$ -- 78
+purify$ -- 76
 quote$ -- 0
-skip$ -- 265
+skip$ -- 251
 stack$ -- 0
-substring$ -- 514
-swap$ -- 125
-text.length$ -- 13
+substring$ -- 483
+swap$ -- 115
+text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 72
-warning$ -- 1
-while$ -- 78
+warning$ -- 2
+while$ -- 75
 width$ -- 21
-write$ -- 227
-(There were 2 warnings)
+write$ -- 225
+(There were 5 warnings)

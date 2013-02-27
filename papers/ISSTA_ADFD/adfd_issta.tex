@@ -58,7 +58,7 @@ tabsize=4,
 showspaces=false,
 showstringspaces=false}
 
-
+\newcommand{\squeezeup}{\vspace{-2.5mm}}
 
 \restylefloat{table}
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -127,7 +127,7 @@ The fact that exhaustive testing for any non-trivial program is impossible, comp
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=8cm,height=2.5cm]{ART_Patterns.png}
+\includegraphics[width=8cm,height=2.7cm]{ART_Patterns.png}
 \caption{Failure domains across input domain \cite{Chan1996}}
 \label{fig:patterns}
 \end{figure}
@@ -239,107 +239,10 @@ ADFD strategy is provided with an easy to use GUI front-end to get input from th
 \indent  The java programs generated in previous step are compiled using (javac *) command to get their binary (.class) files. After that the (java *) command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receive all the values, from minimum to maximum, specified in the beginning of the test. After execution is complete we get two text files of pass and fail. Pass file contain all the values for which the module behave correctly while Fail file contain the values for which the modules failed.\\
 
 \noindent \textbf{Automated Generation of Graph:}\\*
-\indent The values from the pass and fail files are plotted on (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs in their applications \cite{Gilbert2008}. Green colour represent pass values while red colour represent the faulty values. Resultant graph clearly depicts both the pass and fail domain. The graph shows red points in case the program fails for only one value, blocks for failing multiple values and strip for failing long range of values.\\
-
-
-\begin{comment}
-
-
-%\begin{center}
-%\begin{figure*}[htp]
-%\includegraphics[width=17cm,height=10cm]{adfdFrontEnd.png}
-%\caption{GUI of ADFD strategy}
-%\label{fig:patterns}
-%\end{figure*}
-%\end{center}
-
-%\begin{center}
-\begin{table}[ht]
-%\renewcommand{\arraystretch}{2}
-\centering
-{\small} 
-%\normalsize
-\scriptsize
-\begin{tabular}{|l|}
-
-\hline 
-current\_faults: INTEGER\\
-old\_faults: INTEGER\\
-...\\
-\\
-current\_faults := track\_number\_of\_errors\\
-old\_faults := 0\\
-if ( current\_faults > old\_faults)\\
-then \\
-old\_faults := current\_faults generate a program dynamically \\
-with the following algorithm.\\
- ...\\
- \\
- continue testing \\
-\hline
-
-
-\end{tabular}
-\bigskip
-\caption{Algorithm}
-
-\label{tb:algorithm}
-\end{table}
-%\end{center}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\begin{center}
-\begin{table}[ht]
-%\renewcommand{\arraystretch}{2}
-\centering
-{\small} 
-%\normalsize
-\scriptsize
-\begin{tabular}{|l|}
-
-\hline 
-Begin Class C*
-
-pass: ArrayList<Integer>\\
-fail: ArrayList<Integer>\\
-startedByFailing: boolean\\
-isCurrentlyFailing: boolean\\
-start: Integer\\
-stop: Integer\\
-
-start := -100\\
-stop := 100\\
-startedByFailing := false\\
-isCurrentlyFailing :=false\\
-
-BEGIN main method
+\indent The values from the pass and fail files are used to plot (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs in their applications \cite{Gilbert2008}. Green colour lines with circle represent pass values while red colour line with squares represent the faulty values. Resultant graph clearly depicts both the pass and fail domain across the specified input domain. The graph shows red points in case the program fails for only one value, blocks for failing multiple values and strip for failing long range of values.\\
 
 
 
-
-current\_faults := track\_number\_of\_errors\\
-old\_faults := 0\\
-if ( current\_faults > old\_faults)\\
-then \\
-old\_faults := current\_faults Generate a program dynamically \\
-with the following algorithm.\\
- ...\\
- \\
- continue testing \\
-\hline
-
-
-\end{tabular}
-\bigskip
-\caption{Algorithm 2}
-\label{tb:algorithm2}
-\end{table}
-%\end{center}
-
-\end{comment}
 %\subsection{Flow Chart of the process}
 
 %The following flow chart clearly identify the workflow of the whole process and the various steps involved in the process.
@@ -392,10 +295,12 @@ with the following algorithm.\\
 %Figure shows the example of strip pattern. Here we have two strip failure pattern for test 1 shown in \ref{fig1:a} and \ref{fig1:b} while 1 other for test 2 given in . The failure values are given in table .\\
 
 \section{Implementation}\label{sec:implementation}
- We implemented ADFD strategy in a tool called York Extensible Testing Infrastructure (YETI) \cite{Oriol2010a}. YETI is available in open-source at http://code.google.com/p/yeti-test/. In this section we give a brief overview of YETI, integration of ADFD strategy in YETI and a simple example to illustrate the working of ADFD strategy.
+ We implemented ADFD strategy in a tool called York Extensible Testing Infrastructure (YETI). YETI is available in open-source at http://code.google.com/p/yeti-test/. In this section we give a brief overview of YETI focusing only on the parts relevant to the implementation of ADFD strategy. We further define integration of ADFD strategy in YETI and a program is used as an example to illustrate the working of ADFD strategy. For more detail on YETI tool please see \cite{Oriol2010, Oriol2010a, Oriol2010b, Oriol2011, Oriol2012}.
 
  \subsection{York Extensible Testing Infrastructure}
- It is a testing tool developed in Java that test programs in an automated fashion using random strategies. YETI meta model is language-agnostic which enables it to test programs written in multiple languages that include Java, C\#, JML, .Net and Pharo. YETI consist of three main parts that include the core infrastructure responsible for extendibility through specialisation, the strategies section to adjust multiple strategies and language-specific bindings to provide support for multiple languages \cite{Oriol2010}. 
+YETI is a testing tool developed in Java that test programs in an automated fashion using random strategies. YETI meta model is language-agnostic which enables it to test programs written in functional, procedural and object oriented languages.
+
+YETI consists of three main parts that include the core infrastructure responsible for extendibility through specialisation, the strategies section to adjust multiple strategies and language-specific bindings to provide support for multiple languages \cite{Oriol2010, Oriol2010b}. Both the languages and strategies section has a pluggable architecture, to easily incorporate new strategies and languages, making it a conducive choice to implement ADFD strategy. YETI is capable of generating the test cases to reproduce the faults found during the current test session.
  
  \subsection{ADFD strategy in YETI}
 Strategies package in YETI contain all the strategies including random, random+ and DSSR that can be selected for testing according to the specific needs. The default test strategy for testing is simple random. On top of the hierarchy is an abstract class YetiStrategy which is extended by YetiRandomStrategy and it is further extended to get ADFD strategy as shown in figure \ref{fig:hierarchy}. 
@@ -439,6 +344,7 @@ public class PointDomainOneArgument{
 
 As soon as any one of the above four faults are discovered the ADFD strategy generate a dynamic program given in Appendix. This program is automatically compiled to get binary and then executed to find the pass and fail domain inside the specified range as shown in the Figure \ref{fig:ADFD-example}.
 
+ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI tool. 
 
 \begin{figure}[ht]
 \centering
@@ -447,9 +353,6 @@ As soon as any one of the above four faults are discovered the ADFD strategy gen
 \label{fig:ADFD-example}
 \end{figure}
 
-
-
-ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI tool. 
 
 In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
 
@@ -472,10 +375,72 @@ All experiments were performed on a 64-bit Mac OS X Lion Version 10.7.5 running 
 For clarification purpose we have taken a separate example program to represent each module. The code of selected programs is given in Appendix. Table \ref{tab:failtable} shows the results of the experiments. We can categorise the results in the following four parts.
 
 %\begin{center}
-\begin{table*}[t]
+
+%\end{center}
+
+
+
+\textbf{Point Fault Domain:}  Two separate programs P1 and P2 ( Appendix ) were tested with ADFD strategy in YETI to get the chart for point fault domain in one and two dimension program. Figure \ref{fig:PFDOne} represent point fault domain in one dimension whereas Figure \ref{fig:PFDTwo} represent point fault domain in two dimension program. ADFD strategy present ranges for pass and fail values for each program in both text (Table \ref{tab:failtable}, Serial No. 1) and graphical form (Figure \ref{fig:PFDOne} and \ref{fig:PFDTwo}). 
+
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{PFDOne.png}
+%\caption{Chart generated by ADFD strategy presenting point fault domain in one dimension module}
+%\label{fig:PFDOne}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{PFDTwo.png}
+%\caption{Chart generated by ADFD strategy presenting point fault domain in two dimension module}
+%\label{fig:PFDTwo}
+%\end{figure}
+
+
+\textbf{Block Fault Domain:} Two programs P1 and P2 ( Appendix ) of one and two dimension are tested to get Figure \ref{fig:BFDOne} and \ref{fig:BFDTwo} representing block fault domain. The pass and fail values for each block fault program is given in (Table \ref{tab:failtable}, Serial No. 2).
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{BFDOne.png}
+%\caption{Chart generated by ADFD strategy presenting block fault domain in one dimension module}
+%\label{fig:BFDOne}
+%\end{figure}
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{BFDTwo.png}
+%\caption{Chart generated by ADFD strategy presenting block fault domain in two dimension module}
+%\label{fig:BFDTwo}
+%\end{figure}
+
+
+
+\textbf{Strip Fault Domain:} Two programs P1 and P2 ( Appendix ) of one and two dimension are tested to get Figure \ref{fig:SFDOne} and \ref{fig:SFDTwo} representing strip fault domain. The pass and fail values for each strip fault program is given in (Table \ref{tab:failtable}, Serial No. 3).
+
+
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{SFDOne.png}
+%\caption{Chart generated by ADFD strategy presenting strip fault domain in one dimension module}
+%\label{fig:SFDOne}
+%\end{figure}
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=8.2cm,height=5cm]{SFDTwo.png}
+%\caption{Chart generated by ADFD strategy presenting strip fault domain in two dimension module}
+%\label{fig:SFDTwo}
+%\end{figure}
+
+\onecolumn
+\begin{table*}[ht]
 %\renewcommand{\arraystretch}{2}
 \centering
-\small 
+\tiny 
 %normalsize
 
 \begin{tabular}{|c|c|c|l|l|l|}
@@ -512,67 +477,69 @@ S. No		& Fault Domain	 				& Module Dimension 		& Specific Fault	 		& Pass Domai
 \caption{Pass and Fail domain with respect to one and two dimensional program}
 \label{tab:failtable}
 \end{table*}
-%\end{center}
 
+\bigskip
+%%%%%%%%%%%%%%%%Point Domain%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{figure} [H]
 
-\textbf{Point Fault Domain:}  Two separate programs P1 and P2 ( Appendix ) were tested with ADFD strategy in YETI to get the chart for point fault domain in one and two dimension program. Figure \ref{fig:PFDOne} represent point fault domain in one dimension whereas Figure \ref{fig:PFDTwo} represent point fault domain in two dimension program. ADFD strategy present ranges for pass and fail values for each program in both text (Table \ref{tab:failtable}, Serial No. 1) and graphical form (Figure \ref{fig:PFDOne} and \ref{fig:PFDTwo}). 
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{PFDOne.png}
-\caption{Chart generated by ADFD strategy presenting point fault domain in one dimension module}
+\subfigure[One dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{PFDOne.png}
 \label{fig:PFDOne}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{PFDTwo.png}
-\caption{Chart generated by ADFD strategy presenting point fault domain in two dimension module}
+}
+\subfigure[Two dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{PFDTwo.png}
 \label{fig:PFDTwo}
+}
+
+
+\caption{Chart generated by ADFD strategy presenting point fault domain}
 \end{figure}
 
+%%%%%%%%%%%%%%%Block domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
 
-\textbf{Block Fault Domain:} Two programs P1 and P2 ( Appendix ) of one and two dimension are tested to get Figure \ref{fig:BFDOne} and \ref{fig:BFDTwo} representing block fault domain. The pass and fail values for each block fault program is given in (Table \ref{tab:failtable}, Serial No. 2).
+\begin{figure} [H]
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{BFDOne.png}
-\caption{Chart generated by ADFD strategy presenting block fault domain in one dimension module}
+\subfigure[One dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{BFDOne.png}
 \label{fig:BFDOne}
-\end{figure}
-
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{BFDTwo.png}
-\caption{Chart generated by ADFD strategy presenting block fault domain in two dimension module}
+}
+\subfigure[Two dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{BFDTwo.png}
 \label{fig:BFDTwo}
+}
+
+
+\caption{Chart generated by ADFD strategy presenting block fault domain}
 \end{figure}
 
 
 
-\textbf{Strip Fault Domain:} Two programs P1 and P2 ( Appendix ) of one and two dimension are tested to get Figure \ref{fig:SFDOne} and \ref{fig:SFDTwo} representing strip fault domain. The pass and fail values for each strip fault program is given in (Table \ref{tab:failtable}, Serial No. 3).
 
+%
+%%%%%%%%%%%%%%%%%%%%%%Strip domain %%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure} [H]
 
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{SFDOne.png}
-\caption{Chart generated by ADFD strategy presenting strip fault domain in one dimension module}
+\subfigure[One dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{SFDOne.png}
 \label{fig:SFDOne}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8.2cm,height=5cm]{SFDTwo.png}
-\caption{Chart generated by ADFD strategy presenting strip fault domain in two dimension module}
+}
+\subfigure[Two dimension module]{
+\includegraphics[width=8.2cm,height=4.3cm]{SFDTwo.png}
 \label{fig:SFDTwo}
+}
+
+
+\caption{Chart generated by ADFD strategy presenting Strip fault domain}
 \end{figure}
 
+
+
+
+\twocolumn
 
 \textbf{ Hybrid Fault Domain in one and ---- Dimension }
-
-
 
 \section{Discussion} \label{sec:discussion}
 
