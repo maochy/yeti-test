@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{Agrawal1995}
+H.~Agrawal, J.~Horgan, S.~London, and W.~Wong.
+\newblock Fault localization using execution slices and dataflow tests.
+\newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
+  International Symposium on}, pages 143 --151, oct 1995.
+
 \bibitem{Beizer1995}
 B.~Beizer.
 \newblock {\em Black-Box Testing: Techniques for Functional Testing of Software
@@ -29,6 +35,13 @@ T.~Y. Chen.
 \newblock Adaptive random testing.
 \newblock {\em Eighth International Conference on Qualify Software}, 0:443,
   2008.
+
+\bibitem{Ciupa2006}
+I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
+\newblock Object distance and its application to adaptive random testing of
+  object-oriented programs.
+\newblock In {\em Proceedings of the 1st international workshop on Random
+  testing}, RT '06, pages 55--63, New York, NY, USA, 2006. ACM.
 
 \bibitem{Ciupa2008}
 I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
@@ -60,6 +73,12 @@ R.~Hamlet.
 \newblock In {\em Encyclopedia of Software Engineering}, pages 970--978. Wiley,
   1994.
 
+\bibitem{Jones2002}
+J.~A. Jones, M.~J. Harrold, and J.~Stasko.
+\newblock Visualization of test information to assist fault localization.
+\newblock In {\em Proceedings of the 24th International Conference on Software
+  Engineering}, ICSE '02, pages 467--477, New York, NY, USA, 2002. ACM.
+
 \bibitem{Linger1993}
 R.~C. Linger.
 \newblock Cleanroom software engineering for zero-defect software.
@@ -72,6 +91,11 @@ J.~Mayer.
 \newblock Lattice-based adaptive random testing.
 \newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
   Automated software engineering}, pages 333--336. ACM, 2005.
+
+\bibitem{Myers2011}
+G.~J. Myers, C.~Sandler, and T.~Badgett.
+\newblock {\em The art of software testing}.
+\newblock Wiley, 2011.
 
 \bibitem{Offutt1996}
 A.~J. Offutt and J.~H. Hayes.
@@ -114,5 +138,11 @@ C.~Pacheco, S.~K. Lahiri, M.~D. Ernst, and T.~Ball.
 \newblock In {\em Proceedings of the 29th international conference on Software
   Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
   Computer Society.
+
+\bibitem{Podgurski2003}
+A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, J.~Sun, and B.~Wang.
+\newblock Automated support for classifying software failure reports.
+\newblock In {\em Software Engineering, 2003. Proceedings. 25th International
+  Conference on}, pages 465 -- 475, may 2003.
 
 \end{thebibliography}
