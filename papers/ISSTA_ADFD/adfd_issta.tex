@@ -106,16 +106,9 @@ Manuel Oriol \\
 Many research studies in the random testing literature refer to 
 point, block and strip fault domains across the input domain of a system.
 A number of new strategies have also been devised on this principle claiming better results.
-However, no study was conducted to graphically show their existence
-and the frequency of each faulty domain in real production application. 
+However, no strategy has been developed to identify the fault domains.
 
-In this research we study fault domains and check to which type of domains they belong. 
-Our experimental results show that in 60\%  cases faults form point domain, 
-while block and strip domain form 20\% each. We also checked what relation exists 
-between fault domains traced back to only one fault: are they contiguous, separate, or marginally adherent. 
-
-This study allows for a better understanding of fault domains and assumptions made on the 
-strategies for testing code. We applied our results by correlating our study with three random strategies: random, random+ and DSSR. 
+In this research we develop a new strategy called Automated Discovery of Failure Domain (ADFD) that not only finds the fault but also finds the domain to which it belong. Furthermore, it also provides visualisation of the pass and fail domain found for a given SUT. To verify the working of ADFD strategy we used 8 error seeded one and two dimensional numerical programs. Errors were seeded in such a way that they cover all the fault domains. Our experimental results show that for each program ADFD strategy successfully perform identification of faults, their domains and their representation on the chart. 
 
 \end{abstract}
 
