@@ -1,0 +1,131 @@
+Languages are rich in morphology and some of them are more equal than others in
+this respect. Turkish is an example of a morphologically rich language where words can be immensely long with a number of morphemes composing a single
+word. Such morphologically rich languages are hard to analyse but demonstrate the art of brevity by putting morphemes together in shorter space, conveying
+the message with lesser number of words. 
+
+Morphology essentially deals with morphemes, the shortest form of the word that carries semantic information. For instance, the word \emph{dog} that
+corresponds to a mammalian animal is a free morpheme that can exist on its own and conveys enough semantic information without any help from other words.
+But such free morphemes can have inflectional forms, such as \emph{dogs} that though still corresponds to the same mammalian animal but is the plural form
+of the original morpheme. But they might be compounded with other words to form new words, for instance \emph{dog house}.
+
+Analysing such morphological relationships is not trivial. Yet we have tried to carry out computational morphology in the multilingual context.
+
+\section{Edit Distance}
+
+The multilingual synsets generated as a result of the last step, are crude and probably need some form of refinement before any efficient systems could be
+developed using them. In order to refine them we need auxiliary information, using which different synsets could be combined into one more useful form.
+Edit Distance is one such auxiliary information which hides quite a lot of information.
+
+\citep{pt:Gusfield97} gives an introduction to edit distances and describes it as an inexact matching problem where given any two strings, the minimum
+number of steps in which starting from one string and coming up with the other is ascertained. Gusfield gives an example where starting from string
+\emph{vintner}, one converts it into \emph{writers}.
+
+\begin{verbatim}
+ RIMDMDMMI
+ v intner
+ wri t ers
+\end{verbatim}
+
+Four edit operations are permitted: \emph{insertion} (I) of a character into a string, \emph{deletion} (D) of a character from the string,
+\emph{replacement} (R) (or \emph{substitution} (S)) of a character with another character, or a non-operation of \emph{match} (M). The minimum number of
+such operations is the distance between any two strings, also known as the Levenshtein distance in recognition of the paper written by V. Levenstein, who
+probably first discussed the concept.
+
+As per Gusfield, it is defined as ``The \emph{edit distance} between two strings is defined as the minimum number of edit operations - insertions,
+deletions, and substitutions - needed to transform the first string into the second. For emphasis, note that matches are not counted.''
+
+\subsection{Edit Distances between Multilingual Synsets}
+
+The multilingual synsets generated in the previous step are in a relatively crude form with two separate synsets for words that might be inflections of
+each other, for instance:\\
+
+\noindent{abolish	abschaffen	abolir	$\kappa\alpha\tau\alpha\rho\gamma\acute{\eta}\sigma\epsilon\iota$}\\
+\noindent{abolished	abgeschafft	aboli	$\kappa\alpha\tau\alpha\rho\gamma\acute{\eta}\theta\eta\kappa\varepsilon$}\\
+
+the two synsets are for the same basic lexeme \emph{abolish}, but the second synset is for the infelctional form of the word and is it's past tense form.
+Such inflections are relatively easy to spot since they have smaller edit distances between them. The more difficult to spot are the synonyms, where two
+different words can substitute each other in a context without changing it. Synonymous words may have large edit distances since they might be totally
+different words and a lot of operations might be required to start with one and convert it into another. So large distances can mean either that the two
+words are synonymous or might just be totally different words, with different semantics. The translations of such two words in other languages can
+indicate if they hold the synonymy relationship with each other. If their translations are the same or close inflections of each other then their is a
+higher chance that they are synonymous.
+
+Considering the following example, one can see it in more detail.\\
+
+\noindent{administration	verwaltung	administration	$\delta\iota o\acute{\iota}\kappa\eta\sigma\eta$}\\
+\noindent{administration	verwaltung	administration	$\delta\iota\alpha\chi\varepsilon\acute{\iota}\rho\iota\sigma\eta$}\\
+
+As can be seen English, German and French have the exact same translations for two Greek words $\delta\iota o\acute{\iota}\kappa\eta\sigma\eta$ and
+$\delta\iota\alpha\chi\varepsilon\acute{\iota}\rho\iota\sigma\eta$ which have an edit distance of 5 and mean administration and management respectively
+which are synonymous with each other as can be verified from WordNet. This particular synonym is supported by its translations in the other three
+languages which are exactly the same and mean exactly the same thing.
+
+\subsection{Calculating Edit Distances}
+
+The edit distance problem, as defined by Gusfiled is ``to compute the edit distance between two given strings, along with an optimal edit transcript that
+describes the transformation.'' It can be viewed as simultaneously doing edit operations on the two strings, which might yield a third string, which is
+the desired solution. Since insertion in one string can be taken as a deletion in the other.
+
+The edit transcript is a way to represent the sequential set of operations applied to a string, thus the sequence RIMDMDMMI in the example given for words
+\emph{vintner} and \emph{writers} is the edit transcript. There might be more than one such optimal transcripts. 
+
+Finding the edit distance is basically a string alignment process, whereby either spaces are introduced corresponding to either the insertion or the
+deletion operations or characters are mismatched to indicate substitution. Take the example of two strings \emph{qacdbd} and \emph{qawxb}, as given in
+Gusfield's. When put together they are aligned as such:
+
+\begin{verbatim}
+q a c _ d b d
+q a w x _ b _
+\end{verbatim}
+
+The characters that match (q, a, and b) are put opposite to each other. c is put opposite a w signifying a substitution operation. A space (dash) in the
+first string signifies insertion and in the second signifies deletion. The edit distance is given by minimizing the number of mismatched characters and
+the number of characters opposite spaces (dashes).
+
+Dynamic programming technique has been used to compute the edit distances, as defined in \citep{pt:Wagner74} is:
+
+\begin{algorithm}
+\caption{Calculating Edit Distances}
+%\begin{algorithmic}
+%\STATE $D[0,0] \gets 0$\\
+%\FOR{$i = 1 \to |A|$}\\
+%\STATE $D[i,0] \gets D[i-1,0] + \gamma (A<i> \rightarrow \lambda)$\\
+%\ENDFOR\\
+%\FOR{$j = 1 \to |B|$}\\
+%\STATE $D[0,j] \gets D[0,j-1] + \gamma (\lambda \rightarrow B<j>)$\\
+%\ENDFOR\\
+%\FOR{$i = 1 \to |A|$}\\
+%  \FOR{$j = 1 \to |B|$}\\
+%    \STATE $m_1 \gets D[i-1,j-1] + \gamma (A<i> \rightarrow B<j>)$\\
+%    \STATE $m_2 \gets D[i-1,j] + \gamma (A<i> \rightarrow \lambda)$\\
+%    \STATE $m_3 \gets D[i,j-1] + \gamma (\lambda \rightarrow B<j>)$\\
+%    \STATE $D[i-1,j-1] \gets min(m_1,m_2,m_3)$\\
+%  \ENDFOR\\
+%\ENDFOR\\
+%\end{algorithmic}
+\end{algorithm}
+
+The algorithm is recursive. $\gamma$ gives the cost of different edit operations. $\gamma (A<i> \rightarrow \lambda)$ represents the cost of deletion.
+$\gamma (\lambda \rightarrow B<j>)$ gives the cost of insertion. And $\gamma (A<i> \rightarrow B<j>)$ gives the cost of substitution. The non-operation of
+match has no cost associated with it. Thus the cost of starting with a string and ending up with an empty string is the length of the first string, since
+all the characters need to be deleted. The cost of starting with an empty string and ending up with some string is the length of the second string since
+all the characters need to be inserted. These two form the base cases of recursion. The aim is to find the minimum cost of all such operations which
+starts from one string and ends up with another as represented by $min(m_1,m_2,m_3)$.
+
+The edit distances were measured only between synsets that shared the same English phrase. Thus the synsets that had the English word/phrase with
+frequency 1 were ignored, and those with frequency greater than 1 were separated. Then the synset pairs were ordered with respect to their total edit
+distance. The total edit distance was just the sum of edit distances between words/phrases of the same language.\\
+
+\noindent{americans	amerikanische	am\'{e}ricaine	$\alpha\mu\varepsilon\rho\iota\kappa\alpha\nu\iota\kappa\acute{\eta}$	0	5	1
+3 9}
+\\
+\noindent{americans	amerikanern	am\'{e}ricains	$\alpha\mu\varepsilon\rho\iota\kappa\alpha\nu\acute{\omega}\nu$	0	5	1	3
+9}
+\\
+
+Thus the English words are the same, the edit distance between German words is 5, French words is 1, Greek words is 3 and in total (0 + 5 + 1 + 3) is 9.
+Apparently the words in the same language are just infelctional variations of each other, depicting closer proximity in terms of semantics and only
+synstatic difference.
+
+There were a total of 441,163 synsets with unique English phrases, out of which 89,234 occurred with a frequency of 1 and the rest had frequency more than
+1. 

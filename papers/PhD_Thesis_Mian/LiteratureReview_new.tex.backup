@@ -1,0 +1,1416 @@
+Enormous increase in multilingual resources have made it possible
+to harness their power to carry out more advanced forms of Natural
+Language Processing (NLP). Multilingual resources exist in many
+shapes and sizes. There are quite a few examples of such
+multilingual resources, such as: Wikipedia; European Parliamentary
+proceedings; online multilingual newpapers such as Southeast
+European Times.
+
+\section{Wikipedia as a Source of Multilingual Information}
+
+Wikipedia \footnote[1]{http://www.wikipedia.org/} uses wiki to let
+ordinary users to create wiki pages in any language of their
+choice on any conceivable topic. With humble beginnings in 2001,
+Wikipedia has emerged to become one of the largest multilingual
+resources freely available on the web. Any person with a modicum
+of understanding of how the web and the internet works, can create
+articles on every conceivable topic in the world. Even though it
+is editable by anybody, a number of mediators are tasked to
+ascertain the validity of the material with suitable references
+available. The quality of content in Wikipedia articles may be
+brought into question but \citep{pt:Giles05} showed that their
+quality is comparable to Encyclopedia Brittanica.
+
+Wikipedia emerged as the extension of now defunct Nupedia, which
+was freely available online encyclopedia with extensively peer
+reviewed content. It was founded by Jimmy Wales
+\footnote[2]{http://en.wikipedia.org/wiki/Jimmy\_Wales}. As per
+Wikipedia it lasted from March 2000 to September 2003. It required
+highly qualified contributors and it's system of peer review
+ensured that it's uptake was slow. Jimmy Wales along with Larry
+Sanger \footnote[3]{http://en.wikipedia.org/wiki/Larry\_Sanger}
+later decided to use a more open version of it using wiki
+\citep{pt:Leuf01}.
+
+Users are freely allowed to create content on it, even though
+mediators make sure that any content is properly referenced. An
+article in one language may have corresponding entries in other
+languages, though they may not be translations of each other and
+may discuss the topic from totally different perspectives and
+angles. The English Wikipedia
+\footnote[4]{http://en.wikipedia.org/wiki/Main\_Page} contains
+more than 3 million articles on the day of writing of this report
+and there are Wikipedias with at least 1 article in 280 languages.
+
+Such enormity of information makes extraction of useful
+information the next logical step. One of the earliest efforts was
+to harness it's multilingual aspect to produce parallel corpora
+\citep{pt:Adafre06}. They also created a bilingual English-Dutch
+lexicon using hyperlink information on a typical Wikipedia page,
+but it was done manually. \citep{pt:Ahn04,pt:Ferrandez07} used it
+to develop a cross-lingual question answering system.
+\citep{pt:Kawaba08} used Wikipedia titles in the multilingual
+context to retrieve blog feeds in English and Japanese.
+\citep{pt:Potthast08} used Wikipedia to construct a multilingual
+retrieval model, using the comparable corpora in different
+languages in Wikipedia. \citep{pt:Richman08} used it for
+Multilingual Named Entity Recognition. Other uses include text
+classification \citep{pt:Gabrilovich06}, information extraction
+\citep{pt:Ruiz-Casado05}, computing semantic relatedness
+\citep{pt:Zesch07}, and named entity disambiguation
+\citep{pt:Bunescu06}.
+
+\subsection{Wikipedia as a Source of Multilingual Lexicons}
+
+This work is focussed on building a multilingual lexicon from
+Wikipedia. Thus the rest of the literature review focusses on this
+particular application.
+
+Using crawlers, is an efficient and easy way to search the web for
+useful information and put it in a format that is meaningful.
+Creating lexicons \citep{pt:Sato09,pt:Shahid09} is one such task.
+Automatic extraction of lexicons make it less labor-intensive and
+make the resultant lexicon more amenable to changes and adaptable
+to new word forms that keep appearing.
+
+Sato \citep{pt:Sato09} used the crawler to extract an
+English-Japanese person-name lexicon. They would pick a
+person-name from a pool of monolingual names and then search for
+their Japanese transliterations using Yahoo Japan!'s search engine
+and then rank them according to a transliteration score to choose
+the best candidate from amongst a list of possible candidates.
+
+The above mentioned work though closer to what we did by using a
+crawler is markedly different in its scope and aim. We built
+general and domain specific dictionaries by using the multilingual
+aspects of Wikipedia in a number of languages, not just two.
+
+Tyers \citep{pt:Tyers08} used a list of English words to build a
+multilingual lexicon once again using the now familiar
+multilingual nature of Wikipedia. The lexicon was built for
+Macedonian (mk), Afrikaans (af), Iranian Persian (fa) and Swedish
+(sv), the languages for which native speakers were available for
+manual evaluation of results. They chose a set of nouns in English
+and for each noun they would go to the Wikipedia webpage in
+English and then collect the corresponding words/phrases in other
+languages using the links for them on the original English
+webpage. Their evaluation gave Precision ranging from 69\% for
+Swedish to 92\% for Iranian Persian.
+
+Their research sheds light on the use of multilingual aspects of
+Wikipedia to generate a multilingual lexicon. They did it for
+nouns, but the process can be generalized without much hassle,
+what has been tried in our work. The results showed that good
+Precision could be obtained, but it was also dependent on the
+resources available in one particular language. Interestingly best
+results were obtained for Iranian Persian, which is syntactically
+and grammatically totally different than say Swedish, which being
+a Western European language may have more in common with English.
+The process is very similar to what did but we did not create a
+list of words to look for. In our case we just defined the first
+word we were looking for and thence it would crawl around in a
+breadth first search manner looking for corresponding words/phrase
+in languages of our choice. We did not specifically catered for
+nouns and ours is a more general dictionary, even though we also
+created some domain specific lexicons.
+
+\citep{pt:Zesch08} defined Wikipedia and Wiktionary
+\footnote[4]{http://www.wiktionary.org/} as \emph{Collaborative
+Knowledge Base} CKB, as opposed to a \emph{Linguistic Knowledge
+Base} LKB, such as WordNet \citep{pt:Fellbaum98}. They developed
+Java APIs to exploit the information contained within the
+Wikipedia and the Wiktionary using their database dumps and have
+made them freely available for research purposes
+\footnote[5]{
+http://www.ukp.tu-darmstadt.de/ukp-home/research-areas/nlp-and-wikis/}.
+
+They imported database dumps into a database rather then using the
+crawler, since a crawler goes through the webserver to retrieve
+particular web pages and puts an extra overhead. They used
+indexing which is available as part of the database and makes
+accessing particular webpages really fast and efficient. Thus it
+is more suitable for large-scale NLP applications. Another
+disadvantage of using a crawler is that probably the results are
+not reproducible since the online edition of Wikipedia keeps
+changing, while no matter how many times you run a program on the
+same database dumps, they are going to yield the same results.
+Yet, an advantage of using the crawler is that it automatically
+incorporates newer more update information since it directly
+connects with the server and newer information can be accessed as
+soon as it is available on the server.
+
+Wiktionary, like Wikipedia, is freely available online and is
+editable by anyone with due access to the internet and with some
+basic knowledge of the web technologies.  But unlike its cousin it
+attracts lesser contributions from the online community and has
+lesser number of languages covered with lesser cross-lingual
+translations available for a commonly used word, such as car, than
+Wikipedia. Thus, Wikipedia is more comprehensive in that sense.
+Yet, Wiktionary is also gaining strength day by day and people
+representing different languages are contributing to definitions
+of words in their languages.
+
+Another interesting fact is that the relationship between how many
+people use a particular language and their ranking on Wiktionary
+is totally lost. For instance, Lithuanian which has only around 4
+million native speakers
+\footnote[6]{http://en.wikipedia.org/wiki/Lithuanian\_language}
+has the fifth highest number of entries on Wiktionary
+\footnote[7]{http://meta.wikimedia.org/wiki/Wiktionary\#List\_of\_Wiktionaries}
+even though it's only the 28th largest number of articles on
+Wikipedia
+\footnote[8]{http://meta.wikimedia.org/wiki/List\_of\_Wikipedias}.
+So far our purposes probably using Wikipedia to create
+multilingual lexicons is a better choice for our choice of
+languages.
+
+Two approaches for creating a WordNet are the \emph{merge
+approach} and the \emph{extend approach} \citep{pt:Vossen98},
+whereby in the first approach a WordNet is created independently
+and then merged with already existing resources, while in the
+second a new WordNet is created using the structures and choice of
+words in already existing WordNet. The latter approach makes the
+coverage of the new WordNet to the limited to the words in an
+existing WordNet and presupposes that the same semantic
+relationships hold true for any language. But then you do not have
+to re-align the new WordNet with the old ones. BalkaNet
+\citep{pt:Tufis00} and MultiWordNet \citep{pt:Pianta02} are prime
+examples of that.
+
+\citep{pt:Sagot08} created a WordNet for French, what they called
+WOLF. They used freely available resources, such as: JRC-Acquis
+\footnote[9]{http://langtech.jrc.it/JRC-Acquis.html} parallel
+corpus, Wikipedia and the EUROVOC
+\footnote[10]{http://eurovoc.europa.eu/} thesaurus. To extract
+synsets for monosemous words a bilingual lexicon is enough since
+no disambiguation is required. In order to remove ambiguity in
+word meanings it is better to take cues from other languages,
+since the same ambiguity in another language is less likely to
+occur. For that purpose they word aligned the parallel corpora (a
+subset of JRC-Acquis) and built multilingual lexicons from that.
+Each entry in the multilingual lexicon was assigned a synset id
+which was most closely matched in the original Princeton WordNet
+(PWN).
+
+They improved upon the then available French WordNet (FREWN)
+\citep{pt:Vossen98}, in terms of number of synsets and it also
+covers more part of speech tags. But their WordNet was limited by
+the resources they used with FREWN being more comprehensive.
+
+\citep{pt:Jones08} showed that using domain specific dictionaries
+improved the performance of the Cross Lingual Information Access
+(CLIA) systems. It is really useful when ordinary users want to
+search in a particular domain using short queries. For instance,
+\emph{White House} might mean an ordinary white house or the White
+House where the President of the United States resides. In CLIA
+normally either the document or the query is translated. Query
+translation is easier but due to lack of context might be less
+accurate and might miss normally used collocations in the target
+language.Bilingual or Multilingual dictionaries might come in
+handy in such cases.
+
+In the domain of Cultural Heritage (CH) information is usually
+given using more than one media (textual, visual, and audio) and
+hence the metadata descriptions become more important. In such
+cases the metadata becomes the key and either it is translated
+into the language of the search or the seach query needs to be
+translated in the language of metadata. Yet metadata is not as
+detailed as the document itself. Yet accurate translation of the
+query becomes essential to increase the performance of the system.
+They combined the standard Machine Translation (MT) system with a
+domain specific dictionary which took into account the collocation
+information.
+
+They used English as the base language doing search in the Culture
+domain by going to webpages related to subcategories and articles
+in the category and recursively all its subcategories. The lexicon
+was created by putting together the base names of the URLs in
+English, Italian and Spanish.
+
+Given a query, it will first be translated using the WorldLingo
+\footnote[11]{http://www.worldlingo.com/} MT system. Then they
+will search for the longest subsequence that would match an entry
+in the domain specific dictionary, and would be translated in the
+target language. The process would be repeated till no match was
+found. They discovered that at least one phrase was found in 90\%
+of the queries, which shows the usefulness of the approach. For
+all of the phrases that have already been recognized they would
+translate it using once again the WorldLingo MT system and see if
+there are any mismatches between the translation done by the
+system and translation obtained from the domain specific
+dictionary, in case there was the translation done by the domain
+specific dictionary would take precedence. Their system was
+assessed by bilingual speakers of languages and was found to have
+improved upon the performance of the WorldLingo MT system.
+According to them 79\%, 58\%, 40\%, and 45\% of the incorrectly
+translated phrases were corrected using the domain specific
+dictionaries for EN-IT, EN-ES, IT-EN, and ES-EN respectively.
+
+
+
+\section{Extracting Synsets from Parallel Corpora}
+
+\subsection{Lexical Semantic Resources}
+
+\subsubsection{WordNet}
+
+Miller \emph{et al}., \citep{pt:Miller90} started work on a
+lexical database, as opposed to an alphabetical dictionary, known
+as WordNet. Over time it has received international acclaim as the
+source of syntactic and semantic information, otherwise missing in
+a conventional dictionary.\\*
+
+Conventional dictionaries put everything in alphabetical order,
+which seems to be the most natural way of storing such
+information. Yet it has proved to be highly in-efficient in terms
+of finding synonyms, antonyms and other such relations, which
+might be of great use to the user. With the development of
+computers a great effort was put in by different people to make
+the dictionaries available online. The computers made it possible
+to get word meanings in the blink of an eye, yet by doing so they
+were reduced to merely page turning devices as far as dictionaries
+were concerned and it was not a very efficient use of the
+processing power of modern day micro-processors.\\*
+
+It divided the lexicon into three different categories: nouns,
+verbs and adjectives. It provides a mapping between word forms and
+word meanings by building a lexical matrix, with word forms being
+the headings of the columns and word meanings being the headings
+of the rows. Any entry in this matrix builds a relationship
+between the form and the meaning. If there are two entries in a
+row, the words are synonymous, and if there are two entries in the
+same column, the words are polysemous. Where synonyms are words
+with the same meaning and polysemous are the words with multiple
+meanings. WordNet defines other relations as well. Apart from
+\emph{Synonymy}, it includes \emph{Antonymy}, \emph{hyponymy}, and
+\emph{meronymy}.\\*
+
+\textbf{Synonymy}
+
+According to one definition of synonymy, two words are synonymous
+if by substituting one with another does not change the truth
+value of a sentence in which the substitution is made. Yet it
+depends on the context as well. For instance, in the carpentry
+context substituting \emph{plank} for \emph{board} will not change
+the truth value of the sentence, hence they can be called as
+synonymous. Such words can be combined in the form of sets, known
+as the \emph{synsets}. thus the synset in this case would be
+{plank,board}.\\*
+
+\textbf{Antonymy}
+
+It may sound simple to define the antonymy relationship yet it
+proves to be quite difficult. Some might think that an antonym is
+just the negation of its antonym, which may not be true in every
+case. Even though \emph{rich} and \emph{poor} or antonyms, yet it
+is not true that any one who is not rich must necessarily be
+poor.\\*
+
+Similarly [\emph{rise}/\emph{fall}] are antonyms and so are
+[\emph{ascend}/\emph{descend}]. Yet one would think twice before
+saying if \emph{rise} and \emph{descend} are antonyms. Thus
+antonymy has more to do with word forms than word meanings.\\*
+
+\textbf{Hyponymy/Hypernymy}
+
+It defines the \emph{IS\_A} relationship between word meanings. In
+other words it defines the superordinate/subordinate
+relationships, where hyponymy corresponds to subordination and
+hypernymy corresponds to superordination. For instance a tiger
+IS\_A cat or the hypernym for tiger is a cat or the hyponym of a
+cat is a tiger. It helps building the inheritance systems, which
+may be used for IR.\\*
+
+\textbf{Meronymy/Holonymy}
+
+It defines the HAS\_A relationship between word meanings. For
+instance a car has\_a tyre, which is holonymy. Meronymy would be
+that tyre is a part of a car.\\*
+
+
+\subsection{Aligning Parallel Corpora}
+
+\section{Morphology}
+
+\section{Word Sense Disambiguation}
+
+%\section{Disambiguation}
+
+Disambiguation refers to when a word may have more than one
+meanings, making it difficult to decide which meaning to choose in
+which case, specially in a bilingual (multilingual) environment,
+where a word in one word language may have many meanings, and the
+corresponding word in another language may also have many
+meanings. Disambiguation basically refers to removing such
+ambiguities and thus making the text processing process less error
+prone.\\*
+
+For instance, the word \textbf{bank} has two common
+interpretations: the bank of a river and the financial
+institution. The task of disambiguation is to determine which of
+the senses of an ambiguous word is invoked in a particular use of
+the word. That can be done by looking at the context in which the
+word has been used.\\*
+
+Yet the word \emph{bank} is an atypical example in the sense that
+the two meanings are far apart in semantics and its very easy to
+disambiguate them by looking at the context. A more interesting
+example would be the word \emph{title}. Some of its meanings
+are\citep{pt:Manning99}: Name/heading of a book; Material at the
+start of a film; The right of legal ownership (of land); The
+document that is evidence of this right; An appellation of respect
+attached to a person's name; and a written work.\\*
+
+One approach could be to define the senses of a word as the
+meanings given to it in a particular dictionary. The problem with
+this approach is that different dictionaries differ greatly in the
+number and kind of senses they list.\\*
+
+Another kind of ambiguity is Prepositional Phrase (PP) attachment
+ambiguity. It pertains to the problem of whether the PP attaches
+to a noun or a verb. More light is shed on it in section
+1.8.?????\\*
+
+Another example relates to \emph{tagging}. For instance the word
+\emph{butter} could either be a noun or a verb. Using a word as a
+verb rather than as a noun might totally change the meaning of the
+word and thus could be viewed as a WSD problem. In order to
+disambiguate such ambiguities, nearby structural cues might help
+such as the use of a determiner before the word.\\*
+
+The disambiguation systems might give different results depending
+upon what training set has been used for training. Depending on
+the kind of training data available, different approaches could be
+adopted for disambiguation: supervised disambiguation;
+unsupervised disambiguation; and dictionary-based
+disambiguation.\\*
+
+Disambiguation is a big topic in computational linguistics, and
+thus it was in the fitness of things to allocate it separate space
+in this dissertation.\\*
+
+\subsection{Supervised and Unsupervised Learning}
+
+The difference between the two is that in \emph{Supervised Learning}
+we know the classification of each example but in \emph{Unsupervised
+Learning} the classification of training data is unknown in advance.
+Thus unsupervised learning can be seen as clustering while
+supervised learning can be seen as a classification task, or as a
+curve-fitting task.\\*
+
+Yet in statistical NLP domain, the production of labeled training
+data is expensive and hence use of auxiliary information source,
+such as a dictionary or aligned bilingual text makes more sense.\\*
+
+\subsection{Supervised Disambiguation}
+
+In supervised disambiguation the task is to train the algorithm
+based on labeled examples and then to generalize it in order to
+classify the hitherto unseen examples. The Bayesian classification
+approach is discussed here.\\*
+
+\subsubsection{The Bayes Classifier}
+
+The Bayesian approach looks at words around the target word in a
+large context window. Each content word contributes potentially
+useful information about the class to which the target word belongs.
+A \emph{Bayes classifier} applies the \emph{Bayes decision rule} to
+decide the class and tries to minimize the classification
+error\citep{pt:Duda73}. The rule is: $Decide$ $s^\prime$if$ P(s^\prime |
+c)$ $>$ $P(s_k | c)$ $for$ $s_k \not= s^\prime$, where $s^\prime$
+and $s_k$ are two different senses, and $c$ is the context. It tries
+to minimize the error since it tries to output the sense ($s^\prime$
+over $s_k$ in the above case) with the highest estimated conditional
+probability. If misclassifications are equally bad then choose the
+most likely one.\\*
+
+The probability $P(s_k | c)$ is not usually known but can be
+estimated using the Bayes rule:
+
+\begin{equation}
+    P(s_k | c) \mbox{ = } \frac{P(c | s_k)}{P(c)} P(s_k)
+\end{equation}
+
+$P(s_k)$ is the \emph{prior probability} of sense $s_k$ without any
+information about the context in which the word has occurred. It is
+updated with a factor that incorporates the context into its
+calculations. $P(s_k|c)$ is the \emph{posterior probability}.\\*
+
+Yet in the above equation $P(c)$ is independent of the sense and
+does not help in disambiguating the word sense and hence can be
+removed from the equation to yield: $P(s_k|c) \mbox{ }\propto\mbox{
+} P(c|s_k)P(s_k)$. The classification process is then reduced to
+maximizing the posterior probability:
+
+\begin{equation}
+    \begin{split}
+        s^\prime& \propto \arg\max_{s_k}P(s_k|c)\\
+        & \propto \arg\max_{s_k}\frac{P(c | s_k)}{P(c)} P(s_k)\\
+        & \propto \arg\max_{s_k}P(c|s_k)P(s_k)\\
+        & \propto \arg\max_{s_k}\left[\log P(c|s_k) + \log P(s_k)\right]
+    \end{split}
+\end{equation}
+
+Gale et al.\citep{pt:Gale92}'s classifier is a particular kind of Bayes
+classifier, known as the \emph{Naive Bayes} classifier.\\*
+
+\textbf{Naive Bayes Classifier}
+
+It works if the state of the world that we base our classification
+on is described as a series of attributes, which are assumed to be
+conditionally independent, which renders the text unstructured. It
+may be referred to as the \emph{bag of words} model. Another
+consequence of this assumption is that presence of one word in the
+bag is independent of the presence of other. So in other words
+certain relationships in the real word between two words may be
+destroyed in the bag of words model. For instance, \emph{Professor}
+is more likely to be linked with a \emph{university} than say a
+\emph{trade union}. But these relationships are destroyed. In this
+case we describe the context of $w$ in terms of the words $v_j$ that
+occur in the context. The Naive Bayes assumption can be expressed
+mathematically as: $P(c|s_k)\quad=\quad\prod _{v_j \mbox{ in } c}
+P(v_j | s_k).$\\*
+
+With the assumption incorporated the decision rule for classifier
+becomes from eq. 1.2 above: $\mbox{Decide } s^/ \mbox{ if } s^/
+\mbox{ = } argmax_{s_k} [\log P(s_k) \mbox{ + }\sum _{v_j \mbox{ in
+} c} \log P(v_j | s_k)]$.
+
+\subsubsection{Dictionary-Based Disambiguation}
+
+Dictionary-based disambiguation can make use of word correspondences
+in a bilingual dictionary\citep{pt:Dagan91},\citep{pt:Dagan94}. The language
+of application (the one for which disambiguation is required) is
+called the \emph{first language} and the target language in the
+bilingual dictionary as the \emph{second language}. For instance, if
+we want to disambiguate English based on a German corpus, then
+English is the first language, German is the second language, and we
+need an English-German dictionary (one with English headwords and
+German entries).\\*
+
+For instance, the English word \emph{interest} has two senses with
+two different translations in German: \emph{Beteiligung}, meaning
+the \emph{legal share}; and \emph{Interesse}, meaning attention,
+concern. In order to disambiguate the English word we identify the
+phrase in the English corpus in which it occurs and then look for
+corresponding occurrences in the German corpus. If the phrase occurs
+with only one of the two translations, then our job is done and we
+assign the corresponding sense to the word.\\*
+
+If its not the case then the disambiguation process is a little more
+complex. Lets suppose interest occurs in the second sense in the
+English phrase. The German translation of show is \emph{zeigen},
+which will only occur with \emph{Interesse} since ``legal shares''
+are not shown. We can conclude that interest in the phrase \emph{to
+show interest} belongs to the second sense. On the other hand, the
+only translation of the phrase \emph{acquired an interest} is
+\emph{erwarb eine Beteiligung}, where \emph{erwarb} means
+\emph{acquisition}, since the word interest in the second sense is
+not usually acquired.
+
+Let $R(w,v)$ be the `is-object-of' relation, $S$ be the
+second-language corpus, $T(s_k)$ be the set of possible translations
+of sense $s_k$, and $T(v)$ be the set of possible translations of
+$v$. Then the algorithm to figure out the score of the sense is
+given as below:
+
+\textbf{comment}: Given: a context $c$ in which $w$ occurs in
+relation $R(w,v)$
+
+\textbf{for} all senses $s_k$ of $w$ \textbf{do}
+
+    \quad \quad score($s_k$) $=$ $|\{c^\prime \in S | \exists w^/ \in T(s_k),
+v^/ \in T(v):
+R(w^/ , v^/ ) \in c\}|$
+
+\textbf{end}
+
+choose $s^/ \mbox{ } = \mbox{ } $ argmax$_{s_k} \mbox{ } $
+score$(s_k)$\\*
+
+The score of a sense is the number of times that one of its
+translations occurs with translations of $v$ in the second-language
+corpus.\\*
+
+For instance, if we want to disambiguate the meaning of the word
+\emph{interest} in the phrase \emph{showed interest} in English
+using its translations in German, we would count the number of times
+the translations of the two senses of \emph{interest} occur in the
+German corpus with translations of \emph{show}. In other words we
+are looking for two counts: $R(Interesse, zeigen)$, and
+$R(Beteiligung, zeigen)$. We would choose the one with the higher
+count.\\*
+
+In some cases where the languages might be related, such as English
+and French, the word sense ambiguity in one language might remain
+preserved in the other language. For instance, the word
+\emph{interest} in English and its French equivalent
+\emph{int\'{e}r\^{e}t} are ambiguous in both languages in more or
+less the same ways. In such cases bilingual dictionaries might not
+be of much help in resolving ambiguity. It makes sense to make use
+of dictionaries when they make sense and use other alternatives when
+it does not \citep{pt:Gale92}.\\*
+
+\subsubsection{Information Retrieval (IR) Approach to Sense Disambiguation}
+
+Gale et al.\citep{pt:Gale92} treated contexts just as documents are
+treated in a probabilistic information retrieval (IR) model
+\citep{pt:Salton89}, \citep{pt:Rijsbergen79}. Let the tokens be represented by
+$t$, the relevant and irrelevant documents by $r$ and $r^\prime$
+respectively, and the two senses by $s_1$ and $s_2$ respectively,
+then the IR model sorts documents by:
+
+\begin{equation}
+    \mbox{score}(d) \mbox{ } = \mbox{ }
+    \prod_{t\mbox{ in } d} \mbox{ } \frac{P(t|r)}{P(t|r^\prime)}
+\end{equation}
+
+for WSD contexts $c$ would be sorted by:
+
+\begin{equation}
+    \mbox{score}(c) \mbox{ } = \mbox{ }
+    \prod_{t\mbox{ in } c} \mbox{ } \frac{P(t|s_1)}{P(t|s_2)}
+\end{equation}
+
+where $P(t|s_i)$ denotes the estimate of the probability that
+whether the token appears in the context of $s_1$ or $s_2$.\\*
+
+They defined the context as a window of 50 words to the left and
+also to the right of the ambiguous word. Other studies have chosen
+to keep the context to the words that are quite nearby. An approach
+that finds its basis on Kaplan's \citep{pt:Kaplan50} observation ``a
+context consisting of one or two words has an effectiveness not
+markedly different from that of the whole sentence.'' Yet they
+figured that in the Hansards (official records of the Canadian
+Parliament), context was found to be relevant to noun disambiguation
+up to ten thousand words away. Yet information at some remote
+distance from the ambiguous word may just duplicate the information
+available at some nearer point. They also showed that not many
+examples were needed for training to achieve good accuracy. In their
+experiments three examples gave 75\% accuracy and ten gave 80\%.
+Thus the marginal utility of extra examples was not very high. Thus
+useful systems could be built for senses not occurring too many
+times in the corpus.\\*
+
+\subsection{Unsupervised Disambiguation}
+
+Unsupervised methods, as opposed to supervised methods do not
+require annotated corpus to carry out any useful tasks. They use
+contextual information to describe the properties of the target
+words, phrase, sentences, and documents.
+
+\subsubsection{Sentence Level Translation}
+
+Brown \emph{et al} \citep{pt:Brown90} chose as the translation of
+the French sentence $F$ that sentence in English $E$ for which
+$P(E|F)$ is greatest. It is defined by the Bayes'rule as:
+
+\begin{equation}
+    P(E|F) \mbox{ = } \frac{P(E)P(F|E)}{P(F)}
+\end{equation}
+
+Since the denominator is independent of $E$, the equation reduces to
+maximizing $P(E)P(F|E)$. The first factor corresponds to the
+statistical characterization of the English language, and the latter
+corresponds to the statistical characterization of the process of
+translation from English to French. Different models can be employed
+to estimate the values of the probabilities.\\*
+
+\textbf{The Translation Model}
+
+Brown \emph{et al} \citep{pt:Brown90} used the concept of
+\emph{alignment} in which each English word, independent of other
+words, produced 0 or more words in French. If $A$ denotes a typical
+alignment then the probability of translation from English to French
+can be expressed as a sum over all possible alignments.
+
+\begin{equation}
+    P(F|E) \mbox{ = } \sum_A \mbox{ } P(F,A|E)
+\end{equation}
+
+The number of possible alignments increase rapidly with the size of
+the sentences in the two languages. Yet not all of them contribute
+equally to the sum. The one that contributes the most is called the
+\emph{Viterbi Alignment} between the two languages. The words thus
+aligned are known as connections. They obtained over 12 million
+connections from the Canadian Hansard \citep{pt:Brown90}.\\*
+
+They defined as $p(e,f)$ as the probability that the connection
+chosen at random from the set of connections would connect the
+English word $e$ to the French word $f$. It could be used to compute
+the mutual information between a French word and its English mate in
+a connection. Mutual information estimates give us the relationship
+between the two variables and gives us the information that each one
+of them shares. It gives us a measure of how much uncertainty is
+removed about one if we have information about the other.\\*
+
+Brown \emph{et al} \citep{pt:Brown91} described a method for
+labeling a word with the sense depending on the context in which it
+appears, so as to increase the mutual information between the words
+in a connection. In the French sentence \emph{Je vais prendre ma
+propre d\'{e}cision}, the word \emph{prendre} should be translated
+as \emph{make} since its object is \emph{d\'{e}cision}. If
+\emph{d\'{e}cision} is replaced by \emph{voiture}, meaning car in
+English, it should be translated as \emph{take} to yield \emph{I
+will take my own car}. Thus the sense assigned to \emph{prendre}
+depends on the first noun to the right, which they called the
+\emph{informant} for \emph{prendre}.\\*
+
+They defined seven informants for French: the word to the left; the
+word to the right; the first noun to the left; the first noun to the
+right; the first verb to the left; the first verb to the right; and
+the tense of either the current word, if it is a verb, or of the
+first verb to the left of the current word. For English they only
+considered the previous two words.\\*
+
+For the French word \emph{prendre}, the noun to the right yielded
+the most information, .381 bits, about the English translation of
+the word. The nouns which appear most frequently on the right of
+\emph{prendre} were identified, with the probability of occurrence
+greater than one part in fifty. They were divided into two groups
+depending on the sense they translate the French word \emph{prendre}
+into. The word is assigned the sense depending on the group to which
+the word on its right belongs to. They discovered that if the noun
+on the right of \emph{prendre} was \emph{d\'{e}cision}, the
+probability of its translation as \emph{to make} was 3 times higher
+than its translation as \emph{to take}.\\*
+
+Despite promising results, their method assigned only two senses to
+a word which limited the amount of information that could be
+extracted about the translation of a word to no more than 1 bit.
+Since the entropy of translation of a common word can be as high as
+5 bits, using more senses for a word might yield better results.\\*
+
+Yarowsky \citep{pt:Yarowsky92} used Roget's Categories to
+disambiguate words in English. Roget's categories tend to correspond
+to sense distinctions. Thus figuring out a Roget's category for a
+word is akin to discriminating between different senses of the word.
+The most probable category given the context was selected. There are
+a total of 1,043 such categories. Each word may belong to one or
+more categories, identifying different senses in which it could be
+used.\\*
+
+For each category in the Roget Categories, they first collected
+contexts representative of the category. Then in each such
+collective context salient words were extracted and weights were
+assigned to each word. The resultant weights were used for
+determining the category (sense) of the polysemous word.\\*
+
+The goal of the first step is to collect a set of words that are
+typically found in the context of category. In order to achieve it
+they collected contexts of 100 surrounding words for each occurrence
+of each member of the category in the corpus (June 1991 electronic
+version of Grolier's Encyclopedia).\\*
+
+A salient word is the one which appears significantly more often in
+the context of a category and is hence a relatively good indicator
+of the category. They used mutual-information-like estimate:
+$\frac{P(w|C)}{P(w)}$, the probability of a word $w$ appearing in
+the context of the Roget category as a ratio of its overall
+probability in the corpus. The local estimate $P(w|C)$ in
+combination with the global estimate $P(w)$ gives a more reasonable
+and reliable estimate. From among the salient words for a particular
+category only the most \emph{important} are selected, where
+\emph{importance} is defined as the product of salience and local
+frequency. Thus important words must be distinctive and frequent.
+Log of salience gives the \emph{weight} of a word.\\*
+
+When any of the salient words appear in the context of the
+polysemous word there is evidence that the word belongs to the
+category to which the salient word is related. If several such words
+appear in the context, evidence is further substantiated. Using
+Bayes' rule they summed the weights of the salient words in context,
+over all words in context, and figure out the category for which the
+sum is the greatest. The context was defined to extend to 50 words
+on each side.
+
+\begin{equation}
+    \arg\max_{C} \mbox{ } \sum_{w \mbox{ in } context} \mbox{ } \log\left (
+\frac{P(w|C) \mbox{ x } P(C)}{P(w)} \right )
+\end{equation}
+
+The algorithm was applied to 12 words: star, mole, galley, cone,
+bass, bow, taste, interest, issue, duty, sentence and slug. Accuracy
+ranged from 100\% for some, such as the \emph{Securities} sense of
+the word \emph{stock} to a low of 25\% for the \emph{ornamentation}
+sense of \emph{ribbon}. For most of the words accuracy remained
+fairly high.\\*
+
+\subsubsection{Properties of a Word in a Document and in its Context}
+
+Yarowsky \citep{pt:Yarowsky95} used the \emph{One sense per
+collocation} and \emph{One sense per discourse} properties of human
+languages to carry out unsupervised learning in order to do
+disambiguation of polysemous words, thus dispensing with the need
+for time-consuming hand annotations. They used a corpus comprising
+460 million words containing news articles, scientific abstracts,
+spoken transcripts, and novels. The two properties are defined below
+as:
+
+\textbf{One sense per discourse:}
+
+The sense of a target word is highly consistent within any given
+document\citep{pt:Yarowsky95}.
+
+\textbf{One sense per collocation:}
+
+Nearby words provide strong and consistent clues to the sense of a
+target word, conditional on relative distance, order and syntactic
+relationship\citep{pt:Yarowsky95}.\\*
+
+They first identified all examples of the given polysemous word
+(\emph{plant} in this case) with their contexts stored as lines in
+an untagged training set. For each sense of the word, a small
+representative set of examples was selected. A small number of
+\emph{seed collocations} were identified which indicated each sense.
+All training examples were then tagged using the seed's sense label.
+Initially the words \emph{life} and \emph{manufacturing} were used
+as seed collocations to identify two different senses of the word
+\emph{plant}. Remainder of the examples constituted the untagged
+\emph{residual}, typically 85-98\%. From the corpus containing 7,538
+instances of the word \emph{plant} 82 (1\%) were partitioned as
+\emph{living plants}, 106 (1\%) were identified as
+\emph{manufacturing plants} and the remainder 7,350 (98\%) were
+identified as \emph{residual examples}.\\*
+
+The decision-list algorithm \citep{pt:Yarowsky94}was used to
+identify other collocations as an extension to the seed
+collocations. They were ordered by the log-likelihood ratio $Log
+\left( \frac{P(Sense_A | Collocation_i)}{P(Sense_B | Collocation_i)}
+\right)$. A given collocate such as \emph{life} might appear in
+different collocations, for instance, as \emph{life (within
+$\pm$2-10 words)} or \emph{plant life}. The resulting classifier was
+applied to the entire sample set. Only those members from the
+residual were taken that were tagged as belonging to either of the
+two senses with probability above a certain threshold.\\*
+
+The \emph{one sense per discourse} constraint was then used to tag
+untagged contexts and also to correct certain errors. If several
+instances of the word in a single discourse were tagged with one
+sense, it makes sense to extend that sense to all the other
+occurrences of the word in the same discourse. Also if one
+occurrence of the word has been tagged with a sense which is in
+conflict with the majority of tags in the same document, the ones in
+minority can be changed to the majority. Words can be assigned
+conflicting senses due to the \emph{one sense per collocation}
+constraint, which basically gives local information about the
+word.\\*
+
+The original seed sets keep expanding with new examples being added
+while the residual keeps shrinking till the algorithm converges to a
+stable residual set.\\*
+
+They showed that their algorithm gave similar performance as the
+supervised algorithm (decision list algorithm applied to the same
+data without using any discourse information) given identical
+training contexts (95.5\% vs. 96.1\%).\\*
+
+\subsection{PP Attachment Ambiguity}
+
+Prepositional Phrase (PP) attachment is an attachment ambiguity
+problem that has intrigued both linguists and computational
+linguists for decades. It basically pertains to deciding whether the
+PP attaches to the noun or the verb. An example could be ``He saw a
+man with the telescope.'' It is difficult to decide in this case
+whether the telescope was carried by the person watching the other
+one, or by the one being watched.\\*
+
+Kazakov \emph{et al} \citep{pt:Kazakov06}., tried to resolve PP
+attachment ambiguity problem using Inductive Logic Programming (ILP)
+more specifically, learning using the ILP tools, Progol and CLOG.\\*
+
+All possible semantic tags as provided by the WordNet were used to
+tag the <Verb,Noun,Prep,Noun> 4-tuples. The semantically tagged
+4-tuples were also labeled with the corresponding PP attachment
+class, 'N' for noun attachment and 'V' for verb attachment.\\*
+
+The ILP tools Progol and CLOG were used to learn attachment rules.
+The rules predicting noun attachment and the rules predicting verb
+attachment were learned separately for Progol while CLOG learned
+them together. The principle difference is that the rules learnt by
+Progol are pure Prolog programs with no ordering on them while the
+rules learnt by CLOG are ordered from specific-to-general and only
+the most specific applicable rule will apply. This means that the
+CLOG PP attachment rules are intended to guess the most likely
+attachment given the context. In Progol a number of rules can cover
+an example, but in CLOG only one would do.\\*
+
+Both Progol and CLOG learned a number of rules. For the non-greedy
+approach Progol learned 1,542 rules for noun-attachment and 1,996
+rules for verb attachment. For the greedy approach it learned 257
+rules for noun attachment and 541 rules for verb attachment. CLOG on
+the other hand learned 338 rules in total.\\*
+
+It could not improve on the Naive Bayesian approach since the
+original data had a lot of ambiguity.\\*
+
+\subsubsection{PP Attachment and WSD}
+
+The context in which the word appears plays a great role in
+disambiguating any ambiguous words. That is where PP Attachment
+disambiguation comes into the picture. By changing the \emph{noun}
+or \emph{verb} attachment, the whole meaning of the sentence might
+change and it might also change the sense in which a particular
+ambiguous word has been used.\\*
+
+Consider an example of a sentence:\\*
+
+\emph{I saw a star in the park with a telescope.}\\*
+
+It has different semantic interpretations:
+
+1) \emph{I saw [a star [in the park]] [with a telescope.]}
+
+2) \emph{I saw [a star [in the park [with a telescope]]].}
+
+3) \emph{I saw [a star] [in the park [with a telescope]].}\\*
+
+Depending on whether \emph{with a telescope} attaches with the
+\emph{star}, in which case it might mean a tv or film star having a
+telescope, or it was me who had the telescope, in which case star
+could mean any celestial body. Thus resolving PP attachment
+ambiguity can help in WSD.\\*
+
+\subsection{WordNet and WSD}
+
+Use of dictionaries for Word Sense Disambiguation has been discussed
+before. Rather than using dictionaries, WordNet and its inherent
+structures can also be used for the disambiguation task.
+
+\citep{pt:Banerjee02} made changes to the basic algorithm defined
+by Lesk \citep{pt:Lesk86} but rather than using Oxford Advanced
+Learner's Dictionary they used WordNet.
+
+The original Lesk algorithm looks at a small context around the
+target word and looks up into the dictionary for the definitions
+of the context words and the target word, and ascertain in which
+sense the word has been used by finding the overlapping words in
+the definitions. For instance, in \emph{coal ash} they figured
+that \emph{ash} was not used in the sense of a color or a tree but
+in the sense of what is remained after \emph{coal} is burned.
+
+Banerjee's use of WordNet rather than a dictionary improved the
+performance upto 32\% accuracy as compared to 16-23\% for
+different variations of the Lesk algorithm.
+
+\citep{pt:Mihalcea99} used frequency counts on Alta Vista search
+engine \footnote[18]{http://www.altavista.com/} for augmented
+queries generated by using WordNet as a source of lexical semantic
+information. They considered verb-noun pairs in the text, such as
+\emph{investigate report} which occur in the same context. While
+keeping one of the words as constant they tried to disambiguate
+the other. The two words occurred in the same context. The word to
+be disambiguated was looked up on the WordNet and the other word
+was paired with different synonyms of the target word forming
+queries of the form ``investigate report'' OR ``investigate
+study''. These augmented queries were fed into alta vista and the
+frequency of results noted. The same process was repeated by
+creating queries from other senses of the word in WordNet and
+noting down the frequencies of results. Senses of the target word
+were thus ranked and the target word disambiguated.
+
+\citep{pt:Li95} used semantic networks that exist in WordNet to
+create word/word relationships and later used them for WSD. The
+semantic network defined by the WordNet has nodes where each node
+carries a synset. At one node the synset defines the strict
+synonymy relationships between words. Each sense of a word, as we
+get as a result of querying the WordNet search engine, has a
+separate node for it in the semantic network. One level up is the
+parent synset of a particular synset and one level down is the
+child synset. Similarly sibling synsets are defined that share a
+common parent synset. The synonymy relationship only goes one way
+from the child to the parent, where the parent synset can be taken
+as the extended synonym of its child synset. They used the notion
+of semantic distance which is proportional to the shortest
+distance between any two synsets in the network.
+
+They only looked for noun objects of verbs in the given text (the
+Canadian Income Tax Guide) but they reckon it could be extended to
+cater for noun subjects as well. They used verbs as the context of
+the noun objects, essentially creating verb-noun word pairs and
+looked for semantic similarity between different nouns and verbs
+using the WordNet semantic network. They used different heuristic
+rules that were based on the idea that noun objects the shared
+same or similar verbs were similar. They found their method to be
+72\% accurate and only 4\% of the results were wrong. The rest
+were judged to be partially correct.
+
+In another approach \citep{pt:Agirre95} they have used the concept
+of Conceptual Distance to choose one sense among money that is
+found in the region of high density in a subhierarchy of concepts
+giving distance between concepts.
+
+\subsection{Multilingual Disambiguation}
+
+Multilingual resources come in handy when it comes to word sense disambiguation
+since a polysemous word in one language may be translated into distinct words in
+another. Distinct words in the other language might be due to the bias of the
+translator or the context of that word. Such clues are important if one wants to
+ascertain the true sense in which the original word is used.
+
+\citep{pt:Diab00} reported some initial investigation into using word alignment and creating sets in the target language, English in this case, for each word \emph{F} in the source language, French in this case. Using WordNet \citep{pt:Miller90} taxonimies distances were measured between different senses of all the words in the target set. For instance, the French word \emph{rive} would translate into \emph{bank} and \emph{shore} in the parallel English corpus. Bank has 10 different senses defined in the WordNet 1.6, with only the second sense corresponding to the river bank. Shore has two senses defined with the first one a more appropriate translation of \emph{rive}. Thus distance between the senses of \emph{bank} and \emph{shore} related to bank of a body of water would be expected to be lower than say the distance between \emph{shore} and the financial institution sense of \emph{bank}. Propagating the assigned sense to the tokens in the original corpora essentially formed the WSD step. They evaluated their algorithm on an artificially created corpora and found the accuracy to be upto 79\%.
+
+
+
+\subsection{Disambiguation in Wikipedia}
+
+Since the experimental work done so far uses Wikipedia as the
+basic platform, it would be vital to look at how the Wikipedia
+people look at it and can the knowledge of their understanding of
+this important aspect of computational linguistics, help us in
+some way in this study and research work? In order to answer this
+question, given below is the summary of information available on
+the Wikipedia website regarding disambiguation.\\*
+
+The disambiguation process in Wikipedia basically deals with the
+problem in page titles. For instance, there are two cities by the
+name Hyderabad, one in Pakistan and one in India, and there are
+scores of other things that start with the word Hyderabad and
+interest people enough to have separate pages on Wikipedia.
+Resolving such plurality of meanings is a tricky issue.\\*
+
+Wikipedia has devised two ways to deal with it: disambiguation
+links and disambiguation pages
+\footnote[13]{http://en.wikipedia.org/wiki/Wikipedia:Disambiguation}\\*
+
+\subsubsection{Disambiguation Links}
+
+If Wikipedia leads the reader to a page, which was not originally
+intended, it provides links to other pages with similar titles in
+case the user meant one of those.\\*
+
+\subsubsection{Disambiguation Pages}
+
+Basically non-article pages bearing no content but redirections to
+pages bearing information on other close meanings of the keywords
+or phrases searched for.\\*
+
+Sometimes one disambiguation page leads to another disambiguation
+page, the phenomenon defined as \textbf{Double disambiguation} by
+the Wikipedia people. One example is Montgomery, which leads to
+another disambiguation page Montgomery County, since there are
+many pages by both names.\\*
+
+\subsubsection{Links to disambiguating pages}
+
+Wikipedia defines a group of pages as \emph{orphan}
+\footnote[14]{
+http://en.wikipedia.org/wiki/Wikipedia:Links\_to\_\(disambiguation\)\_pages}
+with fewer than three links to it, excluding links from
+disambiguation pages \cite{url33}. Thus making a link to an
+orphaned article on the disambiguation page does not render it
+\emph{de-orphanized}. As on 19th June, 2008, there are 29,000
+orphaned articles, 1\% of the total, on Wikipedia. De-orphanizing
+them is thus a Herculean task. Wikipedia provides a list of
+orphaned articles.\\*
+
+\subsubsection{Links to (disambiguation) pages}%\cite{url34}}
+
+If the majority of the people agree on one particular meaning of
+the word, then the Wikipedia
+\footnote[15]{
+http://en.wikipedia.org/wiki/Wikipedia:Links\_to\_disambiguating\_pages}
+takes us to a page with that meaning. On that page it also has a
+link that directs us to a page with links to all different
+meanings of the word. Since that page can not be reached directly
+it has (disambiguation) in its title.\\*
+
+when there is a general disagreement on the meanings of an
+ambiguous word, then Wikipedia does not lead us to the page of any
+particular meaning but directs us to a page with links to all
+different meanings of the word. That page does not have the word
+(disambiguation) in it, and basically corresponds to \emph{Links
+to disambiguating pages}, see above.\\*
+
+\subsubsection{Multiple-place names}
+
+As the name implies, and as explained earlier, different places
+may have the same names. Wikipedia, because of their frequency,
+recognizes them as a separate entity and assigns separate category
+to them
+\footnote[16]{http://en.wikipedia.org/wiki/Wikipedia:Multiple-place\_names}.\\*
+
+\subsubsection{Non-unique personal name}
+
+When two, or more, people share the same name and also have
+entries on Wikipedia
+\footnote[17]{http://en.wikipedia.org/wiki/Wikipedia:Non-unique\_personal\_name}
+,
+they are categorized as such. Wikipedia has separate pages to
+dis-ambiguate such names.\\*
+
+\subsection{Monolingual Ambiguity}
+
+Chomsky \citep{pt:Chomsky65} gives many examples of ambiguities
+that exist in English. For instance the sentence "flying planes
+can be dangerous" can be interpreted in two different ways:
+"flying planes are dangerous"; or "flying planes is dangerous".\\*
+
+Another example quoted by Chomsky is "I had a book stolen". Even
+though a native English speaker might not give a second thought as
+to its semantics, it might be interpreted in three different ways:
+"someone stole my book"; "I had someone steal a book"; or "I had
+almost succeeded in stealing a book".\\*
+
+\subsubsection{PP attachment ambiguity}
+
+Prepositional Phrase (PP) attachment is an attachment ambiguity
+problem that has intrigued both linguists and computational
+linguists for decades. It basically pertains to deciding whether
+the PP attaches to the noun or the verb. An example could be "He
+saw a man with the telescope." It is difficult to decide in this
+case whether the telescope was carried by the person watching the
+other one, or by the one being watched.\\*
+
+Collins and Brooks \citep{pt:Collings95} used the backed-off model
+to ascertain the probabilities of pp attachment to the noun or to
+the verb. It uses the 4-tuples comprising the four head words,
+denoted by <verb,head of noun phrase1,preposition,head of noun
+phrase2>. An attachment decision value was defined, with 1 for
+noun attachment and 0 for verb attachment, and was denoted by $A$,
+to create the quintuples. Since the attachment value of $A$ was
+dependent on the four head words, conditional probabilities were
+used. It was assumed that the default was noun attachment ($A$ $=$
+$1$), thus the actual probability of $A$ given the four head words
+was estimated using:
+
+\begin{equation}
+    \hat{p}(1|v,n1,p,n2)
+\end{equation}
+
+where $v$ is the verb head, $n1$ is the head of the noun phrase 1,
+$p$ is the prepositional phrase, and $n2$ is the head of the noun
+phrase 2. The decision could be made based on the test:
+
+\begin{equation}
+    \hat{p}(1|v,n1,p,n2)\geq0.5
+\end{equation}
+
+Thus if the above test is true then attachment is assumed to be
+noun, otherwise verb. The probability estimates were based on
+frequency counts. The maximum likelihood estimated (MLE) method
+was used for estimation, which gives the following:
+
+\begin{equation}
+    \hat{p}(1|v,n1,p,n2)=\frac{f(1,v,n1,p,n2)}{f(v,n1,p,n2)}
+\end{equation}
+
+The backed-off model \citep{pt:Katz87} is based on predicting the
+probability of the word $n$, given the $n-1$ preceding words. But
+since these estimates are based on frequencies of $n$-grams, the
+higher the order of these $n$-grams, lower the frequency. Thus it
+is quite possible that for any order $n$, the frequency might be
+less than a certain threshold, which would give inaccurate
+estimates. Due to this problem in the backed-off model the order
+of $n$-grams is reduced in each iteration, which increases the
+chances of frequency of such $n$-grams be greater than the
+threshold. It is backed off till sufficiently accurate estimates
+can be made.\\*
+
+Using the backed-off model for PP attachment prediction
+\citep{pt:Collings95}, the tuples are reduced in size first from
+four head words to three, and then to two, given that those tuples
+would have preposition in them. It yields frequency counts of
+three different 4-tuples: $f(1,v,n1,p)$, $f(1,v,p,n2)$, and
+$f(1,n1,p,n2)$. Further reduction would yield three different
+frequency counts of 3-tuples: $f(1,v,p)$, $f(1,n1,p)$, and
+$f(1,p,n2)$. Thus first it would try to estimate the probability
+of PP-attachment for the case when we are taking frequency counts
+of all the four head words. If its not greater than 0, then it
+backs off, reducing the order of $n$-grams to three, and tries to
+estimate the probability if the combined frequency of all the
+4-tuples are greater than 0. In case it fails, it backs off to the
+last case where the order of $n$-grams is reduced to 2, and the
+estimates are made based on the combined frequencies of the
+3-tuples. If all the above cases fail then it gives the default
+pp-attachment of noun to the phrase.\\*
+
+The study proved more successful than other studies hitherto done
+on the Wall Street Journal corpus, yielding an accuracy of 84.5\%,
+which was very near to the human performance of 88\%, using four
+head words alone. One of the important discovery of this study was
+that "ignoring events which occur less than 5 times in training
+data reduces performance to 81.6\%.\\*
+
+Kazakov \emph{et al} \citep{pt:Kazakov06}., tried to resolve PP
+attachment ambiguity problem using Inductive Logic Programming
+(ILP) and first-order decision lists using CLOG. The former
+inductively tries to learn the first-order logic clauses, which
+are understandable by Prolog. For this study the ILP algorithm
+P-Progol 2.7.2 was used, which is a Prolog implementation of the
+Progol algorithm. As for CLOG, the decision lists learned are
+merely Prolog clauses in which every clause ends in a cut. The
+rules are arranged in the specific-to-general ordering, with more
+specific clauses at the top and more generalized ones at the
+bottom. Only the first most specific applicable rule is learned.
+They used WordNet as a source of semantic tags, which uses
+hypernymy to define superordinate and subordinate. Each of the
+word's ancestors can be taken as the semantic tags.\\*
+
+Two kinds of Progol approaches were used: the greedy and the
+non-greedy. In the greedy approach they would provide the system
+with the complete set of examples. The greedy approach induces the
+learned hypothesis one clause at a time. At the induction of each
+clause the positive examples covered by the rule are dispensed
+with, essentially reducing the pool of examples to learn from,
+thus speeding up the process. It makes it rather impossible to
+tell how many positive examples are entailed by the clause, since
+many of them might have been removed in an earlier step.\\*
+
+In the non-greedy approach, they would take one example at a time
+and try to figure out the best hypothesis that would induce it.
+That helped in introducing parallelism in learning since learning
+based on one particular positive example was totally independent
+of learning from another positive example. But this parallelism
+came at a cost. Now the CPU time required to learn the theory
+could not be precisely calculated.\\*
+
+All possible semantic tags as provided by the WordNet were used to
+tag the <Verb,Noun,Prep,Noun> 4-tuples. The semantically tagged
+4-tuples were also labeled with the corresponding PP attachment
+class, 'N' for noun attachment and 'V' for verb attachment. ILP
+and CLOG were then used to distinguish between the two.\\*
+
+\subsubsection{Word Sense Disambiguation (WSD)}
+
+Galley and McKeown \citep{pt:Galley03} propose a new linear time
+lexical chaining algorithm that takes one sense per discourse.
+Lexical chaining refers to linking words that are connected
+semantically. They used WordNet as the knowledge base to build the
+chains using only hypernymy/hyponymy as semantic relations. Each
+semantic relation was assigned a different weight. They created
+\emph{disambiguation graphs} in which the nodes represented the
+word instances and the weighted edges represented semantic
+relations. They used arrays to create the graphs in linear time.
+For instance, the word \emph{bank} has many senses, which
+correspond to in the WordNet, among others: the financial
+institutions; the slope of the bank; and the reserve. These three
+different senses are connected using weighted edges to other nodes
+in the graph: credit union; fall; and gambling house funds
+respectively. In actual graph they would be connected to even more
+senses. The most probable senses are assigned the highest weights.
+For the above example the sense of the word \emph{bank} that has
+the highest weight is \emph{financial institution}. They removed
+other senses from the graph since they had the restriction of one
+sense per discourse, and thus the word sense was assigned to all
+occurrences of the word in the corpus.\\*
+
+They tested three different lexical chaining algorithms (Barzilay
+and Elhadad \citep{pt:Barzilay97}; Silber and McCoy
+\citep{pt:Silber02}; and their own) on the semantic concordance
+corpus (semcor) extracted from the Brown Corpus. They tested them
+on 74 documents totalling 35,000 nouns. Their algorithm performed
+better than others with an accuracy of 62.09\%.\\*
+
+\subsection{Using Wikipedia for WSD}
+
+Mihalcea \citep{pt:Mihalcea07} used Wikipedia as a source of sense
+annotations. Hyperlinks within Wikipedia are created using unique
+identifiers, which consist of one or more words separated by
+spaces or underscores, and occasionally parenthetical
+explanations. These identifiers are also reflected in the URLs.
+For instance the URL for Space Music (album) is
+http://en.wikipedia.org/wiki /Space\_Music\_\%28album\%29 which
+incorporates all the three words in it. \emph{Anchor text}
+represents the surface form of the hyperlinks. Another example is
+"Henry Barnard, [[United States|American]] [[educationalist]], was
+born in [[Hartford, Connecticut]]". It contains links to the
+Wikipedia pages on \emph{United States}, \emph{educationalist},
+and \emph{Hartford, Connecticut}. The double brackets surrounding
+words convert surface forms into hyperlinks. \emph{[[United
+States|American]]} is a special kind of link known as the
+\textbf{piped link}, which basically links the surface form
+\emph{American} to the Wikipedia article \emph{United States}.
+These links can be used as \emph{sense annotations} for WSD.\\*
+
+Mihalcea used the links for all the hyperlinked occurrences for
+the given word, thus for the word \emph{bar}, five annotations
+were extracted: \emph{bar(counter)}, \emph{bar(establishment)},
+\emph{bar(landform)}, \emph{bar(law)}, and \emph{bar(music)}. Then
+the WordNet senses were extracted for the given occurrences.\\*
+
+The ambiguous words used were a part of the words used in the
+SENSEVAL-2 and SENSEval-3. 30 words were chosen that had at least
+two senses in the WordNet. Two baseline cases were used: Most
+Frequent Sense (MFS), using an informed sense tagged corpus; and
+the corpus based version of the Lesk algorithm
+\citep{pt:Kilgarriff99}. Wikipedia based WSD was found reliable
+with average accuracy of 84.65\% using Wikipedia as compared to
+72.58\% for the baseline case of MFS, and 78.02\% for the baseline
+case of Lesk-corpus. The study also showed that with increased
+size of data the accuracy increased. It shows promise as Wikipedia
+size is increasing by leaps and bounds.\\*
+
+
+
+\section{Evaluation using Clustering and Decision Trees}
+
+\subsection{Vector Space Model}
+
+Salton, Wong and Yang \citep{pt:Salton75} defined the vector space
+model for indexing. According to them each document could be taken
+as a point in a multi-dimensional space where each dimension
+corresponds to a term, (\emph{index element}) in the index. A
+vector can be drawn from the origin to each point, what could be
+termed as an \emph{index vector}. If all the index vectors are
+normalized to one, the documents are nothing more than points on
+the envelope of a sphere with a unit radius. How close or how far
+the points are defines how similar or different they are.\\*
+
+In case there are $t$ different terms (dimensions) and $D_i$
+different documents in the document space, each document could be
+represented by a $t$-dimensional vector $D_i$ $=$
+$(d_{i1},d_{i2},...,d_{it})$, where $d_{ij}$ represents the weight
+of the $j$th term. Assigning different weights to different terms
+affects clustering, which might ultimately affect retrieval.\\*
+
+Since points in the near neighborhood of each other correspond to
+broadly similar documents, any retrieval effort might not just
+retrieve the one best document, but might also fetch many
+documents in its neighborhood. Such an approach would broaden the
+horizon and relevance of search. However if the documents are far
+apart in the document space, chances are that only one particular
+document would be retrieved given a particular query. That would
+mean high precision output, since the only document retrieved
+would also be the most relevant. But in case there are also other
+documents in its vicinity that are also relevant to the query, and
+they are also retrieved along with the best document, recall would
+also be high along with precision.\\*
+
+The optimal approach would be one that tries to incorporate both
+the above mentioned characteristics: it does not only have
+documents far apart that are low on relevance, but also has
+documents in the neighborhood that are also high on relevance. It
+results into a clustered document space, where similar documents
+are found in clusters while the irrelevant documents are found in
+other clusters. Clusters may also overlap with a document
+belonging to two or more classes. Each cluster is defined by its
+centroid, which is basically obtained by taking averages of each
+index element in all the documents in that cluster.\\*
+
+Thus for a cluster $K$ with $m$ documents, each element of
+centroid $C$ may be defined as the average weight of the same
+elements in the corresponding document vectors, that is,
+
+\begin{equation}
+    c_j = \frac{1}{m}\sum^m_{i=1}d_{ij}
+\end{equation}
+
+Similar to the cluster centroids, a main centroid may be defined
+for the entire document space. It could be obtained from the
+individual cluster centroids, in the same way the cluster
+centroids were calculated based on index vectors.\\*
+
+A good model is where the intra-cluster distances are small but
+inter-cluster distances are big, which increases the chances of
+increasing both recall and precision. It would thus make sense to
+increase similarity between documents in the same cluster, while
+decreasing similarity between different clusters or cluster
+centroids. That could be achieved by giving more weight to terms
+whose occurrence is highly skewed, they occur with high frequency
+in some clusters while they occur with very low frequencies in
+others, and by assigning lesser weights to terms that occur in a
+large number of clusters. For the purpose the standard $tf-idf$,
+term frequency - inverse document frequency, could be used.\\*
+
+\subsection{TF IDF}
+
+TF stands for Term Frequency and IDF stands for Inverse Document
+Frequency. Combined its the most known way of weighing terms for
+indexing. Even though its considered to be a heuristic, much has
+been written on its theoretical foundations.\\*
+
+Taking just TF does not take the length of documents into account
+\citep{pt:SparckJones72}. Larger documents are more likely to
+contain the same term more frequently than the smaller documents.
+Thus the document lengths must be normalized. A straightforward
+way is to divide the TF with length of the document. It
+essentially normalizes each document vector to length 1 and is
+called as relative term frequency.\\*
+
+Sparck Jones, K. \cite{pt:SparckJones72} in her pioneering work
+defined the term Inverse Document Frequency (IDF), which later
+became the cornerstone of research in the field of IR. It
+basically gives how common is the term in the entire document
+space. It is taken as the log of the total number of documents,
+$N$, to the number of documents with term $t_i$ in them, $n_i$,
+and is stated as below:
+
+\begin{equation}
+    idf(t_i) = \ulcorner log_2 N\urcorner - \ulcorner log_2
+    n_i\urcorner + 1
+\end{equation}
+
+With large $N$, the total number of documents, $idf$ would
+increase. With increase in the number of documents with term
+$t_i$, $idf$ would decrease. The aim is to increase the weights of
+those terms, which are more frequent in individual documents, or
+small sets of documents, but rare in the entire document space.
+They are more useful in discriminating like documents from dislike
+documents. The reverse is true if the term is found very
+frequently in the entire corpus but rarely in individual
+documents. Such terms may not be useful in discriminating
+documents and are thus assigned lower weights.\\*
+
+\subsection{Clustering}
+
+Clustering is an important step that can cluster documents in a
+way that the resultant retrieval could improve on both precision
+and recall. Many clustering techniques are in use.\\*
+
+Sedding and Kazakov \citep{pt:Sedding04} describe WordNet based
+text document clustering. WordNet is a wonderful took developed by
+Miller \emph{et al}., \citep{pt:Miller90}, which is discussed
+later in this section. WordNet provides semantic relations between
+words in terms of synonymy and hypernymy, among others.\\*
+
+Sedding \emph{et al}., built on this basic infrastructure to
+improve on their document clustering. They defined a few
+preprocessing steps: POS tagging, stopword removal, stemming,
+WordNet Categories, pruning, and clustering, in that order. While
+tagging gives syntactic information, WordNet adds meaning in terms
+of synonymy and hypernymy.\\*
+
+Tagger assigns a POS tag to each word in the corpus and is done
+before any other modifications are done, since order of words is
+very important in any tagging exercise. Stopword removal removes
+all the words that do not add much meaning to the corpus. For this
+particular study all tokens that were not nouns, verbs or
+adjectives were removed. Stemming refers to getting the basic form
+of a word while removing any morphological inflections that might
+provide syntactic and semantic wrapping to the word. WordNet
+categories, as described above, adds meaning to the words. Pruning
+prunes all the words that occur below a certain threshold, because
+they might be good discriminators but we might end up with
+clusters with just a few documents, and might affect the
+efficiency of the clustering technique in terms of recall and
+precision. Then the terms or words were assigned weights using the
+\emph{tf.idf} weighting mechanism. Finally clustering was done
+using bisecting \emph{k}-means algorithm, which was found to be
+the current best clustering technique \citep{pt:Steinbach00}.\\*
+
+They used Reuters-21578 as the test collection for being not
+specific to any domain, free availability and for comparable
+studies. The corpus comprised of 21578 newswire articles from
+1987.\\*
+
+Five configurations of data were used: \textbf{Baseline}, which
+includes all the basic pre-processing techniques, i.e. stopword
+removal, stemming, pruning and weighting but POS tags are removed;
+\textbf{PoS\_Only} that is identical to Baseline in every sense
+except that the POS tags are kept; \textbf{Syns} that includes all
+WordNet senses of each PoS tagged token over and above all other
+aspects in the previous configuration; \textbf{Hyper\_5} that
+includes 5 levels of hypernyms over and above everything in Syns;
+and \textbf{Hyper\_All} that includes all hypernym levels.\\*
+
+Results indicated that the quality of clustering increases with
+the number of clusters. Better clusters were obtained for Baseline
+than for any other configuration when the background knowledge was
+added using WordNet. That might be due to the reason that WordNet
+provides many sense for each word, thus for every correct sense
+many incorrect senses were added, which is the added noise. The
+results also indicated that including only five levels of
+hypernyms was better than using all. It could be because with
+added levels of hypernymy the terms become too general and loose
+their discriminating power, which is bad for clustering.\\*
