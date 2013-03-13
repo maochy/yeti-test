@@ -1,8 +1,8 @@
 \select@language {UKenglish}
-\contentsline {section}{List of Tables}{v}{section*.1}
-\contentsline {section}{List of Figures}{vi}{section*.1}
-\contentsline {section}{Acknowledgements}{vii}{section*.1}
-\contentsline {section}{Declaration}{ix}{section*.1}
+\contentsline {section}{List of Tables}{vi}{section*.1}
+\contentsline {section}{List of Figures}{vii}{section*.1}
+\contentsline {section}{Acknowledgements}{viii}{section*.1}
+\contentsline {section}{Declaration}{x}{section*.1}
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Description}{3}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Test input data is decisive}{3}{subsection.1.1.1}
@@ -51,7 +51,37 @@
 \contentsline {subsection}{\numberline {2.4.11}YETI}{5}{subsection.2.4.11}
 \contentsline {section}{\numberline {2.5}Conclusion}{5}{section.2.5}
 \contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{6}{chapter.3}
-\contentsline {chapter}{\numberline {4}Automated Discovery of Failure Domain Strategy}{7}{chapter.4}
-\contentsline {chapter}{\numberline {5}Directed Random Plus Strategy}{8}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{9}{chapter.6}
-\contentsline {chapter}{References}{10}{section*.2}
+\contentsline {section}{\numberline {3.1}Introduction}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dirt Spot Sweeping Random Strategy}{8}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Random Strategy (R)}{9}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Random Plus Strategy (R+)}{10}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Dirt Spot Sweeping (DSS)}{10}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{12}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Explanation of DSSR strategy on a concrete example}{13}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Implementation of the DSSR \\ strategy}{16}{section.3.3}
+\contentsline {section}{\numberline {3.4}Evaluation}{17}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Research questions}{18}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Experiments}{18}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{19}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Results}{20}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{21}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{22}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{22}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Discussion}{23}{section.3.6}
+\contentsline {section}{\numberline {3.7}Related Work}{24}{section.3.7}
+\contentsline {section}{\numberline {3.8}Conclusions}{26}{section.3.8}
+\contentsline {chapter}{\numberline {4}Automated Discovery of Failure Domain Strategy}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automated Discovery of Failure Domain}{34}{section.4.2}
+\contentsline {section}{\numberline {4.3}Implementation}{37}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}York Extensible Testing Infrastructure}{37}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}ADFD strategy in YETI}{38}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Example}{38}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Experimental Results}{40}{section.4.4}
+\contentsline {section}{\numberline {4.5}Discussion}{43}{section.4.5}
+\contentsline {section}{\numberline {4.6}Threats to Validity}{44}{section.4.6}
+\contentsline {section}{\numberline {4.7}Related Works}{45}{section.4.7}
+\contentsline {section}{\numberline {4.8}Conclusion}{46}{section.4.8}
+\contentsline {chapter}{\numberline {5}Directed Random Plus Strategy}{47}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{48}{chapter.6}
+\contentsline {chapter}{References}{49}{section*.2}
