@@ -3,104 +3,48 @@ The top-level auxiliary file: ThesisMain.aux
 The style file: newapa.bst
 Database file #1: mybib.bib
 Warning--entry type for "Oriol2011" isn't style-file defined
---line 791 of file mybib.bib
-Repeated entry---line 1018 of file mybib.bib
- : @article{Chan1996
- :                  ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1029 of file mybib.bib
- : @inproceedings{Chan2002
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1044 of file mybib.bib
- : @inproceedings{Chen2004
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1071 of file mybib.bib
- : @article{Chen2008
- :                  ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1083 of file mybib.bib
- : @inproceedings{Chen2003
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1099 of file mybib.bib
- : @inproceedings{Chen2005
- :                        ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1129 of file mybib.bib
- : @inproceedings{Ciupa2008
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1203 of file mybib.bib
- : @inproceedings{Hamlet1994
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1284 of file mybib.bib
- : @inproceedings{Oriol2012
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1299 of file mybib.bib
- : @electronic{Oriol2011
- :                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1317 of file mybib.bib
- : @inproceedings{Oriol2010
- :                         ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1335 of file mybib.bib
- : @inproceedings{Oriol2010a
- :                          ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1353 of file mybib.bib
- : @inproceedings{Pacheco2007
- :                           ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 1388 of file mybib.bib
- : @inproceedings{Tempero2010
- :                           ,
-I'm skipping whatever remains of this entry
+--line 1109 of file mybib.bib
 Warning--can't use both volume and number fields in Godefroid2005
 Warning--empty note in Oriol2010b
 You've used 55 entries,
             2708 wiz_defined-function locations,
-            967 strings with 14195 characters,
-and the built_in function-call counts, 28885 in all, are:
-= -- 2747
-> -- 1187
+            964 strings with 14084 characters,
+and the built_in function-call counts, 29121 in all, are:
+= -- 2773
+> -- 1201
 < -- 60
-+ -- 459
-- -- 438
-* -- 2544
-:= -- 5142
++ -- 467
+- -- 444
+* -- 2568
+:= -- 5179
 add.period$ -- 185
 call.type$ -- 55
-change.case$ -- 471
-chr.to.int$ -- 54
+change.case$ -- 473
+chr.to.int$ -- 52
 cite$ -- 57
-duplicate$ -- 1213
-empty$ -- 1955
-format.name$ -- 527
-if$ -- 5650
-int.to.chr$ -- 2
+duplicate$ -- 1220
+empty$ -- 1965
+format.name$ -- 531
+if$ -- 5701
+int.to.chr$ -- 4
 int.to.str$ -- 0
 missing$ -- 58
 newline$ -- 276
 num.names$ -- 220
-pop$ -- 411
+pop$ -- 410
 preamble$ -- 1
-purify$ -- 531
+purify$ -- 533
 quote$ -- 0
-skip$ -- 939
+skip$ -- 947
 stack$ -- 0
-substring$ -- 1912
-swap$ -- 412
-text.length$ -- 29
+substring$ -- 1936
+swap$ -- 419
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 320
 warning$ -- 2
-while$ -- 266
+while$ -- 269
 width$ -- 0
-write$ -- 762
-(There were 14 error messages)
+write$ -- 765
+(There were 3 warnings)
