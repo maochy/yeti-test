@@ -5,46 +5,47 @@ Database file #1: mybib.bib
 Warning--entry type for "Oriol2011" isn't style-file defined
 --line 1109 of file mybib.bib
 Warning--can't use both volume and number fields in Godefroid2005
+Warning--can't use both volume and number fields in mccabe1983
 Warning--empty note in Oriol2010b
-You've used 55 entries,
+You've used 57 entries,
             2708 wiz_defined-function locations,
-            964 strings with 14084 characters,
-and the built_in function-call counts, 29121 in all, are:
-= -- 2773
-> -- 1201
-< -- 60
-+ -- 467
-- -- 444
-* -- 2568
-:= -- 5179
-add.period$ -- 185
-call.type$ -- 55
-change.case$ -- 473
-chr.to.int$ -- 52
-cite$ -- 57
-duplicate$ -- 1220
-empty$ -- 1965
-format.name$ -- 531
-if$ -- 5701
+            975 strings with 14240 characters,
+and the built_in function-call counts, 29739 in all, are:
+= -- 2827
+> -- 1221
+< -- 63
++ -- 473
+- -- 450
+* -- 2618
+:= -- 5302
+add.period$ -- 191
+call.type$ -- 57
+change.case$ -- 486
+chr.to.int$ -- 54
+cite$ -- 60
+duplicate$ -- 1247
+empty$ -- 2006
+format.name$ -- 539
+if$ -- 5809
 int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 58
-newline$ -- 276
-num.names$ -- 220
-pop$ -- 410
+missing$ -- 60
+newline$ -- 286
+num.names$ -- 228
+pop$ -- 419
 preamble$ -- 1
-purify$ -- 533
+purify$ -- 549
 quote$ -- 0
-skip$ -- 947
+skip$ -- 971
 stack$ -- 0
-substring$ -- 1936
-swap$ -- 419
-text.length$ -- 30
+substring$ -- 1962
+swap$ -- 427
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 320
-warning$ -- 2
-while$ -- 269
+type$ -- 330
+warning$ -- 3
+while$ -- 275
 width$ -- 0
-write$ -- 765
-(There were 3 warnings)
+write$ -- 790
+(There were 4 warnings)
