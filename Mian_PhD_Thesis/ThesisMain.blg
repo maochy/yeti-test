@@ -1,51 +1,50 @@
 This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: ThesisMain.aux
-The style file: newapa.bst
+The style file: plain.bst
 Database file #1: mybib.bib
-Warning--entry type for "Oriol2011" isn't style-file defined
---line 1118 of file mybib.bib
 Warning--can't use both volume and number fields in Godefroid2005
+Warning--there's a number but no volume in howden1986
 Warning--can't use both volume and number fields in mccabe1983
 Warning--empty note in Oriol2010b
-You've used 57 entries,
-            2708 wiz_defined-function locations,
-            975 strings with 14240 characters,
-and the built_in function-call counts, 29739 in all, are:
-= -- 2827
-> -- 1221
-< -- 63
-+ -- 473
-- -- 450
-* -- 2618
-:= -- 5302
-add.period$ -- 191
-call.type$ -- 57
-change.case$ -- 486
-chr.to.int$ -- 54
-cite$ -- 60
-duplicate$ -- 1247
-empty$ -- 2006
-format.name$ -- 539
-if$ -- 5809
-int.to.chr$ -- 4
-int.to.str$ -- 0
-missing$ -- 60
-newline$ -- 286
-num.names$ -- 228
-pop$ -- 419
+You've used 61 entries,
+            2118 wiz_defined-function locations,
+            912 strings with 14159 characters,
+and the built_in function-call counts, 23655 in all, are:
+= -- 2438
+> -- 949
+< -- 31
++ -- 387
+- -- 314
+* -- 1595
+:= -- 3676
+add.period$ -- 204
+call.type$ -- 61
+change.case$ -- 334
+chr.to.int$ -- 0
+cite$ -- 65
+duplicate$ -- 994
+empty$ -- 1913
+format.name$ -- 314
+if$ -- 5206
+int.to.chr$ -- 0
+int.to.str$ -- 61
+missing$ -- 64
+newline$ -- 307
+num.names$ -- 122
+pop$ -- 363
 preamble$ -- 1
-purify$ -- 549
+purify$ -- 279
 quote$ -- 0
-skip$ -- 971
+skip$ -- 755
 stack$ -- 0
-substring$ -- 1962
-swap$ -- 427
+substring$ -- 1621
+swap$ -- 316
 text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 330
-warning$ -- 3
-while$ -- 275
-width$ -- 0
-write$ -- 790
+type$ -- 232
+warning$ -- 4
+while$ -- 234
+width$ -- 63
+write$ -- 721
 (There were 4 warnings)
