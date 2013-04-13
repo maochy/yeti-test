@@ -224,21 +224,7 @@
   \noindent Some of the material contained in this thesis has appeared
   in the following published conference and workshop papers:
 
-  Kazakov, D. and Shahid, A. (2008). Extracting Multilingual Dictionaries for the teaching of CS and AI.
-  In \emph{4th UK Workshop on AI in Education} as part of the annual SGAI International Conference on Innovative Techniques and Applications of Artificial Intelligence, Cambridge, UK.
-  
-  Kazakov, D. and Shahid, A. (2009). Unsupervised Construction of a Multilingual WordNet from Parallel Corpora.
-  In \emph{Workshop on Natural Language Processing methods and Corpora in Translation, Lexicography, and Language Learning (RANLP '09)}, Borovets, Bulgaria.
-  
-  Shahid, A. and Kazakov, D. (2009). Automatic Multlingual Lexicon Generation using Wikipedia as a resource.
-  In \emph{Proceedings of the International Conference on Agents and Artificial Intelligence, (ICCART '09)}, Porto, Portugal.
-
-  Shahid, A. and Kazakov, D. (2010). Retrieving Lexical Semantics from Parallel Corpora. \emph{Polibits, 5}, 25-28.
-  
-  Shahid, A. and Kazakov, D. (2011). Using Multilingual Corpora to Extract Semantic Information.
-  In \emph{Proceedings of the Symposium on Learning Language Models from Multilingual Corpora, AISB'11 Convention}, York, UK.
-  #1
-}
+ }
 
 % ----------- York Chapter:
 % This class should be used for insterting chapters after the use
