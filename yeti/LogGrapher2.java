@@ -56,6 +56,8 @@ import yeti.GraphDataScanner;
  */
 public class LogGrapher2 {
 
+	
+	public int loopHold;
 	/**
 	 * Construct a new frame
 	 *
@@ -77,6 +79,48 @@ public class LogGrapher2 {
 
 	}
 
+	// This is the original one and the following same name method is the one i do mess.
+//
+//private XYDataset createDataset() {
+//		
+//		
+//		final XYSeriesCollection dataset = new XYSeriesCollection();
+//		
+//		int failValues[] = GraphDataScanner.readFailDataFromFile();
+//		int passValues[] = GraphDataScanner.readPassDataFromFile();	
+//		
+//		final XYSeries series1 = new XYSeries("Failing input");
+//		final XYSeries series2 = new XYSeries("Passing input");
+//
+//		for (int j =0; j < passValues.length; j=j+4){
+//			
+//			series2.add((double)passValues[j+1], (double)passValues[j]);
+//			series2.add((double)passValues[j+3], (double)passValues[j+2]);
+//			series2.add((double)passValues[j+2],null);
+//			series2.add((double)passValues[j+3],null);
+//			
+//			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
+//		}
+//
+//
+//		for (int i =0; i < failValues.length; i=i+8 ){
+//			series1.add((double)failValues[i],(double)failValues[i+1]);
+//			series1.add((double)failValues[i+2],(double)failValues[i+3]);
+//			series1.add((double)failValues[i+2],null);
+//			//series1.add((double)failValues[i+3],null);
+//			series1.add((double)failValues[i+5], (double)failValues[i+4]);
+//			series1.add((double)failValues[i+7], (double)failValues[i+6]);
+//			
+//			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
+//		}
+//
+//		dataset.addSeries(series1);
+//		dataset.addSeries(series2);
+//
+//		return dataset;
+//
+//	}
+
 
 private XYDataset createDataset() {
 		
@@ -88,6 +132,7 @@ private XYDataset createDataset() {
 		
 		final XYSeries series1 = new XYSeries("Failing input");
 		final XYSeries series2 = new XYSeries("Passing input");
+		final XYSeries series3 = new XYSeries("Common Failing Values");
 
 		for (int j =0; j < passValues.length; j=j+4){
 			
@@ -99,33 +144,31 @@ private XYDataset createDataset() {
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
-
-		for (int i =0; i < failValues.length; i=i+8 ){
+		loopHold = failValues.length;
+		loopHold = loopHold - 7;
+		
+		for (int i =0; i < loopHold; i=i+8 ){
 			series1.add((double)failValues[i],(double)failValues[i+1]);
 			series1.add((double)failValues[i+2],(double)failValues[i+3]);
-			series1.add((double)failValues[i+2],null);
+			//series1.add((double)failValues[i+2],null);
 			//series1.add((double)failValues[i+3],null);
-			series1.add((double)failValues[i+5], (double)failValues[i+4]);
-			series1.add((double)failValues[i+7], (double)failValues[i+6]);
+			//series1.add((double)failValues[i+3],null);
+			series3.add((double)failValues[i+5], (double)failValues[i+4]);
+			series3.add((double)failValues[i+7], (double)failValues[i+6]);
 			
 			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
-
-
 		
-
-		
-
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
+		dataset.addSeries(series3);
 		
-	
-
-
 		return dataset;
 
 	}
-
+	
+	
+	
 	//    /**
 	//     * Create a series
 	//     *
