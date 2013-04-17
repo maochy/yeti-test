@@ -226,6 +226,10 @@ private XYDataset createDataset() {
 		plot.setRenderer(renderer);
 		renderer.setBaseShapesVisible(true);
 		renderer.setBaseShapesFilled(true);
+		
+		// This line is added by Mian to change the colour of series 3 (2 here) from green to red.
+		renderer.setSeriesPaint(2, Color.red);
+		
 
 		// set the renderer's stroke
 		Stroke stroke = new BasicStroke(
