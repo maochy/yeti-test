@@ -1,60 +1,52 @@
 This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Abstract/abstract.aux
-A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
-A level-1 auxiliary file: Declaration/decleration.aux
-A level-1 auxiliary file: Dedication/dedication.aux
-A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
-A level-1 auxiliary file: DSSR/dssr.aux
-A level-1 auxiliary file: ADFD/adfd.aux
-A level-1 auxiliary file: Conclusions/conclusions.aux
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
 Database file #1: References/references.bib
-Warning--can't use both volume and number fields in Godefroid2005
-Warning--there's a number but no volume in howden1986
-Warning--can't use both volume and number fields in mccabe1983
-You've used 15 entries,
+Warning--empty booktitle in Dijkstra1972
+Warning--empty journal in Levenshtein1966
+You've used 24 entries,
             2118 wiz_defined-function locations,
-            623 strings with 6575 characters,
-and the built_in function-call counts, 5447 in all, are:
-= -- 565
-> -- 209
-< -- 8
-+ -- 87
-- -- 68
-* -- 370
-:= -- 867
-add.period$ -- 51
-call.type$ -- 15
-change.case$ -- 77
+            676 strings with 8382 characters,
+and the built_in function-call counts, 9246 in all, are:
+= -- 974
+> -- 351
+< -- 14
++ -- 139
+- -- 114
+* -- 591
+:= -- 1437
+add.period$ -- 86
+call.type$ -- 24
+change.case$ -- 128
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 225
-empty$ -- 444
-format.name$ -- 68
-if$ -- 1181
+cite$ -- 26
+duplicate$ -- 409
+empty$ -- 759
+format.name$ -- 114
+if$ -- 2066
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 16
-newline$ -- 78
-num.names$ -- 30
-pop$ -- 81
+int.to.str$ -- 24
+missing$ -- 28
+newline$ -- 124
+num.names$ -- 48
+pop$ -- 148
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 105
 quote$ -- 0
-skip$ -- 160
+skip$ -- 297
 stack$ -- 0
-substring$ -- 362
-swap$ -- 64
-text.length$ -- 8
+substring$ -- 596
+swap$ -- 125
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
-warning$ -- 3
-while$ -- 57
-width$ -- 17
-write$ -- 182
-(There were 3 warnings)
+type$ -- 88
+warning$ -- 2
+while$ -- 92
+width$ -- 26
+write$ -- 296
+(There were 2 warnings)

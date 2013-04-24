@@ -1,7 +1,7 @@
 \select@language {english}
 \contentsline {chapter}{Contents}{ii}{section*.2}
-\contentsline {chapter}{List of Figures}{iii}{section*.4}
-\contentsline {chapter}{Nomenclature}{iii}{section*.4}
+\contentsline {chapter}{List of Figures}{v}{section*.4}
+\contentsline {chapter}{Nomenclature}{v}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Problems}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Goals}{2}{section.1.2}
@@ -10,6 +10,54 @@
 \contentsline {subsection}{\numberline {1.3.2}Automated Discovery of Failure Domain}{4}{subsection.1.3.2}
 \contentsline {subsection}{\numberline {1.3.3}Invariant Guided Random+ Strategy}{4}{subsection.1.3.3}
 \contentsline {section}{\numberline {1.4}Thesis Outline}{4}{section.1.4}
-\contentsline {chapter}{Appdx A}{6}{appendix*.5}
-\contentsline {chapter}{Appdx B}{7}{appendix*.6}
-\contentsline {chapter}{References}{8}{section*.8}
+\contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Software Testing}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Software Test Plan}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Software Testing Approaches}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Static Testing}{7}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.4}Dynamic Testing}{8}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Methods of Dynamic Software Testing}{8}{subsection.2.1.5}
+\contentsline {subsubsection}{\numberline {2.1.5.1}Black-Box Testing}{8}{subsubsection.2.1.5.1}
+\contentsline {subsubsection}{\numberline {2.1.5.2}White-Box Testing}{9}{subsubsection.2.1.5.2}
+\contentsline {subsubsection}{\numberline {2.1.5.3}Grey-Box Testing}{9}{subsubsection.2.1.5.3}
+\contentsline {subsection}{\numberline {2.1.6}Software Testing Workflow}{9}{subsection.2.1.6}
+\contentsline {section}{\numberline {2.2}Software Testing}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Manual Testing}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Automated Testing}{10}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Random Testing}{10}{subsubsection.2.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2.2}Exhaustive Testing}{11}{subsubsection.2.2.2.2}
+\contentsline {section}{\numberline {2.3}Automated Random Testing}{11}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Test Data Generation}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Test Execution}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Test Oracle}{11}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Test Report}{11}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Variations is Random Testing}{11}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Adaptive Random Testing}{12}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Mirror Adaptive Random Testing}{12}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Directed Automated Random Testing}{13}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Quasi Random Testing}{13}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Monti Carlo Random Testing}{14}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Good Random Testing}{14}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Feedback-directed Random Test Generation}{14}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Randoop: Feedback-directed Random Testing}{14}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.9}Adaptive Random Testing for Object-Oriented}{15}{subsection.2.4.9}
+\contentsline {subsubsection}{\numberline {2.4.9.1}Object Distance and its application}{15}{subsubsection.2.4.9.1}
+\contentsline {subsubsection}{\numberline {2.4.9.2}ARTOO Tool}{15}{subsubsection.2.4.9.2}
+\contentsline {subsubsection}{\numberline {2.4.9.3}Experimental Assessment of Random Testing for Object-Oriented Software}{16}{subsubsection.2.4.9.3}
+\contentsline {subsection}{\numberline {2.4.10}Restricted Random Testing}{16}{subsection.2.4.10}
+\contentsline {section}{\numberline {2.5}Automated Random Testing Tools}{17}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}JCrasher}{17}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}JArtage}{17}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Eclat}{18}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}JTest}{18}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}QuickCheck}{19}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}AgitarOne}{19}{subsection.2.5.6}
+\contentsline {subsection}{\numberline {2.5.7}Autotost}{19}{subsection.2.5.7}
+\contentsline {subsection}{\numberline {2.5.8}TestEra}{20}{subsection.2.5.8}
+\contentsline {subsection}{\numberline {2.5.9}Korat}{20}{subsection.2.5.9}
+\contentsline {subsection}{\numberline {2.5.10}YETI}{20}{subsection.2.5.10}
+\contentsline {subsection}{\numberline {2.5.11}Tools for Automated Random Testing}{21}{subsection.2.5.11}
+\contentsline {section}{\numberline {2.6}Conclusion}{21}{section.2.6}
+\contentsline {chapter}{Appdx A}{23}{appendix*.5}
+\contentsline {chapter}{Appdx B}{24}{appendix*.6}
+\contentsline {chapter}{References}{25}{section*.8}

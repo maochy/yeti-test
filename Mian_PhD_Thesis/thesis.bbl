@@ -1,16 +1,34 @@
 \begin{thebibliography}{10}
 
+\bibitem{Agarwal2009}
+B.~B. Agarwal, S.~P. Tayal, and M.~Gupta.
+\newblock {\em Software Engineering and Testing: An Introduction}.
+\newblock Jones \& Bartlett Publishers, 1 edition, March 2009.
+
+\bibitem{Boyapati2002}
+Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
+\newblock Korat: automated testing based on java predicates.
+\newblock In {\em ISSTA '02: Proceedings of the 2002 ACM SIGSOFT international
+  symposium on Software testing and analysis}, pages 123--133, New York, NY,
+  USA, 2002. ACM.
+
+\bibitem{Chan1996}
+F.T. Chan, T.Y. Chen, I.K. Mak, and Y.T. Yu.
+\newblock Proportional sampling strategy: guidelines for software testing
+  practitioners.
+\newblock {\em Information and Software Technology}, 38(12):775 -- 782, 1996.
+
 \bibitem{Chan2002}
 Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Restricted random testing.
 \newblock In {\em Proceedings of the 7th International Conference on Software
   Quality}, ECSQ '02, pages 321--330, London, UK, UK, 2002. Springer-Verlag.
 
-\bibitem{Chen2008}
-T.~Y. Chen.
-\newblock Adaptive random testing.
-\newblock {\em Eighth International Conference on Qualify Software}, 0:443,
-  2008.
+\bibitem{Chang1999}
+Juei Chang and Debra~J. Richardson.
+\newblock Structural specification-based testing: automated support and
+  experimental evaluation.
+\newblock {\em SIGSOFT Softw. Eng. Notes}, 24(6):285--302, 1999.
 
 \bibitem{Chen2003}
 T.~Y. Chen, F.~C. Kuo, R.~G. Merkel, and S.~P. Ng.
@@ -26,6 +44,13 @@ Tsong~Yueh Chen and Robert Merkel.
   Automated software engineering}, ASE '05, pages 309--312, New York, NY, USA,
   2005. ACM.
 
+\bibitem{Ciupa2006}
+Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
+\newblock Object distance and its application to adaptive random testing of
+  object-oriented programs.
+\newblock In {\em Proceedings of the 1st international workshop on Random
+  testing}, RT '06, pages 55--63, New York, NY, USA, 2006. ACM.
+
 \bibitem{Ciupa2007}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock Experimental assessment of random testing for object-oriented
@@ -33,60 +58,96 @@ Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock In {\em Proceedings of the 2007 international symposium on Software
   testing and analysis}, ISSTA '07, pages 84--94, New York, NY, USA, 2007. ACM.
 
-\bibitem{cohen1997}
-David~M. Cohen, Siddhartha~R. Dalal, Michael~L. Fredman, and Gardner~C. Patton.
-\newblock The aetg system: An approach to testing based on combinatorial
-  design.
-\newblock {\em Software Engineering, IEEE Transactions on}, 23(7):437--444,
-  1997.
+\bibitem{Claessen2000}
+Koen Claessen and John Hughes.
+\newblock Quickcheck: a lightweight tool for random testing of haskell
+  programs.
+\newblock In {\em Proceedings of the fifth ACM SIGPLAN international conference
+  on Functional programming}, ICFP '00, pages 268--279, New York, NY, USA,
+  2000. ACM.
 
-\bibitem{Godefroid2005}
-Patrice Godefroid, Nils Klarlund, and Koushik Sen.
-\newblock Dart: directed automated random testing.
-\newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
+\bibitem{Dijkstra1972}
+Edsger~W. Dijkstra.
+\newblock Structured programming.
+\newblock chapter Chapter I: Notes on structured programming, pages 1--82.
+  Academic Press Ltd., London, UK, UK, 1972.
 
-\bibitem{howden1986}
-William~E Howden.
-\newblock A functional approach to program testing and analysis.
-\newblock {\em Software Engineering, IEEE Transactions on}, (10):997--1005,
-  1986.
+\bibitem{Everett2007}
+Gerald~D. Everett and Raymond~McLeod Jr.
+\newblock {\em Software Testing: Testing Across the Entire Software Development
+  Life Cycle}.
+\newblock Wiley-IEEE Computer Society Pr, 2007.
 
-\bibitem{korel1990}
-Bogdan Korel.
-\newblock Automated software test data generation.
-\newblock {\em Software Engineering, IEEE Transactions on}, 16(8):870--879,
-  1990.
+\bibitem{Hamlet1994}
+Richard Hamlet.
+\newblock Random testing.
+\newblock In {\em Encyclopedia of Software Engineering}, pages 970--978. Wiley,
+  1994.
 
-\bibitem{mccabe1983}
-Thomas~J McCabe.
-\newblock {\em Structured testing}, volume 500.
-\newblock IEEE Computer Society Press, 1983.
+\bibitem{Hudak2007}
+Paul Hudak, John Hughes, Simon~Peyton Jones, and Philip Wadler.
+\newblock A history of haskell: being lazy with class.
+\newblock In {\em HOPL III: Proceedings of the third ACM SIGPLAN conference on
+  History of programming languages}, pages 12--1--12--55, New York, NY, USA,
+  2007. ACM.
 
-\bibitem{Myers2004}
-Glenford~J. Myers and Corey Sandler.
-\newblock {\em The Art of Software Testing}.
-\newblock John Wiley \& Sons, 2004.
+\bibitem{Khurshid2004}
+Sarfraz Khurshid and Darko Marinov.
+\newblock {TestEra:} {Specification-Based} testing of java programs using
+  {SAT}.
+\newblock {\em Automated Software Engineering}, 11:403--434, 2004.
+\newblock {10.1023/B:AUSE.0000038938.10589.b9}.
 
-\bibitem{Offutt1996}
-A.~Jefferson Offutt and J.~Huffman Hayes.
-\newblock A semantic model of program faults.
-\newblock {\em SIGSOFT Softw. Eng. Notes}, 21(3):195--200, May 1996.
+\bibitem{Levenshtein1966}
+V.~I. Levenshtein.
+\newblock Binary codes capable of correcting deletions, insertions, and
+  reversals.
+\newblock 10(8):707--710, 1966.
 
-\bibitem{Pacheco2007a}
+\bibitem{Oriat2004}
+Catherine Oriat.
+\newblock Jartege: a tool for random generation of unit tests for java classes.
+\newblock {\em CoRR}, abs/cs/0412012, 2004.
+
+\bibitem{Oriol2010c}
+Manuel Oriol and Sotirios Tassis.
+\newblock Testing .net code with yeti.
+\newblock In {\em Proceedings of the 2010 15th IEEE International Conference on
+  Engineering of Complex Computer Systems}, ICECCS '10, pages 264--265,
+  Washington, DC, USA, 2010. IEEE Computer Society.
+
+\bibitem{Oriol2010}
+Manuel Oriol and Faheem Ullah.
+\newblock Yeti on the cloud.
+\newblock {\em Software Testing Verification and Validation Workshop, IEEE
+  International Conference on}, 0:434--437, 2010.
+
+\bibitem{Pacheco2005}
+Carlos Pacheco and Michael~D. Ernst.
+\newblock Eclat: Automatic generation and classification of test inputs.
+\newblock In {\em In 19th European Conference Object-Oriented Programming},
+  pages 504--527, 2005.
+
+\bibitem{Pacheco2007b}
+Carlos Pacheco and Michael~D. Ernst.
+\newblock {Randoop:} feedback-directed random testing for {Java}.
+\newblock In {\em OOPSLA 2007 Companion, Montreal, Canada}. ACM, October 2007.
+
+\bibitem{Pacheco2007}
 Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
 \newblock Feedback-directed random test generation.
 \newblock In {\em Proceedings of the 29th international conference on Software
   Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
   Computer Society.
 
-\bibitem{white1987}
-Lee~J. White.
-\newblock Software testing and verification.
-\newblock {\em Advances in Computers}, 26(1):335--390, 1987.
+\bibitem{Savenkov2008}
+Roman Savenkov.
+\newblock {\em How to Become a Software Tester}.
+\newblock Roman Savenkov, 1 edition, November 2008.
 
-\bibitem{wiki2013}
-Wikipedia.
-\newblock Plagiarism --- {W}ikipedia{,} the free encyclopedia, 20013.
-\newblock [Online; accessed 23-Mar-2013].
+\bibitem{Sommerville2000}
+Ian Sommerville.
+\newblock {\em Software Engineering}.
+\newblock Addison Wesley, 6 edition, August 2000.
 
 \end{thebibliography}
