@@ -24,11 +24,23 @@ Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock In {\em Proceedings of the 7th International Conference on Software
   Quality}, ECSQ '02, pages 321--330, London, UK, UK, 2002. Springer-Verlag.
 
+\bibitem{chan2003normalized}
+Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
+\newblock Normalized restricted random testing.
+\newblock In {\em Reliable Software Technologies—Ada-Europe 2003}, pages
+  368--381. Springer, 2003.
+
 \bibitem{Chang1999}
 Juei Chang and Debra~J. Richardson.
 \newblock Structural specification-based testing: automated support and
   experimental evaluation.
 \newblock {\em SIGSOFT Softw. Eng. Notes}, 24(6):285--302, 1999.
+
+\bibitem{Chen2008}
+T.~Y. Chen.
+\newblock Adaptive random testing.
+\newblock {\em Eighth International Conference on Qualify Software}, 0:443,
+  2008.
 
 \bibitem{Chen2003}
 T.~Y. Chen, F.~C. Kuo, R.~G. Merkel, and S.~P. Ng.
@@ -58,6 +70,13 @@ Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock In {\em Proceedings of the 2007 international symposium on Software
   testing and analysis}, ISSTA '07, pages 84--94, New York, NY, USA, 2007. ACM.
 
+\bibitem{Ciupa2008}
+Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
+\newblock Finding faults: Manual testing vs. random+ testing vs. user reports.
+\newblock In {\em Proceedings of the 2008 19th International Symposium on
+  Software Reliability Engineering}, pages 157--166, Washington, DC, USA, 2008.
+  IEEE Computer Society.
+
 \bibitem{Claessen2000}
 Koen Claessen and John Hughes.
 \newblock Quickcheck: a lightweight tool for random testing of haskell
@@ -65,6 +84,13 @@ Koen Claessen and John Hughes.
 \newblock In {\em Proceedings of the fifth ACM SIGPLAN international conference
   on Functional programming}, ICFP '00, pages 268--279, New York, NY, USA,
   2000. ACM.
+
+\bibitem{cohen1997}
+David~M. Cohen, Siddhartha~R. Dalal, Michael~L. Fredman, and Gardner~C. Patton.
+\newblock The aetg system: An approach to testing based on combinatorial
+  design.
+\newblock {\em Software Engineering, IEEE Transactions on}, 23(7):437--444,
+  1997.
 
 \bibitem{Dijkstra1972}
 Edsger~W. Dijkstra.
@@ -78,11 +104,22 @@ Gerald~D. Everett and Raymond~McLeod Jr.
   Life Cycle}.
 \newblock Wiley-IEEE Computer Society Pr, 2007.
 
+\bibitem{Godefroid2005}
+Patrice Godefroid, Nils Klarlund, and Koushik Sen.
+\newblock Dart: directed automated random testing.
+\newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
+
 \bibitem{Hamlet1994}
 Richard Hamlet.
 \newblock Random testing.
 \newblock In {\em Encyclopedia of Software Engineering}, pages 970--978. Wiley,
   1994.
+
+\bibitem{howden1986}
+William~E Howden.
+\newblock A functional approach to program testing and analysis.
+\newblock {\em Software Engineering, IEEE Transactions on}, (10):997--1005,
+  1986.
 
 \bibitem{Hudak2007}
 Paul Hudak, John Hughes, Simon~Peyton Jones, and Philip Wadler.
@@ -98,11 +135,39 @@ Sarfraz Khurshid and Darko Marinov.
 \newblock {\em Automated Software Engineering}, 11:403--434, 2004.
 \newblock {10.1023/B:AUSE.0000038938.10589.b9}.
 
+\bibitem{korel1990}
+Bogdan Korel.
+\newblock Automated software test data generation.
+\newblock {\em Software Engineering, IEEE Transactions on}, 16(8):870--879,
+  1990.
+
+\bibitem{Leitner2007}
+Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
+\newblock Reconciling manual and automated testing: The autotest experience.
+\newblock In {\em Proceedings of the 40th Annual Hawaii International
+  Conference on System Sciences}, HICSS '07, pages 261a--, Washington, DC, USA,
+  2007. IEEE Computer Society.
+
 \bibitem{Levenshtein1966}
 V.~I. Levenshtein.
 \newblock Binary codes capable of correcting deletions, insertions, and
   reversals.
 \newblock 10(8):707--710, 1966.
+
+\bibitem{mccabe1983}
+Thomas~J McCabe.
+\newblock {\em Structured testing}, volume 500.
+\newblock IEEE Computer Society Press, 1983.
+
+\bibitem{Myers2004}
+Glenford~J. Myers and Corey Sandler.
+\newblock {\em The Art of Software Testing}.
+\newblock John Wiley \& Sons, 2004.
+
+\bibitem{Offutt1996}
+A.~Jefferson Offutt and J.~Huffman Hayes.
+\newblock A semantic model of program faults.
+\newblock {\em SIGSOFT Softw. Eng. Notes}, 21(3):195--200, May 1996.
 
 \bibitem{Oriat2004}
 Catherine Oriat.
@@ -133,12 +198,24 @@ Carlos Pacheco and Michael~D. Ernst.
 \newblock {Randoop:} feedback-directed random testing for {Java}.
 \newblock In {\em OOPSLA 2007 Companion, Montreal, Canada}. ACM, October 2007.
 
+\bibitem{Pacheco2007a}
+Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
+\newblock Feedback-directed random test generation.
+\newblock In {\em Proceedings of the 29th international conference on Software
+  Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
+  Computer Society.
+
 \bibitem{Pacheco2007}
 Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
 \newblock Feedback-directed random test generation.
 \newblock In {\em Proceedings of the 29th international conference on Software
   Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
   Computer Society.
+
+\bibitem{ramamoorthy1975}
+CV~Ramamoorthy and Sill-bun~F Ho.
+\newblock Testing large software with automated software evaluation systems.
+\newblock In {\em ACM SIGPLAN Notices}, volume~10, pages 382--394. ACM, 1975.
 
 \bibitem{Savenkov2008}
 Roman Savenkov.
@@ -149,5 +226,20 @@ Roman Savenkov.
 Ian Sommerville.
 \newblock {\em Software Engineering}.
 \newblock Addison Wesley, 6 edition, August 2000.
+
+\bibitem{tretmans1999}
+Jan Tretmans and Axel Belinfante.
+\newblock Automatic testing with formal methods.
+\newblock 1999.
+
+\bibitem{white1987}
+Lee~J. White.
+\newblock Software testing and verification.
+\newblock {\em Advances in Computers}, 26(1):335--390, 1987.
+
+\bibitem{wiki2013}
+Wikipedia.
+\newblock Plagiarism --- {W}ikipedia{,} the free encyclopedia, 20013.
+\newblock [Online; accessed 23-Mar-2013].
 
 \end{thebibliography}

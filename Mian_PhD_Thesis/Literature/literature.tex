@@ -78,7 +78,21 @@ Now if a test is black box and dynamic then the test will fall in 0 to 90 degree
 \section{Software Testing}
 
 \subsection{Manual Testing}
+ A software testing technique to find faults in a class or group of related classes, such that the tester must write the code by hand to create test cases and test oracle \cite{Ciupa2008}. While manual testing is effective in some cases, in general, it is a laborious, time consuming, error-prone \cite{tretmans1999}. It further requires testers to have appropriate skills, experience and in depth knowledge of the under test software in order to evaluate it from different perspectives.
+ 
 \subsection{Automated Testing}
+A software testing technique to find faults in a class or group of related classes, such that the test cases and test oracle is generated automatically by a testing tool \cite{Leitner2007}. The tools can automate part of a test i.e. generation of test cases, execution of test cases and evaluation of results or the whole test process. The use of automated testing made it possible to test large volumes of code that would be otherwise impossible \cite{ramamoorthy1975}.
+
+\subsubsection{Exhaustive Testing}
+A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. Testers therefore are usually only able to use a small portion of a program’s input domain to test a given software \cite{chan2003normalized}.
+
+
+%\section{Automated Random Testing}
+%\subsection{Test Data Generation}
+%\subsection{Test Execution}
+%\subsection{Test Oracle}
+%\subsection{Test Report}
+
 \subsubsection{Random Testing}
 Random testing is a dynamic and black-box testing approach in which the software under test is tested by selecting random test cases from already specified input domain \cite{Chan2002}. The input domain is the set of all possible inputs to the software and the number of test cases selected are dependent on the basis of desired reliability or available resources.
 
@@ -92,16 +106,9 @@ Random testing is a dynamic and black-box testing approach in which the software
 According to Richard Hamlet \cite{Hamlet1994}, to conduct random testing, we need to define an input domain, then we take test points randomly from the whole input domain through a random number/test case generator independently without any restrictions. The program under test is executed on these points and the results obtained are compared to the program specifications. The test fails if any input leads to incorrect results or otherwise it is successful. The internal working of random testing is described in figure 1.2.
 
 
-\subsubsection{Exhaustive Testing}
-
-\section{Automated Random Testing}
-\subsection{Test Data Generation}
-\subsection{Test Execution}
-\subsection{Test Oracle}
-\subsection{Test Report}
-
 \section{Variations is Random Testing}
 Different researchers tried various strategies to improve the performance of random testing. In order to better understand the topic we have studied each strategy in detail.
+
 \subsection{Adaptive Random Testing}
 Chen et al., \cite{Chan1996} noticed that there are certain patterns across the input domain that have more chances of finding bugs in the system. They called it failure–causing inputs and classified them in three categories. The point, block and strip patterns as shown in the following figure.
 
@@ -127,16 +134,15 @@ Mirror Adaptive Random Testing (MART) \cite{Chen2003} was introduced to distribu
 
 In this technique, the input domain is divided into n disjoint subdomains. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. Distance-based Adaptive Random Testing (D-ART) is then applied on source subdomain to select the test case which is executed by the system and the execution is stopped if a failure is detected. Since all other subdomains are the mirrors and similar to source subdomains therefore the same method is applied without too much computational header. This process is continuous sequentially until the first failure is obtained or the system reaches to its stopping point.
 
-
-
-
 \subsection{Directed Automated Random Testing}
+
+
 \subsection{Quasi Random Testing}
 Quasi-random testing \cite{Chen2005} is a technique developed to obtain an even better distribution of test cases across the input domain in less computation time with respect to ART. From various experiments Chen et al found out that the failure causing inputs not only form specific pattern but these patterns are continuous as well. Quasi-random testing don't restrict random selection of test cases like ART or RRT rather it uses a class with a formula. This formula forms an s-dimensional cube in s-dimensional input domain and produces number with Quasi sequence (a sequence of numbers that have small discrepancy and low dispersion) for an s-dimensional input domain. These sequence of numbers are then used by the Quasi approach to select the test cases from s-dimensional input domain. For performance analysis the author compared Quasi approach with ART and random testing. Results showed that the approach is better than random testing but not than ART.
 
-\subsection{Monti Carlo Random Testing}
+%\subsection{Monti Carlo Random Testing}
 
-\subsection{Good Random Testing}
+%\subsection{Good Random Testing}
 
 \subsection{Feedback-directed Random Test Generation}
 In a bid to improve random testing Pacheco et al., \cite{Pacheco2007} developed a technique which produces unit tests randomly for object oriented programs which are later used for testing the units of the SUT. It is an incremental approach in which unit tests are created and executed against a set of contracts and filters. The feedback obtained from this execution serve as a basis for a sequence of new unit tests. The feedback of the unit test indicate that it is useful to create new input but if it is redundant or illegal like it throws IllegalArgumentEexception error then they are discarded and no unit test of similar nature is created based on its feedback. Thus it only selects unit tests which can be effective in finding bugs or can be used for regression testing.
@@ -145,7 +151,7 @@ Results of the experiments adopting the technique of Feedback-directed random te
 \subsection{Randoop: Feedback-directed Random Testing}
 Randoop stands for RANdom tester for Object Oriented Programs \cite{Pacheco2007b}. It tests software by using the principle of feedback-directed random test generation to produce unit tests for java and .NET. Randoop’s input is a set of classes that is to be tested within a certain time and optionally a set of contracts that extend the existing default contracts. After processing the input according to the method of feedback-directed random testing it give two test suites as output. One is contract voilating tests and the other is regression tests.
 
-\subsection{Adaptive Random Testing for Object-Oriented}
+%\subsection{Adaptive Random Testing for Object-Oriented}
 
 
 
@@ -155,13 +161,11 @@ The parameters to specify the distance between the objects are dynamic types, va
 To implement object distance first all the distances of the objects are measured. Then two sets candidate- objects containing the all the objects ready to be run by the system and the used-objects set which is initially empty. First object is selected randomly from the candidate-object set and is moved to used- object set when executed by the system. Now the second object selected from the candidate set for execution is the one with the biggest distance from the last executed object present in the used-object set. This process is continue until the bug is found or the objects in the candidate-object set are finished.
 
 \subsubsection{ARTOO Tool}
-
 After the criteria to calculate the distance between the objects is defined \cite{Ciupa2006}, the same team implemented that model and performed several experiments to evaluate the proposed model. Adaptive Random Testing for Object Oriented (ARTOO) is a testing strategy, based on object distance, implemented in AutoTest tool [16].
 ARTOO was implemented as a plug-in strategy in AutoTest. It only deals with creating and selecting inputs and all other functionality of the AutoTest was the same. Since ARTOO is based on object distance therefore the method for test input selection is to pick that object from the candidate set (A pool of objects that is a potential candidate to be executed by the system) which has the highest average distance in comparison to the objects already executed.
 In the experiments classes from EiffelBase library [17] were used. To evaluate ARTOO the same tests were also applied to directed random strategy (RAND). The outcome of the experiments showed that ARTOO finds the first bug with fewer test cases than RAND. The computation to select test case in ARTOO is more than RAND and therefore ARTOO takes more time to generate a test input. The experiments also found few of the bug found by ARTOO were not pointed out by RAND furthermore ARTOO is less sensitive to the variation of seed value than RAND.
 
 \subsubsection{Experimental Assessment of Random Testing for Object-Oriented Software}
-
 In this research the effect of various parameters involved in random testing and its effect on efficiency is evaluated by performing various experiments on Industrial-grade code base.
 Large scale clusters of computers were used for 1500 hours of CPU time which resulted in 1875 test sessions for 8 classes under test. \cite{Ciupa2007} The finding of the experiments are
 1. Version of random testing algorithm that is efficient for smaller testing timeout is equally efficient for higher testing timeouts.
@@ -176,13 +180,13 @@ Motivated from Adaptive random testing, aim of Restricted Random Testing (RRT) i
 	\centering
 	\includegraphics[scale=0.5]{Literature/RRT}
 	\caption{Input domain with exclusion zone around the selected test case}
-  
 \end{figure}
+
 The next random test case then must be selected outside of this exclusion zone. It makes sure that there is enough distance between the two test cases. The exclusion zone is fixed around each test case and the area of each zone decreases with successive cases.
 Experimental results of seven error seeded program indicated that RRT is 55\% more effective than ordianry/undirected random testing in terms of f-measure (Where f-measure is the total number of test cases required to find the first failure).
 
+%\section{Automated Random Testing Tools}
 
-\section{Automated Random Testing Tools}
 \subsection{JCrasher}
 JCrasher is an automatic testing tool that uses a random testing technique to test java classes/programs \cite{Pacheco2007b}. The main features of JCrasher are:
 1. The randomly created test cases are according to the type and parameters of the methods under test.
@@ -190,8 +194,10 @@ JCrasher is an automatic testing tool that uses a random testing technique to te
 3. To clarify the testing from any old tests JCrasher make it sure that every test run on a clean state.
 4. JCrasher also produces test cases for JUnit that can be integrated into IDEs like Eclipse.
 To use JCrasher we have to supply set of Java classes in byte code and testing time. JCrasher analyzes the classes and create test cases randomly with the same type and same parameter list. These test cases are only for public methods of the classes and they check for any system crash. List of exceptions is obtained as a result of execution of test cases which are differentiated as bugs and precondition violations by the input.
+
 \subsection{JArtage}
 Jartege (JAwa Random TEst GEnerator) is a tool that randomly generates unit tests for classes specified with JML (Java Modeling Language) \cite{Oriat2004}. The specification of Java classes with JML serves two pur- poses. First, all the test cases generated by Jartege have to verify the conditions defined by JML and thus irrelevant test cases are eliminated. Secondly these JML specifications are also used as oracles. Apart from the JML specification which are made by hand it automates the whole testing process which include test case generation, execution, comparing it against oracle and using the generated test cases for future regression testing.
+
 \subsection{Eclat}
 Eclat \cite{Pacheco2005} is a tool that automatically generates unit tests for Java. Eclat can be executed from both command line or from IDE where it can be installed as a plug-in. [28]. Eclat selects a sub-set of test inputs from a large domain, that is likely to reveal fault in the SUT. Eclat takes a correct execution of the SUT and on the basis of it creates an operational model. It then selects only these test inputs from the input domain which fail to comply with the model. A Reducer function removes the redundant test inputs and the remaining test inputs are likely to discover faults in the SUT. Based on the operational model it also produces an automated oracle. Various experiments results shows that Eclats is very effective in finding faults and the ratio of finding faults and test inputs is almost same.
 
@@ -200,12 +206,16 @@ Parasoft Jtest is a commercial tool that automatically generates and execute uni
 In static analysis Jtest takes a complete project or set of classes as input and compares it with a list of built-in rules. The statement violating any of these rules is an error. It also suggests probable fixes for the detected fault.
 For unit testing it takes a class as an input and processes a number of scenarios against it to generate and execute unit tests. Once unit tests are executed they become the part of regression test for future reference.
 Jtest also shows the code coverage of the program by colour coding the statements that are not executed by the unit tests.
+
 \subsection{QuickCheck}
 QuickCheck \cite{Claessen2000} is a light weight random testing tool that is developed specifically for testing of Haskell programs \cite{Hudak2007}. Haskell is a functional programming language where programs are evaluated using expressions rather than statements as in case of imperative programming. Therefore in this process the tester defines certain expressions for the functions that must hold for a large number of test cases to be correct. These test cases are generated automatically through generator function which can be set by the tester to generate random test cases or according to specific criteria. After processing all the generated test cases any test case that causes the expression to become false is considered faults.
+
 \subsection{AgitarOne}
 AgitarOne is a commercial tool that automatically generates unit tests. It has a Junit Generator engine that can create 25,000 lines or more of Junit per hour [29]. It can be easily integrated into famous IDE like Eclipse. It takes as input, classes under test, time and optionally any knowledge or test cases that has a positive influence on the performance of the testing process. The generated Junit tests can be run from the same IDE and can also be used for later regression testing. The GUI interface is called a dashboard which provides in depth knowledge of the tests conducted, failures detected, alerts and the archieves of the tests conducted earlier. It also shows the coverage obtained after executing the Junits against the code under test.
+
 \subsection{Autotost}
 Based on Formal Automated testing AutoTest is a tool used for testing of Eiffel programs \cite{Ciupa2007}. The Eiffel language use the concept of contracts (pre-conditions, postconditions and class invariants). Input can be a single class, method or a set of classes which is then processed by AutoTest to generate test cases. It generates both primitive and object type test cases. All the generated test cases are kept in a pool and then randomly a test case is selected from it for execution. A user can set the features of the AutoTest options include: Number of test cases to generate, whether to monitor pre or post condition, order of testing and the initial values of the primitives variables.
+
 \subsection{TestEra}
 TestEra \cite{Khurshid2004} is a novel framework for testing Java applications. All the tests are produced and executed in an automated fashion. Tests are conducted on the basis of the method specifications \cite{Chang1999}. TestEra takes methods specifications, integer value as a limit to the generated test cases and the method under test. It uses pre-conditions of a method from specifications to automatically generate test cases up to the specified limit. These test cases are then executed on the method and the result is compared against the postconditions (oracle) of that method. Any test case that fails to satisfy postcondition is considered as a fault. The complete error log is displayed in the Graphical User Inteface (GUI).
 
@@ -217,11 +227,11 @@ The final tool we discuss is YETI (the York Extensible Testing Infrastructure) [
 
 \subsection{Tools for Automated Random Testing}
 From the literature we can find a number of open source and commercial testing tools that automatically generate unit tests. Each tool utilize different generation technique but the one we are interested in is random technique. We present the most well known tools.
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.6]{Literature/tools}
 	\caption{Summary of automated testing tools}
-  
 \end{figure}
 
 

@@ -23,40 +23,31 @@
 \BOOKMARK [1][]{section.2.2}{2.2 Software Testing}{chapter.2}
 \BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Manual Testing}{section.2.2}
 \BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Automated Testing}{section.2.2}
-\BOOKMARK [3][]{subsubsection.2.2.2.1}{2.2.2.1 Random Testing}{subsection.2.2.2}
-\BOOKMARK [3][]{subsubsection.2.2.2.2}{2.2.2.2 Exhaustive Testing}{subsection.2.2.2}
-\BOOKMARK [1][]{section.2.3}{2.3 Automated Random Testing}{chapter.2}
-\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Test Data Generation}{section.2.3}
-\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 Test Execution}{section.2.3}
-\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 Test Oracle}{section.2.3}
-\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Test Report}{section.2.3}
-\BOOKMARK [1][]{section.2.4}{2.4 Variations is Random Testing}{chapter.2}
-\BOOKMARK [2][]{subsection.2.4.1}{2.4.1 Adaptive Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.2}{2.4.2 Mirror Adaptive Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.3}{2.4.3 Directed Automated Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.4}{2.4.4 Quasi Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.5}{2.4.5 Monti Carlo Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.6}{2.4.6 Good Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.7}{2.4.7 Feedback-directed Random Test Generation}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.8}{2.4.8 Randoop: Feedback-directed Random Testing}{section.2.4}
-\BOOKMARK [2][]{subsection.2.4.9}{2.4.9 Adaptive Random Testing for Object-Oriented}{section.2.4}
-\BOOKMARK [3][]{subsubsection.2.4.9.1}{2.4.9.1 Object Distance and its application}{subsection.2.4.9}
-\BOOKMARK [3][]{subsubsection.2.4.9.2}{2.4.9.2 ARTOO Tool}{subsection.2.4.9}
-\BOOKMARK [3][]{subsubsection.2.4.9.3}{2.4.9.3 Experimental Assessment of Random Testing for Object-Oriented Software}{subsection.2.4.9}
-\BOOKMARK [2][]{subsection.2.4.10}{2.4.10 Restricted Random Testing}{section.2.4}
-\BOOKMARK [1][]{section.2.5}{2.5 Automated Random Testing Tools}{chapter.2}
-\BOOKMARK [2][]{subsection.2.5.1}{2.5.1 JCrasher}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.2}{2.5.2 JArtage}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.3}{2.5.3 Eclat}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.4}{2.5.4 JTest}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.5}{2.5.5 QuickCheck}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.6}{2.5.6 AgitarOne}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.7}{2.5.7 Autotost}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.8}{2.5.8 TestEra}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.9}{2.5.9 Korat}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.10}{2.5.10 YETI}{section.2.5}
-\BOOKMARK [2][]{subsection.2.5.11}{2.5.11 Tools for Automated Random Testing}{section.2.5}
-\BOOKMARK [1][]{section.2.6}{2.6 Conclusion}{chapter.2}
+\BOOKMARK [3][]{subsubsection.2.2.2.1}{2.2.2.1 Exhaustive Testing}{subsection.2.2.2}
+\BOOKMARK [3][]{subsubsection.2.2.2.2}{2.2.2.2 Random Testing}{subsection.2.2.2}
+\BOOKMARK [1][]{section.2.3}{2.3 Variations is Random Testing}{chapter.2}
+\BOOKMARK [2][]{subsection.2.3.1}{2.3.1 Adaptive Random Testing}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.2}{2.3.2 Mirror Adaptive Random Testing}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.3}{2.3.3 Directed Automated Random Testing}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.4}{2.3.4 Quasi Random Testing}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.5}{2.3.5 Feedback-directed Random Test Generation}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.6}{2.3.6 Randoop: Feedback-directed Random Testing}{section.2.3}
+\BOOKMARK [3][]{subsubsection.2.3.6.1}{2.3.6.1 Object Distance and its application}{subsection.2.3.6}
+\BOOKMARK [3][]{subsubsection.2.3.6.2}{2.3.6.2 ARTOO Tool}{subsection.2.3.6}
+\BOOKMARK [3][]{subsubsection.2.3.6.3}{2.3.6.3 Experimental Assessment of Random Testing for Object-Oriented Software}{subsection.2.3.6}
+\BOOKMARK [2][]{subsection.2.3.7}{2.3.7 Restricted Random Testing}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.8}{2.3.8 JCrasher}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.9}{2.3.9 JArtage}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.10}{2.3.10 Eclat}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.11}{2.3.11 JTest}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.12}{2.3.12 QuickCheck}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.13}{2.3.13 AgitarOne}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.14}{2.3.14 Autotost}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.15}{2.3.15 TestEra}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.16}{2.3.16 Korat}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.17}{2.3.17 YETI}{section.2.3}
+\BOOKMARK [2][]{subsection.2.3.18}{2.3.18 Tools for Automated Random Testing}{section.2.3}
+\BOOKMARK [1][]{section.2.4}{2.4 Conclusion}{chapter.2}
 \BOOKMARK [0][]{appendix*.5}{Appdx A}{}
 \BOOKMARK [0][]{appendix*.6}{Appdx B}{}
 \BOOKMARK [0][]{section*.8}{References}{}
