@@ -107,7 +107,7 @@ According to Richard Hamlet \cite{Hamlet1994}, to conduct random testing, we nee
 Different researchers tried various strategies to improve the performance of random testing. In order to better understand the topic we have studied each strategy in detail.
 
 \subsection{Adaptive Random Testing}
-Adaptive random testing (ART) \cite{Chen2008} is based on the existence of failure patterns across the input domain. Chan et al. \cite{Chan1996} observed that faults in the input domain form certain geometrical patterns. They divided these patterns into point, block and strip fault patterns. Each one is described below.
+Adaptive random testing (ART) \cite{Chen2008} is based on the existence of failure patterns across the input domain detected by Chan et al \cite{Chan1996}. They observed that failure inducing inputs in the whole input domain form certain geometrical patterns. They divided these patterns into point, block and strip fault patterns. Each one is described below.
 
 \begin{figure}[h]
 	\centering
@@ -116,18 +116,20 @@ Adaptive random testing (ART) \cite{Chen2008} is based on the existence of failu
 	\label{fig:patterns}
 \end{figure}
 
-\begin{enumerate}
-\item Point pattern: In the point pattern failures are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in a statement total = num1/num2; where num1, num2 and total are variables of type integer. 
-\item Block pattern: In the block pattern multiple failures lies in a close vicinity to form a block in the input domain. Example of block pattern is failure caused by a statement if ( (num \textgreater 10) \&\& (num \textless 20) ). Here 11 to 19 is a block of faults.
-\item Strip pattern: In the strip pattern the failures form a strip across the input domain. Example of strip pattern is failure caused by a statement num1 + num2 = 20. Here multiple values of num1 and num2 can lead to the fault value 20.
-\end{enumerate}
-
 In the figure \ref{fig:patterns} the square box indicates the whole input domain. The white space shows legitimate or faultless values while the black colour points, block and strip inside each box indicate the point, block and strip fault patterns in the input domain.
 
-The authors indicating the defect of ordinary random testing argued that it may generate test values lurking too close or too far from the fault and thus failing to discover it. To remove the discrepency they suggested ART, that is a slightly modified version of ordinary random testing where test values are selected at random like before but evenly spread across the input domain. To achieve an even distribution of test cases across the input domain they used two sets. The executed set having the test cases that have been executed by the system and the candidate set that contain the random selected test cases as candidates for execution. Initially both the sets are kept empty. The first test case is selected at random from the candidate set and executed, the second test case is then selected from the candidate set based on the criteria that it is far away from the last executed test case. Thus the whole input domain can be tested and their are more chances of hitting the block and strip patterns. Results of the experiments performed on published program using ART showed up to 50\% increase in the performance of than ordinary random testing.
+\begin{enumerate}
+\item Point pattern: In the point pattern failure inducing inputs are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in a statement total = num1/num2; where num1, num2 and total are variables of type integer. 
+\item Block pattern: In the block pattern multiple failure inducing inputs lies in a close vicinity to form a block in the input domain. Example of block pattern is failure caused by a statement if ( (num \textgreater 10) \&\& (num \textless 20) ). Here 11 to 19 is a block of faults.
+\item Strip pattern: In the strip pattern the failure inducing inputs form a strip across the input domain. Example of strip pattern is failure caused by a statement num1 + num2 = 20. Here multiple values of num1 and num2 can lead to the fault value 20.
+\end{enumerate}
+
+The authors argued that ordinary random testing may generate test inputs lurking too close or too far from the fault inducing input and thus failing to discover it. To generate more fault targeted test inputs they suggested ART. ART is a modified version of ordinary random testing where test values are selected at random like before but evenly spread across the input domain. To achieve an even distribution of test cases across the input domain they used two sets. The executed set having the test cases that have been executed by the system and the candidate set that contain the random selected test cases from the bounded input domain as candidates for execution. Initially both the sets are kept empty. The first test case is selected at random from the candidate set and stored in executed set after execution, the second test case is then selected from the candidate set based on the criteria that it is far away from the last executed test case. Thus the whole input domain can be tested and their are more chances of generating test input from inside of the existing geometrical patterns. 
+
+In the experiments they used number of test cases required to detect first failure (F-measure) as a performance matrix instead of the traditional matrix i.e. probability of detecting at least one failure (P-measure) and expected number of failures detected (E-measure). Results of the experiments performed on published programs using ART showed up to 50\% increase in the performance of than ordinary random testing. Results showed significant improvement, however, the issues of increase overhead, spreading test cases across the input domain for complex objects and efficient ways of selecting candidate test cases still exist. Chen et al evolve their work on ART to address some of these issues in \cite{chen2009enhanced} and \cite{Chen2005}. 
 
 \subsection{Mirror Adaptive Random Testing}
-Mirror Adaptive Random Testing (MART) \cite{Chen2003} was introduced to distribute even test cases across the input domain without complex computation. This decrease in computation is obtained by merging the technique of mirroring and ART.
+As discussed in the above section ART provide better results, however the increase in overhead due to extra computation to achieve even spread of test inputs makes it less cost effective. Mirror Adaptive Random Testing (MART) \cite{Chen2003} is an innovative approach that uses mirror partitioning technique to reduce the overhead of ART by decreasing the extra computation involved in ART.
 
 \begin{figure}[h]
 \begin{center}
@@ -136,7 +138,9 @@ Mirror Adaptive Random Testing (MART) \cite{Chen2003} was introduced to distribu
 \end{center}  
 \end{figure}
 
-In this technique, the input domain is divided into n disjoint subdomains. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. Distance-based Adaptive Random Testing (D-ART) is then applied on source subdomain to select the test case which is executed by the system and the execution is stopped if a failure is detected. Since all other subdomains are the mirrors and similar to source subdomains therefore the same method is applied without too much computational header. This process is continuous sequentially until the first failure is obtained or the system reaches to its stopping point.
+In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART \{(0, 0), (u, v)\} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get \{(0, 0), (u/2, v)\} as source subdomain and \{(u/2, 0), (u, v)\} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure ???. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.    
+
+
 
 \subsection{Directed Automated Random Testing}
 
