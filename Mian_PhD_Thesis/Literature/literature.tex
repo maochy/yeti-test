@@ -87,20 +87,30 @@ A software testing technique in which a software is tested with all possible com
 %\section{Automated Random Testing}
 %\subsection{Test Data Generation}
 %\subsection{Test Execution}
-%\subsection{Test Oracle}
+\subsection{Test Oracle}
+Test oracles set the acceptable behaviour for test executions \cite{richardson1992specification}. All softwares testing techniques depend on the availability of a test oracle \cite{baresi2001test}. Designing test oracles for simple softwares may be straight forward, however, for relatively complex softwares it can be very cumbersome to decide whether a program execution returns a correct or incorrect result \cite{gaudel2010software}. Different testing techniques tackle the oracle problem in various ways but some of the common issues include:
+\begin{enumerate}
+\item It is assumed that execution results are observable, so that they can be evaluated against the test oracle or the oracles are defined on the basis of these results.
+\item An ideal test oracle would satisfy desirable properties of program specifications \cite{baresi2001test}.
+\item There is not a single oracle generation technique that satisfies all purposes. Weyuker \cite{weyuker1982testing} argued that truly general test oracles are often unobtainable.
+\end{enumerate}
 %\subsection{Test Report}
 
 \subsubsection{Random Testing}
-Random testing is a dynamic and black-box testing approach in which the software under test is tested by selecting random test cases from already specified input domain \cite{Chan2002}. The input domain is the set of all possible inputs to the software and the number of test cases selected are dependent on the basis of desired reliability or available resources.
+Random testing is a dynamic and black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain \cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard H. \cite{hamlet1994}, to conduct random testing, an input domain is defined, then test points are randomly taken from the whole input domain through a random number/test case generator. The program under test is executed on these points and the results obtained are compared to the program specifications. The test fails if any input leads to incorrect results or otherwise it is successful. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{Literature/figure1.jpg}
 	\caption{Random Testing}
-  
 \end{figure}
 
-According to Richard Hamlet \cite{Hamlet1994}, to conduct random testing, we need to define an input domain, then we take test points randomly from the whole input domain through a random number/test case generator independently without any restrictions. The program under test is executed on these points and the results obtained are compared to the program specifications. The test fails if any input leads to incorrect results or otherwise it is successful. The internal working of random testing is described in figure 1.2.
+It is quick and cheap to generate random test data as it don't require too much intellectual and computational efforts \cite{Ciupa2009}. This capability makes it an ideal choice for implementation in automated testing tools \cite{Ciupa2008a}. In addition, no human intervention in data generation/selection makes it one of the most unbiased testing technique. 
+
+Generating test cases with out using any background information makes it highly susceptible to criticism. Myers \cite{Myers1979} intuitively mentioned random testing as one of the least effective testing technique. It is also criticised for generating many sets of tests that lead to the same state of the software. Furthermore, random testing can generate test inputs that violates requirements of the given SUT making it less effective \cite{sen2007effective}, \cite{pacheco2009directed}. 
+
+Myers statement was not based on any experimental evidence and later on the experiments performed in \cite{hamlet1994}, \cite{Ciupa2008}, \cite{leitner2007efficient} and \cite{Duran1981} confirmed that random testing is as effective as any other systematic testing technique. The experiments in \cite{Duran1981} found that random testing can find subtle faults in a given SUT if run for large number of test cases. They argued that the simplicity and cost effectiveness of random testing can make it feasible to run large number of test cases as opposed to systematic testing which requires considerable time and resources for test case generation and execution. The empirical comparison \cite{hamlet1990} also prove that random testing and partition testing are equally effective. Furthermore the study conducted by Ntafos \cite{ntafos1998random} conclude the effectiveness of random testing over proportional partition testing.
+
 
 
 \section{Variations in Random Testing}

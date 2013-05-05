@@ -1,7 +1,7 @@
 \select@language {english}
-\contentsline {chapter}{Contents}{ii}{chapter*.1}
-\contentsline {chapter}{List of Figures}{v}{chapter*.2}
-\contentsline {chapter}{Nomenclature}{v}{chapter*.2}
+\contentsline {chapter}{Contents}{ii}{section*.2}
+\contentsline {chapter}{List of Figures}{v}{section*.4}
+\contentsline {chapter}{Nomenclature}{v}{section*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Problems}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Goals}{2}{section.1.2}
@@ -24,36 +24,37 @@
 \contentsline {subsection}{\numberline {2.1.7}Manual Testing}{10}{subsection.2.1.7}
 \contentsline {subsection}{\numberline {2.1.8}Automated Testing}{11}{subsection.2.1.8}
 \contentsline {subsubsection}{\numberline {2.1.8.1}Exhaustive Testing}{11}{subsubsection.2.1.8.1}
-\contentsline {subsubsection}{\numberline {2.1.8.2}Random Testing}{11}{subsubsection.2.1.8.2}
-\contentsline {section}{\numberline {2.2}Variations in Random Testing}{12}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Adaptive Random Testing}{12}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Mirror Adaptive Random Testing}{13}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Directed Automated Random Testing}{14}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Quasi Random Testing}{14}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Feedback-directed Random Test Generation}{15}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}Randoop: Feedback-directed Random Testing}{15}{subsection.2.2.6}
-\contentsline {subsubsection}{\numberline {2.2.6.1}Object Distance and its application}{15}{subsubsection.2.2.6.1}
-\contentsline {subsubsection}{\numberline {2.2.6.2}ARTOO Tool}{16}{subsubsection.2.2.6.2}
-\contentsline {subsubsection}{\numberline {2.2.6.3}Experimental Assessment of Random Testing for Object-Oriented Software}{17}{subsubsection.2.2.6.3}
-\contentsline {subsection}{\numberline {2.2.7}Restricted Random Testing}{17}{subsection.2.2.7}
-\contentsline {subsection}{\numberline {2.2.8}JCrasher}{18}{subsection.2.2.8}
-\contentsline {subsection}{\numberline {2.2.9}JArtage}{18}{subsection.2.2.9}
-\contentsline {subsection}{\numberline {2.2.10}Eclat}{18}{subsection.2.2.10}
-\contentsline {subsection}{\numberline {2.2.11}JTest}{19}{subsection.2.2.11}
-\contentsline {subsection}{\numberline {2.2.12}QuickCheck}{19}{subsection.2.2.12}
-\contentsline {subsection}{\numberline {2.2.13}AgitarOne}{20}{subsection.2.2.13}
-\contentsline {subsection}{\numberline {2.2.14}Autotost}{20}{subsection.2.2.14}
-\contentsline {subsection}{\numberline {2.2.15}TestEra}{20}{subsection.2.2.15}
-\contentsline {subsection}{\numberline {2.2.16}Korat}{21}{subsection.2.2.16}
-\contentsline {subsection}{\numberline {2.2.17}YETI}{21}{subsection.2.2.17}
-\contentsline {subsection}{\numberline {2.2.18}Tools for Automated Random Testing}{21}{subsection.2.2.18}
-\contentsline {section}{\numberline {2.3}Conclusion}{22}{section.2.3}
-\contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}First Section}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Second Section}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}first subsection in the Second Section}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}second subsection in the Second Section}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}third subsection in the Second Section}{23}{subsection.3.2.3}
-\contentsline {chapter}{Appdx A}{24}{appendix*.3}
-\contentsline {chapter}{Appdx B}{25}{appendix*.4}
-\contentsline {chapter}{References}{26}{appendix*.5}
+\contentsline {subsection}{\numberline {2.1.9}Test Oracle}{11}{subsection.2.1.9}
+\contentsline {subsubsection}{\numberline {2.1.9.1}Random Testing}{12}{subsubsection.2.1.9.1}
+\contentsline {section}{\numberline {2.2}Variations in Random Testing}{13}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Adaptive Random Testing}{13}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mirror Adaptive Random Testing}{15}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Directed Automated Random Testing}{16}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Quasi Random Testing}{16}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Feedback-directed Random Test Generation}{16}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Randoop: Feedback-directed Random Testing}{17}{subsection.2.2.6}
+\contentsline {subsubsection}{\numberline {2.2.6.1}Object Distance and its application}{17}{subsubsection.2.2.6.1}
+\contentsline {subsubsection}{\numberline {2.2.6.2}ARTOO Tool}{17}{subsubsection.2.2.6.2}
+\contentsline {subsubsection}{\numberline {2.2.6.3}Experimental Assessment of Random Testing for Object-Oriented Software}{18}{subsubsection.2.2.6.3}
+\contentsline {subsection}{\numberline {2.2.7}Restricted Random Testing}{18}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}JCrasher}{19}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}JArtage}{20}{subsection.2.2.9}
+\contentsline {subsection}{\numberline {2.2.10}Eclat}{20}{subsection.2.2.10}
+\contentsline {subsection}{\numberline {2.2.11}JTest}{20}{subsection.2.2.11}
+\contentsline {subsection}{\numberline {2.2.12}QuickCheck}{21}{subsection.2.2.12}
+\contentsline {subsection}{\numberline {2.2.13}AgitarOne}{21}{subsection.2.2.13}
+\contentsline {subsection}{\numberline {2.2.14}Autotost}{21}{subsection.2.2.14}
+\contentsline {subsection}{\numberline {2.2.15}TestEra}{22}{subsection.2.2.15}
+\contentsline {subsection}{\numberline {2.2.16}Korat}{22}{subsection.2.2.16}
+\contentsline {subsection}{\numberline {2.2.17}YETI}{22}{subsection.2.2.17}
+\contentsline {subsection}{\numberline {2.2.18}Tools for Automated Random Testing}{23}{subsection.2.2.18}
+\contentsline {section}{\numberline {2.3}Conclusion}{23}{section.2.3}
+\contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}First Section}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}Second Section}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}first subsection in the Second Section}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}second subsection in the Second Section}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}third subsection in the Second Section}{25}{subsection.3.2.3}
+\contentsline {chapter}{Appdx A}{26}{appendix*.5}
+\contentsline {chapter}{Appdx B}{27}{appendix*.6}
+\contentsline {chapter}{References}{28}{section*.8}

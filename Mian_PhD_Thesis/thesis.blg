@@ -1,5 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2012)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.7)
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Abstract/abstract.aux
 A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
@@ -7,6 +6,7 @@ A level-1 auxiliary file: Declaration/decleration.aux
 A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
+A level-1 auxiliary file: DSSR/dssr.aux
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
@@ -16,47 +16,48 @@ Warning--can't use both volume and number fields in Godefroid2005
 Warning--there's a number but no volume in howden1986
 Warning--empty journal in Levenshtein1966
 Warning--can't use both volume and number fields in mccabe1983
+Warning--can't use both volume and number fields in ntafos1998random
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-You've used 40 entries,
+You've used 54 entries,
             2118 wiz_defined-function locations,
-            773 strings with 10764 characters,
-and the built_in function-call counts, 15153 in all, are:
-= -- 1586
-> -- 584
-< -- 23
-+ -- 235
-- -- 190
-* -- 985
-:= -- 2359
-add.period$ -- 140
-call.type$ -- 40
-change.case$ -- 211
+            853 strings with 12849 characters,
+and the built_in function-call counts, 20467 in all, are:
+= -- 2146
+> -- 790
+< -- 31
++ -- 318
+- -- 258
+* -- 1324
+:= -- 3188
+add.period$ -- 189
+call.type$ -- 54
+change.case$ -- 285
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 655
-empty$ -- 1236
-format.name$ -- 190
-if$ -- 3351
+cite$ -- 62
+duplicate$ -- 887
+empty$ -- 1663
+format.name$ -- 258
+if$ -- 4526
 int.to.chr$ -- 0
-int.to.str$ -- 40
-missing$ -- 45
-newline$ -- 204
-num.names$ -- 80
-pop$ -- 244
+int.to.str$ -- 54
+missing$ -- 59
+newline$ -- 274
+num.names$ -- 108
+pop$ -- 328
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 237
 quote$ -- 0
-skip$ -- 480
+skip$ -- 653
 stack$ -- 0
-substring$ -- 997
-swap$ -- 202
-text.length$ -- 23
+substring$ -- 1344
+swap$ -- 281
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 148
-warning$ -- 7
-while$ -- 153
-width$ -- 42
-write$ -- 480
-(There were 7 warnings)
+type$ -- 202
+warning$ -- 8
+while$ -- 207
+width$ -- 56
+write$ -- 645
+(There were 8 warnings)
