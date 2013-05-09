@@ -12,77 +12,86 @@
 
 
 
-Paul Ehrlich famous quote is, �To err is human, but to really foul things up you need a computer�. Since the programmers are ordinary human beings, it is most obvious that some errors remain in the software after its completion. Errors are not tolerated as they can cause great loss. According to the National Institute of Standard and Technology 2002, 10 report, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of the Mariner 1 rocket (1962) that cost \$18.5 million was due to a simple formula coded incorrectly by a programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, Failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others are caused by minor errors in the software. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex and critical the software, the higher the requirements for software testing and the larger the damage caused if the bug remains in the software. 
 
+Paul Ehrlich famous quote is, ``To err is human, but to really foul things up you need a computer". Since the programmers are ordinary human beings, it is most obvious that some errors remain in the software after its completion. Errors are not tolerated as they can cause great loss. According to the National Institute of Standard and Technology 2002, 10 report, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of the Mariner 1 rocket (1962) that cost \$18.5 million was due to a simple formula coded incorrectly by a programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, Failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others are caused by minor errors in the software. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex and critical the software, the higher the requirements for software testing and the larger the damage caused if the bug remains in the software. 
 
 \section{Software Testing}
-In the IEEE standard glossary of software engineering terminology \cite{american1984}, testing is defined as the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. Test is more successful if it finds more errors in the software. Once errors are found in the SUT, the software is given back to the developers for removing the found errors and after rectifying the mentioned errors the software is again handed over to the testers for retesting. The testing process starts from the very beginning of software development and remains continuos throughout the life of the software.
+In the IEEE standard glossary of software engineering terminology \cite{american1984}, testing is defined as the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault \cite{Myers2004}, where faults are defined as the errors made by the people during software development \cite{american1984}.
 
-One thing to keep in mind is that �program testing can be used to show the presence of bugs, but never to show the absence of bugs� \cite{Dijkstra1972}. Which means SUT that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process increase however the reliability and confidence of the users in the tested product.
-
-\subsection{Software Test Plan}
-As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
-
-\subsection{Software Testing Approaches}
-The testing process starts from the very beginning of the System Development Life Cycle (SDLC) and is carried out in the following two ways.
-
-\begin{enumerate}
-\item Static Testing 
-\item Dynamic Testing
-\end{enumerate}
-
-\subsection{Static Testing}
-
-The term static means �still� or �non executable�. Static Testing is the process in which software documentation/source code is checked for errors without any execution. All high quality software�s will always be accompanied by documentation in addition to software code. These include requirements, de- sign, technical, end user and marketing documentation. Reviews, walkthroughs or inspections are most commonly used for static tests.
-For instance it is necessary to do the static testing of user documentation for errors because software developed at the cost of millions of dollars have been neglected and abandoned for the only reason that end users were not able to find out the proper way to operate it to do their routine business. Users tend not to think �I will figure out how to operate this software�; rather, they say, �this software doesn�t do what I need it to do, so I want the old system back� \cite{Everett2007}.
-
-\subsection{Dynamic Testing}
-
-Dynamic means �variable� or �changeable� so Dynamic Testing is the process in which software code is executed and input is converted into output through processing. Results are analysed to find any error in the software. It is not necessary that dynamic testing start once the software is fully complete. Instead it can start from a single method/unit. Unit testing, integration testing, system testing, and acceptance test- ing are most commonly used as dynamic testing methods. Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
+Being an integral part of Software Development Life Cycle (SDLC), the testing process is started from requirements phase since this is the starting point of all the software activities and continue throughout the life of the software. In traditional testing when testers finds a fault in the given SuT, the software is given back to the developers for removing the fault and after its rectification the software is handed back to the testers for retesting. It is important to understand the fact that ``program testing can be used to show the presence of bugs, but never to show the absence of bugs" \cite{Dijkstra1972}. Which means SUT that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process increase however the reliability and confidence of the users in the tested product.
 
 
-\subsection{Methods of Dynamic Software Testing}
-There are three methods for testing the software dynamically.
+\begin{table}[ht]
+%\scriptsize
+\caption{Parts of Software Testing \cite{adrion1982validation}, \cite{chilenski1994applicability}, \cite{gaudel2010software}, \cite{richardson1992specification}, \cite{tracey1998automated}} % title of Table
+\smallskip
+\centering % used for centering table
+\begin{tabular}{| l | l | l | l | } % centered columns (4 columns)
+\hline
 
-\begin{enumerate}
-\item Black-Box Testing
-\item White-Box Testing
-\item Grey-Box Testing
-\end{enumerate}
-
-\subsubsection{Black-Box Testing}
-Black-Box or Functional testing is the method in which the testers don�t know about the structure of the software. Test cases are derived from the specifications of the SUT and tests pass only if the output checks, according to the specification no matter how it is internally processed by the software. The main emphasis of black-box testing is to check the functionality of the product.
-
-\subsubsection{White-Box Testing}
-White-Box or Structural testing is a method in which the testers must know about the complete structure of the software. Test cases are derived from the code structure of the SUT and the test is pass only if the results are correct according to the specification as well as the execution is carried out according to oracle. The main emphasis of the white-box testing is not only functionality but also code coverage \cite{Agarwal2009}.
-
-\subsubsection{Grey-Box Testing}
-Grey-Box testing is the combination of both black-box/functionality and white-box/structural testing. The tester knows about both the functionality and the internal structure of the SUT. Some of the test cases are based on the functionality and some of the test cases are based on the structure. Emphasis of grey-box testing is both on code coverage as well as functionality \cite{Savenkov2008}.
-
-\subsection{Software Testing Workflow}
-There are many software techniques like unit testing, integration testing, random testing, regression testing, system testing, acceptance testing, performance testing, load testing, stress testing, alpha testing, beta test etc. All testing techniques belong to black-box, white-box or grey-box approach. Each testing technique has its own strength and weaknesses but the technique in focus here is Random Testing.
+Levels 		&Purpose		 						& Perspective		& Execution 	\\
+\hline
+1. Unit		&1. Functionality						& 1. White Box		& 1. Static 	\\
+2. Integration	&2. Structural							& 2. Black Box		& 2. Dynamic	\\
+3. System		&3. Robustness						& 3. Grey Box		&			\\
+			&4. Stress								&				&			\\
+			&5. Compatibility						&				&			\\
+			&6. Performance						&				&			\\
 
 
-\begin{figure}[h]
-\begin{center}
-	\includegraphics[width=16cm, height=12cm ]{Literature/Drawing34.jpg}
-	\caption{Software Testing Workflow}
-\end{center}  
-\end{figure}
+
+\hline %inserts single line
+\end{tabular}
+\bigskip
+\label{table:addvalues} % is used to refer this table in the text
+\end{table}
 
 
-We have explained software testing graphically with the help of plotting venn diagram on two dimensional axis. The positive x axis represent black-box while negative x axis represent white-box testing. Grey-box testing in the middle is represented by the overlapping of black-box and white-box testing. Similarly on positive y axis we have dynamic testing and on negative y axis we have static testing.
-Now if a test is black box and dynamic then the test will fall in 0 to 90 degree on the diagram and if the test is black-box and static then it will fall in 270 to 360 degree. On the other hand if the test is white-box and dynamic then it will fall in 90 to 180 degree and if the test is white-box and static then it will fall in 180 to 270 degrees.
+\subsection{Software Testing Levels}
+Unit testing, integration testing and system testing \cite{chilenski1994applicability} are the three main levels of software testing defined in the literature. Unit testing evaluate a small piece of software code called units for faults. These units are combined together to form components and integration testing ensure that the integration points are working properly. Finally the components are combined to form a system and before production system testing is performed to make sure that it works as expected. 
+
+
+\subsection{Software Testing Purpose}
+The primary purpose of software testing is identification of faults in the given SuT so that they can be corrected to achieve high quality. Ideally, maximum number of faults can be identified if software is tested exhaustively i.e. testing SuT against all possible combinations of input data, and comparing the obtained results to the expected results for assessment. However, exhaustive testing is not always possible in most of the test scenarios because of limited resources and infinite number of input values that a software can take. Therefore, the purpose of testing is generally directed to achieve confidence in a specific aspect of a SuT. For example, functionality testing is performed to check if one or more functions of a system are working correct or not. Structural testing analyse the code structure to generate test cases in order to evaluate paths of execution and identification of unreachable or dead code.  In robustness testing the software behaviour is observed in the case when it receive input that is outside of its expected input range.  Stress and performance testing aim to test the response of software under high load and its ability to process different nature of tasks \cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with underlying operating system or hardware.
+ %As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
+%A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
+
+\subsection{Software Testing Perspective}
+Testing activities can be split up into blackbox and whitebox testing on the basis of perspective taken. In blackbox or functional testing the testers dont need to know about internal code structure of the SuT. Test cases are derived from the specifications and test passes if the output is according to expected output. Internal code structure of the SuT is not taken into any consideration \cite{beizer1995black}. Whereas in whitebox or structural testing testers must know about the complete structure of the software and can modify it, if required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution \cite{ostrand2002white}.
+
+%\subsubsection{Grey-Box Testing}
+%Grey-Box testing is the combination of both black-box/functionality and white-box/structural testing. The tester knows about both the functionality and the internal structure of the SUT. Some of the test cases are based on the functionality and some of the test cases are based on the structure. Emphasis of grey-box testing is both on code coverage as well as functionality \cite{Savenkov2008}.
+
+%\subsection{Software Testing Workflow}
+%There are many software techniques like unit testing, integration testing, random testing, regression testing, system testing, acceptance testing, performance testing, load testing, stress testing, alpha testing, beta test etc. All testing techniques belong to black-box, white-box or grey-box approach. Each testing technique has its own strength and weaknesses but the technique in focus here is Random Testing.
+
+
+%\begin{figure}[h]
+%\begin{center}
+%	\includegraphics[width=16cm, height=12cm ]{Literature/Drawing34.jpg}
+%	\caption{Software Testing Workflow}
+%\end{center}  
+%\end{figure}
+
+
+%We have explained software testing graphically with the help of plotting venn diagram on two dimensional axis. The positive x axis represent black-box while negative x axis represent white-box testing. Grey-box testing in the middle is represented by the overlapping of black-box and white-box testing. Similarly on positive y axis we have dynamic testing and on negative y axis we have static testing.
+%Now if a test is black box and dynamic then the test will fall in 0 to 90 degree on the diagram and if the test is black-box and static then it will fall in 270 to 360 degree. On the other hand if the test is white-box and dynamic then it will fall in 90 to 180 degree and if the test is white-box and static then it will fall in 180 to 270 degrees.
+
+
+
+
+\subsection{Software Testing Execution}
+Test activities can be organised into static and dynamic testing on the basis test cases execution. In static testing test cases analysed statically checked for errors without any execution. All high quality softwares are accompanied by documentation in addition to software code. These include requirements, design, technical, end-user and marketing documentation. Reviews, walkthroughs or inspections are most commonly used techniques for static testing. In dynamic testing the software code is executed and input is converted into output through processing. Results are analysed against expected results to find any error in the software. Unit testing, integration testing, system testing, and acceptance testing are most commonly used as dynamic testing methods \cite{fairley1978tutorial}
+
+%Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
+
+
 
 \subsection{Manual Testing}
  A software testing technique to find faults in a class or group of related classes, such that the tester must write the code by hand to create test cases and test oracle \cite{Ciupa2008}. While manual testing is effective in some cases, in general, it is a laborious, time consuming, error-prone \cite{tretmans1999}. It further requires testers to have appropriate skills, experience and in depth knowledge of the under test software in order to evaluate it from different perspectives.
  
 \subsection{Automated Testing}
 A software testing technique to find faults in a class or group of related classes, such that the test cases and test oracle is generated automatically by a testing tool \cite{Leitner2007}. The tools can automate part of a test i.e. generation of test cases, execution of test cases and evaluation of results or the whole test process. The use of automated testing made it possible to test large volumes of code that would be otherwise impossible \cite{ramamoorthy1975}.
-
-\subsubsection{Exhaustive Testing}
-A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. Testers therefore are usually only able to use a small portion of a program�s input domain to test a given software \cite{chan2003normalized}.
-
 
 %\section{Automated Random Testing}
 %\subsection{Test Data Generation}

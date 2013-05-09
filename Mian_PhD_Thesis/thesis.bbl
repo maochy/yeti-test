@@ -1,9 +1,9 @@
 \begin{thebibliography}{10}
 
-\bibitem{Agarwal2009}
-B.~B. Agarwal, S.~P. Tayal, and M.~Gupta.
-\newblock {\em Software Engineering and Testing: An Introduction}.
-\newblock Jones \& Bartlett Publishers, 1 edition, March 2009.
+\bibitem{adrion1982validation}
+W~Richards Adrion, Martha~A Branstad, and John~C Cherniavsky.
+\newblock Validation, verification, and testing of computer software.
+\newblock {\em ACM Computing Surveys (CSUR)}, 14(2):159--192, 1982.
 
 \bibitem{american1984}
 NY. American National Standards Institute. New~York, Institute of~Electrical,
@@ -16,6 +16,12 @@ NY. American National Standards Institute. New~York, Institute of~Electrical,
 Luciano Baresi and Michal Young.
 \newblock Test oracles.
 \newblock {\em Techn. Report CISTR-01}, 2, 2001.
+
+\bibitem{beizer1995black}
+Boris Beizer.
+\newblock {\em Black-box testing: techniques for functional testing of software
+  and systems}.
+\newblock John Wiley \& Sons, Inc., 1995.
 
 \bibitem{Boyapati2002}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
@@ -35,12 +41,6 @@ Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Restricted random testing.
 \newblock In {\em Proceedings of the 7th International Conference on Software
   Quality}, ECSQ '02, pages 321--330, London, UK, UK, 2002. Springer-Verlag.
-
-\bibitem{chan2003normalized}
-Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
-\newblock Normalized restricted random testing.
-\newblock In {\em Reliable Software Technologies—Ada-Europe 2003}, pages
-  368--381. Springer, 2003.
 
 \bibitem{Chang1999}
 Juei Chang and Debra~J. Richardson.
@@ -73,6 +73,12 @@ Tsong~Yueh Chen and Robert Merkel.
 \newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
   Automated software engineering}, ASE '05, pages 309--312, New York, NY, USA,
   2005. ACM.
+
+\bibitem{chilenski1994applicability}
+John~Joseph Chilenski and Steven~P Miller.
+\newblock Applicability of modified condition/decision coverage to software
+  testing.
+\newblock {\em Software Engineering Journal}, 9(5):193--200, 1994.
 
 \bibitem{Ciupa2009}
 I~Ciupa, A~Pretschner, M~Oriol, A~Leitner, and B~Meyer.
@@ -122,6 +128,12 @@ David~M. Cohen, Siddhartha~R. Dalal, Michael~L. Fredman, and Gardner~C. Patton.
 \newblock {\em Software Engineering, IEEE Transactions on}, 23(7):437--444,
   1997.
 
+\bibitem{cohen2005robustness}
+Julie Cohen, Daniel Plakosh, and Kristi~L Keeler.
+\newblock Robustness testing of software-intensive systems: Explanation and
+  guide.
+\newblock 2005.
+
 \bibitem{Dijkstra1972}
 Edsger~W. Dijkstra.
 \newblock Structured programming.
@@ -135,11 +147,10 @@ Joe~W. Duran and Simeon Ntafos.
   engineering}, ICSE '81, pages 179--183, Piscataway, NJ, USA, 1981. IEEE
   Press.
 
-\bibitem{Everett2007}
-Gerald~D. Everett and Raymond~McLeod Jr.
-\newblock {\em Software Testing: Testing Across the Entire Software Development
-  Life Cycle}.
-\newblock Wiley-IEEE Computer Society Pr, 2007.
+\bibitem{fairley1978tutorial}
+Richard~E Fairley.
+\newblock Tutorial: Static analysis and dynamic testing of computer software.
+\newblock {\em Computer}, 11(4):14--23, 1978.
 
 \bibitem{gaudel2010software}
 Marie-Claude Gaudel.
@@ -253,6 +264,11 @@ Manuel Oriol and Faheem Ullah.
 \newblock {\em Software Testing Verification and Validation Workshop, IEEE
   International Conference on}, 0:434--437, 2010.
 
+\bibitem{ostrand2002white}
+Thomas Ostrand.
+\newblock White-box testing.
+\newblock {\em Encyclopedia of Software Engineering}, 2002.
+
 \bibitem{pacheco2009directed}
 Carlos Pacheco.
 \newblock {\em Directed random testing}.
@@ -294,16 +310,17 @@ Debra~J Richardson, Stephanie~Leif Aha, and T~Owen O'malley.
 \newblock In {\em Proceedings of the 14th international conference on Software
   engineering}, pages 105--118. ACM, 1992.
 
-\bibitem{Savenkov2008}
-Roman Savenkov.
-\newblock {\em How to Become a Software Tester}.
-\newblock Roman Savenkov, 1 edition, November 2008.
-
 \bibitem{sen2007effective}
 Koushik Sen.
 \newblock Effective random testing of concurrent programs.
 \newblock In {\em Proceedings of the twenty-second IEEE/ACM international
   conference on Automated software engineering}, pages 323--332. ACM, 2007.
+
+\bibitem{tracey1998automated}
+Nigel Tracey, John Clark, Keith Mander, and John McDermid.
+\newblock An automated framework for structural test-data generation.
+\newblock In {\em Automated Software Engineering, 1998. Proceedings. 13th IEEE
+  International Conference on}, pages 285--288. IEEE, 1998.
 
 \bibitem{tretmans1999}
 Jan Tretmans and Axel Belinfante.
