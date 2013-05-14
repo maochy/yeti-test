@@ -45,11 +45,25 @@
 \contentsline {subsection}{\numberline {2.2.18}Tools for Automated Random Testing}{21}{subsection.2.2.18}
 \contentsline {section}{\numberline {2.3}Conclusion}{21}{section.2.3}
 \contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}First Section}{23}{section.3.1}
-\contentsline {section}{\numberline {3.2}Second Section}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}first subsection in the Second Section}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}second subsection in the Second Section}{23}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}third subsection in the Second Section}{23}{subsection.3.2.3}
-\contentsline {chapter}{Appdx A}{24}{appendix*.7}
-\contentsline {chapter}{Appdx B}{25}{appendix*.8}
-\contentsline {chapter}{References}{26}{section*.10}
+\contentsline {section}{\numberline {3.1}Introduction}{23}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dirt Spot Sweeping Random Strategy}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Random Strategy (R)}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Random Plus Strategy (R+)}{26}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Dirt Spot Sweeping (DSS)}{26}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{27}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Explanation of DSSR strategy on a concrete example}{29}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Implementation of the DSSR \\ strategy}{31}{section.3.3}
+\contentsline {section}{\numberline {3.4}Evaluation}{32}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Research questions}{32}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Experiments}{33}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{33}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Results}{34}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{34}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{35}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{36}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Discussion}{36}{section.3.6}
+\contentsline {section}{\numberline {3.7}Related Work}{37}{section.3.7}
+\contentsline {section}{\numberline {3.8}Conclusions}{38}{section.3.8}
+\contentsline {chapter}{Appdx A}{44}{appendix*.7}
+\contentsline {chapter}{Appdx B}{45}{appendix*.8}
+\contentsline {chapter}{References}{46}{section*.10}
