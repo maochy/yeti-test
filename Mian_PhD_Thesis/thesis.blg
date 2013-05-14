@@ -11,6 +11,7 @@ A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
 Database file #1: References/references.bib
+Warning--I didn't find a database entry for "Claessen2000a"
 Warning--empty journal in cohen2005robustness
 Warning--empty booktitle in Dijkstra1972
 Warning--can't use both volume and number fields in Godefroid2005
@@ -20,45 +21,45 @@ Warning--can't use both volume and number fields in mccabe1983
 Warning--can't use both volume and number fields in ntafos1998random
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-You've used 57 entries,
+You've used 78 entries,
             2118 wiz_defined-function locations,
-            871 strings with 13423 characters,
-and the built_in function-call counts, 21396 in all, are:
-= -- 2244
-> -- 827
-< -- 31
-+ -- 334
-- -- 270
-* -- 1393
-:= -- 3349
-add.period$ -- 198
-call.type$ -- 57
-change.case$ -- 300
+            1005 strings with 17124 characters,
+and the built_in function-call counts, 29563 in all, are:
+= -- 3065
+> -- 1158
+< -- 40
++ -- 468
+- -- 380
+* -- 1958
+:= -- 4609
+add.period$ -- 264
+call.type$ -- 78
+change.case$ -- 417
 chr.to.int$ -- 0
-cite$ -- 66
-duplicate$ -- 915
-empty$ -- 1732
-format.name$ -- 270
-if$ -- 4707
+cite$ -- 87
+duplicate$ -- 1252
+empty$ -- 2406
+format.name$ -- 380
+if$ -- 6500
 int.to.chr$ -- 0
-int.to.str$ -- 57
-missing$ -- 60
-newline$ -- 289
-num.names$ -- 114
-pop$ -- 333
+int.to.str$ -- 78
+missing$ -- 81
+newline$ -- 393
+num.names$ -- 156
+pop$ -- 464
 preamble$ -- 1
-purify$ -- 249
+purify$ -- 346
 quote$ -- 0
-skip$ -- 676
+skip$ -- 936
 stack$ -- 0
-substring$ -- 1429
-swap$ -- 284
-text.length$ -- 31
+substring$ -- 2018
+swap$ -- 390
+text.length$ -- 40
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 218
+type$ -- 300
 warning$ -- 9
-while$ -- 219
-width$ -- 59
-write$ -- 675
-(There were 9 warnings)
+while$ -- 297
+width$ -- 80
+write$ -- 912
+(There were 10 warnings)
