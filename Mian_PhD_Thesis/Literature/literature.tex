@@ -161,6 +161,18 @@ As discussed in the above section ART provide better results, however the increa
 In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART \{(0, 0), (u, v)\} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get \{(0, 0), (u/2, v)\} as source subdomain and \{(u/2, 0), (u, v)\} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure \ref{fig:mirrorART}. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.    
 
 
+\subsection{Restricted Random Testing}
+Restricted Random Testing (RRT) \cite{chan2003normalized} is another approach, with small overhead in contrast to ART, to spread the the test cases more evenly across the input domain. RRT achieves this by creating a circular exclusion zone around the executed test case. A candidate is randomly selected from the input domain for the next test case. Before execution the candidate is checked and is discarded if it lies inside the exclusion zone. This process repeats until a candidate laying outside the exclusion zone is selected. This ensures that the test case to be executed is well apart from the last one. The radius of exclusion zone is constant around each test case and the area of each zone decreases with successive cases.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width= 6cm, height = 5cm]{Literature/RRT.pdf}
+	\caption{Input domain with exclusion zone around the selected test case}
+\end{figure}
+
+To find the effectiveness of RRT, the authors compared it with ART and RT on 7 out of the 12 programs evaluated by ART and MART. The experimental results showed that the performance of RRT increases with the increase in the size of the exclusion zone and reaches to maximum when the exclusion zone is raised to largest possible size. Normalized Restricted Random Testing \cite{chan2003normalized} is an improvement over RRT by allowing the testers to have better information about the target exclusion rate (R) of RRT. They further found that RRT is up to 55\% more effective than ordinary random testing in terms of F-measure (Where F-measure is the total number of test cases required to find the first failure).
+
+
 
 \subsection{Directed Automated Random Testing}
 
@@ -190,25 +202,13 @@ After the criteria to calculate the distance between the objects is defined \cit
 ARTOO was implemented as a plug-in strategy in AutoTest. It only deals with creating and selecting inputs and all other functionality of the AutoTest was the same. Since ARTOO is based on object distance therefore the method for test input selection is to pick that object from the candidate set (A pool of objects that is a potential candidate to be executed by the system) which has the highest average distance in comparison to the objects already executed.
 In the experiments classes from EiffelBase library [17] were used. To evaluate ARTOO the same tests were also applied to directed random strategy (RAND). The outcome of the experiments showed that ARTOO finds the first bug with fewer test cases than RAND. The computation to select test case in ARTOO is more than RAND and therefore ARTOO takes more time to generate a test input. The experiments also found few of the bug found by ARTOO were not pointed out by RAND furthermore ARTOO is less sensitive to the variation of seed value than RAND.
 
-\subsubsection{Experimental Assessment of Random Testing for Object-Oriented Software}
+\subsubsection{Experimental Assessment of RT for Object-Oriented Software}
 In this research the effect of various parameters involved in random testing and its effect on efficiency is evaluated by performing various experiments on Industrial-grade code base.
 Large scale clusters of computers were used for 1500 hours of CPU time which resulted in 1875 test sessions for 8 classes under test. \cite{Ciupa2007} The finding of the experiments are
 1. Version of random testing algorithm that is efficient for smaller testing timeout is equally efficient for higher testing timeouts.
 2. The value of seed for random testing algorithm plays a vital role in finding the number of bugs in specific time.
 3. Most of the bugs are found in the first few minutes of the testing sessions.
 
-
-\subsection{Restricted Random Testing}
-Motivated from Adaptive random testing, aim of Restricted Random Testing (RRT) is the same that is selection of test cases from the input domain such that the whole input domain is represented [?]. The plan to achieve an even selection of test cases from the input domain is accomplished by forming an exclusion zone around the first random selected test case.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{Literature/RRT}
-	\caption{Input domain with exclusion zone around the selected test case}
-\end{figure}
-
-The next random test case then must be selected outside of this exclusion zone. It makes sure that there is enough distance between the two test cases. The exclusion zone is fixed around each test case and the area of each zone decreases with successive cases.
-Experimental results of seven error seeded program indicated that RRT is 55\% more effective than ordianry/undirected random testing in terms of f-measure (Where f-measure is the total number of test cases required to find the first failure).
 
 %\section{Automated Random Testing Tools}
 
