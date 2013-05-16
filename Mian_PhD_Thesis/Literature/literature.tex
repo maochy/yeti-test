@@ -152,12 +152,13 @@ As discussed in the above section ART provide better results, however the increa
 
 \begin{figure}[h]
 \begin{center}
-	\includegraphics[width=10cm, height=7cm ]{Literature/mat}
-	\caption{Mirror Adaptive Random Testing (0-500)}
+	\includegraphics[width=13cm, height=6cm ]{Literature/mart2.pdf}
+	\caption{Mirror Adaptive Random Testing \cite{Chen2003}}
+\label{fig:mirrorART}
 \end{center}  
 \end{figure}
 
-In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART \{(0, 0), (u, v)\} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get \{(0, 0), (u/2, v)\} as source subdomain and \{(u/2, 0), (u, v)\} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure ???. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.    
+In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART \{(0, 0), (u, v)\} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get \{(0, 0), (u/2, v)\} as source subdomain and \{(u/2, 0), (u, v)\} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure \ref{fig:mirrorART}. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.    
 
 
 
@@ -179,7 +180,7 @@ The FDRT technique is implemented in RANDOOP tool \cite{Pacheco2007b}. RANdom te
 
 
 
-\subsubsection{Object Distance and its application}
+\subsection{Object Distance and its application}
 To improve the performance of random testing the emphasis of ART was on the distance between the test cases. But this distance was defined only for primitive data types like integers and other elementary input. Ciupa et al defined the parameters that can be used to calculate distance between the composite programmer-defined types so that ART can be applicable to testing of todays object-oriented programs \cite{Ciupa2006}. Two objects have more distance between them if they have more dissimilar properties.
 The parameters to specify the distance between the objects are dynamic types, values of its primitive and reference fields. Strings are treated as a directly usable values and Levenshtein distance \cite{Levenshtein1966} which is also known as edit distance is used as a distance criteria between the two strings.
 To implement object distance first all the distances of the objects are measured. Then two sets candidate- objects containing the all the objects ready to be run by the system and the used-objects set which is initially empty. First object is selected randomly from the candidate-object set and is moved to used- object set when executed by the system. Now the second object selected from the candidate set for execution is the one with the biggest distance from the last executed object present in the used-object set. This process is continue until the bug is found or the objects in the candidate-object set are finished.
