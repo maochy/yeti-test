@@ -248,7 +248,54 @@ TestEra \cite{Khurshid2004} is a novel framework for testing Java applications. 
 Korat \cite{Boyapati2002} is an automated testing tool for Java programs that generates and execute test cases for a method based on its formal specification. To generate test cases for a method Korat makes use of its pre-condition. It then executes the generated test cases against the method specifications. Korat uses JML for specifications. In order to generate test cases for a method Korat constructs new methods that return a Boolean value (Java Predicate) from its pre-conditions. When given these Java predicates Korat generates all non isomorphic input for which the return value of predicate is true. To check correctness of the method, Korat executes the test cases on that method and analyzes the output with the post conditions of the method (oracle). A fault in a method under test throws an exception to indicate the violation of the post-condition.
 
 \subsection{YETI}
-The final tool we discuss is YETI (the York Extensible Testing Infrastructure) [33], which is entirely automated and freely available as open-source. It can be used for testing programs written in Java, JML, C, command-line and .Net \cite{Oriol2010c}. It can also be run in cloud for faster execution \cite{Oriol2010}. It is implemented in Java and uses random technique for testing. It has GUI which makes it easy to diagnose problems at runtime. It is able to call up to one million calls per minute on Java code. YETI oracle is language dependant. If the specifications are available, YETI checks the code against the specifications for any inconsistency. In case of programs having assertions YETI interprets violations as failures and in case there is no specifications or assertions, YETI performs robustness testing and considers undeclared run- time exceptions as faults. Errors-revealing test cases are reproduced at the end of each testing session. Experiments conducted with YETI showed significant number of bugs in Java.lang class (45 faults) and Itext (120 faults).
+York Extensible Testing Infrastructure (YETI) is an automated tool for testing Java, JML and .NET assemblies \cite{Oriol2010c}. YETI execute the program under test with random generated but type-correct inputs and declare a fault if the response is an unexpected exception or a contract violation. YETI has been designed with an emphasis on extensibility. Its three main parts: the core infrastructure, strategies and language bindings are loosely coupled to easily accommodate new languages and strategies. To keep the process fully automated YETI uses two approaches for oracle (pass/fail judgement). If available, YETI uses code contracts as oracle if not it uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing. Other prominent features of YETI include its Graphical User Interface (GUI) for user friendliness and ability to distribute large testing tasks in cloud for parallel execution \cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+
+\subsection{Construction of Test Cases}
+YETI construct test cases at random by creating objects of the class under test and randomly calling its methods with inputs according to its parameter's-space. Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. To completely automate the data generation YETI   split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc, YETI uses its own built-in random value generation library. However, in the case of user defined classes where objects data type is a user defined class YETI calls its constructor to generate object of that class at run time. It may be possible that the constructor require another object and in this case YETI will recursively calls the constructor of that object. This process is continued until the an object with blank constructor, constructor with only primitive types (type 1) or the set level of recursion is reached. 
+
+\subsection{Commnad-line Options}
+While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode. For example, to save processing power command line option -nologs can be used to bypass realtime logging. The following table describes few of the most common command-line options available in YETI.    
+
+\begin{table}[ht]
+%\scriptsize
+\caption{YETI command line options} % title of Table
+\smallskip
+\centering % used for centering table
+\begin{tabular}{ll } % centered columns (4 columns)
+\hline
+
+Levels 					&Purpose 			\\
+\hline
+-java						&Test programs coded in Java	 	\\
+-jml						&Test programs coded in JML			\\
+-dotnet					&Test programs coded in .NET		\\
+-nTests					&Specify number of tests after which the test stops	\\
+-time						&Specify time in seconds or minutes after which the test stops\\
+-testModules				&Specify one or more modules to test 	\\
+-rawlogs					&Prints real time logs during test \\
+-nologs					&Omit real time logs and print end result only\\
+-yetiPath					&Specify path to the test modules\\ 
+-gui						&Show test session in GUI\\
+-DSSR					&Specify Dirt Spot Sweeping Random strategy for this session\\
+-ADFD					&Speciry Automated Discovery of Failure Domain strategy for this session\\
+-random					&Specify random test strategy for this session\\
+-randomPlus				&Specify random plus test strategy for this session\\
+-randomPlusPeriodic		&Specify random plus periodic test strategy for this session\\
+-nullProbability				&Specify probability of inserting null as input value\\
+-newInstanceProability		&Specify probability of inserting new object as input value\\
+
+\hline %inserts single line
+\end{tabular}
+\bigskip
+\label{table:cliOptions} % is used to refer this table in the text
+\end{table}
+
+
+\subsection{YETI Execution}
+
+\subsection{YETI Report}いいいいいいいいいいいいいいいいいいい
+
+
 
 \subsection{Tools for Automated Random Testing}
 From the literature we can find a number of open source and commercial testing tools that automatically generate unit tests. Each tool utilize different generation technique but the one we are interested in is random technique. We present the most well known tools.

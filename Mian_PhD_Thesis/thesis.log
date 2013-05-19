@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  16 MAY 2013 06:32
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  19 MAY 2013 05:21
 entering extended mode
 \write18 enabled.
  file:line:error style messages enabled.
@@ -633,7 +633,7 @@ Chapter 2.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.58 
-     ] [8] [9] <Literature/figure1.jpg, id=543, 441.90094pt x 118.19156pt>
+     ] [8] [9] <Literature/figure1.jpg, id=555, 441.90094pt x 118.19156pt>
 File: Literature/figure1.jpg Graphic file (type jpg)
 
 <use Literature/figure1.jpg> [10pdfTeX warning (ext4): destination with the sam
@@ -643,7 +643,7 @@ e identifier (name{figure.2.1}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.122 
        <./Literature/figure1.jpg>]
-<Literature/pointblockstrip.jpg, id=573, 581.92406pt x 183.68625pt>
+<Literature/pointblockstrip.jpg, id=585, 581.92406pt x 183.68625pt>
 File: Literature/pointblockstrip.jpg Graphic file (type jpg)
 
 <use Literature/pointblockstrip.jpg>
@@ -663,7 +663,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <12> not available
 l.143 \item S
              trip pattern: In the strip pattern the failure inducing inputs ...
  <./Literature/pointblockstrip.jpg>] [12]
-<Literature/mart2.pdf, id=594, 350.30875pt x 185.69376pt>
+<Literature/mart2.pdf, id=606, 350.30875pt x 185.69376pt>
 File: Literature/mart2.pdf Graphic file (type pdf)
 
 <use Literature/mart2.pdf>
@@ -682,7 +682,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
                                                   \fi \fi 
 l.166 
        <./Literature/mart2.pdf>]
-<Literature/RRT.pdf, id=622, 370.38374pt x 247.67531pt>
+<Literature/RRT.pdf, id=634, 370.38374pt x 247.67531pt>
 File: Literature/RRT.pdf Graphic file (type pdf)
 
 <use Literature/RRT.pdf> [14pdfTeX warning (ext4): destination with the same id
@@ -691,12 +691,27 @@ entifier (name{figure.2.4}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.183 
-       <./Literature/RRT.pdf>] [15] [16] [17] [18] [19] [20]
-<Literature/tools.jpg, id=694, 636.9396pt x 667.293pt>
+       <./Literature/RRT.pdf>] [15] [16] [17] [18] [19] [20] [21]
+Overfull \hbox (74.67822pt too wide) in paragraph at lines 264--292
+ [][] 
+ []
+
+<Literature/tools.jpg, id=713, 636.9396pt x 667.293pt>
 File: Literature/tools.jpg Graphic file (type jpg)
 
-<use Literature/tools.jpg> [21]) [22pdfTeX warning (ext4): destination with the
- same identifier (name{figure.2.5}) has been already used, duplicate ignored
+<use Literature/tools.jpg>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [22] [23pdfTeX warning (ext4): destination with the same identifier (name{tab
+le.2.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.137 \include{Literature/literature}
+                                     ] [24pdfTeX warning (ext4): destination wi
+th the same identifier (name{figure.2.5}) has been already used, duplicate igno
+red
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -707,7 +722,7 @@ l.137 \include{Literature/literature}
 
 (./DSSR/dssr.tex
 Chapter 3.
-[23
+[25
 
 
 
@@ -715,15 +730,15 @@ Chapter 3.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
  (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [24]
-[25] <DSSR/ART_Patterns.png, id=775, 376.40625pt x 101.62968pt>
+) [26]
+[27] <DSSR/ART_Patterns.png, id=795, 376.40625pt x 101.62968pt>
 File: DSSR/ART_Patterns.png Graphic file (type png)
 
-<use DSSR/ART_Patterns.png> [26]
-<DSSR/block2.png, id=783, 271.0125pt x 122.70844pt>
+<use DSSR/ART_Patterns.png> [28]
+<DSSR/block2.png, id=804, 271.0125pt x 122.70844pt>
 File: DSSR/block2.png Graphic file (type png)
  <use DSSR/block2.png>
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+[29pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -736,10 +751,10 @@ l.65
                                                   \fi \fi 
 l.65 
       <./DSSR/ART_Patterns.png> <./DSSR/block2.png>]
-<DSSR/flowchart1.pdf, id=793, 193.19614pt x 195.7238pt>
+<DSSR/flowchart1.pdf, id=814, 193.19614pt x 195.7238pt>
 File: DSSR/flowchart1.pdf Graphic file (type pdf)
 
-<use DSSR/flowchart1.pdf> [28pdfTeX warning (ext4): destination with the same i
+<use DSSR/flowchart1.pdf> [30pdfTeX warning (ext4): destination with the same i
 dentifier (name{figure.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -748,32 +763,32 @@ l.76
       <./DSSR/flowchart1.pdf>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 126.
- [29pdfTeX warning (ext4): destination with the same identifier (name{table.3.1
+ [31pdfTeX warning (ext4): destination with the same identifier (name{table.3.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.128   //
-           Square num1 and store result.] [30]
-<DSSR/hierarchy.pdf, id=831, 98.56648pt x 125.337pt>
+           Square num1 and store result.] [32]
+<DSSR/hierarchy.pdf, id=851, 98.56648pt x 125.337pt>
 File: DSSR/hierarchy.pdf Graphic file (type pdf)
  <use DSSR/hierarchy.pdf>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[31] [32pdfTeX warning (ext4): destination with the same identifier (name{figur
+[33] [34pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.191 
-       <./DSSR/hierarchy.pdf>] [33] [34pdfTeX warning (ext4): destination with 
+       <./DSSR/hierarchy.pdf>] [35] [36pdfTeX warning (ext4): destination with 
 the same identifier (name{table.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.252 
-      ] <DSSR/DssrImprove.png, id=877, 986.2446pt x 479.391pt>
+      ] <DSSR/DssrImprove.png, id=897, 986.2446pt x 479.391pt>
 File: DSSR/DssrImprove.png Graphic file (type png)
 
 <use DSSR/DssrImprove.png>
@@ -784,13 +799,13 @@ Overfull \hbox (89.70525pt too wide) in alignment at lines 342--342
 
 LaTeX Warning: Float too large for page by 82.82547pt on input line 346.
 
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.352 
-       <./DSSR/DssrImprove.png>] [36pdfTeX warning (ext4): destination with the
+       <./DSSR/DssrImprove.png>] [38pdfTeX warning (ext4): destination with the
  same identifier (name{table.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -801,16 +816,16 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 379.
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 386.
- [37] [38pdfTeX warning (ext4): destination with the same identifier (name{tabl
+ [39] [40pdfTeX warning (ext4): destination with the same identifier (name{tabl
 e.3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.418 
-      ] [39] [40] [41]) [42]
+      ] [41] [42] [43]) [44]
 \openout2 = `Appendix1/appendix1.aux'.
 
- (./Appendix1/appendix1.tex) [43
+ (./Appendix1/appendix1.tex) [45
 
 
 
@@ -819,7 +834,7 @@ l.418
 \openout2 = `Appendix2/appendix2.aux'.
 
 
-(./Appendix2/appendix2.tex) [44
+(./Appendix2/appendix2.tex) [46
 
 
 
@@ -827,13 +842,13 @@ l.418
 \tf@brf=\write8
 \openout8 = `thesis.brf'.
 
- [45
+ [47
 
 
 ]
 Missing character: There is no Ñ in font ptmri7t!
- [46]
-[47] [48] [49] [50] [51] [52]) [53] (./thesis.aux (./Abstract/abstract.aux)
+ [48]
+[49] [50] [51] [52] [53] [54]) [55] (./thesis.aux (./Abstract/abstract.aux)
 (./Acknowledgement/acknowledgement.aux) (./Declaration/decleration.aux)
 (./Dedication/dedication.aux) (./Introduction/introduction.aux)
 (./Literature/literature.aux) (./DSSR/dssr.aux) (./Appendix1/appendix1.aux)
@@ -843,10 +858,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 9462 strings out of 493876
- 136609 string characters out of 1150568
+ 9470 strings out of 493876
+ 136722 string characters out of 1150568
  301566 words of memory out of 3000000
- 12154 multiletter control sequences out of 10000+50000
+ 12157 multiletter control sequences out of 10000+50000
  39568 words of font info for 92 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,12n,50p,1843b,1696s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -863,9 +878,9 @@ exlive/2008/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2008/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on thesis.pdf (62 pages, 1921668 bytes).
+Output written on thesis.pdf (64 pages, 1926490 bytes).
 PDF statistics:
- 1263 PDF objects out of 1440 (max. 8388607)
- 267 named destinations out of 1000 (max. 131072)
- 607 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1284 PDF objects out of 1440 (max. 8388607)
+ 272 named destinations out of 1000 (max. 131072)
+ 623 words of extra memory for PDF output out of 10000 (max. 10000000)
 
