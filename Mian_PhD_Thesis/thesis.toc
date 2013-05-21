@@ -1,8 +1,8 @@
 \select@language {english}
 \contentsline {chapter}{Contents}{ii}{section*.2}
-\contentsline {chapter}{List of Figures}{v}{section*.4}
-\contentsline {chapter}{List of Tables}{vi}{section*.6}
-\contentsline {chapter}{Nomenclature}{vi}{section*.6}
+\contentsline {chapter}{List of Figures}{vi}{section*.4}
+\contentsline {chapter}{List of Tables}{vii}{section*.6}
+\contentsline {chapter}{Nomenclature}{vii}{section*.6}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}The Problems}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Our Goals}{2}{section.1.2}
@@ -44,28 +44,42 @@
 \contentsline {subsection}{\numberline {2.2.17}YETI}{21}{subsection.2.2.17}
 \contentsline {subsection}{\numberline {2.2.18}Construction of Test Cases}{21}{subsection.2.2.18}
 \contentsline {subsection}{\numberline {2.2.19}Commnad-line Options}{22}{subsection.2.2.19}
-\contentsline {subsection}{\numberline {2.2.20}Tools for Automated Random Testing}{22}{subsection.2.2.20}
-\contentsline {section}{\numberline {2.3}Conclusion}{22}{section.2.3}
-\contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{25}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{25}{section.3.1}
-\contentsline {section}{\numberline {3.2}Dirt Spot Sweeping Random Strategy}{27}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Random Strategy (R)}{27}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Random Plus Strategy (R+)}{28}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Dirt Spot Sweeping (DSS)}{28}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{29}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Explanation of DSSR strategy on a concrete example}{31}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Implementation of the DSSR strategy}{33}{section.3.3}
-\contentsline {section}{\numberline {3.4}Evaluation}{34}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Research questions}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Experiments}{34}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{35}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Results}{37}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{39}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{39}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{41}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Discussion}{41}{section.3.6}
-\contentsline {section}{\numberline {3.7}Related Work}{42}{section.3.7}
-\contentsline {section}{\numberline {3.8}Conclusions}{44}{section.3.8}
-\contentsline {chapter}{Appdx A}{45}{appendix*.7}
-\contentsline {chapter}{Appdx B}{46}{appendix*.8}
-\contentsline {chapter}{References}{47}{section*.10}
+\contentsline {subsection}{\numberline {2.2.20}YETI Execution}{22}{subsection.2.2.20}
+\contentsline {subsection}{\numberline {2.2.21}YETI Report}{23}{subsection.2.2.21}
+\contentsline {subsection}{\numberline {2.2.22}Tools for Automated Random Testing}{23}{subsection.2.2.22}
+\contentsline {section}{\numberline {2.3}Conclusion}{24}{section.2.3}
+\contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{26}{section.3.1}
+\contentsline {section}{\numberline {3.2}Dirt Spot Sweeping Random Strategy}{28}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Random Strategy (R)}{28}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Random Plus Strategy (R+)}{29}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Dirt Spot Sweeping (DSS)}{29}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{30}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Explanation of DSSR strategy on a concrete example}{32}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Implementation of the DSSR strategy}{34}{section.3.3}
+\contentsline {section}{\numberline {3.4}Evaluation}{35}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Research questions}{35}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Experiments}{35}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{36}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Results}{38}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{40}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{40}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{42}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Discussion}{42}{section.3.6}
+\contentsline {section}{\numberline {3.7}Related Work}{43}{section.3.7}
+\contentsline {section}{\numberline {3.8}Conclusions}{45}{section.3.8}
+\contentsline {chapter}{\numberline {4}Automated Disovery of Failure Domain}{46}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{46}{section.4.1}
+\contentsline {section}{\numberline {4.2}Automated Discovery of Failure Domain}{48}{section.4.2}
+\contentsline {section}{\numberline {4.3}Implementation}{51}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}York Extensible Testing Infrastructure}{51}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}ADFD strategy in YETI}{51}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Example}{52}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Experimental Results}{53}{section.4.4}
+\contentsline {section}{\numberline {4.5}Discussion}{56}{section.4.5}
+\contentsline {section}{\numberline {4.6}Threats to Validity}{57}{section.4.6}
+\contentsline {section}{\numberline {4.7}Related Works}{57}{section.4.7}
+\contentsline {section}{\numberline {4.8}Conclusion}{58}{section.4.8}
+\contentsline {chapter}{Appdx A}{59}{appendix*.7}
+\contentsline {chapter}{Appdx B}{60}{appendix*.8}
+\contentsline {chapter}{References}{61}{section*.10}

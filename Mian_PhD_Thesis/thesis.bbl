@@ -5,6 +5,12 @@ W~Richards Adrion, Martha~A Branstad, and John~C Cherniavsky.
 \newblock Validation, verification, and testing of computer software.
 \newblock {\em ACM Computing Surveys (CSUR)}, 14(2):159--192, 1982.
 
+\bibitem{Agrawal1995}
+H.~Agrawal, J.R. Horgan, S.~London, and W.E. Wong.
+\newblock Fault localization using execution slices and dataflow tests.
+\newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
+  International Symposium on}, pages 143 --151, oct 1995.
+
 \bibitem{american1984}
 NY. American National Standards Institute. New~York, Institute of~Electrical,
   and Electronics Engineers.
@@ -106,6 +112,12 @@ T.Y. Chen, R.~Merkel, P.K. Wong, and G.~Eddy.
 \newblock Adaptive random testing through dynamic partitioning.
 \newblock In {\em Quality Software, 2004. QSIC 2004. Proceedings. Fourth
   International Conference on}, pages 79 -- 86, sept. 2004.
+
+\bibitem{Chen1994}
+T.Y. Chen and Y.T. Yu.
+\newblock On the relationship between partition and random testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, 20(12):977 --980,
+  dec 1994.
 
 \bibitem{Chen1996}
 T.Y. Chen and Y.T. Yu.
@@ -212,11 +224,24 @@ Richard~E Fairley.
 \newblock Tutorial: Static analysis and dynamic testing of computer software.
 \newblock {\em Computer}, 11(4):14--23, 1978.
 
+\bibitem{Forrester2000}
+Justin~E. Forrester and Barton~P. Miller.
+\newblock An empirical study of the robustness of windows nt applications using
+  random testing.
+\newblock In {\em Proceedings of the 4th conference on USENIX Windows Systems
+  Symposium - Volume 4}, WSS'00, pages 6--6, Berkeley, CA, USA, 2000. USENIX
+  Association.
+
 \bibitem{gaudel2010software}
 Marie-Claude Gaudel.
 \newblock Software testing based on formal specification.
 \newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
   Springer, 2010.
+
+\bibitem{Gilbert2008}
+D.~Gilbert.
+\newblock {\em The JFreeChart class library version 1.0.9: Developer's guide}.
+\newblock Refinery Limited, Hertfordshire, 2008.
 
 \bibitem{Godefroid2005}
 Patrice Godefroid, Nils Klarlund, and Koushik Sen.
@@ -252,6 +277,12 @@ Paul Hudak, John Hughes, Simon~Peyton Jones, and Philip Wadler.
 \newblock In {\em HOPL III: Proceedings of the third ACM SIGPLAN conference on
   History of programming languages}, pages 12--1--12--55, New York, NY, USA,
   2007. ACM.
+
+\bibitem{Jones2002}
+James~A. Jones, Mary~Jean Harrold, and John Stasko.
+\newblock Visualization of test information to assist fault localization.
+\newblock In {\em Proceedings of the 24th International Conference on Software
+  Engineering}, ICSE '02, pages 467--477, New York, NY, USA, 2002. ACM.
 
 \bibitem{Khurshid2004}
 Sarfraz Khurshid and Darko Marinov.
@@ -294,11 +325,24 @@ V.~I. Levenshtein.
   reversals.
 \newblock 10(8):707--710, 1966.
 
+\bibitem{Linger1993}
+Richard~C. Linger.
+\newblock Cleanroom software engineering for zero-defect software.
+\newblock In {\em Proceedings of the 15th international conference on Software
+  Engineering}, ICSE '93, pages 2--13, Los Alamitos, CA, USA, 1993. IEEE
+  Computer Society Press.
+
 \bibitem{Liu2012}
 Huai Liu, Fei-Ching Kuo, and Tsong~Yueh Chen.
 \newblock Comparison of adaptive random testing and random testing under
   various testing and debugging scenarios.
 \newblock {\em Software: Practice and Experience}, 42(8):1055--1074, 2012.
+
+\bibitem{Mayer2005}
+Johannes Mayer.
+\newblock Lattice-based adaptive random testing.
+\newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
+  Automated software engineering}, pages 333--336. ACM, 2005.
 
 \bibitem{mccabe1983}
 Thomas~J McCabe.
@@ -314,6 +358,11 @@ Glenford~J. Myers.
 Glenford~J. Myers and Corey Sandler.
 \newblock {\em The Art of Software Testing}.
 \newblock John Wiley \& Sons, 2004.
+
+\bibitem{Myers2011}
+Glenford~J Myers, Corey Sandler, and Tom Badgett.
+\newblock {\em The art of software testing}.
+\newblock Wiley, 2011.
 
 \bibitem{ntafos1998random}
 Simeon Ntafos.
@@ -336,6 +385,11 @@ A.~Jefferson Offutt and J.~Huffman Hayes.
 Catherine Oriat.
 \newblock Jartege: a tool for random generation of unit tests for java classes.
 \newblock {\em CoRR}, abs/cs/0412012, 2004.
+
+\bibitem{Oriol2010b}
+M.~Oriol.
+\newblock The york extensible testing infrastructure (yeti).
+\newblock 2010.
 
 \bibitem{Oriol2011}
 M.~Oriol.
@@ -367,13 +421,6 @@ Manuel Oriol and Faheem Ullah.
 \newblock Yeti on the cloud.
 \newblock {\em Software Testing Verification and Validation Workshop, IEEE
   International Conference on}, 0:434--437, 2010.
-
-\bibitem{Oriol2010a}
-Manuel Oriol and Faheem Ullah.
-\newblock Yeti on the cloud.
-\newblock In {\em Proceedings of the 2010 Third International Conference on
-  Software Testing, Verification, and Validation Workshops}, ICSTW '10, pages
-  434--437, Washington, DC, USA, 2010. IEEE Computer Society.
 
 \bibitem{ostrand2002white}
 Thomas Ostrand.
@@ -409,6 +456,13 @@ Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
 \newblock In {\em Proceedings of the 29th international conference on Software
   Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
   Computer Society.
+
+\bibitem{Podgurski2003}
+A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, Jiayang Sun, and Bin
+  Wang.
+\newblock Automated support for classifying software failure reports.
+\newblock In {\em Software Engineering, 2003. Proceedings. 25th International
+  Conference on}, pages 465 -- 475, may 2003.
 
 \bibitem{ramamoorthy1975}
 CV~Ramamoorthy and Sill-bun~F Ho.

@@ -7,10 +7,18 @@ A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
 A level-1 auxiliary file: DSSR/dssr.aux
+A level-1 auxiliary file: ADFD/adfd.aux
+Case mismatch error between cite keys Hamlet1994 and hamlet1994
+---line 5 of file ADFD/adfd.aux
+ : \citation{Hamlet1994
+ :                     }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
 Database file #1: References/references.bib
+Warning--I didn't find a database entry for "Oriol2010a"
+Warning--I didn't find a database entry for "Beizer1995"
 Warning--empty journal in cohen2005robustness
 Warning--empty booktitle in Dijkstra1972
 Warning--can't use both volume and number fields in Godefroid2005
@@ -18,47 +26,48 @@ Warning--there's a number but no volume in howden1986
 Warning--empty journal in Levenshtein1966
 Warning--can't use both volume and number fields in mccabe1983
 Warning--can't use both volume and number fields in ntafos1998random
+Warning--empty note in Oriol2010b
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-You've used 80 entries,
+You've used 89 entries,
             2118 wiz_defined-function locations,
-            1012 strings with 17331 characters,
-and the built_in function-call counts, 30415 in all, are:
-= -- 3155
-> -- 1194
-< -- 41
-+ -- 482
-- -- 392
-* -- 2018
-:= -- 4740
-add.period$ -- 271
-call.type$ -- 80
-change.case$ -- 429
+            1071 strings with 18838 characters,
+and the built_in function-call counts, 33820 in all, are:
+= -- 3498
+> -- 1332
+< -- 46
++ -- 541
+- -- 438
+* -- 2232
+:= -- 5266
+add.period$ -- 301
+call.type$ -- 89
+change.case$ -- 477
 chr.to.int$ -- 0
-cite$ -- 89
-duplicate$ -- 1287
-empty$ -- 2473
-format.name$ -- 392
-if$ -- 6687
+cite$ -- 99
+duplicate$ -- 1439
+empty$ -- 2751
+format.name$ -- 438
+if$ -- 7445
 int.to.chr$ -- 0
-int.to.str$ -- 80
-missing$ -- 83
-newline$ -- 403
-num.names$ -- 160
-pop$ -- 477
+int.to.str$ -- 89
+missing$ -- 93
+newline$ -- 448
+num.names$ -- 178
+pop$ -- 539
 preamble$ -- 1
-purify$ -- 356
+purify$ -- 397
 quote$ -- 0
-skip$ -- 961
+skip$ -- 1076
 stack$ -- 0
-substring$ -- 2082
-swap$ -- 401
-text.length$ -- 41
+substring$ -- 2291
+swap$ -- 453
+text.length$ -- 46
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 308
-warning$ -- 9
-while$ -- 306
-width$ -- 82
-write$ -- 935
-(There were 9 warnings)
+type$ -- 340
+warning$ -- 10
+while$ -- 338
+width$ -- 91
+write$ -- 1038
+(There was 1 error message)

@@ -256,7 +256,7 @@ YETI construct test cases at random by creating objects of the class under test 
 \subsection{Commnad-line Options}
 While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode. For example, to save processing power command line option -nologs can be used to bypass realtime logging. The following table describes few of the most common command-line options available in YETI.    
 
-\begin{table}[ht]
+\begin{table}[h]
 %\scriptsize
 \caption{YETI command line options} % title of Table
 \smallskip
@@ -269,6 +269,7 @@ Levels 					&Purpose 			\\
 -java						&Test programs coded in Java	 	\\
 -jml						&Test programs coded in JML			\\
 -dotnet					&Test programs coded in .NET		\\
+-ea						&To check code assertions \\
 -nTests					&Specify number of tests after which the test stops	\\
 -time						&Specify time in seconds or minutes after which the test stops\\
 -testModules				&Specify one or more modules to test 	\\
@@ -277,7 +278,7 @@ Levels 					&Purpose 			\\
 -yetiPath					&Specify path to the test modules\\ 
 -gui						&Show test session in GUI\\
 -DSSR					&Specify Dirt Spot Sweeping Random strategy for this session\\
--ADFD					&Speciry Automated Discovery of Failure Domain strategy for this session\\
+-ADFD					&Specify Automated Discovery of Failure Domain strategy for this session\\
 -random					&Specify random test strategy for this session\\
 -randomPlus				&Specify random plus test strategy for this session\\
 -randomPlusPeriodic		&Specify random plus periodic test strategy for this session\\
@@ -292,8 +293,29 @@ Levels 					&Purpose 			\\
 
 
 \subsection{YETI Execution}
+YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM). YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the project and all the .jar library files particularly javassist.jar in the CLASSPATH or JVM would not be able to find and execute it. There are several options available as discussed in section xxx??? to accommodate specific needs but the typical command to invoke YETI is given in figure \ref{fig:XXX???}. In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules, for details of other options please see section xxx????. 
 
-\subsection{YETI Report}いいいいいいいいいいいいいいいいいいい
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width= 14cm, height = 1.8cm]{Literature/yetiCommandCLI.pdf}}
+	\caption{Command to launch YETI from CLI}
+\end{figure}
+
+Alternately, runnable jar file by the name YetiLauncher is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI. Figure xxx??? shows the equivalent of above command in GUI mode.
+
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width= 7cm, height = 8cm]{Literature/yetiCommandGUI.pdf}}
+	\caption{Command to launch YETI from GUI}
+\end{figure}
+
+
+As a result of both the above commands YETI launch its own GUI window and start testing the assigned programs. 
+
+
+
+
+\subsection{YETI Report}
 
 
 
