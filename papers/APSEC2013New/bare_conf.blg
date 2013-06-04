@@ -3,7 +3,6 @@ The top-level auxiliary file: bare_conf.aux
 The style file: IEEEtran.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: bare_conf.bib
-Warning--I didn't find a database entry for "Yoo2012"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -11,43 +10,42 @@ Warning--I didn't find a database entry for "Yoo2012"
 Done.
 You've used 40 entries,
             4039 wiz_defined-function locations,
-            1120 strings with 15520 characters,
-and the built_in function-call counts, 33921 in all, are:
-= -- 2771
-> -- 707
-< -- 298
-+ -- 392
-- -- 109
-* -- 1682
-:= -- 5053
-add.period$ -- 97
+            1120 strings with 15514 characters,
+and the built_in function-call counts, 33908 in all, are:
+= -- 2782
+> -- 701
+< -- 302
++ -- 390
+- -- 107
+* -- 1681
+:= -- 5060
+add.period$ -- 96
 call.type$ -- 40
 change.case$ -- 38
-chr.to.int$ -- 720
+chr.to.int$ -- 726
 cite$ -- 40
-duplicate$ -- 2394
-empty$ -- 2830
-format.name$ -- 140
-if$ -- 7893
+duplicate$ -- 2390
+empty$ -- 2809
+format.name$ -- 138
+if$ -- 7885
 int.to.chr$ -- 0
 int.to.str$ -- 40
-missing$ -- 405
+missing$ -- 401
 newline$ -- 185
 num.names$ -- 40
-pop$ -- 917
+pop$ -- 899
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2616
+skip$ -- 2619
 stack$ -- 0
-substring$ -- 1734
-swap$ -- 2001
-text.length$ -- 58
+substring$ -- 1748
+swap$ -- 2009
+text.length$ -- 60
 text.prefix$ -- 0
 top$ -- 5
 type$ -- 40
 warning$ -- 0
 while$ -- 159
 width$ -- 42
-write$ -- 472
-(There was 1 warning)
+write$ -- 473

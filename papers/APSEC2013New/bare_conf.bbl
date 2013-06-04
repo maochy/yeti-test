@@ -70,6 +70,25 @@ T.~Y. Chen and R.~Merkel, ``Quasi-random testing,'' in \emph{Proceedings of the
   \url{http://doi.acm.org/10.1145/1101908.1101957}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Ciupa2008}
+\BIBentryALTinterwordspacing
+I.~Ciupa, B.~Meyer, M.~Oriol, and A.~Pretschner, ``Finding faults: Manual
+  testing vs. random+ testing vs. user reports,'' in \emph{Proceedings of the
+  2008 19th International Symposium on Software Reliability Engineering}.\hskip
+  1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
+  2008, pp. 157--166. [Online]. Available:
+  \url{http://portal.acm.org/citation.cfm?id=1474554.1475420}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Ciupa2007}
+\BIBentryALTinterwordspacing
+I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer, ``Experimental assessment of
+  random testing for object-oriented software,'' in \emph{Proceedings of the
+  2007 international symposium on Software testing and analysis}, ser. ISSTA
+  '07.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2007, pp.
+  84--94. [Online]. Available: \url{http://doi.acm.org/10.1145/1273463.1273476}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Oriol2012}
 M.~Oriol, ``Random testing: Evaluation of a law describing the number of faults
   found,'' in \emph{Software Testing, Verification and Validation (ICST), 2012
@@ -90,25 +109,6 @@ I.~Ciupa, A.~Pretschner, M.~Oriol, A.~Leitner, and B.~Meyer, ``On the number
   Verification and Reliability}, vol. 9999, no. 9999, pp. 1--7, 2009. [Online].
   Available:
   \url{http://www3.interscience.wiley.com/journal/122498617/abstract}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Ciupa2008}
-\BIBentryALTinterwordspacing
-I.~Ciupa, B.~Meyer, M.~Oriol, and A.~Pretschner, ``Finding faults: Manual
-  testing vs. random+ testing vs. user reports,'' in \emph{Proceedings of the
-  2008 19th International Symposium on Software Reliability Engineering}.\hskip
-  1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
-  2008, pp. 157--166. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=1474554.1475420}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Ciupa2008a}
-\BIBentryALTinterwordspacing
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer, ``Artoo: adaptive random testing
-  for object-oriented software,'' in \emph{Proceedings of the 30th
-  international conference on Software engineering}, ser. ICSE '08.\hskip 1em
-  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2008, pp. 71--80.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/1368088.1368099}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Oriol2010a}
@@ -133,15 +133,6 @@ A.~Leitner, I.~Ciupa, B.~Meyer, and M.~Howard, ``Reconciling manual and
   '07.\hskip 1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE
   Computer Society, 2007, pp. 261a--. [Online]. Available:
   \url{http://dx.doi.org/10.1109/HICSS.2007.462}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Ciupa2007}
-\BIBentryALTinterwordspacing
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer, ``Experimental assessment of
-  random testing for object-oriented software,'' in \emph{Proceedings of the
-  2007 international symposium on Software testing and analysis}, ser. ISSTA
-  '07.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2007, pp.
-  84--94. [Online]. Available: \url{http://doi.acm.org/10.1145/1273463.1273476}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Claessen2000}
@@ -274,6 +265,14 @@ K.~Claessen and J.~Hughes, ``Quickcheck: a lightweight tool for random testing
 T.~Chen, R.~Merkel, P.~Wong, and G.~Eddy, ``Adaptive random testing through
   dynamic partitioning,'' in \emph{Quality Software, 2004. QSIC 2004.
   Proceedings. Fourth International Conference on}, sept. 2004, pp. 79 -- 86.
+
+\bibitem{Yoo2012}
+\BIBentryALTinterwordspacing
+S.~Yoo and M.~Harman, ``Test data regeneration: generating new test data from
+  existing test data,'' \emph{Softw. Test. Verif. Reliab.}, vol.~22, no.~3, pp.
+  171--201, May 2012. [Online]. Available:
+  \url{http://dx.doi.org/10.1002/stvr.435}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Gutjahr1999}
 W.~Gutjahr, ``Partition testing vs. random testing: the influence of

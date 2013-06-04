@@ -125,7 +125,9 @@ Figure \ref{fig:block2} shows how DSS explores the failures residing in the bloc
 
 \subsection{Structure of the Dirt Spot Sweeping Random Strategy}
 
-The DSSR strategy continuously tracks the number of failures during the execution of the test. This tracking is done in a very effective way with zero or minimum overhead to keep the overhead~\cite{Leitner2009}. The test execution is started by R+ strategy and continues till a failure is found in the SUT after which the program copies the values leading to the failure as well as the surrounding values to the variable list of interesting values. 
+The DSSR strategy continuously tracks the number of failures during the execution of the test. This tracking is done in a very effective way with zero or minimum overhead~\cite{Leitner2009}. The test execution is started by R+ strategy and continues till a failure is found in the SUT after which the program copies the values leading to the failure as well as the surrounding values to the variable list of interesting values. 
+
+Both the variables \verb+currentFaults+ and \verb+oldFaults+ are initialised to 0 at the start of the test, when a failure occurs the  \verb+currentFaults+ value is incremented which make the condition true. The flowchart presented in Figure~\ref{fig:Working_DSSS} depicts the failure caused by a primitive type value, the DSSR strategy identifies its type and add values only of that particular type to the list of interesting values. The resultant list of interesting values provides relevant test data for the remaining test session and the generated test cases are more targeted towards finding new failures around the existing failures in the given SUT.
 
 \begin{figure}[ht]
 \centering
@@ -134,7 +136,6 @@ The DSSR strategy continuously tracks the number of failures during the executio
 \label{fig:Working_DSSS}
 \end{figure}
 
-The flowchart presented in Figure~\ref{fig:Working_DSSS} depicts that, when the failure finding value is of primitive type, the DSSR strategy identifies its type and add values only of that particular type to the list of interesting values. The resultant list of interesting values provides relevant test data for the remaining test session and the generated test cases are more targeted towards finding new failures around the existing failures in the given SUT.
 
 %Boundary and other special values that have a high tendency of finding faults in the SUT are added to the list of interesting values by random+ strategy prior to the start of test session where as in DSSR strategy the fault-finding and its surrounding values are added at runtime when a failure is found. 
 
@@ -151,19 +152,22 @@ Table \ref{table:addvalues} presents the data types with the corresponding value
 Type & Values to be added\\ [0.5ex] % inserts table
 %heading
 \hline % inserts single horizontal line
-\multirow{1}{*}{X is int, double, float, } & ~ X,  X+1, X+2, X-1, X-2 \\ % inserting body of the
+\multirow{1}{*}{X is int, double, float, } & X,  X+1, X+2, X-1, X-2 \\ % inserting body of the
 \multirow{1}{*}{long, byte, short \& char} &  \\ 
 
 \hline
-\multirow{8}{*}{X is String} & ~ X\\ % inserting body of the table
+\multirow{8}{*}{X is String} & X\\ % inserting body of the table
 
-& ~ X + ``  "\\ % inserting body of the table
-& ~ ``  " + X \\ % inserting body of the table
-& ~ X.toUpperCase() \\
-& ~ X.toLowerCase() \\
-& ~ X.trim() \\
-& ~ X.substring(2) \\
-& ~ X.substring(1, X.length()-1) \\[1ex]
+& X + ``  "\\ % inserting body of the table
+& ``  " + X \\ % inserting body of the table
+& X.toUpperCase() \\
+& X.toLowerCase() \\
+& X.trim() \\
+& X.substring(2) \\
+& X.substring(1, X.length()-1) \\
+\hline
+\multirow{1}{*}{X is object of user} & Call its constructor recursively \\ % inserting body of the
+\multirow{1}{*}{defined class} & until empty or primitive values \\[1ex]
 \hline
 \hline %inserts single line
 \end{tabular}
@@ -571,13 +575,13 @@ In this case, we could add constant literals from the SUT to the list of interes
 
 In the example above the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the unique failure right away.
 
-\textbf{DSSR strategy and coverage:} Random strategies typically achieve high level of coverage~\cite{Oriol2010}. It might also be interesting to compare R, R+ and DSSR with respect to the achieved coverage or even to use a DSSR variant that adds a new interesting value and its neighbours when a new branch is reached.
+\textbf{DSSR strategy and coverage:} Random strategies are typically notorious for achieving code coverage, however, it might be interesting to compare R, R+ and DSSR with respect to the achieved coverage or even to use a DSSR variant that adds a new interesting value and its neighbours when a new branch is reached.
 
 
 \textbf{Threats to validity:} As usual with such empirical studies, the present work might suffer from a non-representative selection of classes.
 The selection in the current study is however made through random process and objective criteria, therefore, it seems likely that it would be representative.
 
-The parameters of the study might also have prompted incorrect results. But this is unlikely due to previous results on random testing~\cite{Oriol2012}.
+The parameters of the study might also have prompted incorrect results. But this is very unlikely due to previous results on random testing~\cite{Oriol2012}.
 
 
 
