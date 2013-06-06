@@ -197,8 +197,9 @@ public class Math1 {
   // Square num1 and store result. 
   int result1 = num1 * num1;
   int result2 = result1 / num1; // 1
-  assert Math.sqrt(result1) == num1; // 2
-  assert result1 >= num1; // 3
+  assert result1 >= num1; // 2
+  assert Math.sqrt(result1) == num1; // 3
+
  } 
 }
 \end{lstlisting}
@@ -206,11 +207,13 @@ public class Math1 {
 In the above code, one primitive variable of type \verb+int+ is used, therefore, the input domain for DSSR strategy is from \verb+-2,147,483,648 to 2,147,483,647+. The strategy further select values (\verb+0, Integer.MIN_VALUE+ \& \verb+Integer.MAX_VALUE+) as interesting values which are prioritised for selection as inputs. 
 As the test starts, three faults are quickly discovered by DSSR strategy in the following order:
 
-\indent \textbf{Fault 1:} The strategy selects value \verb+0+ for variable \verb+num1+  in the first test case because \verb+0+ is available in the list of interesting values and its priority is higher than other values. This will cause Java to generate division by zero exception (1). After discovering the fault, the strategy adds it and its surrounding values to the list of interesting values i.e. \verb+ 1, 2, 3, 0, -1, -2, -3+. 
+\indent \textbf{Fault 1:} The strategy selects value \verb+0+ for variable \verb+num1+  in the first test case because \verb+0+ is available in the list of interesting values and its priority is higher than other values. This will cause Java to generate division by zero exception (1). After discovering the fault, the strategy adds its surrounding values to the list of interesting values i.e. \verb+ 1, 2, 3, -1, -2, -3+. 
 
-\indent \textbf{Fault 2:} In the second test case the strategy may pick \verb+-3+ as a test value which may lead to the second fault where assertion (2) fails because the square root of \verb+9+ is \verb+3+ instead of the input value -3.
+\indent \textbf{Fault 2:} After a few tests the strategy may select \\ \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of the 2nd fault because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns 1 (Java language rule) to variable result1 that will lead to the violation of the next assertion (2).
 
-\indent \textbf{Fault 3:} After a few tests the strategy may select \\ \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of the 3rd fault because int variable \verb+result1+ will not be able to store the square of \\ \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
+\indent \textbf{Fault 3:} In the third test case the strategy may pick \verb+-3+ as a test value, added to the list of interesting values after the discovery of first fault, which may lead to the third fault where assertion (3) fails because the square root of \verb+9+ is \verb+3+ instead of the input value -3.
+
+
 
 The above process explains that including the border, fault-finding and surrounding values to the list of interesting values in DSSR strategy leads to the faults quickly and in fewer tests as compared to R and R+ strategies. The R and R+ strategies takes more time and number of tests to discover the second and third faults because the search for new unique failures starts again randomly in spite of the fact that the remaining faults are very close to the first fault.
 
