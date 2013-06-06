@@ -175,7 +175,14 @@ To find the effectiveness of RRT, the authors compared it with ART and RT on 7 o
 
 
 \subsection{Directed Automated Random Testing}
+Directed Automated Random Testing (DART) is a random testing technique proposed by Godefroid et al., \cite{Godefroid2005}. Its main purpose was to overcome the cost and difficulty of manual testing while keeping its quality intact. It automate the whole testing process including generation of unit tests, test drivers/harness and assertions for functional correctness. The main functions of DART can be divided into three parts;
+\begin{enumerate}
+\item Automated Interface Extraction: DART automatically identifies external interfaces of a given SUT. These interfaces include external variables, external functions and the user-specified main function which initialises the program execution.
+\item Automatic Test Driver/Harness: After identification of all the external interfaces of a given SUT, DART generate test drivers/harness to run the test cases. All the test cases are randomly generated according to the underlying environment.
+\item Dynamic Analysis of execution: The DART instrument the given SUT at the start of the process in order to track its behaviour dynamically at run time. The results obtained are analysed in real time to systematically direct the test case execution along alternative path for maximum code coverage.
+\end{enumerate}
 
+Directed Automated Random Testing algorithm is implemented in DART tool. It is a completely automatic tool and all it needs is a test program as input. After the external interfaces are extracted it then use the pre-conditions and post-conditions of the program under test to validate the test inputs. For languages that do not support contracts inside the code (like C), they used public methods or interfaces to mimic the scenario  ---------------------------- to be continued.
 
 \subsection{Quasi Random Testing}
 Quasi-random testing (QRT) \cite{Chen2005} is a testing technique that takes advantage of failure region contiguity by distributing test cases evenly similar to ART but with decreased computation. Chan et al after the analysis of faults in various experiments found that the fault patterns across the input domain are continuous. To achieve even spreading of test cases, QRT uses a class with a formula, that forms an s-dimensional cube in s-dimensional input domain and generate sequence of numbers that have small discrepancy and low dispersion. These sequence of numbers are then used to generate random test cases that are permuted to make them less clustered and more even than RT. An empirical study was conducted to compare the effectiveness of QRT with ART and RT. The 12 numerical programs picked for experiments were the same used to evaluate ART.The empirical results of the experiments showed that in 9 out of 12 programs QRT on average finds a fault quickly than ART and RT while in the remaining three programs the improvement is insignificant.
