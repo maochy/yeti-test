@@ -21,73 +21,57 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{Chan1996}
+F.~Chan, T.~Chen, I.~Mak, and Y.~Yu, ``Proportional sampling strategy:
+  guidelines for software testing practitioners,'' \emph{Information and
+  Software Technology}, vol.~38, no.~12, pp. 775 -- 782, 1996.
+
 \bibitem{Chen2008}
 T.~Y. Chen, ``Adaptive random testing,'' \emph{Eighth International Conference
   on Qualify Software}, vol.~0, p. 443, 2008.
 
 \bibitem{Chen2010}
-\BIBentryALTinterwordspacing
 T.~Y. Chen, F.-C. Kuo, R.~G. Merkel, and T.~H. Tse, ``Adaptive random testing:
   The art of test case diversity,'' \emph{J. Syst. Softw.}, vol.~83, pp.
-  60--66, January 2010. [Online]. Available:
-  \url{http://dl.acm.org/citation.cfm?id=1663656.1663914}
-\BIBentrySTDinterwordspacing
+  60--66, January 2010.
 
 \bibitem{Ciupa2009}
-\BIBentryALTinterwordspacing
 I.~Ciupa, A.~Pretschner, M.~Oriol, A.~Leitner, and B.~Meyer, ``On the number
   and nature of faults found by random testing,'' \emph{Software Testing
-  Verification and Reliability}, vol. 9999, no. 9999, pp. 1--7, 2009. [Online].
-  Available:
-  \url{http://www3.interscience.wiley.com/journal/122498617/abstract}
-\BIBentrySTDinterwordspacing
+  Verification and Reliability}, vol. 9999, no. 9999, pp. 1--7, 2009.
 
 \bibitem{Ciupa2008}
-\BIBentryALTinterwordspacing
 I.~Ciupa, B.~Meyer, M.~Oriol, and A.~Pretschner, ``Finding faults: Manual
   testing vs. random+ testing vs. user reports,'' in \emph{Proceedings of the
   2008 19th International Symposium on Software Reliability Engineering}.\hskip
   1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
-  2008, pp. 157--166. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=1474554.1475420}
-\BIBentrySTDinterwordspacing
+  2008, pp. 157--166.
 
 \bibitem{Oriol2010a}
-\BIBentryALTinterwordspacing
 M.~Oriol and S.~Tassis, ``Testing .net code with yeti,'' in \emph{Proceedings
   of the 2010 15th IEEE International Conference on Engineering of Complex
   Computer Systems}, ser. ICECCS '10.\hskip 1em plus 0.5em minus 0.4em\relax
-  Washington, DC, USA: IEEE Computer Society, 2010, pp. 264--265. [Online].
-  Available: \url{http://dx.doi.org/10.1109/ICECCS.2010.58}
-\BIBentrySTDinterwordspacing
+  Washington, DC, USA: IEEE Computer Society, 2010, pp. 264--265.
 
 \bibitem{Leitner2007}
-\BIBentryALTinterwordspacing
 A.~Leitner, I.~Ciupa, B.~Meyer, and M.~Howard, ``Reconciling manual and
   automated testing: The autotest experience,'' in \emph{Proceedings of the
   40th Annual Hawaii International Conference on System Sciences}, ser. HICSS
   '07.\hskip 1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE
-  Computer Society, 2007, pp. 261a--. [Online]. Available:
-  \url{http://dx.doi.org/10.1109/HICSS.2007.462}
-\BIBentrySTDinterwordspacing
+  Computer Society, 2007, pp. 261a--.
 
 \bibitem{Ciupa2007}
-\BIBentryALTinterwordspacing
 I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer, ``Experimental assessment of
   random testing for object-oriented software,'' in \emph{Proceedings of the
   2007 international symposium on Software testing and analysis}, ser. ISSTA
   '07.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2007, pp.
-  84--94. [Online]. Available: \url{http://doi.acm.org/10.1145/1273463.1273476}
-\BIBentrySTDinterwordspacing
+  84--94.
 
 \bibitem{Claessen2000}
-\BIBentryALTinterwordspacing
 K.~Claessen and J.~Hughes, ``Quickcheck: a lightweight tool for random testing
   of haskell programs,'' in \emph{Proceedings of the fifth ACM SIGPLAN
   international conference on Functional programming}, ser. ICFP '00.\hskip 1em
   plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2000, pp. 268--279.
-  [Online]. Available: \url{http://doi.acm.org/10.1145/351240.351266}
-\BIBentrySTDinterwordspacing
 
 \bibitem{Pacheco2007}
 C.~Pacheco and M.~D. Ernst, ``{Randoop:} feedback-directed random testing for
@@ -103,13 +87,10 @@ G.~J. Myers and C.~Sandler, \emph{The Art of Software Testing}.\hskip 1em plus
   0.5em minus 0.4em\relax John Wiley \& Sons, 2004.
 
 \bibitem{Duran1981}
-\BIBentryALTinterwordspacing
 J.~W. Duran and S.~Ntafos, ``A report on random testing,'' in \emph{Proceedings
   of the 5th international conference on Software engineering}, ser. ICSE
   '81.\hskip 1em plus 0.5em minus 0.4em\relax Piscataway, NJ, USA: IEEE Press,
-  1981, pp. 179--183. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=800078.802530}
-\BIBentrySTDinterwordspacing
+  1981, pp. 179--183.
 
 \bibitem{Duran1984}
 J.~W. Duran and S.~C. Ntafos, ``An evaluation of random testing,''
@@ -122,62 +103,38 @@ R.~Hamlet, ``Random testing,'' in \emph{Encyclopedia of Software
   970--978.
 
 \bibitem{Ntafos2001}
-\BIBentryALTinterwordspacing
 S.~C. Ntafos, ``On comparisons of random, partition, and proportional partition
   testing,'' \emph{IEEE Trans. Softw. Eng.}, vol.~27, pp. 949--960, October
-  2001. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=505464.505469}
-\BIBentrySTDinterwordspacing
+  2001.
 
 \bibitem{Beizer1990}
 B.~Beizer, \emph{Software testing techniques (2nd ed.)}.\hskip 1em plus 0.5em
   minus 0.4em\relax New York, NY, USA: Van Nostrand Reinhold Co., 1990.
 
-\bibitem{Chan1996}
-\BIBentryALTinterwordspacing
-F.~Chan, T.~Chen, I.~Mak, and Y.~Yu, ``Proportional sampling strategy:
-  guidelines for software testing practitioners,'' \emph{Information and
-  Software Technology}, vol.~38, no.~12, pp. 775 -- 782, 1996. [Online].
-  Available:
-  \url{http://www.sciencedirect.com/science/article/pii/0950584996011032}
-\BIBentrySTDinterwordspacing
-
 \bibitem{Chan2002}
-\BIBentryALTinterwordspacing
 K.~P. Chan, T.~Y. Chen, and D.~Towey, ``Restricted random testing,'' in
   \emph{Proceedings of the 7th International Conference on Software Quality},
   ser. ECSQ '02.\hskip 1em plus 0.5em minus 0.4em\relax London, UK, UK:
-  Springer-Verlag, 2002, pp. 321--330. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=645341.650287}
-\BIBentrySTDinterwordspacing
+  Springer-Verlag, 2002, pp. 321--330.
 
 \bibitem{Chen2003}
-\BIBentryALTinterwordspacing
 T.~Y. Chen, F.~C. Kuo, R.~G. Merkel, and S.~P. Ng, ``Mirror adaptive random
   testing,'' in \emph{Proceedings of the Third International Conference on
   Quality Software}, ser. QSIC '03.\hskip 1em plus 0.5em minus 0.4em\relax
-  Washington, DC, USA: IEEE Computer Society, 2003, p.~4. [Online]. Available:
-  \url{http://portal.acm.org/citation.cfm?id=950789.951282}
-\BIBentrySTDinterwordspacing
+  Washington, DC, USA: IEEE Computer Society, 2003, p.~4.
 
 \bibitem{Chen2005}
-\BIBentryALTinterwordspacing
 T.~Y. Chen and R.~Merkel, ``Quasi-random testing,'' in \emph{Proceedings of the
   20th IEEE/ACM international Conference on Automated software engineering},
   ser. ASE '05.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
-  2005, pp. 309--312. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1101908.1101957}
-\BIBentrySTDinterwordspacing
+  2005, pp. 309--312.
 
 \bibitem{Leitner2009}
-\BIBentryALTinterwordspacing
 A.~Leitner, A.~Pretschner, S.~Mori, B.~Meyer, and M.~Oriol, ``On the
   effectiveness of test extraction without overhead,'' in \emph{Proceedings of
   the 2009 International Conference on Software Testing Verification and
   Validation}.\hskip 1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE
-  Computer Society, 2009, pp. 416--425. [Online]. Available:
-  \url{http://dl.acm.org/citation.cfm?id=1547558.1548228}
-\BIBentrySTDinterwordspacing
+  Computer Society, 2009, pp. 416--425.
 
 \bibitem{Oriol2012}
 M.~Oriol, ``Random testing: Evaluation of a law describing the number of faults
@@ -185,21 +142,8 @@ M.~Oriol, ``Random testing: Evaluation of a law describing the number of faults
   IEEE Fifth International Conference on}, april 2012, pp. 201 --210.
 
 \bibitem{Oriol2011}
-\BIBentryALTinterwordspacing
 ------. (2011) York extensible testing infrastructure. Department of Computer
-  Science, The University of York. [Online]. Available:
-  \url{http://www.yetitest.org/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Tempero2010a}
-\BIBentryALTinterwordspacing
-E.~Tempero, S.~Counsell, and J.~Noble, ``An empirical study of overriding in
-  open source java,'' in \emph{Proceedings of the Thirty-Third Australasian
-  Conferenc on Computer Science - Volume 102}, ser. ACSC '10.\hskip 1em plus
-  0.5em minus 0.4em\relax Darlinghurst, Australia, Australia: Australian
-  Computer Society, Inc., 2010, pp. 3--12. [Online]. Available:
-  \url{http://dl.acm.org/citation.cfm?id=1862199.1862200}
-\BIBentrySTDinterwordspacing
+  Science, The University of York.
 
 \bibitem{Chen1996}
 T.~Chen and Y.~Yu, ``On the expected number of failures detected by subdomain
@@ -212,31 +156,16 @@ T.~Y. Chen, F.-C. Kuo, and R.~Merkel, ``On the statistical properties of the
   International Conference on}, sept. 2004, pp. 146 -- 153.
 
 \bibitem{Liu2012}
-\BIBentryALTinterwordspacing
 H.~Liu, F.-C. Kuo, and T.~Y. Chen, ``Comparison of adaptive random testing and
   random testing under various testing and debugging scenarios,''
   \emph{Software: Practice and Experience}, vol.~42, no.~8, pp. 1055--1074,
-  2012. [Online]. Available: \url{http://dx.doi.org/10.1002/spe.1113}
-\BIBentrySTDinterwordspacing
+  2012.
 
 \bibitem{Pacheco2007a}
-\BIBentryALTinterwordspacing
 C.~Pacheco, S.~K. Lahiri, M.~D. Ernst, and T.~Ball, ``Feedback-directed random
   test generation,'' in \emph{Proceedings of the 29th international conference
   on Software Engineering}, ser. ICSE '07.\hskip 1em plus 0.5em minus
   0.4em\relax Washington, DC, USA: IEEE Computer Society, 2007, pp. 75--84.
-  [Online]. Available: \url{http://dx.doi.org/10.1109/ICSE.2007.37}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Ciupa2008b}
-\BIBentryALTinterwordspacing
-I.~Ciupa, A.~Pretschner, A.~Leitner, M.~Oriol, and B.~Meyer, ``On the
-  predictability of random tests for object-oriented software,'' in
-  \emph{Proceedings of the 2008 International Conference on Software Testing,
-  Verification, and Validation}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Washington, DC, USA: IEEE Computer Society, 2008, pp. 72--81. [Online].
-  Available: \url{http://portal.acm.org/citation.cfm?id=1381305.1382069}
-\BIBentrySTDinterwordspacing
 
 \bibitem{Gutjahr1999}
 W.~Gutjahr, ``Partition testing vs. random testing: the influence of
@@ -269,17 +198,9 @@ C.~Csallner and Y.~Smaragdakis, ``Jcrasher: An automatic robustness tester for
   {Java},'' \emph{Software---Practice \& Experience}, vol.~34, no.~11, pp.
   1025--1050, Sep. 2004.
 
-\bibitem{Chen2004a}
-T.~Chen, R.~Merkel, P.~Wong, and G.~Eddy, ``Adaptive random testing through
-  dynamic partitioning,'' in \emph{Quality Software, 2004. QSIC 2004.
-  Proceedings. Fourth International Conference on}, sept. 2004, pp. 79 -- 86.
-
 \bibitem{Yoo2012}
-\BIBentryALTinterwordspacing
 S.~Yoo and M.~Harman, ``Test data regeneration: generating new test data from
   existing test data,'' \emph{Softw. Test. Verif. Reliab.}, vol.~22, no.~3, pp.
-  171--201, May 2012. [Online]. Available:
-  \url{http://dx.doi.org/10.1002/stvr.435}
-\BIBentrySTDinterwordspacing
+  171--201, May 2012.
 
 \end{thebibliography}
