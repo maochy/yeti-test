@@ -1,0 +1,180 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{verbatim}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+\begin{document}
+\tableofcontents\title{Daikon PhD log}
+\author{Mian Asbat Ahmad}
+
+\maketitle
+
+
+\section{Setting up Daikon}
+To setup Daikon in ubuntu 12.10 
+\begin{enumerate}
+\item Go to user home directory $ \$~cd$
+\item Create a folder $\$~mkdir~daikonparent $
+\item Change Directory $\$~cd~daikonparent$
+\item To get Daikon $\$~wget~http://pag.csail.mit.edu/daikon/download/daikon.tar.gz$
+\item Untar the tar file $\$~tar~zxf~daikon.tar.gz$
+\item This creates a $Ôdaikonparent/daikon/Õ$ subdirectory.
+\item To setup the classpath for Daikon
+\item Go to user home directory $\$~cd$
+\item open .bashrc file $\$~vi~.bashrc$
+\item Write the following lines at the end of the file
+\begin{enumerate}
+\item $export~JAVA\_HOME=``/usr/lib/jvm/java-6-openjdk-amd64" $
+\item $export~CLASSPATH=.:/home/mian/daikonparent/daikon  $
+\item $export~CLASSPATH=\$CLASSPATH:/home/mian/daikonparent/daikon/daikon.jar$ 
+\item $export~CLASSPATH=\$CLASSPATH:/home/mian/daikonparent/daikon/bin/daikon.bashrc $
+\item Write changes and quit escape $:wq$
+\end{enumerate}
+\item Close the current terminal $\$~exit$
+\item Open a new terminal and all set
+\end{enumerate}
+
+\subsection{Common Error}
+If you get exception in thread main $java.lang.verifyerror~stackmaptable$, it is due to the latest verion of JDK. To get rid of this error uninstall the latest jdk and install the 1.6 verion. Daikon is not compatible with Open-JDK 7
+\subsubsection{To remove versions of java}
+Remove all the Java related packages (Sun, Oracle, OpenJDK, IcedTea plugins, GIJ):
+
+\begin{enumerate}
+\item $sudo~apt-get~update$
+\item $apt-cache~search~java~|~awk~'{print(\$1)}'~|~grep~-E~-e~'\hat{}(ia32-)?(sun|oracle)-java'~-e~'\hat{}openjdk-'~-e~'\hat{}icedtea'~-e~'\hat{}(default|gcj)-j(re|dk)'~-e~'\hat{}gcj-(.*)-j(re|dk)'~-e~'java-common'~|~xargs~sudo~apt-get~-y~remove$
+\item $sudo~apt-get~-y~autoremove$
+\item Purge config files: $dpkg~-l~|~grep~\hat{}rc~|~awk~'{print(\$2)}'~|~xargs~sudo~apt-get~-y~purge$
+\item Remove Java config and cache directory: $sudo~bash~-c~'ls -d~/home/*/.java'~|~xargs~sudo~rm~-rf$
+\item Remove manually installed JVMs: $sudo~rm~-rf~/usr/lib/jvm/*$
+\item Remove Java entries, if there is still any, from the alternatives: $ for~g~in~ControlPanel~java~java_vm javaws~jcontrol~jexec~keytool~mozilla-javaplugin.so~orbd~pack200~policytool~rmid~rmiregistry~servertool~tnameserv~unpack200~appletviewer~apt~extcheck~HtmlConverter~idlj~jar~jarsigner~javac~javadoc~javah~javap~jconsole~jdb~jhat~jinfo~jmap~jps~jrunscript~jsadebugd~jstack~jstat~jstatd~native2ascii~rmic~schemagen~serialver~wsgen~wsimport~xjc~xulrunner-1.9-javaplugin.so;~do~sudo~update-alternatives~--remove-all~\$g;~done$
+
+\item Search for possible remaining Java directories:  $~sudo~updatedb~sudo~locate~-b~'\\pack200' $
+
+\item If the command above produces any output like $/path/to/jre1.6.0_34/bin/pack200 $ remove the directory that is parent of bin, like this: $~sudo~rm~-rf~/path/to/jre1.6.0_34.$
+
+\item For more details, Follow the second option on the following page
+http://askubuntu.com/questions/84483/how-to-completely-uninstall-java
+\end{enumerate}
+
+\subsubsection{Re/Install Java}
+\begin{enumerate}
+\item apt-cache search openjdk
+\item sudo apt-get install openjdk-6-jdk
+\item \$java -version
+\item http://www.mkyong.com/java/how-to-install-java-jdk-on-ubuntu-linux/
+\end{enumerate}
+\subsection{Testing Daikon Setup}
+\begin{enumerate}
+\item Go to StackAr folder \$ cd daikonparent/daikon/examples/java-examples/StackAr/DataStructures
+\item Compile all java files with -g option \$ javac -g *.java
+\item Go to previous folder \$ cd..
+\item Run the combined command or seperate one by one as in the following.
+\begin{enumerate}
+\item Step 1: java daikon.Chicory --daikon DataStructures.StackArTester
+\item Step 2: java daikon.Daikon DataStructures.StackArTester 
+\item Combined: java daikon.Chicory DataStructures.StackArTester 
+\end{enumerate}
+\item The above commands will generate two files, if configured properly
+\begin{enumerate}
+\item StackArTester.dtrace.gz 
+\item StackArTester.inv.gz 
+\end{enumerate}
+\item Daikon is now correctly Configured.
+\end{enumerate}
+
+\section{Setup, Configuration and Testing of RANDOOP}
+\begin{enumerate}
+\item Instruction manual for RANDOOP is available at http://randoop.googlecode.com/hg/doc/index.html 
+\item There are three mode of getting RANDOOP, i.e. Easiest, easy and all. We will try easy one for now which contain the RANDOOP.jar and its source code.
+\end{enumerate}
+
+\subsection{Getting RANDOOP}
+\begin{enumerate}
+\item Go to user home directory \$ cd
+\item Create a directory \$ mkdir randoopparent
+\item Change directory \$ cd randoop
+\item Get Randoop easy version \$ wget https://randoop.googlecode.com/files/randoop.1.3.3.zip
+\item Unzip the file \$ unzip randoop.1.3.3.zip
+\item Setup the classpath
+\item Go to user home directory \$ cd
+\item Open .bashrc file \$ vi .bashrc
+\item Write the following lines at the end
+\begin{enumerate}
+\item export CLASSPATH=\$CLASSPATH:/home/mian/randoopparent/randoop 
+\item export CLASSPATH=\$CLASSPATH:/home/mian/randoopparent/randoop/randoop.jar 
+\item save and quite the file escape :wq
+\item Running Randoop
+\end{enumerate}
+\item You can run randoop by the following command 
+\item java -ea randoop.main.Main gentests --testclass=java.util.TreeSet --timelimit=60  The above command will start randoop for 60 seconds on the class TreeSet and the test cases will be saved in user home directory after execution.
+\end{enumerate}
+\section{Eclipse}
+
+\subsection{Getting and Installing Eclipse}
+\begin{enumerate}
+\item Go to home directory \$ cd
+\item $wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/R/eclipse-standard-kepler-R-linux-gtk-x86_64.tar.gz$
+\item tar -zxvf eclipse*.tgz
+\item If you download it through browser then go to \$ cd ~Downloads
+\item Copy the untar folder to home directory \$ cp -avr eclipse ../
+\end{enumerate}
+\subsection{Common Error}
+Eclipse must be downloaded according to the JVM architecture. E.g if JVM is 64bit then Eclipse must be 64bit, if 32 bit then 32bit. 
+
+\subsection{Get Eclipse shortcut to Ubuntu taskbar}
+\begin{enumerate}
+\item First, create a .desktop file to eclipse: $ gedit ~/.local/share/applications/opt_eclipse.desktop $
+\item Then, paste this inside (dont forget to edit Exec and Icon values):
+
+[Desktop Entry] \\*
+Type=Application \\*
+Name=Eclipse \\*
+Comment=Eclipse Integrated Development Environment\\*
+Icon=/home/mian/eclipse/icon.xpm\\*
+Exec=/home/mian/eclipse/eclipse \\*
+Terminal=false \\*
+Categories=Development;IDE;Java; \\*
+StartupWMClass=Eclipse \\*
+
+\item To give execute permissions: $ chmod +x ~/.local/share/applications/opt_eclipse.desktop $
+\item Finally drop opt\_eclipse.desktop to launcher nautilus $ ~/.local/share/applications $
+\item For more details click [http://askubuntu.com/questions/80013/how-to-pin-eclipse-to-the-unity-launcher here]
+\end{enumerate}
+
+\begin{comment}
+== Installing WikiMedia ==
+* You must have webserver and mysql running
+* To start webserver $ sudo service apache2 restart
+* Go to http://www.mediawiki.org/wiki/Download
+* Download mediawiki software
+* Go to your download folder $ cd /home/mian/Downloads
+* Unzip the file $ unzip mediawiki
+* Copy the file to /var/www/ $ cp -a mediawiki /var/www
+* Now open your internet browser and write in address bar www.localhost/mediawiki
+* Follow the step by step procedure and on completion a file will be downloaded in /home/mian/Downloads folder
+* copy the file and paste it into /var/www/mediawiki folder $ cp /home/mian/Downloads/Localsettings /var/www/mediawiki
+* In the browser go to the same page again localhost/mediawiki and your mediawiki is up and running
+* Start writing your logs
+
+== Wiki Logo ==
+Follow the following steps to change the logo <br>
+* Get wikimedia 135 x 135 icon or get one from [http://www.inmotionhosting.com/support/edu/mediawiki/change-media-wiki-appearance/upload-custom-logo-mediawiki here]
+* Save it to /var/www/mediawiki/images folder
+* Open terminal and go to cd /var/www/mediawiki
+* Open the file sudo vi LocalSettings.php
+* Scroll down and change value to the path  $wgLogo  = "/mediawiki/images/wiki.png";
+* Refresh the website and the logo will be there
+
+\end{comment}
+
+\end{document}
+Go to home page  
