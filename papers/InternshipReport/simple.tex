@@ -57,7 +57,7 @@
    %   {\fontsize{13}{23}\selectfont Ian Broster, Rapita Sytstems Ltd. (host)}\\[2\baselineskip]
     
     \bigskip \bigskip
-     \fontsize{13}{23}\selectfont {Internship Start Date:  29 May, 2013 and End Date: 19 July 2013 }\\[0.5\baselineskip]
+     \fontsize{13}{23}\selectfont {Internship Start Date:  29 May, 2013 and End Date: 19 July, 2013 }\\[0.5\baselineskip]
  
   \end{titlepage}
   
@@ -71,7 +71,7 @@
 \begin{center}
 \noindent \textbf{ \fontsize{14}{22}\selectfont { Preface }}\\[0.3\baselineskip]    
 \end{center}
-\fontsize{11}{24}\selectfont {This report documents the work done during my summer internship project ``Virtual Machine Software Testing" at Rapita Systems Ltd. York, UK. The report starts with a brief detail of the host company, working environment and the assigned project. The report then describes the hurdles faced during the implementation of the project and how these hurdles were overcome. The report also gives an overview of the developed product with technical details.  It further elaborates the additional features of the developed product that if incorporated in the project will make it further productive, robust and user friendly. Finally the report highlights the importance of internship and its benefit towards my professional career. \\
+\fontsize{11}{24}\selectfont {This report documents the work done during my summer internship project ``Virtual Machine Software Testing" at Rapita Systems Ltd. York, UK. The report starts with a brief introduction of the host company, working environment and the assigned project. The report then gives an overview of the developed product with technical details.  The report further points out the additional features of the developed product that if incorporated in the project will make it further productive, robust and user friendly. Finally, the report highlights the importance of internship and its benefit towards my professional career. \\
 
 \noindent Mian Asbat Ahmad}\\[0.5\baselineskip]    
 
@@ -87,9 +87,9 @@
 \begin{center}
 \noindent \textbf{ \fontsize{14}{10}\selectfont {Acknowledgments}} \\[0.3\baselineskip]    
 \end{center}
-\fontsize{11}{24}\selectfont {It would not be possible to achieve the project completion in such a short time without the help and support I received cheerfully from the whole team of Rapita Systems Ltd. The working environment at Rapita Systems is highly motivational and inspirational.
-I therefore, thank the whole team however, I would specially like to thank Dr. Ian Broster, Dr. Antoine Colin and  Mr. Will Lunniss for their help and support both administratively and technically.  They frankly shared their views and gave me useful ideas to work upon.  I am also highly indebted to my academic supervisor Dr. Manuel Oriol for allowing me to attain this golden opportunity and also for his valuable time to review this report.\\
-\indent Last but not the least, I would like to thank the Students Internship Bureau (SIB), University of York for creating the wonderful internship opportunity, which enabled me to utilise my skills, knowledge and enthusiasm. 
+\fontsize{11}{24}\selectfont {It would not have been possible to achieve the project completion in such a short time without the help and support that I received cheerfully from the whole team of Rapita Systems Ltd. The working environment at Rapita Systems is highly motivational and inspirational.
+I therefore, thank the whole team Rapita Systems Ltd. special thanks to Dr. Ian Broster, Dr. Antoine Colin and  Mr. Will Lunniss for their feedback and valuable suggessions throughout the internship period.  They frankly shared their views and gave me useful ideas to work upon.  I am also highly indebted to my academic supervisor Dr. Manuel Oriol for allowing me to attain this golden opportunity and for his valuable time to review this report.\\
+\indent Last but not the least, I would like to thank the Students Internship Bureau (SIB), University of York for creating this wonderful internship opportunity, which enabled me to broaden my background knowledge and polish my practical skills. 
 \\[0.5\baselineskip] 
 \noindent Mian Asbat Ahmad.}\\[0.5\baselineskip]    
 
@@ -101,13 +101,13 @@ I therefore, thank the whole team however, I would specially like to thank Dr. I
 
 
 \noindent \textbf{\fontsize{14}{22}\selectfont {Introduction:}} \\[0.2\baselineskip]    
-\fontsize{11}{18}\selectfont {Automation of computer operations can be surprisingly effective and highly beneficial for any organisation. Its initial setup cost may be higher, however, a quick return on investment (QRI) outperforms it and brings key benefits of cost reduction, productivity, availability, reliability and performance to any organisation.  Automation is particularly effective when the nature of jobs is repetitive and performed on routine basis. These simple or complex manual jobs consume unnecessary time and provide an extra burden on the staff.  \\
+\fontsize{11}{18}\selectfont {Automation of computer operations can be surprisingly effective and highly beneficial for any organisation. Its initial setup cost may be higher but a quick return on investment (QRI) outperforms and brings key benefits of cost reduction, productivity, availability, reliability and performance to any organisation.  Automation is particularly effective when the nature of jobs is repetitive and performed on routine basis. These simple or complex manual jobs consume unnecessary time and provide an extra burden on the staff.  \\
 \indent Recognizing the need and benefits of automation as a means of staying competitive in the world market, Rapita Systems Ltd. decided to automate the process of software testing.} \\[0.2\baselineskip]    
 %
 %
 \noindent \textbf{ \fontsize{14}{22}\selectfont {Rapita Systems:}} \\[0.2\baselineskip] 
 %
-\indent \fontsize{11}{22}\selectfont {Rapita Systems Ltd. is a local software company based in York Science Park, IT Center, that develops software tools for on-target verification, optimisation and code coverage of critical real-time embedded systems. The technology developed by Rapita Systems Ltd is applicable to many different areas of industry and they currently have customers in the aerospace, automotive and space sectors. Please see \url{http://www.rapitasystems.com} for more information. } \\
+\indent \fontsize{11}{22}\selectfont {Rapita Systems Ltd. is a local software company based in York Science Park, IT Center, that develops software tools for on-target verification, optimisation and code coverage of critical real-time embedded systems. The technology developed by Rapita Systems Ltd is applicable to many different areas of industry and they have customers in the aerospace, automotive and space sectors. Please see \url{http://www.rapitasystems.com} for more information. } \\
 %
 %
 \noindent \textbf{ \fontsize{14}{22}\selectfont {Project Details:}} \\[0.2\baselineskip] 
@@ -146,7 +146,7 @@ To achieve the automation of the whole process the project was split up into the
 \\
 \\
 \noindent \textbf{ \fontsize{14}{22}\selectfont {Secure and Reliable Intercommunication:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {In the current setup of Rapita Systems, each upgraded version of the software is stored on a dedicated Software server and the Test server is used to test the software. Our virtual machine software testing system is configured on the Test server. Additionally the guest Virtual Machines are also ran on the test server with in virtual environment.\\
+\indent \fontsize{11}{22}\selectfont {In the current setup of Rapita Systems, the upgraded version of each software is stored on a dedicated Software server and the Test server is used to test the software. Our virtual machine software testing system is configured on the Test server. Additionally the guest Virtual Machines are also ran on the test server with in virtual environment.\\
 %
 \indent These three systems must communicate freely to perform a fully automated testing. For this purpose we created a special user Rapitabot on all the three machines and configured it in such a way that it can establish Secure Shell (SSH) connection between each other without requesting key. The same SSH connection is also used to copy the software from Software server and test scripts from Test server to Guest virtual machine. } \\
 
@@ -155,7 +155,7 @@ To achieve the automation of the whole process the project was split up into the
 \indent Test logs can be accessed in two ways. It can be read on the browser by clicking the "Read Log" button or from a log file that is stored in the Test server. Logs are interactively updated and can be read in real time.} \\
 
 \noindent \textbf{ \fontsize{14}{22}\selectfont {Design and Layout of Frond-End:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {Special emphasis was given on the front-end to keep it simple, user friendly and accessible from any machine. For this reason we developed the front-end using PHP: Hypertext Preprocessor (PHP) and HyperText Markup Language (HTML) to allow its access from any machine with browser software. The screenshot of the front-end is given in Figure \ref{fig:front}.
+\indent \fontsize{11}{22}\selectfont {Special emphasis was given on the front-end to keep it simple, user friendly and accessible from any machine. Therefore, we developed the front-end using PHP: Hypertext Preprocessor (PHP) and HyperText Markup Language (HTML) to allow its access from any machine with browser software. The screenshot of the front-end is given in Figure \ref{fig:front}.
 
 \begin{figure}[h]
 \centering
@@ -197,7 +197,7 @@ Some additional features, out of the scope of current project, were identified t
 
 
 \noindent \textbf{ \fontsize{14}{22}\selectfont {Conclusion:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {My experience of internship at Rapita Systems was great. The company has a magnificent working environment and great minds contributing to very high quality work. I learned a lot about test automation, instrumentation, data tracing and regression testing. The project I completed is very satisfactory and highly appreciated by the whole team of Rapita Systems. This internship provided me the opportunity to gain hands on working experience that I couldn't get in the classroom.}\ \
+\indent \fontsize{11}{22}\selectfont {My experience of internship at Rapita Systems was great. The company has a magnificent working environment and great minds contributing to very high quality work. I learnt a lot about test automation, instrumentation, data tracing and regression testing. The project I completed is very satisfactory and highly appreciated by the whole team of Rapita Systems. This internship provided me the opportunity to gain hands on working experience that I couldn't get in the classroom.}\ \
 
 \end{document}
 
