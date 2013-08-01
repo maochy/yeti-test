@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{listings}
-
+\usepackage{adjustbox}
 
 \begin{document}
 
@@ -69,9 +69,9 @@
  \newpage
  
 \begin{center}
-\noindent \textbf{ \fontsize{14}{22}\selectfont { Preface }}\\[0.3\baselineskip]    
+\noindent \textbf{\fontsize{14}{22}\selectfont { Preface }}\\[0.3\baselineskip]    
 \end{center}
-\fontsize{11}{24}\selectfont {This report documents the work done during my summer internship on the project, ``Virtual Machine Software Testing'' at Rapita Systems Ltd. York, UK. The report includes a brief introduction, a note about the Rapita Systems, project requirements, goals, automation of install and uninstall  processes, setting up virtual environment, secure and reliable intercommunication, tracking test execution in test log, design and layout of front-end, reverting changes after test completion, working of the testing system followed by future work,  conclusion and finally my personal remarks.\\
+\fontsize{11}{24}\selectfont {This report documents the work done during my summer internship on the project, ``Virtual Machine Software Testing'' at Rapita Systems Ltd. York, UK. The report includes a brief introduction, a note about the Rapita Systems, project requirements, goals, automating install and uninstall processes, setting the virtual environment, Establishing secure and reliable communication, generating test report, setting front-end for system interaction, reverting modifications after test completion, working of the testing system followed by future work and finally my personal note.\\
 
 \noindent Mian Asbat Ahmad}\\[0.5\baselineskip]    
 
@@ -85,11 +85,11 @@
 
 
 \begin{center}
-\noindent \textbf{ \fontsize{14}{10}\selectfont {Acknowledgments}} \\[0.3\baselineskip]    
+\noindent \textbf{\fontsize{14}{10}\selectfont {Acknowledgments}} \\[0.3\baselineskip]    
 \end{center}
 \fontsize{11}{24}\selectfont {It would not have been possible to achieve the project completion in such a short time without the help and support that I received cheerfully from the whole team of Rapita Systems Ltd. The working environment at Rapita Systems is highly motivational and inspirational.
-I thank the whole team of Rapita Systems Ltd. in general and Dr. Ian Broster, Dr. Antoine Colin and  Mr. Will Lunniss in particular for their valuable suggessions and constructive feedback throughout the project period.  They frankly shared their views and gave me useful ideas to work upon.  I am also highly indebted to my academic supervisor Dr. Manuel Oriol for allowing me to attain this golden opportunity and for his valuable time to review this report.\\
-\indent Last but not the least, I would like to thank the Students Internship Bureau (SIB), University of York for creating this wonderful internship opportunity, which enabled me to broaden my background knowledge and polish my practical skills. 
+I thank the whole team of Rapita Systems Ltd. in general and Dr. Ian Broster, Dr. Antoine Colin and  Mr. Will Lunniss in particular for their valuable suggestions and effective feedback throughout the project period. The whole team generously shared their views and gave useful ideas to work upon.  I am also highly indebted to my academic supervisor, Dr. Manuel Oriol for allowing me to avail the unique opportunity and for his valuable guidance and time to review this report.\\
+Last but not the least, I would like to thank the Students Internship Bureau, University of York for creating this wonderful internship opportunity, which enabled me to broaden my knowledge and practical skills. 
 \\[0.5\baselineskip] 
 \noindent Mian Asbat Ahmad.}\\[0.5\baselineskip]    
 
@@ -101,103 +101,117 @@ I thank the whole team of Rapita Systems Ltd. in general and Dr. Ian Broster, Dr
 
 
 \noindent \textbf{\fontsize{14}{22}\selectfont {Introduction:}} \\[0.2\baselineskip]    
-\fontsize{11}{18}\selectfont {Automation of computer operations can be surprisingly effective and highly beneficial for any organisation. Its initial setup cost may be higher but a quick return on investment (QRI) outperforms and brings key benefits of cost reduction, productivity, availability, reliability and performance to any organisation.  Automation is particularly effective when the nature of jobs is repetitive and performed on routine basis. These simple or complex manual jobs consume unnecessary time and provide an extra burden on the staff.  \\
-\indent Recognizing the need and benefits of automation as a means of staying competitive in the world market, Rapita Systems Ltd. decided to automate the process of software testing.} \\[0.2\baselineskip]    
+\fontsize{11}{18}\selectfont {Automation of computer operations can be surprisingly effective and highly beneficial for any organisation. Its initial setup cost may be higher but a quick return on investment outperforms and brings key benefits of cost reduction, productivity, availability, reliability and performance to any organisation.  Automation is particularly effective when the nature of job is repetitive and is performed on routine basis. These simple or complex manual jobs consume more time and provide an extra burden on the staff.  \\
+Recognizing the need and benefits of automation as a means of staying competitive in the world market, Rapita Systems Ltd. decided to automate the process of software testing. During the internship period of about three months, working for two days per week (eight hours per day), I designed the project and implemented the system developed for automation of the software testing produced by Rapita Systems.} \\[0.2\baselineskip]    
 %
 %
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Rapita Systems:}} \\[0.2\baselineskip] 
+\noindent \textbf{\fontsize{14}{22}\selectfont {Rapita Systems:}} \\[0.2\baselineskip] 
 %
-\indent \fontsize{11}{22}\selectfont {Rapita Systems Ltd. is a local software company based in York Science Park, IT Center, that develops software tools for on-target verification, optimisation and code coverage of critical real-time embedded systems. The technology developed by Rapita Systems Ltd is applicable to many different areas of industry and they have customers in the aerospace, automotive and space sectors. Please see \url{http://www.rapitasystems.com} for more information. } \\
+\fontsize{11}{22}\selectfont {Rapita Systems Ltd. is a local software company based in York Science Park, IT Center, York, UK. It develops software tools for on-target verification, optimisation and code coverage of critical real-time embedded systems. The technology developed by Rapita Systems Ltd is applicable to many different areas of industry and the company has diversified customers including aerospace, automotive and space sectors. Please see \url{http://www.rapitasystems.com} for more details.} \\
 %
 %
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Project Details:}} \\[0.2\baselineskip] 
-\fontsize{11}{28}\selectfont {I was assigned the task to set up an automated testing environment where the software developed at Rapita Systems can be automatically tested on different operating systems without any user intervention. The project should be set up using virtual machines containing various operating systems (Windows and Linux, 32 and 64 bit). Writing scripts to allow software to be automatically installed, executed and tested on different operating systems, with any errors reported correctly. In addition, the project will involve working with other parts of the company's test system, nightly build framework and regression test scripts.} \\
+\noindent \textbf{\fontsize{14}{22}\selectfont {Project Requirements:}} \\[0.2\baselineskip] 
+\fontsize{11}{28}\selectfont {I was assigned the task to set up an automated testing environment where the software developed at Rapita Systems would be automatically tested on different operating systems without any user intervention. The project was based on using virtual machines containing various operating systems (Windows and Linux, 32 and 64 bit) and writing scripts to allow software to be automatically installed, executed and tested on different operating systems, with any errors reported correctly. In addition, the project involved working with other software systems of the company, nightly build framework and regression test scripts.} \\
 %%%%%%%%%%%%%%%%%%%%%%%
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Goals:}} \\[0.2\baselineskip] 
+\noindent \textbf{\fontsize{14}{22}\selectfont {Goals:}} \\[0.2\baselineskip] 
 \fontsize{11}{22}\selectfont {The following goals were determined to be the top six.
 \begin{enumerate}
-\item Automation of install and uninstall processes of the Rapita Verfication Suite (RVS) software on Windows and Linux operating systems.
-\item Setup of Virtual Environment containing all the major Virtual Machines (VM).
-\item Establishing a secure and reliable communication between the entities involved.
-\item Generating a detailed test report to a file and displayed on webpage on user demand.
-\item Setting up of front end with a simple layout to be accessed from any client.
+\item Automating install and uninstall processes of the Rapita Verfication Suite software on Windows and Linux operating systems.
+\item Setting the virtual environment with the major operating systems.
+\item Establishing secure and reliable communication among various systems.
+\item Generating detailed test report and its display on webpage.
+\item Setting front-end for system interaction.
 \item Reverting all the changes after the tests are finished.
 \end{enumerate}
 } 
-
 %To achieve high quality this process is repeated after minor changes in the software and where there is wastage of time the repetitive nature of the job also make it a tedious process for the staff.
+\noindent The above mentioned goals, each briefly described in the following section, were achieved.
 
 
-To achieve the automation of the whole process the project was split up into the following six categories and each one is briefly defined. \\
 \newpage
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Automation of Install and Uninstall Processes:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {Although few easy to use commercial tools are available to automate various tasks, however, they are costly, unreliable and not flexible enough to fully meet our requirements. We therefore selected tools that may not be very friendly and may require more technical skills to handle but they are much more reliable, highly flexible, open-source and absolutely free. \\
+\noindent \textbf{\fontsize{14}{22}\selectfont {(1) Automating Install and Uninstall Processes:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {Some easy-to-use commercial tools are available to automate various tasks but they are costly, unreliable and not flexible enough to fully meet the requirements. We therefore selected tools which were not very friendly and may required more technical skills to handle but were highly reliable, very flexible, open-source and available with no cost. \\
 %t
-\indent We selected freely available AutoIT and Expect tools to automate the install and uninstall process of RVS on Windows and Linux platform respectively. There are 12 steps involved in RVS installation which when performed manually takes around 2 minutes to complete, however, after automation the process takes not more than 20 seconds.\\
+We selected freely available AutoIT and Expect tools to automate the install and uninstall processes of Rapita Versification Suite (RVS) on Windows and Linux platform respectively. There are 12 steps involved in RVS installation which when performed manually takes around 2 minutes to complete while after automation the process takes not more than 20 seconds.\\
 %
-\indent Automating the install and uninstall process alone saves a substantial amount of time because of the repetitive nature of the job that is performed after any change in the RVS software. Beside saving time, the automation process also relieve the staff from repeating the same process again and again.}\\
+Automating the install and uninstall processes alone saves a substantial amount of time because of the repetitive nature of job performed after any change in the RVS software. Besides saving time, the automation process also relieves the staff from repeating the same process again and again.}\\
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Setting up Virtual Environment:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {We selected Oracle Virtual Box to setup the virtual environment, which is again a free and open software. It is reliable, efficient and highly customisable to meet our requirements. It provides virtual but very close to the real environment to test software at minimum hardware cost. Snapshots and clones are additional benefits that can be highly effective in restoring the original system after the test is finished. \\
+\noindent \textbf{\fontsize{14}{22}\selectfont {(2) Setting the Virtual Environment:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {We selected Oracle Virtual Box to setup the virtual environment, which is a free and open-source software. It is reliable, efficient and highly customisable for meeting the requirements. It provides virtual but very close to the real environment to test software at minimum hardware cost. Snapshots and clones are additional benefits that can be highly effective in restoring the original system after the test completion. \\
 %
-\indent Twelve Linux distributions (32 \& 64 bit and Desktop \& Server) and three Microsoft Windows operating systems were installed in Virtual box. These distributions were selected on the basis of their deployment at Rapita Systems clients. The details of each Guest virtual machine is stored in the database for later use.}\\
-\\
-\\
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Secure and Reliable Intercommunication:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {In the current setup of Rapita Systems, the upgraded version of each software is stored on a dedicated Software server and the Test server is used to test the software. Our virtual machine software testing system is configured on the Test server. Additionally the guest Virtual Machines are also ran on the test server with in virtual environment.\\
+Twelve Linux distributions (32 \& 64 bit) and three Microsoft Windows operating systems were installed in Virtual box. These distributions were selected because of their operational at the clients level. The details of each operating system installed in the Birtual-box is stored in the database for later use.}\\
+\noindent \textbf{\fontsize{14}{22}\selectfont {(3) Establishing Secure and Reliable communication:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {In the current setup of Rapita Systems, the upgraded version of each software is stored on a dedicated Software Server and the Test Server is used to test the software. The new virtual machine automatic software testing system is configured on the existing Test Server. Moreover, the guest Virtual Machines (VM) are also run on the test server with in virtual environment.\\
 %
-\indent These three systems must communicate freely to perform a fully automated testing. For this purpose we created a special user Rapitabot on all the three machines and configured it in such a way that it can establish Secure Shell (SSH) connection between each other without requesting key. The same SSH connection is also used to copy the software from Software server and test scripts from Test server to Guest virtual machine. } \\
+The Software Server, the Test Server and the guest VMs must communicate freely to perform a fully automated testing. For this purpose we created a special user ``Rapitabot'' in all the three machines and configured it in such a way to establish ssh connection among each other without any key. The same ssh connection is also used to copy the software from Software Server and test scripts from Test Server to guest VMs. } \\
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Tracking test execution in Test Log: }} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont { The purpose of the whole testing system is to execute the tests and check if the tests were successful or not. Therefore, a rigorous reporting system is implemented to track each step of the test execution and log both the pass and fail state. \\
-\indent Test logs can be accessed in two ways. It can be read on the browser by clicking the "Read Log" button or from a log file that is stored in the Test server. Logs are interactively updated and can be read in real time.} \\
+\noindent \textbf{\fontsize{14}{22}\selectfont {(4) Generating Test Report: }} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont { The purpose of the whole testing system is to execute the tests and check that the tests are successful. Therefore, a rigorous reporting system is implemented to track each step of the test execution and log both the pass and fail state. \\
+The logs can be read in the browser by clicking the "Read Log" button or from a log file that is stored in the Test Server. Logs are interactively updated and are readable in real time.} \\
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Design and Layout of Frond-End:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {Special emphasis was given on the front-end to keep it simple, user friendly and accessible from any machine. Therefore, we developed the front-end using PHP: Hypertext Preprocessor (PHP) and HyperText Markup Language (HTML) to allow its access from any machine with browser software. The screenshot of the front-end is given in Figure \ref{fig:front}.
+\noindent \textbf{\fontsize{14}{22}\selectfont {(5) Setting Frond-end for System Interaction:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {Special emphasis is given on the front-end to keep it simple, user friendly and accessible from any machine. Therefore, the front-end was developed using PHP: Hypertext Preprocessor (PHP) and HyperText Markup Language (HTML) to allow its access from any machine with browser software. 
+%The screenshot of the front-end is given in Figure \ref{fig:front}.
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=12.5cm]{framework.png}
-\caption{Front-end of Virtual Machine Test Framework of Rapita Systemss}
-\label{fig:front}
+
+\begin{figure}[ht]
+  \makebox[\textwidth][c]{\includegraphics[width=1.4\textwidth, height=13.7cm]{framework.png}}%
+  \caption{Front-end of Virtual Machine Test Framework of Rapita Systems}
+  \label{fig:front}
 \end{figure}
 
-The front-end gets the available softwares from Software server and the Guest Virtual machines from the database to display it on a webpage. For testing, the tester picks the RVS version and the operating system and click the test button. Test is executed in the background and user can click the "Read Log" button to view the test results online or tester can check the log file at a later time.}\\
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=14cm, height =12cm]{framework.png}
+%\caption{Front-end of Virtual Machine Test Framework of Rapita Systems}
+%\label{fig:front}
+%\end{figure}
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Revert Changes:}} \\[0.2\baselineskip] 
-\indent {\fontsize{11}{22}\selectfont {Once the test is completed, it is necessary to delete all its traces to avoid any interference in the future tests. A clean up script is placed for this reason that uninstall the installed RVS software, delete all the folders and script files and safely shutdown the Guest virtual machine.}\\
+\noindent The front-end gets the available software versions from Software Server and the details of Guest VMs from the database to display on webpage. To initiate testing, the tester selects the RVS version with the desired operating system and clicks the ``Star VM Test'' button. Test is executed in the background and the tester can click the "Read Log" button to view the test results online, which can also be viewed later on from the log file.}\\
 
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Working of the Testing System:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {This section describe the step by step procedure of the system with the help of Figure \ref{fig:process}.}
+\noindent \textbf{\fontsize{14}{22}\selectfont {(6) Reverting Modifications after Test Completions:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {Once the test is completed, it is necessary to delete the modifications in order to avoid any interference in the future tests. A clean up script is placed for the purpose to uninstall the installed RVS software, delete the created folders, script files and safely shutdown the Guest VM.}\\
+
+\noindent \textbf{\fontsize{14}{22}\selectfont {Working of the Testing System:}} \\[0.2\baselineskip] 
+\indent \fontsize{11}{22}\selectfont {The step by step procedure of the system is explained in the Figure \ref{fig:process} with steps given below.}
 
 
 \begin{figure}[h]
-\centering
-\includegraphics[width=11cm]{rapitaSystems.png}
-\caption{Step by step process of the software testing}
-\label{fig:process}
+  \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth, height=12cm]{rapitaSystems.png}}%
+  \caption{Step by step process of the software testing}
+  \label{fig:process}
 \end{figure}
-\newpage
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Future Work:}} \\[0.2\baselineskip] 
+
+
+%\begin{figure}[h]
+%\centering
+%\includegraphics[width=11cm]{rapitaSystems.png}
+%\caption{Step by step process of the software testing}
+%\label{fig:process}
+%\end{figure}
+
+\noindent \textbf{\fontsize{14}{22}\selectfont {Future Work:}} \\[0.2\baselineskip] 
 \indent {\fontsize{11}{22}\selectfont {
-Some additional features, out of the scope of current project, were identified that can be incorporated in the project to make the system more efficient. These features include
+Some additional features, beyond the scope of current project were identified which may be explored in the future to make the system more efficient. \\
+These features include:
 \begin{enumerate}
-\item Load balancing on test server to restrict specific number of VMs running at any time.
-\item Automatic Sending the log file as email to the tester after every executed test.
-\item Creating more sophisticated test suites to execute after automated installation and before uninstallation of RVS.
-\item Addition of more operating systems to the virtual box.
-\item Design of more attractive front-end website.
-\item New webpage to install a new operating system on the fly in the virtual box according to the requirements.
+\item Load balancing on test server to restrict specific number of VMs running at a time.
+\item Automatic sending of the test log file as email to the tester after every test execution.
+\item Creating more sophisticated test suites to execute after automated installation prior to uninstallation of RVS.
+\item Adding more operating systems to the virtual box.
+\item Designing more attractive front-end website.
+\item Installing new operating system in the Virtualbox through a web page according to the requirements.
 \end{enumerate}
 }
 
-
-
-
-\noindent \textbf{ \fontsize{14}{22}\selectfont {Conclusion:}} \\[0.2\baselineskip] 
-\indent \fontsize{11}{22}\selectfont {My experience of internship at Rapita Systems was great. The company has a magnificent working environment and great minds contributing to very high quality work. I learnt a lot about test automation, instrumentation, data tracing and regression testing. The project I completed is very satisfactory and highly appreciated by the whole team of Rapita Systems. This internship provided me the opportunity to gain hands on working experience that I couldn't get in the classroom.}\ \
+\bigskip
+\bigskip
+\noindent \textbf{\fontsize{14}{22}\selectfont {Personal Note:}} \\[0.2\baselineskip] 
+\fontsize{11}{22}\selectfont {My experience of internship at Rapita Systems was great. The company has a magnificent working environment and great minds contributing to very high quality work. I learnt a lot about test automation, instrumentation, data tracing regression testing and compatibility testing. 
+%The project I completed is very satisfactory and highly appreciated by the whole team of Rapita Systems. 
+This internship provided me the opportunity to have professional hands on experience which opened new horizons and broadened my knowledge gained at the academic institution.}\ \
 
 \end{document}
 
