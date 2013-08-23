@@ -1,14 +1,14 @@
 %input macros (i.e. write your own macros file called MacroFile1.tex)
 %\include{Macros/MacroFile1}
 
- \documentclass[oneside,12pt]{Classes/CUEDthesisPSnPDF}
+ \documentclass[oneside,11pt]{Classes/CUEDthesisPSnPDF}
 
 
 \ifpdf
     \pdfinfo { /Title  (CUED PhD and MPhil Thesis Classes)
                /Creator (TeX)
                /Producer (pdfTeX)
-               /Author (Muhammad Haseeb mh634@york.ac.uk)
+               /Author (Mian Asbat Ahmad mian.ahmad@york.ac.uk)
                /CreationDate (D:20030101000000)  %format D:YYYYMMDDhhmmss
                /ModDate (D:20030815213532)
                /Subject (Writing a PhD thesis in LaTeX)
@@ -100,8 +100,11 @@ showstringspaces=false}
 % \end{abstractseparate}
 
 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Using the watermark package which is in StyleFiles/
 % and to remove DRAFT COPY ONLY appearing on the top of all pages comment out below line
 %\watermark{DRAFT COPY ONLY}
@@ -134,9 +137,10 @@ showstringspaces=false}
 
 \mainmatter % book mode only
 \include{Introduction/introduction}
-\include{Literature/literature}
-\include{DSSR/dssr}
-\include{ADFD/adfd}
+% These chapters are commented by me for now to quickly render.
+%\include{Literature/literature}
+%\include{DSSR/dssr}
+%\include{ADFD/adfd}
 %\include{Conclusions/conclusions}
 
 \backmatter % book mode only

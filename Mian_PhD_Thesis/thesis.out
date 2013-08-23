@@ -3,82 +3,14 @@
 \BOOKMARK [0][]{section*.6}{List of Tables}{}
 \BOOKMARK [0][]{section*.6}{Nomenclature}{}
 \BOOKMARK [0][]{chapter.1}{1 Introduction}{}
-\BOOKMARK [1][]{section.1.1}{1.1 The Problems}{chapter.1}
-\BOOKMARK [1][]{section.1.2}{1.2 Our Goals}{chapter.1}
-\BOOKMARK [1][]{section.1.3}{1.3 Contributions}{chapter.1}
-\BOOKMARK [2][]{subsection.1.3.1}{1.3.1 Dirt Spot Sweeping Random Strategy}{section.1.3}
-\BOOKMARK [2][]{subsection.1.3.2}{1.3.2 Automated Discovery of Failure Domain}{section.1.3}
-\BOOKMARK [2][]{subsection.1.3.3}{1.3.3 Invariant Guided Random+ Strategy}{section.1.3}
-\BOOKMARK [1][]{section.1.4}{1.4 Thesis Outline}{chapter.1}
-\BOOKMARK [0][]{chapter.2}{2 Literature Review}{}
-\BOOKMARK [1][]{section.2.1}{2.1 Software Testing}{chapter.2}
-\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Software Testing Levels}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.2}{2.1.2 Software Testing Purpose}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.3}{2.1.3 Software Testing Perspective}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.4}{2.1.4 Software Testing Execution}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.5}{2.1.5 Manual Testing}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.6}{2.1.6 Automated Testing}{section.2.1}
-\BOOKMARK [2][]{subsection.2.1.7}{2.1.7 Test Oracle}{section.2.1}
-\BOOKMARK [3][]{subsubsection.2.1.7.1}{2.1.7.1 Random Testing}{subsection.2.1.7}
-\BOOKMARK [1][]{section.2.2}{2.2 Variations in Random Testing}{chapter.2}
-\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Adaptive Random Testing}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Mirror Adaptive Random Testing}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Restricted Random Testing}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Directed Automated Random Testing}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Quasi Random Testing}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.6}{2.2.6 Feedback-directed Random Testing}{section.2.2}
-\BOOKMARK [3][]{subsubsection.2.2.6.1}{2.2.6.1 Randoop: Feedback-directed Random Testing}{subsection.2.2.6}
-\BOOKMARK [2][]{subsection.2.2.7}{2.2.7 Object Distance and its application}{section.2.2}
-\BOOKMARK [3][]{subsubsection.2.2.7.1}{2.2.7.1 ARTOO Tool}{subsection.2.2.7}
-\BOOKMARK [3][]{subsubsection.2.2.7.2}{2.2.7.2 Experimental Assessment of RT for Object-Oriented Software}{subsection.2.2.7}
-\BOOKMARK [2][]{subsection.2.2.8}{2.2.8 JCrasher}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.9}{2.2.9 JArtage}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.10}{2.2.10 Eclat}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.11}{2.2.11 JTest}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.12}{2.2.12 QuickCheck}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.13}{2.2.13 AgitarOne}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.14}{2.2.14 Autotost}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.15}{2.2.15 TestEra}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.16}{2.2.16 Korat}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.17}{2.2.17 YETI}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.18}{2.2.18 Construction of Test Cases}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.19}{2.2.19 Commnad-line Options}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.20}{2.2.20 YETI Execution}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.21}{2.2.21 YETI Report}{section.2.2}
-\BOOKMARK [2][]{subsection.2.2.22}{2.2.22 Tools for Automated Random Testing}{section.2.2}
-\BOOKMARK [1][]{section.2.3}{2.3 Conclusion}{chapter.2}
-\BOOKMARK [0][]{chapter.3}{3 Dirt Spot Sweeping Random Strategy}{}
-\BOOKMARK [1][]{section.3.1}{3.1 Introduction}{chapter.3}
-\BOOKMARK [1][]{section.3.2}{3.2 Dirt Spot Sweeping Random Strategy}{chapter.3}
-\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Random Strategy \(R\)}{section.3.2}
-\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Random Plus Strategy \(R+\)}{section.3.2}
-\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Dirt Spot Sweeping \(DSS\)}{section.3.2}
-\BOOKMARK [2][]{subsection.3.2.4}{3.2.4 Structure of the Dirt Spot Sweeping Random Strategy}{section.3.2}
-\BOOKMARK [2][]{subsection.3.2.5}{3.2.5 Explanation of DSSR strategy on a concrete example}{section.3.2}
-\BOOKMARK [1][]{section.3.3}{3.3 Implementation of the DSSR strategy}{chapter.3}
-\BOOKMARK [1][]{section.3.4}{3.4 Evaluation}{chapter.3}
-\BOOKMARK [2][]{subsection.3.4.1}{3.4.1 Research questions}{section.3.4}
-\BOOKMARK [2][]{subsection.3.4.2}{3.4.2 Experiments}{section.3.4}
-\BOOKMARK [2][]{subsection.3.4.3}{3.4.3 Performance measurement criteria}{section.3.4}
-\BOOKMARK [1][]{section.3.5}{3.5 Results}{chapter.3}
-\BOOKMARK [2][]{subsection.3.5.1}{3.5.1 Is there an absolute best among R, R+ and DSSR strategies?}{section.3.5}
-\BOOKMARK [2][]{subsection.3.5.2}{3.5.2 Are there classes for which any of the three strategies provide better results?}{section.3.5}
-\BOOKMARK [2][]{subsection.3.5.3}{3.5.3 Can we pick the best default strategy between R, R+ and DSSR?}{section.3.5}
-\BOOKMARK [1][]{section.3.6}{3.6 Discussion}{chapter.3}
-\BOOKMARK [1][]{section.3.7}{3.7 Related Work}{chapter.3}
-\BOOKMARK [1][]{section.3.8}{3.8 Conclusions}{chapter.3}
-\BOOKMARK [0][]{chapter.4}{4 Automated Disovery of Failure Domain}{}
-\BOOKMARK [1][]{section.4.1}{4.1 Introduction}{chapter.4}
-\BOOKMARK [1][]{section.4.2}{4.2 Automated Discovery of Failure Domain}{chapter.4}
-\BOOKMARK [1][]{section.4.3}{4.3 Implementation}{chapter.4}
-\BOOKMARK [2][]{subsection.4.3.1}{4.3.1 York Extensible Testing Infrastructure}{section.4.3}
-\BOOKMARK [2][]{subsection.4.3.2}{4.3.2 ADFD strategy in YETI}{section.4.3}
-\BOOKMARK [2][]{subsection.4.3.3}{4.3.3 Example}{section.4.3}
-\BOOKMARK [1][]{section.4.4}{4.4 Experimental Results}{chapter.4}
-\BOOKMARK [1][]{section.4.5}{4.5 Discussion}{chapter.4}
-\BOOKMARK [1][]{section.4.6}{4.6 Threats to Validity}{chapter.4}
-\BOOKMARK [1][]{section.4.7}{4.7 Related Works}{chapter.4}
-\BOOKMARK [1][]{section.4.8}{4.8 Conclusion}{chapter.4}
+\BOOKMARK [1][]{section.1.1}{1.1 Motivation}{chapter.1}
+\BOOKMARK [1][]{section.1.2}{1.2 The Problems}{chapter.1}
+\BOOKMARK [1][]{section.1.3}{1.3 Research Goals}{chapter.1}
+\BOOKMARK [1][]{section.1.4}{1.4 Contributions}{chapter.1}
+\BOOKMARK [2][]{subsection.1.4.1}{1.4.1 Dirt Spot Sweeping Random Strategy}{section.1.4}
+\BOOKMARK [2][]{subsection.1.4.2}{1.4.2 Automated Discovery of Failure Domain}{section.1.4}
+\BOOKMARK [2][]{subsection.1.4.3}{1.4.3 Invariant Guided Random+ Strategy}{section.1.4}
+\BOOKMARK [1][]{section.1.5}{1.5 Structure of the Thesis}{chapter.1}
 \BOOKMARK [0][]{appendix*.7}{Appdx A}{}
 \BOOKMARK [0][]{appendix*.8}{Appdx B}{}
 \BOOKMARK [0][]{section*.10}{References}{}
