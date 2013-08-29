@@ -6,13 +6,10 @@ A level-1 auxiliary file: Declaration/decleration.aux
 A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
-A level-1 auxiliary file: DSSR/dssr.aux
-A level-1 auxiliary file: ADFD/adfd.aux
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
 Database file #1: References/references.bib
-Warning--I didn't find a database entry for "Oriol2010a"
 Warning--empty journal in cohen2005robustness
 Warning--empty booktitle in Dijkstra1972
 Warning--can't use both volume and number fields in Godefroid2005
@@ -20,48 +17,47 @@ Warning--there's a number but no volume in howden1986
 Warning--empty journal in Levenshtein1966
 Warning--can't use both volume and number fields in mccabe1983
 Warning--can't use both volume and number fields in ntafos1998random
-Warning--empty note in Oriol2010b
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-You've used 90 entries,
+You've used 61 entries,
             2118 wiz_defined-function locations,
-            1074 strings with 19080 characters,
-and the built_in function-call counts, 34371 in all, are:
-= -- 3553
-> -- 1365
-< -- 47
-+ -- 554
-- -- 450
-* -- 2272
-:= -- 5351
-add.period$ -- 305
-call.type$ -- 90
-change.case$ -- 486
+            888 strings with 14089 characters,
+and the built_in function-call counts, 23094 in all, are:
+= -- 2414
+> -- 914
+< -- 34
++ -- 369
+- -- 300
+* -- 1513
+:= -- 3616
+add.period$ -- 212
+call.type$ -- 61
+change.case$ -- 326
 chr.to.int$ -- 0
-cite$ -- 100
-duplicate$ -- 1460
-empty$ -- 2789
-format.name$ -- 450
-if$ -- 7566
+cite$ -- 70
+duplicate$ -- 983
+empty$ -- 1859
+format.name$ -- 300
+if$ -- 5075
 int.to.chr$ -- 0
-int.to.str$ -- 90
-missing$ -- 94
-newline$ -- 453
-num.names$ -- 180
-pop$ -- 551
+int.to.str$ -- 61
+missing$ -- 65
+newline$ -- 309
+num.names$ -- 122
+pop$ -- 367
 preamble$ -- 1
-purify$ -- 405
+purify$ -- 272
 quote$ -- 0
-skip$ -- 1091
+skip$ -- 723
 stack$ -- 0
-substring$ -- 2320
-swap$ -- 462
-text.length$ -- 47
+substring$ -- 1528
+swap$ -- 306
+text.length$ -- 34
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 344
-warning$ -- 10
-while$ -- 343
-width$ -- 92
-write$ -- 1050
-(There were 11 warnings)
+type$ -- 232
+warning$ -- 9
+while$ -- 235
+width$ -- 63
+write$ -- 721
+(There were 9 warnings)
