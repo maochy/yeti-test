@@ -220,6 +220,15 @@ Large scale clusters of computers were used for 1500 hours of CPU time which res
 %\section{Automated Random Testing Tools}
 
 \subsection{JCrasher}
+
+Jcrasher is first of the three automatic testing tools developed by Csallner C. and Smaragadakis Y. \cite{Pacheco2007b}. As the name suggests JCrasher tries to crash the Java program with random input and any exceptions thrown during the process are recorded. All obtained exceptions are then compared to the list of acceptable exception, which are defined in advance as heuristics, and any undefined/undeclared runtime exceptions are considered bugs. Since programs interact with the world through its public methods therefore JCrasher tests only these methods. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=6cm, height=4cm]{Literature/jcrasher.png}
+	\caption{Process of testing a java program with JCrasher \cite{Pacheco2007b}}
+\end{figure}
+
 JCrasher is an automatic testing tool that uses a random testing technique to test java classes/programs \cite{Pacheco2007b}. The main features of JCrasher are:
 1. The randomly created test cases are according to the type and parameters of the methods under test.
 2. It uses special heuristics rules, after the execution of the test cases, to see whether the given excep- tions are real bugs or the generated input violated the pre-conditions of the program.

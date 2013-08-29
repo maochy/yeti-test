@@ -1,16 +1,53 @@
-\BOOKMARK [0][]{section*.2}{Contents}{}
-\BOOKMARK [0][]{section*.4}{List of Figures}{}
-\BOOKMARK [0][]{section*.6}{List of Tables}{}
-\BOOKMARK [0][]{section*.6}{Nomenclature}{}
-\BOOKMARK [0][]{chapter.1}{1 Introduction}{}
-\BOOKMARK [1][]{section.1.1}{1.1 Motivation}{chapter.1}
-\BOOKMARK [1][]{section.1.2}{1.2 The Problems}{chapter.1}
-\BOOKMARK [1][]{section.1.3}{1.3 Research Goals}{chapter.1}
-\BOOKMARK [1][]{section.1.4}{1.4 Contributions}{chapter.1}
-\BOOKMARK [2][]{subsection.1.4.1}{1.4.1 Dirt Spot Sweeping Random Strategy}{section.1.4}
-\BOOKMARK [2][]{subsection.1.4.2}{1.4.2 Automated Discovery of Failure Domain}{section.1.4}
-\BOOKMARK [2][]{subsection.1.4.3}{1.4.3 Invariant Guided Random+ Strategy}{section.1.4}
-\BOOKMARK [1][]{section.1.5}{1.5 Structure of the Thesis}{chapter.1}
-\BOOKMARK [0][]{appendix*.7}{Appdx A}{}
-\BOOKMARK [0][]{appendix*.8}{Appdx B}{}
-\BOOKMARK [0][]{section*.10}{References}{}
+\BOOKMARK [0][]{chapter*.1}{Contents}{}% 1
+\BOOKMARK [0][]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 3
+\BOOKMARK [0][]{chapter*.3}{Nomenclature}{}% 4
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 5
+\BOOKMARK [1][]{section.1.1}{1.1 Motivation}{chapter.1}% 6
+\BOOKMARK [1][]{section.1.2}{1.2 The Problems}{chapter.1}% 7
+\BOOKMARK [1][]{section.1.3}{1.3 Research Goals}{chapter.1}% 8
+\BOOKMARK [1][]{section.1.4}{1.4 Contributions}{chapter.1}% 9
+\BOOKMARK [2][]{subsection.1.4.1}{1.4.1 Dirt Spot Sweeping Random Strategy}{section.1.4}% 10
+\BOOKMARK [2][]{subsection.1.4.2}{1.4.2 Automated Discovery of Failure Domain}{section.1.4}% 11
+\BOOKMARK [2][]{subsection.1.4.3}{1.4.3 Invariant Guided Random+ Strategy}{section.1.4}% 12
+\BOOKMARK [1][]{section.1.5}{1.5 Structure of the Thesis}{chapter.1}% 13
+\BOOKMARK [0][]{chapter.2}{2 Literature Review}{}% 14
+\BOOKMARK [1][]{section.2.1}{2.1 Software Testing}{chapter.2}% 15
+\BOOKMARK [2][]{subsection.2.1.1}{2.1.1 Software Testing Levels}{section.2.1}% 16
+\BOOKMARK [2][]{subsection.2.1.2}{2.1.2 Software Testing Purpose}{section.2.1}% 17
+\BOOKMARK [2][]{subsection.2.1.3}{2.1.3 Software Testing Perspective}{section.2.1}% 18
+\BOOKMARK [2][]{subsection.2.1.4}{2.1.4 Software Testing Execution}{section.2.1}% 19
+\BOOKMARK [2][]{subsection.2.1.5}{2.1.5 Manual Testing}{section.2.1}% 20
+\BOOKMARK [2][]{subsection.2.1.6}{2.1.6 Automated Testing}{section.2.1}% 21
+\BOOKMARK [2][]{subsection.2.1.7}{2.1.7 Test Oracle}{section.2.1}% 22
+\BOOKMARK [3][]{subsubsection.2.1.7.1}{2.1.7.1 Random Testing}{subsection.2.1.7}% 23
+\BOOKMARK [1][]{section.2.2}{2.2 Variations in Random Testing}{chapter.2}% 24
+\BOOKMARK [2][]{subsection.2.2.1}{2.2.1 Adaptive Random Testing}{section.2.2}% 25
+\BOOKMARK [2][]{subsection.2.2.2}{2.2.2 Mirror Adaptive Random Testing}{section.2.2}% 26
+\BOOKMARK [2][]{subsection.2.2.3}{2.2.3 Restricted Random Testing}{section.2.2}% 27
+\BOOKMARK [2][]{subsection.2.2.4}{2.2.4 Directed Automated Random Testing}{section.2.2}% 28
+\BOOKMARK [2][]{subsection.2.2.5}{2.2.5 Quasi Random Testing}{section.2.2}% 29
+\BOOKMARK [2][]{subsection.2.2.6}{2.2.6 Feedback-directed Random Testing}{section.2.2}% 30
+\BOOKMARK [3][]{subsubsection.2.2.6.1}{2.2.6.1 Randoop: Feedback-directed Random Testing}{subsection.2.2.6}% 31
+\BOOKMARK [2][]{subsection.2.2.7}{2.2.7 Object Distance and its application}{section.2.2}% 32
+\BOOKMARK [3][]{subsubsection.2.2.7.1}{2.2.7.1 ARTOO Tool}{subsection.2.2.7}% 33
+\BOOKMARK [3][]{subsubsection.2.2.7.2}{2.2.7.2 Experimental Assessment of RT for Object-Oriented Software}{subsection.2.2.7}% 34
+\BOOKMARK [2][]{subsection.2.2.8}{2.2.8 JCrasher}{section.2.2}% 35
+\BOOKMARK [2][]{subsection.2.2.9}{2.2.9 JArtage}{section.2.2}% 36
+\BOOKMARK [2][]{subsection.2.2.10}{2.2.10 Eclat}{section.2.2}% 37
+\BOOKMARK [2][]{subsection.2.2.11}{2.2.11 JTest}{section.2.2}% 38
+\BOOKMARK [2][]{subsection.2.2.12}{2.2.12 QuickCheck}{section.2.2}% 39
+\BOOKMARK [2][]{subsection.2.2.13}{2.2.13 AgitarOne}{section.2.2}% 40
+\BOOKMARK [2][]{subsection.2.2.14}{2.2.14 Autotost}{section.2.2}% 41
+\BOOKMARK [2][]{subsection.2.2.15}{2.2.15 TestEra}{section.2.2}% 42
+\BOOKMARK [2][]{subsection.2.2.16}{2.2.16 Korat}{section.2.2}% 43
+\BOOKMARK [2][]{subsection.2.2.17}{2.2.17 YETI}{section.2.2}% 44
+\BOOKMARK [2][]{subsection.2.2.18}{2.2.18 Construction of Test Cases}{section.2.2}% 45
+\BOOKMARK [2][]{subsection.2.2.19}{2.2.19 Commnad-line Options}{section.2.2}% 46
+\BOOKMARK [2][]{subsection.2.2.20}{2.2.20 YETI Execution}{section.2.2}% 47
+\BOOKMARK [2][]{subsection.2.2.21}{2.2.21 YETI Report}{section.2.2}% 48
+\BOOKMARK [2][]{subsection.2.2.22}{2.2.22 Tools for Automated Random Testing}{section.2.2}% 49
+\BOOKMARK [1][]{section.2.3}{2.3 Conclusion}{chapter.2}% 50
+\BOOKMARK [0][]{appendix*.4}{Appdx A}{}% 51
+\BOOKMARK [0][]{appendix*.5}{Appdx B}{}% 52
+\BOOKMARK [0][]{appendix*.6}{References}{}% 53
