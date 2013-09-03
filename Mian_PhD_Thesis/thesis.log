@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  30 AUG 2013 23:33
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  3 SEP 2013 17:22
 entering extended mode
 \write18 enabled.
  file:line:error style messages enabled.
@@ -441,7 +441,7 @@ Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
 Package: ulem 2000/05/26
 \ULdepth=\dimen134
 )
-(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/listings.sty
+(/usr/local/texlive/2008/texmf-distt/tex/latex/listings/listings.sty
 \lst@mode=\count120
 \lst@gtempboxa=\box34
 \lst@token=\toks32
@@ -504,7 +504,7 @@ Here is how much of TeX's memory you used:
  714 hyphenation exceptions out of 8191
  43i,0n,45p,342b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
 ./thesis.aux:125:  ==> Fatal error occurred, no output PDF file produced!
- 90.
+Info:    Checking defaults for PD1/pdf/m/n on input line 90.
 LaTeX Font Info:    ... okay on input line 90.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 90.
  (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1ptm.fd
@@ -659,14 +659,14 @@ l.47 \end{table}
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.58 
-     ] [7] <Literature/figure1.jpg, id=448, 441.90094pt x 118.19156pt>
+     ] [7] <Literature/figure1.jpg, id=442, 441.90094pt x 118.19156pt>
 File: Literature/figure1.jpg Graphic file (type jpg)
 
 <use Literature/figure1.jpg>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[8] <Literature/pointblockstrip.jpg, id=477, 581.92406pt x 183.68625pt>
+[8] <Literature/pointblockstrip.jpg, id=471, 581.92406pt x 183.68625pt>
 File: Literature/pointblockstrip.jpg Graphic file (type jpg)
 
 <use Literature/pointblockstrip.jpg>
@@ -696,7 +696,7 @@ LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
                                                   \fi \fi 
 l.149 
        <./Literature/pointblockstrip.jpg>]
-<Literature/mart2.pdf, id=502, 350.30875pt x 185.69376pt>
+<Literature/mart2.pdf, id=496, 350.30875pt x 185.69376pt>
 File: Literature/mart2.pdf Graphic file (type pdf)
 
 <use Literature/mart2.pdf> [11pdfTeX warning (ext4): destination with the same 
@@ -706,7 +706,7 @@ identifier (name{figure.2.3}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.166 
        <./Literature/mart2.pdf>]
-<Literature/RRT.pdf, id=531, 370.38374pt x 247.67531pt>
+<Literature/RRT.pdf, id=525, 370.38374pt x 247.67531pt>
 File: Literature/RRT.pdf Graphic file (type pdf)
 
 <use Literature/RRT.pdf> [12pdfTeX warning (ext4): destination with the same id
@@ -717,7 +717,7 @@ entifier (name{figure.2.4}) has been already used, duplicate ignored
 l.181 \item A
              utomatic Test Driver/Harness: After identification of all the e...
  <./Literature/RRT.pdf>] [13] [14] [15]
-<Literature/jcrasher.png, id=577, 867.24pt x 402.50375pt>
+<Literature/jcrasher.png, id=571, 867.24pt x 402.50375pt>
 File: Literature/jcrasher.png Graphic file (type png)
 
 <use Literature/jcrasher.png>
@@ -731,46 +731,64 @@ Overfull \hbox (14.22575pt too wide) in paragraph at lines 228--229
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.236 
-       <./Literature/jcrasher.png (PNG copy)>] [17] [18] [19] [20]
-Overfull \hbox (34.1438pt too wide) in paragraph at lines 288--316
+       <./Literature/jcrasher.png (PNG copy)>]
+<Literature/eclat_working.png, id=582, 356.532pt x 235.1184pt>
+File: Literature/eclat_working.png Graphic file (type png)
+
+<use Literature/eclat_working.png>
+Overfull \hbox (14.2594pt too wide) in paragraph at lines 255--256
  [][] 
  []
 
 
-LaTeX Warning: Reference `fig:XXX???' on page 21 undefined on input line 320.
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.2.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.273 
+       <./Literature/eclat_working.png>] [19] [20]
+Overfull \hbox (34.1438pt too wide) in paragraph at lines 304--332
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:XXX???' on page 21 undefined on input line 336.
 
 [21pdfTeX warning (ext4): destination with the same identifier (name{table.2.2}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.321 
-      ] <Literature/yetiCommandCLI.pdf, id=627, 831.105pt x 95.35625pt>
+l.337 
+      ] <Literature/yetiCommandCLI.pdf, id=626, 831.105pt x 95.35625pt>
 File: Literature/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandCLI.pdf>
-<Literature/yetiCommandGUI.pdf, id=628, 433.62pt x 494.84875pt>
+<Literature/yetiCommandGUI.pdf, id=627, 433.62pt x 494.84875pt>
 File: Literature/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandGUI.pdf> [22pdfTeX warning (ext4): destination with 
-the same identifier (name{figure.2.6}) has been already used, duplicate ignored
+the same identifier (name{figure.2.7}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.348 
+l.364 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2.7}) has been already used, duplicate ignored
+2.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.348 
+l.364 
        <./Literature/yetiCommandCLI.pdf> <./Literature/yetiCommandGUI.pdf>]
-<Literature/tools.jpg, id=653, 636.9396pt x 667.293pt>
+<Literature/tools.jpg, id=652, 636.9396pt x 667.293pt>
 File: Literature/tools.jpg Graphic file (type jpg)
 
 <use Literature/tools.jpg>) [23pdfTeX warning (ext4): destination with the same
- identifier (name{figure.2.8}) has been already used, duplicate ignored
+ identifier (name{figure.2.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -799,7 +817,10 @@ Missing character: There is no Ñ in font ptmri7t!
  [26
 
 
-] [27] [28] [29] [30]) [31] (./thesis.aux
+]
+Missing character: There is no Ñ in font ptmri7t!
+Missing character: There is no Õ in font ptmri7t!
+ [27] [28] [29] [30]) [31] (./thesis.aux
 (./Abstract/abstract.aux) (./Acknowledgement/acknowledgement.aux)
 (./Declaration/decleration.aux) (./Dedication/dedication.aux)
 (./Introduction/introduction.aux) (./Literature/literature.aux)
@@ -807,12 +828,15 @@ Missing character: There is no Ñ in font ptmri7t!
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9119 strings out of 493876
- 131942 string characters out of 1150568
- 226554 words of memory out of 3000000
- 11916 multiletter control sequences out of 10000+50000
+ 9130 strings out of 493876
+ 132249 string characters out of 1150568
+ 225554 words of memory out of 3000000
+ 11926 multiletter control sequences out of 10000+50000
  31357 words of font info for 71 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
  43i,12n,50p,1843b,628s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -824,9 +848,9 @@ ist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2008/texmf-dist/fonts
 esky/cm/cmsy10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/times/ut
 mb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
 /usr/local/texlive/2008/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (39 pages, 1855238 bytes).
+Output written on thesis.pdf (39 pages, 1886220 bytes).
 PDF statistics:
- 844 PDF objects out of 1000 (max. 8388607)
+ 846 PDF objects out of 1000 (max. 8388607)
  179 named destinations out of 1000 (max. 131072)
- 477 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 466 words of extra memory for PDF output out of 10000 (max. 10000000)
 
