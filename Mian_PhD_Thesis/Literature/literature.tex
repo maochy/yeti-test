@@ -13,13 +13,12 @@
 
 
 
-Paul Ehrlich famous quote is, ``To err is human, but to really foul things up you need a computer". Since the programmers are ordinary human beings, it is most obvious that some errors remain in the software after its completion. Errors are not tolerated as they can cause great loss. According to the National Institute of Standard and Technology 2002, 10 report, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of the Mariner 1 rocket (1962) that cost \$18.5 million was due to a simple formula coded incorrectly by a programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, Failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others are caused by minor errors in the software. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex and critical the software, the higher the requirements for software testing and the larger the damage caused if the bug remains in the software. 
+The very famous quote of , ``To err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Errors are not tolerated, particularly in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology 2002, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of the Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million are a few examples of losses caused by minor errors in the software. To achieve high quality, the software has to satisfy rigorous stages of testing. The more critical and complex the software, the higher the requirements for software testing and the larger the extent of damage caused as a result of an error in the software.
 
 \section{Software Testing}
-In the IEEE standard glossary of software engineering terminology \cite{american1984}, testing is defined as the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault \cite{Myers2004}, where faults are defined as the errors made by the people during software development \cite{american1984}.
+In the IEEE standard glossary of software engineering terminology  \cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results”. A successful test is one that finds a fault \cite{Myers2004}, where fault is defined as, the error made by people during software development \cite{american1984}.
 
-Being an integral part of Software Development Life Cycle (SDLC), the testing process is started from requirements phase since this is the starting point of all the software activities and continue throughout the life of the software. In traditional testing when testers finds a fault in the given SuT, the software is given back to the developers for removing the fault and after its rectification the software is handed back to the testers for retesting. It is important to understand the fact that ``program testing can be used to show the presence of bugs, but never to show the absence of bugs" \cite{Dijkstra1972}. Which means SUT that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process increase however the reliability and confidence of the users in the tested product.
-
+Being an integral part of Software Development Life Cycle (SDLC), the testing process starts from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs" \cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases the reliability and confidence of users in the tested product.
 
 \begin{table}[ht]
 %\scriptsize
@@ -43,21 +42,20 @@ Levels 		&Purpose		 						& Perspective		& Execution 	\\
 \hline %inserts single line
 \end{tabular}
 \bigskip
-\{table:addvalues} % is used to refer this table in the text
+\label{table:addvalues} % is used to refer this table in the text
 \end{table}
 
 
 \subsection{Software Testing Levels}
-Unit testing, integration testing and system testing \cite{chilenski1994applicability} are the three main levels of software testing defined in the literature. Unit testing evaluate a small piece of software code called units for faults. These units are combined together to form components and integration testing ensure that the integration points are working properly. Finally the components are combined to form a system and before production system testing is performed to make sure that it works as expected. 
-
+The three main levels of software testing defined in the literature include unit testing, integration testing and system testing \cite{chilenski1994applicability}. Unit testing involves evaluation of piece-by-piece code and each piece is considered as independent unit. Units are combined together to form components. Integration testing ensures that the integration of units in a component is working properly. System testing is called out to make sure that the system formed by combination of components performs correctly to give the desired output.
 
 \subsection{Software Testing Purpose}
-The primary purpose of software testing is identification of faults in the given SuT so that they can be corrected to achieve high quality. Ideally, maximum number of faults can be identified if software is tested exhaustively i.e. testing SuT against all possible combinations of input data, and comparing the obtained results to the expected results for assessment. However, exhaustive testing is not always possible in most of the test scenarios because of limited resources and infinite number of input values that a software can take. Therefore, the purpose of testing is generally directed to achieve confidence in a specific aspect of a SuT. For example, functionality testing is performed to check if one or more functions of a system are working correct or not. Structural testing analyse the code structure to generate test cases in order to evaluate paths of execution and identification of unreachable or dead code.  In robustness testing the software behaviour is observed in the case when it receive input that is outside of its expected input range.  Stress and performance testing aim to test the response of software under high load and its ability to process different nature of tasks \cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with underlying operating system or hardware.
+The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. In exhausting testing SUT is checked against all possible combinations of input data, and the results obtained are compared with the expected results for assessment. Exhaustive testing is not always possible in most scenarios because of limited resources and infinite number of input values that software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check functional aspect for working correctly. Structural testing analyzes the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behavior is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and its ability to process different nature of tasks \cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with underlying operating system.
  %As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
 %A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
 
 \subsection{Software Testing Perspective}
-Testing activities can be split up into blackbox and whitebox testing on the basis of perspective taken. In blackbox or functional testing the testers dont need to know about internal code structure of the SuT. Test cases are derived from the specifications and test passes if the output is according to expected output. Internal code structure of the SuT is not taken into any consideration \cite{beizer1995black}. Whereas in whitebox or structural testing testers must know about the complete structure of the software and can modify it, if required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution \cite{ostrand2002white}.
+Testing activities can be split up into black-box and white-box testing on the basis of perspective taken. In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the specifications and test passes if the result is according to expected output. Internal code structure of the SUT is not taken into any consideration \cite{beizer1995black}. In white-box or structural testing, the testers must do need to know about the complete structure of the software and can do necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution \cite{ostrand2002white}.
 
 %\subsubsection{Grey-Box Testing}
 %Grey-Box testing is the combination of both black-box/functionality and white-box/structural testing. The tester knows about both the functionality and the internal structure of the SUT. Some of the test cases are based on the functionality and some of the test cases are based on the structure. Emphasis of grey-box testing is both on code coverage as well as functionality \cite{Savenkov2008}.
@@ -81,52 +79,56 @@ Testing activities can be split up into blackbox and whitebox testing on the bas
 
 
 \subsection{Software Testing Execution}
-Test activities can be organised into static and dynamic testing on the basis test cases execution. In static testing test cases analysed statically checked for errors without any execution. All high quality softwares are accompanied by documentation in addition to software code. These include requirements, design, technical, end-user and marketing documentation. Reviews, walkthroughs or inspections are most commonly used techniques for static testing. In dynamic testing the software code is executed and input is converted into output through processing. Results are analysed against expected results to find any error in the software. Unit testing, integration testing, system testing, and acceptance testing are most commonly used as dynamic testing methods \cite{fairley1978tutorial}
+Testing process can be divided into static and dynamic phases on the basis of test execution. In static testing test cases are analyzed statically for checking errors without test execution. In addition to software code, high quality softwares are accompanied by necessary documentation. It includes requirements, design, technical, user manual marketing information. Reviews, walkthroughs or inspections are most commonly used techniques for static testing. In dynamic testing the software code is executed and input is converted into output. Results are analyzed against expected outputs to find any error in the software. Unit testing, integration testing, system testing, and acceptance testing are most commonly used as dynamic testing methods \cite{fairley1978tutorial}.
 
 %Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
 
 
 
 \subsection{Manual Testing}
- A software testing technique to find faults in a class or group of related classes, such that the tester must write the code by hand to create test cases and test oracle \cite{Ciupa2008}. While manual testing is effective in some cases, in general, it is a laborious, time consuming, error-prone \cite{tretmans1999}. It further requires testers to have appropriate skills, experience and in depth knowledge of the under test software in order to evaluate it from different perspectives.
+Manual testing is the technique of finding faults in software in which the tester writes the code by hand to create test cases and test oracle \cite{Ciupa2008}. Manual testing may be effective in some cases but it is generally laborious, time consuming and error-prone \cite{tretmans1999}. Additionally, it requires that the testers must have appropriate skills, experience and sufficient knowledge of the SUT for evaluation from different perspectives.
  
 \subsection{Automated Testing}
-A software testing technique to find faults in a class or group of related classes, such that the test cases and test oracle is generated automatically by a testing tool \cite{Leitner2007}. The tools can automate part of a test i.e. generation of test cases, execution of test cases and evaluation of results or the whole test process. The use of automated testing made it possible to test large volumes of code that would be otherwise impossible \cite{ramamoorthy1975}.
+Automated testing is the technique of finding faults in a software in which the test cases or test oracle are generated automatically by a testing tool \cite{Leitner2007}. There are tools which can automate part of a test process like generation of test cases or execution of test cases or evaluation of results while other tools are available which can automate the whole testing process. The use of automated testing made it possible to test large volumes of code, which would have been impossible otherwise \cite{ramamoorthy1975}.
 
 %\section{Automated Random Testing}
 %\subsection{Test Data Generation}
 %\subsection{Test Execution}
 \subsection{Test Oracle}
-Test oracles set the acceptable behaviour for test executions \cite{richardson1992specification}. All softwares testing techniques depend on the availability of a test oracle \cite{baresi2001test}. Designing test oracles for simple softwares may be straight forward, however, for relatively complex softwares it can be very cumbersome to decide whether a program execution returns a correct or incorrect result \cite{gaudel2010software}. Different testing techniques tackle the oracle problem in various ways but some of the common issues include:
+Test oracles set the acceptable behaviour for test executions \cite{baresi2001test}. All software-testing techniques depend on the availability of test oracle \cite{gaudel2010software}. Designing test oracle for ordinary software may be simple straightforward. However, for relatively complex software designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common issues in the oracle problem include:
 \begin{enumerate}
-\item It is assumed that execution results are observable, so that they can be evaluated against the test oracle or the oracles are defined on the basis of these results.
+\item The assumption that the test results are observable and can be compared with the oracle.
 \item An ideal test oracle would satisfy desirable properties of program specifications \cite{baresi2001test}.
-\item There is not a single oracle generation technique that satisfies all purposes. Weyuker \cite{weyuker1982testing} argued that truly general test oracles are often unobtainable.
+\item A specific oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker who ?states that truly general test oracles are often unobtainable Weyuker \cite{weyuker1982testing} 
 \end{enumerate}
 %\subsection{Test Report}
 
-\subsubsection{Random Testing}
-Random testing is a dynamic and black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain \cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard H. \cite{hamlet1994}, to conduct random testing, an input domain is defined, then test points are randomly taken from the whole input domain through a random number/test case generator. The program under test is executed on these points and the results obtained are compared to the program specifications. The test fails if any input leads to incorrect results or otherwise it is successful. 
-
+\section{Random Testing}
+Random testing is a dynamic black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain \cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard \cite{hamlet1994}, in random testing, input domain is first identified, then test points are randomly taken from the whole input domain by means of random number generator. The program under test is executed on these points and the results obtained are compared with the program specifications. The test fails if the results are not according to the specifications and vice versa. Failure of any test results reflects error in the SUT.
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.5]{Literature/figure1.jpg}
 	\caption{Random Testing}
 \end{figure}
 
-It is quick and cheap to generate random test data as it don't require too much intellectual and computational efforts \cite{Ciupa2009}. This capability makes it an ideal choice for implementation in automated testing tools \cite{Ciupa2008a}. In addition, no human intervention in data generation/selection makes it one of the most unbiased testing technique. 
+Generating test data by random generator is quite economical and requires less intellectual and computational efforts \cite{Ciupa2008a}. This feature makes it an ideal choice for use in automated testing tools [---]. Moreover, the no human intervention is involved in data generation that ensures an unbiased testing process.
 
-Generating test cases with out using any background information makes it highly susceptible to criticism. Myers \cite{Myers1979} intuitively mentioned random testing as one of the least effective testing technique. It is also criticised for generating many sets of tests that lead to the same state of the software. Furthermore, random testing can generate test inputs that violates requirements of the given SUT making it less effective \cite{sen2007effective}, \cite{pacheco2009directed}. 
+However, generating test cases with out using any background information makes random testing susceptible to criticism. It is criticized for generating many test cases ending up at the same state of software. It is further stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective \cite{sen2007effective}, \cite{pacheco2009directed}. Myers mentioned random testing as one of the least effective testing technique \cite{Myers1979}.
 
-Myers statement was not based on any experimental evidence and later on the experiments performed in \cite{hamlet1994}, \cite{Ciupa2008}, \cite{leitner2007efficient} and \cite{Duran1981} confirmed that random testing is as effective as any other systematic testing technique. The experiments in \cite{Duran1981} found that random testing can find subtle faults in a given SUT if run for large number of test cases. They argued that the simplicity and cost effectiveness of random testing can make it feasible to run large number of test cases as opposed to systematic testing which requires considerable time and resources for test case generation and execution. The empirical comparison \cite{hamlet1990} also prove that random testing and partition testing are equally effective. Furthermore the study conducted by Ntafos \cite{ntafos1998random} conclude the effectiveness of random testing over proportional partition testing.
+It is stated by -------- that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers \cite{hamlet1994}, \cite{Ciupa2008}, \cite{leitner2007efficient} and \cite{Duran1981} confirmed that random testing is as effective as any other testing technique. It was found experimentally \cite{Duran1981} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It was pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective \cite{hamlet1990} A comparative study conducted by Ntafos \cite{ntafos1998random}. concluded that random testing is more effective as compared to proportional partition testing.
 
 
-
-\section{Variations in Random Testing}
-Different researchers tried various strategies to improve the performance of random testing. In order to better understand the topic we have studied each strategy in detail.
+\section{Various versions of random testing}
+Researchers have tried various approaches to bring about improvement in the performance of random testing. The prominent modifications in random strategy are stated below:
 
 \subsection{Adaptive Random Testing}
-Adaptive random testing (ART) \cite{Chen2008} is based on the existence of failure patterns across the input domain detected by Chan et al \cite{Chan1996}. They observed that failure inducing inputs in the whole input domain form certain geometrical patterns. They divided these patterns into point, block and strip fault patterns. Each one is described below.
+Adaptive random testing (ART), proposed by Chen et al. \cite{Chen2008} is based on the previous work of Chan et al. \cite{Chan1996}regarding the existence of failure patterns across the input domain. Chan et al observed that failure inducing inputs in the whole input domain form certain geometrical patterns and divided these into point, block and strip patterns described below.
+
+\begin{enumerate}
+\item Point pattern: In the point pattern inputs inducing failures are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in a statement total = num1/num2; where num1, num2 and total are variables of type integer.
+\item Block pattern: In the block pattern inputs inducing failures lie in close vicinity to form a block in the input domain. Example of block pattern is failure caused by the statement if ( (num \textgreater 10) \&\& (num \textless 20) ). Here 11 to 19 are a block of faults.
+\item Strip pattern: In the strip pattern inputs inducing failures form a strip across the input domain. Example of strip pattern is failure caused by a statement num1 + num2 = 20. Here multiple values of num1 and num2 can lead to the fault value 20. 
+\end{enumerate}
 
 \begin{figure}[h]
 	\centering
@@ -135,20 +137,14 @@ Adaptive random testing (ART) \cite{Chen2008} is based on the existence of failu
 	\label{fig:patterns}
 \end{figure}
 
-In the figure \ref{fig:patterns} the square box indicates the whole input domain. The white space shows legitimate or faultless values while the black colour points, block and strip inside each box indicate the point, block and strip fault patterns in the input domain.
+In figure \ref{fig:patterns} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box each box indicates the point, block and strip fault patterns.
 
-\begin{enumerate}
-\item Point pattern: In the point pattern failure inducing inputs are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in a statement total = num1/num2; where num1, num2 and total are variables of type integer. 
-\item Block pattern: In the block pattern multiple failure inducing inputs lies in a close vicinity to form a block in the input domain. Example of block pattern is failure caused by a statement if ( (num \textgreater 10) \&\& (num \textless 20) ). Here 11 to 19 is a block of faults.
-\item Strip pattern: In the strip pattern the failure inducing inputs form a strip across the input domain. Example of strip pattern is failure caused by a statement num1 + num2 = 20. Here multiple values of num1 and num2 can lead to the fault value 20.
-\end{enumerate}
+Chen et al.  \cite{Chen2008} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more faults targeted test inputs they proposed Adaptive Random Testing (ART) as a modified version of ordinary random testing where test values are selected at random as usual but are evenly spread across the input domain by using two sets. The executed set comprises the test cases executed by the system and the candidate set includes the test cases to be executed by the system. Initially both the sets are empty. The first test case is selected at random from the candidate set and stored in executed set after execution. The second test case is then selected from the candidate set which is far away from the last executed test case. In this way the whole input domain is tested with greater chances of generating test input from the existing fault patterns.
 
-The authors argued that ordinary random testing may generate test inputs lurking too close or too far from the fault inducing input and thus failing to discover it. To generate more fault targeted test inputs they suggested ART. ART is a modified version of ordinary random testing where test values are selected at random like before but evenly spread across the input domain. To achieve an even distribution of test cases across the input domain they used two sets. The executed set having the test cases that have been executed by the system and the candidate set that contain the random selected test cases from the bounded input domain as candidates for execution. Initially both the sets are kept empty. The first test case is selected at random from the candidate set and stored in executed set after execution, the second test case is then selected from the candidate set based on the criteria that it is far away from the last executed test case. Thus the whole input domain can be tested and their are more chances of generating test input from inside of the existing geometrical patterns. 
-
-In the experiments they used number of test cases required to detect first failure (F-measure) as a performance matrix instead of the traditional matrix i.e. probability of detecting at least one failure (P-measure) and expected number of failures detected (E-measure). Results of the experiments performed on published programs using ART showed up to 50\% increase in the performance of than ordinary random testing. Results showed significant improvement, however, the issues of increase overhead, spreading test cases across the input domain for complex objects and efficient ways of selecting candidate test cases still exist. Chen et al evolve their work on ART to address some of these issues in \cite{chen2009enhanced} and \cite{Chen2005}. 
+In the experiments conducted by Chen et al. \cite{Chen2008} the number of test cases required to detect first fault (F-measure) was used as a performance matrix instead of the traditional matrix P-measure and E-measure. Experimental results using ART showed up to 50\% increase in performance compared to ordinary random testing. The authors admitted that the issues of increase overhead, spreading test cases across the input domain for complex objects and efficient ways of selecting candidate test cases still exist. Chen et al continued their work on ART to address some of these issues and proposed its upgraded version in \cite{chen2009enhanced} and \cite{Chen2005}. 
 
 \subsection{Mirror Adaptive Random Testing}
-As discussed in the above section ART provide better results, however the increase in overhead due to extra computation to achieve even spread of test inputs makes it less cost effective. Mirror Adaptive Random Testing (MART) \cite{Chen2003} is an innovative approach that uses mirror partitioning technique to reduce the overhead of ART by decreasing the extra computation involved in ART.
+As discussed in the above section ART provide better results, however the increase in overhead due to extra computation to achieve even spread of test inputs makes it less cost effective. Mirror Adaptive Random Testing (MART) \cite{Chen2003} is an innovative approach that uses mirror-partitioning technique to reduce the overhead of ART by decreasing the extra computation involved in ART.
 
 \begin{figure}[h]
 \begin{center}
@@ -158,7 +154,7 @@ As discussed in the above section ART provide better results, however the increa
 \end{center}  
 \end{figure}
 
-In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomain is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART \{(0, 0), (u, v)\} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get \{(0, 0), (u/2, v)\} as source subdomain and \{(u/2, 0), (u, v)\} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure \ref{fig:mirrorART}. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.    
+In this technique, the input domain of the program under test is divided into n disjoint subdomains of equal size and shape. One of the subdomains is called source subdomain while all the others are termed as mirror subdomains. ART is then applied only to the source subdomain to select the test cases and from all other subdomains test cases are selected by using mirror function. In MART {(0, 0), (u, v)} are used to represent the whole input domain where (0, 0) are the leftmost and (u, v) are the rightmost top corner of the two dimensional rectangle. On splitting it into two subdomains we get {(0, 0), (u/2, v)} as source subdomain and {(u/2, 0), (u, v)} as mirror subdomain. Let suppose we get x and y test cases by applying ART to source subdomain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure \ref{fig:mirrorART}. Experimental results showed that the performance of MART is equal to ART with MART using only one quarter of the calculations of that of ART.
 
 
 \subsection{Restricted Random Testing}
@@ -218,6 +214,9 @@ Large scale clusters of computers were used for 1500 hours of CPU time which res
 
 
 %\section{Automated Random Testing Tools}
+\section{Tools for Automated Random Testing}
+From the literature we can find a number of open source and commercial testing tools that automatically generate unit tests. Each tool utilize different generation technique but the one we are interested in is random technique. We present the most well known tools.
+
 
 \subsection{JCrasher}
 
@@ -287,7 +286,7 @@ Korat \cite{Boyapati2002} is a novel framework for automated testing of Java pro
 
 
 
-\subsection{YETI}
+\section{YETI}
 York Extensible Testing Infrastructure (YETI) is an automated tool for testing Java, JML and .NET assemblies \cite{Oriol2010c}. YETI execute the program under test with random generated but type-correct inputs and declare a fault if the response is an unexpected exception or a contract violation. YETI has been designed with an emphasis on extensibility. Its three main parts: the core infrastructure, strategies and language bindings are loosely coupled to easily accommodate new languages and strategies. To keep the process fully automated YETI uses two approaches for oracle (pass/fail judgement). If available, YETI uses code contracts as oracle if not it uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing. Other prominent features of YETI include its Graphical User Interface (GUI) for user friendliness and ability to distribute large testing tasks in cloud for parallel execution \cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
 
 \subsection{Construction of Test Cases}
@@ -359,8 +358,8 @@ As a result of both the above commands YETI launch its own GUI window and start 
 
 
 
-\subsection{Tools for Automated Random Testing}
-From the literature we can find a number of open source and commercial testing tools that automatically generate unit tests. Each tool utilize different generation technique but the one we are interested in is random technique. We present the most well known tools.
+\subsection{Summary of automated testing tools}
+
 
 \begin{figure}[h]
 	\centering
