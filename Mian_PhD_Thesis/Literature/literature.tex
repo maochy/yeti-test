@@ -16,7 +16,7 @@
 The very famous quote of , ``To err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Errors are not tolerated, particularly in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology 2002, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of the Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million are a few examples of losses caused by minor errors in the software. To achieve high quality, the software has to satisfy rigorous stages of testing. The more critical and complex the software, the higher the requirements for software testing and the larger the extent of damage caused as a result of an error in the software.
 
 \section{Software Testing}
-In the IEEE standard glossary of software engineering terminology  \cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results”. A successful test is one that finds a fault \cite{Myers2004}, where fault is defined as, the error made by people during software development \cite{american1984}.
+In the IEEE standard glossary of software engineering terminology  \cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault \cite{Myers2004}, where fault is defined as, the error made by people during software development \cite{american1984}.
 
 Being an integral part of Software Development Life Cycle (SDLC), the testing process starts from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs" \cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases the reliability and confidence of users in the tested product.
 
@@ -107,7 +107,7 @@ Test oracles set the acceptable behaviour for test executions \cite{baresi2001te
 Random testing is a dynamic black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain \cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard \cite{hamlet1994}, in random testing, input domain is first identified, then test points are randomly taken from the whole input domain by means of random number generator. The program under test is executed on these points and the results obtained are compared with the program specifications. The test fails if the results are not according to the specifications and vice versa. Failure of any test results reflects error in the SUT.
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{Literature/figure1.jpg}
+	\includegraphics[scale=0.5]{Literature/randomTesting.jpg}
 	\caption{Random Testing}
 \end{figure}
 
@@ -132,12 +132,12 @@ Adaptive random testing (ART), proposed by Chen et al. \cite{Chen2008} is based 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{Literature/pointblockstrip}
+	\includegraphics[scale=0.5]{Literature/pointblockstrip.jpg}
 	\caption{Patterns of failure causing inputs}
-	\label{fig:patterns}
+	\label{fig:patterns2}
 \end{figure}
 
-In figure \ref{fig:patterns} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box each box indicates the point, block and strip fault patterns.
+In figure \ref{fig:patterns2} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box each box indicates the point, block and strip fault patterns.
 
 Chen et al.  \cite{Chen2008} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more faults targeted test inputs they proposed Adaptive Random Testing (ART) as a modified version of ordinary random testing where test values are selected at random as usual but are evenly spread across the input domain by using two sets. The executed set comprises the test cases executed by the system and the candidate set includes the test cases to be executed by the system. Initially both the sets are empty. The first test case is selected at random from the candidate set and stored in executed set after execution. The second test case is then selected from the candidate set which is far away from the last executed test case. In this way the whole input domain is tested with greater chances of generating test input from the existing fault patterns.
 
@@ -253,7 +253,7 @@ Eclat \cite{Pacheco2005} testing tool automatically generates and classify unit 
 	\centering
 	\includegraphics[width=15cm, height=9cm]{Literature/eclat_working.png}
 	\caption{Main component of Eclat contributing to generate test input \cite{Pacheco2005}}
-	\label{fig:jcrasher}
+	\label{fig:eclat}
 \end{figure}
 
 
@@ -363,7 +363,7 @@ As a result of both the above commands YETI launch its own GUI window and start 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{Literature/tools}
+	\includegraphics[scale=0.6]{Literature/tools.jpg}
 	\caption{Summary of automated testing tools}
 \end{figure}
 

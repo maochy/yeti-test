@@ -1,15 +1,18 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.7)
-The top-level auxiliary file: thesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: Abstract/abstract.aux
 A level-1 auxiliary file: Acknowledgement/acknowledgement.aux
 A level-1 auxiliary file: Declaration/decleration.aux
 A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
+A level-1 auxiliary file: DSSR/dssr.aux
+A level-1 auxiliary file: ADFD/adfd.aux
+A level-1 auxiliary file: IGRS/igrs.aux
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 The style file: plain.bst
 Database file #1: References/references.bib
+Warning--I didn't find a database entry for "Oriol2010a"
 Warning--empty journal in cohen2005robustness
 Warning--empty booktitle in Dijkstra1972
 Warning--can't use both volume and number fields in Godefroid2005
@@ -17,47 +20,7 @@ Warning--there's a number but no volume in howden1986
 Warning--empty journal in Levenshtein1966
 Warning--can't use both volume and number fields in mccabe1983
 Warning--can't use both volume and number fields in ntafos1998random
+Warning--empty note in Oriol2010b
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-You've used 62 entries,
-            2118 wiz_defined-function locations,
-            892 strings with 14260 characters,
-and the built_in function-call counts, 23559 in all, are:
-= -- 2466
-> -- 927
-< -- 35
-+ -- 374
-- -- 304
-* -- 1538
-:= -- 3680
-add.period$ -- 216
-call.type$ -- 62
-change.case$ -- 331
-chr.to.int$ -- 0
-cite$ -- 71
-duplicate$ -- 1006
-empty$ -- 1900
-format.name$ -- 304
-if$ -- 5186
-int.to.chr$ -- 0
-int.to.str$ -- 62
-missing$ -- 66
-newline$ -- 314
-num.names$ -- 124
-pop$ -- 375
-preamble$ -- 1
-purify$ -- 276
-quote$ -- 0
-skip$ -- 742
-stack$ -- 0
-substring$ -- 1565
-swap$ -- 317
-text.length$ -- 35
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 236
-warning$ -- 9
-while$ -- 240
-width$ -- 64
-write$ -- 733
-(There were 9 warnings)
+(There were 11 warnings)

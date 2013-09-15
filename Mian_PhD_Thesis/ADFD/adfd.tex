@@ -6,7 +6,7 @@
  %   \graphicspath{{Adfd/AdfdFigs/EPS/}{Adfd/AdfdFigs/}}
 %\fi
 
-\section{Introduction}\label{sec:intro}
+\section{Introduction}\label{sec:intro4}
 
 Testing is fundamental requirement to assess the quality of any software. Manual testing is labour-intensive and error-prone; therefore emphasis is to use automated testing that significantly reduces the cost of software development process and its maintenance \cite{beizer1995black}. Most of the modern black-box testing techniques execute the System Under Test (SUT) with specific input and compare the obtained results against the test oracle. A report is generated at the end of each test session containing any discovered faults and the input values which triggers the faults. Debuggers fix the discovered faults in the SUT with the help of these reports. The revised version of the system is given back to the testers to find more faults and this process continues till the desired level of quality, set in test plan, is achieved.
 
@@ -61,7 +61,7 @@ It is interesting that where many random strategies are based on the principle o
 %In our previous research we extended the same idea of the existence of different domains of failure across the whole input domain proposed by Chen et al, \cite{Chen2008} and accepted by various other researchers to develop a new strategy called Dirt Spot Sweeping Strategy [X]. However the experimental results showed not very considerable improvement then what we predicted. We performed 500 experiments in which we carried out 10000 tests but the results showed only 5\% improvement contrary to our prediction of 30\%. All the experiments were performed from a pool of open-source projects bundled in a repository called Qualitas Corpus \cite{Tempero2010}. Corpus contains more than 100 open-source java projects and maintained only for the purpose of unbiased research experiments. Therefore one of the conclusions derived from our experiments was that the patterns of failure may not exist in most of the software‚Äôs due to which our strategy which focus on these patterns didn‚Äôt produce much efficiency.\\
 %It was therefore very interesting for us to do further research to find about the existence and nature of these failure patterns. Our main focus in this research paper is to discover whether there exist failure patterns across the input domain or not and if they exist then how frequent and what pattern they follow.\\
 
-The rest of this paper is organized as follows: \\ Section~\ref{sec:adfd} describes the ADFD strategy. Section~\ref{sec:implementation} presents implementation of the ADFD strategy. Section~\ref{sec:experimentalResults} explains the experimental results. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:validity} presents the threats to validity. Section~\ref{sec:relatedWork} presents related work and Section~\ref{sec:conclusion}, concludes the study.
+The rest of this paper is organized as follows: \\ Section~\ref{sec:adfd} describes the ADFD strategy. Section~\ref{sec:implementation} presents implementation of the ADFD strategy. Section~\ref{sec:experimentalResults} explains the experimental results. Section~\ref{sec:discussion4} discusses the results. Section~\ref{sec:validity} presents the threats to validity. Section~\ref{sec:relatedWork} presents related work and Section~\ref{sec:conclusion}, concludes the study.
 
 %In Section II, we describe the automated discovery of failure domain test strategy and explain its structure and function with the help of a flowchart and motivating example. Section III presents its implementation in automated random testing tool called York Extensible Testing Infrastructure (YETI). Section IV and V report the experiments performed using the proposed technique and evaluate \& discuss the obtained results. Section VI and VII discuss any threats to validity and related discussion. Finally we conclude in Section VIII. 
 
@@ -83,7 +83,7 @@ The rest of this paper is organized as follows: \\ Section~\ref{sec:adfd} descri
 
 \section{Automated Discovery of Failure Domain}\label{sec:adfd}
 
-Automated Discovery of Failure Domain (ADFD) strategy is proposed as improvement on R+ strategy with capability of finding faults as well as the fault domains. The output produced at the end of test session is a chart showing the passing value or range of values in green and failing value or range of values in red. The complete workflow of ADFD strategy is given in Figure \ref{fig:ADFD}.
+Automated Discovery of Failure Domain (ADFD) strategy is proposed as improvement on R+ strategy with capability of finding faults as well as the fault domains. The output produced at the end of test session is a chart showing the passing value or range of values in green and failing value or range of values in red. The complete workflow of ADFD strategy is given in Figure \ref{fig:ADFD-workflow}.
 
 The process is divided into five major steps given below and each step is briefly explained in the following paras.
 
@@ -99,7 +99,7 @@ The process is divided into five major steps given below and each step is briefl
 \centering
 \includegraphics[width=8.2cm,height=6cm]{ADFD/ADFD-Diagram1.png}
 \caption{Work flow of ADFD strategy}
-\label{fig:ADFD}
+\label{fig:ADFD-workflow}
 \end{figure}
 
 \begin{figure}[htp]
@@ -107,7 +107,7 @@ The process is divided into five major steps given below and each step is briefl
 %\centring
 \includegraphics[width=12cm,height=6.6cm]{ADFD/ADFD-front-end.png}
 \caption{Front-end of ADFD strategy}
-\label{fig:ADFD}
+\label{fig:ADFD-frontend}
 \end{center}
 \end{figure}
 
@@ -228,7 +228,7 @@ public class PointDomainOneArgument{
 \label{fig:ADFD-example}
 \end{figure}
 
-As soon as any one of the above four faults are discovered the ADFD strategy generate a dynamic program given in Appendix \ref{sec:appendix1} (1). This program is automatically compiled to get binary file and then executed to find the pass and fail domains inside the specified range. The identified domains are plotted on two-dimensional graph. It is evident from the output presented in Figure \ref{fig:ADFD-example} that ADFD strategy not only finds all the faults but also the pass and fail domains.
+As soon as any one of the above four faults are discovered the ADFD strategy generate a dynamic program given in Appendix \ref{sec:appendix1} (1). This program is automatically compiled to get binary file and then executed to find the pass and fail domains inside the specified range. The identified domains are plotted on two-dimensional graph. It is evident from the output presented in Figure \ref{fig:ADFD-plot} that ADFD strategy not only finds all the faults but also the pass and fail domains.
 
 
 \begin{comment}
@@ -240,7 +240,7 @@ ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of
 \centering
 \includegraphics[width=8.2cm,height=5cm]{pointDomainOneArgument.png}
 \caption{ADFD strategy plotting pass and fault domain of the given class}
-\label{fig:ADFD-example}
+\label{fig:ADFD-plot}
 \end{figure}
 
 In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
@@ -425,7 +425,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 
 
-\section{Discussion} \label{sec:discussion}
+\section{Discussion} \label{sec:discussion4}
 
 ADFD strategy with a simple graphical user interface is a fully automated process to identify and plot the pass and fault domains on the chart. Since the default settings are all set to optimum the user needs only to specify the module to be tested and click ``Draw fault domain" button to start test execution. All the steps including Identification of fault, generation of dynamic java program to find domain of the identified fault, saving the program to a permanent media, compiling the program to get its binary, execution of binaries to get pass and fail domain and plotting these values on the graph are done completely automated without any human intervention.
 
