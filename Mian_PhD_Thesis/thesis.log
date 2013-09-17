@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  17 SEP 2013 14:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  17 SEP 2013 14:39
 entering extended mode
 **thesis.tex
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.tex
@@ -634,38 +634,37 @@ No file Declaration/decleration.tex.
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+<Introduction/SoftwareTesting.png, id=555, 734.745pt x 308.15125pt>
+File: Introduction/SoftwareTesting.png Graphic file (type png)
 
-LaTeX Warning: File `SoftwareTesting.png' not found on input line 19.
+<use Introduction/SoftwareTesting.png>
+Package pdftex.def Info: Introduction/SoftwareTesting.png used on input line 18
+.
+(pdftex.def)             Requested size: 398.34839pt x 170.72032pt.
 
 
-! Package pdftex.def Error: File `SoftwareTesting.png' not found.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.19 		\includegraphics{SoftwareTesting.png}
-                                            
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 19.
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [1
+[1
 
 
 
 
-] [2]
+] [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.29 
+      <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Introduction/SoftwareTe
+sting.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
  [3]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
-)
-[4] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Literature/literature.tex
+) [4]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Literature/literature.tex
 Chapter 2.
 [5
 
@@ -677,7 +676,7 @@ Chapter 2.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.56 
-     ] [7] <Literature/randomTesting.jpg, id=652, 441.90094pt x 118.19156pt>
+     ] [7] <Literature/randomTesting.jpg, id=654, 441.90094pt x 118.19156pt>
 File: Literature/randomTesting.jpg Graphic file (type jpg)
 
 <use Literature/randomTesting.jpg>
@@ -704,7 +703,7 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 129.
 
-<Literature/pointblockstrip.jpg, id=691, 581.92406pt x 183.68625pt>
+<Literature/pointblockstrip.jpg, id=693, 581.92406pt x 183.68625pt>
 File: Literature/pointblockstrip.jpg Graphic file (type jpg)
 
 <use Literature/pointblockstrip.jpg>
@@ -718,7 +717,7 @@ Package pdftex.def Info: Literature/pointblockstrip.jpg used on input line 135.
                                                   \fi \fi 
 l.145 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/pointblocks
-trip.jpg>] <Literature/mart2.pdf, id=706, 350.30875pt x 185.69376pt>
+trip.jpg>] <Literature/mart2.pdf, id=708, 350.30875pt x 185.69376pt>
 File: Literature/mart2.pdf Graphic file (type pdf)
 
 <use Literature/mart2.pdf>
@@ -731,7 +730,7 @@ Package pdftex.def Info: Literature/mart2.pdf used on input line 151.
                                                   \fi \fi 
 l.162 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/mart2.pdf>]
-<Literature/RRT.pdf, id=734, 370.38374pt x 247.67531pt>
+<Literature/RRT.pdf, id=736, 370.38374pt x 247.67531pt>
 File: Literature/RRT.pdf Graphic file (type pdf)
 
 <use Literature/RRT.pdf>
@@ -745,7 +744,7 @@ Package pdftex.def Info: Literature/RRT.pdf used on input line 165.
 l.177 \item A
              utomatic Test Driver/Harness: After identification of all the e...
  <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/RRT.pdf>]
-[13] [14] [15] <Literature/jcrasher.png, id=780, 867.24pt x 402.50375pt>
+[13] [14] [15] <Literature/jcrasher.png, id=782, 867.24pt x 402.50375pt>
 File: Literature/jcrasher.png Graphic file (type png)
 
 <use Literature/jcrasher.png>
@@ -772,7 +771,7 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 242.
  [17]
-<Literature/eclat_working.png, id=798, 356.532pt x 235.1184pt>
+<Literature/eclat_working.png, id=800, 356.532pt x 235.1184pt>
 File: Literature/eclat_working.png Graphic file (type png)
 
 <use Literature/eclat_working.png>
@@ -801,7 +800,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `fig:XXX???' on page 21 undefined on input line 335.
 
-<Literature/yetiCommandCLI.pdf, id=832, 831.105pt x 95.35625pt>
+<Literature/yetiCommandCLI.pdf, id=834, 831.105pt x 95.35625pt>
 File: Literature/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandCLI.pdf>
@@ -811,7 +810,7 @@ Package pdftex.def Info: Literature/yetiCommandCLI.pdf used on input line 339.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Literature/yetiCommandGUI.pdf, id=833, 433.62pt x 494.84875pt>
+<Literature/yetiCommandGUI.pdf, id=835, 433.62pt x 494.84875pt>
 File: Literature/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandGUI.pdf>
@@ -821,7 +820,7 @@ Package pdftex.def Info: Literature/yetiCommandGUI.pdf used on input line 347.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[21] <Literature/tools.jpg, id=838, 636.9396pt x 667.293pt>
+[21] <Literature/tools.jpg, id=840, 636.9396pt x 667.293pt>
 File: Literature/tools.jpg Graphic file (type jpg)
 
 <use Literature/tools.jpg>
@@ -868,18 +867,22 @@ Chapter 3.
 
 
 ]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 17.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
 
 Package natbib Warning: Citation `Oriol2010a' on page 26 undefined on input lin
 e 32.
 
-[26] [27] <DSSR/ART_Patterns.png, id=939, 376.40625pt x 101.62968pt>
+[26] [27] <DSSR/ART_Patterns.png, id=942, 376.40625pt x 101.62968pt>
 File: DSSR/ART_Patterns.png Graphic file (type png)
 
 <use DSSR/ART_Patterns.png>
 Package pdftex.def Info: DSSR/ART_Patterns.png used on input line 47.
 (pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
 
-<DSSR/block2.png, id=941, 271.0125pt x 122.70844pt>
+<DSSR/block2.png, id=944, 271.0125pt x 122.70844pt>
 File: DSSR/block2.png Graphic file (type png)
  <use DSSR/block2.png>
 Package pdftex.def Info: DSSR/block2.png used on input line 56.
@@ -899,7 +902,7 @@ l.62
 l.62 
       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/ART_Patterns.png> 
 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/block2.png>]
-<DSSR/flowchart1.pdf, id=951, 193.19614pt x 195.7238pt>
+<DSSR/flowchart1.pdf, id=954, 193.19614pt x 195.7238pt>
 File: DSSR/flowchart1.pdf Graphic file (type pdf)
 
 <use DSSR/flowchart1.pdf>
@@ -922,7 +925,7 @@ l.125 *
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
  [31]
-<DSSR/hierarchy.pdf, id=989, 98.56648pt x 125.337pt>
+<DSSR/hierarchy.pdf, id=992, 98.56648pt x 125.337pt>
 File: DSSR/hierarchy.pdf Graphic file (type pdf)
  <use DSSR/hierarchy.pdf>
 Package pdftex.def Info: DSSR/hierarchy.pdf used on input line 163.
@@ -941,7 +944,7 @@ l.178
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.249 
-      ] <DSSR/DssrImprove.png, id=1029, 986.2446pt x 479.391pt>
+      ] <DSSR/DssrImprove.png, id=1032, 986.2446pt x 479.391pt>
 File: DSSR/DssrImprove.png Graphic file (type png)
 
 <use DSSR/DssrImprove.png>
@@ -986,7 +989,7 @@ Chapter 4.
 
 
 
-] <ADFD/ART_Patterns.png, id=1138, 376.40625pt x 101.62968pt>
+] <ADFD/ART_Patterns.png, id=1141, 376.40625pt x 101.62968pt>
 File: ADFD/ART_Patterns.png Graphic file (type png)
 
 <use ADFD/ART_Patterns.png>
@@ -999,14 +1002,14 @@ Package pdftex.def Info: ADFD/ART_Patterns.png used on input line 19.
                                                   \fi \fi 
 l.65 
       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ART_Patterns.png>]
-<ADFD/ADFD-Diagram1.png, id=1154, 589.20125pt x 414.54875pt>
+<ADFD/ADFD-Diagram1.png, id=1157, 589.20125pt x 414.54875pt>
 File: ADFD/ADFD-Diagram1.png Graphic file (type png)
 
 <use ADFD/ADFD-Diagram1.png>
 Package pdftex.def Info: ADFD/ADFD-Diagram1.png used on input line 100.
 (pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
 
-<ADFD/ADFD-front-end.png, id=1155, 1342.01375pt x 767.86874pt>
+<ADFD/ADFD-front-end.png, id=1158, 1342.01375pt x 767.86874pt>
 File: ADFD/ADFD-front-end.png Graphic file (type png)
 
 <use ADFD/ADFD-front-end.png>
@@ -1027,7 +1030,7 @@ l.116
 l.122 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ADFD-front-end.pn
 g>] [47] [48]
-<ADFD/pointDomainOneArgument.png, id=1206, 780.9175pt x 570.13pt>
+<ADFD/pointDomainOneArgument.png, id=1209, 780.9175pt x 570.13pt>
 File: ADFD/pointDomainOneArgument.png Graphic file (type png)
 
 <use ADFD/pointDomainOneArgument.png>
@@ -1065,13 +1068,13 @@ LaTeX Warning: Reference `sec:appendix1' on page 49 undefined on input line 313
                                                   \fi \fi 
 l.315 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/pointDomainOneArg
-ument.png>] <ADFD/PFDOne.png, id=1217, 790.955pt x 575.14874pt>
+ument.png>] <ADFD/PFDOne.png, id=1220, 790.955pt x 575.14874pt>
 File: ADFD/PFDOne.png Graphic file (type png)
 
 <use ADFD/PFDOne.png>
 Package pdftex.def Info: ADFD/PFDOne.png used on input line 321.
 (pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
- <ADFD/PFDTwo.png, id=1218, 785.93625pt x 573.14125pt>
+ <ADFD/PFDTwo.png, id=1221, 785.93625pt x 573.14125pt>
 File: ADFD/PFDTwo.png Graphic file (type png)
 
 <use ADFD/PFDTwo.png>
@@ -1082,13 +1085,13 @@ Package pdftex.def Info: ADFD/PFDTwo.png used on input line 325.
 LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 346
 .
 
-<ADFD/BFDOne.png, id=1222, 794.97pt x 575.14874pt>
+<ADFD/BFDOne.png, id=1225, 794.97pt x 575.14874pt>
 File: ADFD/BFDOne.png Graphic file (type png)
  <use ADFD/BFDOne.png>
 Package pdftex.def Info: ADFD/BFDOne.png used on input line 359.
 (pdftex.def)             Requested size: 170.709pt x 113.80783pt.
 
-<ADFD/BFDTwo.png, id=1223, 787.94376pt x 573.14125pt>
+<ADFD/BFDTwo.png, id=1226, 787.94376pt x 573.14125pt>
 File: ADFD/BFDTwo.png Graphic file (type png)
  <use ADFD/BFDTwo.png>
 Package pdftex.def Info: ADFD/BFDTwo.png used on input line 363.
@@ -1112,13 +1115,13 @@ sers/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/PFDTwo.png>]
 LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 387
 .
 
-<ADFD/SFDOne.png, id=1236, 789.95125pt x 573.14125pt>
+<ADFD/SFDOne.png, id=1239, 789.95125pt x 573.14125pt>
 File: ADFD/SFDOne.png Graphic file (type png)
  <use ADFD/SFDOne.png>
 Package pdftex.def Info: ADFD/SFDOne.png used on input line 397.
 (pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
 
-<ADFD/SFDTwo.png, id=1237, 788.9475pt x 575.14874pt>
+<ADFD/SFDTwo.png, id=1240, 788.9475pt x 575.14874pt>
 File: ADFD/SFDTwo.png Graphic file (type png)
  <use ADFD/SFDTwo.png>
 Package pdftex.def Info: ADFD/SFDTwo.png used on input line 401.
@@ -1194,7 +1197,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6D0775F690D41FC87ADE676F9F0113C9;6543.
 Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: B1F9B9F3023F6B3034FEA7DABBD75238;10479.
+(rerunfilecheck)             Checksum: B1EA3FE0B33EDB625BB0978D90B4E0E1;10479.
 
 
 LaTeX Warning: There were undefined references.
@@ -1202,10 +1205,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 10710 strings out of 493921
- 159560 string characters out of 3147270
+ 10712 strings out of 493921
+ 159680 string characters out of 3147270
  334922 words of memory out of 3000000
- 13302 multiletter control sequences out of 15000+200000
+ 13306 multiletter control sequences out of 15000+200000
  41185 words of font info for 94 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,12n,50p,1843b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1222,9 +1225,9 @@ iKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (75 pages, 2554321 bytes).
+Output written on thesis.pdf (75 pages, 2558816 bytes).
 PDF statistics:
- 1629 PDF objects out of 1728 (max. 8388607)
- 353 named destinations out of 1000 (max. 500000)
- 809 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1633 PDF objects out of 1728 (max. 8388607)
+ 354 named destinations out of 1000 (max. 500000)
+ 814 words of extra memory for PDF output out of 10000 (max. 10000000)
 

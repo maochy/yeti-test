@@ -9,17 +9,18 @@
 This chapter includes motivation for the research study followed by the problems in random testing, the alternative approaches to overcome these problems, the research objectives and contributions of the study. At the end of the chapter, the structure of the remaining thesis is given.
 
 \section{Motivation}
-Software is a very important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses to the organization \cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. This dissertation is a humble contribution to the literature on the subject, with the aim to reduce the overall cost of software testing by devising new, improved and effective software testing techniques based on random strategy.
+Software is a very important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses to the organization \cite{huang2004securing}. According to ...., estimated rate of private bugs have ranged from 15 to 150 bugs per 100 statements. 
 
-In random testing, generation of test data is random i.e. according to requirements, specifications or any other test adequacy criteria. The given SUT is executed against the test data and results obtained are evaluated to determine whether the output produced satisfies the expected results.
+Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. This dissertation is a humble contribution to the literature on the subject, with the aim to reduce the overall cost of software testing by devising new, improved and effective software testing techniques based on random strategy.
 
+Random testing is a process in which generation of test data is random but according to requirements, specifications or any other test adequacy criteria. The given SUT is executed against the test data and results obtained are evaluated to determine whether the output produced satisfies the expected results.
 
-\begin{figure}
+\begin{figure}[h]
 	\centering
-		\includegraphics{SoftwareTesting.png}
+		\includegraphics[width=14cm, height=6cm ]{Introduction/SoftwareTesting.png}
+		\caption{Three main phases of random testing}
 	\label{fig:SoftwareTesting}
 \end{figure}
-
 
 \section{The Problems}
 Exhaustive testing of software is not always possible and the problem of selecting a test data set, from a large/infinite domain is often confronted. Test data set, as a subset of the whole domain, is carefully selected for testing the given software. Adequate test data set is a crucial factor in any testing technique because it represents the whole domain for evaluating the structural and/or functional properties \cite{howden1986}, \cite{mccabe1983}. Generating test data set manually is a time-consuming and laborious exercise \cite{korel1990}; Therefore, automated test data set generation is always preferred. Data generators can be of different types i.e. Path-wise, Goal-Oriented, Intelligent or Random \cite{wiki2013}. Random generator produces test data set randomly from the whole domain. Unlike other approaches random technique is simple, widely applicable, easy to implement, faster in computation, free from bias and costs minimum overhead \cite{Ciupa2007}.  According to Godefroid et al, ``Random testing is a simple and well-known technique which can be remarkably effective in discovering software bugs" \cite{Godefroid2005}.
