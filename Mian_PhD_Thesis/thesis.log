@@ -1,28 +1,29 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  18 SEP 2013 00:54
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  18 SEP 2013 11:55
 entering extended mode
+\write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
 **thesis.tex
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.tex
-LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
- lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
-ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
-an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
-ishmax, welsh, loaded.
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Classes/CUEDthesisPSnPDF.cls
+(./thesis.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2008-06-18, ngerman-x-2008-06-18, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, la
+tin, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, polish, portuguese, r
+omanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, turki
+sh, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(./Classes/CUEDthesisPSnPDF.cls
 
 LaTeX Warning: You have requested document class `Classes/CUEDthesisPSnPDF',
                but the document class provides `CUEDthesisPSnPDF'.
 
 Document Class: CUEDthesisPSnPDF 2010/07/14 v1.1 CUED thesis class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
-Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk11.clo"
-File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -37,28 +38,31 @@ File: bk11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\tocbibind\tocbibind.sty"
-Package: tocbibind 2010/10/13 v1.5k extra ToC listings
-Package tocbibind Info: The document has chapter divisions on input line 50.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/tocbibind/tocbibind.sty
+Package: tocbibind 2003/03/13 v1.5g extra ToC listings
+
+
+Package tocbibind Note: The document has chapter divisions.
 
 
 Package tocbibind Note: Using chapter style headings, unless overridden.
 
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -69,25 +73,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\eucal.sty"
-Package: eucal 2009/06/22 v3.00 Euler Script fonts
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/eucal.sty
+Package: eucal 2001/10/01 v2.2d Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
-(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 55.
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2008/07/08 v3.8m The Babel package
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2008/07/06 v3.8l The Babel package
 
-*************************************
-* Local config file bblopts.cfg used
-*
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
-File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\english.ldf"
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/english.ldf
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2008/07/08 v3.8m Babel common definitions
+(/usr/local/texlive/2008/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2008/07/06 v3.8l Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
@@ -95,436 +93,387 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+(/usr/local/texlive/2008/texmf/tex/latex/config/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2008/09/08 v0.04l Graphics/color for pdfTeX
 \Gread@gobject=\count89
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\dvipsnam.def"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\footmisc\footmisc.sty"
-Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
+(/usr/local/texlive/2008/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2007/06/12 v5.4a a miscellany of footnote facilities
 \FN@temptoken=\toks15
 \footnotemargin=\dimen104
 \c@pp@next@reset=\count90
 \c@@fnserial=\count91
-Package footmisc Info: Declaring symbol style bringhurst on input line 855.
-Package footmisc Info: Declaring symbol style chicago on input line 863.
-Package footmisc Info: Declaring symbol style wiley on input line 872.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+Package footmisc Info: Declaring symbol style bringhurst on input line 910.
+Package footmisc Info: Declaring symbol style chicago on input line 918.
+Package footmisc Info: Declaring symbol style wiley on input line 927.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 938.
 
-Package footmisc Info: Declaring symbol style lamport* on input line 903.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+Package footmisc Info: Declaring symbol style lamport* on input line 958.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 979
 .
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
-Package: natbib 2010/09/13 8.31b (PWD, AO)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2009/02/02 8.3 (PWD, AO)
 \bibhang=\skip52
 \bibsep=\skip53
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count92
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2007/12/12 v1.6 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen105
 \nom@tempdim=\dimen106
 \nomitemsep=\skip54
 )
 \@nomenclaturefile=\write3
+\openout3 = `thesis.nlo'.
+
 
 Writing nomenclature file thesis.nlo
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
-Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+(/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/02/22 v6.78p Hypertext links for LaTeX
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
-
-
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
-Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
-Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
-)
-Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
-Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
-Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
-Package: xcolor-patch 2011/01/30 xcolor patch
-Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
-Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
-Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
-Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
-Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
-Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+(/usr/local/texlive/2008/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2008/09/08 v1.4 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2008/09/08 xcolor patch
+))
 \@linkdim=\dimen107
 \Hy@linkcounter=\count93
 \Hy@pagecounter=\count94
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
-File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/02/22 v6.78p Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count95
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/local/texlive/2008/texmf/tex/latex/config/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `plainpages' set `false' on input line 4319.
-Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4319.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4319
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2007/10/18 v3.0 Keyval support for LaTeX options (HO)
+)
+Package hyperref Info: Option `plainpages' set `false' on input line 2824.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 2824.
+Package hyperref Info: Option `bookmarks' set `true' on input line 2824.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 2824.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 2824
 .
-Package hyperref Info: Option `breaklinks' set `true' on input line 4319.
-Package hyperref Info: Option `linktocpage' set `true' on input line 4319.
-Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
-Package hyperref Info: Option `hyperindex' set `true' on input line 4319.
-Package hyperref Info: Option `hyperfigures' set `true' on input line 4319.
-Package hyperref Info: Hyper figures ON on input line 4441.
-Package hyperref Info: Link nesting OFF on input line 4448.
-Package hyperref Info: Hyper index ON on input line 4451.
-Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing ON on input line 4461.
-Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4688.
+Package hyperref Info: Option `breaklinks' set `true' on input line 2824.
+Package hyperref Info: Option `linktocpage' set `true' on input line 2824.
+Package hyperref Info: Option `colorlinks' set `true' on input line 2824.
+Package hyperref Info: Option `hyperindex' set `true' on input line 2824.
+Package hyperref Info: Option `hyperfigures' set `true' on input line 2824.
+Package hyperref Info: Hyper figures ON on input line 2933.
+Package hyperref Info: Link nesting OFF on input line 2940.
+Package hyperref Info: Hyper index ON on input line 2943.
+Package hyperref Info: Plain pages OFF on input line 2950.
+Package hyperref Info: Backreferencing ON on input line 2953.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\backref.sty"
-Package: backref 2012/07/25 v1.38 Bibliographical back referencing
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
-))
-\c@Hy@tempcnt=\count96
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3145.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/backref.sty
+Package: backref 2006/09/05 v1.28 Bibliographical back referencing
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen108
-\Fld@menulength=\count97
-\Field@Width=\dimen109
-\Fld@charsize=\dimen110
-Package hyperref Info: Hyper figures ON on input line 6293.
-Package hyperref Info: Link nesting OFF on input line 6300.
-Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing ON on input line 6308.
-Package hyperref Info: Link coloring ON on input line 6313.
-Package hyperref Info: Link coloring with OCG OFF on input line 6320.
-Package hyperref Info: PDF/A mode OFF on input line 6325.
-LaTeX Info: Redefining \ref on input line 6365.
-LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count98
-\c@Item=\count99
-\c@Hfootnote=\count100
-)
+LaTeX Info: Redefining \url on input line 3382.
 
-Package hyperref Message: Driver: hpdftex.
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
-File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count101
-\c@bookmark@seq@number=\count102
-\Hy@SectionHShift=\skip55
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2007/12/12 v0.3 LuaTeX support for pdfTeX utility functions
+ (HO)
+Package pdftexcmds Info: LuaTeX not detected on input line 139.
+)))
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2007/09/29 v1.3 Key value parser with default handler suppor
+t (HO)
+)
+\Fld@menulength=\count95
+\Field@Width=\dimen108
+\Fld@charsize=\dimen109
+\Field@toks=\toks17
+Package hyperref Info: Hyper figures ON on input line 4297.
+Package hyperref Info: Link nesting OFF on input line 4304.
+Package hyperref Info: Hyper index ON on input line 4307.
+Package hyperref Info: backreferencing ON on input line 4312.
+Package hyperref Info: Link coloring ON on input line 4317.
+Package hyperref Info: Link coloring with OCG OFF on input line 4324.
+Package hyperref Info: PDF/A mode OFF on input line 4329.
+
+(/usr/local/texlive/2008/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count96
+\c@Item=\count97
+\c@Hfootnote=\count98
+)
+*hyperref using driver hpdftex*
+(/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/02/22 v6.78p Hyperref driver for pdfTeX
+\Fld@listcount=\count99
+)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+(/usr/local/texlive/2008/texmf/tex/latex/config/graphics.cfg
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 91.
+Package graphics Info: Driver file: pdftex.def on input line 90.
 )
-\Gin@req@height=\dimen111
-\Gin@req@width=\dimen112
+\Gin@req@height=\dimen110
+\Gin@req@width=\dimen111
 )
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
 less on input line 165.
 
-) ("C:\Program Files\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
-\bigstrutjot=\dimen113
+) (/usr/local/texlive/2008/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen112
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ncctools\watermark.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/ncctools/watermark.sty
 Package: watermark 2004/12/09 v1.1 Watermarks (NCC)
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip56
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks17
-\ex@=\dimen114
+\@emptytoks=\toks18
+\ex@=\dimen113
 ))
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen115
+\pmbraise@=\dimen114
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count103
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count104
-\leftroot@=\count105
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count106
-\DOTSCASE@=\count107
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+\inf@bad=\count100
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count101
+\leftroot@=\count102
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count103
+\DOTSCASE@=\count104
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen116
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count108
-\c@MaxMatrixCols=\count109
+\big@size=\dimen115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count105
+\c@MaxMatrixCols=\count106
 \dotsspace@=\muskip11
-\c@parentequation=\count110
-\dspbrk@lvl=\count111
-\tag@help=\toks18
-\row@=\count112
-\column@=\count113
-\maxfields@=\count114
-\andhelp@=\toks19
-\eqnshift@=\dimen117
-\alignsep@=\dimen118
-\tagshift@=\dimen119
-\tagwidth@=\dimen120
-\totwidth@=\dimen121
-\lineht@=\dimen122
-\@envbody=\toks20
-\multlinegap=\skip57
-\multlinetaggap=\skip58
-\mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+\c@parentequation=\count107
+\dspbrk@lvl=\count108
+\tag@help=\toks19
+\row@=\count109
+\column@=\count110
+\maxfields@=\count111
+\andhelp@=\toks20
+\eqnshift@=\dimen116
+\alignsep@=\dimen117
+\tagshift@=\dimen118
+\tagwidth@=\dimen119
+\totwidth@=\dimen120
+\lineht@=\dimen121
+\@envbody=\toks21
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen123
-\epsfysize=\dimen124
+\epsfxsize=\dimen122
+\epsfysize=\dimen123
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count115
-\float@exts=\toks22
+\c@float@type=\count112
+\float@exts=\toks23
 \float@box=\box28
-\@float@everytoks=\toks23
+\@float@everytoks=\toks24
 \@floatcapt=\box29
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latexsym.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
-\@enLab=\toks24
+\@enLab=\toks25
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
-Package: subfigure 2002/07/30 v2.1.4 subfigure package
-\subfigtopskip=\skip59
-\subfigcapskip=\skip60
-\subfigcaptopadj=\dimen125
-\subfigbottomskip=\skip61
-\subfigcapmargin=\dimen126
-\subfiglabelskip=\skip62
-\c@subfigure=\count116
-\c@lofdepth=\count117
-\c@subtable=\count118
-\c@lotdepth=\count119
+(/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip58
+\subfigcapskip=\skip59
+\subfigcaptopadj=\dimen124
+\subfigbottomskip=\skip60
+\subfigcapmargin=\dimen125
+\subfiglabelskip=\skip61
+\c@subfigure=\count113
+\c@lofdepth=\count114
+\c@subtable=\count115
+\c@lotdepth=\count116
 
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-("C:\Program Files\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
-\subfig@top=\skip63
-\subfig@bottom=\skip64
+(/usr/local/texlive/2008/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip62
+\subfig@bottom=\skip63
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\rotating\rotating.sty"
-Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
-\c@r@tfl@t=\count120
-\rotFPtop=\skip65
-\rotFPbot=\skip66
+(/usr/local/texlive/2008/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2008/10/05 v2.15c rotated objects in LaTeX
+\c@r@tfl@t=\count117
+\rotFPtop=\skip64
+\rotFPbot=\skip65
 \rot@float@box=\box30
-\rot@mess@toks=\toks25
+\rot@mess@toks=\toks26
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks26
-\verbatim@line=\toks27
+\every@verbatim=\toks27
+\verbatim@line=\toks28
 \verbatim@in@stream=\read1
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen127
-\extrarowheight=\dimen128
-\NC@list=\toks28
-\extratabsurround=\skip67
-\backup@length=\skip68
+(/usr/local/texlive/2008/texmf-dist/tex/latex/tools/array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen126
+\extrarowheight=\dimen127
+\NC@list=\toks29
+\extratabsurround=\skip66
+\backup@length=\skip67
 )
-\TX@col@width=\dimen129
-\TX@old@table=\dimen130
-\TX@old@col=\dimen131
-\TX@target=\dimen132
-\TX@delta=\dimen133
-\TX@cols=\count121
-\TX@ftn=\toks29
+\TX@col@width=\dimen128
+\TX@old@table=\dimen129
+\TX@old@col=\dimen130
+\TX@target=\dimen131
+\TX@delta=\dimen132
+\TX@cols=\count118
+\TX@ftn=\toks30
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/ltxmisc/ulem.sty
 \UL@box=\box31
 \UL@hyphenbox=\box32
-\UL@skip=\skip69
-\UL@hook=\toks30
-\UL@height=\dimen134
-\UL@pe=\count122
-\UL@pixel=\dimen135
+\UL@skip=\skip68
+\UL@hook=\toks31
+\UL@pe=\count119
+\UL@pixel=\dimen133
 \ULC@box=\box33
-Package: ulem 2012/05/18
-\ULdepth=\dimen136
+Package: ulem 2000/05/26
+\ULdepth=\dimen134
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.sty"
-\lst@mode=\count123
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count120
 \lst@gtempboxa=\box34
-\lst@token=\toks31
-\lst@length=\count124
-\lst@currlwidth=\dimen137
-\lst@column=\count125
-\lst@pos=\count126
-\lst@lostspace=\dimen138
-\lst@width=\dimen139
-\lst@newlines=\count127
-\lst@lineno=\count128
-\lst@maxwidth=\dimen140
+\lst@token=\toks32
+\lst@length=\count121
+\lst@currlwidth=\dimen135
+\lst@column=\count122
+\lst@pos=\count123
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
+\lst@newlines=\count124
+\lst@lineno=\count125
+\lst@maxwidth=\dimen138
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
-File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count129
-\lst@skipnumbers=\count130
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count126
+\lst@skipnumbers=\count127
 \lst@framebox=\box35
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\listings.cfg"
-File: listings.cfg 2013/08/26 1.5b listings configuration
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
-Package: listings 2013/08/26 1.5b (Carsten Heinz)
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2013/08/26 1.5b listings language file
+(/usr/local/texlive/2008/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
+(./thesis.aux (./Abstract/abstract.aux) (./Acknowledgement/acknowledgement.aux)
+(./Declaration/decleration.aux) (./Dedication/dedication.aux)
+(./Introduction/introduction.aux) (./Literature/literature.aux)
+(./DSSR/dssr.aux) (./ADFD/adfd.aux) (./IGRS/igrs.aux)
+(./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux)
 
-! LaTeX Error: Option clash for package natbib.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.88 \onehalfspacing
-                    
-The package natbib has already been loaded with options:
-  [square,sort,numbers,authoryear]
-There has now been an attempt to load it with options
-  [sort&compress]
-Adding the global options:
-  square,sort,numbers,authoryear,sort&compress
-to your \documentclass declaration may fix this.
-Try typing  <return>  to proceed.
-
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.aux
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Abstract/abstract.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Acknowledgement/acknowledgeme
-nt.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Declaration/decleration.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Dedication/dedication.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Introduction/introduction.aux
-) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Literature/literature.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\DSSR/dssr.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ADFD/adfd.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\IGRS/igrs.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix1/appendix1.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix2/appendix2.aux)
-
-! Package natbib Error: Bibliography not compatible with author-year citations.
-
+./thesis.aux:169: Package natbib Error: Bibliography not compatible with author
+-year citations.
 (natbib)                Press <return> to continue in numerical citation style.
 
 
@@ -532,91 +481,91 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.173 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.169 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
-
+? 
 )
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 90.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 89.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(/usr/local/texlive/2008/texmf-dist/tex/context/base/supp-pdf.tex
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
-\scratchdimen=\dimen141
+\scratchcounter=\count128
+\scratchdimen=\dimen139
 \scratchbox=\box36
-\nofMPsegments=\count132
-\nofMParguments=\count133
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count134
-\MPscratchDim=\dimen142
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
-\everyMPtoPDFconversion=\toks33
+\nofMPsegments=\count129
+\nofMParguments=\count130
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen140
+\MPnumerator=\count132
+\everyMPtoPDFconversion=\toks34
 )
-\AtBeginShipoutBox=\box37
-Package backref Info: ** backref set up for natbib ** on input line 90.
-Package hyperref Info: Link coloring ON on input line 90.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
-Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+Package hyperref Info: Link coloring ON on input line 89.
+ (/usr/local/texlive/2008/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 
-("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
-Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+(/usr/local/texlive/2008/texmf-dist/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count137
+\c@section@level=\count133
 )
-LaTeX Info: Redefining \ref on input line 90.
-LaTeX Info: Redefining \pageref on input line 90.
-LaTeX Info: Redefining \nameref on input line 90.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
 
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.out)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.out)
+(./thesis.out) (./thesis.out)
 \@outlinefile=\write4
-\c@lstlisting=\count138
+\openout4 = `thesis.out'.
+
+Package backref Info: ** backref set up for natbib ** on input line 89.
+\AtBeginShipoutBox=\box37
+\c@lstlisting=\count134
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 113.
  [0
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Abstract/abstract.tex
+{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `Abstract/abstract.aux'.
+
+ (./Abstract/abstract.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+ [1
 
-[1
 
-
-]) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.toc
+]) (./thesis.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Try loading font information for U+msa on input line 7.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 7.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 7.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ulasy.fd"
+(/usr/local/texlive/2008/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [2
 \FN@pp@footnotehinttrue 
@@ -624,31 +573,43 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 ] [3])
 \tf@toc=\write5
- [4] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.lof)
+\openout5 = `thesis.toc'.
+
+ [4] (./thesis.lof)
 \tf@lof=\write6
+\openout6 = `thesis.lof'.
 
-[5
+ [5
 
-] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.lot)
+] (./thesis.lot)
 \tf@lot=\write7
+\openout7 = `thesis.lot'.
+
 
 No file thesis.nls.
 [6
 
 ]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Acknowledgement/acknowledgeme
-nt.tex [7
+\openout2 = `Acknowledgement/acknowledgement.aux'.
+
+ (./Acknowledgement/acknowledgement.tex [7
 
 ])
+\openout2 = `Declaration/decleration.aux'.
+
+
 No file Declaration/decleration.tex.
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Dedication/dedication.tex
-[8
+\openout2 = `Dedication/dedication.aux'.
+
+(./Dedication/dedication.tex [8
 
 
 
 
 ])
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Introduction/introduction.tex
+\openout2 = `Introduction/introduction.aux'.
+
+ (./Introduction/introduction.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
@@ -658,28 +619,40 @@ Missing character: There is no ’ in font ptmr7t!
 
 
 
-] <Introduction/SoftwareTesting.png, id=565, 734.745pt x 308.15125pt>
-File: Introduction/SoftwareTesting.png Graphic file (type png)
+]
 
-<use Introduction/SoftwareTesting.png>
-Package pdftex.def Info: Introduction/SoftwareTesting.png used on input line 23
-.
-(pdftex.def)             Requested size: 398.34839pt x 170.72032pt.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1
-}) has been already used, duplicate ignored
+LaTeX Warning: File `Introduction/SoftwareTesting.png' not found on input line 
+23.
+
+
+./Introduction/introduction.tex:23: Package pdftex.def Error: File `Introductio
+n/SoftwareTesting.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...ht=6cm ]{Introduction/SoftwareTesting.png}
+                                                  
+? 
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 23.
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.32 
-      <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Introduction/SoftwareTe
-sting.png>]
+     ] [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
- [3]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
  [4]) [5]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Literature/literature.tex
+\openout2 = `Literature/literature.aux'.
+
+ (./Literature/literature.tex
 Chapter 2.
 
 Package natbib Warning: Citation `Myers2004' on page 6 undefined on input line 
@@ -695,13 +668,10 @@ Package natbib Warning: Citation `Myers2004' on page 6 undefined on input line
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.56 
-     ] [8] <Literature/randomTesting.jpg, id=666, 441.90094pt x 118.19156pt>
+     ] [8] <Literature/randomTesting.jpg, id=674, 441.90094pt x 118.19156pt>
 File: Literature/randomTesting.jpg Graphic file (type jpg)
 
 <use Literature/randomTesting.jpg>
-Package pdftex.def Info: Literature/randomTesting.jpg used on input line 110.
-(pdftex.def)             Requested size: 220.94992pt x 59.09563pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -712,64 +682,52 @@ LaTeX Warning: `h' float specifier changed to `ht'.
                                                   \fi \fi 
 l.129 \item B
              lock pattern: In the block pattern inputs inducing failures lie...
- <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/randomTesting.jpg
->]
+ <./Literature/randomTesting.jpg>]
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 129.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 129.
 
-<Literature/pointblockstrip.jpg, id=705, 581.92406pt x 183.68625pt>
+<Literature/pointblockstrip.jpg, id=713, 581.92406pt x 183.68625pt>
 File: Literature/pointblockstrip.jpg Graphic file (type jpg)
 
-<use Literature/pointblockstrip.jpg>
-Package pdftex.def Info: Literature/pointblockstrip.jpg used on input line 135.
-
-(pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
- [11pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-2}) has been already used, duplicate ignored
+<use Literature/pointblockstrip.jpg> [11pdfTeX warning (ext4): destination with
+ the same identifier (name{figure.2.2}) has been already used, duplicate ignore
+d
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.145 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/pointblocks
-trip.jpg>] <Literature/mart2.pdf, id=719, 350.30875pt x 185.69376pt>
+       <./Literature/pointblockstrip.jpg>]
+<Literature/mart2.pdf, id=727, 350.30875pt x 185.69376pt>
 File: Literature/mart2.pdf Graphic file (type pdf)
 
-<use Literature/mart2.pdf>
-Package pdftex.def Info: Literature/mart2.pdf used on input line 151.
-(pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
- [12pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-3}) has been already used, duplicate ignored
+<use Literature/mart2.pdf> [12pdfTeX warning (ext4): destination with the same 
+identifier (name{figure.2.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.162 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/mart2.pdf>]
-<Literature/RRT.pdf, id=747, 370.38374pt x 247.67531pt>
+       <./Literature/mart2.pdf>]
+<Literature/RRT.pdf, id=755, 370.38374pt x 247.67531pt>
 File: Literature/RRT.pdf Graphic file (type pdf)
 
-<use Literature/RRT.pdf>
-Package pdftex.def Info: Literature/RRT.pdf used on input line 165.
-(pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
- [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-4}) has been already used, duplicate ignored
+<use Literature/RRT.pdf> [13pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.177 \item A
              utomatic Test Driver/Harness: After identification of all the e...
- <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/RRT.pdf>]
-[14] [15] [16] <Literature/jcrasher.png, id=794, 867.24pt x 402.50375pt>
+ <./Literature/RRT.pdf>] [14] [15] [16]
+<Literature/jcrasher.png, id=802, 867.24pt x 402.50375pt>
 File: Literature/jcrasher.png Graphic file (type png)
 
 <use Literature/jcrasher.png>
-Package pdftex.def Info: Literature/jcrasher.png used on input line 227.
-(pdftex.def)             Requested size: 426.79071pt x 199.16934pt.
-
 Overfull \hbox (14.22575pt too wide) in paragraph at lines 227--228
  [][] 
  []
@@ -780,23 +738,20 @@ Overfull \hbox (14.22575pt too wide) in paragraph at lines 227--228
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.233 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/jcrasher.pn
-g>]
+       <./Literature/jcrasher.png (PNG copy)>]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 242.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 242.
  [18]
-<Literature/eclat_working.png, id=811, 356.532pt x 235.1184pt>
+<Literature/eclat_working.png, id=819, 356.532pt x 235.1184pt>
 File: Literature/eclat_working.png Graphic file (type png)
 
 <use Literature/eclat_working.png>
-Package pdftex.def Info: Literature/eclat_working.png used on input line 254.
-(pdftex.def)             Requested size: 426.82436pt x 256.09814pt.
-
 Overfull \hbox (14.2594pt too wide) in paragraph at lines 254--255
  [][] 
  []
@@ -807,8 +762,7 @@ Overfull \hbox (14.2594pt too wide) in paragraph at lines 254--255
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.262 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/eclat_worki
-ng.png>] [20] [21]
+       <./Literature/eclat_working.png>] [20] [21]
 Overfull \hbox (34.1438pt too wide) in paragraph at lines 303--331
  [][] 
  []
@@ -819,33 +773,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `fig:XXX???' on page 22 undefined on input line 335.
 
-<Literature/yetiCommandCLI.pdf, id=845, 831.105pt x 95.35625pt>
+<Literature/yetiCommandCLI.pdf, id=853, 831.105pt x 95.35625pt>
 File: Literature/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandCLI.pdf>
-Package pdftex.def Info: Literature/yetiCommandCLI.pdf used on input line 339.
-(pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Literature/yetiCommandGUI.pdf, id=846, 433.62pt x 494.84875pt>
+<Literature/yetiCommandGUI.pdf, id=854, 433.62pt x 494.84875pt>
 File: Literature/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandGUI.pdf>
-Package pdftex.def Info: Literature/yetiCommandGUI.pdf used on input line 347.
-(pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22] <Literature/tools.jpg, id=852, 636.9396pt x 667.293pt>
+[22] <Literature/tools.jpg, id=860, 636.9396pt x 667.293pt>
 File: Literature/tools.jpg Graphic file (type jpg)
 
 <use Literature/tools.jpg>
-Package pdftex.def Info: Literature/tools.jpg used on input line 366.
-(pdftex.def)             Requested size: 382.1667pt x 400.37889pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -854,42 +799,38 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.142 \include{Literature/literature}
+l.141 \include{Literature/literature}
                                      pdfTeX warning (ext4): destination with th
 e same identifier (name{figure.2.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.142 \include{Literature/literature}
-                                      <C:/Users/MianAsbat/git/yeti-test/Mian_Ph
-D_Thesis/Literature/yetiCommandCLI.pdf>] [24pdfTeX warning (ext4): destination 
-with the same identifier (name{figure.2.8}) has been already used, duplicate ig
-nored
+l.141 \include{Literature/literature}
+                                      <./Literature/yetiCommandCLI.pdf>]
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.2.8
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.142 \include{Literature/literature}
-                                      <C:/Users/MianAsbat/git/yeti-test/Mian_Ph
-D_Thesis/Literature/yetiCommandGUI.pdf>] [25pdfTeX warning (ext4): destination 
-with the same identifier (name{figure.2.9}) has been already used, duplicate ig
-nored
+l.141 \include{Literature/literature}
+                                      <./Literature/yetiCommandGUI.pdf>]
+[25pdfTeX warning (ext4): destination with the same identifier (name{figure.2.9
+}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.142 \include{Literature/literature}
-                                      <C:/Users/MianAsbat/git/yeti-test/Mian_Ph
-D_Thesis/Literature/tools.jpg>]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\DSSR/dssr.tex
+l.141 \include{Literature/literature}
+                                      <./Literature/tools.jpg>]
+\openout2 = `DSSR/dssr.aux'.
+
+
+(./DSSR/dssr.tex
 Chapter 3.
 [26
 
 
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 17.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
 
 Package natbib Warning: Citation `Oriol2010a' on page 27 undefined on input lin
 e 32.
@@ -899,19 +840,13 @@ e 32.
 Package natbib Warning: Citation `Myers2004' on page 28 undefined on input line
  34.
 
-[28] <DSSR/ART_Patterns.png, id=953, 376.40625pt x 101.62968pt>
+[28] <DSSR/ART_Patterns.png, id=960, 376.40625pt x 101.62968pt>
 File: DSSR/ART_Patterns.png Graphic file (type png)
 
 <use DSSR/ART_Patterns.png>
-Package pdftex.def Info: DSSR/ART_Patterns.png used on input line 47.
-(pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
-
-<DSSR/block2.png, id=955, 271.0125pt x 122.70844pt>
+<DSSR/block2.png, id=962, 271.0125pt x 122.70844pt>
 File: DSSR/block2.png Graphic file (type png)
  <use DSSR/block2.png>
-Package pdftex.def Info: DSSR/block2.png used on input line 56.
-(pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
-
 [29pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
@@ -924,23 +859,18 @@ l.62
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.62 
-      <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/ART_Patterns.png> 
-<C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/block2.png>]
-<DSSR/flowchart1.pdf, id=964, 193.19614pt x 195.7238pt>
+      <./DSSR/ART_Patterns.png> <./DSSR/block2.png>]
+<DSSR/flowchart1.pdf, id=971, 193.19614pt x 195.7238pt>
 File: DSSR/flowchart1.pdf Graphic file (type pdf)
 
-<use DSSR/flowchart1.pdf>
-Package pdftex.def Info: DSSR/flowchart1.pdf used on input line 69.
-(pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
-3}) has been already used, duplicate ignored
+<use DSSR/flowchart1.pdf> [30pdfTeX warning (ext4): destination with the same i
+dentifier (name{figure.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.75 
-      <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/flowchart1.pdf>]
-[31pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
-) has been already used, duplicate ignored
+      <./DSSR/flowchart1.pdf>] [31pdfTeX warning (ext4): destination with the s
+ame identifier (name{table.3.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -949,32 +879,25 @@ l.125 *
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
  [32]
-<DSSR/hierarchy.pdf, id=1002, 98.56648pt x 125.337pt>
+<DSSR/hierarchy.pdf, id=1009, 98.56648pt x 125.337pt>
 File: DSSR/hierarchy.pdf Graphic file (type pdf)
  <use DSSR/hierarchy.pdf>
-Package pdftex.def Info: DSSR/hierarchy.pdf used on input line 163.
-(pdftex.def)             Requested size: 113.8153pt x 142.27174pt.
-
 [33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.178 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/hierarchy.pdf>]
-[34] [35pdfTeX warning (ext4): destination with the same identifier (name{table
-.3.2}) has been already used, duplicate ignored
+       <./DSSR/hierarchy.pdf>] [34] [35pdfTeX warning (ext4): destination with 
+the same identifier (name{table.3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.249 
-      ] <DSSR/DssrImprove.png, id=1042, 986.2446pt x 479.391pt>
+      ] <DSSR/DssrImprove.png, id=1049, 986.2446pt x 479.391pt>
 File: DSSR/DssrImprove.png Graphic file (type png)
 
 <use DSSR/DssrImprove.png>
-Package pdftex.def Info: DSSR/DssrImprove.png used on input line 257.
-(pdftex.def)             Requested size: 398.33858pt x 193.62561pt.
-
 Overfull \hbox (89.70525pt too wide) in alignment at lines 343--343
 [][][][][][][][][][][][][][][] 
  []
@@ -988,9 +911,8 @@ LaTeX Warning: Float too large for page by 65.58208pt on input line 347.
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.353 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/DssrImprove.png>]
-[37pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}
-) has been already used, duplicate ignored
+       <./DSSR/DssrImprove.png>] [37pdfTeX warning (ext4): destination with the
+ same identifier (name{table.3.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1007,61 +929,49 @@ e.3.4}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.419 
       ] [40] [41] [42]) [43]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ADFD/adfd.tex
+\openout2 = `ADFD/adfd.aux'.
+
+ (./ADFD/adfd.tex
 Chapter 4.
 [44
 
 
 
-] <ADFD/ART_Patterns.png, id=1151, 376.40625pt x 101.62968pt>
+] <ADFD/ART_Patterns.png, id=1158, 376.40625pt x 101.62968pt>
 File: ADFD/ART_Patterns.png Graphic file (type png)
 
-<use ADFD/ART_Patterns.png>
-Package pdftex.def Info: ADFD/ART_Patterns.png used on input line 19.
-(pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-1}) has been already used, duplicate ignored
+<use ADFD/ART_Patterns.png> [45pdfTeX warning (ext4): destination with the same
+ identifier (name{figure.4.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.65 
-      <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ART_Patterns.png>]
-<ADFD/ADFD-Diagram1.png, id=1167, 589.20125pt x 414.54875pt>
+      <./ADFD/ART_Patterns.png>]
+<ADFD/ADFD-Diagram1.png, id=1174, 589.20125pt x 414.54875pt>
 File: ADFD/ADFD-Diagram1.png Graphic file (type png)
 
 <use ADFD/ADFD-Diagram1.png>
-Package pdftex.def Info: ADFD/ADFD-Diagram1.png used on input line 100.
-(pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
-
-<ADFD/ADFD-front-end.png, id=1168, 1342.01375pt x 767.86874pt>
+<ADFD/ADFD-front-end.png, id=1175, 1342.01375pt x 767.86874pt>
 File: ADFD/ADFD-front-end.png Graphic file (type png)
 
-<use ADFD/ADFD-front-end.png>
-Package pdftex.def Info: ADFD/ADFD-front-end.png used on input line 108.
-(pdftex.def)             Requested size: 341.4206pt x 187.78384pt.
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-2}) has been already used, duplicate ignored
+<use ADFD/ADFD-front-end.png> [46pdfTeX warning (ext4): destination with the sa
+me identifier (name{figure.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.116 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ADFD-Diagram1.png
->] [47pdfTeX warning (ext4): destination with the same identifier (name{figure.
-4.3}) has been already used, duplicate ignored
+       <./ADFD/ADFD-Diagram1.png (PNG copy)>] [47pdfTeX warning (ext4): destina
+tion with the same identifier (name{figure.4.3}) has been already used, duplica
+te ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.122 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ADFD-front-end.pn
-g>] [48] [49]
-<ADFD/pointDomainOneArgument.png, id=1219, 780.9175pt x 570.13pt>
+       <./ADFD/ADFD-front-end.png (PNG copy)>] [48] [49]
+<ADFD/pointDomainOneArgument.png, id=1226, 780.9175pt x 570.13pt>
 File: ADFD/pointDomainOneArgument.png Graphic file (type png)
 
 <use ADFD/pointDomainOneArgument.png>
-Package pdftex.def Info: ADFD/pointDomainOneArgument.png used on input line 226
-.
-(pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
-
 
 LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 231
 .
@@ -1091,36 +1001,23 @@ LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 313
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.315 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/pointDomainOneArg
-ument.png>] <ADFD/PFDOne.png, id=1230, 790.955pt x 575.14874pt>
+       <./ADFD/pointDomainOneArgument.png (PNG copy)>]
+<ADFD/PFDOne.png, id=1237, 790.955pt x 575.14874pt>
 File: ADFD/PFDOne.png Graphic file (type png)
-
-<use ADFD/PFDOne.png>
-Package pdftex.def Info: ADFD/PFDOne.png used on input line 321.
-(pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
- <ADFD/PFDTwo.png, id=1231, 785.93625pt x 573.14125pt>
+ <use ADFD/PFDOne.png>
+<ADFD/PFDTwo.png, id=1238, 785.93625pt x 573.14125pt>
 File: ADFD/PFDTwo.png Graphic file (type png)
-
-<use ADFD/PFDTwo.png>
-Package pdftex.def Info: ADFD/PFDTwo.png used on input line 325.
-(pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
-
+ <use ADFD/PFDTwo.png>
 
 LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 346
 .
 
-<ADFD/BFDOne.png, id=1235, 794.97pt x 575.14874pt>
+<ADFD/BFDOne.png, id=1242, 794.97pt x 575.14874pt>
 File: ADFD/BFDOne.png Graphic file (type png)
  <use ADFD/BFDOne.png>
-Package pdftex.def Info: ADFD/BFDOne.png used on input line 359.
-(pdftex.def)             Requested size: 170.709pt x 113.80783pt.
-
-<ADFD/BFDTwo.png, id=1236, 787.94376pt x 573.14125pt>
+<ADFD/BFDTwo.png, id=1243, 787.94376pt x 573.14125pt>
 File: ADFD/BFDTwo.png Graphic file (type png)
  <use ADFD/BFDTwo.png>
-Package pdftex.def Info: ADFD/BFDTwo.png used on input line 363.
-(pdftex.def)             Requested size: 170.71512pt x 113.80414pt.
-
 [51pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
 ) has been already used, duplicate ignored
 
@@ -1133,24 +1030,17 @@ l.368
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.368 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/PFDOne.png> <C:/U
-sers/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/PFDTwo.png>]
+       <./ADFD/PFDOne.png> <./ADFD/PFDTwo.png>]
 
 LaTeX Warning: Reference `sec:appendix1' on page 52 undefined on input line 387
 .
 
-<ADFD/SFDOne.png, id=1249, 789.95125pt x 573.14125pt>
+<ADFD/SFDOne.png, id=1256, 789.95125pt x 573.14125pt>
 File: ADFD/SFDOne.png Graphic file (type png)
  <use ADFD/SFDOne.png>
-Package pdftex.def Info: ADFD/SFDOne.png used on input line 397.
-(pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
-
-<ADFD/SFDTwo.png, id=1250, 788.9475pt x 575.14874pt>
+<ADFD/SFDTwo.png, id=1257, 788.9475pt x 575.14874pt>
 File: ADFD/SFDTwo.png Graphic file (type png)
  <use ADFD/SFDTwo.png>
-Package pdftex.def Info: ADFD/SFDTwo.png used on input line 401.
-(pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
-
 [52pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
 }) has been already used, duplicate ignored
 
@@ -1163,31 +1053,36 @@ l.431
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.431 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/BFDOne.png> <C:/U
-sers/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/BFDTwo.png> <C:/Users/MianAsb
-at/git/yeti-test/Mian_PhD_Thesis/ADFD/SFDOne.png> <C:/Users/MianAsbat/git/yeti-
-test/Mian_PhD_Thesis/ADFD/SFDTwo.png>] [53] [54]) [55]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\IGRS/igrs.tex
+       <./ADFD/BFDOne.png> <./ADFD/BFDTwo.png> <./ADFD/SFDOne.png> <./ADFD/SFDT
+wo.png>] [53] [54]) [55]
+\openout2 = `IGRS/igrs.aux'.
+
+ (./IGRS/igrs.tex
 Chapter 5.
 ) [56
 
 
 
 ]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix1/appendix1.tex)
-[57
+\openout2 = `Appendix1/appendix1.aux'.
+
+ (./Appendix1/appendix1.tex) [57
 
 
 
 
-] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix2/appendix2.tex) [5
-8
+]
+\openout2 = `Appendix2/appendix2.aux'.
+
+ (./Appendix2/appendix2.tex) [58
 
 
 
-] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.bbl
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.brf)
+]
+(./thesis.bbl (./thesis.brf)
 \tf@brf=\write8
+\openout8 = `thesis.brf'.
+
  [59
 
 
@@ -1201,63 +1096,44 @@ Missing character: There is no ½ in font ptmri7t!
 Missing character: There is no ï in font ptmri7t!
 Missing character: There is no ¿ in font ptmri7t!
 Missing character: There is no ½ in font ptmri7t!
- [60]
-[61] [62] [63] [64] [65] [66])
+ [60] [61] [62] [63] [64] [65] [66])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 160.
-[67]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 160.
- (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.aux
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Abstract/abstract.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Acknowledgement/acknowledgeme
-nt.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Declaration/decleration.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Dedication/dedication.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Introduction/introduction.aux
-) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Literature/literature.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\DSSR/dssr.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ADFD/adfd.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\IGRS/igrs.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix1/appendix1.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix2/appendix2.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 160.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 160.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 6D0775F690D41FC87ADE676F9F0113C9;6543.
-Package rerunfilecheck Info: File `thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 888F97230E9436E21D5820D96D02740A;10532.
-
+[67] (./thesis.aux (./Abstract/abstract.aux)
+(./Acknowledgement/acknowledgement.aux) (./Declaration/decleration.aux)
+(./Dedication/dedication.aux) (./Introduction/introduction.aux)
+(./Literature/literature.aux) (./DSSR/dssr.aux) (./ADFD/adfd.aux)
+(./IGRS/igrs.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux))
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 160.
  ) 
 Here is how much of TeX's memory you used:
- 10714 strings out of 493921
- 159712 string characters out of 3147270
- 334922 words of memory out of 3000000
- 13307 multiletter control sequences out of 15000+200000
- 41185 words of font info for 94 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 39i,12n,50p,1843b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
-s/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (76 pages, 2561234 bytes).
+ 9892 strings out of 493876
+ 143085 string characters out of 1150568
+ 303551 words of memory out of 3000000
+ 12452 multiletter control sequences out of 10000+50000
+ 41203 words of font info for 94 fonts, out of 3000000 for 5000
+ 714 hyphenation exceptions out of 8191
+ 43i,12n,50p,1843b,1734s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2008/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/20
+08/texmf-dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2008/texmf-d
+ist/fonts/type1/bluesky/cm/cmmi9.pfb></usr/local/texlive/2008/texmf-dist/fonts/
+type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/blue
+sky/cm/cmr6.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr8
+.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmr9.pfb></usr/
+local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/tex
+live/2008/texmf-dist/fonts/type1/bluesky/cm/cmsy9.pfb></usr/local/texlive/2008/
+texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2008/texmf-di
+st/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts
+/type1/urw/times/utmb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on thesis.pdf (76 pages, 2569433 bytes).
 PDF statistics:
- 1644 PDF objects out of 1728 (max. 8388607)
- 355 named destinations out of 1000 (max. 500000)
- 814 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1651 PDF objects out of 1728 (max. 8388607)
+ 360 named destinations out of 1000 (max. 131072)
+ 821 words of extra memory for PDF output out of 10000 (max. 10000000)
 
