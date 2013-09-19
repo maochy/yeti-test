@@ -55,7 +55,39 @@ The primary purpose of software testing is identification of faults in the given
 %A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
 
 \subsection{Software Testing Perspective}
-Testing activities can be split up into black-box and white-box testing on the basis of perspective taken. In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the specifications and test passes if the result is according to expected output. Internal code structure of the SUT is not taken into any consideration~\cite{beizer1995black}. In white-box or structural testing, the testers must do need to know about the complete structure of the software and can do necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution~\cite{ostrand2002white}.
+Testing activities can be split up into white-box and black-box testing on the basis of perspective taken. 
+
+\subsubsection{White-box testing}
+In white-box or structural testing, the testers must do need to know about the complete structure of the software and can do necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution~\cite{ostrand2002white}. Some of the most common White-box testing techniques are briefly defined:
+
+\paragraph{Data Flow Analysis}
+Data Flow Analysis is a testing technique that focuses on the input values by observing the behaviour of respective variables during the execution of the SUT~\cite{clarke1989formal}. In this technique a control flow graph (CFG), graphical representation of all possible states of program, of a SUT is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of data. 
+
+Normally, program execution implies input of data, operations on it according to the defined algorithm, and output of results. This process can be viewed as a flow of data from input to output in which data may transform into several intermediate results before reaching its final state. In the process several errors can occur e.g. references may be made to variables that don’t exist, values may be assigned to undeclared variables or the value of variables may be changed in an unexpected and undesired manner. It is the ordered use of data implicit in this process that is the central object of the technique to ensure that none of the aforementioned errors occur~\cite{fosdick1976data}.
+
+\paragraph{Control Flow Analysis}
+Control flow Analysis is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the individual statements, instructions or function calls are executed. In this technique a control flow graph (CFG), similar to the one required in data flow analysis, is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of control. For example to follow a specific path (also known as branch) between two or more choices at specific state. Efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. The effectiveness of the testing technique depends on controls measurement. Two of the most common measurement criteria defined by Vilkomir et al. are Decision/Branch coverage and Condition coverage \cite{vilkomir2003tolerance}. 
+
+\paragraph{Code based Fault Testing}
+
+
+
+\subsubsection{Black-box testing}
+In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the specifications and test passes if the result is according to expected output. Internal code structure of the SUT is not taken into any consideration~\cite{beizer1995black}. Some of the most common black-box testing techniques are briefly defined:
+\paragraph{Use Case based Testing}
+\paragraph{Partition Testing}
+\paragraph{Boundary Value Analysis}
+\paragraph{Formal Specification Testing}
+
+
+
+
+
+%\section{Common Techniques of Software Testing}
+%This section briefly define some of the most common techniques of software testing currently being used in the testing industry. These include techniques from both white-box and black-box testing techniques.
+
+% Check wikipedia for them.
+
 
 %\subsubsection{Grey-Box Testing}
 %Grey-Box testing is the combination of both black-box/functionality and white-box/structural testing. The tester knows about both the functionality and the internal structure of the SUT. Some of the test cases are based on the functionality and some of the test cases are based on the structure. Emphasis of grey-box testing is both on code coverage as well as functionality~\cite{Savenkov2008}.
@@ -103,19 +135,6 @@ Test oracles set the acceptable behaviour for test executions~\cite{baresi2001te
 \end{enumerate}
 %\subsection{Test Report}
 
-\section{Common Techniques of Software Testing}
-This section briefly define some of the most common techniques of software testing currently being used in the testing industry. These include techniques from both white-box and black-box testing techniques.
-
-% Check wikipedia for them.
-
-\subsection{Data Flow Analysis}
-\subsection{Control Flow Analysis}
-\subsection{Code based Fault Testing}
-
-\subsection{Use Case based Testing}
-\subsection{Partition Testing}
-\subsection{Boundary Value Analysis}
-\subsection{Formal Specification Testing}
 
 
 \section{Random Testing}

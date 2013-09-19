@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  19 SEP 2013 01:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  19 SEP 2013 16:44
 entering extended mode
 **thesis.tex
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.tex
@@ -514,7 +514,7 @@ See the natbib package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.177 ...and\NAT@force@numbers{}\NAT@force@numbers
+l.180 ...and\NAT@force@numbers{}\NAT@force@numbers
                                                   
 Check the bibliography entries for non-compliant syntax,
 or select author-year BibTeX style, e.g. plainnat
@@ -640,7 +640,7 @@ Missing character: There is no ’ in font ptmr7t!
 
 
 
-] <Introduction/SoftwareTesting.png, id=615, 734.745pt x 308.15125pt>
+] <Introduction/SoftwareTesting.png, id=620, 734.745pt x 308.15125pt>
 File: Introduction/SoftwareTesting.png Graphic file (type png)
 
 <use Introduction/SoftwareTesting.png>
@@ -674,73 +674,74 @@ Package natbib Warning: Citation `Myers2004' on page 6 undefined on input line
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.56 
-     ] [8] <Literature/randomTesting.jpg, id=722, 441.90094pt x 118.19156pt>
+     ]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ [8] [9]
+<Literature/randomTesting.jpg, id=735, 441.90094pt x 118.19156pt>
 File: Literature/randomTesting.jpg Graphic file (type jpg)
 
 <use Literature/randomTesting.jpg>
-Package pdftex.def Info: Literature/randomTesting.jpg used on input line 125.
+Package pdftex.def Info: Literature/randomTesting.jpg used on input line 144.
 (pdftex.def)             Requested size: 220.94992pt x 59.09563pt.
- [9] [10pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.1}) has been already used, duplicate ignored
+ [10] [11pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.2.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.134 
+l.160 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/randomTesti
 ng.jpg>]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 144.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 163.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 144.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 163.
 
-<Literature/pointblockstrip.jpg, id=755, 581.92406pt x 183.68625pt>
+<Literature/pointblockstrip.jpg, id=774, 581.92406pt x 183.68625pt>
 File: Literature/pointblockstrip.jpg Graphic file (type jpg)
 
 <use Literature/pointblockstrip.jpg>
-Package pdftex.def Info: Literature/pointblockstrip.jpg used on input line 150.
+Package pdftex.def Info: Literature/pointblockstrip.jpg used on input line 169.
 
 (pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+2}) has been already used, duplicate ignored
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[11] <Literature/mart2.pdf, id=774, 350.30875pt x 185.69376pt>
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.177 
+       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/pointblocks
+trip.jpg>] <Literature/mart2.pdf, id=789, 350.30875pt x 185.69376pt>
 File: Literature/mart2.pdf Graphic file (type pdf)
 
 <use Literature/mart2.pdf>
-Package pdftex.def Info: Literature/mart2.pdf used on input line 167.
+Package pdftex.def Info: Literature/mart2.pdf used on input line 186.
 (pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
+ [13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.174 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/pointblocks
-trip.jpg>] <Literature/RRT.pdf, id=783, 370.38374pt x 247.67531pt>
+l.193 
+       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/mart2.pdf>]
+<Literature/RRT.pdf, id=817, 370.38374pt x 247.67531pt>
 File: Literature/RRT.pdf Graphic file (type pdf)
 
 <use Literature/RRT.pdf>
-Package pdftex.def Info: Literature/RRT.pdf used on input line 181.
+Package pdftex.def Info: Literature/RRT.pdf used on input line 200.
 (pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3
-}) has been already used, duplicate ignored
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
+4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.187 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/mart2.pdf>]
+l.213 \item A
+             utomated Interface Extraction: DART automatically identifies ex...
+ <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/RRT.pdf>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
@@ -768,139 +769,130 @@ Missing character: There is no ” in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.205 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/RRT.pdf>]
 [15]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
+ [16]
+
+Package natbib Warning: Citation `16 search it Mendeley' on page 17 undefined o
+n input line 240.
 
 
-Package natbib Warning: Citation `16 search it Mendeley' on page 16 undefined o
-n input line 221.
+Package natbib Warning: Citation `17 search it mendeley' on page 17 undefined o
+n input line 241.
 
-
-Package natbib Warning: Citation `17 search it mendeley' on page 16 undefined o
-n input line 222.
-
-[16] <Literature/JCrasher.png, id=848, 867.24pt x 402.50375pt>
+[17] <Literature/JCrasher.png, id=863, 867.24pt x 402.50375pt>
 File: Literature/JCrasher.png Graphic file (type png)
 
 <use Literature/JCrasher.png>
-Package pdftex.def Info: Literature/JCrasher.png used on input line 239.
+Package pdftex.def Info: Literature/JCrasher.png used on input line 258.
 (pdftex.def)             Requested size: 426.79071pt x 199.16934pt.
 
-Overfull \hbox (14.22575pt too wide) in paragraph at lines 239--240
+Overfull \hbox (14.22575pt too wide) in paragraph at lines 258--259
  [][] 
  []
 
+[18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
+}) has been already used, duplicate ignored
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[17]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 254.
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.264 
+       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/JCrasher.pn
+g>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 273.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 254.
- [18pdfTeX warning (ext4): destination with the same identifier (name{figure.2.
-5}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.255 \item T
-             o define the weight of each class and method under test and giv...
- <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/JCrasher.png>]
-<Literature/eclat_working.png, id=864, 356.532pt x 235.1184pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 273.
+ [19]
+<Literature/eclat_working.png, id=880, 356.532pt x 235.1184pt>
 File: Literature/eclat_working.png Graphic file (type png)
 
 <use Literature/eclat_working.png>
-Package pdftex.def Info: Literature/eclat_working.png used on input line 266.
+Package pdftex.def Info: Literature/eclat_working.png used on input line 285.
 (pdftex.def)             Requested size: 426.82436pt x 256.09814pt.
 
-Overfull \hbox (14.2594pt too wide) in paragraph at lines 266--267
+Overfull \hbox (14.2594pt too wide) in paragraph at lines 285--286
+ [][] 
+ []
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.293 
+       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/eclat_worki
+ng.png>] [21] [22]
+Overfull \hbox (34.1438pt too wide) in paragraph at lines 334--362
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19] [20pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.2.6}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.291 
-       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/Literature/eclat_worki
-ng.png>] [21]
-Overfull \hbox (34.1438pt too wide) in paragraph at lines 315--343
- [][] 
- []
+LaTeX Warning: Reference `fig:XXX???' on page 23 undefined on input line 366.
 
-[22]
-
-LaTeX Warning: Reference `fig:XXX???' on page 23 undefined on input line 347.
-
-<Literature/yetiCommandCLI.pdf, id=904, 831.105pt x 95.35625pt>
+<Literature/yetiCommandCLI.pdf, id=915, 831.105pt x 95.35625pt>
 File: Literature/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandCLI.pdf>
-Package pdftex.def Info: Literature/yetiCommandCLI.pdf used on input line 351.
+Package pdftex.def Info: Literature/yetiCommandCLI.pdf used on input line 370.
 (pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Literature/yetiCommandGUI.pdf, id=905, 433.62pt x 494.84875pt>
+<Literature/yetiCommandGUI.pdf, id=916, 433.62pt x 494.84875pt>
 File: Literature/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use Literature/yetiCommandGUI.pdf>
-Package pdftex.def Info: Literature/yetiCommandGUI.pdf used on input line 359.
+Package pdftex.def Info: Literature/yetiCommandGUI.pdf used on input line 378.
 (pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Literature/tools.jpg, id=906, 636.9396pt x 667.293pt>
+[23] <Literature/tools.jpg, id=921, 636.9396pt x 667.293pt>
 File: Literature/tools.jpg Graphic file (type jpg)
 
 <use Literature/tools.jpg>
-Package pdftex.def Info: Literature/tools.jpg used on input line 378.
+Package pdftex.def Info: Literature/tools.jpg used on input line 397.
 (pdftex.def)             Requested size: 382.1667pt x 400.37889pt.
- [23pdfTeX warning (ext4): destination with the same identifier (name{table.2.2
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.380 \end{figure}
-                  ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [24pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.7}) has been already used, duplicate ignored
+) [24pdfTeX warning (ext4): destination with the same identifier (name{table.2.
+2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.141 \include{Literature/literature}
                                      pdfTeX warning (ext4): destination with th
-e same identifier (name{figure.2.8}) has been already used, duplicate ignored
+e same identifier (name{figure.2.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.141 \include{Literature/literature}
                                       <C:/Users/MianAsbat/git/yeti-test/Mian_Ph
-D_Thesis/Literature/yetiCommandCLI.pdf> <C:/Users/MianAsbat/git/yeti-test/Mian_
-PhD_Thesis/Literature/yetiCommandGUI.pdf>] [25pdfTeX warning (ext4): destinatio
-n with the same identifier (name{figure.2.9}) has been already used, duplicate 
-ignored
+D_Thesis/Literature/yetiCommandCLI.pdf>] [25pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.2.8}) has been already used, duplicate ig
+nored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.141 \include{Literature/literature}
+                                      <C:/Users/MianAsbat/git/yeti-test/Mian_Ph
+D_Thesis/Literature/yetiCommandGUI.pdf>] [26pdfTeX warning (ext4): destination 
+with the same identifier (name{figure.2.9}) has been already used, duplicate ig
+nored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -909,7 +901,7 @@ l.141 \include{Literature/literature}
 D_Thesis/Literature/tools.jpg>]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\DSSR/dssr.tex
 Chapter 3.
-[26
+[27
 
 
 
@@ -919,28 +911,28 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 17.
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 
-Package natbib Warning: Citation `Oriol2010a' on page 27 undefined on input lin
+Package natbib Warning: Citation `Oriol2010a' on page 28 undefined on input lin
 e 32.
 
-[27]
+[28]
 
-Package natbib Warning: Citation `Myers2004' on page 28 undefined on input line
+Package natbib Warning: Citation `Myers2004' on page 29 undefined on input line
  34.
 
-[28] <DSSR/ART_Patterns.png, id=1007, 376.40625pt x 101.62968pt>
+[29] <DSSR/ART_Patterns.png, id=1022, 376.40625pt x 101.62968pt>
 File: DSSR/ART_Patterns.png Graphic file (type png)
 
 <use DSSR/ART_Patterns.png>
 Package pdftex.def Info: DSSR/ART_Patterns.png used on input line 47.
 (pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
 
-<DSSR/block2.png, id=1009, 271.0125pt x 122.70844pt>
+<DSSR/block2.png, id=1024, 271.0125pt x 122.70844pt>
 File: DSSR/block2.png Graphic file (type png)
  <use DSSR/block2.png>
 Package pdftex.def Info: DSSR/block2.png used on input line 56.
 (pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
 
-[29pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+[30pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -954,20 +946,20 @@ l.62
 l.62 
       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/ART_Patterns.png> 
 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/block2.png>]
-<DSSR/flowchart1.pdf, id=1018, 193.19614pt x 195.7238pt>
+<DSSR/flowchart1.pdf, id=1033, 193.19614pt x 195.7238pt>
 File: DSSR/flowchart1.pdf Graphic file (type pdf)
 
 <use DSSR/flowchart1.pdf>
 Package pdftex.def Info: DSSR/flowchart1.pdf used on input line 69.
 (pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.75 
       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/flowchart1.pdf>]
-[31pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+[32pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -976,27 +968,27 @@ l.125 *
         @author (Mian and Manuel)]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
- [32]
-<DSSR/hierarchy.pdf, id=1056, 98.56648pt x 125.337pt>
+ [33]
+<DSSR/hierarchy.pdf, id=1072, 98.56648pt x 125.337pt>
 File: DSSR/hierarchy.pdf Graphic file (type pdf)
  <use DSSR/hierarchy.pdf>
 Package pdftex.def Info: DSSR/hierarchy.pdf used on input line 163.
 (pdftex.def)             Requested size: 113.8153pt x 142.27174pt.
 
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+[34pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.178 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/hierarchy.pdf>]
-[34] [35pdfTeX warning (ext4): destination with the same identifier (name{table
+[35] [36pdfTeX warning (ext4): destination with the same identifier (name{table
 .3.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.249 
-      ] <DSSR/DssrImprove.png, id=1096, 986.2446pt x 479.391pt>
+      ] <DSSR/DssrImprove.png, id=1111, 986.2446pt x 479.391pt>
 File: DSSR/DssrImprove.png Graphic file (type png)
 
 <use DSSR/DssrImprove.png>
@@ -1010,14 +1002,14 @@ Overfull \hbox (89.70525pt too wide) in alignment at lines 343--343
 
 LaTeX Warning: Float too large for page by 65.58208pt on input line 347.
 
-[36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.353 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/DSSR/DssrImprove.png>]
-[37pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}
+[38pdfTeX warning (ext4): destination with the same identifier (name{table.3.3}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1028,61 +1020,61 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 380.
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 387.
- [38] [39pdfTeX warning (ext4): destination with the same identifier (name{tabl
+ [39] [40pdfTeX warning (ext4): destination with the same identifier (name{tabl
 e.3.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.419 
-      ] [40] [41] [42]) [43]
+      ] [41] [42] [43]) [44]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ADFD/adfd.tex
 Chapter 4.
-[44
+[45
 
 
 
-] <ADFD/ART_Patterns.png, id=1205, 376.40625pt x 101.62968pt>
+] <ADFD/ART_Patterns.png, id=1221, 376.40625pt x 101.62968pt>
 File: ADFD/ART_Patterns.png Graphic file (type png)
 
 <use ADFD/ART_Patterns.png>
 Package pdftex.def Info: ADFD/ART_Patterns.png used on input line 19.
 (pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
- [45pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.65 
       <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ART_Patterns.png>]
-<ADFD/ADFD-Diagram1.png, id=1222, 589.20125pt x 414.54875pt>
+<ADFD/ADFD-Diagram1.png, id=1237, 589.20125pt x 414.54875pt>
 File: ADFD/ADFD-Diagram1.png Graphic file (type png)
 
 <use ADFD/ADFD-Diagram1.png>
 Package pdftex.def Info: ADFD/ADFD-Diagram1.png used on input line 100.
 (pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
 
-<ADFD/ADFD-front-end.png, id=1223, 1342.01375pt x 767.86874pt>
+<ADFD/ADFD-front-end.png, id=1238, 1342.01375pt x 767.86874pt>
 File: ADFD/ADFD-front-end.png Graphic file (type png)
 
 <use ADFD/ADFD-front-end.png>
 Package pdftex.def Info: ADFD/ADFD-front-end.png used on input line 108.
 (pdftex.def)             Requested size: 341.4206pt x 187.78384pt.
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [47pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.116 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ADFD-Diagram1.png
->] [47pdfTeX warning (ext4): destination with the same identifier (name{figure.
+>] [48pdfTeX warning (ext4): destination with the same identifier (name{figure.
 4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.122 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/ADFD-front-end.pn
-g>] [48] [49]
-<ADFD/pointDomainOneArgument.png, id=1273, 780.9175pt x 570.13pt>
+g>] [49] [50]
+<ADFD/pointDomainOneArgument.png, id=1288, 780.9175pt x 570.13pt>
 File: ADFD/pointDomainOneArgument.png Graphic file (type png)
 
 <use ADFD/pointDomainOneArgument.png>
@@ -1091,42 +1083,42 @@ Package pdftex.def Info: ADFD/pointDomainOneArgument.png used on input line 226
 (pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
 
 
-LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 231
+LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 231
 .
 
 
-LaTeX Warning: Reference `fig:ADFD-plot' on page 50 undefined on input line 231
+LaTeX Warning: Reference `fig:ADFD-plot' on page 51 undefined on input line 231
 .
 
 
-LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 260
+LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 260
 .
 
 
-LaTeX Warning: Reference `sec:fail table' on page 50 undefined on input line 26
+LaTeX Warning: Reference `sec:fail table' on page 51 undefined on input line 26
 0.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `sec:appendix1' on page 50 undefined on input line 313
+LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 313
 .
 
-[50pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
+[51pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.315 
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/pointDomainOneArg
-ument.png>] <ADFD/PFDOne.png, id=1284, 790.955pt x 575.14874pt>
+ument.png>] <ADFD/PFDOne.png, id=1300, 790.955pt x 575.14874pt>
 File: ADFD/PFDOne.png Graphic file (type png)
 
 <use ADFD/PFDOne.png>
 Package pdftex.def Info: ADFD/PFDOne.png used on input line 321.
 (pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
- <ADFD/PFDTwo.png, id=1285, 785.93625pt x 573.14125pt>
+ <ADFD/PFDTwo.png, id=1301, 785.93625pt x 573.14125pt>
 File: ADFD/PFDTwo.png Graphic file (type png)
 
 <use ADFD/PFDTwo.png>
@@ -1134,22 +1126,22 @@ Package pdftex.def Info: ADFD/PFDTwo.png used on input line 325.
 (pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
 
 
-LaTeX Warning: Reference `sec:appendix1' on page 51 undefined on input line 346
+LaTeX Warning: Reference `sec:appendix1' on page 52 undefined on input line 346
 .
 
-<ADFD/BFDOne.png, id=1289, 794.97pt x 575.14874pt>
+<ADFD/BFDOne.png, id=1305, 794.97pt x 575.14874pt>
 File: ADFD/BFDOne.png Graphic file (type png)
  <use ADFD/BFDOne.png>
 Package pdftex.def Info: ADFD/BFDOne.png used on input line 359.
 (pdftex.def)             Requested size: 170.709pt x 113.80783pt.
 
-<ADFD/BFDTwo.png, id=1290, 787.94376pt x 573.14125pt>
+<ADFD/BFDTwo.png, id=1306, 787.94376pt x 573.14125pt>
 File: ADFD/BFDTwo.png Graphic file (type png)
  <use ADFD/BFDTwo.png>
 Package pdftex.def Info: ADFD/BFDTwo.png used on input line 363.
 (pdftex.def)             Requested size: 170.71512pt x 113.80414pt.
 
-[51pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
+[52pdfTeX warning (ext4): destination with the same identifier (name{table.4.1}
 ) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1164,22 +1156,22 @@ l.368
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/PFDOne.png> <C:/U
 sers/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/PFDTwo.png>]
 
-LaTeX Warning: Reference `sec:appendix1' on page 52 undefined on input line 387
+LaTeX Warning: Reference `sec:appendix1' on page 53 undefined on input line 387
 .
 
-<ADFD/SFDOne.png, id=1304, 789.95125pt x 573.14125pt>
+<ADFD/SFDOne.png, id=1319, 789.95125pt x 573.14125pt>
 File: ADFD/SFDOne.png Graphic file (type png)
  <use ADFD/SFDOne.png>
 Package pdftex.def Info: ADFD/SFDOne.png used on input line 397.
 (pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
 
-<ADFD/SFDTwo.png, id=1305, 788.9475pt x 575.14874pt>
+<ADFD/SFDTwo.png, id=1320, 788.9475pt x 575.14874pt>
 File: ADFD/SFDTwo.png Graphic file (type png)
  <use ADFD/SFDTwo.png>
 Package pdftex.def Info: ADFD/SFDTwo.png used on input line 401.
 (pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
 
-[52pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
+[53pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1194,29 +1186,29 @@ l.431
        <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/BFDOne.png> <C:/U
 sers/MianAsbat/git/yeti-test/Mian_PhD_Thesis/ADFD/BFDTwo.png> <C:/Users/MianAsb
 at/git/yeti-test/Mian_PhD_Thesis/ADFD/SFDOne.png> <C:/Users/MianAsbat/git/yeti-
-test/Mian_PhD_Thesis/ADFD/SFDTwo.png>] [53] [54]) [55]
+test/Mian_PhD_Thesis/ADFD/SFDTwo.png>] [54] [55]) [56]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\IGRS/igrs.tex
 Chapter 5.
-) [56
+) [57
 
 
 
 ]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix1/appendix1.tex)
-[57
+[58
 
 
 
 
 ] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Appendix2/appendix2.tex) [5
-8
+9
 
 
 
 ] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.bbl
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.brf)
 \tf@brf=\write8
- [59
+ [60
 
 
 ]
@@ -1229,13 +1221,13 @@ Missing character: There is no ½ in font ptmri7t!
 Missing character: There is no ï in font ptmri7t!
 Missing character: There is no ¿ in font ptmri7t!
 Missing character: There is no ½ in font ptmri7t!
- [60]
-[61] [62] [63] [64] [65] [66])
+ [61]
+[62] [63] [64] [65] [66] [67])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 159.
-[67]
+[68]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 159.
  (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\thesis.aux
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\Abstract/abstract.aux)
@@ -1253,25 +1245,25 @@ nt.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 159.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 159.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: C007189461E198B5366770BC8D92244B;7204.
+(rerunfilecheck)             Checksum: BFB9EDB971DFD9F397E38C74F2682467;7413.
 
 
 Package rerunfilecheck Warning: File `thesis.brf' has changed.
 (rerunfilecheck)                Rerun to get bibliographical references right.
 
 Package rerunfilecheck Info: Checksums for `thesis.brf':
-(rerunfilecheck)             Before: E9557E58ABEF5701F2B5DBB2E8B2D31D;10829
-(rerunfilecheck)             After:  2B6E70B90DA45331BD3726552948E23E;10839.
+(rerunfilecheck)             Before: ED06FD50688197E9787B43969A739A81;10861
+(rerunfilecheck)             After:  83718132BF36AC50B1F1956431AD155E;11066.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
  ) 
 Here is how much of TeX's memory you used:
- 10761 strings out of 493921
- 160597 string characters out of 3147270
- 334922 words of memory out of 3000000
- 13341 multiletter control sequences out of 15000+200000
+ 10785 strings out of 493921
+ 161197 string characters out of 3147270
+ 335138 words of memory out of 3000000
+ 13360 multiletter control sequences out of 15000+200000
  41185 words of font info for 94 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  39i,12n,50p,1753b,1780s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1288,9 +1280,9 @@ iKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
 /type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/time
 s/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (77 pages, 2570905 bytes).
+Output written on thesis.pdf (78 pages, 2575093 bytes).
 PDF statistics:
- 1708 PDF objects out of 1728 (max. 8388607)
- 368 named destinations out of 1000 (max. 500000)
- 878 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1722 PDF objects out of 1728 (max. 8388607)
+ 373 named destinations out of 1000 (max. 500000)
+ 886 words of extra memory for PDF output out of 10000 (max. 10000000)
 
