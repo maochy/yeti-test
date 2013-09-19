@@ -5,6 +5,14 @@ A level-1 auxiliary file: Declaration/decleration.aux
 A level-1 auxiliary file: Dedication/dedication.aux
 A level-1 auxiliary file: Introduction/introduction.aux
 A level-1 auxiliary file: Literature/literature.aux
+White space in argument---line 139 of file Literature/literature.aux
+ : \citation{16
+ :              search it Mendeley}
+I'm skipping whatever remains of this command
+White space in argument---line 140 of file Literature/literature.aux
+ : \citation{17
+ :              search it mendeley}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: DSSR/dssr.aux
 A level-1 auxiliary file: ADFD/adfd.aux
 A level-1 auxiliary file: IGRS/igrs.aux
@@ -25,4 +33,4 @@ Warning--can't use both volume and number fields in ntafos1998random
 Warning--empty note in Oriol2010b
 Warning--can't use both volume and number fields in ramamoorthy1975
 Warning--empty journal in tretmans1999
-(There were 13 warnings)
+(There were 2 error messages)
