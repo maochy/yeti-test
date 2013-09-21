@@ -65,19 +65,33 @@ Data Flow Analysis is a testing technique that focuses on the input values by ob
 
 Normally, program execution implies input of data, operations on it according to the defined algorithm, and output of results. This process can be viewed as a flow of data from input to output in which data may transform into several intermediate results before reaching its final state. In the process several errors can occur e.g. references may be made to variables that don’t exist, values may be assigned to undeclared variables or the value of variables may be changed in an unexpected and undesired manner. It is the ordered use of data implicit in this process that is the central object of the technique to ensure that none of the aforementioned errors occur~\cite{fosdick1976data}.
 
-\paragraph{Control Flow Analysis}
+\paragraph{Control flow analysis}
 Control flow Analysis is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the individual statements, instructions or function calls are executed. In this technique a control flow graph (CFG), similar to the one required in data flow analysis, is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of control. For example to follow a specific path (also known as branch) between two or more choices at specific state. Efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. The effectiveness of the testing technique depends on controls measurement. Two of the most common measurement criteria defined by Vilkomir et al. are Decision/Branch coverage and Condition coverage \cite{vilkomir2003tolerance}. 
 
-\paragraph{Code based Fault Testing}
-
-
+\paragraph{Code-based fault injection testing}
+A technique in which additional code is added to the code of the SUT at one or more locations to analyse its behaviour in response to the anomaly \cite{voas1997software}. The process of code addition is called instrumentation which is usually performed before compilation and execution of software. The added code can be use for multiple reasons i.e. injection of fault to find the error handling behaviour of software, to determine the effectiveness of test procedure to check whether it discover the injected faults or to measure the code coverage achieved by the testing process.    
 
 \subsubsection{Black-box testing}
 In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the specifications and test passes if the result is according to expected output. Internal code structure of the SUT is not taken into any consideration~\cite{beizer1995black}. Some of the most common black-box testing techniques are briefly defined:
-\paragraph{Use Case based Testing}
-\paragraph{Partition Testing}
-\paragraph{Boundary Value Analysis}
-\paragraph{Formal Specification Testing}
+
+\paragraph{Use-case based testing}
+A verification and validation technique that utilizes use-cases of the system to generate test cases. Use-case define functional requirements at a particular situation or condition of the system from actor's (user or external system) perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use case format include a brief description of the event, flow of events, preconditions, postconditions, extension points, context diagram and activity diagram. 
+All the details required for test case is included in the use case therefore use case can be easily transformed into test case. 
+
+% steps taken from presentation of Raional User Conference 2003. Check it for viva.
+
+The main benefits of use case testing is cheap generation of test cases, avoidance of test duplication, improved test coverage, easier regression testing and early identification of missing requirements.  
+
+\paragraph{Partition testing}
+A testing technique in which the input domain of a given SUT is divided into sub-domain according to some rule and then tests are conducted in each sub-domain. The division in to sub-domain can be according to the requirements or specifications, structure of the code or according to the process by which the software was developed \cite{{hamlet1990}. 
+
+While the performance of partition testing is directly dependant on the quality of sub-domain \cite{weyuker1991analyzing}, it is often however difficult to divide the domain into equal partitions. Therefore, another version of partition testing called Proportional sampling strategy: guidelines for software testing practitioners \cite{Chan1996} is devised, in which the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos \cite{ntafos1998random} confirm the better performance of proportional partition testing over partition testing.
+
+
+\paragraph{Boundary value analysis}
+
+
+\paragraph{Formal specification testing}
 
 
 
