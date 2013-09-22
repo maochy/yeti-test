@@ -213,6 +213,14 @@ Julie Cohen, Daniel Plakosh, and Kristi~L Keeler.
   guide.
 \newblock 2005.
 
+\bibitem{formal1997specification}
+Ralston~T Craigen~D, Gerhart~S.
+\newblock On the use of formal methods in industry -- an authoritative
+  assessment of the efficacy, utility, and applicability of formal methods to
+  systems design and engineering by the analysis of real industrial cases.
+\newblock In {\em Report to the US National Institute of Standards and
+  Technology}, 1993.
+
 \bibitem{Csallner2004}
 Christoph Csallner and Yannis Smaragdakis.
 \newblock Jcrasher: An automatic robustness tester for {Java}.
@@ -224,6 +232,12 @@ Edsger~W. Dijkstra.
 \newblock Structured programming.
 \newblock chapter Chapter I: Notes on structured programming, pages 1--82.
   Academic Press Ltd., London, UK, UK, 1972.
+
+\bibitem{donat1997automating}
+Michael~R Donat.
+\newblock Automating formal specification-based testing.
+\newblock In {\em TAPSOFT'97: Theory and Practice of Software Development},
+  pages 833--847. Springer, 1997.
 
 \bibitem{Duran1981}
 Joe~W. Duran and Simeon Ntafos.
@@ -294,6 +308,14 @@ D.~Hamlet and R.~Taylor.
 Richard Hamlet.
 \newblock Random testing.
 \newblock {\em Encyclopedia of software Engineering}, 1994.
+
+\bibitem{Hierons2009}
+Robert~M. Hierons, Kirill Bogdanov, Jonathan~P. Bowen, Rance Cleaveland, John
+  Derrick, Jeremy Dick, Marian Gheorghe, Mark Harman, Kalpesh Kapoor, Paul
+  Krause, Gerald L\"{u}ttgen, Anthony J.~H. Simons, Sergiy Vilkomir, Martin~R.
+  Woodward, and Hussein Zedan.
+\newblock Using formal specifications to support testing.
+\newblock {\em ACM Comput. Surv.}, 41(2):9:1--9:76, February 2009.
 
 \bibitem{howden1986}
 William~E Howden.
@@ -507,10 +529,22 @@ A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, Jiayang Sun, and Bin
 \newblock In {\em Software Engineering, 2003. Proceedings. 25th International
   Conference on}, pages 465 -- 475, may 2003.
 
+\bibitem{radatz1990ieee}
+Jane Radatz, Anne Geraci, and Freny Katki.
+\newblock Ieee standard glossary of software engineering terminology.
+\newblock {\em IEEE Std}, 610121990:121990, 1990.
+
 \bibitem{ramamoorthy1975}
 CV~Ramamoorthy and Sill-bun~F Ho.
 \newblock Testing large software with automated software evaluation systems.
 \newblock In {\em ACM SIGPLAN Notices}, volume~10, pages 382--394. ACM, 1975.
+
+\bibitem{reid1997empirical}
+Stuart~C Reid.
+\newblock An empirical analysis of equivalence partitioning, boundary value
+  analysis and random testing.
+\newblock In {\em Software Metrics Symposium, 1997. Proceedings., Fourth
+  International}, pages 64--73. IEEE, 1997.
 
 \bibitem{richardson1992specification}
 Debra~J Richardson, Stephanie~Leif Aha, and T~Owen O'malley.
