@@ -12,7 +12,7 @@ This chapter includes motivation for the research study followed by the problems
 %Software is a very important and essential component of computer system without which no task can be accomplished. 
 Today, software pervades every aspect of our life, from simple day to day operations to highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The ever increasing dependency of software expect us to believe that the software in use is reliable, robust, safe and secure. Unfortunately the performance of software in general is not what is expected. According to the National Institute of Standards and Technology (NIST) US companies alone bear \$60 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{Standards2002}. Humans are prone to errors and programmers are no exceptions. Maurice Wilkes~\cite{Maurice1985}, a British computer pioneer, stated that:
 \begin{quote}
-``As soon as we started programming, we found to our surprise that it wasn’t as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
+``As soon as we started programming, we found to our surprise that it was not as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
 \end{quote}
 
 \noindent The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. Software testing is by far the most recognized and widely used technique to verify the correctness and ensure quality of the software ~\cite{Myers2011},~\cite{young2008software},~\cite{patton2001software},~\cite{Standards2002}.  According to Myers et al. some software companies spend up to 50\% cost of the total cost of software development and maintenance on testing~\cite{Myers2011}. 
@@ -67,11 +67,46 @@ The existing random strategies of software testing discover the faults in the SU
 \subsection{Invariant Guided Random+ Strategy}
 Another random test strategy named, ``Invariant guided Random+ Strategy (IGR+S)" was developed in the current research study. IGR+S is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon--- an automated invariant detector for reporting likely invariants and adding them to the SUT as assertions. The IGR+S is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:IGR+S} indicated improved features of IGR+S in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies were either unable to accomplish or required larger duration.  
 
-\section{Structure of the Thesis}
+%\section{Structure of the Thesis}
 %
-The rest of the thesis is organized as follows: In Chapter 2, a thorough review of the relevant literature is given. It includes a brief introduction of software testing techniques followed by automated random testing tools. Chapter~\ref{chap:DSSR} describes Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. Chapter~\ref{chap:ADFD} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. Chapter~\ref{chap:IGR+S} presents the new strategy Invariant Guided Random+ Strategy (IGR+S) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. Chapter 6 summarizes contributions of the thesis research, discusses the strength and weaknesses of the study, gives conclusion and suggests avenues for future work. Chapter 7 ?
+%The rest of the thesis is organized as follows: In Chapter 2, a thorough review of the relevant literature is given. It includes a brief introduction of software testing techniques followed by automated random testing tools. Chapter~\ref{chap:DSSR} describes Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. Chapter~\ref{chap:ADFD} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. Chapter~\ref{chap:IGR+S} presents the new strategy Invariant Guided Random+ Strategy (IGR+S) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. Chapter 6 summarizes contributions of the thesis research, discusses the strength and weaknesses of the study, gives conclusion and suggests avenues for future work. Chapter 7 ?
+
+\section{Structure of the Thesis}
+The rest of the thesis is organized as follows:\\
+
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Chapter~\ref{chap:literature}} is a thorough review of the relevant literature, describing software testing and its common types. It then introduces the reader to random testing, describing various versions of random testing and the most commonly used automated testing tools based on random algorithms. \\
 
 
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Chapter~\ref{chap:DSSR}} describes newly proposed more efficient random testing technique known as Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. The experimental study confirms that DSSR strategy is significantly better than R and R+ strategies. Finally the benefits and drawbacks of the DSSR strategy are discussed.\\
+
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Chapter~\ref{chap:ADFD}} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. It is shown that the presence of fault domains across the input domain, which have not been so far identified, can in fact be identified and graphically represented using 
+ADFD strategy.\\
+
+ 
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Chapter~\ref{chap:IGR+S}} presents the newly developed Invariant Guided Random+ Strategy (IGR+S) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. It uses Daikon, a tool to generate likely invariants, to identify and incorporate invariants in the SUT code which serves as contracts to filter any vague test cases. \\
+
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Chapter~\ref{chap:-----}}is the concluding chapter, summarising the achievements of this research and discussing the extent to which our experiments have supported the hypothesis.\\
+
+
+\hangindent=\parindent
+\hangafter=1
+\noindent
+\textbf{Appendix~\ref{chap:-----}}is the concluding chapter, summarising the achievements of this research and discussing the extent to which our experiments have supported the hypothesis.\\
 
 
 
