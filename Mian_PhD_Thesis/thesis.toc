@@ -1,7 +1,5 @@
-\select@language {english}
-\contentsline {chapter}{Contents}{ii}{chapter*.1}
-\contentsline {chapter}{List of Figures}{vi}{chapter*.2}
-\contentsline {chapter}{List of Tables}{vii}{chapter*.3}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of figures}{v}{chapter*.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }List of tables}{vi}{chapter*.2}
 \contentsline {chapter}{Nomenclature}{vii}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
@@ -23,14 +21,14 @@
 \contentsline {paragraph}{\numberline {2.1.3.1.3}Code-based fault injection testing}{10}{paragraph.2.1.3.1.3}
 \contentsline {subsubsection}{\numberline {2.1.3.2}Black-box testing}{10}{subsubsection.2.1.3.2}
 \contentsline {paragraph}{\numberline {2.1.3.2.1}Use-case based testing}{10}{paragraph.2.1.3.2.1}
-\contentsline {paragraph}{\numberline {2.1.3.2.2}Partition testing}{10}{paragraph.2.1.3.2.2}
+\contentsline {paragraph}{\numberline {2.1.3.2.2}Partition testing}{11}{paragraph.2.1.3.2.2}
 \contentsline {paragraph}{\numberline {2.1.3.2.3}Boundary value analysis}{11}{paragraph.2.1.3.2.3}
 \contentsline {paragraph}{\numberline {2.1.3.2.4}Formal specification testing}{11}{paragraph.2.1.3.2.4}
-\contentsline {subsection}{\numberline {2.1.4}Software Testing Execution}{11}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.4}Software Testing Execution}{12}{subsection.2.1.4}
 \contentsline {subsection}{\numberline {2.1.5}Manual Testing}{12}{subsection.2.1.5}
 \contentsline {subsection}{\numberline {2.1.6}Automated Testing}{12}{subsection.2.1.6}
 \contentsline {subsection}{\numberline {2.1.7}Test Oracle}{12}{subsection.2.1.7}
-\contentsline {section}{\numberline {2.2}Random Testing}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2}Random Testing}{13}{section.2.2}
 \contentsline {section}{\numberline {2.3}Various versions of random testing}{14}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Adaptive Random Testing}{14}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Mirror Adaptive Random Testing}{15}{subsection.2.3.2}
@@ -39,9 +37,9 @@
 \contentsline {subsection}{\numberline {2.3.5}Quasi Random Testing}{17}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}Feedback-directed Random Testing}{18}{subsection.2.3.6}
 \contentsline {subsubsection}{\numberline {2.3.6.1}Randoop: Feedback-directed Random Testing}{18}{subsubsection.2.3.6.1}
-\contentsline {subsection}{\numberline {2.3.7}Object Distance and its application}{18}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.7}Object Distance and its application}{19}{subsection.2.3.7}
 \contentsline {subsubsection}{\numberline {2.3.7.1}ARTOO Tool}{19}{subsubsection.2.3.7.1}
-\contentsline {subsubsection}{\numberline {2.3.7.2}Experimental Assessment of RT for Object-Oriented Software}{19}{subsubsection.2.3.7.2}
+\contentsline {subsubsection}{\numberline {2.3.7.2}Experimental Assessment of RT for Object-Oriented Software}{20}{subsubsection.2.3.7.2}
 \contentsline {section}{\numberline {2.4}Tools for Automated Random Testing}{20}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}JCrasher}{20}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Jartege}{21}{subsection.2.4.2}
@@ -54,9 +52,9 @@
 \contentsline {subsection}{\numberline {2.5.1}Construction of Test Cases}{25}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Command-line Options}{25}{subsection.2.5.2}
 \contentsline {subsection}{\numberline {2.5.3}YETI Execution}{25}{subsection.2.5.3}
-\contentsline {subsection}{\numberline {2.5.4}YETI Report}{26}{subsection.2.5.4}
-\contentsline {subsection}{\numberline {2.5.5}Summary of automated testing tools}{26}{subsection.2.5.5}
-\contentsline {section}{\numberline {2.6}Conclusion}{26}{section.2.6}
+\contentsline {subsection}{\numberline {2.5.4}YETI Report}{27}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Summary of automated testing tools}{27}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Conclusion}{27}{section.2.6}
 \contentsline {chapter}{\numberline {3}Dirt Spot Sweeping Random Strategy}{29}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{29}{section.3.1}
 \contentsline {section}{\numberline {3.2}Dirt Spot Sweeping Random Strategy}{30}{section.3.2}
@@ -69,14 +67,14 @@
 \contentsline {section}{\numberline {3.4}Evaluation}{37}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Research questions}{37}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Experiments}{37}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{39}{subsection.3.4.3}
-\contentsline {section}{\numberline {3.5}Results}{41}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{41}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{43}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{43}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Discussion}{43}{section.3.6}
-\contentsline {section}{\numberline {3.7}Related Work}{44}{section.3.7}
-\contentsline {section}{\numberline {3.8}Conclusions}{45}{section.3.8}
+\contentsline {subsection}{\numberline {3.4.3}Performance measurement criteria}{38}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Results}{40}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{40}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Are there classes for which any of the three strategies provide better results?}{42}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{42}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Discussion}{44}{section.3.6}
+\contentsline {section}{\numberline {3.7}Related Work}{45}{section.3.7}
+\contentsline {section}{\numberline {3.8}Conclusions}{46}{section.3.8}
 \contentsline {chapter}{\numberline {4}Automated Disovery of Failure Domain}{47}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{47}{section.4.1}
 \contentsline {section}{\numberline {4.2}Automated Discovery of Failure Domain}{49}{section.4.2}
@@ -93,4 +91,3 @@
 \contentsline {section}{\numberline {5.1}Introduction}{59}{section.5.1}
 \contentsline {chapter}{Appdx A}{60}{appendix*.4}
 \contentsline {chapter}{Appdx B}{61}{appendix*.5}
-\contentsline {chapter}{References}{62}{appendix*.6}
