@@ -1,0 +1,124 @@
+\documentclass[12pt]{ociamthesis}  % default square logo 
+%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
+%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+
+%load any additional packages
+
+%\usepackage{amssymb}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsmath,epsfig}
+\usepackage{times}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{latexsym}
+\usepackage{enumerate}
+\usepackage{url}
+\usepackage{subfigure}
+\usepackage{verbatim}
+\usepackage[normalem]{ulem}
+\usepackage{rotating}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{ctable}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+%numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=2,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=red,
+    filecolor=yellow,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+%input macros (i.e. write your own macros file called mymacros.tex 
+%and uncomment the next line)
+%\include{mymacros}
+
+\title{New Strategies for\\[1ex]     %your thesis title,
+        Automated Random Testing}   %note \\[1ex] is a line break in the title
+
+\author{Mian Asbat Ahmad}             %your name
+\college{Department of Computer Science}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Doctor of Philosophy}     %the degree
+\degreedate{Nov. 2013}         %the degree date
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+
+
+\begin{romanpages}          % start roman page numbering
+
+\include{abstract/abstract}          % include the abstract
+
+\doublespacing
+
+\tableofcontents            % generate and include a table of contents
+\listoffigures  				  % generate and include a list of tables
+\listoftables              % generate and include a list of figures
+\singlespacing
+
+
+\include{dedication/dedication}        % include a dedication.tex file
+\include{acknowlegements/acknowlegements}   % include an acknowledgements.tex file
+
+\end{romanpages}            % end roman page numbering
+
+
+
+%now include the files of latex for each of the chapters etc
+\include{chapter1/chapter1}
+\include{chapter2/chapter2}
+%\include{chapter3/chapter3}
+%\include{chapter4/chapter4}
+%\include{chapter5/chapter5}
+%\include{conclusion/conclusions}
+
+%now enable appendix numbering format and include any appendices
+\appendix
+%\include{appendix1/appendix1}
+%\include{appendix2/appendix2}
+
+%next line adds the Bibliography to the contents page
+\addcontentsline{toc}{chapter}{Bibliography}
+%uncomment next line to change bibliography name to references
+\renewcommand{\bibname}{References}
+\bibliography{references1/refs}        %use a bibtex bibliography file refs.bib
+\bibliographystyle{plain}  %use the plain bibliography style
+
+\end{document}
+

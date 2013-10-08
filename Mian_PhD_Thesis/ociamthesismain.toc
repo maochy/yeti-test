@@ -1,0 +1,54 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}The Problems}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Research Goals}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Contributions}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Dirt Spot Sweeping Random Strategy}{4}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Automated Discovery of Failure Domain}{4}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Invariant Guided Random+ Strategy}{4}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Structure of the Thesis}{5}{section.1.4}
+\contentsline {chapter}{\numberline {2}Literature Review}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}Software Testing}{6}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Software Testing Levels}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Software Testing Purpose}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Software Testing Perspective}{8}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}White-box testing}{8}{subsubsection.2.1.3.1}
+\contentsline {paragraph}{Data Flow Analysis}{8}{section*.4}
+\contentsline {paragraph}{Control flow analysis}{8}{section*.5}
+\contentsline {paragraph}{Code-based fault injection testing}{9}{section*.6}
+\contentsline {subsubsection}{\numberline {2.1.3.2}Black-box testing}{9}{subsubsection.2.1.3.2}
+\contentsline {paragraph}{Use-case based testing}{9}{section*.7}
+\contentsline {paragraph}{Partition testing}{9}{section*.8}
+\contentsline {paragraph}{Boundary value analysis}{10}{section*.9}
+\contentsline {paragraph}{Formal specification testing}{10}{section*.10}
+\contentsline {subsection}{\numberline {2.1.4}Software Testing Execution}{10}{subsection.2.1.4}
+\contentsline {subsection}{\numberline {2.1.5}Manual Testing}{11}{subsection.2.1.5}
+\contentsline {subsection}{\numberline {2.1.6}Automated Testing}{11}{subsection.2.1.6}
+\contentsline {subsection}{\numberline {2.1.7}Test Oracle}{11}{subsection.2.1.7}
+\contentsline {section}{\numberline {2.2}Random Testing}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Various versions of random testing}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Adaptive Random Testing}{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Mirror Adaptive Random Testing}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Restricted Random Testing}{15}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Directed Automated Random Testing}{16}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}Quasi Random Testing}{16}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Feedback-directed Random Testing}{17}{subsection.2.3.6}
+\contentsline {subsubsection}{\numberline {2.3.6.1}Randoop: Feedback-directed Random Testing}{17}{subsubsection.2.3.6.1}
+\contentsline {subsection}{\numberline {2.3.7}Object Distance and its application}{17}{subsection.2.3.7}
+\contentsline {subsubsection}{\numberline {2.3.7.1}ARTOO Tool}{18}{subsubsection.2.3.7.1}
+\contentsline {subsubsection}{\numberline {2.3.7.2}Experimental Assessment of RT for Object-Oriented Software}{18}{subsubsection.2.3.7.2}
+\contentsline {section}{\numberline {2.4}Tools for Automated Random Testing}{19}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}JCrasher}{19}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Jartege}{20}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Eclat}{21}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}QuickCheck}{22}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}Autotost}{22}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}TestEra}{23}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}Korat}{24}{subsection.2.4.7}
+\contentsline {section}{\numberline {2.5}YETI}{24}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Construction of Test Cases}{25}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Command-line Options}{25}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}YETI Execution}{25}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}YETI Report}{27}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Summary of automated testing tools}{27}{subsection.2.5.5}
+\contentsline {section}{\numberline {2.6}Conclusion}{27}{section.2.6}
+\contentsline {chapter}{Bibliography}{29}{section.2.6}
