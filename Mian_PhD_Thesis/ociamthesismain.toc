@@ -21,9 +21,9 @@
 \contentsline {paragraph}{Boundary value analysis}{10}{section*.11}
 \contentsline {paragraph}{Formal specification testing}{10}{section*.12}
 \contentsline {subsection}{\numberline {2.1.4}Software Testing Execution}{11}{subsection.2.1.4}
-\contentsline {subsection}{\numberline {2.1.5}Manual Testing}{11}{subsection.2.1.5}
-\contentsline {subsection}{\numberline {2.1.6}Automated Testing}{11}{subsection.2.1.6}
-\contentsline {subsection}{\numberline {2.1.7}Test Oracle}{11}{subsection.2.1.7}
+\contentsline {subsubsection}{\numberline {2.1.4.1}Manual Testing}{11}{subsubsection.2.1.4.1}
+\contentsline {subsubsection}{\numberline {2.1.4.2}Automated Testing}{11}{subsubsection.2.1.4.2}
+\contentsline {subsubsection}{\numberline {2.1.4.3}Test Oracle}{11}{subsubsection.2.1.4.3}
 \contentsline {section}{\numberline {2.2}Random Testing}{12}{section.2.2}
 \contentsline {section}{\numberline {2.3}Various versions of random testing}{13}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Adaptive Random Testing}{13}{subsection.2.3.1}
@@ -32,16 +32,16 @@
 \contentsline {subsection}{\numberline {2.3.4}Directed Automated Random Testing}{16}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Quasi Random Testing}{16}{subsection.2.3.5}
 \contentsline {subsection}{\numberline {2.3.6}Feedback-directed Random Testing}{17}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}The ARTOO Strategy}{17}{subsection.2.3.7}
+\contentsline {subsection}{\numberline {2.3.7}The ARTOO Testing}{17}{subsection.2.3.7}
 \contentsline {section}{\numberline {2.4}Tools for Automated Random Testing}{18}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}JCrasher}{18}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Jartege}{19}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Eclat}{20}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Randoop}{21}{subsection.2.4.4}
-\contentsline {subsection}{\numberline {2.4.5}QuickCheck}{21}{subsection.2.4.5}
-\contentsline {subsection}{\numberline {2.4.6}Autotost}{22}{subsection.2.4.6}
-\contentsline {subsection}{\numberline {2.4.7}TestEra}{23}{subsection.2.4.7}
-\contentsline {subsection}{\numberline {2.4.8}Korat}{23}{subsection.2.4.8}
+\contentsline {subsection}{\numberline {2.4.4}Randoop Tool}{21}{subsection.2.4.4}
+\contentsline {subsection}{\numberline {2.4.5}QuickCheck Tool}{21}{subsection.2.4.5}
+\contentsline {subsection}{\numberline {2.4.6}Autotost Tool}{22}{subsection.2.4.6}
+\contentsline {subsection}{\numberline {2.4.7}TestEra Tool}{23}{subsection.2.4.7}
+\contentsline {subsection}{\numberline {2.4.8}Korat Tool}{23}{subsection.2.4.8}
 \contentsline {section}{\numberline {2.5}YETI}{24}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Construction of Test Cases}{24}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Command-line Options}{25}{subsection.2.5.2}
