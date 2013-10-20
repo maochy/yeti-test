@@ -4,20 +4,15 @@ A level-1 auxiliary file: dedication/dedication.aux
 A level-1 auxiliary file: acknowlegements/acknowlegements.aux
 A level-1 auxiliary file: chapter1/chapter1.aux
 A level-1 auxiliary file: chapter2/chapter2.aux
-White space in argument---line 144 of file chapter2/chapter2.aux
- : \citation{Checking
- :                    Java implementation of a naming architecture using TestEra.}
-I'm skipping whatever remains of this command
-White space in argument---line 146 of file chapter2/chapter2.aux
- : \citation{directed
- :                    random testing phd thesis}
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: chapter3/chapter3.aux
 A level-1 auxiliary file: chapter4/chapter4.aux
 A level-1 auxiliary file: chapter5/chapter5.aux
-A level-1 auxiliary file: conclusion/conclusions.aux
+A level-1 auxiliary file: chapter6/chapter6.aux
+A level-1 auxiliary file: chapter7/chapter7.aux
+A level-1 auxiliary file: appendix1/appendix1.aux
 The style file: plain.bst
 Database file #1: references1/refs.bib
+Warning--I didn't find a database entry for "Pacheco2007a"
 Warning--empty journal in cohen2005robustness
 Warning--empty booktitle in Dijkstra1972
 Warning--empty journal in Standards2002
@@ -31,4 +26,4 @@ Warning--can't use both volume and number fields in ramamoorthy1975testing
 Warning--empty journal in toweysoftware
 Warning--empty year in toweysoftware
 Warning--empty journal in tretmans1999
-(There were 2 error messages)
+(There were 14 warnings)

@@ -1,12 +1,12 @@
 \chapter{Literature Review}
 \label{chap:literature}
 
-The very famous quote of Paul, ``To err is human, but to really foul things up you need a computer”, is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after its completion.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology \cite{Tassey2002}, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The very famous quote of Paul, ``To err is human, but to really foul things up you need a computer, is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after its completion.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology \cite{Tassey2002}, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \section{Software Testing}
 In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs”~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
 
 \begin{table}[ht]
 %\scriptsize
@@ -335,6 +335,7 @@ The Autotest tool, based on Formal Automated testing is used to test Eiffel lang
 \item \textbf{Proxy:} handles inter-process communication. It receives execution requests from the strategy and forward them to the interpreter. The execution results are sent to the oracle.
 \item \textbf{Interpreter:} execute instructions on the SUT. The most common instructions include: create object, invoke routine and assign result. The interpreter process is kept separate to increase robustness.
 \item \textbf{Oracle:} is based on contract-based testing. It evaluate the results to see if they satisfy the contracts or not. The outcome of the tests are formatted in HTML and stored on disk.
+\end{enumerate}
 
 \subsection{TestEra Tool}
 TestEra~\cite{Khurshid2004} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes methods specifications, integer value and the method under test as input. It uses pre-conditions of a method to generate all non isomorphic valid test input to the specified limit. The test inputs are executed on the method and the results are compared against the postconditions of the method serving as oracle. Any test case that fails to satisfy postcondition is considered as a fault. 
@@ -355,12 +356,11 @@ TestEra and Korat are similar tools because they both uses program specification
 %Testera use specifications to guide the automatic generation of test inputs. It uses Alloy language for specification and Alloy Analyser to generate all non-isomorphic instances for a given size according to the specification automatically. Then, TestEra translate the instances to Java input as test cases for the program under test. After executing the test, TestEra then translate the outputs back to Alloy and Alloy Analyzer check the input and output against the correctness criteria given in Alloy. When it detects a violation, TestEra generates report in the form of concrete counterexamples. Figure 2.6 [50] illustrates the basic framework of TestEra.
 
 \subsection{Korat Tool} % please read thesis of khurshid in Mendeley in phd thesis section for more information.
-Korat~\cite{Boyapati2002} is a novel framework for automated testing of Java programs based on their formal specifications~\cite{chang1999structural}. Korat and TestEra~\cite{Khurshid2004} were developed by the same team and both performs specification based testing. The difference however is that Korat uses Java Modelling Language (JML) while TestEra uses Alloy Modelling Language for specifications. Korat uses bounded-exhaustive testing \cite{
-Checking Java implementation of a naming architecture using TestEra.} in which the code is tested against all possible inputs within the given small bound.
+Korat~\cite{Boyapati2002} is a novel framework for automated testing of Java programs based on their formal specifications~\cite{chang1999structural}. Korat and TestEra~\cite{Khurshid2004} were developed by the same team and both performs specification based testing. The difference however is that Korat uses Java Modelling Language (JML) while TestEra uses Alloy Modelling Language for specifications. Korat uses bounded-exhaustive testing \cite{khurshid2001checking} in which the code is tested against all possible inputs within the given small bound.
 
 Korat generate structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates to a boolean value. Korat takes imparative predicate and additionally a finitization value, that bounds the size of the structures that are inputs to the predicate, as input. It systematically explore the predicates input space and generate all non isomorphic inputs (inherently distinct inputs in the same input domain) for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter the inputs based on the fields accessed during executions. These inputs are taken as test cases. Korat depends or developers written {\it repOK()} and {\it checkRep()} methods, where {\it repOK()} is used to check the class invariants and {\it checkRep()} is used to verify the post-conditions to validate the correctness of the test case. 
 
-The key benefit of Korat and TestEra, representation level approaches, is that no existing set of operations are required to create input values and therefore they can achieve to create input values that may be difficult or impossible using a given set of operations. However, The only disadvantage to this approach is the requirement of significant amount of manual efforts \cite{directed random testing phd thesis}.    
+The key benefit of Korat and TestEra, representation level approaches, is that no existing set of operations are required to create input values and therefore they can achieve to create input values that may be difficult or impossible using a given set of operations. However, The only disadvantage to this approach is the requirement of significant amount of manual efforts \cite{pacheco2009directed}.    
 
 %As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
 
@@ -372,11 +372,52 @@ YETI stands for York Extensible Testing Infrastructure. It is an automated rando
 
 
 \subsection{Core Modules of YETI Tool}
-YETI has been designed with an emphasis on extensibility. Its three main parts: the core infrastructure, strategies and language bindings are loosely coupled to easily accommodate new languages and strategies.
-\subsubsection{}
+YETI has been designed with an emphasis on extensibility. It is therefore divided into three main sections: the core infrastructure, strategies and language-specific bindings which are loosely coupled to easily accommodate new languages, strategies and environments. The environment defines the procedure of extracting information from the meta-data of the classes under test and providing it to the core infrastructure. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm, height=7.5cm]{yetiMainModules.png}
+	\caption{YETI main modules}
+	\label{fig:yetiMainModules}
+\end{figure}
+
+\subsubsection{YETI Core Infrastructure}
+The core infrastructure is responsible for managing the test process and generation of reports. It depends on the following classes to achieve its task.
+{\textbf{Yeti:}} It is the fist class in contact after the test command is issued by the user. It contains the main method of YETI which on execution parses the supplied command with options and execute the specific bindings to test the particular language requested in the command.
+{\textbf{YetiLog:}} It is the class that facilitate printing debug and testing logs of the current test session. 
+{\textbf{YetiLogProcessor:}} It is an interface for processing test logs.
+{\textbf{YetiEngine:}} It is the class which make calls for a given number of time or specified amount of time in the command.
+{\textbf{YetiTestManager:}} It is the class that is called by YetiEngine to make the actual calls.
+{\textbf{YetiProgrammingLanguageProperties:}} It is a place holder for all language related instances during test.
+{\textbf{YetiInitializer:}} It is an abstract class for test initialization.
+
+The language modelling part includes the classes representing the meta-model of programming language. It consist of the following classes.
+{\textbf{YetiVariable:}} It represents a variable in the YETI.
+{\textbf{YetiType:}} It represents a data type in YETI.
+{\textbf{YetiRoutine:}} It is a super class for routines, which represent functions, methods and constructors.
+{\textbf{YetiModule:}} It represents a class under test which stores a list of modules.
+
 \subsubsection{Strategy}
-Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy.
-\subsubsection{}
+Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. The strategies sub package of Yeti package consist of the following classes.
+{\textbf{YetiStrategy:}} It is an abstract class which provides an interface for the strategies in YETI.
+{\textbf{YetiRandomStrategy:}} It is a class which implements a simple random test strategy. It is a subclass of YetiStrategy.
+{\textbf{YetiRandomPlusStrategy:}} It is a class which implements random+ strategy. It is an extended class of YetiRandomStrategy.
+{\textbf{DSSRStrategy:}} It is a class which implements the Dirt Spot Sweeping Random strategy. It is an extended class of YetiRandomPlusStrategy.
+{\textbf{ADFDStrategy:}} It is a class which implements the Automated Discovery of Failure Domain strategy. It is also an extended class of YetiRandomPlusStrategy.
+{\textbf{Yeti:}}
+\subsubsection{language-specific bindings}
+This section can host multiple languages to enable YETI to test programs written in multiple languages. The following steps are needed to add test support for new language program in YETI. 
+
+\begin{enumerate}
+\item Define a new environment sub package in the main Yeti package such that all the related classes are contained in that environment (yeti.environment.nameOfLanguage).
+\item Define a new subclass of YetiProgrammingLanguageProperties class to contain helper classes for the new language.
+\item Define a new subclass of YetiInitializer to initialize the program. It is also used to read all the reflexive information about the system.
+\item Define a new subclass of YetiTestManager to communicate with the target language and proceed with the actual calls.
+\item Define a new subclass of YetiRoutine to actually store the definition of routines in the target language.
+\item Define a new subclass of YetiModule to handle the type of modules to test.
+\end{enumerate}
+
+% if java binding example is required or instead of adding new steps if you want to show only java binding then for material check the msc thesis page 40 of test c code with Yeti.
 
 \subsection{Construction of Test Cases}
 YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
@@ -398,20 +439,20 @@ Options									&Purpose 			\\ \hline
 -jml										&Test programs coded in JML			\\ \hline
 -dotnet									&Test programs coded in .NET		\\ \hline
 -ea											&To check code assertions \\ \hline
--nTests									&\vtop{\hbox{\strut Specify number of tests after} \hbox{\strut which the test stops}	\\ \hline
--time										&\vtop{\hbox{\strut Specify time in seconds or minutes} \hbox{\strut after which the test stops}\\ \hline
+-nTests									&\vtop{\hbox{\strut Specify number of tests after} \hbox{\strut which the test stops}}	\\ \hline
+-time										&\vtop{\hbox{\strut Specify time in seconds or minutes} \hbox{\strut after which the test stops}}\\ \hline
 -testModules						&Specify one or more modules to test 	\\ \hline
 -rawlogs								&Prints real time logs during test \\ \hline
 -nologs									&Omit real time logs and print end result only\\ \hline
 -yetiPath								&Specify path to the test modules\\ \hline
 -gui										&Show test session in GUI\\ \hline
--DSSR										&\vtop{\hbox{\strut Specify Dirt Spot Sweeping Random} \hbox{\strut strategy for this session}\\ \hline
--ADFD										&\vtop{\hbox{\strut Specify Automated Discovery of Failure} \hbox{\strut Domain strategy for this session}\\ \hline
+-DSSR										&\vtop{\hbox{\strut Specify Dirt Spot Sweeping Random} \hbox{\strut strategy for this session}}\\ \hline
+-ADFD										&\vtop{\hbox{\strut Specify Automated Discovery of Failure} \hbox{\strut Domain strategy for this session}}\\ \hline
 -random									&Specify random test strategy for this session\\ \hline
 -randomPlus							&Specify random plus test strategy for this session\\ \hline
--randomPlusPeriodic			&\vtop{\hbox{\strut Specify random plus periodic test} \hbox{\strut strategy for this session}\\ \hline
--nullProbability				&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut null as input value}\\ \hline
--newInstanceProability	&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut new object as input value}\\ \hline
+-randomPlusPeriodic			&\vtop{\hbox{\strut Specify random plus periodic test} \hbox{\strut strategy for this session}}\\ \hline
+-nullProbability				&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut null as input value}}\\ \hline
+-newInstanceProability	&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut new object as input value}}\\ \hline
 
 \hline %inserts single line
 \end{tabular}
@@ -427,7 +468,7 @@ YETI being developed in Java is highly portable and can easily run on any operat
 	\centering
 	\frame{\includegraphics[width= 14cm, height = 1.8cm]{chapter2/yetiCommandCLI.pdf}}
 	\caption{Command to launch YETI from CLI}
-	\label{yeticommand}
+	\label{fig:yeticommand}
 \end{figure}
 
 Alternately, runnable jar file by the name {\it YetiLauncher} is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI execution. Figure \ref{fig:yetiLauncher} shows the equivalent of above command in GUI mode.
@@ -436,11 +477,14 @@ Alternately, runnable jar file by the name {\it YetiLauncher} is also available 
 	\centering
 	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter2/yetiCommandGUI.pdf}}
 	\caption{Command to launch YETI from GUI}
-	\label{yetiLauncher}
+	\label{fig:yetiLauncher}
 \end{figure}
 
 
 As a result of both the above commands YETI launch its own GUI window and start testing the assigned programs. 
+
+\subsection{YETI Test Oracle}
+YETI deals with the oracle problem in two ways. If available, it uses code-contracts as oracles, however in the absence of contracts it uses runtime exceptions as errors which is also known as robustness testing.
 
 \subsection{YETI Report}
 YETI gives a complete test report after execution of each test. The report contain all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assign value to help in debugging the identified fault. 
@@ -470,17 +514,17 @@ subsection{YETI Graphical User Interface}
 \hline
 
 Tool 				& Language																								& Input  																																			& Strategy 																																											 				& Output		  																								& Benefits																															& Limitations		\\ \hline
-JCrasher	  & Java, JML																								& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC																													& \vtop{\hbox{\strut Automated TC, Use} \hbox{of Heuristic Rules} 			& \\ \hline
-Jartege			& Java																										& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc}} 							 				& TC, RT 																											& Quick, automated																											& \\ \hline
-Eclat				& Java																										& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\vtop{\hbox{\strut each candidate on the model} 			& Faulty TC 																									& \vtop{\hbox{\strut produce output text,} \hbox{JML}										& \\ \hline
-Quickcheck	& Haskell																									&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}	  				  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?} 											 							& Pass/Fail																										& \vtop{\hbox{\strut Easy to use, program} \hbox{documentation}					&	\\ \hline
-Randoop 		& Java, .NET																							& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}						  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation} 	& Fault TC, RT 																								& 																																			&	\\ \hline
-AgitarOne		& Java																										& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}							& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time} 					& TC, RT																											& \vtop{\hbox{\strut Eclipse plug-in} \hbox{\& easy to use}  						& \\ \hline
-AutoTest		& Java																										& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts} 															& violations, RT 																							& \vtop{\hbox{\strutGUI in HTML,} \hbox{easy to use} 										& \\ \hline
-TestEra			& Java																										& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer \& manual TC} 			& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications} 																& Contracts violations 																				& \vtop{\hbox{\strut short report with} \hbox{faulty TC only} 					& \\ \hline
-Korat 			& Java																										& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}																	& Contracts violations 																				& \vtop{\hbox{\strut GUI, short report} \hbox{with faulty TC only} 			& \\ \hline
-YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML} 			& Code, Time 																																	& RandomPlus, Random 																																										& \vtop{\hbox{\strut Traces of found } \hbox{\strut faults}		& \vtop{\hbox{\strut GUI, give faulty} \hbox{examples, Quick} 					& \\ \hline %inserts single line
- \end{tabular}
+JCrasher	  & Java, JML																								& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC																													& \vtop{\hbox{\strut Automated TC, Use} \hbox{of Heuristic Rules}} 			& \\ \hline
+Jartege			& Java																										& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc.}} 							 				& TC, RT 																											& Quick, automated																											& \\ \hline
+Eclat				& Java																										& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\hbox{\strut each candidate on the model}} 					& Faulty TC 																									& \vtop{\hbox{\strut produce output text,} \hbox{JML}}									& \\ \hline
+Quickcheck	& Haskell																									&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}}	  			  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?}} 											 						& Pass/Fail																										& \vtop{\hbox{\strut Easy to use, program} \hbox{documentation}}				&	\\ \hline
+Randoop 		& Java, .NET																							& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}}					  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation}} 	& Fault TC, RT 																								& 																																			&	\\ \hline
+AgitarOne		& Java																										& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}}						& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time}} 					& TC, RT																											& \vtop{\hbox{\strut Eclipse plug-in} \hbox{\& easy to use}}  					& \\ \hline
+AutoTest		& Java																										& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC}} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts}} 															& violations, RT 																							& \vtop{\hbox{\strut GUI in HTML,} \hbox{easy to use}} 									& \\ \hline
+TestEra			& Java																										& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer \& manual TC}}			& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}} 																& Contracts violations 																				& \vtop{\hbox{\strut short report with} \hbox{faulty TC only}} 					& \\ \hline
+Korat 			& Java																										& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}}																& Contracts violations 																				& \vtop{\hbox{\strut GUI, short report} \hbox{with faulty TC only}} 		& \\ \hline
+YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML}} 		& Code, Time 																																  & RandomPlus, Random 																																										& \vtop{\hbox{\strut Traces of found } \hbox{\strut faults}}	& \vtop{\hbox{\strut GUI, give faulty} \hbox{examples, Quick}} 				& \\ \hline %inserts single line
+\end{tabular}
 \label{table:Tools}
 \end{sidewaystable}
 
