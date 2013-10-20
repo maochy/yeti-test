@@ -1,9 +1,15 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{adrion1982validation}
 W~Richards Adrion, Martha~A Branstad, and John~C Cherniavsky.
 \newblock Validation, verification, and testing of computer software.
 \newblock {\em ACM Computing Surveys (CSUR)}, 14(2):159--192, 1982.
+
+\bibitem{agrawal1995fault}
+Hiraral Agrawal, Joseph~R Horgan, Saul London, and W~Eric Wong.
+\newblock Fault localization using execution slices and dataflow tests.
+\newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
+  International Symposium on}, pages 143--151. IEEE, 1995.
 
 \bibitem{american1984}
 NY. American National Standards Institute. New~York, Institute of~Electrical,
@@ -12,10 +18,20 @@ NY. American National Standards Institute. New~York, Institute of~Electrical,
   of Software Engineering Terminology}.
 \newblock Inst. of Electrical and Electronics Engineers, 1984.
 
+\bibitem{Arcuri2012}
+Andrea Arcuri, Muhammad~Zohaib Iqbal, and Lionel Briand.
+\newblock Random testing: Theoretical results and practical implications.
+\newblock {\em IEEE Transactions on Software Engineering}, 38:258--277, 2012.
+
 \bibitem{baresi2001test}
 Luciano Baresi and Michal Young.
 \newblock Test oracles.
 \newblock {\em Techn. Report CISTR-01}, 2, 2001.
+
+\bibitem{Beizer1990}
+Boris Beizer.
+\newblock {\em Software testing techniques (2nd ed.)}.
+\newblock Van Nostrand Reinhold Co., New York, NY, USA, 1990.
 
 \bibitem{beizer1995black}
 Boris Beizer.
@@ -86,6 +102,17 @@ Tsong~Yueh Chen, De~Hao Huang, F-C Kuo, Robert~G Merkel, and Johannes Mayer.
 \newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
   pages 422--429. ACM, 2009.
 
+\bibitem{Chen2004}
+Tsong~Yueh Chen, Fei-Ching Kuo, and R.~Merkel.
+\newblock On the statistical properties of the f-measure.
+\newblock In {\em Quality Software, 2004. QSIC 2004. Proceedings. Fourth
+  International Conference on}, pages 146 -- 153, sept. 2004.
+
+\bibitem{Chen2010}
+Tsong~Yueh Chen, Fei-Ching Kuo, Robert~G. Merkel, and T.~H. Tse.
+\newblock Adaptive random testing: The art of test case diversity.
+\newblock {\em J. Syst. Softw.}, 83:60--66, January 2010.
+
 \bibitem{Chen2005}
 Tsong~Yueh Chen and Robert Merkel.
 \newblock Quasi-random testing.
@@ -93,11 +120,36 @@ Tsong~Yueh Chen and Robert Merkel.
   Automated software engineering}, ASE '05, pages 309--312, New York, NY, USA,
   2005. ACM.
 
+\bibitem{Chen2004a}
+T.Y. Chen, R.~Merkel, P.K. Wong, and G.~Eddy.
+\newblock Adaptive random testing through dynamic partitioning.
+\newblock In {\em Quality Software, 2004. QSIC 2004. Proceedings. Fourth
+  International Conference on}, pages 79 -- 86, sept. 2004.
+
+\bibitem{Chen1994}
+T.Y. Chen and Y.T. Yu.
+\newblock On the relationship between partition and random testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, 20(12):977 --980,
+  dec 1994.
+
+\bibitem{Chen1996}
+T.Y. Chen and Y.T. Yu.
+\newblock On the expected number of failures detected by subdomain testing and
+  random testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, 22(2):109 --119,
+  feb 1996.
+
 \bibitem{chilenski1994applicability}
 John~Joseph Chilenski and Steven~P Miller.
 \newblock Applicability of modified condition/decision coverage to software
   testing.
 \newblock {\em Software Engineering Journal}, 9(5):193--200, 1994.
+
+\bibitem{Ciupa2009}
+I~Ciupa, A~Pretschner, M~Oriol, A~Leitner, and B~Meyer.
+\newblock On the number and nature of faults found by random testing.
+\newblock {\em Software Testing Verification and Reliability}, 9999(9999):1--7,
+  2009.
 
 \bibitem{Ciupa2006}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
@@ -125,6 +177,14 @@ Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
 \newblock In {\em Proceedings of the 2008 19th International Symposium on
   Software Reliability Engineering}, pages 157--166, Washington, DC, USA, 2008.
   IEEE Computer Society.
+
+\bibitem{Ciupa2008b}
+Ilinca Ciupa, Alexander Pretschner, Andreas Leitner, Manuel Oriol, and Bertrand
+  Meyer.
+\newblock On the predictability of random tests for object-oriented software.
+\newblock In {\em Proceedings of the 2008 International Conference on Software
+  Testing, Verification, and Validation}, pages 72--81, Washington, DC, USA,
+  2008. IEEE Computer Society.
 
 \bibitem{Claessen2000}
 Koen Claessen and John Hughes.
@@ -161,6 +221,12 @@ Ralston~T Craigen~D, Gerhart~S.
 \newblock In {\em Report to the US National Institute of Standards and
   Technology}, 1993.
 
+\bibitem{Csallner2004}
+Christoph Csallner and Yannis Smaragdakis.
+\newblock Jcrasher: An automatic robustness tester for {Java}.
+\newblock {\em Software---Practice \& Experience}, 34(11):1025--1050, September
+  2004.
+
 \bibitem{Dijkstra1972}
 Edsger~W. Dijkstra.
 \newblock Structured programming.
@@ -180,6 +246,12 @@ Joe~W. Duran and Simeon Ntafos.
   engineering}, ICSE '81, pages 179--183, Piscataway, NJ, USA, 1981. IEEE
   Press.
 
+\bibitem{Duran1984}
+Joe~W. Duran and Simeon~C. Ntafos.
+\newblock An evaluation of random testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, SE-10(4):438 --444,
+  july 1984.
+
 \bibitem{fairley1978tutorial}
 Richard~E Fairley.
 \newblock Tutorial: Static analysis and dynamic testing of computer software.
@@ -190,6 +262,14 @@ National~Institute for Standards and Technology.
 \newblock The economic impacts of inadequate infrastructure for software
   testing.
 \newblock Plannin Report 02-03, May 2002.
+
+\bibitem{Forrester2000}
+Justin~E. Forrester and Barton~P. Miller.
+\newblock An empirical study of the robustness of windows nt applications using
+  random testing.
+\newblock In {\em Proceedings of the 4th conference on USENIX Windows Systems
+  Symposium - Volume 4}, WSS'00, pages 6--6, Berkeley, CA, USA, 2000. USENIX
+  Association.
 
 \bibitem{fosdick1976data}
 Lloyd~D Fosdick and Leon~J Osterweil.
@@ -202,10 +282,21 @@ Marie-Claude Gaudel.
 \newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
   Springer, 2010.
 
+\bibitem{Gilbert2008}
+D.~Gilbert.
+\newblock {\em The JFreeChart class library version 1.0.9: Developer's guide}.
+\newblock Refinery Limited, Hertfordshire, 2008.
+
 \bibitem{Godefroid2005}
 Patrice Godefroid, Nils Klarlund, and Koushik Sen.
 \newblock Dart: directed automated random testing.
 \newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
+
+\bibitem{Gutjahr1999}
+W.J. Gutjahr.
+\newblock Partition testing vs. random testing: the influence of uncertainty.
+\newblock {\em Software Engineering, IEEE Transactions on}, 25(5):661 --674,
+  sep/oct 1999.
 
 \bibitem{hamlet1990}
 D.~Hamlet and R.~Taylor.
@@ -258,6 +349,12 @@ Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
 \newblock A micromodularity mechanism.
 \newblock {\em ACM SIGSOFT Software Engineering Notes}, 26(5):62--73, 2001.
 
+\bibitem{Jones2002}
+James~A. Jones, Mary~Jean Harrold, and John Stasko.
+\newblock Visualization of test information to assist fault localization.
+\newblock In {\em Proceedings of the 24th International Conference on Software
+  Engineering}, ICSE '02, pages 467--477, New York, NY, USA, 2002. ACM.
+
 \bibitem{Khurshid2004}
 Sarfraz Khurshid and Darko Marinov.
 \newblock {TestEra:} {Specification-Based} testing of java programs using
@@ -285,11 +382,38 @@ Andreas Leitner, Manuel Oriol, Andreas Zeller, Ilinca Ciupa, and Bertrand
 \newblock In {\em Proceedings of the twenty-second IEEE/ACM international
   conference on Automated software engineering}, pages 417--420. ACM, 2007.
 
+\bibitem{Leitner2009}
+Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
+  Oriol.
+\newblock On the effectiveness of test extraction without overhead.
+\newblock In {\em Proceedings of the 2009 International Conference on Software
+  Testing Verification and Validation}, pages 416--425, Washington, DC, USA,
+  2009. IEEE Computer Society.
+
 \bibitem{Levenshtein1966}
 V.~I. Levenshtein.
 \newblock Binary codes capable of correcting deletions, insertions, and
   reversals.
 \newblock 10(8):707--710, 1966.
+
+\bibitem{Linger1993}
+Richard~C. Linger.
+\newblock Cleanroom software engineering for zero-defect software.
+\newblock In {\em Proceedings of the 15th international conference on Software
+  Engineering}, ICSE '93, pages 2--13, Los Alamitos, CA, USA, 1993. IEEE
+  Computer Society Press.
+
+\bibitem{Liu2012}
+Huai Liu, Fei-Ching Kuo, and Tsong~Yueh Chen.
+\newblock Comparison of adaptive random testing and random testing under
+  various testing and debugging scenarios.
+\newblock {\em Software: Practice and Experience}, 42(8):1055--1074, 2012.
+
+\bibitem{Mayer2005}
+Johannes Mayer.
+\newblock Lattice-based adaptive random testing.
+\newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
+  Automated software engineering}, pages 333--336. ACM, 2005.
 
 \bibitem{mccabe1983}
 Thomas~J McCabe.
@@ -322,6 +446,12 @@ Simeon Ntafos.
 \newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~23, pages
   42--48. ACM, 1998.
 
+\bibitem{Ntafos2001}
+Simeon~C. Ntafos.
+\newblock On comparisons of random, partition, and proportional partition
+  testing.
+\newblock {\em IEEE Trans. Softw. Eng.}, 27:949--960, October 2001.
+
 \bibitem{Offutt1996}
 A.~Jefferson Offutt and J.~Huffman Hayes.
 \newblock A semantic model of program faults.
@@ -331,6 +461,29 @@ A.~Jefferson Offutt and J.~Huffman Hayes.
 Catherine Oriat.
 \newblock Jartege: a tool for random generation of unit tests for java classes.
 \newblock {\em CoRR}, abs/cs/0412012, 2004.
+
+\bibitem{Oriol2010b}
+M.~Oriol.
+\newblock The york extensible testing infrastructure (yeti).
+\newblock 2010.
+
+\bibitem{Oriol2011}
+M.~Oriol.
+\newblock York extensible testing infrastructure, 2011.
+
+\bibitem{oriol2012law}
+M.~Oriol.
+\newblock Random testing: Evaluation of a law describing the number of faults
+  found.
+\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
+  IEEE Fifth International Conference on}, pages 201--210, 2012.
+
+\bibitem{Oriol2012}
+M.~Oriol.
+\newblock Random testing: Evaluation of a law describing the number of faults
+  found.
+\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
+  IEEE Fifth International Conference on}, pages 201 --210, april 2012.
 
 \bibitem{Oriol2010c}
 Manuel Oriol and Sotirios Tassis.
@@ -385,6 +538,13 @@ Ron Patton.
 \newblock {\em Software testing}, volume~2.
 \newblock Sams Indianapolis, 2001.
 
+\bibitem{Podgurski2003}
+A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, Jiayang Sun, and Bin
+  Wang.
+\newblock Automated support for classifying software failure reports.
+\newblock In {\em Software Engineering, 2003. Proceedings. 25th International
+  Conference on}, pages 465 -- 475, may 2003.
+
 \bibitem{radatz1990ieee}
 Jane Radatz, Anne Geraci, and Freny Katki.
 \newblock Ieee standard glossary of software engineering terminology.
@@ -419,6 +579,28 @@ Tassey.
 \newblock The economic impacts of inadequate infrastructure for software
   testing.
 \newblock Technical report, National Institute of Science and Technology, 2002.
+
+\bibitem{Tempero2008}
+E.~Tempero.
+\newblock An empirical study of unused design decisions in open source java
+  software.
+\newblock In {\em Software Engineering Conference, 2008. APSEC '08. 15th
+  Asia-Pacific}, pages 33 --40, dec. 2008.
+
+\bibitem{Tempero2010}
+Ewan Tempero, Craig Anslow, Jens Dietrich, Ted Han, Jing Li, Markus Lumpe,
+  Hayden Melton, and James Noble.
+\newblock Qualitas corpus: A curated collection of java code for empirical
+  studies.
+\newblock In {\em 2010 Asia Pacific Software Engineering Conference
+  (APSEC2010)}, December 2010.
+
+\bibitem{Tempero2010a}
+Ewan Tempero, Steve Counsell, and James Noble.
+\newblock An empirical study of overriding in open source java.
+\newblock In {\em Proceedings of the Thirty-Third Australasian Conferenc on
+  Computer Science - Volume 102}, ACSC '10, pages 3--12, Darlinghurst,
+  Australia, Australia, 2010. Australian Computer Society, Inc.
 
 \bibitem{toweysoftware}
 Dave Towey.
@@ -476,6 +658,12 @@ Wikipedia.
 Maurice Wilkes.
 \newblock {\em Memoirs of a Computer Pioneer}.
 \newblock The MIT Press, 1985.
+
+\bibitem{Yoo2012}
+S.~Yoo and M.~Harman.
+\newblock Test data regeneration: generating new test data from existing test
+  data.
+\newblock {\em Softw. Test. Verif. Reliab.}, 22(3):171--201, May 2012.
 
 \bibitem{young2008software}
 Michal Young.

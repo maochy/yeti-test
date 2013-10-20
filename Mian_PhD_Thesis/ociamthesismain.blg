@@ -4,6 +4,18 @@ A level-1 auxiliary file: dedication/dedication.aux
 A level-1 auxiliary file: acknowlegements/acknowlegements.aux
 A level-1 auxiliary file: chapter1/chapter1.aux
 A level-1 auxiliary file: chapter2/chapter2.aux
+White space in argument---line 144 of file chapter2/chapter2.aux
+ : \citation{Checking
+ :                    Java implementation of a naming architecture using TestEra.}
+I'm skipping whatever remains of this command
+White space in argument---line 146 of file chapter2/chapter2.aux
+ : \citation{directed
+ :                    random testing phd thesis}
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapter3/chapter3.aux
+A level-1 auxiliary file: chapter4/chapter4.aux
+A level-1 auxiliary file: chapter5/chapter5.aux
+A level-1 auxiliary file: conclusion/conclusions.aux
 The style file: plain.bst
 Database file #1: references1/refs.bib
 Warning--empty journal in cohen2005robustness
@@ -14,8 +26,9 @@ Warning--there's a number but no volume in howden1986
 Warning--empty journal in Levenshtein1966
 Warning--can't use both volume and number fields in mccabe1983
 Warning--can't use both volume and number fields in ntafos1998random
+Warning--empty note in Oriol2010b
 Warning--can't use both volume and number fields in ramamoorthy1975testing
 Warning--empty journal in toweysoftware
 Warning--empty year in toweysoftware
 Warning--empty journal in tretmans1999
-(There were 12 warnings)
+(There were 2 error messages)

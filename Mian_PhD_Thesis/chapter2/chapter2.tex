@@ -128,6 +128,7 @@ Automated testing is the technique of finding faults in a software in which the 
 %\section{Automated Random Testing}
 %\subsection{Test Data Generation}
 %\subsection{Test Execution}
+
 \subsubsection{Test Oracle}
 Test oracles set the acceptable behaviour for test executions~\cite{baresi2001test}. All software-testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common issues in the oracle problem include:
 \begin{enumerate}
@@ -335,15 +336,8 @@ The Autotest tool, based on Formal Automated testing is used to test Eiffel lang
 \item \textbf{Interpreter:} execute instructions on the SUT. The most common instructions include: create object, invoke routine and assign result. The interpreter process is kept separate to increase robustness.
 \item \textbf{Oracle:} is based on contract-based testing. It evaluate the results to see if they satisfy the contracts or not. The outcome of the tests are formatted in HTML and stored on disk.
 
-
-
-
-\subsection{Korat Tool} % please read thesis of khurshid in Mendeley in phd thesis section for more information.
-Korat~\cite{Boyapati2002} is a novel framework for automated testing of Java programs based on their formal specifications~\cite{chang1999structural}. As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. Korat uses a black-box testing approach where it uses methods pre-conditions as predicates. After the Java predicates and finitization (that bounds the predicates input space) are defined, Korat systematically explore the predicates input space and generate all non isomorphic inputs for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter the inputs based on the fields accessed during executions.  
-  
-
 \subsection{TestEra Tool}
-TestEra~\cite{Khurshid2004} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes methods specifications, integer value and the method under test as input. It uses pre-conditions of a method to generate all nonisomorphic valid test input to the specified limit. The test inputs are executed on the method and the results are compared against the postconditions of the method serving as oracle. Any test case that fails to satisfy postcondition is considered as a fault. 
+TestEra~\cite{Khurshid2004} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes methods specifications, integer value and the method under test as input. It uses pre-conditions of a method to generate all non isomorphic valid test input to the specified limit. The test inputs are executed on the method and the results are compared against the postconditions of the method serving as oracle. Any test case that fails to satisfy postcondition is considered as a fault. 
 
 TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints on test inputs and Alloy Analyser tool~\cite{jackson2000alcoa} to solve these constraints and generate test inputs. Alloy Analyzer performs the following three functions: (a) it translates Alloy predicates into propositional formulas, i.e. constraints where all variables are boolean; (b) it evaluates the propositional formulas to find its outcome; (c) it translates each outcome from propositional domain into the relational domain.
 
@@ -360,44 +354,64 @@ TestEra and Korat are similar tools because they both uses program specification
 
 %Testera use specifications to guide the automatic generation of test inputs. It uses Alloy language for specification and Alloy Analyser to generate all non-isomorphic instances for a given size according to the specification automatically. Then, TestEra translate the instances to Java input as test cases for the program under test. After executing the test, TestEra then translate the outputs back to Alloy and Alloy Analyzer check the input and output against the correctness criteria given in Alloy. When it detects a violation, TestEra generates report in the form of concrete counterexamples. Figure 2.6 [50] illustrates the basic framework of TestEra.
 
+\subsection{Korat Tool} % please read thesis of khurshid in Mendeley in phd thesis section for more information.
+Korat~\cite{Boyapati2002} is a novel framework for automated testing of Java programs based on their formal specifications~\cite{chang1999structural}. Korat and TestEra~\cite{Khurshid2004} were developed by the same team and both performs specification based testing. The difference however is that Korat uses Java Modelling Language (JML) while TestEra uses Alloy Modelling Language for specifications. Korat uses bounded-exhaustive testing \cite{
+Checking Java implementation of a naming architecture using TestEra.} in which the code is tested against all possible inputs within the given small bound.
 
-\section{YETI}
-York Extensible Testing Infrastructure (YETI) is an automated tool for testing Java, JML and .NET assemblies~\cite{Oriol2010c}. YETI execute the program under test with random generated but type-correct inputs and declare a fault if the response is an unexpected exception or a contract violation. YETI has been designed with an emphasis on extensibility. Its three main parts: the core infrastructure, strategies and language bindings are loosely coupled to easily accommodate new languages and strategies. To keep the process fully automated YETI uses two approaches for oracle (pass/fail judgement). If available, YETI uses code contracts as oracle if not it uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing. Other prominent features of YETI include its Graphical User Interface (GUI) for user friendliness and ability to distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+Korat generate structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates to a boolean value. Korat takes imparative predicate and additionally a finitization value, that bounds the size of the structures that are inputs to the predicate, as input. It systematically explore the predicates input space and generate all non isomorphic inputs (inherently distinct inputs in the same input domain) for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter the inputs based on the fields accessed during executions. These inputs are taken as test cases. Korat depends or developers written {\it repOK()} and {\it checkRep()} methods, where {\it repOK()} is used to check the class invariants and {\it checkRep()} is used to verify the post-conditions to validate the correctness of the test case. 
+
+The key benefit of Korat and TestEra, representation level approaches, is that no existing set of operations are required to create input values and therefore they can achieve to create input values that may be difficult or impossible using a given set of operations. However, The only disadvantage to this approach is the requirement of significant amount of manual efforts \cite{directed random testing phd thesis}.    
+
+%As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
+
+ 
+
+
+\section{YETI Overview}
+YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. For complete automation of the process, YETI uses two approaches for oracle (pass/fail judgement). If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing. Other prominent features of YETI include its Graphical User Interface (GUI) for user friendliness and ability to distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+
+
+\subsection{Core Modules of YETI Tool}
+YETI has been designed with an emphasis on extensibility. Its three main parts: the core infrastructure, strategies and language bindings are loosely coupled to easily accommodate new languages and strategies.
+\subsubsection{}
+\subsubsection{Strategy}
+Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy.
+\subsubsection{}
 
 \subsection{Construction of Test Cases}
-YETI construct test cases at random by creating objects of the class under test and randomly calling its methods with inputs according to its parameter's-space. Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. To completely automate the data generation YETI   split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI uses its own built-in random value generation library. However, in the case of user defined classes where objects data type is a user defined class YETI calls its constructor to generate object of that class at run time. It may be possible that the constructor require another object and in this case YETI will recursively calls the constructor of that object. This process is continued until the an object with blank constructor, constructor with only primitive types (type 1) or the set level of recursion is reached. 
+YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
+
 
 \subsection{Command-line Options}
-While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode. For example, to save processing power command line option -nologs can be used to bypass real-time logging. The following table describes few of the most common command-line options available in YETI.    
+While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode in any order. For example, to save processing power and reduce overhead for a test session, command line option -nologs can be use to bypass real-time logging. The following table \ref{table:cliOptions} describes few of the most common command-line options available in YETI. 
 
 \begin{table}[h]
 %\scriptsize
 \caption{YETI command line options} % title of Table
 \smallskip
 \centering % used for centering table
-\begin{tabular}{ll } % centered columns (4 columns)
+\begin{tabular}{|l|l|} % centered columns (4 columns)
 \hline
 
-Levels 					&Purpose 			\\
-\hline
--java						&Test programs coded in Java	 	\\
--jml						&Test programs coded in JML			\\
--dotnet					&Test programs coded in .NET		\\
--ea						&To check code assertions \\
--nTests					&Specify number of tests after which the test stops	\\
--time						&Specify time in seconds or minutes after which the test stops\\
--testModules				&Specify one or more modules to test 	\\
--rawlogs					&Prints real time logs during test \\
--nologs					&Omit real time logs and print end result only\\
--yetiPath					&Specify path to the test modules\\ 
--gui						&Show test session in GUI\\
--DSSR					&Specify Dirt Spot Sweeping Random strategy for this session\\
--ADFD					&Specify Automated Discovery of Failure Domain strategy for this session\\
--random					&Specify random test strategy for this session\\
--randomPlus				&Specify random plus test strategy for this session\\
--randomPlusPeriodic		&Specify random plus periodic test strategy for this session\\
--nullProbability				&Specify probability of inserting null as input value\\
--newInstanceProability		&Specify probability of inserting new object as input value\\
+Options									&Purpose 			\\ \hline
+-java										&Test programs coded in Java	 	\\ \hline
+-jml										&Test programs coded in JML			\\ \hline
+-dotnet									&Test programs coded in .NET		\\ \hline
+-ea											&To check code assertions \\ \hline
+-nTests									&\vtop{\hbox{\strut Specify number of tests after} \hbox{\strut which the test stops}	\\ \hline
+-time										&\vtop{\hbox{\strut Specify time in seconds or minutes} \hbox{\strut after which the test stops}\\ \hline
+-testModules						&Specify one or more modules to test 	\\ \hline
+-rawlogs								&Prints real time logs during test \\ \hline
+-nologs									&Omit real time logs and print end result only\\ \hline
+-yetiPath								&Specify path to the test modules\\ \hline
+-gui										&Show test session in GUI\\ \hline
+-DSSR										&\vtop{\hbox{\strut Specify Dirt Spot Sweeping Random} \hbox{\strut strategy for this session}\\ \hline
+-ADFD										&\vtop{\hbox{\strut Specify Automated Discovery of Failure} \hbox{\strut Domain strategy for this session}\\ \hline
+-random									&Specify random test strategy for this session\\ \hline
+-randomPlus							&Specify random plus test strategy for this session\\ \hline
+-randomPlusPeriodic			&\vtop{\hbox{\strut Specify random plus periodic test} \hbox{\strut strategy for this session}\\ \hline
+-nullProbability				&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut null as input value}\\ \hline
+-newInstanceProability	&\vtop{\hbox{\strut Specify probability of inserting} \hbox{\strut new object as input value}\\ \hline
 
 \hline %inserts single line
 \end{tabular}
@@ -407,30 +421,44 @@ Levels 					&Purpose 			\\
 
 
 \subsection{YETI Execution}
-YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM). YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the project and all the .jar library files particularly javassist.jar in the CLASSPATH or JVM would not be able to find and execute it. There are several options available as discussed in section xxx??? to accommodate specific needs but the typical command to invoke YETI is given in figure~\ref{fig:XXX???}. In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules, for details of other options please see section xxx????. 
+YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in figure~\ref{fig:yeticommand}. In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. For details of other options please see table \ref{table:cliOptions}. 
 
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 14cm, height = 1.8cm]{chapter2/yetiCommandCLI.pdf}}
 	\caption{Command to launch YETI from CLI}
+	\label{yeticommand}
 \end{figure}
 
-Alternately, runnable jar file by the name YetiLauncher is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI. Figure xxx??? shows the equivalent of above command in GUI mode.
+Alternately, runnable jar file by the name {\it YetiLauncher} is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI execution. Figure \ref{fig:yetiLauncher} shows the equivalent of above command in GUI mode.
 
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter2/yetiCommandGUI.pdf}}
 	\caption{Command to launch YETI from GUI}
+	\label{yetiLauncher}
 \end{figure}
 
 
 As a result of both the above commands YETI launch its own GUI window and start testing the assigned programs. 
 
-
-
-
 \subsection{YETI Report}
+YETI gives a complete test report after execution of each test. The report contain all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assign value to help in debugging the identified fault. 
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter2/seecaption.pdf}}
+	\caption{YETI successful method calls}
+\end{figure}
 
+YETI separates the bugs from successful executions to simplify the test report. This approach helps debuggers to easily track the origin of the problem and rectify it. When a bug is identified during testing YETI saves that state and present it in the bug report. The information includes all the identifiers of the parameters the method call had at the time of execution. It also report the time at which the exception occurs.
+
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter2/seecaption.pdf}}
+	\caption{YETI bug reports.}
+\end{figure}
+
+subsection{YETI Graphical User Interface}
 
 
 \subsection{Summary of automated testing tools}
@@ -441,17 +469,17 @@ As a result of both the above commands YETI launch its own GUI window and start 
    \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 
-Tool 				& Language				& Input  																																			& Strategy 																																											 				& Output		  										& Benefits																	& Limitations		\\ \hline
-JCrasher	  & Java, JML				& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC															& Automated TC, Use of Heuristic Rules 												&\\ \hline
-Jartege			& Java						& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc}} 							 				& TC, RT 													& Quick, automated													& \\ \hline
-Eclat				& Java						& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\vtop{\hbox{\strut each candidate on the model} 			& Faulty TC 											& produce output text, JML 									& \\ \hline
-Quickcheck	& Haskell					&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}	  				  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?} 											 							& Pass/Fail												& Easy to use, program documentation				&	\\ \hline
-Randoop 		& Java, .NET			& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}						  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation} 	& Fault TC, RT 										& 																					&	\\ \hline
-AgitarOne		& Java						& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}							& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time} 					& TC, RT													& Eclipse plug-in \& easy to use  					& \\ \hline
-AutoTest		& Java						& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts} 															& voilations, RT 									& GUI in HTML, easy to use 									& \\ \hline
-TestEra			& Java						& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer and manual TC} 		& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications} 																& Contracts violations 						& short report with faulty TC only 					& \\ \hline
-Korat 			& Java						& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}																	& Contracts violations 						& GUI, short report with faulty TC only 		& \\ \hline
-YETI 				& Java, .NET, JML & Code, Time 																																	& RandomPlus, Random 																																										& Traces of found faults					& GUI, give faulty examples, Quick 					& \\ \hline %inserts single line
+Tool 				& Language																								& Input  																																			& Strategy 																																											 				& Output		  																								& Benefits																															& Limitations		\\ \hline
+JCrasher	  & Java, JML																								& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC																													& \vtop{\hbox{\strut Automated TC, Use} \hbox{of Heuristic Rules} 			& \\ \hline
+Jartege			& Java																										& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc}} 							 				& TC, RT 																											& Quick, automated																											& \\ \hline
+Eclat				& Java																										& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\vtop{\hbox{\strut each candidate on the model} 			& Faulty TC 																									& \vtop{\hbox{\strut produce output text,} \hbox{JML}										& \\ \hline
+Quickcheck	& Haskell																									&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}	  				  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?} 											 							& Pass/Fail																										& \vtop{\hbox{\strut Easy to use, program} \hbox{documentation}					&	\\ \hline
+Randoop 		& Java, .NET																							& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}						  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation} 	& Fault TC, RT 																								& 																																			&	\\ \hline
+AgitarOne		& Java																										& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}							& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time} 					& TC, RT																											& \vtop{\hbox{\strut Eclipse plug-in} \hbox{\& easy to use}  						& \\ \hline
+AutoTest		& Java																										& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts} 															& violations, RT 																							& \vtop{\hbox{\strutGUI in HTML,} \hbox{easy to use} 										& \\ \hline
+TestEra			& Java																										& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer \& manual TC} 			& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications} 																& Contracts violations 																				& \vtop{\hbox{\strut short report with} \hbox{faulty TC only} 					& \\ \hline
+Korat 			& Java																										& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}																	& Contracts violations 																				& \vtop{\hbox{\strut GUI, short report} \hbox{with faulty TC only} 			& \\ \hline
+YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML} 			& Code, Time 																																	& RandomPlus, Random 																																										& \vtop{\hbox{\strut Traces of found } \hbox{\strut faults}		& \vtop{\hbox{\strut GUI, give faulty} \hbox{examples, Quick} 					& \\ \hline %inserts single line
  \end{tabular}
 \label{table:Tools}
 \end{sidewaystable}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  10 OCT 2013 04:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  20 OCT 2013 01:46
 entering extended mode
 **ociamthesismain.tex
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.tex
@@ -473,7 +473,11 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\dedication/dedication.aux)
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\acknowlegements/acknowlegemen
 ts.aux) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter1/chapter1.aux
-) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.aux))
+) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter5/chapter5.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\conclusion/conclusions.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
@@ -560,26 +564,26 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [2
 
 
-])
+] [3] [4])
 \tf@toc=\write4
- [3]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.lof)
+ [5]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.lof [6
+
+])
 \tf@lof=\write5
- [4
 
-]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.lot)
+[7] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.lot)
 \tf@lot=\write6
- [5
 
-]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\dedication/dedication.tex
-[6
+[8
+
+] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\dedication/dedication.tex [
+9
 
 
 ])
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\acknowlegements/acknowlegemen
-ts.tex [7
+ts.tex [10
 
 
 
@@ -609,7 +613,7 @@ l.16
 
 
 
-] <chapter1/SoftwareTesting1.png, id=330, 734.745pt x 308.15125pt>
+] <chapter1/SoftwareTesting1.png, id=584, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
@@ -619,16 +623,6 @@ Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 21.
 .png>] [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
-
-
-LaTeX Warning: Reference `chap:DSSR' on page 4 undefined on input line 57.
-
-
-LaTeX Warning: Reference `chap:ADFD' on page 4 undefined on input line 60.
-
-
-LaTeX Warning: Reference `chap:IGRS' on page 4 undefined on input line 63.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
@@ -640,23 +634,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--76
  []
 
 
-LaTeX Warning: Reference `chap:DSSR' on page 5 undefined on input line 81.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
 
-LaTeX Warning: Reference `chap:ADFD' on page 5 undefined on input line 86.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
-
-
-LaTeX Warning: Reference `chap:IGRS' on page 5 undefined on input line 93.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--94
@@ -698,46 +683,46 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
  [8] [9] [10] [11]
-<chapter2/randomTesting.jpg, id=488, 441.90094pt x 118.19156pt>
+<chapter2/randomTesting.jpg, id=746, 441.90094pt x 118.19156pt>
 File: chapter2/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter2/randomTesting.jpg>
-Package pdftex.def Info: chapter2/randomTesting.jpg used on input line 147.
+Package pdftex.def Info: chapter2/randomTesting.jpg used on input line 148.
 (pdftex.def)             Requested size: 220.94992pt x 59.09563pt.
  [12 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/randomTesting.j
 pg>]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 166.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 167.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 166.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 167.
 
-<chapter2/pointblockstrip.jpg, id=515, 581.92406pt x 183.68625pt>
+<chapter2/pointblockstrip.jpg, id=773, 581.92406pt x 183.68625pt>
 File: chapter2/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter2/pointblockstrip.jpg>
-Package pdftex.def Info: chapter2/pointblockstrip.jpg used on input line 172.
+Package pdftex.def Info: chapter2/pointblockstrip.jpg used on input line 173.
 (pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
  [13 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/pointblockstrip
 .jpg>]
-<chapter2/mart2.pdf, id=530, 350.30875pt x 185.69376pt>
+<chapter2/mart2.pdf, id=788, 350.30875pt x 185.69376pt>
 File: chapter2/mart2.pdf Graphic file (type pdf)
 
 <use chapter2/mart2.pdf>
-Package pdftex.def Info: chapter2/mart2.pdf used on input line 189.
+Package pdftex.def Info: chapter2/mart2.pdf used on input line 190.
 (pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[14] <chapter2/RRT.pdf, id=539, 370.38374pt x 247.67531pt>
+[14] <chapter2/RRT.pdf, id=798, 370.38374pt x 247.67531pt>
 File: chapter2/RRT.pdf Graphic file (type pdf)
 
 <use chapter2/RRT.pdf>
-Package pdftex.def Info: chapter2/RRT.pdf used on input line 203.
+Package pdftex.def Info: chapter2/RRT.pdf used on input line 204.
 (pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
 
 
@@ -745,82 +730,206 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/mart2.pdf>]
 [16 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/RRT.pdf>]
-[17] <chapter2/JCrasher.png, id=599, 867.24pt x 402.50375pt>
+[17] <chapter2/JCrasher.png, id=857, 867.24pt x 402.50375pt>
 File: chapter2/JCrasher.png Graphic file (type png)
 
 <use chapter2/JCrasher.png>
-Package pdftex.def Info: chapter2/JCrasher.png used on input line 261.
+Package pdftex.def Info: chapter2/JCrasher.png used on input line 262.
 (pdftex.def)             Requested size: 426.79071pt x 199.16934pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
 [18 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/JCrasher.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 276.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 277.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 276.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 277.
  [19]
-<chapter2/eclat_working.png, id=616, 356.532pt x 235.1184pt>
+<chapter2/eclat_working.png, id=874, 356.532pt x 235.1184pt>
 File: chapter2/eclat_working.png Graphic file (type png)
 
 <use chapter2/eclat_working.png>
-Package pdftex.def Info: chapter2/eclat_working.png used on input line 288.
+Package pdftex.def Info: chapter2/eclat_working.png used on input line 289.
 (pdftex.def)             Requested size: 426.82436pt x 256.09814pt.
  [20 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/eclat_working.p
 ng>] [21]
-<chapter2/autotest.png, id=637, 292.14229pt x 156.78915pt>
+<chapter2/autotest.png, id=896, 292.14229pt x 156.78915pt>
 File: chapter2/autotest.png Graphic file (type png)
 
 <use chapter2/autotest.png>
-Package pdftex.def Info: chapter2/autotest.png used on input line 326.
+Package pdftex.def Info: chapter2/autotest.png used on input line 327.
 (pdftex.def)             Requested size: 369.9066pt x 199.17741pt.
  [22 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/autotest.png (P
-NG copy)>] [23]
-<chapter2/testera.png, id=661, 379.20241pt x 142.17401pt>
+NG copy)>]
+<chapter2/testera.png, id=907, 379.20241pt x 142.17401pt>
 File: chapter2/testera.png Graphic file (type png)
 
 <use chapter2/testera.png>
-Package pdftex.def Info: chapter2/testera.png used on input line 352.
+Package pdftex.def Info: chapter2/testera.png used on input line 346.
 (pdftex.def)             Requested size: 369.89734pt x 213.39716pt.
- [24 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/testera.png>]
-Overfull \hbox (53.62318pt too wide) in paragraph at lines 378--406
- [][] 
- []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `fig:XXX???' on page 25 undefined on input line 410.
+LaTeX Warning: Citation `Checking Java implementation of a naming architecture 
+using TestEra.' on page 23 undefined on input line 359.
 
-[25] <chapter2/yetiCommandCLI.pdf, id=677, 831.105pt x 95.35625pt>
+[23]
+
+LaTeX Warning: Citation `directed random testing phd thesis' on page 24 undefin
+ed on input line 363.
+
+[24 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/testera.png>]
+[25]
+! Missing } inserted.
+<inserted text> 
+                }
+l.401 ...ox{\strut which the test stops}	\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.402 ...trut after which the test stops}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.408 ...strut strategy for this session}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.409 ...omain strategy for this session}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.412 ...strut strategy for this session}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.413 ...hbox{\strut null as input value}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.414 ...strut new object as input value}\\ \hline
+                                                  
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:yeticommand' on page 26 undefined on input line 4
+24.
+
+<chapter2/yetiCommandCLI.pdf, id=938, 831.105pt x 95.35625pt>
 File: chapter2/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter2/yetiCommandCLI.pdf>
-Package pdftex.def Info: chapter2/yetiCommandCLI.pdf used on input line 414.
+Package pdftex.def Info: chapter2/yetiCommandCLI.pdf used on input line 428.
 (pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
 
-<chapter2/yetiCommandGUI.pdf, id=678, 433.62pt x 494.84875pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `fig:yetiLauncher' on page 26 undefined on input line 
+433.
+
+[26] <chapter2/yetiCommandGUI.pdf, id=944, 433.62pt x 494.84875pt>
 File: chapter2/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter2/yetiCommandGUI.pdf>
-Package pdftex.def Info: chapter2/yetiCommandGUI.pdf used on input line 422.
+Package pdftex.def Info: chapter2/yetiCommandGUI.pdf used on input line 437.
 (pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: File `chapter2/seecaption.pdf' not found on input line 449.
+
+
+! Package pdftex.def Error: File `chapter2/seecaption.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.449 ..., height = 8cm]{chapter2/seecaption.pdf}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 449.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [27]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: File `chapter2/seecaption.pdf' not found on input line 457.
+
+
+! Package pdftex.def Error: File `chapter2/seecaption.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.457 ..., height = 8cm]{chapter2/seecaption.pdf}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ! Missing } inserted.
 <inserted text> 
                 }
-l.447 ...{\strut each candidate on the model} 			&
-                                                   Faulty TC 											& pr...
+l.473 ...d TC, Use} \hbox{of Heuristic Rules} 			&
+                                                   \\ \hline
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -828,8 +937,8 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.447 ...{\strut each candidate on the model} 			&
-                                                   Faulty TC 											& pr...
+l.475 ...{\strut each candidate on the model} 			&
+                                                   Faulty TC 															...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -837,7 +946,25 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.448 ...s}  \hbox{\strut and Functions}	  				  &
+l.475 ...{\strut each candidate on the model} 			&
+                                                   Faulty TC 															...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.475 ...oduce output text,} \hbox{JML}										&
+                                                   \\ \hline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.476 ...s}  \hbox{\strut and Functions}	  				  &
                                                    \vtop{\hbox{\strut Specif...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -846,8 +973,8 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.448 ... hold to random TC?} 											 							&
-                                                   Pass/Fail												& Ea...
+l.476 ... hold to random TC?} 											 							&
+                                                   Pass/Fail																...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -855,7 +982,16 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.449 ...ns,} \hbox{\strut code and time}						  &
+l.476 ... use, program} \hbox{documentation}					&
+                                                  	\\ \hline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.477 ...ns,} \hbox{\strut code and time}						  &
                                                    \vtop{\hbox{\strut Genera...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -864,8 +1000,8 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.449 ... \& give feedback for next generation} 	&
-                                                   Fault TC, RT 										& ...
+l.477 ... \& give feedback for next generation} 	&
+                                                   Fault TC, RT 												...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -873,7 +1009,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.450 ...me}   \hbox{\strut and manual TC}							&
+l.478 ...me}   \hbox{\strut and manual TC}							&
                                                    \vtop{\hbox{\strut Analys...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -882,8 +1018,8 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.450 ...t provided data in specified time} 					&
-                                                   TC, RT													& Ecli...
+l.478 ...t provided data in specified time} 					&
+                                                   TC, RT																			...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -891,7 +1027,16 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.451 ...me}   \hbox{\strut and manual TC} 						&
+l.478 ...e plug-in} \hbox{\& easy to use}  						&
+                                                   \\ \hline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.479 ...me}   \hbox{\strut and manual TC} 						&
                                                    \vtop{\hbox{\strut Heuris...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -900,8 +1045,26 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.451 ...t to evaluate contracts} 															&
-                                                   voilations, RT 									&...
+l.479 ...t to evaluate contracts} 															&
+                                                   violations, RT 										...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Undefined control sequence.
+l.479 ...																		& \vtop{\hbox{\strutGUI
+                                                   in HTML,} \hbox{easy to u...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.479 ... in HTML,} \hbox{easy to use} 										&
+                                                   \\ \hline
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
@@ -909,7 +1072,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.452 ...} \hbox{\strut integer and manual TC} 		&
+l.480 ...} \hbox{\strut integer \& manual TC} 			&
                                                    \vtop{\hbox{\strut Check ...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -918,7 +1081,7 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.452 ...ut with specifications} 																&
+l.480 ...ut with specifications} 																&
                                                    Contracts violations 				...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -927,7 +1090,16 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.453 ...ns}  \hbox{\strut and manual tests}					&
+l.480 ...report with} \hbox{faulty TC only} 					&
+                                                   \\ \hline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.481 ...ns}  \hbox{\strut and manual tests}					&
                                                    \vtop{\hbox{\strut Check ...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
@@ -936,25 +1108,276 @@ Try to go on, since this might almost work.
 ! Missing } inserted.
 <inserted text> 
                 }
-l.453 ...ut with specifications}																	&
+l.481 ...ut with specifications}																	&
                                                    Contracts violations 				...
 I've put in what seems to be necessary to fix
 the current column of the current alignment.
 Try to go on, since this might almost work.
 
+! Missing } inserted.
+<inserted text> 
+                }
+l.481 ...t report} \hbox{with faulty TC only} 			&
+                                                   \\ \hline
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-Overfull \hbox (205.14694pt too wide) in paragraph at lines 441--457
+! Missing } inserted.
+<inserted text> 
+                }
+l.482 ...trut Java, .NET,}  \hbox{\strut JML} 			&
+                                                   Code, Time 														...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.482 ...Traces of found } \hbox{\strut faults}		&
+                                                   \vtop{\hbox{\strut GUI, g...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.482 ...ive faulty} \hbox{examples, Quick} 					&
+                                                   \\ \hline %inserts single...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (77.39603pt too wide) in paragraph at lines 469--485
  [][] 
  []
 
-[26 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/yetiCommandCLI.p
-df>]) [27 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/yetiComman
-dGUI.pdf>] [28]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.bbl
-Missing character: There is no â in font ptmri7t!
-Missing character: There is no € in font ptmri7t!
-Missing character: There is no ” in font ptmri7t!
- [29
+) [28 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/yetiCommandCLI
+.pdf> <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/yetiCommandGUI
+.pdf>] [29] [30]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.tex
+Chapter 3.
+[31
+
+
+
+] [32] [33] <chapter3/ART_Patterns.png, id=1052, 376.40625pt x 101.62968pt>
+File: chapter3/ART_Patterns.png Graphic file (type png)
+
+<use chapter3/ART_Patterns.png>
+Package pdftex.def Info: chapter3/ART_Patterns.png used on input line 47.
+(pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
+ [34 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/ART_Patterns.pn
+g>]
+<chapter3/block2.png, id=1059, 271.0125pt x 122.70844pt>
+File: chapter3/block2.png Graphic file (type png)
+
+<use chapter3/block2.png>
+Package pdftex.def Info: chapter3/block2.png used on input line 56.
+(pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
+
+<chapter3/flowchart1.pdf, id=1062, 193.19614pt x 195.7238pt>
+File: chapter3/flowchart1.pdf Graphic file (type pdf)
+
+<use chapter3/flowchart1.pdf>
+Package pdftex.def Info: chapter3/flowchart1.pdf used on input line 69.
+(pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
+ [35 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/block2.png>] [3
+6 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/flowchart1.pdf>]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
+
+Overfull \hbox (21.30807pt too wide) in paragraph at lines 138--140
+\OT1/ptm/m/n/12 strat-egy fur-ther se-lect val-ues ([]\OT1/pcr/m/n/12 0, Intege
+r.MIN_VALUE \OT1/ptm/m/n/12 & []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/ptm/m/n/1
+2 )
+ []
+
+[37]
+Overfull \hbox (8.26225pt too wide) in paragraph at lines 157--158
+[]\OT1/ptm/m/n/12 YETI can be di-vided into three de-cou-pled main parts: the c
+ore in-fras-truc-ture, language-
+ []
+
+[38] <chapter3/hierarchy.pdf, id=1107, 98.56648pt x 125.337pt>
+File: chapter3/hierarchy.pdf Graphic file (type pdf)
+
+<use chapter3/hierarchy.pdf>
+Package pdftex.def Info: chapter3/hierarchy.pdf used on input line 163.
+(pdftex.def)             Requested size: 113.8153pt x 142.27174pt.
+ [39 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/hierarchy.pdf>]
+ [40] [41]
+<chapter3/DssrImprove.png, id=1146, 986.2446pt x 479.391pt>
+File: chapter3/DssrImprove.png Graphic file (type png)
+
+<use chapter3/DssrImprove.png>
+Package pdftex.def Info: chapter3/DssrImprove.png used on input line 257.
+(pdftex.def)             Requested size: 398.33858pt x 193.62561pt.
+
+Overfull \hbox (68.6502pt too wide) in alignment at lines 343--343
+[][][][][][][][][][][][][][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 10.8508pt on input line 347.
+
+[42 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/DssrImprove.png>
+] [43]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 380.
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 387.
+ [44] [45] [46] [47] [48]) [49]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.tex
+Chapter 4.
+[50
+
+
+
+] <chapter4/ART_Patterns.png, id=1254, 376.40625pt x 101.62968pt>
+File: chapter4/ART_Patterns.png Graphic file (type png)
+
+<use chapter4/ART_Patterns.png>
+Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 19.
+(pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
+ [51 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/ART_Patterns.pn
+g>]
+<chapter4/ADFD_Diagram1.png, id=1270, 589.20125pt x 414.54875pt>
+File: chapter4/ADFD_Diagram1.png Graphic file (type png)
+
+<use chapter4/ADFD_Diagram1.png>
+Package pdftex.def Info: chapter4/ADFD_Diagram1.png used on input line 100.
+(pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
+
+<chapter4/ADFD_front_end.png, id=1271, 1342.01375pt x 767.86874pt>
+File: chapter4/ADFD_front_end.png Graphic file (type png)
+
+<use chapter4/ADFD_front_end.png>
+Package pdftex.def Info: chapter4/ADFD_front_end.png used on input line 108.
+(pdftex.def)             Requested size: 341.4206pt x 187.78384pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--116
+
+ []
+
+[52 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/ADFD_Diagram1.pn
+g>]
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--122
+
+ []
+
+[53 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/ADFD_front_end.p
+ng>]
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+
+ []
+
+[54] [55]
+<chapter4/pointDomainOneArgument.png, id=1314, 780.9175pt x 570.13pt>
+File: chapter4/pointDomainOneArgument.png Graphic file (type png)
+
+<use chapter4/pointDomainOneArgument.png>
+Package pdftex.def Info: chapter4/pointDomainOneArgument.png used on input line
+ 226.
+(pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
+
+
+LaTeX Warning: Reference `sec:appendix1' on page 56 undefined on input line 231
+.
+
+
+LaTeX Warning: Reference `sec:appendix1' on page 56 undefined on input line 260
+.
+
+
+LaTeX Warning: Reference `sec:appendix1' on page 56 undefined on input line 261
+.
+
+[56 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/pointDomainOneAr
+gument.png>]
+
+LaTeX Warning: Reference `sec:appendix1' on page 57 undefined on input line 314
+.
+
+<chapter4/PFDOne.png, id=1335, 790.955pt x 575.14874pt>
+File: chapter4/PFDOne.png Graphic file (type png)
+
+<use chapter4/PFDOne.png>
+Package pdftex.def Info: chapter4/PFDOne.png used on input line 322.
+(pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
+
+<chapter4/PFDTwo.png, id=1336, 785.93625pt x 573.14125pt>
+File: chapter4/PFDTwo.png Graphic file (type png)
+
+<use chapter4/PFDTwo.png>
+Package pdftex.def Info: chapter4/PFDTwo.png used on input line 326.
+(pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
+
+
+LaTeX Warning: Reference `sec:appendix1' on page 57 undefined on input line 347
+.
+
+[57 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/PFDOne.png> <C:/
+Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/PFDTwo.png>]
+<chapter4/BFDOne.png, id=1348, 794.97pt x 575.14874pt>
+File: chapter4/BFDOne.png Graphic file (type png)
+
+<use chapter4/BFDOne.png>
+Package pdftex.def Info: chapter4/BFDOne.png used on input line 360.
+(pdftex.def)             Requested size: 170.709pt x 113.80783pt.
+
+<chapter4/BFDTwo.png, id=1349, 787.94376pt x 573.14125pt>
+File: chapter4/BFDTwo.png Graphic file (type png)
+
+<use chapter4/BFDTwo.png>
+Package pdftex.def Info: chapter4/BFDTwo.png used on input line 364.
+(pdftex.def)             Requested size: 170.71512pt x 113.80414pt.
+
+
+LaTeX Warning: Reference `sec:appendix1' on page 58 undefined on input line 388
+.
+
+<chapter4/SFDOne.png, id=1353, 789.95125pt x 573.14125pt>
+File: chapter4/SFDOne.png Graphic file (type png)
+
+<use chapter4/SFDOne.png>
+Package pdftex.def Info: chapter4/SFDOne.png used on input line 398.
+(pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
+
+<chapter4/SFDTwo.png, id=1354, 788.9475pt x 575.14874pt>
+File: chapter4/SFDTwo.png Graphic file (type png)
+
+<use chapter4/SFDTwo.png>
+Package pdftex.def Info: chapter4/SFDTwo.png used on input line 402.
+(pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
+ [58 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/BFDOne.png> <C:
+/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/BFDTwo.png> <C:/Users/M
+ianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/SFDOne.png> <C:/Users/MianAsbat
+/git/yeti-test/Mian_PhD_Thesis/chapter4/SFDTwo.png>]
+[59] [60]) [61]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter5/chapter5.tex
+Chapter 5.
+[62
+
+
+
+]) [63] [64]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\conclusion/conclusions.tex
+Chapter 6.
+) [65
+
+
+
+] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.bbl
+[66
 
 
 ]
@@ -963,11 +1386,19 @@ Missing character: There is no € in font ptmri7t!
 Missing character: There is no ” in font ptmri7t!
 Missing character: There is no â in font ptmri7t!
 Missing character: There is no € in font ptmri7t!
+Missing character: There is no ” in font ptmri7t!
+Missing character: There is no â in font ptmri7t!
+Missing character: There is no € in font ptmri7t!
 Missing character: There is no ™ in font ptmri7t!
+ [67] [68] [69] [70] [71] [72] [73]
+Underfull \hbox (badness 4927) in paragraph at lines 566--570
+[]\OT1/ptm/m/n/12 Debra J Richard-son, Stephanie Leif Aha, and T Owen O'malley.
 
-[30] [31] [32] [33] [34])
+ []
 
-! LaTeX Error: \begin{enumerate} on input line 332 ended by \end{document}.
+[74])
+
+! LaTeX Error: \begin{enumerate} on input line 333 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -980,18 +1411,22 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
-[35]
+[75]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.aux
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\abstract/abstract.aux)
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\dedication/dedication.aux)
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\acknowlegements/acknowlegemen
 ts.aux) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter1/chapter1.aux
-) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.aux))
+) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter5/chapter5.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\conclusion/conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
-(rerunfilecheck)             Checksum: 90F6E36591914AB9281EFD45A57B621C;3257.
+(rerunfilecheck)             Checksum: 431D930CF297E9B8ECE9D47FA5B0D375;6175.
 
 
 LaTeX Warning: There were undefined references.
@@ -1000,26 +1435,32 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 332 (\begingroup)
+### semi simple group (level 1) entered at line 333 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 9193 strings out of 493921
- 134537 string characters out of 3147270
- 228143 words of memory out of 3000000
- 12047 multiletter control sequences out of 15000+200000
- 24652 words of font info for 56 fonts, out of 3000000 for 9000
+ 9775 strings out of 493921
+ 144358 string characters out of 3147270
+ 327333 words of memory out of 3000000
+ 12370 multiletter control sequences out of 15000+200000
+ 37875 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 35i,13n,72p,1741b,530s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,13n,72p,1741b,1871s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
-/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on ociamthesismain.pdf (43 pages, 713859 bytes).
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on ociamthesismain.pdf (86 pages, 1494466 bytes).
 PDF statistics:
- 809 PDF objects out of 1000 (max. 8388607)
- 209 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1603 PDF objects out of 1728 (max. 8388607)
+ 400 named destinations out of 1000 (max. 500000)
+ 803 words of extra memory for PDF output out of 10000 (max. 10000000)
 
