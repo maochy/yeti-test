@@ -364,15 +364,28 @@ The key benefit of Korat and TestEra, representation level approaches, is that n
 
 %As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
 
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%																						 %
+%																						 %			
+% YETI Section Starts here									 %
+%																						 %		
+%																						 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{YETI Overview}
-YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. For complete automation of the process, YETI uses two approaches for oracle (pass/fail judgement). If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing. Other prominent features of YETI include its Graphical User Interface (GUI) for user friendliness and ability to distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI) for user friendliness along with the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14.5cm, height=3.5cm]{chapter2/yetiOverview.png}
+	\caption{YETI test cycle}
+	\label{fig:yetiOverview}
+\end{figure}
 
 
-\subsection{Core Modules of YETI Tool}
-YETI has been designed with an emphasis on extensibility. It is therefore divided into three main sections: the core infrastructure, strategies and language-specific bindings which are loosely coupled to easily accommodate new languages, strategies and environments. The environment defines the procedure of extracting information from the meta-data of the classes under test and providing it to the core infrastructure. 
+\subsection{Mian Components of YETI Tool}
+YETI has been designed with an emphasis on extensibility to facilitate future growth. It is therefore divided into three main components: the core infrastructure, strategies and language-specific bindings which are loosely coupled to easily accommodate new languages, strategies and environments. The environment defines the procedure of extracting information from the meta-data of the classes under test and providing it to the core infrastructure. 
 
 \begin{figure}[h]
 	\centering
@@ -484,7 +497,10 @@ Alternately, runnable jar file by the name {\it YetiLauncher} is also available 
 As a result of both the above commands YETI launch its own GUI window and start testing the assigned programs. 
 
 \subsection{YETI Test Oracle}
-YETI deals with the oracle problem in two ways. If available, it uses code-contracts as oracles, however in the absence of contracts it uses runtime exceptions as errors which is also known as robustness testing.
+Oracles in YETI are language dependant. YETI uses two approaches for oracle (pass/fail judgement). In the presence of program specifications, YETI checks for inconsistencies between the code and the specifications. In the absence of specifications YETI checks for assertion violations if assert statements are included by the programmer. However in the absence of both specifications and assertions YETI performs robustness testing that considers any undeclared runtime exceptions as failures. 
+
+%If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing.
+%YETI deals with the oracle problem in two ways. If available, it uses code-contracts as oracles, however in the absence of contracts it uses runtime exceptions as errors which is also known as robustness testing.
 
 \subsection{YETI Report}
 YETI gives a complete test report after execution of each test. The report contain all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assign value to help in debugging the identified fault. 
@@ -503,6 +519,28 @@ YETI separates the bugs from successful executions to simplify the test report. 
 \end{figure}
 
 subsection{YETI Graphical User Interface}
+YETI supports a GUI that not only allows test engineers to monitor the current test session but also to modify its characteristics in real time during test execution. It is useful to have the facility of modifying or aborting the test parameters at run time and observing the test behaviour in response. The figure \ref{fig:yetiGUI} present the YETI GUI comprising of six numbered windows (the windows are labelled for illustration purposes only).
+
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter2/seecaption.pdf}}
+	\label{fig:yetiGUI}
+	\caption{GUI of YETI Tool}
+\end{figure}
+
+\begin{enumerate}
+\item Window No 1 displays the failures of the tested module over time.
+\item Window No 2 displays the total number of failures over time. These may be generated from calls not related to the tested module.
+\item Window No 3 displays the total number of calls to the tested module over time. 
+\item Window No 4 displays the total number of variables generated by YETI over time.
+\item Window No 5 displays colored rectangles: one for each constructor and method under test. Each rectangle represents the calls to a constructor or a method.
+\begin{enumerate}
+The colors in a rectangle have the following meaning:
+\item Green indicates successful calls (✓). A successful call is one that does not raise an exception or if it does, the method or the constructor declares to throw it.
+\item Red indicates failed calls (X). A failed call results from raised RuntimeException or one of its subclasses.
+\item Yellow indicates “undecidable” calls (?). A call is “undecidable” if for some reason it takes too long to complete and needs to be stopped, or if a YetiSecurityException (custom exception in YETI) is thrown.
+\end{enumerate}
+\end{enumerate}
 
 
 \subsection{Summary of automated testing tools}
