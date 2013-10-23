@@ -45,6 +45,11 @@ Antonia Bertolino.
 \newblock In {\em Future of Software Engineering, 2007. FOSE'07}, pages
   85--103. IEEE, 2007.
 
+\bibitem{bird1983automatic}
+David~L. Bird and Carlos~Urias Munoz.
+\newblock Automatic generation of random self-checking test cases.
+\newblock {\em IBM systems journal}, 22(3):229--245, 1983.
+
 \bibitem{Boyapati2002}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
 \newblock Korat: automated testing based on java predicates.
@@ -227,6 +232,13 @@ Christoph Csallner and Yannis Smaragdakis.
 \newblock {\em Software---Practice \& Experience}, 34(11):1025--1050, September
   2004.
 
+\bibitem{daniel2007automated}
+Brett Daniel, Danny Dig, Kely Garcia, and Darko Marinov.
+\newblock Automated testing of refactoring engines.
+\newblock In {\em Proceedings of the the 6th joint meeting of the European
+  software engineering conference and the ACM SIGSOFT symposium on The
+  foundations of software engineering}, pages 185--194. ACM, 2007.
+
 \bibitem{Dijkstra1972}
 Edsger~W. Dijkstra.
 \newblock Structured programming.
@@ -263,6 +275,13 @@ National~Institute for Standards and Technology.
   testing.
 \newblock Plannin Report 02-03, May 2002.
 
+\bibitem{forrester2000empirical}
+Justin~E Forrester and Barton~P Miller.
+\newblock An empirical study of the robustness of windows nt applications using
+  random testing.
+\newblock In {\em Proceedings of the 4th USENIX Windows System Symposium},
+  pages 59--68, 2000.
+
 \bibitem{Forrester2000}
 Justin~E. Forrester and Barton~P. Miller.
 \newblock An empirical study of the robustness of windows nt applications using
@@ -292,6 +311,12 @@ Patrice Godefroid, Nils Klarlund, and Koushik Sen.
 \newblock Dart: directed automated random testing.
 \newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
 
+\bibitem{groce2007randomized}
+Alex Groce, Gerard Holzmann, and Rajeev Joshi.
+\newblock Randomized differential testing as a prelude to formal verification.
+\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
+  Conference on}, pages 621--631. IEEE, 2007.
+
 \bibitem{Gutjahr1999}
 W.J. Gutjahr.
 \newblock Partition testing vs. random testing: the influence of uncertainty.
@@ -308,6 +333,11 @@ D.~Hamlet and R.~Taylor.
 Richard Hamlet.
 \newblock Random testing.
 \newblock {\em Encyclopedia of software Engineering}, 1994.
+
+\bibitem{hanford1970automatic}
+Kenneth~V. Hanford.
+\newblock Automatic generation of test cases.
+\newblock {\em IBM Systems Journal}, 9(4):242--257, 1970.
 
 \bibitem{Hierons2009}
 Robert~M. Hierons, Kirill Bogdanov, Jonathan~P. Bowen, Rance Cleaveland, John
@@ -374,6 +404,12 @@ Bogdan Korel.
 \newblock {\em Software Engineering, IEEE Transactions on}, 16(8):870--879,
   1990.
 
+\bibitem{kropp1998automated}
+Nathan~P Kropp, Philip~J Koopman, and Daniel~P Siewiorek.
+\newblock Automated robustness testing of off-the-shelf software components.
+\newblock In {\em Fault-Tolerant Computing, 1998. Digest of Papers.
+  Twenty-Eighth Annual International Symposium on}, pages 230--239. IEEE, 1998.
+
 \bibitem{Leitner2007}
 Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
 \newblock Reconciling manual and automated testing: The autotest experience.
@@ -426,10 +462,32 @@ Thomas~J McCabe.
 \newblock {\em Structured testing}, volume 500.
 \newblock IEEE Computer Society Press, 1983.
 
+\bibitem{meyer1988object}
+Bertrand Meyer.
+\newblock {\em Object-oriented software construction}, volume~2.
+\newblock Prentice hall New York, 1988.
+
+\bibitem{meyer1992applying}
+Bertrand Meyer.
+\newblock Applying'design by contract'.
+\newblock {\em Computer}, 25(10):40--51, 1992.
+
 \bibitem{meyer1987eiffel}
 Bertrand Meyer, Jean-Marc Nerson, and Masanobu Matsuo.
 \newblock Eiffel: object-oriented design for software engineering.
 \newblock In {\em ESEC'87}, pages 221--229. Springer, 1987.
+
+\bibitem{miller2006empirical}
+Barton~P Miller, Gregory Cooksey, and Fredrick Moore.
+\newblock An empirical study of the robustness of macos applications using
+  random testing.
+\newblock In {\em Proceedings of the 1st international workshop on Random
+  testing}, pages 46--54. ACM, 2006.
+
+\bibitem{miller1990empirical}
+Barton~P Miller, Louis Fredriksen, and Bryan So.
+\newblock An empirical study of the reliability of unix utilities.
+\newblock {\em Communications of the ACM}, 33(12):32--44, 1990.
 
 \bibitem{Miller1963}
 Joan~C Miller and Clifford~J Maloney.
