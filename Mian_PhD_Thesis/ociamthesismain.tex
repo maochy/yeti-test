@@ -79,36 +79,42 @@ showstringspaces=false}
 
 
 \maketitle                  % create a title page from the preamble info
-
+\onehalfspacing
 
 \begin{romanpages}          % start roman page numbering
 
 \include{abstract/abstract}          % include the abstract
 
-\doublespacing
+%\doublespacing
+%\begin{spacing}{1.5}
 
 \tableofcontents            % generate and include a table of contents
 \listoffigures  				  % generate and include a list of tables
 \listoftables              % generate and include a list of figures
-\singlespacing
+
+
 
 
 \include{dedication/dedication}        % include a dedication.tex file
-\include{acknowlegements/acknowlegements}   % include an acknowledgements.tex file
+\include{acknowlegements/acknowlegements} %include an acknowledgements.tex file
 
 \end{romanpages}            % end roman page numbering
 
 
 
 %now include the files of latex for each of the chapters etc
+%\onehalfspacing
+%\doublespacing
+
 \include{chapter1/chapter1}
 \include{chapter2/chapter2}
 \include{chapter3/chapter3}
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
 \include{chapter6/chapter6}
-\include{chapter7/chapter7}
-%\include{conclusion/conclusions}
+%\include{chapter7/chapter7}
+\include{chapter8/chapter8}
+%\end{spacing}
 
 %now enable appendix numbering format and include any appendices
 \appendix
