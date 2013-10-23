@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  23 OCT 2013 04:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.9.15)  23 OCT 2013 22:43
 entering extended mode
 **ociamthesismain.tex
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.tex
@@ -474,11 +474,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 54.
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\acknowlegements/acknowlegemen
 ts.aux) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter1/chapter1.aux
 ) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.aux)
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.aux
-
-LaTeX Warning: Label `chap:literature' multiply defined.
-
-) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.aux)
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.aux)
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter5/chapter5.aux)
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter6/chapter6.aux
 
@@ -649,18 +646,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--87
+Underfull \hbox (badness 10000) in paragraph at lines 84--86
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--93
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
-
-
-LaTeX Warning: Reference `chap:discussion' on page 5 undefined on input line 97
-.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 96--98
@@ -668,17 +661,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+LaTeX Warning: Reference `chap:discussion' on page 5 undefined on input line 10
+2.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
 
  []
 
-[5]) [6]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.tex
+) [6] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter2/chapter2.tex
 Chapter 2.
 
 Overfull \hbox (1.31316pt too wide) in paragraph at lines 9--10
@@ -694,15 +695,24 @@ Overfull \hbox (1.31316pt too wide) in paragraph at lines 9--10
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [9] [10] [11] [12]
-<chapter2/randomTesting.jpg, id=886, 441.90094pt x 118.19156pt>
+ [9] [10] [11] [12]) [13]
+(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.tex
+Chapter 3.
+<chapter2/randomTesting.jpg, id=894, 441.90094pt x 118.19156pt>
 File: chapter2/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter2/randomTesting.jpg>
-Package pdftex.def Info: chapter2/randomTesting.jpg used on input line 156.
+Package pdftex.def Info: chapter2/randomTesting.jpg used on input line 15.
 (pdftex.def)             Requested size: 220.94992pt x 59.09563pt.
- [13 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/randomTesting.j
-pg>]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14
+
+
+
+]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -718,122 +728,111 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
- [14]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 176.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
+ [15 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/randomTesting.j
+pg>]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 35.
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 176.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
 
-<chapter2/pointblockstrip.jpg, id=930, 581.92406pt x 183.68625pt>
+<chapter2/pointblockstrip.jpg, id=935, 581.92406pt x 183.68625pt>
 File: chapter2/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter2/pointblockstrip.jpg>
-Package pdftex.def Info: chapter2/pointblockstrip.jpg used on input line 182.
+Package pdftex.def Info: chapter2/pointblockstrip.jpg used on input line 41.
 (pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
- [15 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/pointblockstrip
+ [16 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/pointblockstrip
 .jpg>]
-<chapter2/mart2.pdf, id=945, 350.30875pt x 185.69376pt>
+<chapter2/mart2.pdf, id=950, 350.30875pt x 185.69376pt>
 File: chapter2/mart2.pdf Graphic file (type pdf)
 
 <use chapter2/mart2.pdf>
-Package pdftex.def Info: chapter2/mart2.pdf used on input line 199.
+Package pdftex.def Info: chapter2/mart2.pdf used on input line 58.
 (pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
- [16 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/mart2.pdf>] <ch
-apter2/RRT.pdf, id=973, 370.38374pt x 247.67531pt>
+ [17 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/mart2.pdf>] <ch
+apter2/RRT.pdf, id=978, 370.38374pt x 247.67531pt>
 File: chapter2/RRT.pdf Graphic file (type pdf)
 
 <use chapter2/RRT.pdf>
-Package pdftex.def Info: chapter2/RRT.pdf used on input line 213.
+Package pdftex.def Info: chapter2/RRT.pdf used on input line 72.
 (pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
- [17 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/RRT.pdf>] [18]
+ [18 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter2/RRT.pdf>] [19]
 Runaway argument?
 {Modern software development as it is well known has adopted the para\ETC.
 ! Paragraph ended before \@textcolor was complete.
 <to be read again> 
                    \par 
-l.271 
+l.130 
       
 I suspect you've forgotten a `}', causing me to apply this
 control sequence to too much text. How can we recover?
 My plan is to forget the whole thing and hope for the best.
 
 ! Too many }'s.
-l.278 ... an immediate guideline to the designer.}
+l.137 ... an immediate guideline to the designer.}
                                                   
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
 
-[19]) [20] [21]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter3/chapter3.tex
-Chapter 3.
-<chapter3/JCrasher.png, id=1028, 867.24pt x 402.50375pt>
+[20] [21] <chapter3/JCrasher.png, id=1029, 867.24pt x 402.50375pt>
 File: chapter3/JCrasher.png Graphic file (type png)
 
 <use chapter3/JCrasher.png>
-Package pdftex.def Info: chapter3/JCrasher.png used on input line 16.
+Package pdftex.def Info: chapter3/JCrasher.png used on input line 150.
 (pdftex.def)             Requested size: 426.79071pt x 199.16934pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-[22
+[22 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/JCrasher.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 165.
 
 
-
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 31.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
- [23 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/JCrasher.png>]
-<chapter3/eclat_working.png, id=1045, 356.532pt x 235.1184pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
+ [23]
+<chapter3/eclat_working.png, id=1046, 356.532pt x 235.1184pt>
 File: chapter3/eclat_working.png Graphic file (type png)
 
 <use chapter3/eclat_working.png>
-Package pdftex.def Info: chapter3/eclat_working.png used on input line 43.
+Package pdftex.def Info: chapter3/eclat_working.png used on input line 177.
 (pdftex.def)             Requested size: 426.82436pt x 256.09814pt.
  [24 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/eclat_working.p
 ng>] [25]
-<chapter3/autotest.png, id=1064, 292.14229pt x 156.78915pt>
+<chapter3/autotest.png, id=1067, 292.14229pt x 156.78915pt>
 File: chapter3/autotest.png Graphic file (type png)
 
 <use chapter3/autotest.png>
-Package pdftex.def Info: chapter3/autotest.png used on input line 81.
+Package pdftex.def Info: chapter3/autotest.png used on input line 215.
 (pdftex.def)             Requested size: 369.9066pt x 199.17741pt.
+ [26 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/autotest.png (P
+NG copy)>]
+<chapter3/testera.png, id=1078, 379.20241pt x 142.17401pt>
+File: chapter3/testera.png Graphic file (type png)
+
+<use chapter3/testera.png>
+Package pdftex.def Info: chapter3/testera.png used on input line 235.
+(pdftex.def)             Requested size: 369.89734pt x 213.39716pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[26] <chapter3/testera.png, id=1079, 379.20241pt x 142.17401pt>
-File: chapter3/testera.png Graphic file (type png)
-
-<use chapter3/testera.png>
-Package pdftex.def Info: chapter3/testera.png used on input line 101.
-(pdftex.def)             Requested size: 369.89734pt x 213.39716pt.
- [27 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/autotest.png (P
-NG copy)>] [28 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/teste
-ra.png>]
-<chapter3/yetiOverview.png, id=1104, 419.166pt x 102.3825pt>
+[27] [28 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/testera.png
+>] <chapter3/yetiOverview.png, id=1105, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png>
-Package pdftex.def Info: chapter3/yetiOverview.png used on input line 135.
+Package pdftex.def Info: chapter3/yetiOverview.png used on input line 269.
 (pdftex.def)             Requested size: 412.57074pt x 99.59053pt.
- [29 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiOverview.pn
-g (PNG copy)>]
 
-LaTeX Warning: File `yetiMainModules.png' not found on input line 146.
+
+LaTeX Warning: File `yetiMainModules.png' not found on input line 280.
 
 
 ! Package pdftex.def Error: File `yetiMainModules.png' not found.
@@ -842,217 +841,91 @@ See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.146 ...=13cm, height=7.5cm]{yetiMainModules.png}
+l.280 ...=13cm, height=7.5cm]{yetiMainModules.png}
                                                   
 Using draft setting for this image.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 146.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 280.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [30]
-Overfull \hbox (2.69456pt too wide) in paragraph at lines 180--181
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[29 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiOverview.png
+ (PNG copy)>] [30]
+Overfull \hbox (2.69456pt too wide) in paragraph at lines 314--315
 []\OT1/ptm/m/n/12 Define a new sub-class of YetiPro-gram-mingLan-guage-Prop-er-
 ties class to con-tain helper
  []
 
-[31]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<chapter3/yetiCommandCLI.pdf, id=1130, 831.105pt x 95.35625pt>
+[31] [32] <chapter3/yetiCommandCLI.pdf, id=1136, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 236.
+Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 370.
 (pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<chapter3/yetiCommandGUI.pdf, id=1132, 433.62pt x 494.84875pt>
+<chapter3/yetiCommandGUI.pdf, id=1138, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 245.
+Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 379.
 (pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
- [32]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `chapter3/seecaption.pdf' not found on input line 263.
-
-
-! Package pdftex.def Error: File `chapter3/seecaption.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.263 ..., height = 8cm]{chapter3/seecaption.pdf}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[33]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: File `chapter3/seecaption.pdf' not found on input line 271.
-
-
-! Package pdftex.def Error: File `chapter3/seecaption.pdf' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ..., height = 8cm]{chapter3/seecaption.pdf}}
-                                                  
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<chapter3/yetiGUI.png, id=1143, 1445.4pt x 903.375pt>
-File: chapter3/yetiGUI.png Graphic file (type png)
-
-<use chapter3/yetiGUI.png>
-Package pdftex.def Info: chapter3/yetiGUI.png used on input line 280.
-(pdftex.def)             Requested size: 426.7863pt x 341.43896pt.
- [34 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiCommandCLI.
+ [33 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiCommandCLI.
 pdf> <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiCommandGUI.
 pdf>]
 
+LaTeX Warning: File `chapter3/seecaption.pdf' not found on input line 397.
+
+
+! Package pdftex.def Error: File `chapter3/seecaption.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.397 ..., height = 8cm]{chapter3/seecaption.pdf}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `chapter3/seecaption.pdf' not found on input line 405.
+
+
+! Package pdftex.def Error: File `chapter3/seecaption.pdf' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.405 ..., height = 8cm]{chapter3/seecaption.pdf}}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[34] <chapter3/yetiGUI.png, id=1168, 1445.4pt x 903.375pt>
+File: chapter3/yetiGUI.png Graphic file (type png)
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.294 \item G
-             reen indicates successful calls (‚úì). A successful call is one...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use chapter3/yetiGUI.png>
+Package pdftex.def Info: chapter3/yetiGUI.png used on input line 414.
+(pdftex.def)             Requested size: 426.7863pt x 341.43896pt.
 
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.294 \item G
-             reen indicates successful calls (‚úì). A successful call is one...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.294 \item G
-             reen indicates successful calls (‚úì). A successful call is one...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ì in font ptmr7t!
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.295 \item R
-             ed indicates failed calls (X). A failed call results from raise...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.295 \item R
-             ed indicates failed calls (X). A failed call results from raise...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.295 \item R
-             ed indicates failed calls (X). A failed call results from raise...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.296 \item Y
-             ellow indicates ‚Äúundecidable‚Äù calls (?). A call is ‚Äúundec...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.296 \item Y
-             ellow indicates ‚Äúundecidable‚Äù calls (?). A call is ‚Äúundec...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.296 \item Y
-             ellow indicates ‚Äúundecidable‚Äù calls (?). A call is ‚Äúundec...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
@@ -1065,58 +938,45 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.297 \end{enumerate}
-                     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (77.39603pt too wide) in paragraph at lines 305--321
+[35]
+Overfull \hbox (77.39603pt too wide) in paragraph at lines 437--453
  [][] 
  []
 
-) [35] [36] [37] [38 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3
-/yetiGUI.png>]
-(C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.tex
+) [36 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter3/yetiGUI.png>]
+[37] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter4/chapter4.tex
 Chapter 4.
-[39
+[38
 
 
 
-] [40] [41] <chapter4/ART_Patterns.png, id=1263, 376.40625pt x 101.62968pt>
+] [39] [40] <chapter4/ART_Patterns.png, id=1261, 376.40625pt x 101.62968pt>
 File: chapter4/ART_Patterns.png Graphic file (type png)
 
 <use chapter4/ART_Patterns.png>
 Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 47.
 (pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
 
-<chapter4/block2.png, id=1265, 271.0125pt x 122.70844pt>
+<chapter4/block2.png, id=1263, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
 Package pdftex.def Info: chapter4/block2.png used on input line 56.
 (pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
- [42 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/ART_Patterns.pn
+ [41 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/ART_Patterns.pn
 g>]
-<chapter4/flowchart1.pdf, id=1273, 193.19614pt x 195.7238pt>
+<chapter4/flowchart1.pdf, id=1271, 193.19614pt x 195.7238pt>
 File: chapter4/flowchart1.pdf Graphic file (type pdf)
 
 <use chapter4/flowchart1.pdf>
 Package pdftex.def Info: chapter4/flowchart1.pdf used on input line 69.
 (pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
- [43 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/block2.png>]
+ [42 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/block2.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
- [44 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/flowchart1.pdf>
-] [45]
-<chapter4/hierarchy.pdf, id=1313, 98.56648pt x 125.337pt>
+ [43 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/flowchart1.pdf>
+] [44]
+<chapter4/hierarchy.pdf, id=1311, 98.56648pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
@@ -1126,14 +986,14 @@ Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 163.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[46] [47 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/hierarchy.p
+[45] [46 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/hierarchy.p
 df>]
 Overfull \hbox (8.56361pt too wide) in paragraph at lines 248--249
 \OT1/ptm/m/n/12 Various mea-sures in-clud-ing the E-measure (ex-pected num-ber 
 of fail-ures de-tected), P-measure
  []
 
-<chapter4/DssrImprove.png, id=1342, 986.2446pt x 479.391pt>
+<chapter4/DssrImprove.png, id=1340, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
@@ -1151,35 +1011,35 @@ Overfull \hbox (68.6502pt too wide) in alignment at lines 344--344
 
 LaTeX Warning: Float too large for page by 10.8508pt on input line 348.
 
-[48] [49] [50] [51 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/D
+[47] [48] [49] [50 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter4/D
 ssrImprove.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 381.
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 388.
- [52] [53] [54] [55]) [56]
+ [51] [52] [53] [54]) [55]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter5/chapter5.tex
 Chapter 5.
-[57
+[56
 
 
 
-] <chapter5/ART_Patterns.png, id=1460, 376.40625pt x 101.62968pt>
+] <chapter5/ART_Patterns.png, id=1458, 376.40625pt x 101.62968pt>
 File: chapter5/ART_Patterns.png Graphic file (type png)
 
 <use chapter5/ART_Patterns.png>
 Package pdftex.def Info: chapter5/ART_Patterns.png used on input line 19.
 (pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
- [58 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ART_Patterns.pn
+ [57 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ART_Patterns.pn
 g>]
-<chapter5/ADFD_Diagram1.png, id=1476, 589.20125pt x 414.54875pt>
+<chapter5/ADFD_Diagram1.png, id=1474, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
 Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 100.
 (pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
 
-<chapter5/ADFD_front_end.png, id=1477, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1475, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
@@ -1195,7 +1055,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
-[59 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ADFD_Diagram1.pn
+[58 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ADFD_Diagram1.pn
 g>]
 Underfull \hbox (badness 10000) in paragraph at lines 120--122
 
@@ -1206,35 +1066,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
-[60 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ADFD_front_end.p
-ng>] [61]
-<chapter5/pointDomainOneArgument.png, id=1505, 780.9175pt x 570.13pt>
+[59 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/ADFD_front_end.p
+ng>] [60]
+<chapter5/pointDomainOneArgument.png, id=1503, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
 Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
  226.
 (pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
- [62]
+ [61]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[63 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/pointDomainOneAr
-gument.png>] <chapter5/PFDOne.png, id=1546, 790.955pt x 575.14874pt>
+[62 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/pointDomainOneAr
+gument.png>] <chapter5/PFDOne.png, id=1544, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
 Package pdftex.def Info: chapter5/PFDOne.png used on input line 322.
 (pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
 
-<chapter5/PFDTwo.png, id=1547, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1545, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
 Package pdftex.def Info: chapter5/PFDTwo.png used on input line 326.
 (pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
 
-<chapter5/BFDOne.png, id=1552, 794.97pt x 575.14874pt>
+<chapter5/BFDOne.png, id=1550, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
@@ -1245,7 +1105,7 @@ File: chapter5/BFDOne.png Graphic file (type png)
 Package pdftex.def Info: chapter5/BFDOne.png used on input line 361.
 (pdftex.def)             Requested size: 170.709pt x 113.80783pt.
 
-<chapter5/BFDTwo.png, id=1553, 787.94376pt x 573.14125pt>
+<chapter5/BFDTwo.png, id=1551, 787.94376pt x 573.14125pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
@@ -1256,54 +1116,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--366
 [][]
  []
 
-[64 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/PFDOne.png> <C:/
+[63 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/PFDOne.png> <C:/
 Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/PFDTwo.png>]
-<chapter5/SFDOne.png, id=1567, 789.95125pt x 573.14125pt>
+<chapter5/SFDOne.png, id=1565, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
 Package pdftex.def Info: chapter5/SFDOne.png used on input line 399.
 (pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
 
-<chapter5/SFDTwo.png, id=1568, 788.9475pt x 575.14874pt>
+<chapter5/SFDTwo.png, id=1566, 788.9475pt x 575.14874pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
 Package pdftex.def Info: chapter5/SFDTwo.png used on input line 403.
 (pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
- [65 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/BFDOne.png> <C:
+ [64 <C:/Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/BFDOne.png> <C:
 /Users/MianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/BFDTwo.png> <C:/Users/M
 ianAsbat/git/yeti-test/Mian_PhD_Thesis/chapter5/SFDOne.png> <C:/Users/MianAsbat
 /git/yeti-test/Mian_PhD_Thesis/chapter5/SFDTwo.png>]
-[66]
+[65]
 Overfull \hbox (9.38931pt too wide) in paragraph at lines 452--453
 []\OT1/ptm/m/n/12 Finally, plot-ting the range of pass or fail val-ues for a la
 rge in-put do-main (In-te-ger.MIN[]INT
  []
 
-[67]) [68]
+[66]) [67]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter6/chapter6.tex
 Chapter 6.
-[69
+[68
 
 
 
-]) [70]
+]) [69]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter8/chapter8.tex
 Chapter 7.
-[71
+[70
 
 
 
-]) [72]
+]) [71]
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\appendix1/appendix1.tex
 Appendix A.
-) [73
+) [72
 
 
 
 ] (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.bbl
-[74
+[73
 
 
 ]
@@ -1316,15 +1176,15 @@ Missing character: There is no î in font ptmri7t!
 Missing character: There is no ‚ in font ptmri7t!
 Missing character: There is no Ä in font ptmri7t!
 Missing character: There is no ô in font ptmri7t!
- [75] [76] [77] [78] [79]
+ [74] [75] [76] [77] [78]
 Underfull \hbox (badness 1292) in paragraph at lines 421--426
 \OT1/ptm/m/n/12 Ef-fi-cient unit test case min-i-miza-tion.  In \OT1/ptm/m/it/1
 2 Pro-ceed-ings of the twenty-second
  []
 
-[80] [81] [82] [83] [84])
+[79] [80] [81] [82] [83])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 132.
- [85]
+ [84]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 132.
 
 (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\ociamthesismain.aux
@@ -1342,7 +1202,7 @@ ts.aux) (C:\Users\MianAsbat\git\yeti-test\Mian_PhD_Thesis\chapter1/chapter1.aux
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 132.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 132.
 Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
-(rerunfilecheck)             Checksum: B8162C168C135FF050BCBB5DF130136E;7999.
+(rerunfilecheck)             Checksum: C72AAA90BF94C74FD38061F6ACFED689;7963.
 
 
 LaTeX Warning: There were undefined references.
@@ -1353,10 +1213,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 132.
  ) 
 Here is how much of TeX's memory you used:
- 9908 strings out of 493921
- 146984 string characters out of 3147270
- 342068 words of memory out of 3000000
- 12417 multiletter control sequences out of 15000+200000
+ 9909 strings out of 493921
+ 147013 string characters out of 3147270
+ 342106 words of memory out of 3000000
+ 12418 multiletter control sequences out of 15000+200000
  37875 words of font info for 90 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  35i,12n,72p,1848b,1717s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1372,9 +1232,9 @@ ram Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr
 8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (96 pages, 1642665 bytes).
+Output written on ociamthesismain.pdf (95 pages, 1641560 bytes).
 PDF statistics:
- 1836 PDF objects out of 2073 (max. 8388607)
+ 1834 PDF objects out of 2073 (max. 8388607)
  465 named destinations out of 1000 (max. 500000)
  1013 words of extra memory for PDF output out of 10000 (max. 10000000)
 

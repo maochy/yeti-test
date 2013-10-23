@@ -1,6 +1,140 @@
-\chapter{Literature Review II}
-\label{chap:literature}
+\chapter{Random Testing}
+\label{chap:randomTesting}
 
+\section{Random Testing}
+%This text is blue because we have to change it to our own words
+
+\textcolor{blue}{Work on random test generation dates back to a 1970 paper by Hanford. In it he reports on the ``syntax machine", a program that generated random but syntactically-correct programs for testing PL/I compilers \cite{hanford1970automatic}. The next published work on random testing was a 1983 paper by Bird and Munoz \cite{bird1983automatic}. They describe a technique to
+generate randomly-generated ``self-checking" test cases: test cases that in addition to generating test inputs generated checks for expected outputs using knowledge of the semantics of the software under test. For example, when generating random programs for testing a compiler, the generator kept track of the expected values of arithmetic computations and inserted the appropriate checks into the test case. They also applied their technique to checking sorting and merging procedures and graphic display software~\cite{pacheco2009directed}.}
+
+
+Random testing is a dynamic black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain~\cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard~\cite{hamlet1994}, in random testing, input domain is first identified, then test points are randomly taken from the whole input domain by means of random number generator. The program under test is executed on these points and the results obtained are compared with the program specifications. The test fails if the results are not according to the specifications and vice versa. Failure of any test results reflects error in the SUT.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{chapter2/randomTesting.jpg}
+	\caption{Random Testing}
+\end{figure}
+
+Generating test data by random generator is quite economical and requires less intellectual and computational efforts~\cite{Ciupa2008a}. Moreover, no human intervention is involved in data generation that ensures an unbiased testing process.
+
+However, generating test cases with out using any background information makes random testing susceptible to criticism. It is criticized for generating many test cases ending up at the same state of software. It is further stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{Myers1979}.
+
+It is stated by Ciupa et al. \cite{Ciupa2007}, that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers~\cite{hamlet1994, Ciupa2008, leitner2007efficient, Duran1981} confirmed that random testing is as effective as any other testing technique. It was found experimentally~\cite{Duran1981} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It was pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective~\cite{hamlet1990}. A comparative study conducted by Ntafos~\cite{ntafos1998random} concluded that random testing is more effective as compared to proportional partition testing.
+
+\textcolor{blue}{One of the best-known works in the field is Miller et al.’s “fuzz testing” paper, where they generate random ASCII character streams and use them as input to test Unix utilities for abnormal termination or non-terminating behaviour \cite{miller1990empirical}. In subsequent work, they extended fuzz testing to generate sequences of keyboard and mouse events, and found errors in applications running in X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Today, fuzz testing is used routinely in industry. It is frequently used as a tool for finding security vulnerabilities and is applied to test formats and protocols that attackers might use to gain unauthorized access to computers over a network. Other work that applies random test generation to operating systems code includes Kropp’s use of random test generation to test low-level system calls \cite{kropp1998automated}, and Groce et al.’s use of random test generation at NASA to test a file system used in space missions \cite{groce2007randomized}. In all these studies, a random test generator invariable found many errors in the software under test, and many errors were critical in nature. For example, Groce et al. found dozens of errors in the file system under test, many of which could have jeopardized the success of a mission.}
+
+\section{Various versions of random testing}
+Researchers have tried various approaches to bring about improvement in the performance of random testing. The prominent modifications in random strategy are stated below:
+
+\subsection{Adaptive Random Testing}
+Adaptive random testing (ART), proposed by Chen et al.~\cite{Chen2008} is based on the previous work of Chan et al.~\cite{Chan1996} regarding the existence of failure patterns across the input domain. Chan et al. observed that failure inducing inputs in the whole input domain form certain geometrical patterns and divided these into point, block and strip patterns described below.
+
+\begin{enumerate}
+\item {\bf Point pattern:} In the point pattern inputs inducing failures are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in a statement {\it total = num1/num2;} where {\it num1}, {\it num2} and {\it total} are variables of type integer.
+\item {\bf Block pattern:} In the block pattern inputs inducing failures lie in close vicinity to form a block in the input domain. Example of block pattern is failure caused by the statement {\it if ( (num \textgreater 10) \&\& (num \textless 20) )}. Here 11 to 19 are a block of faults.
+\item {\bf Strip pattern:} In the strip pattern inputs inducing failures form a strip across the input domain. Example of strip pattern is failure caused by a statement {\it num1 + num2 = 20}. Here multiple values of {\it num1} and {\it num2} can lead to the fault value 20. 
+\end{enumerate}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{chapter2/pointblockstrip.jpg}
+	\caption{Patterns of failure causing inputs}
+	\label{fig:patterns2}
+\end{figure}
+
+In figure~\ref{fig:patterns2} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box indicates the point, block and strip fault patterns.
+
+Chen et al. ~\cite{Chen2008} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more faults targeted test inputs, they proposed Adaptive Random Testing (ART) as a modified version of ordinary random testing where test values are selected at random as usual but are evenly spread across the input domain by using two sets. The executed set comprises the test cases executed by the system and the candidate set includes the test cases to be executed by the system. Initially both the sets are empty. The first test case is selected at random from the candidate set and stored in executed set after execution. The second test case is then selected from the candidate set which is far away from the last executed test case. In this way the whole input domain is tested with greater chances of generating test input from the existing fault patterns.
+
+In the experiments conducted by Chen et al.~\cite{Chen2008} the number of test cases required to detect first fault (F-measure) was used as a performance matrix instead of the traditional matrix P-measure and E-measure. Experimental results using ART showed up to 50\% increase in performance compared to ordinary random testing. The authors admitted that the issues of increase overhead, spreading test cases across the input domain for complex objects and efficient ways of selecting candidate test cases still exist. Chen et al. continued their work on ART to address some of these issues and proposed its upgraded version in~\cite{chen2009enhanced} and~\cite{Chen2005}. 
+
+\subsection{Mirror Adaptive Random Testing}
+%As discussed in the above section ART provide better results, however the increase in overhead due to extra computation to achieve even spread of test inputs makes it less cost effective. 
+Mirror Adaptive Random Testing (MART)~\cite{Chen2003} is an improvement on ART by using mirror-partitioning technique to decrease the extra computation involved in ART and reduce the overhead.
+
+\begin{figure}[h]
+\begin{center}
+	\includegraphics[width=13cm, height=6cm ]{chapter2/mart2.pdf}
+	\caption{Mirror Adaptive Random Testing~\cite{Chen2003}}
+\label{fig:mirrorART}
+\end{center}  
+\end{figure}
+
+In this technique, the input domain of the program under test is divided into n disjoint sub-domains of equal size and shape. One of the sub-domains is called source sub-domain while all the others are termed as mirror sub-domains. ART is then applied only to the source sub-domain to select the test cases while from all other sub-domains test cases are selected by using mirror function. In MART {(0, 0), (u, v)} are used to represent the whole input domain where (0, 0) is the leftmost and (u, v) is the rightmost top corner of the two dimensional rectangle. On splitting it into two sub-domains we get {(0, 0), (u/2, v)} as source sub-domain and {(u/2, 0), (u, v)} as mirror sub-domain. Let suppose we get x and y test cases by applying ART to source sub-domain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure~\ref{fig:mirrorART}. Comparative study of MART with ART provide evidence of equally good results of the two strategies with MART having the added advantage of using only one quarter of the calculation as compared with ART and thereby reduces the overhead.
+
+
+\subsection{Restricted Random Testing}
+Restricted Random Testing~\cite{chan2003normalized} is another approach to overcome the problem of extra overhead in ART. Restricted Random Testing (RRT) achieves this by creating a circular exclusion zone around the executed test case. A candidate is randomly selected from the input domain for the next test case. Before execution the candidate is checked and discarded if it lies inside the exclusion zone. This process repeats until a candidate laying outside the exclusion zone is selected. This ensures that the test case to be executed is well apart from the last executed test case. The radius of exclusion zone is constant around each test case and the area of each zone decreases with successive cases.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width= 6cm, height = 5cm]{chapter2/RRT.pdf}
+	\caption{Input domain with exclusion zone around the selected test case}
+\end{figure}
+
+To find the effectiveness of RRT, the authors compared it with ART and RT on 7 out of the 12 programs evaluated by ART and MART. The experimental results showed that the performance of RRT increases with the increase in the size of the exclusion zone and reaches the maximum level when the exclusion zone is raised to largest possible size. %Normalized Restricted Random Testing~\cite{chan2003normalized} is an improvement over RRT by allowing the testers to have better information about the target exclusion rate (R) of RRT. 
+They further found that RRT is up to 55\% more effective than ordinary random testing in terms of F-measure (Where F-measure is the total number of test cases required to find the first failure).
+
+
+
+\subsection{Directed Automated Random Testing}
+Godefroid et al.~\cite{Godefroid2005} proposed Directed Automated Random Testing (DART). %Its main purpose was to overcome the cost and difficulty of manual testing while keeping its quality intact. It automate the whole testing process including generation of unit tests, test drivers/harness and assertions for functional correctness. 
+The main features of DART can be divided into the following three parts:
+\begin{enumerate}
+\item {\bf Automated Interface Extraction:} DART automatically identifies external interfaces of a given SUT. These interfaces include external variables, external functions and the user-specified main function, which initializes the program execution.
+\item {\bf Automatic Test Driver:} DART generate test drivers to run the test cases. All the test cases are randomly generated according to the underlying environment.
+\item {\bf Dynamic Analysis of execution:} The DART instruments the given SUT at the start of the process in order to track its behaviour dynamically at run time. The results obtained are analysed in real time to systematically direct the test case execution along alternative path for maximum code coverage.
+\end{enumerate}
+
+The DART algorithm is implemented in the tool which is completely automatic and accepts the test program as input. After the external interfaces are extracted it then use the pre-conditions and post-conditions of the program under test to validate the test inputs. For languages that do not support contracts inside the code (like C), they used public methods or interfaces to mimic the scenario -------- to be continued
+
+\subsection{Quasi Random Testing}
+Quasi-random testing (QRT)~\cite{Chen2005} is a testing technique which takes advantage of failure region contiguity by distributing test cases evenly with decreased computation. %Chan et al after the analysis of faults in various experiments found that the fault patterns across the input domain are continuous. 
+To achieve even spreading of test cases, QRT uses a class with a formula, that forms an s-dimensional cube in s-dimensional input domain and generates a set of numbers with small discrepancy and low dispersion. The set of numbers is then used to generate random test cases that are permuted to make them less clustered and more evenly distributed. An empirical study was conducted to compare the effectiveness of QRT with ART and RT. The empirical results of the experiments showed that in 9 out of 12 programs QRT found a fault quicker than ART and RT while there was no significant improvement in the remaining three programs.
+%\subsection{Monti Carlo Random Testing}
+
+%\subsection{Good Random Testing}
+
+\subsection{Feedback-directed Random Testing}
+Feedback-directed Random Testing (FDRT)~\cite{Pacheco2007} is a technique that generate unit test suite at random for object-oriented programs. As the name implies FDRT uses the feedback received from the execution of first batch of randomly selected unit test suite to generate next batch of more directed unit test suite. In this way redundant and illegal unit tests are eliminated incrementally from the test suite with the help of filtration and application of contracts. For example unit test that produce IllegalArgumentException on execution is discarded, because, selected argument used in this test was not according to the type of argument the method required. 
+
+%\subsection{Adaptive Random Testing for Object-Oriented}
+\subsection{The ARTOO Testing}
+The Adaptive Random Testing for Object Oriented (ARTOO) strategy is based on object distance. Ciupa et al.~\cite{Ciupa2006}, defined the parameters that can be used to calculate distance between the objects. Two objects have more distance between them if they have more dissimilar properties. The parameters to specify the distance between the objects are dynamic types and values assigned to the primitive and reference fields. Strings are treated in terms of directly usable values and Levenshtein formula~\cite{Levenshtein1966} is used as a distance criteria between the two strings.
+
+In the ARTOO strategy, two sets are taken i.e. candidate-set containing the objects ready to be run by the system and the used-set, which is empty. First object is selected randomly from the candidate-set which is moved to used-set after execution. The second object selected from the candidate-set for execution is the one with the largest distance from the last executed object present in the used-set. The process continues till the bug is found or the objects in the candidate-set are finished~\cite{Ciupa2006}.
+
+The ARTOO strategy, implemented in AutoTest tool \cite{Ciupa2008a}, was evaluated in comparison with Directed Random (D-RAN) strategy by selecting classes from EiffelBase library \cite{meyer1987eiffel}. The experimental results indicated that some bugs found by the ARTOO were not identified by the D-RAN strategy. Moreover the ARTOO found first bug with small number of test cases than the D-RAN strategy. However, computation to select test case in the ARTOO strategy was more than the D-RAN strategy thus it took more time to generate a test case.
+
+% the same team implemented that model and performed several experiments to evaluate the proposed model. Adaptive Random Testing for Object Oriented (ARTOO) is a testing strategy, based on object distance, implemented in AutoTest tool \cite{16 search it Mendeley}.
+%ARTOO was implemented as a plug-in strategy in AutoTest. It only deals with creating and selecting inputs and all other functionality of the AutoTest was the same. Since ARTOO is based on object distance therefore the method for test input selection is to pick that object from the candidate set (A pool of objects that is a potential candidate to be executed by the system) that has the highest average distance in comparison to the objects already executed. In the experiments classes from EiffelBase library \cite{17 search it mendeley} were used. To evaluate ARTOO the same tests were also applied to directed random strategy (RAND). The outcome of the experiments showed that ARTOO finds the first bug with fewer test cases than RAND. The computation to select test case in ARTOO is more than RAND and therefore ARTOO takes more time to generate a test input. The experiments also found few of the bug found by ARTOO were not pointed out by RAND furthermore ARTOO is less sensitive to the variation of seed value than RAND
+. 
+%\subsection{Object Distance and its application}
+%To improve the performance of random testing the emphasis of ART was on the distance be- tween the test cases. But this distance was defined only for primitive data types like integers and other elementary input. Ciupa et al defined the parameters that can be used to calculate distance between the composite programmer-defined types so that ART can be applicable to testing of today’s object-oriented programs~\cite{Ciupa2006}. Two objects have more distance between them if they have more dissimilar properties. The parameters to specify the distance between the objects are dynamic types, values of its primitive and reference fields. Strings are treated as a directly usable values and Levenshtein distance~\cite{Levenshtein1966} that is also known as edit distance is used as a distance criteria between the two strings. To implement object distance first all the distances of the objects are measured. Then two sets candidate- objects containing the all the objects ready to be run by the system and the used-objects set, which is initially empty. First object is selected randomly from the candidate-object set and is moved to used-object set when executed by the system. Now the second object selected from the candidate set for execution is the one with the biggest distance from the last executed object present in the used-object set. This process is continuing until the bug is found or the objects in the candidate-object set are finished.
+
+%\subsubsection{Experimental Assessment of RT for Object-Oriented Software}
+%In this research the effect of various parameters involved in random testing and its effect on efficiency is evaluated by performing various experiments on Industrial-grade code base. Large-scale clusters of computers were used for 1500 hours of CPU time which resulted in 1875 test sessions for 8 classes under test.~\cite{Ciupa2007} The finding of the experiments are 1. Version of random testing algorithm that is efficient for smaller testing timeout is equally efficient for higher testing timeouts. 2. The value of seed for random testing algorithm plays a vital role in finding the number of bugs in specific time. 3. Most of the bugs are found in the first few minutes of the testing sessions.
+
+
+
+\subsection{Design by Contract}
+% section taken from binding yeti with .net, check it out correct it.
+\textcolor{blue}{Modern software development as it is well known has adopted the paradigm of Object Oriented (OO) Programming. The primary and most important reason for this evolution is the desire for better quality software and a more efficient way to bridge the gap between requirements and code.
+Industrial use of OO confirmed the superiority of this approach over procedural
+programming languages. However, so far no final approach has been generally accepted over a methodology on how to construct OO software in order to achieve one of the most important factors of quality, which is reliability or else robustness. As the work of Dr. Bertrand Meyer has shown \cite{meyer1992applying, meyer1988object} the decision on how to make software more reliable is crucial if the developers want to use the benefits of OO. These benefits include:
+1 Reuse of software components. This implies using a software component at multiple environments apart from the environment in which its developers originally deployed it.
+2 The goal of having reliability plays an important role in characterizing the quality of a software module.
+3 The abstract types that OO introduces. A reliable way to construct abstract types emerges. To achieve the previous goals the software development world has used two approaches, Defensive programming and Design by Contract. As the next paragraphs show the latter one has been showing more advantages than the first one. That is why most researches on Automated Testing use design by contract as a requirement that the SUT must conform to, in order for their tool to find as many bugs as possible \cite{Leitner2007}.
+The idea of Defensive Programming, which is inherited from the software development world prior to OO, is in general advising to ―… include as many checks as possible even if they are redundant \cite{meyer1992applying}. This concept is intuitively stating that having extra checking can never do harm especially if someone wants to protect the software from inexperienced users. This last concept unfortunately is not correct. This kind of approach puts more code inside the software and this contributes to greater complexity of the software, and complexity as Dr. Meyer has very correctly stated ―…is the single worst obstacle to software quality in general, and to reliability in particular \cite{meyer1992applying}. The reason is that this extra code is a source of things that might go wrong and so we must also check it, and so on to infinitum. The need for a more systematic approach is evident based on the concept that software elements are implementations of well-understood specifications by the developers and that is exactly what Design by Contract does. Design by Contract concept adopts the idea that any operation a routine of a software performs, should bind the caller of that routine to the routine itself. This binding provides specific obligations that each party has, along with benefits. Essentially the obligations of one part describe the benefits of the other part. These ideas apply to software routines (i.e. methods, functions of classes) via assertions that implement the binding, which is like a contract between two persons. These assertions are classified into pre-conditions, post-conditions and class invariants. Figure 2.1 which is a figure of the ―Applying Design by Contract article \cite{meyer1992applying}, illustrates the use of these assertions.
+
+As anyone can understand from Figure ?? pre and post-conditions denote the idea that if the caller promises to invoke the routine with the pre-conditions holding, the routine guarantees the caller that it will return the system in a final state in which the post-conditions hold. Thus, the invoker knows nothing about how the routine reaches the final state but can depend on the results. This implies another thing, which is that the routine is responsible only for the cases where the pre- conditions hold. This means rejecting the whole concept of defensive programming because if something is an assertion in the pre-condition the routine does not have to handle it in its body/code and vice versa. Overall, it is forbidden for the same assertion to exist in both parts. How strong or weak a pre-condition should be is a decision of the developer. So far the notions of pre and post-conditions are assertions that developers can use even with procedural programming languages at each of their routines. The notion that enhances more the efficiency of the contracts is the notion of the class invariant. Through class invariants a developer can describe a general condition that any instantiation of that class must hold at any time \cite{meyer1992applying, meyer1988object}. By this the developers classify the requirements that they have in the same abstract way in which they develop the software; making the bridging of requirements to code more traceable, thus more possible to achieve all the requirements, the basic goal of software development.
+In addition, to the previous benefits design by contract can facilitate documentation. By providing contract information documentation describes a module of code certainly better than just presenting the interface and the result it yields. Furthermore, monitoring these assertions can be very helpful while debugging.
+It is up to the developers to decide what the software must do when one of the parties breaks a contract. It can stop the execution, prompt the event, ask the user to decide etc. It is a decision based on the specifications. Basically as the article of Meyer B. \cite{meyer1992applying} describes, three things can mainly occur
+1. An alternative algorithm starts due to this exceptional behaviour 2. System stops its executions and returns to a prior consistent state 3. A rare but possible false alarm has happened due to operating system or hardware signals and after correcting actions execution continues
+The general approach is to consider and to monitor any violation because most of the times this violation describes a bug. Either in the logic of the requirements (pre-conditions, class invariants) or in the algorithm of the implementation (post-conditions).
+Sometimes research papers mention the contracts of the code as partial specifications \cite{daniel2007automated} because they provide more information than just requirements documents but at the same time they are not a full specification model which describes the whole algorithm of a software module as formal methods do.
+Design by Contract principle helps developers use appropriately polymorphism and dynamic binding. With contracts, designers can have inheritance and reassure that the class that inherits another class will respect the original contract and if the designer wants he/she can add assertions based on the functionality of the child class. The rules that the designers must follow, to maximally use the contracts, is to allow the child classes, when it is desired, to: i) have weaker pre-conditions or ii) stronger post-conditions. In this way contracts provide an immediate guideline to the designer.}
 
 
 %\section{Automated Random Testing Tools}
