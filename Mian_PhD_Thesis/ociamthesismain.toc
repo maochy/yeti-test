@@ -30,89 +30,89 @@
 \contentsline {section}{\numberline {2.6}Summary}{14}{section.2.6}
 \contentsline {section}{\numberline {2.7}Conclusion}{14}{section.2.7}
 \contentsline {chapter}{\numberline {3}Random Testing}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Various versions of random testing}{17}{section.3.1}
+\contentsline {section}{\numberline {3.1}Various versions of random testing}{16}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Adaptive Random Testing}{17}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Mirror Adaptive Random Testing}{18}{subsection.3.1.2}
 \contentsline {subsection}{\numberline {3.1.3}Restricted Random Testing}{19}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Directed Automated Random Testing}{20}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Quasi Random Testing}{20}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}Feedback-directed Random Testing}{21}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.6}Feedback-directed Random Testing}{20}{subsection.3.1.6}
 \contentsline {subsection}{\numberline {3.1.7}The ARTOO Testing}{21}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {3.1.8}Design by Contract}{22}{subsection.3.1.8}
-\contentsline {section}{\numberline {3.2}Tools for Automated Random Testing}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}JCrasher}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Jartege}{24}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.1.8}Design by Contract}{21}{subsection.3.1.8}
+\contentsline {section}{\numberline {3.2}Tools for Automated Random Testing}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}JCrasher}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Jartege}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Eclat}{25}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Randoop Tool}{26}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}QuickCheck Tool}{26}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Autotost Tool}{27}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}TestEra Tool}{28}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.4}Randoop Tool}{27}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}QuickCheck Tool}{27}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Autotost Tool}{28}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}TestEra Tool}{29}{subsection.3.2.7}
 \contentsline {subsection}{\numberline {3.2.8}Korat Tool}{29}{subsection.3.2.8}
-\contentsline {section}{\numberline {3.3}YETI Overview}{30}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Main Components of YETI Tool}{30}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}YETI Core Infrastructure}{30}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Strategy}{31}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}language-specific bindings}{32}{subsubsection.3.3.1.3}
-\contentsline {subsection}{\numberline {3.3.2}Construction of Test Cases}{32}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.3}YETI Overview}{31}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Main Components of YETI Tool}{31}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}YETI Core Infrastructure}{31}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Strategy}{32}{subsubsection.3.3.1.2}
+\contentsline {subsubsection}{\numberline {3.3.1.3}language-specific bindings}{33}{subsubsection.3.3.1.3}
+\contentsline {subsection}{\numberline {3.3.2}Construction of Test Cases}{33}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Command-line Options}{33}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}YETI Execution}{34}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}YETI Test Oracle}{35}{subsection.3.3.5}
-\contentsline {subsection}{\numberline {3.3.6}YETI Report}{35}{subsection.3.3.6}
-\contentsline {subsection}{\numberline {3.3.7}Summary of automated testing tools}{37}{subsection.3.3.7}
-\contentsline {section}{\numberline {3.4}Conclusion}{37}{section.3.4}
-\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{39}{section.4.1}
-\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{40}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Random Strategy (R)}{41}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Random Plus Strategy (R+)}{41}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping (DSS)}{42}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{43}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR strategy on a concrete example}{43}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Implementation of the DSSR strategy}{46}{section.4.3}
+\contentsline {subsection}{\numberline {3.3.6}YETI Report}{36}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Summary of automated testing tools}{38}{subsection.3.3.7}
+\contentsline {section}{\numberline {3.4}Conclusion}{38}{section.3.4}
+\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{40}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{40}{section.4.1}
+\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{41}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Random Strategy (R)}{42}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Random Plus Strategy (R+)}{42}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping (DSS)}{43}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{44}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR strategy on a concrete example}{44}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Implementation of the DSSR strategy}{47}{section.4.3}
 \contentsline {section}{\numberline {4.4}Evaluation}{47}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Research questions}{47}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experiments}{47}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Performance measurement criteria}{48}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Results}{51}{section.4.5}
+\contentsline {subsection}{\numberline {4.4.1}Research questions}{48}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experiments}{48}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Performance measurement criteria}{50}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Results}{50}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{52}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{52}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{54}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Discussion}{54}{section.4.6}
-\contentsline {section}{\numberline {4.7}Related Work}{55}{section.4.7}
-\contentsline {section}{\numberline {4.8}Conclusions}{56}{section.4.8}
-\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{57}{section.5.1}
-\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{59}{section.5.2}
-\contentsline {section}{\numberline {5.3}Implementation}{61}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{61}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{62}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Example}{62}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Experimental Results}{63}{section.5.4}
-\contentsline {section}{\numberline {5.5}Discussion}{66}{section.5.5}
-\contentsline {section}{\numberline {5.6}Threats to Validity}{67}{section.5.6}
-\contentsline {section}{\numberline {5.7}Related Works}{67}{section.5.7}
-\contentsline {section}{\numberline {5.8}Conclusion}{68}{section.5.8}
-\contentsline {chapter}{\numberline {6}Invariant Guided Random+ Strategy}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Invariant Guided Random+ Strategy}{69}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Daikon}{69}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Random Plus Strategy (R+)}{69}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Structure of the Invariant Guided Random+ Strategy}{70}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Explanation of IGRS strategy on a concrete example}{70}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}Implementation of the IGRS strategy}{70}{section.6.3}
-\contentsline {section}{\numberline {6.4}Evaluation}{70}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Research questions}{70}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Experiments}{70}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Performance measurement criteria}{70}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Results}{70}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Answer A}{70}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Answer B}{70}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Answer C}{70}{subsection.6.5.3}
-\contentsline {section}{\numberline {6.6}Discussion}{70}{section.6.6}
-\contentsline {section}{\numberline {6.7}Related Work}{70}{section.6.7}
-\contentsline {section}{\numberline {6.8}Conclusions}{70}{section.6.8}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{71}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction}{71}{section.7.1}
-\contentsline {chapter}{\numberline {A}Sample Title}{73}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix hello}{73}{section.A.1}
-\contentsline {chapter}{Bibliography}{74}{section.A.1}
+\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{53}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{53}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Discussion}{55}{section.4.6}
+\contentsline {section}{\numberline {4.7}Related Work}{56}{section.4.7}
+\contentsline {section}{\numberline {4.8}Conclusions}{57}{section.4.8}
+\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{58}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{58}{section.5.1}
+\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{60}{section.5.2}
+\contentsline {section}{\numberline {5.3}Implementation}{62}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{62}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{63}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Example}{63}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Experimental Results}{64}{section.5.4}
+\contentsline {section}{\numberline {5.5}Discussion}{67}{section.5.5}
+\contentsline {section}{\numberline {5.6}Threats to Validity}{68}{section.5.6}
+\contentsline {section}{\numberline {5.7}Related Works}{68}{section.5.7}
+\contentsline {section}{\numberline {5.8}Conclusion}{69}{section.5.8}
+\contentsline {chapter}{\numberline {6}Invariant Guided Random+ Strategy}{70}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{70}{section.6.1}
+\contentsline {section}{\numberline {6.2}Invariant Guided Random+ Strategy}{70}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Daikon}{70}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Random Plus Strategy (R+)}{70}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Structure of the Invariant Guided Random+ Strategy}{71}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Explanation of IGRS strategy on a concrete example}{71}{subsection.6.2.4}
+\contentsline {section}{\numberline {6.3}Implementation of the IGRS strategy}{71}{section.6.3}
+\contentsline {section}{\numberline {6.4}Evaluation}{71}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Research questions}{71}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Experiments}{71}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Performance measurement criteria}{71}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Results}{71}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Answer A}{71}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Answer B}{71}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Answer C}{71}{subsection.6.5.3}
+\contentsline {section}{\numberline {6.6}Discussion}{71}{section.6.6}
+\contentsline {section}{\numberline {6.7}Related Work}{71}{section.6.7}
+\contentsline {section}{\numberline {6.8}Conclusions}{71}{section.6.8}
+\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{72}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{72}{section.7.1}
+\contentsline {chapter}{\numberline {A}Sample Title}{74}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix hello}{74}{section.A.1}
+\contentsline {chapter}{Bibliography}{75}{section.A.1}
