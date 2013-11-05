@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  2 NOV 2013 15:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  2 NOV 2013 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -460,7 +460,29 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 53.
 
-(./ociamthesismain.aux)
+(./ociamthesismain.aux (./abstract/abstract.aux) (./dedication/dedication.aux)
+(./acknowlegements/acknowlegements.aux) (./chapter1/chapter1.aux)
+(./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux)
+(./chapter5/chapter5.aux) (./chapter6/chapter6.aux
+
+LaTeX Warning: Label `sec:imp' multiply defined.
+
+
+LaTeX Warning: Label `sec:eval' multiply defined.
+
+
+LaTeX Warning: Label `sec:res' multiply defined.
+
+
+LaTeX Warning: Label `sec:discussion3' multiply defined.
+
+
+LaTeX Warning: Label `sec:rw' multiply defined.
+
+
+LaTeX Warning: Label `sec:conc' multiply defined.
+
+) (./chapter7/chapter7.aux) (./appendix1/appendix1.aux))
 \openout1 = `ociamthesismain.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
@@ -547,44 +569,55 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 91.
 
+(./ociamthesismain.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [2
+
+
+] [3] [4])
 \tf@toc=\write4
 \openout4 = `ociamthesismain.toc'.
 
-[2
 
+[5] (./ociamthesismain.lof [6
 
-]
-
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
-
+])
 \tf@lof=\write5
 \openout5 = `ociamthesismain.lof'.
 
-[3
-
-]
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+ [7] (./ociamthesismain.lot)
 \tf@lot=\write6
 \openout6 = `ociamthesismain.lot'.
 
-[4
+ [8
 
 ]
 \openout2 = `dedication/dedication.aux'.
 
- (./dedication/dedication.tex [5
+
+(./dedication/dedication.tex [9
 
 
 ])
 \openout2 = `acknowlegements/acknowlegements.aux'.
 
  (./acknowlegements/acknowlegements.tex
-[6
+[10
 
 
 
@@ -593,38 +626,6 @@ Package hyperref Warning: old lot file detected, not used; run LaTeX again.
 
  (./chapter1/chapter1.tex
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-
-LaTeX Warning: Citation `Standards2002' on page 1 undefined on input line 7.
-
-
-LaTeX Warning: Citation `Maurice1985' on page 1 undefined on input line 7.
-
-
-LaTeX Warning: Citation `huang2004securing' on page 1 undefined on input line 1
-2.
-
-
-LaTeX Warning: Citation `Standards2002' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `Myers2011' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `patton2001software' on page 1 undefined on input line 
-12.
-
-
-LaTeX Warning: Citation `young2008software' on page 1 undefined on input line 1
-2.
-
-
-LaTeX Warning: Citation `Myers2011' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation `american1984' on page 1 undefined on input line 14.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -635,452 +636,99 @@ l.15
 
 
 
-]
-
-LaTeX Warning: Reference `fig:SoftwareTesting1' on page 2 undefined on input li
-ne 16.
-
-<chapter1/SoftwareTesting1.png, id=43, 734.745pt x 308.15125pt>
+] <chapter1/SoftwareTesting1.png, id=764, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
-Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 20.
+Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 21.
 (pdftex.def)             Requested size: 398.34839pt x 170.72032pt.
-
-
-LaTeX Warning: Citation `howden1986' on page 2 undefined on input line 26.
-
-
-LaTeX Warning: Citation `mccabe1983' on page 2 undefined on input line 26.
-
-
-LaTeX Warning: Citation `Miller1963' on page 2 undefined on input line 26.
-
-
-LaTeX Warning: Citation `korel1990' on page 2 undefined on input line 28.
-
-
-LaTeX Warning: Citation `wiki2013' on page 2 undefined on input line 28.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 2 undefined on input line 28.
-
-
-LaTeX Warning: Citation `Godefroid2005' on page 2 undefined on input line 28.
-
-
-Overfull \hbox (1.15643pt too wide) in paragraph at lines 28--29
-[]\OT1/ptm/m/n/12 Generating test data set man-u-ally is a time-consuming and l
-a-bo-ri-ous ex-er-cise [[]]; There-
- []
-
-[2 <./chapter1/SoftwareTesting1.png>]
-
-LaTeX Warning: Citation `white1987' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Myers2011' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Ciupa2008a' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Chen2008' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Chan2002' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Chen2003' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `Chen2005' on page 3 undefined on input line 30.
-
-
-LaTeX Warning: Citation `cohen1997' on page 3 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Offutt1996' on page 3 undefined on input line 32.
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 32.
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 32.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 32.
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-
-LaTeX Warning: Citation `Godefroid2005' on page 3 undefined on input line 32.
-
+ [2 <./chapter1/SoftwareTesting1.png>]
 [3]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
-
-
-LaTeX Warning: Reference `chap:DSSR' on page 4 undefined on input line 56.
-
-
-LaTeX Warning: Reference `chap:ADFD' on page 4 undefined on input line 59.
-
-
-LaTeX Warning: Reference `chap:IGRS' on page 4 undefined on input line 62.
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 53.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
 
-LaTeX Warning: Reference `chap:softwareTesting' on page 5 undefined on input li
-ne 76.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
+Underfull \hbox (badness 10000) in paragraph at lines 76--78
 
  []
 
 
-LaTeX Warning: Reference `chap:randomTesting' on page 5 undefined on input line
- 82.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
 
  []
 
 
-LaTeX Warning: Reference `chap:DSSR' on page 5 undefined on input line 87.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
 
-LaTeX Warning: Reference `chap:ADFD' on page 5 undefined on input line 92.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--95
 
  []
 
 
-LaTeX Warning: Reference `chap:IGRS' on page 5 undefined on input line 99.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 
-LaTeX Warning: Reference `chap:discussion' on page 5 undefined on input line 10
-4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
 
 
-LaTeX Warning: Reference `chap:conclusion' on page 5 undefined on input line 10
-7.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
 
-[5]
-
-LaTeX Warning: Reference `chap:conclusion' on page 6 undefined on input line 11
-3.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
-
- []
-
-) [6]
+[5]) [6]
 \openout2 = `chapter2/chapter2.aux'.
 
  (./chapter2/chapter2.tex
 Chapter 2.
-
-LaTeX Warning: Citation `Tassey2002' on page 7 undefined on input line 4.
-
-
-LaTeX Warning: Citation `toweysoftware' on page 7 undefined on input line 4.
-
-
-LaTeX Warning: Citation `american1984' on page 7 undefined on input line 6.
-
-
-LaTeX Warning: Citation `Myers1979' on page 7 undefined on input line 6.
-
-
-LaTeX Warning: Citation `american1984' on page 7 undefined on input line 6.
-
-
-LaTeX Warning: Citation `Dijkstra1972' on page 7 undefined on input line 8.
-
-
-Overfull \hbox (1.31316pt too wide) in paragraph at lines 8--9
-[]\OT1/ptm/m/n/12 The test-ing pro-cess, be-ing an in-te-gral part of Soft-ware
- De-vel-op-ment Life Cy-cle (SDLC),
- []
-
 [7
 
 
 
 ]
-
-LaTeX Warning: Citation `futrell2001quality' on page 8 undefined on input line 
-14.
-
-
-LaTeX Warning: Citation `ahmed2010software' on page 8 undefined on input line 1
-7.
-
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ó in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ó in font cmr12!
 Missing character: There is no √ in font cmr12!
 Missing character: There is no ó in font cmr12!
-
-LaTeX Warning: Citation `baresi2001test' on page 8 undefined on input line 23.
-
-
-LaTeX Warning: Citation `ahmed2010software' on page 8 undefined on input line 2
-3.
-
-
-LaTeX Warning: Citation `gaudel2010software' on page 8 undefined on input line 
-25.
-
-[8]
-
-LaTeX Warning: Citation `baresi2001test' on page 9 undefined on input line 28.
-
-
-LaTeX Warning: Citation `weyuker1982testing' on page 9 undefined on input line 
-29.
-
-
-LaTeX Warning: Citation `adrion1982validation' on page 9 undefined on input lin
-e 35.
-
-
-LaTeX Warning: Citation `chilenski1994applicability' on page 9 undefined on inp
-ut line 35.
-
-
-LaTeX Warning: Citation `gaudel2010software' on page 9 undefined on input line 
-35.
-
-
-LaTeX Warning: Citation `richardson1992specification' on page 9 undefined on in
-put line 35.
-
-
-LaTeX Warning: Citation `tracey1998automated' on page 9 undefined on input line
- 35.
-
-
-LaTeX Warning: Citation `chilenski1994applicability' on page 9 undefined on inp
-ut line 60.
-
-
-LaTeX Warning: Citation `cohen2005robustness' on page 9 undefined on input line
- 63.
-
-[9]
-
-LaTeX Warning: Citation `ostrand2002white' on page 10 undefined on input line 7
-1.
-
-
-LaTeX Warning: Citation `clarke1989formal' on page 10 undefined on input line 7
-4.
-
+ [8] [9]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-LaTeX Warning: Citation `fosdick1976data' on page 10 undefined on input line 76
-.
-
-[10]
-
-LaTeX Warning: Citation `vilkomir2003tolerance' on page 11 undefined on input l
-ine 79.
-
-
-LaTeX Warning: Citation `voas1997software' on page 11 undefined on input line 8
-2.
-
-
-LaTeX Warning: Citation `beizer1995black' on page 11 undefined on input line 85
-.
-
-[11]
-
-LaTeX Warning: Citation `hamlet1990' on page 12 undefined on input line 96.
-
-
-LaTeX Warning: Citation `weyuker1991analyzing' on page 12 undefined on input li
-ne 98.
-
-
-LaTeX Warning: Citation `Chan1996' on page 12 undefined on input line 98.
-
-
-LaTeX Warning: Citation `ntafos1998random' on page 12 undefined on input line 9
-8.
-
-
-LaTeX Warning: Citation `radatz1990ieee' on page 12 undefined on input line 102
-.
-
-
-LaTeX Warning: Citation `reid1997empirical' on page 12 undefined on input line 
-104.
-
-[12]
-
-LaTeX Warning: Citation `formal1997specification' on page 13 undefined on input
- line 107.
-
-
-LaTeX Warning: Citation `Hierons2009' on page 13 undefined on input line 107.
-
-
-LaTeX Warning: Citation `donat1997automating' on page 13 undefined on input lin
-e 107.
-
-
-LaTeX Warning: Citation `gaudel2010software' on page 13 undefined on input line
- 107.
-
-
-LaTeX Warning: Citation `bertolino2007software' on page 13 undefined on input l
-ine 107.
-
-
-LaTeX Warning: Citation `fairley1978tutorial' on page 13 undefined on input lin
-e 138.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 13 undefined on input line 145.
-
-
-LaTeX Warning: Citation `tretmans1999' on page 13 undefined on input line 145.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 13 undefined on input line 148.
-
-[13]
+ [10] [11] [12] [13]
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no ¨ in font ptmr7t!
 Missing character: There is no Å in font ptmr7t!
-
-
-LaTeX Warning: Citation `huang2003automated' on page 14 undefined on input line
- 150.
-
-
-LaTeX Warning: Citation `ramamoorthy1975testing' on page 14 undefined on input 
-line 150.
-
 ) [14]
 \openout2 = `chapter3/chapter3.aux'.
 
  (./chapter3/chapter3.tex
 Chapter 3.
-
-LaTeX Warning: Citation `hanford1970automatic' on page 15 undefined on input li
-ne 8.
-
-
-LaTeX Warning: Citation `bird1983automatic' on page 15 undefined on input line 
-8.
-
-
-LaTeX Warning: Citation `pacheco2009directed' on page 15 undefined on input lin
-e 8.
-
-
-LaTeX Warning: Citation `Chan2002' on page 15 undefined on input line 11.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 15 undefined on input line 11.
-
-<chapter3/randomTesting.jpg, id=141, 441.90094pt x 118.19156pt>
+<chapter3/randomTesting.jpg, id=953, 441.90094pt x 118.19156pt>
 File: chapter3/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter3/randomTesting.jpg>
 Package pdftex.def Info: chapter3/randomTesting.jpg used on input line 15.
 (pdftex.def)             Requested size: 220.94992pt x 59.09563pt.
-
-
-LaTeX Warning: Citation `Ciupa2008a' on page 15 undefined on input line 19.
-
-[15
+ [15
 
 
 
  <./chapter3/randomTesting.jpg>]
-
-LaTeX Warning: Citation `pacheco2009directed' on page 16 undefined on input lin
-e 21.
-
-
-LaTeX Warning: Citation `sen2007effective' on page 16 undefined on input line 2
-1.
-
-
-LaTeX Warning: Citation `Myers1979' on page 16 undefined on input line 21.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `leitner2007efficient' on page 16 undefined on input li
-ne 23.
-
-
-LaTeX Warning: Citation `Duran1981' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `Duran1981' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `hamlet1990' on page 16 undefined on input line 23.
-
-
-LaTeX Warning: Citation `ntafos1998random' on page 16 undefined on input line 2
-3.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
@@ -1090,286 +738,94 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-LaTeX Warning: Citation `miller1990empirical' on page 16 undefined on input lin
-e 25.
-
-
-LaTeX Warning: Citation `forrester2000empirical' on page 16 undefined on input 
-line 25.
-
-
-LaTeX Warning: Citation `miller2006empirical' on page 16 undefined on input lin
-e 25.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-LaTeX Warning: Citation `kropp1998automated' on page 16 undefined on input line
- 25.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
-
-LaTeX Warning: Citation `groce2007randomized' on page 16 undefined on input lin
-e 25.
-
-
-LaTeX Warning: Citation `Chen2008' on page 16 undefined on input line 31.
-
-
-LaTeX Warning: Citation `Chan1996' on page 16 undefined on input line 31.
-
-[16]
+ [16]
 LaTeX Font Info:    Try loading font information for OML+ptm on input line 35.
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
 
-<chapter3/pointblockstrip.jpg, id=153, 581.92406pt x 183.68625pt>
+<chapter3/pointblockstrip.jpg, id=993, 581.92406pt x 183.68625pt>
 File: chapter3/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter3/pointblockstrip.jpg>
 Package pdftex.def Info: chapter3/pointblockstrip.jpg used on input line 41.
 (pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
-
-
-LaTeX Warning: Reference `fig:patterns2' on page 17 undefined on input line 46.
-
-
-
-LaTeX Warning: Citation `Chen2008' on page 17 undefined on input line 48.
-
-[17 <./chapter3/pointblockstrip.jpg>]
-
-LaTeX Warning: Citation `Chen2008' on page 18 undefined on input line 50.
-
-
-LaTeX Warning: Citation `chen2009enhanced' on page 18 undefined on input line 5
-0.
-
-
-LaTeX Warning: Citation `Chen2005' on page 18 undefined on input line 50.
-
-
-LaTeX Warning: Citation `Chen2003' on page 18 undefined on input line 54.
-
-<chapter3/mart2.pdf, id=163, 350.30875pt x 185.69376pt>
+ [17 <./chapter3/pointblockstrip.jpg>]
+<chapter3/mart2.pdf, id=1007, 350.30875pt x 185.69376pt>
 File: chapter3/mart2.pdf Graphic file (type pdf)
 
 <use chapter3/mart2.pdf>
 Package pdftex.def Info: chapter3/mart2.pdf used on input line 58.
 (pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
-
-
-LaTeX Warning: Citation `Chen2003' on page 18 undefined on input line 59.
-
-
-LaTeX Warning: Reference `fig:mirrorART' on page 18 undefined on input line 64.
-
-
-[18 <./chapter3/mart2.pdf>]
-
-LaTeX Warning: Citation `chan2003normalized' on page 19 undefined on input line
- 68.
-
-<chapter3/RRT.pdf, id=190, 370.38374pt x 247.67531pt>
+ [18 <./chapter3/mart2.pdf>]
+<chapter3/RRT.pdf, id=1035, 370.38374pt x 247.67531pt>
 File: chapter3/RRT.pdf Graphic file (type pdf)
  <use chapter3/RRT.pdf>
 Package pdftex.def Info: chapter3/RRT.pdf used on input line 72.
 (pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
 
-
-LaTeX Warning: Citation `Godefroid2005' on page 19 undefined on input line 82.
-
-[19 <./chapter3/RRT.pdf>]
-
-LaTeX Warning: Citation `Chen2005' on page 20 undefined on input line 93.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 20 undefined on input line 100.
-
-[20]
-
-LaTeX Warning: Citation `Ciupa2006' on page 21 undefined on input line 104.
-
-
-LaTeX Warning: Citation `Levenshtein1966' on page 21 undefined on input line 10
-4.
-
-
-LaTeX Warning: Citation `Ciupa2006' on page 21 undefined on input line 106.
-
-
-LaTeX Warning: Citation `Ciupa2008a' on page 21 undefined on input line 108.
-
-
-LaTeX Warning: Citation `meyer1987eiffel' on page 21 undefined on input line 10
-8.
-
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
-
-LaTeX Warning: Citation `meyer1988object' on page 21 undefined on input line 13
-6.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 21 undefined on input line 136.
-
+[19 <./chapter3/RRT.pdf>] [20]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ï in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ¶ in font ptmr7t!
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ï in font ptmr7t!
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
-
-LaTeX Warning: Citation `meyer1988object' on page 21 undefined on input line 13
-6.
-
-
-LaTeX Warning: Citation `meyer1992applying' on page 21 undefined on input line 
-136.
-
-
-LaTeX Warning: Citation `daniel2007automated' on page 21 undefined on input lin
-e 136.
-
-[21] [22] [23]
-
-LaTeX Warning: Citation `Pacheco2007b' on page 24 undefined on input line 145.
-
-<chapter3/JCrasher.png, id=231, 867.24pt x 402.50375pt>
+ [21] [22] [23]
+<chapter3/JCrasher.png, id=1097, 867.24pt x 402.50375pt>
 File: chapter3/JCrasher.png Graphic file (type png)
 
 <use chapter3/JCrasher.png>
 Package pdftex.def Info: chapter3/JCrasher.png used on input line 149.
 (pdftex.def)             Requested size: 426.79071pt x 199.16934pt.
 
-
-LaTeX Warning: Citation `Pacheco2007b' on page 24 undefined on input line 150.
-
-
-LaTeX Warning: Reference `fig:JCrasher' on page 24 undefined on input line 154.
-
-
-
-LaTeX Warning: Citation `chan1999java' on page 24 undefined on input line 154.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
 
 [24 <./chapter3/JCrasher.png>]
-
-LaTeX Warning: Citation `Oriat2004' on page 25 undefined on input line 162.
-
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 164.
+
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
-
-
-LaTeX Warning: Citation `Pacheco2005' on page 25 undefined on input line 172.
-
-[25] <chapter3/eclat_working.png, id=246, 356.532pt x 235.1184pt>
+ [25]
+<chapter3/eclat_working.png, id=1113, 356.532pt x 235.1184pt>
 File: chapter3/eclat_working.png Graphic file (type png)
 
 <use chapter3/eclat_working.png>
 Package pdftex.def Info: chapter3/eclat_working.png used on input line 176.
 (pdftex.def)             Requested size: 426.82436pt x 256.09814pt.
-
-
-LaTeX Warning: Citation `Pacheco2005' on page 26 undefined on input line 177.
-
-
-LaTeX Warning: Citation `Pacheco2007b' on page 26 undefined on input line 184.
-
-
-LaTeX Warning: Citation `Pacheco2007b' on page 26 undefined on input line 194.
-
-
-LaTeX Warning: Citation `visser2004test' on page 26 undefined on input line 194
-.
-
-[26 <./chapter3/eclat_working.png>]
-
-LaTeX Warning: Citation `Claessen2000' on page 27 undefined on input line 197.
-
-
-LaTeX Warning: Citation `Hudak2007' on page 27 undefined on input line 197.
-
-
-Overfull \hbox (4.45981pt too wide) in paragraph at lines 197--199
-\OT1/ptm/m/n/12 QuickCheck [[]] is a lightweight ran-dom test-ing tool used for
- test-ing of Haskell pro-grams [[]].
- []
-
-[27]
-
-LaTeX Warning: Citation `Ciupa2007' on page 28 undefined on input line 210.
-
-<chapter3/autotest.png, id=260, 292.14229pt x 156.78915pt>
+ [26 <./chapter3/eclat_working.png>] [27]
+<chapter3/autotest.png, id=1135, 292.14229pt x 156.78915pt>
 File: chapter3/autotest.png Graphic file (type png)
 
 <use chapter3/autotest.png>
 Package pdftex.def Info: chapter3/autotest.png used on input line 214.
 (pdftex.def)             Requested size: 369.9066pt x 199.17741pt.
-
-
-LaTeX Warning: Reference `fig:autotest' on page 28 undefined on input line 219.
-
-
-
-LaTeX Warning: Citation `Leitner2007' on page 28 undefined on input line 219.
-
-[28 <./chapter3/autotest.png (PNG copy)>]
-
-LaTeX Warning: Citation `Khurshid2004' on page 29 undefined on input line 228.
-
-
-LaTeX Warning: Citation `jackson2001micromodularity' on page 29 undefined on in
-put line 230.
-
-
-LaTeX Warning: Citation `jackson2000alcoa' on page 29 undefined on input line 2
-30.
-
-<chapter3/testera.png, id=269, 379.20241pt x 142.17401pt>
+ [28 <./chapter3/autotest.png (PNG copy)>]
+<chapter3/testera.png, id=1145, 379.20241pt x 142.17401pt>
 File: chapter3/testera.png Graphic file (type png)
 
 <use chapter3/testera.png>
@@ -1379,33 +835,8 @@ Package pdftex.def Info: chapter3/testera.png used on input line 234.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `Boyapati2002' on page 29 undefined on input line 246.
-
-
-LaTeX Warning: Citation `chang1999structural' on page 29 undefined on input lin
-e 246.
-
-
-LaTeX Warning: Citation `Khurshid2004' on page 29 undefined on input line 246.
-
-
-LaTeX Warning: Citation `khurshid2001checking' on page 29 undefined on input li
-ne 246.
-
-[29]
-
-LaTeX Warning: Citation `pacheco2009directed' on page 30 undefined on input lin
-e 250.
-
-
-LaTeX Warning: Citation `Oriol2010c' on page 30 undefined on input line 264.
-
-
-LaTeX Warning: Citation `Oriol2010' on page 30 undefined on input line 264.
-
-[30 <./chapter3/testera.png>]
-<chapter3/yetiOverview.png, id=286, 419.166pt x 102.3825pt>
+[29] [30 <./chapter3/testera.png>]
+<chapter3/yetiOverview.png, id=1172, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png>
@@ -1439,31 +870,14 @@ Overfull \hbox (2.69456pt too wide) in paragraph at lines 313--314
 ties class to con-tain helper
  []
 
-
-LaTeX Warning: Reference `table:cliOptions' on page 33 undefined on input line 
-327.
-
-[33]
-
-LaTeX Warning: Reference `fig:yeticommand' on page 34 undefined on input line 3
-65.
-
-
-LaTeX Warning: Reference `table:cliOptions' on page 34 undefined on input line 
-365.
-
-[34] <chapter3/yetiCommandCLI.pdf, id=322, 831.105pt x 95.35625pt>
+[33] [34] <chapter3/yetiCommandCLI.pdf, id=1204, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
 Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 369.
 (pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
 
-
-LaTeX Warning: Reference `fig:yetiLauncher' on page 35 undefined on input line 
-374.
-
-<chapter3/yetiCommandGUI.pdf, id=323, 433.62pt x 494.84875pt>
+<chapter3/yetiCommandGUI.pdf, id=1206, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
@@ -1499,16 +913,13 @@ l.404 ..., height = 8cm]{chapter3/seecaption.pdf}}
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `fig:yetiGUI' on page 36 undefined on input line 409.
-
-<chapter3/yetiGUI.png, id=351, 1445.4pt x 903.375pt>
+[36] <chapter3/yetiGUI.png, id=1236, 1445.4pt x 903.375pt>
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png>
 Package pdftex.def Info: chapter3/yetiGUI.png used on input line 413.
 (pdftex.def)             Requested size: 426.7863pt x 341.43896pt.
- [36]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1527,205 +938,45 @@ Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
+[37]
 Overfull \hbox (77.39603pt too wide) in paragraph at lines 436--452
  [][] 
  []
 
-[37]) [38 <./chapter3/yetiGUI.png>] [39]
+) [38 <./chapter3/yetiGUI.png>] [39]
 \openout2 = `chapter4/chapter4.aux'.
 
  (./chapter4/chapter4.tex
 Chapter 4.
-
-LaTeX Warning: Citation `Chan1996' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen2008' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chan2002' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen2003' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen2005' on page 40 undefined on input line 13.
-
-
-LaTeX Warning: Citation `oriol2012law' on page 40 undefined on input line 15.
-
 [40
 
 
 
-]
-
-LaTeX Warning: Reference `sec:dssr' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Reference `sec:imp' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Reference `sec:eval' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Reference `sec:res' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Reference `sec:discussion3' on page 41 undefined on input line 2
-1.
-
-
-LaTeX Warning: Reference `sec:rw' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Reference `sec:conc' on page 41 undefined on input line 21.
-
-
-LaTeX Warning: Citation `Chen2010' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Ciupa2009' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Ciupa2008a' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Oriol2010' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Oriol2010b' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Claessen2000' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 41 undefined on input line 32.
-
-
-LaTeX Warning: Citation `Oriat2004' on page 41 undefined on input line 32.
-
-[41]
-
-LaTeX Warning: Citation `Myers1979' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Duran1981' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Duran1984' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Ntafos2001' on page 42 undefined on input line 34.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 42 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 42 undefined on input line 36.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 42 undefined on input line 39.
-
-
-LaTeX Warning: Citation `Beizer1990' on page 42 undefined on input line 39.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 42 undefined on input line 39.
-
-[42]
-
-LaTeX Warning: Citation `Chan1996' on page 43 undefined on input line 43.
-
-
-LaTeX Warning: Reference `fig:patterns3' on page 43 undefined on input line 43.
-
-
-
-LaTeX Warning: Citation `Chan2002' on page 43 undefined on input line 43.
-
-
-LaTeX Warning: Citation `Chen2003' on page 43 undefined on input line 43.
-
-
-LaTeX Warning: Citation `Chen2005' on page 43 undefined on input line 43.
-
-<chapter4/ART_Patterns.png, id=413, 376.40625pt x 101.62968pt>
+] [41] [42] <chapter4/ART_Patterns.png, id=1330, 376.40625pt x 101.62968pt>
 File: chapter4/ART_Patterns.png Graphic file (type png)
 
 <use chapter4/ART_Patterns.png>
 Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 47.
 (pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
 
-
-LaTeX Warning: Citation `Chen2008' on page 43 undefined on input line 48.
-
-<chapter4/block2.png, id=414, 271.0125pt x 122.70844pt>
+<chapter4/block2.png, id=1332, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
 Package pdftex.def Info: chapter4/block2.png used on input line 56.
 (pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
-
-
-LaTeX Warning: Reference `fig:block2' on page 43 undefined on input line 61.
-
-[43 <./chapter4/ART_Patterns.png>]
-
-LaTeX Warning: Citation `Leitner2009' on page 44 undefined on input line 65.
-
-<chapter4/flowchart1.pdf, id=422, 193.19614pt x 195.7238pt>
+ [43 <./chapter4/ART_Patterns.png>]
+<chapter4/flowchart1.pdf, id=1340, 193.19614pt x 195.7238pt>
 File: chapter4/flowchart1.pdf Graphic file (type pdf)
 
 <use chapter4/flowchart1.pdf>
 Package pdftex.def Info: chapter4/flowchart1.pdf used on input line 69.
 (pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
-
-
-LaTeX Warning: Reference `fig:Working_DSSS' on page 44 undefined on input line 
-74.
-
-
-LaTeX Warning: Reference `table:addvalues2' on page 44 undefined on input line 
-78.
-
-[44 <./chapter4/block2.png>]
+ [44 <./chapter4/block2.png>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 127.
- [45 <./chapter4/flowchart1.pdf>] [46]
-
-LaTeX Warning: Citation `Oriol2010' on page 47 undefined on input line 155.
-
-
-LaTeX Warning: Citation `Oriol2011' on page 47 undefined on input line 155.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 47 undefined on input line 155.
-
-
-LaTeX Warning: Reference `fig:hierarchyofDSSR' on page 47 undefined on input li
-ne 159.
-
-<chapter4/hierarchy.pdf, id=459, 98.56648pt x 125.337pt>
+ [45 <./chapter4/flowchart1.pdf>] [46] <chapter4/hierarchy.pdf, id=1380, 98.566
+48pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
@@ -1735,57 +986,13 @@ Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 163.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Citation `Leitner2007' on page 47 undefined on input line 177.
-
-[47]
-
-LaTeX Warning: Citation `Tempero2010a' on page 48 undefined on input line 191.
-
-
-LaTeX Warning: Reference `table:projects' on page 48 undefined on input line 19
-1.
-
-
-LaTeX Warning: Reference `table:Results' on page 48 undefined on input line 191
-.
-
-
-LaTeX Warning: Reference `table:Results' on page 48 undefined on input line 191
-.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 48 undefined on input line 194.
-
-[48 <./chapter4/hierarchy.pdf>] [49]
-
-LaTeX Warning: Citation `Chen2008' on page 50 undefined on input line 248.
-
-
-LaTeX Warning: Citation `Chen1996' on page 50 undefined on input line 248.
-
-
-LaTeX Warning: Citation `Chen2004' on page 50 undefined on input line 248.
-
-
-LaTeX Warning: Citation `Liu2012' on page 50 undefined on input line 248.
-
-
+[47] [48 <./chapter4/hierarchy.pdf>]
 Overfull \hbox (8.56361pt too wide) in paragraph at lines 248--249
 \OT1/ptm/m/n/12 Various mea-sures in-clud-ing the E-measure (ex-pected num-ber 
 of fail-ures de-tected), P-measure
  []
 
-
-LaTeX Warning: Citation `Pacheco2007' on page 50 undefined on input line 252.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 50 undefined on input line 252.
-
-
-LaTeX Warning: Citation `Ciupa2008b' on page 50 undefined on input line 252.
-
-<chapter4/DssrImprove.png, id=488, 986.2446pt x 479.391pt>
+<chapter4/DssrImprove.png, id=1409, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
@@ -1803,225 +1010,36 @@ Overfull \hbox (68.6502pt too wide) in alignment at lines 344--344
 
 LaTeX Warning: Float too large for page by 10.8508pt on input line 348.
 
-
-LaTeX Warning: Reference `table:Results' on page 50 undefined on input line 351
-.
-
-[50] [51]
-
-LaTeX Warning: Reference `fig:LineChart' on page 52 undefined on input line 359
-.
-
-[52 <./chapter4/DssrImprove.png>]
+[49] [50] [51] [52 <./chapter4/DssrImprove.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 381.
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 388.
-
-
-LaTeX Warning: Reference `table:ttest' on page 53 undefined on input line 419.
-
-[53] [54]
-
-LaTeX Warning: Citation `Oriol2010' on page 55 undefined on input line 510.
-
-[55]
-
-LaTeX Warning: Citation `Oriol2012' on page 56 undefined on input line 516.
-
-
-LaTeX Warning: Citation `Pacheco2005' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Csallner2004' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Claessen2000' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Oriat2004' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Pacheco2005' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Csallner2004' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Ciupa2007' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Ciupa2008a' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Oriol2010' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 56 undefined on input line 524.
-
-
-LaTeX Warning: Citation `Chen2010' on page 56 undefined on input line 526.
-
-
-LaTeX Warning: Citation `Chen2005' on page 56 undefined on input line 526.
-
-
-LaTeX Warning: Citation `Chan2002' on page 56 undefined on input line 526.
-
-
-LaTeX Warning: Citation `Chen2004a' on page 56 undefined on input line 526.
-
-
-LaTeX Warning: Citation `Chen2003' on page 56 undefined on input line 526.
-
-
-LaTeX Warning: Citation `Yoo2012' on page 56 undefined on input line 528.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 56 undefined on input line 530.
-
-
-LaTeX Warning: Citation `Beizer1990' on page 56 undefined on input line 530.
-
-
-LaTeX Warning: Citation `Leitner2007' on page 56 undefined on input line 530.
-
-
-LaTeX Warning: Citation `Gutjahr1999' on page 56 undefined on input line 535.
-
-
-LaTeX Warning: Citation `Duran1984' on page 56 undefined on input line 535.
-
-
-LaTeX Warning: Citation `hamlet1990' on page 56 undefined on input line 535.
-
-
-LaTeX Warning: Citation `Arcuri2012' on page 56 undefined on input line 535.
-
-[56]
-
-LaTeX Warning: Citation `Tempero2010' on page 57 undefined on input line 537.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 57 undefined on input line 537.
-
-
-LaTeX Warning: Citation `Tempero2010a' on page 57 undefined on input line 537.
-
-
-LaTeX Warning: Citation `Tempero2008' on page 57 undefined on input line 537.
-
-) [57]
+ [53] [54] [55] [56]) [57]
 \openout2 = `chapter5/chapter5.aux'.
 
- (./chapter5/chapter5.tex
+
+(./chapter5/chapter5.tex
 Chapter 5.
-
-LaTeX Warning: Citation `beizer1995black' on page 58 undefined on input line 11
-.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Forrester2000' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Linger1993' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Offutt1996' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen1994' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen2008' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chan2002' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Chen2004' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Godefroid2005' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Mayer2005' on page 58 undefined on input line 13.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 58 undefined on input line 13.
-
 [58
 
 
 
-]
-
-LaTeX Warning: Citation `Chan1996' on page 59 undefined on input line 15.
-
-
-LaTeX Warning: Reference `fig:patterns' on page 59 undefined on input line 15.
-
-<chapter5/ART_Patterns.png, id=548, 376.40625pt x 101.62968pt>
+] <chapter5/ART_Patterns.png, id=1528, 376.40625pt x 101.62968pt>
 File: chapter5/ART_Patterns.png Graphic file (type png)
 
 <use chapter5/ART_Patterns.png>
 Package pdftex.def Info: chapter5/ART_Patterns.png used on input line 19.
 (pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
-
-
-LaTeX Warning: Citation `Chan1996' on page 59 undefined on input line 20.
-
-
-LaTeX Warning: Reference `sec:adfd' on page 59 undefined on input line 64.
-
-
-LaTeX Warning: Reference `sec:implementation' on page 59 undefined on input lin
-e 64.
-
-
-LaTeX Warning: Reference `sec:experimentalResults' on page 59 undefined on inpu
-t line 64.
-
-
-LaTeX Warning: Reference `sec:discussion4' on page 59 undefined on input line 6
-4.
-
-
-LaTeX Warning: Reference `sec:validity' on page 59 undefined on input line 64.
-
-
-LaTeX Warning: Reference `sec:relatedWork' on page 59 undefined on input line 6
-4.
-
-
-LaTeX Warning: Reference `sec:conclusion' on page 59 undefined on input line 64
-.
-
-
-LaTeX Warning: Reference `fig:ADFD-workflow' on page 59 undefined on input line
- 86.
-
-[59 <./chapter5/ART_Patterns.png>]
-<chapter5/ADFD_Diagram1.png, id=555, 589.20125pt x 414.54875pt>
+ [59 <./chapter5/ART_Patterns.png>]
+<chapter5/ADFD_Diagram1.png, id=1545, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
 Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 100.
 (pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
 
-<chapter5/ADFD_front_end.png, id=556, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1546, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
@@ -2031,12 +1049,6 @@ Package pdftex.def Info: chapter5/ADFD_front_end.png used on input line 108.
 Underfull \hbox (badness 10000) in paragraph at lines 114--116
 
  []
-
-
-LaTeX Warning: Citation `Oriol2011' on page 60 undefined on input line 118.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 60 undefined on input line 118.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--119
@@ -2053,23 +1065,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--125
 
  []
 
-[61 <./chapter5/ADFD_front_end.png>]
-
-LaTeX Warning: Citation `Gilbert2008' on page 62 undefined on input line 127.
-
-
-LaTeX Warning: Citation `Oriol2011' on page 62 undefined on input line 179.
-
-
-LaTeX Warning: Citation `Oriol2012' on page 62 undefined on input line 179.
-
-
-LaTeX Warning: Citation `Oriol2010' on page 62 undefined on input line 179.
-
-
-LaTeX Warning: Citation `Oriol2010b' on page 62 undefined on input line 179.
-
-[62] <chapter5/pointDomainOneArgument.png, id=582, 780.9175pt x 570.13pt>
+[61 <./chapter5/ADFD_front_end.png>] [62]
+<chapter5/pointDomainOneArgument.png, id=1575, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
@@ -2078,76 +1075,24 @@ Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
 (pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
  [63]
 
-LaTeX Warning: Reference `sec:appendix1' on page 64 undefined on input line 231
-.
-
-
-LaTeX Warning: Reference `fig:ADFD-example' on page 64 undefined on input line 
-231.
-
-
-LaTeX Warning: Reference `sec:appendix1' on page 64 undefined on input line 260
-.
-
-
-LaTeX Warning: Reference `table:failtable' on page 64 undefined on input line 2
-60.
-
-
-LaTeX Warning: Reference `sec:appendix1' on page 64 undefined on input line 261
-.
-
-
-LaTeX Warning: Reference `table:failtable' on page 64 undefined on input line 2
-61.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `sec:appendix1' on page 64 undefined on input line 314
-.
-
-
-LaTeX Warning: Reference `fig:PFDOne' on page 64 undefined on input line 314.
-
-
-LaTeX Warning: Reference `fig:PFDTwo' on page 64 undefined on input line 314.
-
-
-LaTeX Warning: Reference `table:failtable' on page 64 undefined on input line 3
-14.
-
 [64 <./chapter5/pointDomainOneArgument.png>]
-<chapter5/PFDOne.png, id=615, 790.955pt x 575.14874pt>
+<chapter5/PFDOne.png, id=1615, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
 Package pdftex.def Info: chapter5/PFDOne.png used on input line 322.
 (pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
 
-<chapter5/PFDTwo.png, id=616, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1616, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
 Package pdftex.def Info: chapter5/PFDTwo.png used on input line 326.
 (pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
 
-
-LaTeX Warning: Reference `sec:appendix1' on page 65 undefined on input line 347
-.
-
-
-LaTeX Warning: Reference `fig:BFDOne' on page 65 undefined on input line 347.
-
-
-LaTeX Warning: Reference `fig:BFDTwo' on page 65 undefined on input line 347.
-
-
-LaTeX Warning: Reference `table:failtable' on page 65 undefined on input line 3
-47.
-
-<chapter5/BFDOne.png, id=617, 794.97pt x 575.14874pt>
+<chapter5/BFDOne.png, id=1621, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
@@ -2158,7 +1103,7 @@ File: chapter5/BFDOne.png Graphic file (type png)
 Package pdftex.def Info: chapter5/BFDOne.png used on input line 361.
 (pdftex.def)             Requested size: 170.709pt x 113.80783pt.
 
-<chapter5/BFDTwo.png, id=618, 787.94376pt x 573.14125pt>
+<chapter5/BFDTwo.png, id=1622, 787.94376pt x 573.14125pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
@@ -2170,135 +1115,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--366
  []
 
 [65 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>]
-
-LaTeX Warning: Reference `sec:appendix1' on page 66 undefined on input line 389
-.
-
-
-LaTeX Warning: Reference `fig:SFDOne' on page 66 undefined on input line 389.
-
-
-LaTeX Warning: Reference `fig:SFDTwo' on page 66 undefined on input line 389.
-
-
-LaTeX Warning: Reference `table:failtable' on page 66 undefined on input line 3
-89.
-
-<chapter5/SFDOne.png, id=629, 789.95125pt x 573.14125pt>
+<chapter5/SFDOne.png, id=1636, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
 Package pdftex.def Info: chapter5/SFDOne.png used on input line 399.
 (pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
 
-<chapter5/SFDTwo.png, id=630, 788.9475pt x 575.14874pt>
+<chapter5/SFDTwo.png, id=1637, 788.9475pt x 575.14874pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
 Package pdftex.def Info: chapter5/SFDTwo.png used on input line 403.
 (pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
  [66 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png> <./chapter5/SFDOne.png> <.
-/chapter5/SFDTwo.png>]
-
-LaTeX Warning: Reference `sec:experimentalResults' on page 67 undefined on inpu
-t line 434.
-
-[67]
-
-LaTeX Warning: Citation `Ciupa2006' on page 68 undefined on input line 448.
-
-
+/chapter5/SFDTwo.png>] [67]
 Overfull \hbox (9.38931pt too wide) in paragraph at lines 452--453
 []\OT1/ptm/m/n/12 Finally, plot-ting the range of pass or fail val-ues for a la
 rge in-put do-main (In-te-ger.MIN[]INT
  []
-
-
-LaTeX Warning: Citation `Offutt1996' on page 68 undefined on input line 457.
-
-
-LaTeX Warning: Citation `Myers2011' on page 68 undefined on input line 457.
-
-
-LaTeX Warning: Citation `Chan1996' on page 68 undefined on input line 457.
-
-
-LaTeX Warning: Citation `Podgurski2003' on page 68 undefined on input line 459.
-
-
-
-LaTeX Warning: Citation `agrawal1995fault' on page 68 undefined on input line 4
-59.
-
-
-LaTeX Warning: Citation `Jones2002' on page 68 undefined on input line 459.
 
 [68]) [69]
 \openout2 = `chapter6/chapter6.aux'.
 
  (./chapter6/chapter6.tex
 Chapter 6.
-
-LaTeX Warning: Citation `Leitner2007' on page 70 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Beizer1990' on page 70 undefined on input line 11.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 70 undefined on input line 11.
-
 [70
 
 
 
 ]) [71]
-\openout2 = `chapter8/chapter8.aux'.
+\openout2 = `chapter7/chapter7.aux'.
 
- (./chapter8/chapter8.tex
+ (./chapter7/chapter7.tex
 Chapter 7.
-
-LaTeX Warning: Citation `beizer1995black' on page 72 undefined on input line 6.
-
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Forrester2000' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `hamlet1994' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Linger1993' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Offutt1996' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chen1994' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chen2008' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chan2002' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Chen2004' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Ciupa2008' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Godefroid2005' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Mayer2005' on page 72 undefined on input line 8.
-
-
-LaTeX Warning: Citation `Pacheco2007' on page 72 undefined on input line 8.
-
 [72
 
 
@@ -2339,56 +1189,43 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 131.
  (./acknowlegements/acknowlegements.aux)
 (./chapter1/chapter1.aux) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux)
 (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./chapter6/chapter6.aux)
-(./chapter8/chapter8.aux) (./appendix1/appendix1.aux))
+(./chapter7/chapter7.aux) (./appendix1/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 131.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 131.
+Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
+(rerunfilecheck)             Checksum: 3E92F1EFB475BE7C820346BC105548F2;8533.
 
 
-Package rerunfilecheck Warning: File `ociamthesismain.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ociamthesismain.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  3E92F1EFB475BE7C820346BC105548F2;8533.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 131.
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 14 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 9867 strings out of 493315
- 143083 string characters out of 6137904
- 323060 words of memory out of 5000000
- 12561 multiletter control sequences out of 15000+600000
+ 10028 strings out of 493315
+ 145894 string characters out of 6137904
+ 348342 words of memory out of 5000000
+ 12690 multiletter control sequences out of 15000+600000
  37875 words of font info for 90 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 35i,12n,72p,1847b,1808s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc
-}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
-ocal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/font
-s/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (93 pages, 1373051 bytes).
+ 35i,12n,72p,1847b,1717s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-dist/
+fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb>
+Output written on ociamthesismain.pdf (97 pages, 1403572 bytes).
 PDF statistics:
- 1030 PDF objects out of 1200 (max. 8388607)
- 856 compressed objects within 9 object streams
- 468 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1915 PDF objects out of 2073 (max. 8388607)
+ 1728 compressed objects within 18 object streams
+ 472 named destinations out of 1000 (max. 500000)
+ 1085 words of extra memory for PDF output out of 10000 (max. 10000000)
 
