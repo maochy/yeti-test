@@ -1,33 +1,17 @@
 \chapter{Software Testing}
 \label{chap:softwareTesting}
-
 The very famous quote of Paul, ``To err is human, but to really foul things up you need a computer, is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after its completion.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology \cite{Tassey2002}, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
-\noindent In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=13cm, height=2.8cm]{chapter2/softwareTesting.png}
+	\caption{The process of software testing}
+	\label{fig:softwareTesting}
+\end{figure}
 
-\noindent The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product. 
+In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
 
-\section{Definitions}
-Before going into further details of software testing and its life cycle, few of the related terms are defined in this section. They have been added to make the thesis self contained.
-
-\subsection{Test Plan}
-A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing \cite{futrell2001quality}. It guides the testers, {\it {when, why, who and how}} to perform a particular activity in the testing process. 
-
-\subsection{Test Case}
-According to Ahmed ``A test case is an artifact that delineates the input, action and expected output corresponding to that input" \cite{ahmed2010software}. A successful test case is the one that discovers a fault in the given SUT.
-
-\subsection{Input Domain} 
-Input domain for a given SUT is contained by the set of all possible inputs to that SUT. This includes all the global variables, formal parameters to the functions and the variables that are externally (keyboard input by user) assigned. Consider a program P with a corresponding input vector $ P =\{x1, x2, . . . , xn\}$, and let the domain of each input be $\{D1, D2, . . . , Dn\}$, such that $x1 \in D1,x2 \in D2$ and so forth. The domain D of a function can then be expressed as the cross product of the domains of each input: $D = D1×D2×. . .×Dn$.
-
-\subsection{Test Oracle}
-Test oracles set the acceptable behaviour for test executions~\cite{baresi2001test}. It is the test oracle which determines whether the software went successful or unsuccessful through a test. According to Ahmad, test oracle is ``A source to determine expected results to compare with the actual result of the software under test" \cite{ahmed2010software}.
-
-\noindent All software-testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common issues in the oracle problem include:
-\begin{enumerate}
-\item The assumption that the test results are observable and can be compared with the oracle.
-\item An ideal test oracle would satisfy desirable properties of program specifications~\cite{baresi2001test}.
-\item A specific oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, stating that truly general test oracles are often unobtainable~\cite{weyuker1982testing}. 
-\end{enumerate}
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product. 
 
 
 \begin{table}[ht]
@@ -38,23 +22,44 @@ Test oracles set the acceptable behaviour for test executions~\cite{baresi2001te
 \begin{tabular}{| l | l | l | l | } % centered columns (4 columns)
 \hline
 
-Levels 					&Purpose		 				& Perspective			& Execution 	\\
+Levels 					&Purpose		 		& Perspective			& Execution 	\\
 \hline
-1. Unit					&1. Functionality		& 1. White Box		& 1. Static 	\\
-2. Integration	&2. Structural			& 2. Black Box		& 2. Dynamic	\\
-3. System				&3. Robustness			& 								&			\\
-								&4. Stress					&									&			\\
-								&5. Compatibility		&									&			\\
-								&6. Performance			&									&			\\
+1. Unit					&1. Functionality			& 1. White Box			& 1. Static 	\\
+2. Integration			&2. Structural			& 2. Black Box			& 2. Dynamic\\
+3. System				&3. Robustness			& 						&			\\
+						&4. Stress				&						&			\\
+						&5. Compatibility			&						&			\\
+						&6. Performance			&						&			\\
 
 
 
 \hline %inserts single line
 \end{tabular}
 \bigskip
-\label{table:addvalues} % is used to refer this table in the text
+\label{table:softwareTestingParts} % is used to refer this table in the text
 \end{table}
 
+\section{Definitions}
+Before going into further details of software testing and its life cycle, few of the related terms are defined in this section. They have been added to make the thesis self contained.
+
+\subsection{Test Plan}
+A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing \cite{futrell2001quality}. Furthermore, it also describe the testable deliverable and the risk assessment of testable deliverables. Test plan guides the testers, {\it {when, why, who}} and {\it {how}} to perform a particular activity in the testing process. 
+
+\subsection{Input Domain} 
+Input domain for a given SUT is contained by the set of all possible inputs to that SUT. This includes all the global variables, formal parameters to the functions and the variables that are externally (keyboard input by user) assigned. Consider a program P with a corresponding input vector $ P =\{x1, x2, . . . , xn\}$, and let the domain of each input be $\{D1, D2, . . . , Dn\}$, such that $x1 \in D1,x2 \in D2$ and so forth. The domain D of a function can then be expressed as the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
+
+\subsection{Test Case}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-20pt}
+  \begin{center}
+    \includegraphics[width=0.30\textwidth]{chapter2/testCase.png}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Test case}
+  \label{fig:testCase}
+  \vspace{-10pt}
+\end{wrapfigure}
+A test case is an artifact that delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. On executing the test case on the SUT if the output received comply to the expected output then the test case is pass, which means the functionality is working fine. However, in the case of any difference the result is fail, which means identification of a fault. Generally, execution of many test cases, collected in a test suite, are required to declare a software sufficiently scrutinized to be relasesed.
 
 \section{Software Testing Levels}
 The three main levels of software testing defined in the literature include unit testing, integration testing and system testing~\cite{chilenski1994applicability}. Unit testing involves evaluation of piece-by-piece code and each piece is considered as independent unit. Units are combined together to form components. Integration testing ensures that the integration of units in a component is working properly. System testing is called out to make sure that the system formed by combination of components performs correctly to give the desired output.
@@ -68,20 +73,40 @@ The primary purpose of software testing is identification of faults in the given
 Testing activities can be split up into white-box and black-box testing on the basis of perspective taken. 
 
 \subsection{White-box testing}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-38pt}
+  \begin{center}
+    \includegraphics[width=0.30\textwidth]{chapter2/whiteBox.png}
+  \end{center}
+  \vspace{-20pt}
+  \caption{White-box testing}
+  \label{fig:whiteBox}
+  \vspace{-20pt}
+\end{wrapfigure}
 In white-box or structural testing, the testers do need to know about the complete structure of the software and can do necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the expected code is followed during test execution~\cite{ostrand2002white}. Some of the most common White-box testing techniques are briefly defined:
 
 \subsubsection{Data Flow Analysis}
 Data Flow Analysis is a testing technique that focuses on the input values by observing the behaviour of respective variables during the execution of the SUT~\cite{clarke1989formal}. In this technique a control flow graph (CFG), graphical representation of all possible states of program, of a SUT is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of data. 
 
-\noindent Normally, program execution implies input of data, operations on it according to the defined algorithm, and output of results. This process can be viewed as a flow of data from input to output in which data may transform into several intermediate results before reaching its final state. In the process several errors can occur e.g. references may be made to variables that don’t exist, values may be assigned to undeclared variables or the value of variables may be changed in an unexpected and undesired manner. It is the ordered use of data implicit in this process that is the central objective of the technique to ensure that none of the aforementioned errors occur~\cite{fosdick1976data}.
+Generally, program execution implies input of data, operations on it according to the defined algorithm, and output of results. This process can be viewed as a flow of data from input to output in which data may transform into several intermediate results before reaching its final state. In the process several errors can occur e.g. references may be made to variables that don’t exist, values may be assigned to undeclared variables or the value of variables may be changed in an unexpected and undesired manner. It is the ordered use of data implicit in this process that is the central objective of the technique to ensure that none of the aforementioned errors occur~\cite{fosdick1976data}.
 
 \subsubsection{Control flow analysis}
-Control flow Analysis is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the individual statements, instructions or function calls are executed. In this technique a control flow graph (CFG), similar to the one required in data flow analysis, is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of control. For example to follow a specific path (also known as branch) between two or more available choices at specific state. Efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. The effectiveness of the testing technique depends on controls measurement. Two of the most common measurement criteria defined by Vilkomir et al. are Decision/Branch coverage and Condition coverage \cite{vilkomir2003tolerance}. 
+Control flow Analysis is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the individual statements, instructions or function calls are executed. In this technique a CFG, similar to the one required in data flow analysis, is drawn to determine the paths that might be traversed by a program during its execution. Test cases are generated and executed to verify its conformance with CFG on the basis of control. For example to follow a specific path (also known as branch) between two or more available choices at specific state. Efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. The effectiveness of the testing technique depends on controls measurement. Two of the most common measurement criteria defined by Vilkomir et al. are Decision/Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
 \subsubsection{Code-based fault injection testing}
 A technique in which additional code is added to the code of the SUT at one or more locations to analyse its behaviour in response to the anomaly \cite{voas1997software}. The process of code addition is called instrumentation which is usually performed before compilation and execution of software. The added code can be use for multiple reasons i.e. injection of fault to find the error handling behaviour of software, to determine the effectiveness of test procedure to check whether it discover the injected faults or to measure the code coverage achieved by the testing process.    
 
 \subsection{Black-box testing}
+\begin{wrapfigure}{r}{0.35\textwidth}
+  \vspace{-35pt}
+  \begin{center}
+    \includegraphics[width=0.30\textwidth]{chapter2/blackBox.png}
+  \end{center}
+  \vspace{-20pt}
+  \caption{Black-box testing}
+  \label{fig:blackBox}
+  \vspace{-18pt}
+\end{wrapfigure}
 In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the specifications and test passes if the result is according to expected output. Internal code structure of the SUT is not taken into any consideration~\cite{beizer1995black}. Some of the most common black-box testing techniques are briefly defined:
 
 \subsubsection{Use-case based testing}
@@ -89,18 +114,18 @@ A verification and validation technique that utilizes use-cases of the system to
 
 % steps taken from presentation of Raional User Conference 2003. Check it for viva.
 
-\noindent The main benefits of use case testing is cheap generation of test cases, avoidance of test duplication, improved test coverage, easier regression testing and early identification of missing requirements.  
+The main benefits of use case testing is cheap generation of test cases, avoidance of test duplication, improved test coverage, easier regression testing and early identification of missing requirements.  
 
 \subsubsection{Partition testing}
 A testing technique in which the input domain of a given SUT is divided into sub-domain according to some rule and then tests are conducted in each sub-domain. The division in to sub-domain can be according to the requirements or specifications, structure of the code or according to the process by which the software was developed \cite{hamlet1990}. 
 
-\noindent While the performance of partition testing is directly dependant on the quality of sub-domain \cite{weyuker1991analyzing}, it is often however difficult to divide the domain into equal partitions. Therefore, another version of partition testing called Proportional sampling strategy \cite{Chan1996} is devised, in which the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos \cite{ntafos1998random} confirms the better performance of proportional partition testing over partition testing.
+While the performance of partition testing is directly dependant on the quality of sub-domain \cite{weyuker1991analyzing}, it is often however difficult to divide the domain into equal partitions. Therefore, another version of partition testing called Proportional sampling strategy \cite{Chan1996} is devised, in which the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos \cite{ntafos1998random} confirms the better performance of proportional partition testing over partition testing.
 
 
 \subsubsection{Boundary value analysis}
 Boundary Value Analysis (BVA) is a testing technique which is based on the rationale that errors tends to occur near the extremities of the input variables. Therefore in BVA the data set consists of values which are selected from the borders. According to IEEE standards \cite{radatz1990ieee}, boundary value is a value that corresponds to minimum or maximum input, internal or external value specified for a component or system. 
 
-\noindent The BVA technique is also used in conjunction with partition testing where test values are selected at the borders of each sub-domain instead of the whole input domain. The empirical analysis performed by Reid et al. \cite{reid1997empirical} argue that BVA performs better in finding faults than partition testing. They also stated that like partition testing the performance of BVA is also dependant on the correct identification of partition and selection of boundary values.
+The BVA technique is also used in conjunction with partition testing where test values are selected at the borders of each sub-domain instead of the whole input domain. The empirical analysis performed by Reid et al. \cite{reid1997empirical} argue that BVA performs better in finding faults than partition testing. They also stated that like partition testing the performance of BVA is also dependant on the correct identification of partition and selection of boundary values.
 
 \subsubsection{Formal specification testing}
 Formal specification is defined as ``a mathematical based technique, which offers rigorous and effective way to model, design and analyse computer systems" \cite{formal1997specification, Hierons2009}. The mathematical structure allows formal specifications to be manipulated mechanically so that information contained within the specification can be isolated, transformed, assembled, and repackaged to be used as test cases. Furthermore, it also guarantee that the test frames are logical consequences of the specification \cite{donat1997automating}. Formal specification testing is effective because it is independent from the code of the SUT. Which means that no change is required in the test cases as long as the specifications are unchanged \cite{gaudel2010software}. It uses the existing specification model to verify the test results and thus avoid the oracle problem \cite{bertolino2007software}.
@@ -133,14 +158,56 @@ Formal specification is defined as ``a mathematical based technique, which offer
 %\subsection{Automated Test Generation}
 %\subsection{Generation Strategies}
 
+\subsection{Test Oracle}
+Test oracles set the acceptable behaviour for test executions~\cite{baresi2001test}. It is the test oracle which determines whether the software went successful or unsuccessful through a test. Test oracle is defined as ``A source to determine expected results to compare with the actual result of the software under test" \cite{ahmed2010software}. According to Howden \cite{howden1986}, an oracle is a function which, given a program, P, can determine, for each input, x, if the output from P is the same as the output from a ‘correct’ version of P.
+
+All software-testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common issues in the oracle problem include:
+\begin{enumerate}
+\item The assumption that the test results are observable and can be compared with the oracle.
+\item An ideal test oracle would satisfy desirable properties of program specifications~\cite{baresi2001test}.
+\item A specific oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, stating that truly general test oracles are often unobtainable~\cite{weyuker1982testing}. 
+\end{enumerate}
+
+A number of artifacts can be directly used as oracle or can be used to generate oracle. This include the use of:
+\begin{enumerate}
+\item specification and documentation to generate test oracle. 
+\item other products that are similar to the SUT but with a different algorithm to solve the same problem.
+\item heuristic algorithms which provides exact or approximate results for a set of test cases. % Hoffman, Douglas; Heuristic Test Oracles, Software Testing & Quality Engineering Magazine, 1999
+\item statistical characteristics to generate test oracle \cite{mayer2004test}. 
+\item comparing the results of one test execution to another for consistency. % Hoffman, Douglas; Analysis of a Taxonomy for Test Oracles, Quality Week, 1998
+\item models to generate test oracle for the verification of SUT behaviour. \cite{robinson1999finite}.
+\item manual analysis by human experts to verify the test results\cite{jalote1997integrated}. 
+\end{enumerate}
+
+\section{Software Testing Execution}
+Testing process can be divided into static and dynamic phases on the basis of test execution. In static testing test cases are analysed statically for checking errors without test execution. In addition to software code, high quality softwares are accompanied by necessary documentation. It includes requirements, design, technical, user manual marketing information. Reviews, walkthroughs or inspections are most commonly used techniques for static testing. In dynamic testing the software code is executed and input is converted into output. Results are analysed against expected outputs to find any error in the software. Unit testing, integration testing, system testing, and acceptance testing are most commonly used as dynamic testing methods~\cite{fairley1978tutorial}.
+
+%Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
+
+
+
+\subsection{Manual Software Testing}
+Manual testing is the technique of finding faults in software in which the tester writes the code by hand to create test cases and test oracle~\cite{Ciupa2008}. Manual testing may be effective in some cases but it is generally laborious, time consuming and error-prone~\cite{tretmans1999}. Additionally, it requires that the testers must have appropriate skills, experience and sufficient knowledge of the SUT for evaluation from different perspectives.
+ 
+\subsection{Automated Software Testing}
+Automated testing is the technique of finding faults in a software in which the test cases or test oracle are generated automatically by a testing tool~\cite{Leitner2007}. There are tools which can automate part of a test process like generation of test cases or execution of test cases or evaluation of results while other tools are available which can automate the whole testing process. 
+
+Now a days, demand for increase in software functionality, quick development and decrease in cost of production without compromising quality leave no other choice but to automate the software testing. Automated software testing can be surprisingly effective and highly beneﬁcial for any organisation. Its initial set-up cost may be higher, however, a quick return on investment (QRI) outperforms it and brings the key beneﬁts of cost reduction, productivity, availability, reliability and performance to any organisation. Automated testing is particularly effective when the nature of job is repetitive and performed on routine basis like unit testing and regression testing, where the tests are re-executed after each modification \cite{huang2003automated}. The use of automated software testing made it possible to test large volumes of code, which would have been impossible otherwise~\cite{ramamoorthy1975testing}.
 
 \section{Test Data Generation}
 Test data generation in software testing is the process of identifying test input data which satisifies given test selection criterion. A test data generator tool is used for the puprpose which assist testers in the generation of test data while the test selection criterion define the properties of test cases to be generated based on the test plan and perspective taken \cite{korel1990}. Various artifacts of the SUT can be considered to generate test data like requirements, model or code. The choice of artifacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
-A typical test data generator consists of three parts: Program Analyzer, Strategy Handler and Generator \cite{edvardsson1999survey}. Program analyzer performs initial assessment of software prior to testing and may perform changes to it, if required. For example it performs code instrumentation or construction of control flow graph (CFG) to measure the code coverage during testing. A strategy handler define the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from   program analyzer or user before or during execution. The Generator taking inputs from the Program analyzer and Strategy handler generates test cases according to the set selection criteria.  Test data generators based on their approaches are classified into 
-Pathwise, Goal Oriented, Intelligent and Random Test Data Generators. Each one is breifly defined in the following.
+A typical test data generator consists of three parts: Program Analyzer, Strategy Handler and Generator \cite{edvardsson1999survey}. Program analyzer performs initial assessment of software prior to testing and may perform changes to it, if required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A strategy handler define the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from   program analyzer or user before or during execution. The Generator taking inputs from the Program analyzer and Strategy handler generates test cases according to the set selection criteria.  Test data generators based on their approaches are classified into Pathwise, Goal Oriented, Intelligent and Random Test Data Generators. Each one is breifly defined in the following.
 
-\subsection{Pathwise Data Generators}
+\subsection{Path wise Test Data Generators}
+A test data generation technique in which the test data is generated to target path coverage, statement coverage, branch coverage, etc in a given SUT. The approach generally consists of three main parts: Control Flow Graph (CFG) construction, path selection and test data generation. 
+
+First of all a set of test paths is defined according to the requirements, then for every path of the set the generator derives input data that results in the execution of the selected path.  In path testing, data is generated for a boolean expression whcih contain two branches with a true and false node. A reference to the sibling node means, the other node, corresponding to the current executed node. For example the sibling node of True branch is False branch.
+
+Each path belongs to a certain sub domain, which consists of those inputs which are necessary to traverse that path. For generating test cases the execution of the software with test data to find errors in the flow of the control through the software. These test data belong to an input space which is partitioned into a set of sub domains which belong to a certain path in the software. The boundary of these domains is obtained by the predicates in the path condition where a border segment is a section of the baoundary created by a single path condition. Two types of boundary test points are necessary; on and off test points. The on test points are on the border within an adjacent domain. If the software generates correct results for all these points then it can be considered that the border locations are correct.
+
+% the pathwise test data generation is taken from a book knowldge mining using intelligent systems. you can reference it too.
+
 
 \subsection{Goal Oriented Generators}
 A test data generation technique in which the test data is generated to exercise a specific program point rather than a program path \cite{chungautomated}.  In this approach the tester can select any path among a set of available paths as long as they reach the target. Many goal-oriented test data generation approaches execute the SUT to generate test data, enabling it to utilize run-time information for computing more accurate test data \cite{ferguson1996chaining}.
@@ -149,8 +216,7 @@ A test data generation technique in which the test data is generated to exercise
 The chaining approach uses data dependency analysis to guide the test data generation process. The basic of the chaining approach is to identify a sequence of nodes to be executed prior to execution of node {\it {g}}. The chaining approach uses the following data dependency concepts to identify such a sequence \cite{ferguson1996chaining}.
 
 \subsubsection{Assertion-Oriented Approach}
-In this approach the goal is to identify program input on which an assertion(s) is violated. More fonnally we can define the problem of
-assertion-oriented test data generation as follows: For a given assertion A, find program input x on which assertionA is false, i.e., when the program is executed on input x and the execution reaches assertion A, assertion A evaluates to false.
+In this approach the goal is to identify program input on which an assertion(s) is violated. More fonnally we can define the problem of assertion-oriented test data generation as follows: For a given assertion A, find program input x on which assertionA is false, i.e., when the program is executed on input x and the execution reaches assertion A, assertion A evaluates to false.
 
 The problem of finding a program input on which an assertion is violated is undecidable. TheMOre, it is not always possible to generate test cases that violate assertions. However, the experiments have shown that the assertion-oriented test generation may frequently detect errors in the program related to assertion violation. The major advantage of this approach is that each test data generated uncovers an error in the program because the assertion is violated. There are three reasons as to why an assertion is violated: a faulty program, a faulty assertion, or a faulty precondition (input assertion).
 
@@ -171,6 +237,19 @@ The main benefit of the approach is that it can generate test data quickly, but 
 % Please paraphrase the above section genetic algorithm.
 
 \subsection{Random Test Data Generators}
+
+Random test data generation is probably the simplest method for generation of test data. The advantage of this is that it can be used to generate input for any type of program. Thus to generate test data we can randomly generate a bit stream and let it the represent the data type needed. However, random test data generation does not generate quality test data as it does not perform well in terms of coverage. Since the data generated is based solely on probability it cannot accomplish high coverage as the chances of it finding semantically small faults is quite low.[3]
+
+If a fault is only revealed by a small percentage of the program input it is said to be a semantically small fault. For example of a semantically small fault consider the following code:
+
+void test(char x,char y) {
+    if (x==y)
+        printf("Equal");
+    else
+        printf("Not Equal");
+}
+
+It is easy to see that the probability of execution of the first statement is significantly lesser than that of the second statement. As the structures in it grow complex so does the probability of its execution. Thus, such semantically small faults are hard to find using random test data generation. However, Random Test Data Generation is usually used as a benchmark as it has the lowest acceptable rate of generating test data.
 
 \subsection{Search-Based Test Data Generation}
 The field of search–based software engineering reformulates software engineering problems as optimization problems and uses meta–heuristic algorithms to solve them. Meta–heuristic algorithms combine various heuristic methods in order to find solutions to computationally hard problems where no problem specific heuristic exists. In SBDT each input vector x can be assiciated with a measure cost(x) that represents how far awary the input vector x is from satisfying the required goal. Input test values that come close to satisfying the desired goal have low cost values, those that do not come close to satisfying the goals have high cost values. 
@@ -209,20 +288,6 @@ At its heart search based software testing requires the use of search or optimis
 
 
 
-\section{Software Testing Execution}
-Testing process can be divided into static and dynamic phases on the basis of test execution. In static testing test cases are analysed statically for checking errors without test execution. In addition to software code, high quality softwares are accompanied by necessary documentation. It includes requirements, design, technical, user manual marketing information. Reviews, walkthroughs or inspections are most commonly used techniques for static testing. In dynamic testing the software code is executed and input is converted into output. Results are analysed against expected outputs to find any error in the software. Unit testing, integration testing, system testing, and acceptance testing are most commonly used as dynamic testing methods~\cite{fairley1978tutorial}.
-
-%Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
-
-
-
-\subsection{Manual Software Testing}
-Manual testing is the technique of finding faults in software in which the tester writes the code by hand to create test cases and test oracle~\cite{Ciupa2008}. Manual testing may be effective in some cases but it is generally laborious, time consuming and error-prone~\cite{tretmans1999}. Additionally, it requires that the testers must have appropriate skills, experience and sufficient knowledge of the SUT for evaluation from different perspectives.
- 
-\subsection{Automated Software Testing}
-Automated testing is the technique of finding faults in a software in which the test cases or test oracle are generated automatically by a testing tool~\cite{Leitner2007}. There are tools which can automate part of a test process like generation of test cases or execution of test cases or evaluation of results while other tools are available which can automate the whole testing process. 
-
-\noindent Now a days, demand for increase in software functionality, quick development and decrease in cost of production without compromising quality leave no other choice but to automate the software testing. Automated software testing can be surprisingly effective and highly beneﬁcial for any organisation. Its initial set-up cost may be higher, however, a quick return on investment (QRI) outperforms it and brings the key beneﬁts of cost reduction, productivity, availability, reliability and performance to any organisation. Automated testing is particularly effective when the nature of job is repetitive and performed on routine basis like unit testing and regression testing, where the tests are re-executed after each modification \cite{huang2003automated}. The use of automated software testing made it possible to test large volumes of code, which would have been impossible otherwise~\cite{ramamoorthy1975testing}.
 
 
 %\section{Automated Random Testing}
@@ -234,8 +299,7 @@ Automated testing is the technique of finding faults in a software in which the 
 %\subsection{Test Report}
 
 \section{Summary}
-
-\section{Conclusion}
+The chapter gives an overview of software testing process, starting from defining what software testing is ?, why we need it ?, its common types and the purpose for which they are used. It then differentiate between manual and automated software testing and finally various ways of software test data generation, being the most critical and crucial part of any testing system are studied.
 
 
 % ------------------------------------------------------------------------
