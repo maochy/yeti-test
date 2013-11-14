@@ -22,14 +22,17 @@ The testing process, being an integral part of Software Development Life Cycle (
 \begin{tabular}{| l | l | l | l | } % centered columns (4 columns)
 \hline
 
-Levels 					&Purpose		 		& Perspective			& Execution 	\\
+Levels 					&Purpose		 		& Perspective						& Execution 	\\
 \hline
-1. Unit					&1. Functionality			& 1. White Box			& 1. Static 	\\
-2. Integration			&2. Structural			& 2. Black Box			& 2. Dynamic\\
-3. System				&3. Robustness			& 						&			\\
-						&4. Stress				&						&			\\
-						&5. Compatibility			&						&			\\
-						&6. Performance			&						&			\\
+1. Unit					&1. Functionality			& 1. White Box						& 1. Static 	\\
+2. Integration			&2. Structural			& ~~~~~a. Data Flow Analysis			& 2. Dynamic\\
+3. System				&3. Robustness			& ~~~~~b. Control Flow Analysis		&			\\
+						&4. Stress				& ~~~~~c. Code-based fault injection testing &			\\
+						&5. Compatibility			&2. Black Box						&			\\
+						&6. Performance			& ~~~~~a. Use-case testing			&			\\
+						&						& ~~~~~b. Partition testing			&			\\
+						&						& ~~~~~c. Boundary Value testing		&			\\
+						&						& ~~~~~d. Formal Specification testing	&			\\
 
 
 
@@ -191,34 +194,36 @@ Manual testing is the technique of finding faults in software in which the teste
  
 \subsection{Automated Software Testing}
 Automated testing is the technique of finding faults in a software in which the test cases or test oracle are generated automatically by a testing tool~\cite{Leitner2007}. There are tools which can automate part of a test process like generation of test cases or execution of test cases or evaluation of results while other tools are available which can automate the whole testing process. 
-
-Now a days, demand for increase in software functionality, quick development and decrease in cost of production without compromising quality leave no other choice but to automate the software testing. Automated software testing can be surprisingly effective and highly beneﬁcial for any organisation. Its initial set-up cost may be higher, however, a quick return on investment (QRI) outperforms it and brings the key beneﬁts of cost reduction, productivity, availability, reliability and performance to any organisation. Automated testing is particularly effective when the nature of job is repetitive and performed on routine basis like unit testing and regression testing, where the tests are re-executed after each modification \cite{huang2003automated}. The use of automated software testing made it possible to test large volumes of code, which would have been impossible otherwise~\cite{ramamoorthy1975testing}.
+The demand for increase in software functionality, quick development and decrease in cost of production without compromising quality leave no other choice but to automate the software testing. Automated software testing can be surprisingly effective and highly beneficial for any organisation. Its initial set-up cost may be higher in particular cases, however, a quick return on investment (QRI) outperforms it and brings the key benefits of cost reduction, productivity, availability, reliability and performance to any organisation. Automated testing is particularly effective when the nature of job is repetitive and performed on routine basis like unit testing and regression testing, where the tests are re-executed after each modification \cite{huang2003automated}. The use of automated software testing made it possible to test large volumes of code, which would have been impossible otherwise~\cite{ramamoorthy1975testing}.
 
 \section{Test Data Generation}
-Test data generation in software testing is the process of identifying test input data which satisifies given test selection criterion. A test data generator tool is used for the puprpose which assist testers in the generation of test data while the test selection criterion define the properties of test cases to be generated based on the test plan and perspective taken \cite{korel1990}. Various artifacts of the SUT can be considered to generate test data like requirements, model or code. The choice of artifacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
+Test data generation in software testing is the process of identifying test input data which satisfies given test selection criterion. A test data generator tool is used for the purpose which assist testers in the generation of test data while the test selection criterion define the properties of test cases to be generated based on the test plan and perspective taken \cite{korel1990}. Various artefacts of the SUT can be considered to generate test data like requirements, model or code. The choice of artefacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
-A typical test data generator consists of three parts: Program Analyzer, Strategy Handler and Generator \cite{edvardsson1999survey}. Program analyzer performs initial assessment of software prior to testing and may perform changes to it, if required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A strategy handler define the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from   program analyzer or user before or during execution. The Generator taking inputs from the Program analyzer and Strategy handler generates test cases according to the set selection criteria.  Test data generators based on their approaches are classified into Pathwise, Goal Oriented, Intelligent and Random Test Data Generators. Each one is breifly defined in the following.
+A typical test data generator consists of three parts: Program Analyser, Strategy Handler and Generator \cite{edvardsson1999survey}. Program analyser performs initial assessment of software prior to testing and may perform changes to it, if required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A strategy handler define the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from   program analyser or user before or during execution. The Generator taking inputs from the Program analyser and Strategy handler generates test cases according to the set selection criteria.  Test data generators based on their approaches are classified into Path-wise, Goal Oriented, Intelligent and Random Test Data Generators. Each one is briefly defined in the following.
 
-\subsection{Path wise Test Data Generators}
-A test data generation technique in which the test data is generated to target path coverage, statement coverage, branch coverage, etc in a given SUT. The approach generally consists of three main parts: Control Flow Graph (CFG) construction, path selection and test data generation. 
+\subsection{Path-wise Test Data Generators}
+A test data generation technique in which the test data is generated to target path coverage, statement coverage, branch coverage, etc. in a given SUT. The approach generally consists of three main parts: Control Flow Graph (CFG) construction, path selection and test data generation. 
 
-First of all a set of test paths is defined according to the requirements, then for every path of the set the generator derives input data that results in the execution of the selected path.  In path testing, data is generated for a boolean expression whcih contain two branches with a true and false node. A reference to the sibling node means, the other node, corresponding to the current executed node. For example the sibling node of True branch is False branch.
+In path-oriented approach, the program path(s) to the selected statement are identified and then input data is generated for exercising that path. The path to be tested can be generated automatically, or it can be provided by the user. In path testing, data is generated for a boolean expression which contain two branches with a true and false node. A reference to the sibling node means, the other node, corresponding to the current executed node. For example the sibling node of True branch is False branch.
 
-Each path belongs to a certain sub domain, which consists of those inputs which are necessary to traverse that path. For generating test cases the execution of the software with test data to find errors in the flow of the control through the software. These test data belong to an input space which is partitioned into a set of sub domains which belong to a certain path in the software. The boundary of these domains is obtained by the predicates in the path condition where a border segment is a section of the baoundary created by a single path condition. Two types of boundary test points are necessary; on and off test points. The on test points are on the border within an adjacent domain. If the software generates correct results for all these points then it can be considered that the border locations are correct.
+Each path belongs to a certain sub domain, which consists of those inputs which are necessary to traverse that path. For generating test cases the execution of the software with test data to find errors in the flow of the control through the software. The test data belong to an input space which is partitioned into a set of sub domains which belong to a certain path in the software. The boundary of these domains is obtained by the predicates in the path condition where a border segment is a section of the boundary created by a single path condition. Two types of boundary test points are necessary; on and off test points. The on test points are on the border within an adjacent domain. If the software generates correct results for all these points then it can be considered that the border locations are correct.
 
 % the pathwise test data generation is taken from a book knowldge mining using intelligent systems. you can reference it too.
 
 
-\subsection{Goal Oriented Generators}
+\subsection{Goal-oriented Test Data Generators}
 A test data generation technique in which the test data is generated to exercise a specific program point rather than a program path \cite{chungautomated}.  In this approach the tester can select any path among a set of available paths as long as they reach the target. Many goal-oriented test data generation approaches execute the SUT to generate test data, enabling it to utilize run-time information for computing more accurate test data \cite{ferguson1996chaining}.
 
 \subsubsection{Chaining Approach}
-The chaining approach uses data dependency analysis to guide the test data generation process. The basic of the chaining approach is to identify a sequence of nodes to be executed prior to execution of node {\it {g}}. The chaining approach uses the following data dependency concepts to identify such a sequence \cite{ferguson1996chaining}.
+The chaining approach uses data dependency analysis to guide the test data generation process. The data dependency analysis automatically identifies statements that affect the execution of the selected statement. The chaining approach uses these statements to form a sequence of statements that is to be executed prior to the execution of the selected statement \cite{ferguson1996chaining}.
+
+It analysed the program according to its edges and nodes. For each test coverage criterion, a different initial event sequence is defined and the goal nodes are determined accordingly. For example, consider  the branch (p, q), where p is  the beginning node of the branch and q is the last node in the branch. The initial event sequence E for the branch (p, q) is defined as $E =< (s,\phi), (p,\phi),(q,\phi) >$ provided that s is the starting node of the program and $\phi$ is the set of variables referred to as a constraint. After this step, the Branch Classification process identifies critical, semi critical and non critical nodes for each branch. Then, during the execution of the program, this classification leads the search to decide which branch to take to reach the goal node or to cover the requested branch.  
+
 
 \subsubsection{Assertion-Oriented Approach}
-In this approach the goal is to identify program input on which an assertion(s) is violated. More fonnally we can define the problem of assertion-oriented test data generation as follows: For a given assertion A, find program input x on which assertionA is false, i.e., when the program is executed on input x and the execution reaches assertion A, assertion A evaluates to false.
+In this approach the goal is to identify program input on which an assertion(s) is violated. More formally, we can define the problem of assertion-oriented test data generation as follows: For a given assertion A, find program input x on which assertion A is false, i.e., when the program is executed on input x and the execution reaches assertion A, assertion A evaluates to false.
 
-The problem of finding a program input on which an assertion is violated is undecidable. TheMOre, it is not always possible to generate test cases that violate assertions. However, the experiments have shown that the assertion-oriented test generation may frequently detect errors in the program related to assertion violation. The major advantage of this approach is that each test data generated uncovers an error in the program because the assertion is violated. There are three reasons as to why an assertion is violated: a faulty program, a faulty assertion, or a faulty precondition (input assertion).
+The problem of finding a program input on which an assertion is violated is undecidable. Furthermore, it is not always possible to generate test cases that violate assertions. However, the experiments have shown that the assertion-oriented test data generation may frequently detect errors in the program related to assertion violation. The major advantage of this approach is that each test data generated uncovers an error in the program because the assertion is violated. There are three reasons as to why an assertion is violated: a faulty program, a faulty assertion, or a faulty precondition (input assertion).
 
 An assertion specifies a constraint that applies to some state of a computation. When the assertion evaluates to false during program execution, there exists an incorrect state in the program. Assertions proved to be very effective in testing and debugging cycle. For example, during black- box and white-box testing assertions are evaluated for each program execution. Information about assertion violations is used to localize and fix bugs \cite{korel1996assertion}.
 
@@ -241,26 +246,27 @@ The main benefit of the approach is that it can generate test data quickly, but 
 Random test data generation is probably the simplest method for generation of test data. The advantage of this is that it can be used to generate input for any type of program. Thus to generate test data we can randomly generate a bit stream and let it the represent the data type needed. However, random test data generation does not generate quality test data as it does not perform well in terms of coverage. Since the data generated is based solely on probability it cannot accomplish high coverage as the chances of it finding semantically small faults is quite low.[3]
 
 If a fault is only revealed by a small percentage of the program input it is said to be a semantically small fault. For example of a semantically small fault consider the following code:
-
+\begin{lstlisting}
 void test(char x,char y) {
     if (x==y)
-        printf("Equal");
+        System.out.println("Equal");
     else
-        printf("Not Equal");
+        System.out.println("Not Equal");
 }
+\end{lstlisting}
 
 It is easy to see that the probability of execution of the first statement is significantly lesser than that of the second statement. As the structures in it grow complex so does the probability of its execution. Thus, such semantically small faults are hard to find using random test data generation. However, Random Test Data Generation is usually used as a benchmark as it has the lowest acceptable rate of generating test data.
 
 \subsection{Search-Based Test Data Generation}
-The field of search–based software engineering reformulates software engineering problems as optimization problems and uses meta–heuristic algorithms to solve them. Meta–heuristic algorithms combine various heuristic methods in order to find solutions to computationally hard problems where no problem specific heuristic exists. In SBDT each input vector x can be assiciated with a measure cost(x) that represents how far awary the input vector x is from satisfying the required goal. Input test values that come close to satisfying the desired goal have low cost values, those that do not come close to satisfying the goals have high cost values. 
+The field of search–based software engineering reformulates software engineering problems as optimization problems and uses meta–heuristic algorithms to solve them. Meta–heuristic algorithms combine various heuristic methods in order to find solutions to computationally hard problems where no problem specific heuristic exists. In SBDT each input vector x can be associated with a measure $cost(x)$ that represents how far away the input vector x is from satisfying the required goal. Input test values that come close to satisfying the desired goal have low cost values, those that do not come close to satisfying the goals have high cost values. 
 
-Consider a program with an initial branch statement: 
-{\it{ if (x >= 20) y = z; else y = 2 * z;}}
-and suppose we want the true branch to be executed. An input value of x == 25 clearly satisfies the predicate, and a value of x == 15 can be seen to come closer to satisfying the predicate than a value of x ==5. We might evaluate a cost function probe ( immidiately before the indicated statement) of the form cost(x) = max {0, 20 - x}. Thus x == 25 has cost 0, x == 15 has cost 5 and x = 5 has cost 15. We can see how finding data to satisfy the branch predicate is essentially a search over the input domain of x to find a value such that cost(x) == 0. In a similar fashion, finding data to follow a particular path through the code can be couched as one of satisfying each of a number of predicates at points in program execution (giving rise to a cost function that combines in some way the costs apparent at each of the relevatn branching points).  The technique is blind to the particular interpretation of predicates and so the same approach can be used to search for test data that satisfies the pre-condition of an operation but which gives rise to a final state and output that falsifies the post-condition. Tracey reffered to this as specification falsification [51]. In addition, healthiness pre-conditions for statements can be targeted and broken and so exception generating test data may also be sought [52]. 
+Consider a program with an initial branch statement: ${\it{ if (x >= 20) y = z; else y = 2 * z;}}$ and suppose we want the true branch to be executed. An input value of $x == 25$ clearly satisfies the predicate, and a value of $x == 15$ can be seen to come closer to satisfying the predicate than a value of $x ==5$. We might evaluate a cost function probe ( immediately before the indicated statement) of the form $cost(x) = max {0, 20 - x}$. Thus $x == 25$ has cost $0$, $x == 15$ has cost $5$ and $x = 5$ has cost $15$. We can see how finding data to satisfy the branch predicate is essentially a search over the input domain of x to find a value such that $cost(x) == 0$. In a similar fashion, finding data to follow a particular path through the code can be couched as one of satisfying each of a number of predicates at points in program execution (giving rise to a cost function that combines in some way the costs apparent at each of the relevant branching points).  The technique is blind to the particular interpretation of predicates and so the same approach can be used to search for test data that satisfies the pre-condition of an operation but which gives rise to a final state and output that falsifies the post-condition. Tracey referred to this as specification falsification \cite{tracey1998automated}. In addition, healthiness pre-conditions for statements can be targeted and broken and so exception generating test data may also be sought \cite{tracey2000automated}. 
 
 The approach requires the measurement of state at appropriate points in a programs execution. Furthermore, the cost function plays the role of oracle for each targeted test requirement. As a consequence, the cost function must change as the requirement (e.g. to follow another branch or path) is changed. Thus, frequent re-instrumentation of a program is required to find test data to fully satisfy common coverage criteria. The can be seen in the most extensive early framework for search based test data generation.
 
-At its heart search based software testing requires the use of search or optimisation algorithms. Most standard heuristic search techniques have been used, e.g. hill-climbing, simulated annealing, tabu search and genetic algorithms. The details need not concern us here, and the reader is reffered to McMinn [50] for details. Overall the search based 
+%At its heart search based software testing requires the use of search or optimisation algorithms. Most standard heuristic search techniques have been used, e.g. hill-climbing, simulated annealing, tabu search and genetic algorithms. 
+
+% The details need not concern us here, and the reader is referred to McMinn [50] for details. Overall the search based 
 
 
 
@@ -299,7 +305,7 @@ At its heart search based software testing requires the use of search or optimis
 %\subsection{Test Report}
 
 \section{Summary}
-The chapter gives an overview of software testing process, starting from defining what software testing is ?, why we need it ?, its common types and the purpose for which they are used. It then differentiate between manual and automated software testing and finally various ways of software test data generation, being the most critical and crucial part of any testing system are studied.
+The chapter gives an overview of software testing process, starting from defining what software testing is, why it is necessary, its common types and the purpose for which they are used. It then differentiate between manual and automated software testing and finally various ways of software test data generation, being the most critical and crucial part of any testing system are studied.
 
 
 % ------------------------------------------------------------------------

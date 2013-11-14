@@ -29,45 +29,45 @@ Warning--can't use both volume and number fields in ramamoorthy1975testing
 Warning--empty journal in toweysoftware
 Warning--empty year in toweysoftware
 Warning--empty journal in tretmans1999
-You've used 129 entries,
+You've used 133 entries,
             2118 wiz_defined-function locations,
-            1260 strings with 25227 characters,
-and the built_in function-call counts, 48001 in all, are:
-= -- 4936
-> -- 1917
-< -- 63
-+ -- 783
-- -- 630
-* -- 3145
-:= -- 7514
-add.period$ -- 431
-call.type$ -- 129
-change.case$ -- 687
+            1278 strings with 25766 characters,
+and the built_in function-call counts, 49310 in all, are:
+= -- 5061
+> -- 1972
+< -- 64
++ -- 806
+- -- 648
+* -- 3223
+:= -- 7723
+add.period$ -- 443
+call.type$ -- 133
+change.case$ -- 706
 chr.to.int$ -- 0
-cite$ -- 144
-duplicate$ -- 2035
-empty$ -- 3920
-format.name$ -- 630
-if$ -- 10513
+cite$ -- 148
+duplicate$ -- 2095
+empty$ -- 4036
+format.name$ -- 648
+if$ -- 10796
 int.to.chr$ -- 0
-int.to.str$ -- 129
-missing$ -- 138
-newline$ -- 645
-num.names$ -- 258
-pop$ -- 815
+int.to.str$ -- 133
+missing$ -- 143
+newline$ -- 665
+num.names$ -- 266
+pop$ -- 844
 preamble$ -- 1
-purify$ -- 573
+purify$ -- 589
 quote$ -- 0
-skip$ -- 1493
+skip$ -- 1534
 stack$ -- 0
-substring$ -- 3200
-swap$ -- 618
-text.length$ -- 63
+substring$ -- 3272
+swap$ -- 633
+text.length$ -- 64
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 486
+type$ -- 500
 warning$ -- 15
-while$ -- 486
-width$ -- 132
-write$ -- 1472
+while$ -- 499
+width$ -- 136
+write$ -- 1514
 (There were 15 warnings)
