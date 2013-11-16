@@ -254,16 +254,16 @@ The key benefit of Korat and TestEra, representation level approaches, is that n
 %As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%																						 %
-%																						 %			
+%													        %
+%														 %			
 % YETI Section Starts here									 %
-%																						 %		
-%																						 %
+%														 %		
+%														 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 
 \section{YETI Overview}
-YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI) for user friendliness along with the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The following sections briefly describe internal working and execution of YETI tool. 
+YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI) for user friendliness along with the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. The following sections briefly describe internal working and execution of YETI tool. 
 
 \begin{figure}[h]
 	\centering
@@ -273,57 +273,54 @@ YETI stands for York Extensible Testing Infrastructure. It is an automated rando
 \end{figure}
 
 
-\subsection{Main Components of YETI Tool}
-YETI has been designed with an emphasis on extensibility to facilitate future growth. It is therefore divided into three main components: the core infrastructure, strategies and language-specific bindings which are loosely coupled to easily accommodate new languages, strategies and environments. The environment defines the procedure of extracting information from the meta-data of the classes under test and providing it to the core infrastructure. 
+\subsection{YETI Design}
+YETI has been designed with an emphasis on extensibility to facilitate future growth. YETI enforces strong decoupling between testing strategies and the actual language constructs. Therefore, adding a new binding, need no modification what so ever to any existing test strategies. On the basis of functionality YETI is divided into three main sections: the core infrastructure, the strategy and the language-specific bindings. Each of the section is defined below. 
+
+\subsubsection{YETI Core Infrastructure}
+The YETI core infrastructure is responsible for test data generation, test process management and generation of test report. It is further split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The $yeti$ package uses classes from $yeti.monitoring$ and $yeti.strategies$ packages and calls classes in the $yeti.environment$ package as shown in the figure \ref{fig:yetiCore}. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm, height=7.5cm]{yetiMainModules.png}
-	\caption{YETI main modules}
-	\label{fig:yetiMainModules}
+	\includegraphics[width=14.5cm, height=5.5cm]{chapter3/yetiCore.png}
+	\caption{Main packages of YETI with dependencies }
+	\label{fig:yetiCore}
 \end{figure}
 
-\subsubsection{YETI Core Infrastructure}
-The core infrastructure is responsible for managing the test process and generation of reports. It depends on the following classes to achieve its task.
-{\textbf{Yeti:}} It is the fist class in contact after the test command is issued by the user. It contains the main method of YETI which on execution parses the supplied command with options and execute the specific bindings to test the particular language requested in the command.
-{\textbf{YetiLog:}} It is the class that facilitate printing debug and testing logs of the current test session. 
-{\textbf{YetiLogProcessor:}} It is an interface for processing test logs.
-{\textbf{YetiEngine:}} It is the class which make calls for a given number of time or specified amount of time in the command.
-{\textbf{YetiTestManager:}} It is the class that is called by YetiEngine to make the actual calls.
-{\textbf{YetiProgrammingLanguageProperties:}} It is a place holder for all language related instances during test.
-{\textbf{YetiInitializer:}} It is an abstract class for test initialization.
-
-The language modelling part includes the classes representing the meta-model of programming language. It consist of the following classes.
-{\textbf{YetiVariable:}} It represents a variable in the YETI.
-{\textbf{YetiType:}} It represents a data type in YETI.
-{\textbf{YetiRoutine:}} It is a super class for routines, which represent functions, methods and constructors.
-{\textbf{YetiModule:}} It represents a class under test which stores a list of modules.
-
-\subsubsection{Strategy}
-Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. The strategies sub package of Yeti package consist of the following classes.
-{\textbf{YetiStrategy:}} It is an abstract class which provides an interface for the strategies in YETI.
-{\textbf{YetiRandomStrategy:}} It is a class which implements a simple random test strategy. It is a subclass of YetiStrategy.
-{\textbf{YetiRandomPlusStrategy:}} It is a class which implements random+ strategy. It is an extended class of YetiRandomStrategy.
-{\textbf{DSSRStrategy:}} It is a class which implements the Dirt Spot Sweeping Random strategy. It is an extended class of YetiRandomPlusStrategy.
-{\textbf{ADFDStrategy:}} It is a class which implements the Automated Discovery of Failure Domain strategy. It is also an extended class of YetiRandomPlusStrategy.
-{\textbf{Yeti:}}
-\subsubsection{language-specific bindings}
-This section can host multiple languages to enable YETI to test programs written in multiple languages. The following steps are needed to add test support for new language program in YETI. 
-
+The most essential classes included in the YETI core infrastructure are:
 \begin{enumerate}
-\item Define a new environment sub package in the main Yeti package such that all the related classes are contained in that environment (yeti.environment.nameOfLanguage).
-\item Define a new subclass of YetiProgrammingLanguageProperties class to contain helper classes for the new language.
-\item Define a new subclass of YetiInitializer to initialize the program. It is also used to read all the reflexive information about the system.
-\item Define a new subclass of YetiTestManager to communicate with the target language and proceed with the actual calls.
-\item Define a new subclass of YetiRoutine to actually store the definition of routines in the target language.
-\item Define a new subclass of YetiModule to handle the type of modules to test.
+\item {\textbf{Yeti:}} It is the first class in contact after the test command is issued by the user. It contains the main method of YETI which on execution parses the supplied command with options and execute the specific bindings to test the particular language requested in the command.
+\item {\textbf{YetiLog:}} It is the class that facilitate printing debug and testing logs of the current test session. 
+\item {\textbf{YetiLogProcessor:}} It is an interface for processing test logs.
+\item {\textbf{YetiEngine:}} It is the class which make calls for a given number of time or specified amount of time in the command.
+\item {\textbf{YetiTestManager:}} It is the class that is called by YetiEngine to make the actual calls.
+\item {\textbf{YetiProgrammingLanguageProperties:}} It is a place holder for all language related instances during test.
+\item {\textbf{YetiInitializer:}} It is an abstract class for test initialization.
 \end{enumerate}
 
+\subsubsection{YETI Strategy}
+Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. The strategies sub package of Yeti package consist of the following classes.
+\begin{enumerate}
+\item {\textbf{YETI Strategy:}} It is an abstract class which provides an interface for the strategies in YETI.
+\item {\textbf{YETI Random Strategy:}} In this mode of testing codes the testing tool incurs random values for testing, where two probabilities can be used by the user namely null value probabilities and the percentage of the new objects that were created during the process in order to use when a testing is performed by any user.
+\item {\textbf{YETI Random Plus Strategy:}} Involves the usage of “Interesting” values that are in random ranging from -10 to +10 in case of java binding and it could be controlled by the user where random plus is considered to be the extension of Pure random testing and it is considered to be the most significant strategy to identify errors.
+\item {\textbf{DSSR Strategy:}} It is a class which implements the Dirt Spot Sweeping Random strategy. It is an extended class of YetiRandomPlusStrategy.
+\item {\textbf{ADFD Strategy:}} It is a class which implements the Automated Discovery of Failure Domain strategy. It is also an extended class of YetiRandomPlusStrategy.
+\item {\textbf{Random Decreasing Strategy:}} It is an extended random plus in which the probability values start from 100\% and keeps decreasing till it reaches 0\% when it reaches the end of testing process.
+\item {\textbf{Random Periodic Strategy:}} It is a testing mode in which both the probabilities decrease and increase randomly while the testing is carried out.
+\end{enumerate}
+
+\subsubsection{Language-specific Bindings}
+The language-specific binding includes classes that are responsible for modelling a programming language.They are language independent and can be extended to add support for a new language.
+\begin{enumerate}
+\item {\textbf{YetiVariable:}} represents a regular variable in YETI and it is a subclass of YetiCard.
+\item {\textbf{YetiType:}} represents a type of data (Integer, String, Boolean etc).
+\item {\textbf{YetiRoutine:}}represents a super type for routines, which can be functions, methods or constructors. A routine has a name, a return type and a list of its arguments types.
+\item {\textbf{YetiModule:}} represents a module under test. It stores a list of the module’s routines to test. 
+\item {\textbf{YetiName:}} represents a unique name assigned to each YetiRoutine instance in YETI.
+\item {\textbf{YetiCard:}} represents a card, which is a YETI specific concept that can map either onto a wildcard (a late bound value) or to a YetiVariable. A card has a type and an identifier.
+\item {\textbf{YetiIdentifier:}}represents an identifier for a YetiCard instance.
+\end{enumerate}
 % if java binding example is required or instead of adding new steps if you want to show only java binding then for material check the msc thesis page 40 of test c code with Yeti.
-
-\subsection{Construction of Test Cases}
-YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
-
 
 \subsection{Command-line Options}
 While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode in any order. For example, to save processing power and reduce overhead for a test session, command line option -nologs can be use to bypass real-time logging. The following table \ref{table:cliOptions} describes few of the most common command-line options available in YETI. 
@@ -361,6 +358,9 @@ Options									&Purpose 			\\ \hline
 \bigskip
 \label{table:cliOptions} % is used to refer this table in the text
 \end{table}
+
+\subsection{Construction of Test Cases}
+YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
 
 
 \subsection{YETI Execution}
@@ -407,7 +407,7 @@ YETI separates the bugs from successful executions to simplify the test report. 
 	\caption{YETI bug reports.}
 \end{figure}
 
-subsection{YETI Graphical User Interface}
+\subsection{YETI Graphical User Interface}
 YETI supports a GUI that not only allows test engineers to monitor the current test session but also to modify its characteristics in real time during test execution. It is useful to have the facility of modifying or aborting the test parameters at run time and observing the test behaviour in response. The figure \ref{fig:yetiGUI} present the YETI GUI comprising of six numbered windows (the windows are labelled for illustration purposes only).
 
 \begin{figure}[h]
@@ -418,6 +418,28 @@ YETI supports a GUI that not only allows test engineers to monitor the current t
 \end{figure}
 
 \begin{enumerate}
+
+\item Menu bar:
+\subitem Menu 1:
+\subitem Menu 2:
+\item Toolbar:
+\subitem Slider: “\%null values” displays probability to use a null instance at each variable. The probability is set before the testing by using the option –probabilityToUseNullValue. The default probability is 1. 
+\subitem Slider “\% new variables” displays probability to create new instances at each call. Same as “\%null values”, it is set before the testing by using the option –newInstanceInjectionProbability and the default value is 1. 
+\subitem Text box “Max variables per type” displays the cap on the number of instances for any given type. User can modify the sliders and text box during the testing ￼according different test strategies. 
+\subitem The progress bar “Testing session” indicates the percentage of the test progress.
+\item Module Name shows the list of the modules under the test. The
+modules with ticks are the modules under test. The module names also show all the
+class names in the test module.
+\item displays the number of unique of bugs detect in the module under
+test over time.
+\item displays the number of calls to the module under test over time.
+\item displays the number of failures over time. They are not both related
+to the module under test.
+\item displays the number of object instances created by YETI over time.
+\item displays all the routines in the module under test with a rectangle.
+Each rectangle presents the results of calls of the routine. The rectangle can have in 4 colors. Black indicates no any calls of this routine. Green indicates that has successful calls of this routine. Red indicates that this routine is called unsuccessfully which means that the call to this routine results in an exception. Yellow indicates undecidable calls, for example if a call cannot finish in predefined time and Yeti stops this call, in this case yeti cannot decide this call is successful or unsuccessful. The text next the routines name show how many calls of this routine and text displays percentage of passed, failed and undescided when the cursor over the rectangle.
+\item displays a table which contains the unique faults are detected by Yeti. It records the detail of exceptions.
+
 \item Window No 1 displays the failures of the tested module over time.
 \item Window No 2 displays the total number of failures over time. These may be generated from calls not related to the tested module.
 \item Window No 3 displays the total number of calls to the tested module over time. 

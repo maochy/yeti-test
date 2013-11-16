@@ -58,70 +58,71 @@
 \BOOKMARK [2][-]{subsection.3.2.7}{TestEra Tool}{section.3.2}% 58
 \BOOKMARK [2][-]{subsection.3.2.8}{Korat Tool}{section.3.2}% 59
 \BOOKMARK [1][-]{section.3.3}{YETI Overview}{chapter.3}% 60
-\BOOKMARK [2][-]{subsection.3.3.1}{Main Components of YETI Tool}{section.3.3}% 61
+\BOOKMARK [2][-]{subsection.3.3.1}{YETI Design}{section.3.3}% 61
 \BOOKMARK [3][-]{subsubsection.3.3.1.1}{YETI Core Infrastructure}{subsection.3.3.1}% 62
-\BOOKMARK [3][-]{subsubsection.3.3.1.2}{Strategy}{subsection.3.3.1}% 63
-\BOOKMARK [3][-]{subsubsection.3.3.1.3}{language-specific bindings}{subsection.3.3.1}% 64
-\BOOKMARK [2][-]{subsection.3.3.2}{Construction of Test Cases}{section.3.3}% 65
-\BOOKMARK [2][-]{subsection.3.3.3}{Command-line Options}{section.3.3}% 66
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{YETI Strategy}{subsection.3.3.1}% 63
+\BOOKMARK [3][-]{subsubsection.3.3.1.3}{Language-specific Bindings}{subsection.3.3.1}% 64
+\BOOKMARK [2][-]{subsection.3.3.2}{Command-line Options}{section.3.3}% 65
+\BOOKMARK [2][-]{subsection.3.3.3}{Construction of Test Cases}{section.3.3}% 66
 \BOOKMARK [2][-]{subsection.3.3.4}{YETI Execution}{section.3.3}% 67
 \BOOKMARK [2][-]{subsection.3.3.5}{YETI Test Oracle}{section.3.3}% 68
 \BOOKMARK [2][-]{subsection.3.3.6}{YETI Report}{section.3.3}% 69
-\BOOKMARK [2][-]{subsection.3.3.7}{Summary of automated testing tools}{section.3.3}% 70
-\BOOKMARK [1][-]{section.3.4}{Conclusion}{chapter.3}% 71
-\BOOKMARK [0][-]{chapter.4}{Dirt Spot Sweeping Random Strategy}{}% 72
-\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 73
-\BOOKMARK [1][-]{section.4.2}{Dirt Spot Sweeping Random Strategy}{chapter.4}% 74
-\BOOKMARK [2][-]{subsection.4.2.1}{Random Strategy \(R\)}{section.4.2}% 75
-\BOOKMARK [2][-]{subsection.4.2.2}{Random Plus Strategy \(R+\)}{section.4.2}% 76
-\BOOKMARK [2][-]{subsection.4.2.3}{Dirt Spot Sweeping \(DSS\)}{section.4.2}% 77
-\BOOKMARK [2][-]{subsection.4.2.4}{Structure of the Dirt Spot Sweeping Random Strategy}{section.4.2}% 78
-\BOOKMARK [2][-]{subsection.4.2.5}{Explanation of DSSR strategy on a concrete example}{section.4.2}% 79
-\BOOKMARK [1][-]{section.4.3}{Implementation of the DSSR strategy}{chapter.4}% 80
-\BOOKMARK [1][-]{section.4.4}{Evaluation}{chapter.4}% 81
-\BOOKMARK [2][-]{subsection.4.4.1}{Research questions}{section.4.4}% 82
-\BOOKMARK [2][-]{subsection.4.4.2}{Experiments}{section.4.4}% 83
-\BOOKMARK [2][-]{subsection.4.4.3}{Performance measurement criteria}{section.4.4}% 84
-\BOOKMARK [1][-]{section.4.5}{Results}{chapter.4}% 85
-\BOOKMARK [2][-]{subsection.4.5.1}{Is there an absolute best among R, R+ and DSSR strategies?}{section.4.5}% 86
-\BOOKMARK [2][-]{subsection.4.5.2}{Are there classes for which any of the three strategies provide better results?}{section.4.5}% 87
-\BOOKMARK [2][-]{subsection.4.5.3}{Can we pick the best default strategy between R, R+ and DSSR?}{section.4.5}% 88
-\BOOKMARK [1][-]{section.4.6}{Discussion}{chapter.4}% 89
-\BOOKMARK [1][-]{section.4.7}{Related Work}{chapter.4}% 90
-\BOOKMARK [1][-]{section.4.8}{Conclusions}{chapter.4}% 91
-\BOOKMARK [0][-]{chapter.5}{Automated Discovery of Failure Domain}{}% 92
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 93
-\BOOKMARK [1][-]{section.5.2}{Automated Discovery of Failure Domain}{chapter.5}% 94
-\BOOKMARK [1][-]{section.5.3}{Implementation}{chapter.5}% 95
-\BOOKMARK [2][-]{subsection.5.3.1}{York Extensible Testing Infrastructure}{section.5.3}% 96
-\BOOKMARK [2][-]{subsection.5.3.2}{ADFD strategy in YETI}{section.5.3}% 97
-\BOOKMARK [2][-]{subsection.5.3.3}{Example}{section.5.3}% 98
-\BOOKMARK [1][-]{section.5.4}{Experimental Results}{chapter.5}% 99
-\BOOKMARK [1][-]{section.5.5}{Discussion}{chapter.5}% 100
-\BOOKMARK [1][-]{section.5.6}{Threats to Validity}{chapter.5}% 101
-\BOOKMARK [1][-]{section.5.7}{Related Works}{chapter.5}% 102
-\BOOKMARK [1][-]{section.5.8}{Conclusion}{chapter.5}% 103
-\BOOKMARK [0][-]{chapter.6}{Invariant Guided Random+ Strategy}{}% 104
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 105
-\BOOKMARK [1][-]{section.6.2}{Invariant Guided Random+ Strategy}{chapter.6}% 106
-\BOOKMARK [2][-]{subsection.6.2.1}{Daikon}{section.6.2}% 107
-\BOOKMARK [2][-]{subsection.6.2.2}{Random Plus Strategy \(R+\)}{section.6.2}% 108
-\BOOKMARK [2][-]{subsection.6.2.3}{Structure of the Invariant Guided Random+ Strategy}{section.6.2}% 109
-\BOOKMARK [2][-]{subsection.6.2.4}{Explanation of IGRS strategy on a concrete example}{section.6.2}% 110
-\BOOKMARK [1][-]{section.6.3}{Implementation of the IGRS strategy}{chapter.6}% 111
-\BOOKMARK [1][-]{section.6.4}{Evaluation}{chapter.6}% 112
-\BOOKMARK [2][-]{subsection.6.4.1}{Research questions}{section.6.4}% 113
-\BOOKMARK [2][-]{subsection.6.4.2}{Experiments}{section.6.4}% 114
-\BOOKMARK [2][-]{subsection.6.4.3}{Performance measurement criteria}{section.6.4}% 115
-\BOOKMARK [1][-]{section.6.5}{Results}{chapter.6}% 116
-\BOOKMARK [2][-]{subsection.6.5.1}{Answer A}{section.6.5}% 117
-\BOOKMARK [2][-]{subsection.6.5.2}{Answer B}{section.6.5}% 118
-\BOOKMARK [2][-]{subsection.6.5.3}{Answer C}{section.6.5}% 119
-\BOOKMARK [1][-]{section.6.6}{Discussion}{chapter.6}% 120
-\BOOKMARK [1][-]{section.6.7}{Related Work}{chapter.6}% 121
-\BOOKMARK [1][-]{section.6.8}{Conclusions}{chapter.6}% 122
-\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{}% 123
-\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 124
-\BOOKMARK [0][-]{appendix.A}{Sample Title}{}% 125
-\BOOKMARK [1][-]{section.A.1}{Appendix hello}{appendix.A}% 126
-\BOOKMARK [0][-]{section.A.1}{Bibliography}{}% 127
+\BOOKMARK [2][-]{subsection.3.3.7}{YETI Graphical User Interface}{section.3.3}% 70
+\BOOKMARK [2][-]{subsection.3.3.8}{Summary of automated testing tools}{section.3.3}% 71
+\BOOKMARK [1][-]{section.3.4}{Conclusion}{chapter.3}% 72
+\BOOKMARK [0][-]{chapter.4}{Dirt Spot Sweeping Random Strategy}{}% 73
+\BOOKMARK [1][-]{section.4.1}{Introduction}{chapter.4}% 74
+\BOOKMARK [1][-]{section.4.2}{Dirt Spot Sweeping Random Strategy}{chapter.4}% 75
+\BOOKMARK [2][-]{subsection.4.2.1}{Random Strategy \(R\)}{section.4.2}% 76
+\BOOKMARK [2][-]{subsection.4.2.2}{Random Plus Strategy \(R+\)}{section.4.2}% 77
+\BOOKMARK [2][-]{subsection.4.2.3}{Dirt Spot Sweeping \(DSS\)}{section.4.2}% 78
+\BOOKMARK [2][-]{subsection.4.2.4}{Structure of the Dirt Spot Sweeping Random Strategy}{section.4.2}% 79
+\BOOKMARK [2][-]{subsection.4.2.5}{Explanation of DSSR strategy on a concrete example}{section.4.2}% 80
+\BOOKMARK [1][-]{section.4.3}{Implementation of the DSSR strategy}{chapter.4}% 81
+\BOOKMARK [1][-]{section.4.4}{Evaluation}{chapter.4}% 82
+\BOOKMARK [2][-]{subsection.4.4.1}{Research questions}{section.4.4}% 83
+\BOOKMARK [2][-]{subsection.4.4.2}{Experiments}{section.4.4}% 84
+\BOOKMARK [2][-]{subsection.4.4.3}{Performance measurement criteria}{section.4.4}% 85
+\BOOKMARK [1][-]{section.4.5}{Results}{chapter.4}% 86
+\BOOKMARK [2][-]{subsection.4.5.1}{Is there an absolute best among R, R+ and DSSR strategies?}{section.4.5}% 87
+\BOOKMARK [2][-]{subsection.4.5.2}{Are there classes for which any of the three strategies provide better results?}{section.4.5}% 88
+\BOOKMARK [2][-]{subsection.4.5.3}{Can we pick the best default strategy between R, R+ and DSSR?}{section.4.5}% 89
+\BOOKMARK [1][-]{section.4.6}{Discussion}{chapter.4}% 90
+\BOOKMARK [1][-]{section.4.7}{Related Work}{chapter.4}% 91
+\BOOKMARK [1][-]{section.4.8}{Conclusions}{chapter.4}% 92
+\BOOKMARK [0][-]{chapter.5}{Automated Discovery of Failure Domain}{}% 93
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 94
+\BOOKMARK [1][-]{section.5.2}{Automated Discovery of Failure Domain}{chapter.5}% 95
+\BOOKMARK [1][-]{section.5.3}{Implementation}{chapter.5}% 96
+\BOOKMARK [2][-]{subsection.5.3.1}{York Extensible Testing Infrastructure}{section.5.3}% 97
+\BOOKMARK [2][-]{subsection.5.3.2}{ADFD strategy in YETI}{section.5.3}% 98
+\BOOKMARK [2][-]{subsection.5.3.3}{Example}{section.5.3}% 99
+\BOOKMARK [1][-]{section.5.4}{Experimental Results}{chapter.5}% 100
+\BOOKMARK [1][-]{section.5.5}{Discussion}{chapter.5}% 101
+\BOOKMARK [1][-]{section.5.6}{Threats to Validity}{chapter.5}% 102
+\BOOKMARK [1][-]{section.5.7}{Related Works}{chapter.5}% 103
+\BOOKMARK [1][-]{section.5.8}{Conclusion}{chapter.5}% 104
+\BOOKMARK [0][-]{chapter.6}{Invariant Guided Random+ Strategy}{}% 105
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 106
+\BOOKMARK [1][-]{section.6.2}{Invariant Guided Random+ Strategy}{chapter.6}% 107
+\BOOKMARK [2][-]{subsection.6.2.1}{Daikon}{section.6.2}% 108
+\BOOKMARK [2][-]{subsection.6.2.2}{Random Plus Strategy \(R+\)}{section.6.2}% 109
+\BOOKMARK [2][-]{subsection.6.2.3}{Structure of the Invariant Guided Random+ Strategy}{section.6.2}% 110
+\BOOKMARK [2][-]{subsection.6.2.4}{Explanation of IGRS strategy on a concrete example}{section.6.2}% 111
+\BOOKMARK [1][-]{section.6.3}{Implementation of the IGRS strategy}{chapter.6}% 112
+\BOOKMARK [1][-]{section.6.4}{Evaluation}{chapter.6}% 113
+\BOOKMARK [2][-]{subsection.6.4.1}{Research questions}{section.6.4}% 114
+\BOOKMARK [2][-]{subsection.6.4.2}{Experiments}{section.6.4}% 115
+\BOOKMARK [2][-]{subsection.6.4.3}{Performance measurement criteria}{section.6.4}% 116
+\BOOKMARK [1][-]{section.6.5}{Results}{chapter.6}% 117
+\BOOKMARK [2][-]{subsection.6.5.1}{Answer A}{section.6.5}% 118
+\BOOKMARK [2][-]{subsection.6.5.2}{Answer B}{section.6.5}% 119
+\BOOKMARK [2][-]{subsection.6.5.3}{Answer C}{section.6.5}% 120
+\BOOKMARK [1][-]{section.6.6}{Discussion}{chapter.6}% 121
+\BOOKMARK [1][-]{section.6.7}{Related Work}{chapter.6}% 122
+\BOOKMARK [1][-]{section.6.8}{Conclusions}{chapter.6}% 123
+\BOOKMARK [0][-]{chapter.7}{Conclusion and Future Work}{}% 124
+\BOOKMARK [1][-]{section.7.1}{Introduction}{chapter.7}% 125
+\BOOKMARK [0][-]{appendix.A}{Sample Title}{}% 126
+\BOOKMARK [1][-]{section.A.1}{Appendix hello}{appendix.A}% 127
+\BOOKMARK [0][-]{section.A.1}{Bibliography}{}% 128
