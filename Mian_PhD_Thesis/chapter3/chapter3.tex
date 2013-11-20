@@ -288,11 +288,11 @@ The YETI core infrastructure is responsible for test data generation, test proce
 
 The most essential classes included in the YETI core infrastructure are:
 \begin{enumerate}
-\item {\textbf{Yeti:}} It is the first class in contact after the test command is issued by the user. It contains the main method of YETI which on execution parses the supplied command with options and execute the specific bindings to test the particular language requested in the command.
+\item {\textbf{Yeti:}} class is the entry point to the system and contains the main method. It is responsible for launching YETI. It parses the arguments, setups the environment, initializes the testing and delivers the reports of the test results.
 \item {\textbf{YetiLog:}} It is the class that facilitate printing debug and testing logs of the current test session. 
 \item {\textbf{YetiLogProcessor:}} It is an interface for processing test logs.
-\item {\textbf{YetiEngine:}} It is the class which make calls for a given number of time or specified amount of time in the command.
-\item {\textbf{YetiTestManager:}} It is the class that is called by YetiEngine to make the actual calls.
+\item {\textbf{YetiEngine:}} class binds YetiStrategy and YetiTestManager together (Figure 10). YetiEngine, YetiStrategy and YetiTestManager are responsible for the actual testing process. YetiTestManager makes the actual calls based on the YetiEngine’s configuration and delegates to the YetiStrategey to generate the test data and select the routines (constructors and methods) to test.
+\item {\textbf{YetiTestManager:}} class carries out testing using test data provided by YetiStrategy.
 \item {\textbf{YetiProgrammingLanguageProperties:}} It is a place holder for all language related instances during test.
 \item {\textbf{YetiInitializer:}} It is an abstract class for test initialization.
 \end{enumerate}
@@ -321,6 +321,9 @@ The language-specific binding includes classes that are responsible for modellin
 \item {\textbf{YetiIdentifier:}}represents an identifier for a YetiCard instance.
 \end{enumerate}
 % if java binding example is required or instead of adding new steps if you want to show only java binding then for material check the msc thesis page 40 of test c code with Yeti.
+
+\subsection{Construction of Test Cases}
+YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
 
 \subsection{Command-line Options}
 While YETI GUI launcher has been developed during this research study, to take maximum benefit of the available options one still need to launch YETI from CLI mode. These command-line options are case insensitive and can be provided as input to the tool in CLI mode in any order. For example, to save processing power and reduce overhead for a test session, command line option -nologs can be use to bypass real-time logging. The following table \ref{table:cliOptions} describes few of the most common command-line options available in YETI. 
@@ -359,21 +362,18 @@ Options									&Purpose 			\\ \hline
 \label{table:cliOptions} % is used to refer this table in the text
 \end{table}
 
-\subsection{Construction of Test Cases}
-YETI construct test cases by creating objects of the classes under test and randomly calling its methods with random inputs according to its parameter's-space. YETI split input values into two types i.e. primitive data types and user defined classes. For Java primitive data types, which includes short, byte, char, int, float, double, long etc., YETI, in its simplest random strategy, calls {\it Math.random()} method to generate an arithmetic value which is converted to the required type using casting rule of Java language. However, if the method under test needs an object of a user-defined class as a parameter then YETI calls its constructor or method to generate object of that class at run time. It may be possible that the constructor require another object and in that case YETI will recursively calls the constructor of that object. This process is continued until an object with blank constructor, constructor with only primitive types or the set level of recursion is reached.
-
 
 \subsection{YETI Execution}
-YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in figure~\ref{fig:yeticommand}. In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. For details of other options please see table \ref{table:cliOptions}. 
+YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in figure~\ref{fig:yeticommand}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\centering
 	\frame{\includegraphics[width= 14cm, height = 1.8cm]{chapter3/yetiCommandCLI.pdf}}
 	\caption{Command to launch YETI from CLI}
 	\label{fig:yeticommand}
 \end{figure}
 
-Alternately, runnable jar file by the name {\it YetiLauncher} is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI execution. Figure \ref{fig:yetiLauncher} shows the equivalent of above command in GUI mode.
+ In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. For details of other options please see table \ref{table:cliOptions}. Alternately, runnable jar file by the name {\it YetiLauncher} is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI execution. Figure \ref{fig:yetiLauncher} shows the equivalent of above command in GUI mode.
 
 \begin{figure}[h]
 	\centering
@@ -395,7 +395,7 @@ Oracles in YETI are language dependant. YETI uses two approaches for oracle (pas
 YETI gives a complete test report after execution of each test. The report contain all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assign value to help in debugging the identified fault. 
 \begin{figure}[h]
 	\centering
-	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter3/seecaption.pdf}}
+	\frame{\includegraphics[width= 14cm, height = 4cm]{chapter3/yetiReport1.png}}
 	\caption{YETI successful method calls}
 \end{figure}
 
@@ -403,7 +403,7 @@ YETI separates the bugs from successful executions to simplify the test report. 
 
 \begin{figure}[h]
 	\centering
-	\frame{\includegraphics[width= 7cm, height = 8cm]{chapter3/seecaption.pdf}}
+	\frame{\includegraphics[width= 14cm, height = 4cm]{chapter3/yetiReport2.png}}
 	\caption{YETI bug reports.}
 \end{figure}
 
@@ -412,7 +412,7 @@ YETI supports a GUI that not only allows test engineers to monitor the current t
 
 \begin{figure}[h]
 	\centering
-	\frame{\includegraphics[width= 15cm, height = 12cm]{chapter3/yetiGUI.png}}
+	\frame{\includegraphics[width= 15cm, height = 10cm]{chapter3/yetiGUI.png}}
 	\label{fig:yetiGUI}
 	\caption{GUI of YETI Tool}
 \end{figure}
@@ -420,13 +420,17 @@ YETI supports a GUI that not only allows test engineers to monitor the current t
 \begin{enumerate}
 
 \item Menu bar:
-\subitem Menu 1:
-\subitem Menu 2:
-\item Toolbar:
-\subitem Slider: “\%null values” displays probability to use a null instance at each variable. The probability is set before the testing by using the option –probabilityToUseNullValue. The default probability is 1. 
-\subitem Slider “\% new variables” displays probability to create new instances at each call. Same as “\%null values”, it is set before the testing by using the option –newInstanceInjectionProbability and the default value is 1. 
-\subitem Text box “Max variables per type” displays the cap on the number of instances for any given type. User can modify the sliders and text box during the testing ￼according different test strategies. 
-\subitem The progress bar “Testing session” indicates the percentage of the test progress.
+\begin{enumerate}
+\item Yeti menu:
+\item File menu:
+\end{enumerate}
+\item Standard toolbar:
+\begin{enumerate}
+\item Slider: “\%null values” displays probability to use a null instance at each variable. The probability is set before the testing by using the option –probabilityToUseNullValue. The default probability is 1. 
+\item Slider “\% new variables” displays probability to create new instances at each call. Same as “\%null values”, it is set before the testing by using the option –newInstanceInjectionProbability and the default value is 1. 
+\item Text box “Max variables per type” displays the cap on the number of instances for any given type. User can modify the sliders and text box during the testing ￼according different test strategies. 
+\item The progress bar “Testing session” indicates the percentage of the test progress.
+\end{enumerate}
 \item Module Name shows the list of the modules under the test. The
 modules with ticks are the modules under test. The module names also show all the
 class names in the test module.
@@ -439,7 +443,6 @@ to the module under test.
 \item displays all the routines in the module under test with a rectangle.
 Each rectangle presents the results of calls of the routine. The rectangle can have in 4 colors. Black indicates no any calls of this routine. Green indicates that has successful calls of this routine. Red indicates that this routine is called unsuccessfully which means that the call to this routine results in an exception. Yellow indicates undecidable calls, for example if a call cannot finish in predefined time and Yeti stops this call, in this case yeti cannot decide this call is successful or unsuccessful. The text next the routines name show how many calls of this routine and text displays percentage of passed, failed and undescided when the cursor over the rectangle.
 \item displays a table which contains the unique faults are detected by Yeti. It records the detail of exceptions.
-
 \item Window No 1 displays the failures of the tested module over time.
 \item Window No 2 displays the total number of failures over time. These may be generated from calls not related to the tested module.
 \item Window No 3 displays the total number of calls to the tested module over time. 
@@ -452,25 +455,26 @@ Each rectangle presents the results of calls of the routine. The rectangle can h
 \end{enumerate}
 
 
-\subsection{Summary of automated testing tools}
+\subsection{Summary}
+In this chapter we define random testing and the various ways of performing random testing. We then showed how the automated testing tools implement random technique for software testing. Finally the chapter explains in detail the YETI tool which is being used in this study. The main features of all the tools are noted in the following table.
 
 \begin{sidewaystable}
     \centering
     \caption{Summary of automated testing tools}
-   \begin{tabular}{|l|l|l|l|l|l|l|}
+   \begin{tabular}{|l|l|l|l|l|l|}
 \hline
 
-Tool 				& Language																								& Input  																																			& Strategy 																																											 				& Output		  																								& Benefits																															& Limitations		\\ \hline
-JCrasher	  & Java, JML																								& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC																													& \vtop{\hbox{\strut Automated TC, Use} \hbox{of Heuristic Rules}} 			& \\ \hline
-Jartege			& Java																										& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc.}} 							 				& TC, RT 																											& Quick, automated																											& \\ \hline
-Eclat				& Java																										& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\hbox{\strut each candidate on the model}} 					& Faulty TC 																									& \vtop{\hbox{\strut produce output text,} \hbox{JML}}									& \\ \hline
-Quickcheck	& Haskell																									&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}}	  			  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?}} 											 						& Pass/Fail																										& \vtop{\hbox{\strut Easy to use, program} \hbox{documentation}}				&	\\ \hline
-Randoop 		& Java, .NET																							& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}}					  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation}} 	& Fault TC, RT 																								& 																																			&	\\ \hline
-AgitarOne		& Java																										& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}}						& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time}} 					& TC, RT																											& \vtop{\hbox{\strut Eclipse plug-in} \hbox{\& easy to use}}  					& \\ \hline
-AutoTest		& Java																										& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC}} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts}} 															& violations, RT 																							& \vtop{\hbox{\strut GUI in HTML,} \hbox{easy to use}} 									& \\ \hline
-TestEra			& Java																										& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer \& manual TC}}			& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}} 																& Contracts violations 																				& \vtop{\hbox{\strut short report with} \hbox{faulty TC only}} 					& \\ \hline
-Korat 			& Java																										& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}}																& Contracts violations 																				& \vtop{\hbox{\strut GUI, short report} \hbox{with faulty TC only}} 		& \\ \hline
-YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML}} 		& Code, Time 																																  & RandomPlus, Random 																																										& \vtop{\hbox{\strut Traces of found } \hbox{\strut faults}}	& \vtop{\hbox{\strut GUI, give faulty} \hbox{examples, Quick}} 				& \\ \hline %inserts single line
+Tool 				& Language																								& Input  																																			& Strategy 																																											 				& Output		  																								& Benefits																															\\ \hline
+JCrasher	  & Java, JML																								& Program																																			& \vtop{\hbox{\strut Method type to predict input,}\hbox{\strut Randomly find values of crash}}  				& TC																													& \vtop{\hbox{\strut Automated TC, Use} \hbox{of Heuristic Rules}} 	 \\ \hline
+Jartege			& Java																										& Classes																																			& \vtop{\hbox{\strut Random strategy with controls}\hbox{\strut like weight etc.}} 							 				& TC, RT 																											& Quick, automated																									 \\ \hline
+Eclat				& Java																										& Classes, pass TC 																														& \vtop{\hbox{\strut Create model from TC, execute}\hbox{\strut each candidate on the model}} 					& Faulty TC 																									& \vtop{\hbox{\strut produce output text,} \hbox{JML}}									\\ \hline
+Quickcheck	& Haskell																									&	\vtop{\hbox{\strut Specifications}  \hbox{\strut and Functions}}	  			  & \vtop{\hbox{\strut Specification} \hbox{\strut hold to random TC?}} 											 						& Pass/Fail																										& \vtop{\hbox{\strut Easy to use, program} \hbox{documentation}}				\\ \hline
+Randoop 		& Java, .NET																							& \vtop{\hbox{\strut Specifications,} \hbox{\strut code and time}}					  & \vtop{\hbox{\strut Generate and execute methods} \hbox{\strut \& give feedback for next generation}} 	& Fault TC, RT 																								& 																																\\ \hline
+AgitarOne		& Java																										& \vtop{\hbox{\strut Package, time}   \hbox{\strut and manual TC}}						& \vtop{\hbox{\strut Analyse SUT with auto and} \hbox{\strut provided data in specified time}} 					& TC, RT																											& \vtop{\hbox{\strut Eclipse plug-in} \hbox{\& easy to use}}  			 \\ \hline
+AutoTest		& Java																										& \vtop{\hbox{\strut Classes, time}   \hbox{\strut and manual TC}} 						& \vtop{\hbox{\strut Heuristic rules} \hbox{\strut to evaluate contracts}} 															& violations, RT 																							& \vtop{\hbox{\strut GUI in HTML,} \hbox{easy to use}} 								\\ \hline
+TestEra			& Java																										& \vtop{\hbox{\strut Specifications,} \hbox{\strut integer \& manual TC}}			& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}} 																& Contracts violations 																				& \vtop{\hbox{\strut short report with} \hbox{faulty TC only}} 					\\ \hline
+Korat 			& Java																										& \vtop{\hbox{\strut Specifications}  \hbox{\strut and manual tests}}					& \vtop{\hbox{\strut Check contracts} \hbox{\strut with specifications}}																& Contracts violations 																				& \vtop{\hbox{\strut GUI, short report} \hbox{with faulty TC only}} 	 \\ \hline
+YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML}} 		& Code, Time 																																  & RandomPlus, Random 																																										& \vtop{\hbox{\strut Traces of found } \hbox{\strut faults}}	& \vtop{\hbox{\strut GUI, give faulty} \hbox{examples, Quick}} 			 \\ \hline %inserts single line
 \end{tabular}
 \label{table:Tools}
 \end{sidewaystable}
@@ -483,7 +487,9 @@ YETI 				& \vtop{\hbox{\strut Java, .NET,}  \hbox{\strut JML}} 		& Code, Time 		
 %\end{figure}
 
 
-\section{Conclusion}
+
+
+%\section{Conclusion}
 
 
 % ------------------------------------------------------------------------
