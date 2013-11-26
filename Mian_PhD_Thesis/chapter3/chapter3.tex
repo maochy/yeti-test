@@ -1,4 +1,4 @@
-\chapter{Random Testing}
+\chapter{Literature Review: Random Testing}
 \label{chap:randomTesting}
 
 %\section{Random Testing}
@@ -161,7 +161,7 @@ Figure~\ref{fig:JCrasher} illustrates the working of JCrasher by testing a {\it 
 
 
 \subsection{Jartege}
-Jartege (\uline{Ja}wa~\uline{r}andom~\uline{te}st~\uline{ge}nerator)~\cite{Oriat2004} is an automated testing tool that randomly generates unit tests for Java classes with contracts specified in Java Modelling Language (JML). The contracts include methods pre- and post-conditions and class invariants. Initially Jartege uses the contracts to eliminate irrelevant test cases and later on the same contracts serve as test oracle to differentiate between errors and false positives. Jartege uses simple random testing to test classes and generate test cases. In addition, it parametrise its random aspect in order to prioritise testing specific part of the class or to get interesting sequences of calls. The parameters include the following: 
+Jartege (\uline{Ja}va~\uline{r}andom~\uline{te}st~\uline{ge}nerator)~\cite{Oriat2004} is an automated testing tool that randomly generates unit tests for Java classes with contracts specified in Java Modelling Language (JML). The contracts include methods pre- and post-conditions and class invariants. Initially Jartege uses the contracts to eliminate irrelevant test cases and later on the same contracts serve as test oracle to differentiate between errors and false positives. Jartege uses simple random testing to test classes and generate test cases. In addition, it parametrise its random aspect in order to prioritise testing specific part of the class or to get interesting sequences of calls. The parameters include the following: 
 \begin{itemize}
 \item Operational profile of the classes i.e. the likely use of the class under test by other classes.  
 \item Weight of the class and the method under test. Higher weight prioritizes the class or method over lower weight during test process. 

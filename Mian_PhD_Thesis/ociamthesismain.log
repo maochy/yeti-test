@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  19 NOV 2013 02:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  25 NOV 2013 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -472,8 +472,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `true' on input line 55.
 
 (./ociamthesismain.aux (./abstract/abstract.aux) (./dedication/dedication.aux)
-(./acknowlegements/acknowlegements.aux) (./chapter1/chapter1.aux)
-(./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux)
+(./acknowlegements/acknowlegements.aux) (./chapter1/chapter1.aux
+
+LaTeX Warning: Label `fig:SoftwareTesting1' multiply defined.
+
+) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux) (./chapter4/chapter4.aux)
 (./chapter5/chapter5.aux) (./chapter6/chapter6.aux
 
 LaTeX Warning: Label `sec:imp' multiply defined.
@@ -496,24 +499,24 @@ LaTeX Warning: Label `sec:conc' multiply defined.
 ) (./chapter7/chapter7.aux) (./appendix1/appendix1.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 74.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -545,7 +548,7 @@ e
 ))
 \c@lstlisting=\count139
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring ON on input line 72.
+Package hyperref Info: Link coloring ON on input line 74.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -555,9 +558,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 72.
-LaTeX Info: Redefining \pageref on input line 72.
-LaTeX Info: Redefining \nameref on input line 72.
+LaTeX Info: Redefining \ref on input line 74.
+LaTeX Info: Redefining \pageref on input line 74.
+LaTeX Info: Redefining \nameref on input line 74.
 
 (./ociamthesismain.out) (./ociamthesismain.out)
 \@outlinefile=\write3
@@ -570,19 +573,19 @@ LaTeX Info: Redefining \nameref on input line 72.
 \openout2 = `abstract/abstract.aux'.
 
  (./abstract/abstract.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
  [1
 
 
 
 ])
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 95.
 
 (./ociamthesismain.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -628,11 +631,16 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 \openout2 = `acknowlegements/acknowlegements.aux'.
 
  (./acknowlegements/acknowlegements.tex
+Overfull \hbox (2.6809pt too wide) in paragraph at lines 10--11
+[]\OT1/phv/m/n/12 I was funded by De-part-men-tal Over-seas Re-search Schol-ar-
+ship (DORS),
+ []
+
 [10
 
 
 
-])
+] [11])
 \openout2 = `chapter1/chapter1.aux'.
 
  (./chapter1/chapter1.tex
@@ -641,139 +649,163 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.15 
+l.13 
       [1
 
 
 
 
-] <chapter1/SoftwareTesting1.png, id=817, 734.745pt x 308.15125pt>
+]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+ <chapter1/SoftwareTesting1.png, id=828, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
 Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 20.
 (pdftex.def)             Requested size: 398.34839pt x 170.72032pt.
  [2 <./chapter1/SoftwareTesting1.png>]
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 34.
+
 [3]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 54.
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--100
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 103--105
+Underfull \hbox (badness 10000) in paragraph at lines 77--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-) [6]
+
+Overfull \hbox (6.9437pt too wide) in paragraph at lines 88--90
+\OT1/phv/b/n/12 Chapter [][]4[][] \OT1/phv/m/n/12 de-scribes newly pro-posed mo
+re ef-fi-cient ran-dom test-ing tech-nique known
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+<chapter1/thesisOutline.png, id=895, 2333.71875pt x 1882.03125pt>
+File: chapter1/thesisOutline.png Graphic file (type png)
+
+<use chapter1/thesisOutline.png>
+Package pdftex.def Info: chapter1/thesisOutline.png used on input line 115.
+(pdftex.def)             Requested size: 426.78148pt x 455.22897pt.
+ [6]) [7 <./chapter1/thesisOutline.png>]
 \openout2 = `chapter2/chapter2.aux'.
 
- (./chapter2/chapter2.tex
+
+(./chapter2/chapter2.tex
 Chapter 2.
-<chapter2/softwareTesting.png, id=890, 2293.56876pt x 460.72125pt>
+<chapter2/softwareTesting.png, id=909, 2293.56876pt x 460.72125pt>
 File: chapter2/softwareTesting.png Graphic file (type png)
 
 <use chapter2/softwareTesting.png>
 Package pdftex.def Info: chapter2/softwareTesting.png used on input line 7.
 (pdftex.def)             Requested size: 369.88326pt x 79.6643pt.
- [7
+ [8
 
 
 
  <./chapter2/softwareTesting.png>]
-Overfull \hbox (6.26785pt too wide) in paragraph at lines 22--43
+Overfull \hbox (37.78923pt too wide) in paragraph at lines 22--43
  [][] 
  []
 
-[8] <chapter2/testCase.png, id=917, 501.875pt x 514.92375pt>
+[9] <chapter2/testCase.png, id=932, 501.875pt x 514.92375pt>
 File: chapter2/testCase.png Graphic file (type png)
 
 <use chapter2/testCase.png>
 Package pdftex.def Info: chapter2/testCase.png used on input line 58.
 (pdftex.def)             Requested size: 130.08731pt x 133.46844pt.
- [9 <./chapter2/testCase.png>]
-<chapter2/whiteBox.png, id=929, 530.98375pt x 644.4075pt>
+ [10 <./chapter2/testCase.png>]
+<chapter2/whiteBox.png, id=945, 530.98375pt x 644.4075pt>
 File: chapter2/whiteBox.png Graphic file (type png)
 
 <use chapter2/whiteBox.png>
 Package pdftex.def Info: chapter2/whiteBox.png used on input line 82.
 (pdftex.def)             Requested size: 130.08731pt x 157.8763pt.
- [10 <./chapter2/whiteBox.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
  [11]
-<chapter2/blackBox.png, id=950, 530.98375pt x 626.34pt>
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+ [12 <./chapter2/whiteBox.png>]
+<chapter2/blackBox.png, id=965, 530.98375pt x 626.34pt>
 File: chapter2/blackBox.png Graphic file (type png)
 
 <use chapter2/blackBox.png>
 Package pdftex.def Info: chapter2/blackBox.png used on input line 106.
 (pdftex.def)             Requested size: 130.08731pt x 153.44986pt.
- [12 <./chapter2/blackBox.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [13] [14] [15]
-[16] [17] [18]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 249.
+ [13 <./chapter2/blackBox.png>] [14]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 133.
 
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 250.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 136.
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ò in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+ [15] [16]
+[17] [18] [19] [20] [21]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ì in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ì in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ì in font phvr7t!
 
-[19]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
- [20]) [21]
+Overfull \hbox (9.66393pt too wide) in paragraph at lines 275--276
+[]\OT1/phv/m/n/12 Consider a pro-gram with an ini-tial branch state-ment: $[]$
+ []
+
+[22]) [23]
 \openout2 = `chapter3/chapter3.aux'.
 
  (./chapter3/chapter3.tex
 Chapter 3.
-<chapter3/randomTesting.jpg, id=1085, 441.90094pt x 118.19156pt>
+<chapter3/randomTesting.jpg, id=1112, 441.90094pt x 118.19156pt>
 File: chapter3/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter3/randomTesting.jpg>
@@ -783,73 +815,81 @@ Package pdftex.def Info: chapter3/randomTesting.jpg used on input line 15.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22
+[24
 
 
 
 ]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
- [23 <./chapter3/randomTesting.jpg>]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 35.
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+ [25 <./chapter3/randomTesting.jpg>]
+LaTeX Font Info:    Try loading font information for OML+phv on input line 35.
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlphv.fd
+File: omlphv.fd 
 )
-LaTeX Font Info:    Font shape `OML/ptm/m/it' in size <12> not available
+LaTeX Font Info:    Font shape `OML/phv/m/it' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 35.
 
-<chapter3/pointblockstrip.jpg, id=1126, 581.92406pt x 183.68625pt>
+<chapter3/pointblockstrip.jpg, id=1153, 581.92406pt x 183.68625pt>
 File: chapter3/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter3/pointblockstrip.jpg>
 Package pdftex.def Info: chapter3/pointblockstrip.jpg used on input line 41.
 (pdftex.def)             Requested size: 290.96132pt x 91.84288pt.
- [24 <./chapter3/pointblockstrip.jpg>]
-<chapter3/mart2.pdf, id=1140, 350.30875pt x 185.69376pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[26] <chapter3/mart2.pdf, id=1167, 350.30875pt x 185.69376pt>
 File: chapter3/mart2.pdf Graphic file (type pdf)
 
 <use chapter3/mart2.pdf>
 Package pdftex.def Info: chapter3/mart2.pdf used on input line 58.
 (pdftex.def)             Requested size: 369.90901pt x 170.72131pt.
- [25 <./chapter3/mart2.pdf>]
-<chapter3/RRT.pdf, id=1168, 370.38374pt x 247.67531pt>
+ [27 <./chapter3/pointblockstrip.jpg>] [28 <./chapter3/mart2.pdf>] <chapter3/RR
+T.pdf, id=1200, 370.38374pt x 247.67531pt>
 File: chapter3/RRT.pdf Graphic file (type pdf)
- <use chapter3/RRT.pdf>
+
+<use chapter3/RRT.pdf>
 Package pdftex.def Info: chapter3/RRT.pdf used on input line 72.
 (pdftex.def)             Requested size: 170.71768pt x 142.2648pt.
+ [29 <./chapter3/RRT.pdf>] [30]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ï in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ¶ in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ï in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ¶ in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ï in font phvr7t!
+ [31] [32] [33]
+Overfull \hbox (0.46378pt too wide) in paragraph at lines 147--148
+\OT1/phv/m/n/12 JCrasher is an au-to-matic ro-bust-ness test-ing tool de-vel-op
+ed by Csall-ner and Smara-
+ []
 
-[26 <./chapter3/RRT.pdf>] [27] [28]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ï in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ï in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ¶ in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ï in font ptmr7t!
- [29] [30]
-<chapter3/JCrasher.png, id=1229, 867.24pt x 402.50375pt>
+<chapter3/JCrasher.png, id=1261, 867.24pt x 402.50375pt>
 File: chapter3/JCrasher.png Graphic file (type png)
 
 <use chapter3/JCrasher.png>
@@ -864,16 +904,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
 
  []
 
-[31]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 166.
+[34]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 166.
 
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
 )
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
- [32 <./chapter3/JCrasher.png>]
-<chapter3/eclat_working.png, id=1247, 356.532pt x 235.1184pt>
+ [35 <./chapter3/JCrasher.png>]
+Overfull \hbox (1.56621pt too wide) in paragraph at lines 168--169
+[]\OT1/phv/m/n/12 Probability of cre-at-ing new ob-jects dur-ing test pro-cess.
+ Low prob-a-bil-ity means
+ []
+
+<chapter3/eclat_working.png, id=1277, 356.532pt x 235.1184pt>
 File: chapter3/eclat_working.png Graphic file (type png)
 
 <use chapter3/eclat_working.png>
@@ -883,411 +928,415 @@ Package pdftex.def Info: chapter3/eclat_working.png used on input line 178.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33] [34 <./chapter3/eclat_working.png>]
-<chapter3/autotest.png, id=1264, 292.14229pt x 156.78915pt>
+[36] [37 <./chapter3/eclat_working.png>] [38]
+<chapter3/autotest.png, id=1302, 292.14229pt x 156.78915pt>
 File: chapter3/autotest.png Graphic file (type png)
 
 <use chapter3/autotest.png>
 Package pdftex.def Info: chapter3/autotest.png used on input line 216.
 (pdftex.def)             Requested size: 369.9066pt x 199.17741pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[35] [36 <./chapter3/autotest.png (PNG copy)>]
-<chapter3/testera.png, id=1285, 379.20241pt x 142.17401pt>
+ [39 <./chapter3/autotest.png (PNG copy)>]
+<chapter3/testera.png, id=1316, 379.20241pt x 142.17401pt>
 File: chapter3/testera.png Graphic file (type png)
 
 <use chapter3/testera.png>
 Package pdftex.def Info: chapter3/testera.png used on input line 236.
 (pdftex.def)             Requested size: 369.89734pt x 213.39716pt.
- [37 <./chapter3/testera.png>] [38]
-<chapter3/yetiOverview.png, id=1310, 419.166pt x 102.3825pt>
+ [40 <./chapter3/testera.png>] [41]
+<chapter3/yetiOverview.png, id=1341, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png>
 Package pdftex.def Info: chapter3/yetiOverview.png used on input line 270.
 (pdftex.def)             Requested size: 412.57074pt x 99.59053pt.
 
-Overfull \hbox (15.51132pt too wide) in paragraph at lines 280--281
-\OT1/ptm/m/n/12 ment and gen-er-a-tion of test re-port. It is fur-ther split in
-to four pack-ages: yeti, yeti.environments,
+Overfull \hbox (2.73029pt too wide) in paragraph at lines 277--278
+\OT1/phv/m/n/12 YETI has been de-signed with an em-pha-sis on ex-ten-si-bil-ity
+ to fa-cil-i-tate fu-ture growth.
  []
 
-<chapter3/yetiCore.png, id=1312, 473.77pt x 190.7125pt>
+[42 <./chapter3/yetiOverview.png (PNG copy)>]
+<chapter3/yetiCore.png, id=1350, 473.77pt x 190.7125pt>
 File: chapter3/yetiCore.png Graphic file (type png)
 
 <use chapter3/yetiCore.png>
 Package pdftex.def Info: chapter3/yetiCore.png used on input line 284.
 (pdftex.def)             Requested size: 412.57417pt x 156.49583pt.
- [39 <./chapter3/yetiOverview.png (PNG copy)>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+ [43 <./chapter3/yetiCore.png>]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+ [44]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
 
-[40 <./chapter3/yetiCore.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
- [41]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
+Overfull \hbox (2.33018pt too wide) in paragraph at lines 326--327
+\OT1/phv/m/n/12 dou-ble, long etc., YETI, in its sim-plest ran-dom strat-egy, c
+alls \OT1/phv/m/sl/12 Math.random() \OT1/phv/m/n/12 method
+ []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[42] <chapter3/yetiCommandCLI.pdf, id=1358, 831.105pt x 95.35625pt>
+[45] [46] <chapter3/yetiCommandCLI.pdf, id=1392, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
 Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 371.
 (pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[43] <chapter3/yetiCommandGUI.pdf, id=1365, 433.62pt x 494.84875pt>
+<chapter3/yetiCommandGUI.pdf, id=1395, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
 Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 380.
 (pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
-
-<chapter3/yetiReport1.png, id=1366, 607.26875pt x 154.5775pt>
+ [47 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
+<chapter3/yetiReport1.png, id=1420, 607.26875pt x 154.5775pt>
 File: chapter3/yetiReport1.png Graphic file (type png)
 
 <use chapter3/yetiReport1.png>
 Package pdftex.def Info: chapter3/yetiReport1.png used on input line 398.
 (pdftex.def)             Requested size: 398.34308pt x 113.81474pt.
- [44 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
-<chapter3/yetiReport2.png, id=1392, 617.30624pt x 153.57375pt>
+
+<chapter3/yetiReport2.png, id=1421, 617.30624pt x 153.57375pt>
 File: chapter3/yetiReport2.png Graphic file (type png)
 
 <use chapter3/yetiReport2.png>
 Package pdftex.def Info: chapter3/yetiReport2.png used on input line 406.
 (pdftex.def)             Requested size: 398.35257pt x 113.81151pt.
 
-<chapter3/yetiGUI.png, id=1394, 1445.4pt x 903.375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[48 <./chapter3/yetiReport1.png>]
+<chapter3/yetiGUI.png, id=1428, 1445.4pt x 903.375pt>
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png>
 Package pdftex.def Info: chapter3/yetiGUI.png used on input line 415.
 (pdftex.def)             Requested size: 426.7863pt x 284.52328pt.
- [45 <./chapter3/yetiReport1.png> <./chapter3/yetiReport2.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no Ô in font ptmr7t!
-Missing character: There is no ø in font ptmr7t!
-Missing character: There is no º in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
- [46 <./chapter3/yetiGUI.png>]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ì in font ptmr7t!
- [47]
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
+ [49 <./chapter3/yetiReport2.png> <./chapter3/yetiGUI.png>]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ì in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ì in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no Ô in font phvr7t!
+Missing character: There is no ø in font phvr7t!
+Missing character: There is no º in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+ [50]
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ì in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ú in font phvr7t!
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ù in font phvr7t!
 
-Overfull \hbox (9.65297pt too wide) in paragraph at lines 464--480
+Overfull \hbox (61.52669pt too wide) in paragraph at lines 464--480
  [][] 
  []
 
-) [48] [49]
+) [51] [52]
 \openout2 = `chapter4/chapter4.aux'.
 
  (./chapter4/chapter4.tex
 Chapter 4.
-[50
+[53
 
 
 
-] [51] [52] <chapter4/ART_Patterns.png, id=1513, 376.40625pt x 101.62968pt>
+] [54] [55] [56]
+<chapter4/ART_Patterns.png, id=1546, 376.40625pt x 101.62968pt>
 File: chapter4/ART_Patterns.png Graphic file (type png)
 
 <use chapter4/ART_Patterns.png>
-Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 57.
+Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 59.
 (pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
- [53]
-<chapter4/block2.png, id=1525, 271.0125pt x 122.70844pt>
+
+<chapter4/block2.png, id=1548, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
-Package pdftex.def Info: chapter4/block2.png used on input line 66.
+Package pdftex.def Info: chapter4/block2.png used on input line 68.
 (pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
-
-<chapter4/flowchart1.pdf, id=1528, 193.19614pt x 195.7238pt>
+ [57 <./chapter4/ART_Patterns.png> <./chapter4/block2.png>] <chapter4/flowchart
+1.pdf, id=1557, 193.19614pt x 195.7238pt>
 File: chapter4/flowchart1.pdf Graphic file (type pdf)
 
 <use chapter4/flowchart1.pdf>
-Package pdftex.def Info: chapter4/flowchart1.pdf used on input line 79.
+Package pdftex.def Info: chapter4/flowchart1.pdf used on input line 81.
 (pdftex.def)             Requested size: 284.53731pt x 341.44064pt.
- [54 <./chapter4/ART_Patterns.png> <./chapter4/block2.png>] [55 <./chapter4/flo
-wchart1.pdf>] [56] [57]
-<chapter4/hierarchy.pdf, id=1573, 98.56648pt x 125.337pt>
+ [58 <./chapter4/flowchart1.pdf>] [59]
+Overfull \hbox (7.48506pt too wide) in paragraph at lines 150--152
+\OT1/phv/m/n/12 strat-egy fur-ther se-lect val-ues ([]\OT1/pcr/m/n/12 0, Intege
+r.MIN_VALUE \OT1/phv/m/n/12 & []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/phv/m/n/1
+2 )
+ []
+
+
+Overfull \hbox (31.10046pt too wide) in paragraph at lines 157--158
+\OT1/phv/m/n/12 cause int vari-able []\OT1/pcr/m/n/12 result1 \OT1/phv/m/n/12 w
+ill not be able to store the square of []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/
+phv/m/n/12 .
+ []
+
+[60] <chapter4/hierarchy.pdf, id=1595, 98.56648pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
-Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 173.
+Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 175.
 (pdftex.def)             Requested size: 113.8153pt x 142.27174pt.
- [58 <./chapter4/hierarchy.pdf>]
-Overfull \hbox (8.56361pt too wide) in paragraph at lines 258--259
-\OT1/ptm/m/n/12 Various mea-sures in-clud-ing the E-measure (ex-pected num-ber 
-of fail-ures de-tected), P-measure
- []
 
-[59] [60] <chapter4/DssrImprove.png, id=1610, 986.2446pt x 479.391pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[61] [62 <./chapter4/hierarchy.pdf>] [63] [64]
+<chapter4/DssrImprove.png, id=1640, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
-Package pdftex.def Info: chapter4/DssrImprove.png used on input line 267.
-(pdftex.def)             Requested size: 398.33858pt x 193.62561pt.
-File: chapter4/DssrImprove.png Graphic file (type png)
- <use chapter4/DssrImprove.png>
-Package pdftex.def Info: chapter4/DssrImprove.png used on input line 268.
+Package pdftex.def Info: chapter4/DssrImprove.png used on input line 269.
 (pdftex.def)             Requested size: 398.33858pt x 193.62561pt.
 
-Overfull \hbox (68.6502pt too wide) in alignment at lines 354--354
+Overfull \hbox (93.70477pt too wide) in alignment at lines 355--355
 [][][][][][][][][][][][][][][] 
  []
 
 
-LaTeX Warning: Float too large for page by 10.8508pt on input line 358.
+LaTeX Warning: Float too large for page by 26.08301pt on input line 359.
 
-[61] [62] [63 <./chapter4/DssrImprove.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 391.
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 398.
- [64] [65] [66] [67]) [68]
+[65 <./chapter4/DssrImprove.png>] [66]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 387.
+LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 399.
+ [67] [68] [69] [70] [71]) [72]
 \openout2 = `chapter5/chapter5.aux'.
 
 
 (./chapter5/chapter5.tex
 Chapter 5.
-[69
+[73
 
 
 
-] <chapter5/ART_Patterns.png, id=1721, 376.40625pt x 101.62968pt>
+] <chapter5/ART_Patterns.png, id=1748, 376.40625pt x 101.62968pt>
 File: chapter5/ART_Patterns.png Graphic file (type png)
 
 <use chapter5/ART_Patterns.png>
-Package pdftex.def Info: chapter5/ART_Patterns.png used on input line 19.
+Package pdftex.def Info: chapter5/ART_Patterns.png used on input line 18.
 (pdftex.def)             Requested size: 227.62596pt x 56.90446pt.
- [70 <./chapter5/ART_Patterns.png>]
-<chapter5/ADFD_Diagram1.png, id=1737, 589.20125pt x 414.54875pt>
+ [74 <./chapter5/ART_Patterns.png>]
+<chapter5/ADFD_Diagram1.png, id=1757, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
-Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 100.
-(pdftex.def)             Requested size: 233.31181pt x 170.7125pt.
+Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 99.
+(pdftex.def)             Requested size: 284.53056pt x 184.93852pt.
 
-<chapter5/ADFD_front_end.png, id=1738, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1758, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
-Package pdftex.def Info: chapter5/ADFD_front_end.png used on input line 108.
-(pdftex.def)             Requested size: 341.4206pt x 187.78384pt.
+Package pdftex.def Info: chapter5/ADFD_front_end.png used on input line 107.
+(pdftex.def)             Requested size: 398.32744pt x 256.0806pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 114--116
-
- []
-
-[71 <./chapter5/ADFD_Diagram1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 117--119
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
-
- []
-
-[72 <./chapter5/ADFD_front_end.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 123--125
+[75 <./chapter5/ADFD_Diagram1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
-[73] [74]
-<chapter5/pointDomainOneArgument.png, id=1787, 780.9175pt x 570.13pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+[76 <./chapter5/ADFD_front_end.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
+
+ []
+
+[77] [78]
+<chapter5/pointDomainOneArgument.png, id=1793, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
 Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
- 226.
-(pdftex.def)             Requested size: 233.31187pt x 99.58286pt.
- [75 <./chapter5/pointDomainOneArgument.png>] <chapter5/PFDOne.png, id=1807, 79
-0.955pt x 575.14874pt>
+ 225.
+(pdftex.def)             Requested size: 233.31187pt x 128.03012pt.
+
+Overfull \hbox (0.3433pt too wide) in paragraph at lines 255--256
+\OT1/phv/m/n/12 This sec-tion in-cludes the ex-per-i-men-tal setup and re-sults
+ ob-tained af-ter us-ing ADFD
+ []
+
+[79 <./chapter5/pointDomainOneArgument.png>] [80]
+<chapter5/PFDOne.png, id=1835, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
-Package pdftex.def Info: chapter5/PFDOne.png used on input line 322.
-(pdftex.def)             Requested size: 170.7158pt x 113.80783pt.
+Package pdftex.def Info: chapter5/PFDOne.png used on input line 320.
+(pdftex.def)             Requested size: 199.1624pt x 128.03381pt.
 
-<chapter5/PFDTwo.png, id=1808, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1836, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
-Package pdftex.def Info: chapter5/PFDTwo.png used on input line 326.
-(pdftex.def)             Requested size: 170.7119pt x 113.80414pt.
- [76 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>]
-<chapter5/BFDOne.png, id=1821, 794.97pt x 575.14874pt>
+Package pdftex.def Info: chapter5/PFDTwo.png used on input line 324.
+(pdftex.def)             Requested size: 199.16988pt x 128.03294pt.
+
+<chapter5/BFDOne.png, id=1841, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
-Package pdftex.def Info: chapter5/BFDOne.png used on input line 361.
-(pdftex.def)             Requested size: 170.709pt x 113.80783pt.
-File: chapter5/BFDOne.png Graphic file (type png)
- <use chapter5/BFDOne.png>
-Package pdftex.def Info: chapter5/BFDOne.png used on input line 361.
-(pdftex.def)             Requested size: 170.709pt x 113.80783pt.
+Package pdftex.def Info: chapter5/BFDOne.png used on input line 357.
+(pdftex.def)             Requested size: 199.16656pt x 128.03381pt.
 
-<chapter5/BFDTwo.png, id=1822, 787.94376pt x 573.14125pt>
+<chapter5/BFDTwo.png, id=1842, 787.94376pt x 573.14125pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
-Package pdftex.def Info: chapter5/BFDTwo.png used on input line 365.
-(pdftex.def)             Requested size: 170.71512pt x 113.80414pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 361--366
-[][]
- []
-
-<chapter5/SFDOne.png, id=1827, 789.95125pt x 573.14125pt>
+Package pdftex.def Info: chapter5/BFDTwo.png used on input line 361.
+(pdftex.def)             Requested size: 199.16162pt x 128.03294pt.
+ [81 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png> <./chapter5/BFDOne.png> <.
+/chapter5/BFDTwo.png>]
+<chapter5/SFDOne.png, id=1858, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
-Package pdftex.def Info: chapter5/SFDOne.png used on input line 399.
-(pdftex.def)             Requested size: 170.71613pt x 113.80414pt.
+Package pdftex.def Info: chapter5/SFDOne.png used on input line 394.
+(pdftex.def)             Requested size: 199.16278pt x 128.03294pt.
 
-<chapter5/SFDTwo.png, id=1828, 788.9475pt x 575.14874pt>
+<chapter5/SFDTwo.png, id=1859, 788.9475pt x 575.14874pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
-Package pdftex.def Info: chapter5/SFDTwo.png used on input line 403.
-(pdftex.def)             Requested size: 170.71588pt x 113.80783pt.
- [77 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>]
-[78 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>] [79]) [80]
+Package pdftex.def Info: chapter5/SFDTwo.png used on input line 398.
+(pdftex.def)             Requested size: 199.16252pt x 128.03381pt.
+ [82 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>]
+[83] [84]) [85]
 \openout2 = `chapter6/chapter6.aux'.
 
-
-(./chapter6/chapter6.tex
+ (./chapter6/chapter6.tex
 Chapter 6.
-[81
+[86
 
 
 
-]) [82] [83]
+]) [87] [88]
 \openout2 = `chapter7/chapter7.aux'.
 
  (./chapter7/chapter7.tex
 Chapter 7.
-[84
+[89
 
 
 
-]) [85]
+]) [90]
 \openout2 = `appendix1/appendix1.aux'.
 
  (./appendix1/appendix1.tex
 Appendix A.
-) [86
+) [91
 
 
 
-] (./ociamthesismain.bbl [87
+] (./ociamthesismain.bbl [92
 
 
 ]
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no î in font ptmri7t!
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no î in font ptmri7t!
-Missing character: There is no ‚ in font ptmri7t!
-Missing character: There is no Ä in font ptmri7t!
-Missing character: There is no ô in font ptmri7t!
- [88] [89] [90] [91] [92]
-Underfull \hbox (badness 1292) in paragraph at lines 463--468
-\OT1/ptm/m/n/12 Ef-fi-cient unit test case min-i-miza-tion.  In \OT1/ptm/m/it/1
-2 Pro-ceed-ings of the twenty-second
+Missing character: There is no ‚ in font phvro7t!
+Missing character: There is no Ä in font phvro7t!
+Missing character: There is no î in font phvro7t!
+Missing character: There is no ‚ in font phvro7t!
+Missing character: There is no Ä in font phvro7t!
+Missing character: There is no î in font phvro7t!
+Missing character: There is no ‚ in font phvro7t!
+Missing character: There is no Ä in font phvro7t!
+Missing character: There is no ô in font phvro7t!
+ [93] [94] [95] [96] [97] [98] [99] [100]
+[101]
+Underfull \hbox (badness 3735) in paragraph at lines 676--680
+[]\OT1/phv/m/n/12 Debra J Richard-son, Stephanie Leif Aha, and T Owen O'malley.
+
  []
 
-[93] [94] [95] [96] [97])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 133.
- [98]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 133.
- (./ociamthesismain.aux (./abstract/abstract.aux) (./dedication/dedication.aux)
- (./acknowlegements/acknowlegements.aux)
+[102] [103])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
+ [104]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
+ (./ociamthesismain.aux (./abstract/abstract.aux)
+(./dedication/dedication.aux) (./acknowlegements/acknowlegements.aux)
 (./chapter1/chapter1.aux) (./chapter2/chapter2.aux) (./chapter3/chapter3.aux)
 (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./chapter6/chapter6.aux)
 (./chapter7/chapter7.aux) (./appendix1/appendix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 133.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 133.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
-(rerunfilecheck)             Checksum: 4804AF3C2FEAB9BB7968AFD16AFA13AB;9278.
+(rerunfilecheck)             Checksum: 3B9291B9A4FBD00387F17C2C32E48503;9316.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 133.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 10253 strings out of 493315
- 149316 string characters out of 6137904
- 340706 words of memory out of 5000000
- 12815 multiletter control sequences out of 15000+600000
- 40313 words of font info for 97 fonts, out of 8000000 for 9000
+ 10290 strings out of 493315
+ 149833 string characters out of 6137904
+ 338404 words of memory out of 5000000
+ 12837 multiletter control sequences out of 15000+600000
+ 42079 words of font info for 97 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 35i,12n,72p,1847b,1655s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,12n,72p,1847b,1697s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/tex
@@ -1300,13 +1349,13 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-dist/f
 onts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/tim
-es/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a
-.pfb>
-Output written on ociamthesismain.pdf (109 pages, 1532560 bytes).
+e1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helveti
+c/uhvro8a.pfb>
+Output written on ociamthesismain.pdf (116 pages, 1584027 bytes).
 PDF statistics:
- 2132 PDF objects out of 2487 (max. 8388607)
- 1916 compressed objects within 20 object streams
- 556 named destinations out of 1000 (max. 500000)
- 1192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2164 PDF objects out of 2487 (max. 8388607)
+ 1939 compressed objects within 20 object streams
+ 570 named destinations out of 1000 (max. 500000)
+ 1197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

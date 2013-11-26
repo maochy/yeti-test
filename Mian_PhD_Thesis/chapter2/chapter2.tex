@@ -1,4 +1,4 @@
-\chapter{Software Testing}
+\chapter{Literature Review: Software Testing}
 \label{chap:softwareTesting}
 The very famous quote of Paul, ``To err is human, but to really foul things up you need a computer, is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after its completion.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. According to the National Institute of Standard and Technology \cite{Tassey2002}, software errors cost an estimated \$59.5 billion loss to US economy annually. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
@@ -129,6 +129,18 @@ While the performance of partition testing is directly dependant on the quality 
 Boundary Value Analysis (BVA) is a testing technique which is based on the rationale that errors tends to occur near the extremities of the input variables. Therefore in BVA the data set consists of values which are selected from the borders. According to IEEE standards \cite{radatz1990ieee}, boundary value is a value that corresponds to minimum or maximum input, internal or external value specified for a component or system. 
 
 The BVA technique is also used in conjunction with partition testing where test values are selected at the borders of each sub-domain instead of the whole input domain. The empirical analysis performed by Reid et al. \cite{reid1997empirical} argue that BVA performs better in finding faults than partition testing. They also stated that like partition testing the performance of BVA is also dependant on the correct identification of partition and selection of boundary values.
+
+ The following code illustrate the ability of BVA to find a bug.  On passing interesting value \verb+MAX_INT+ as argument to the $test$ method. The method code increment it by 1 making it a negative value and thus an error is generated when the system try to build an array of negative size.
+
+\begin{lstlisting}
+public void test (int arg) {
+arg = arg + 1;
+int [] intArray = new intArray[arg];
+...
+}
+\end{lstlisting}
+
+
 
 \subsubsection{Formal specification testing}
 Formal specification is defined as ``a mathematical based technique, which offers rigorous and effective way to model, design and analyse computer systems" \cite{formal1997specification, Hierons2009}. The mathematical structure allows formal specifications to be manipulated mechanically so that information contained within the specification can be isolated, transformed, assembled, and repackaged to be used as test cases. Furthermore, it also guarantee that the test frames are logical consequences of the specification \cite{donat1997automating}. Formal specification testing is effective because it is independent from the code of the SUT. Which means that no change is required in the test cases as long as the specifications are unchanged \cite{gaudel2010software}. It uses the existing specification model to verify the test results and thus avoid the oracle problem \cite{bertolino2007software}.
