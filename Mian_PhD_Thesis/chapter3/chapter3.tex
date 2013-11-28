@@ -2,11 +2,12 @@
 \label{chap:randomTesting}
 
 %\section{Random Testing}
-%This text is blue because we have to change it to our own words
 
-\textcolor{blue}{Work on random test generation dates back to a 1970 paper by Hanford. In it he reports on the ``syntax machine", a program that generated random but syntactically-correct programs for testing PL/I compilers \cite{hanford1970automatic}. The next published work on random testing was a 1983 paper by Bird and Munoz \cite{bird1983automatic}. They describe a technique to
-generate randomly-generated ``self-checking" test cases: test cases that in addition to generating test inputs generated checks for expected outputs using knowledge of the semantics of the software under test. For example, when generating random programs for testing a compiler, the generator kept track of the expected values of arithmetic computations and inserted the appropriate checks into the test case. They also applied their technique to checking sorting and merging procedures and graphic display software~\cite{pacheco2009directed}.}
+Random test data generation was first mentioned in the literature by Hanford in 1970. He reported a tool, syntax machine, a program that randomly generated data for testing PL/I compilers~\cite{hanford1970automatic}. Later on in 1983, Bird and Munoz described a technique to produce randomly generated and self checking test cases~\cite{bird1983automatic}. 
 
+%Work on random test generation dates back to a 1970 paper by Hanford. In it he reports on the ``syntax machine", a program that generated random but syntactically-correct programs for testing PL/I compilers \cite{hanford1970automatic}. The next published work on random testing was a 1983 paper by Bird and Munoz \cite{bird1983automatic}. They describe a technique to generate randomly-generated ``self-checking" test cases: test cases that in addition to generating test inputs generated checks for expected outputs using knowledge of the semantics of the software under test. For example, when generating random programs for testing a compiler, the generator kept track of the expected values of arithmetic computations and inserted the appropriate checks into the test case. They also applied their technique to checking sorting and merging procedures and graphic display software~\cite{pacheco2009directed}.
+
+%One of the best-known works in the field is Miller et al.’s “fuzz testing” paper, where they generate random ASCII character streams and use them as input to test Unix utilities for abnormal termination or non-terminating behaviour \cite{miller1990empirical}. In subsequent work, they extended fuzz testing to generate sequences of keyboard and mouse events, and found errors in applications running in X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Today, fuzz testing is used routinely in industry. It is frequently used as a tool for finding security vulnerabilities and is applied to test formats and protocols that attackers might use to gain unauthorized access to computers over a network. Other work that applies random test generation to operating systems code includes Kropp’s use of random test generation to test low-level system calls \cite{kropp1998automated}, and Groce et al.’s use of random test generation at NASA to test a file system used in space missions \cite{groce2007randomized}. In all these studies, a random test generator invariable found many errors in the software under test, and many errors were critical in nature. For example, Groce et al. found dozens of errors in the file system under test, many of which could have jeopardized the success of a mission.
 
 Random testing is a dynamic black-box testing technique in which the software is tested with non-correlating or unpredictable test data from the specified input domain~\cite{Chan2002}. The input domain is a set of all possible inputs to the software under test. According to Richard~\cite{hamlet1994}, in random testing, input domain is first identified, then test points are randomly taken from the whole input domain by means of random number generator. The program under test is executed on these points and the results obtained are compared with the program specifications. The test fails if the results are not according to the specifications and vice versa. Failure of any test results reflects error in the SUT.
 
@@ -16,13 +17,10 @@ Random testing is a dynamic black-box testing technique in which the software is
 	\caption{Random Testing}
 \end{figure}
 
-Generating test data by random generator is quite economical and requires less intellectual and computational efforts~\cite{Ciupa2008a}. Moreover, no human intervention is involved in data generation that ensures an unbiased testing process.
+Generating test data by random generator is quite economical and requires less intellectual and computational efforts~\cite{Ciupa2008a}. Moreover, no human intervention is involved in data generation that ensures an unbiased testing process. However, generating test cases with out using any background information makes random testing susceptible to criticism. It is criticized for generating many test cases ending up at the same state of software. It is further stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{Myers1979}.
 
-However, generating test cases with out using any background information makes random testing susceptible to criticism. It is criticized for generating many test cases ending up at the same state of software. It is further stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{Myers1979}.
+It is stated by Ciupa et al. \cite{Ciupa2007}, that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers~\cite{hamlet1994, Ciupa2008, leitner2007efficient, Duran1981} confirmed that random testing is as effective as any other testing technique. It was found experimentally~\cite{Duran1981} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It was pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective~\cite{hamlet1990}. A comparative study conducted by Ntafos~\cite{ntafos1998random} concluded that random testing is more effective as compared to proportional partition testing. A prominent work to mention is that of Miller et al.~\cite{miller1990empirical}, who generated and used random ASCII character streams to test Unix utilities for abnormal termination or non-terminating behaviour. Subsequently the same technique was extended to discover errors in softwares running on X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Other famous studies using random testing includes low-level system calls \cite{kropp1998automated}, and file systems used in missions at NASA \cite{groce2007randomized}.
 
-It is stated by Ciupa et al. \cite{Ciupa2007}, that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers~\cite{hamlet1994, Ciupa2008, leitner2007efficient, Duran1981} confirmed that random testing is as effective as any other testing technique. It was found experimentally~\cite{Duran1981} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It was pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective~\cite{hamlet1990}. A comparative study conducted by Ntafos~\cite{ntafos1998random} concluded that random testing is more effective as compared to proportional partition testing.
-
-\textcolor{blue}{One of the best-known works in the field is Miller et al.’s “fuzz testing” paper, where they generate random ASCII character streams and use them as input to test Unix utilities for abnormal termination or non-terminating behaviour \cite{miller1990empirical}. In subsequent work, they extended fuzz testing to generate sequences of keyboard and mouse events, and found errors in applications running in X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Today, fuzz testing is used routinely in industry. It is frequently used as a tool for finding security vulnerabilities and is applied to test formats and protocols that attackers might use to gain unauthorized access to computers over a network. Other work that applies random test generation to operating systems code includes Kropp’s use of random test generation to test low-level system calls \cite{kropp1998automated}, and Groce et al.’s use of random test generation at NASA to test a file system used in space missions \cite{groce2007randomized}. In all these studies, a random test generator invariable found many errors in the software under test, and many errors were critical in nature. For example, Groce et al. found dozens of errors in the file system under test, many of which could have jeopardized the success of a mission.}
 
 \section{Various versions of random testing}
 Researchers have tried various approaches to bring about improvement in the performance of random testing. The prominent modifications in random strategy are stated below:
@@ -263,21 +261,21 @@ The key benefit of Korat and TestEra, representation level approaches, is that n
 \newpage
 
 \section{YETI Overview}
-YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but type-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI) for user friendliness along with the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. The following sections briefly describe internal working and execution of YETI tool. 
+YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is its Graphical User Interface (GUI) for user friendliness and provide the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. The figure \ref{fig:yetiOverview} briefly describes working process of YETI tool. 
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14.5cm, height=3.5cm]{chapter3/yetiOverview.png}
-	\caption{YETI test cycle}
+	\caption{YETI test working process}
 	\label{fig:yetiOverview}
 \end{figure}
 
 
 \subsection{YETI Design}
-YETI has been designed with an emphasis on extensibility to facilitate future growth. YETI enforces strong decoupling between testing strategies and the actual language constructs. Therefore, adding a new binding, need no modification what so ever to any existing test strategies. On the basis of functionality YETI is divided into three main sections: the core infrastructure, the strategy and the language-specific bindings. Each of the section is defined below. 
+YETI has been designed with the provision of extensibility to facilitate future growth. YETI enforces strong decoupling between test strategies and the actual language constructs. Therefore, adding a new binding, needs no modification of the existing test strategies. YETI is divided into three main sections on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each section is briefly described below. 
 
 \subsubsection{YETI Core Infrastructure}
-The YETI core infrastructure is responsible for test data generation, test process management and generation of test report. It is further split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The $yeti$ package uses classes from $yeti.monitoring$ and $yeti.strategies$ packages and calls classes in the $yeti.environment$ package as shown in the figure \ref{fig:yetiCore}. 
+The core infrastructure is responsible for test data generation, test process management and generation of test report. It is further split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The yeti package uses classes from yeti.monitoring and yeti.strategies and calls classes in the yeti.environment as shown in the figure \ref{fig:yetiCore}. 
 
 \begin{figure}[h]
 	\centering
@@ -288,37 +286,37 @@ The YETI core infrastructure is responsible for test data generation, test proce
 
 The most essential classes included in the YETI core infrastructure are:
 \begin{enumerate}
-\item {\textbf{Yeti:}} class is the entry point to the system and contains the main method. It is responsible for launching YETI. It parses the arguments, setups the environment, initializes the testing and delivers the reports of the test results.
-\item {\textbf{YetiLog:}} It is the class that facilitate printing debug and testing logs of the current test session. 
-\item {\textbf{YetiLogProcessor:}} It is an interface for processing test logs.
-\item {\textbf{YetiEngine:}} class binds YetiStrategy and YetiTestManager together (Figure 10). YetiEngine, YetiStrategy and YetiTestManager are responsible for the actual testing process. YetiTestManager makes the actual calls based on the YetiEngine’s configuration and delegates to the YetiStrategey to generate the test data and select the routines (constructors and methods) to test.
-\item {\textbf{YetiTestManager:}} class carries out testing using test data provided by YetiStrategy.
-\item {\textbf{YetiProgrammingLanguageProperties:}} It is a place holder for all language related instances during test.
-\item {\textbf{YetiInitializer:}} It is an abstract class for test initialization.
+\item {\textbf{Yeti class:}} It is the entry point to the system and contains the main method. It is responsible for launching YETI. It parses the arguments, sets up the environment, initializes the testing and delivers the reports of the test results.
+\item {\textbf{YetiLog class:}} It facilitates printing debug and testing logs of the test session. 
+\item {\textbf{YetiLogProcessor class:}} It is an interface for processing test logs.
+\item {\textbf{YetiEngine class:}} It binds YetiStrategy and YetiTestManager together. YetiEngine, YetiStrategy and YetiTestManager are responsible for the actual testing process. YetiTestManager makes the actual calls based on the YetiEngine’s configuration and delegates to the YetiStrategey to generate the test data and select the routines (constructors and methods) to test.
+\item {\textbf{YetiTestManager class:}} It carries out testing using test data provided by YetiStrategy.
+\item {\textbf{YetiProgrammingLanguageProperties class:}} It is a place holder for all language related instances during test.
+\item {\textbf{YetiInitializer class:}} It is an abstract class for test initialization.
 \end{enumerate}
 
 \subsubsection{YETI Strategy}
-Strategy section contains seven different strategies and inputs to the tested methods is defined by one of the selected strategy. The strategies sub package of Yeti package consist of the following classes.
+Strategy section contains seven different strategies. Each strategy defines a specific way to generate test inputs. The essential classes in this section are as follows.
 \begin{enumerate}
-\item {\textbf{YETI Strategy:}} It is an abstract class which provides an interface for the strategies in YETI.
-\item {\textbf{YETI Random Strategy:}} In this mode of testing codes the testing tool incurs random values for testing, where two probabilities can be used by the user namely null value probabilities and the percentage of the new objects that were created during the process in order to use when a testing is performed by any user.
-\item {\textbf{YETI Random Plus Strategy:}} Involves the usage of “Interesting” values that are in random ranging from -10 to +10 in case of java binding and it could be controlled by the user where random plus is considered to be the extension of Pure random testing and it is considered to be the most significant strategy to identify errors.
-\item {\textbf{DSSR Strategy:}} It is a class which implements the Dirt Spot Sweeping Random strategy. It is an extended class of YetiRandomPlusStrategy.
-\item {\textbf{ADFD Strategy:}} It is a class which implements the Automated Discovery of Failure Domain strategy. It is also an extended class of YetiRandomPlusStrategy.
-\item {\textbf{Random Decreasing Strategy:}} It is an extended random plus in which the probability values start from 100\% and keeps decreasing till it reaches 0\% when it reaches the end of testing process.
-\item {\textbf{Random Periodic Strategy:}} It is a testing mode in which both the probabilities decrease and increase randomly while the testing is carried out.
+\item {\textbf{YeitStrategy class:}} It is an abstract class which provides an interface for the strategies in YETI.
+\item {\textbf{YetiRandomStrategy class:}} It defines the random testing strategy. In this mode of testing codes the testing tool incurs random values for testing, where two probabilities can be used by the user namely null value probabilities and the percentage of the new objects that were created during the process in order to use when a testing is performed by any user.
+\item {\textbf{YetiRandomPlusStrategy class:}} Involves the usage of “Interesting” values that are in random ranging from -10 to +10 in case of java binding and it could be controlled by the user where random plus is considered to be the extension of Pure random testing and it is considered to be the most significant strategy to identify errors.
+\item {\textbf{DSSRStrategy class:}} It is an extended class of YetiRandomPlusStrategy which implements the Dirt Spot Sweeping Random strategy. This strategy is described in detail in chapter 4.
+\item {\textbf{ADFDStrategy class:}} It is an extended class of YetiRandomPlusStrategy which implements the Automated Discovery of Failure Domain strategy.  This strategy is described in detail in chapter 5.
+\item {\textbf{YetiRandomDecreasingStrategy class:}} It is an extended random plus strategy in which the probability values start from 100\% and decreases to 0\% level at end of testing process.
+\item {\textbf{YetiRandomPeriodicStrategy class:}} It is an extended randomplusStrategy in which the probability decreases and increases randomly during the test session.
 \end{enumerate}
 
-\subsubsection{Language-specific Bindings}
-The language-specific binding includes classes that are responsible for modelling a programming language.They are language independent and can be extended to add support for a new language.
+\subsubsection{Language-specific Binding}
+The language-specific binding provides support for modelling a programming language. They are language independent and need to be extended for supporting a new language.
 \begin{enumerate}
-\item {\textbf{YetiVariable:}} represents a regular variable in YETI and it is a subclass of YetiCard.
-\item {\textbf{YetiType:}} represents a type of data (Integer, String, Boolean etc).
-\item {\textbf{YetiRoutine:}}represents a super type for routines, which can be functions, methods or constructors. A routine has a name, a return type and a list of its arguments types.
-\item {\textbf{YetiModule:}} represents a module under test. It stores a list of the module’s routines to test. 
-\item {\textbf{YetiName:}} represents a unique name assigned to each YetiRoutine instance in YETI.
-\item {\textbf{YetiCard:}} represents a card, which is a YETI specific concept that can map either onto a wildcard (a late bound value) or to a YetiVariable. A card has a type and an identifier.
-\item {\textbf{YetiIdentifier:}}represents an identifier for a YetiCard instance.
+\item {\textbf{YetiVariable class:}} It is a sub class of YetiCard representing a variable in YETI.
+\item {\textbf{YetiType class:}} It denotes type of data including Integer, String, Boolean etc.
+\item {\textbf{YetiRoutine class:}} It is a super type of routines which represents functions, methods and constructors. A routine is given a name, a return type and a list of its arguments types.
+\item {\textbf{YetiModule class:}} It represents a module under test. It stores a list of the module’s routines to test. 
+\item {\textbf{YetiName class:}} It represents a unique name which is assigned to each instance of YetiRoutine.
+\item {\textbf{YetiCard class:}} It is a YETI specific term which map to a wildcard or to a YetiVariable. It has a specific type and an identifier name.
+\item {\textbf{YetiIdentifier class:}} It represents an identifier for an instance of a YetiCard.
 \end{enumerate}
 % if java binding example is required or instead of adding new steps if you want to show only java binding then for material check the msc thesis page 40 of test c code with Yeti.
 
