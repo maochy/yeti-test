@@ -1,23 +1,28 @@
 \chapter{Introduction}
 %This chapter includes motivation for the research study followed by the problems in random testing, the alternative approaches to overcome these problems, the research objectives and contributions of the study. At the end of the chapter, the structure of the remaining thesis is given.
-%\section{Motivation}
+%\section{Motivation} %In recent years there has been a particular increase in performing automated random testing and, specifically, the techniques for automatic generation of fault targeting test data. 
+Computer processors perform a particular task under the directions of some machine readable instructions (programs) that are developed by human specialists in the field of programming. The set of all such machine readable instructions of a system is called software. This includes human-understandable instructions (source code) as well as machine-understandable instructions (binary code). Softwares are often written in high level languages that are closed to natural language and are generally portable to multiple architectures. These languages require compiler or interpreter to transform them into an architecture specific, machine language before execution. 
 
-%In recent years there has been a particular increase in performing automated random testing and, specifically, the techniques for automatic generation of fault targeting test data. 
-
-Software is a very important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The ever increasing dependency of software expect us to believe that the software in use is reliable, robust, safe and secure. Unfortunately, the performance of software in general is not what is expected. According to the National Institute of Standards and Technology (NIST), US companies alone bear \$60 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{Standards2002}. Humans are prone to errors and programmers are no exceptions. Maurice Wilkes~\cite{Maurice1985}, a British computer pioneer, stated that:
+Software is an important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialised fields including education, business, finance, health, science and technology etc. The ever increasing dependency on softwares expect us to believe that softwares are reliable, robust, safe and secure. However, like every other man-made items softwares are also prone to errors. Maurice Wilkes~\cite{Maurice1985}, a British computer pioneer, stated that:
 \begin{quote}
 ``As soon as we started programming, we found to our surprise that it was not as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
 \end{quote}
+The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. According to the National Institute of Standards and Technology (NIST), US companies alone bear \$59.5 billion loss every year due to software failures~\cite{Standards2002}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software before its practical application. The process of evaluating the correctness and quality of the software or its component is called software testing. 
 
-The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. Software testing is by far the most recognized and widely used technique to verify the correctness and ensure quality of the software ~\cite{Standards2002, Myers2011, patton2001software, young2008software}.  According to Myers et al. some software companies spend up to 50\% cost of the total cost of software development and maintenance on testing~\cite{Myers2011}. 
+%Software is a very important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The ever increasing dependency of software expect us to believe that the software in use is reliable, robust, safe and secure. Unfortunately, the performance of software in general is not what is expected. According to the National Institute of Standards and Technology (NIST), US companies alone bear \$60 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{Standards2002}. Humans are prone to errors and programmers are no exceptions. Maurice Wilkes~\cite{Maurice1985}, a British computer pioneer, stated that:
+%\begin{quote}
+%``As soon as we started programming, we found to our surprise that it was not as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
+%\end{quote}
 
-{\textbf {Software testing}} in the IEEE standard glossary of software engineering terminology~\cite{american1984}, is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. It is important to note that, “program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
+%The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. Software testing is by far the most recognized and widely used technique to verify the correctness and ensure quality of the software ~\cite{Standards2002, Myers2011, patton2001software, young2008software}.  According to Myers et al. some software companies spend up to 50\% cost of the total cost of software development and maintenance on testing~\cite{Myers2011}. 
 
-{\textbf {Random testing}} is a process (Figure~\ref{fig:SoftwareTesting1}) in which generation of test data is random but according to requirements, specifications or any other test adequacy criteria. The given SUT is executed against the test data and results obtained are evaluated to determine whether the output produced satisfies the expected results. For more details read Chapter~\ref{chap:randomTesting}
+{\textbf {Software testing}} in the IEEE standard glossary of software engineering terminology~\cite{american1984}, is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results''. It is important to note that, program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a Software Under Test (SUT) that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
+
+{\textbf {Random testing}} is a process in which generation of test data is random but according to requirements, specifications or any other test adequacy criteria. The given SUT is executed against the test data and results obtained are evaluated to determine whether the output produced satisfies the expected results. The three main phases of random testing i.e. test data generation, execution and evaluation are shown in figure~\ref{fig:SoftwareTesting1}. For more details on random testing read chapter~\ref{chap:randomTesting}.
 \\
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=14cm, height=6cm ]{chapter1/SoftwareTesting1.png}
+		\includegraphics[width=14cm, height=6.3cm ]{chapter1/SoftwareTesting1.png}
 		\caption{Three main phases of random testing}
 	\label{fig:SoftwareTesting1}
 \end{figure}
@@ -27,9 +32,9 @@ This dissertation is a humble contribution to the literature on the subject, wit
 \section{The Problems}
 Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of the input domain, limited resources and strict time constraints. This lead to the problem of selecting a test data set, from a large/infinite domain. Test data set, as a subset of the whole domain, is carefully selected for testing the given software. Adequate test data set is a crucial factor in any testing technique because it represents the whole domain for evaluating the structural and/or functional properties~\cite{howden1986, mccabe1983}. Miller and Maloney were the first who comprehensively described a systematic approach of test data set selection known as path coverage. They proposed that testers select the test data so that all paths of the SUT are executed at least once~\cite{Miller1963}. The implementation of the strategy resulted in higher standards of test quality and a large number of test strategies were developed afterwords including boundary value analysis and equivalence class.
 
-Test data set can be generated manually and automatically. However, generating test data set manually is a time-consuming and laborious exercise~\cite{korel1990}; Therefore, automated test data set generation is always preferred. Data generators can be of different types i.e. Path-wise, Goal-Oriented, Intelligent or Random~\cite{wiki2013}. Random generator produces test data set randomly from the whole domain. Unlike other approaches random technique is simple, widely applicable, easy to implement, faster in computation, free from bias and costs minimum overhead~\cite{Ciupa2007}. According to Godefroid et al., ``Random testing is a simple and well-known technique which can be remarkably effective in discovering software bugs"~\cite{Godefroid2005}.
+Test data set can be generated manually and automatically. However, generating test data set manually is a time-consuming and laborious exercise~\cite{korel1990}; therefore, automated test data set generation is always preferred. Data generators can be of different types i.e. Path-wise, Goal-Oriented, Intelligent or Random~\cite{wiki2013}. Random generator produces test data set randomly from the whole domain. Unlike other approaches random technique is simple, widely applicable, easy to implement, faster in computation, free from bias and costs minimum overhead~\cite{Ciupa2007}. According to Godefroid et al. ``Random testing is a simple and well-known technique which can be remarkably effective in discovering software bugs"~\cite{Godefroid2005}.
 
-Despite the benefits of random testing, its simplistic and non-systematic nature exposes it to high criticism~\cite{white1987}. Myers et al.mentioned it as, ``Probably the poorest methodology of all is random-input testing..."~\cite{Myers2011}. However, Ciupa et al. reported that the above stated statement is based on intuition and lacks any experimental evidence~\cite{Ciupa2008a}. The criticism motivated the researchers to look into various aspects of random testing for evaluation and possible improvement. Adaptive random testing (ART)~\cite{Chen2008}, Restricted Random Testing (RRT)~\cite{Chan2002}, Feedback Directed Random Testing (FDRT)~\cite{Pacheco2007}, Mirror Adaptive Random Testing (MART)~\cite{Chen2003} and Quasi Random Testing (QRT)~\cite{Chen2005} are a few of the enhanced random testing techniques reported in the literature.
+Despite the benefits of random testing, its simplistic and non-systematic nature exposes it to high criticism~\cite{white1987}. Myers et al. mentioned it as, ``Probably the poorest methodology of all is random-input testing..."~\cite{Myers2011}. However, Ciupa et al. reported that the above stated statement is based on intuition and lacks any experimental evidence~\cite{Ciupa2008a}. The criticism motivated the researchers to look into various aspects of random testing for evaluation and possible improvement. Adaptive random testing (ART)~\cite{Chen2008}, Restricted Random Testing (RRT)~\cite{Chan2002}, Feedback Directed Random Testing (FDRT)~\cite{Pacheco2007}, Mirror Adaptive Random Testing (MART)~\cite{Chen2003} and Quasi Random Testing (QRT)~\cite{Chen2005} are a few of the enhanced random testing techniques reported in the literature.
 
 Random testing is also considered weak in providing high code coverage~\cite{cohen1997, Offutt1996}. For example, in random testing when the conditional statement  ``{\it if (x == 25) then ... }"  is exposed to execution then there is only one chance, of the ``{\it then...}" part of the statement, to be executed out of $2^\text{32}$ available options. If {\it x} is an integer variable of 32 bit value~\cite{Godefroid2005}. 
 
@@ -61,7 +66,7 @@ The fault-finding ability of the random testing technique decreases when the fai
 The existing random strategies of software testing discover the faults in the SUT but lack the capability of locating the fault domains. In the current research study, a fully automated testing strategy named, ``Automated Discovery of Failure Domain (ADFD)" was developed with the ability to find the faults as well as the fault domains in a given SUT and provides visualization of the identified pass and fail domains in the form of a chart. The strategy is described, implemented in YETI, and practically illustrated by executing several programs of one and two dimensions in the Chapter~\ref{chap:ADFD}. The experimental results proved that ADFD strategy automatically performed identification of faults and fault domains along with graphical representation in the form of chart.
 
 \subsection{Invariant Guided Random+ Strategy}
-Another random test strategy named, ``Invariant guided Random+ Strategy (IGRS)" was developed in the current research study. IGRS is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon--- an automated invariant detector for reporting likely invariants and adding them to the SUT as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:IGRS} indicated improved features of IGR+S in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies were either unable to accomplish or required larger duration.  
+Another random test strategy named, ``Invariant guided Random+ Strategy'' (IGRS) was developed in the current research study. IGRS is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon--- an automated invariant detector for reporting likely invariants, filtered using DynComp and annotated them in to the source code as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:IGRS} indicated improved features of IGRS in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies were either unable to accomplish or required larger duration.  
 
 %\section{Structure of the Thesis}
 %
@@ -75,46 +80,45 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:softwareTesting}} provides an overview of the software testing process its common techniques along with their purpose.\\
+\textbf{Chapter~\ref{chap:softwareTesting}} presents an overall view of software testing. Software testing is introduced with particular reference to its purpose, importance and mechanism. Various types of software testing followed by major stages of testing, including data generation, execution, oracle and report production are discussed. \\
 
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:randomTesting}} is a thorough review of the relevant literature, describing random testing, various versions of random testing and the most commonly used automated testing tools based on random algorithms.\\
+\textbf{Chapter~\ref{chap:randomTesting}} is the follow up of Chapter~\ref{chap:softwareTesting} with particular focus on literature relevant to random testing. It includes various versions of random testing and the most commonly used automated testing tools based on random algorithms. The York Extensible Testing Infrastructure (YETI), used as a tool in our experiments has been duly focused.\\
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:DSSR}} describes newly proposed more efficient random testing technique known as Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. The experimental study confirms that DSSR strategy is significantly better than R and R+ strategies. Finally the benefits and drawbacks of the DSSR strategy are discussed.\\
+\textbf{Chapter~\ref{chap:DSSR}} describes newly proposed more efficient Dirt Spot Sweeping Random (DSSR) strategy. \\
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:ADFD}} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. It is shown that the presence of fault domains across the input domain, which have not been so far identified, can in fact be identified and graphically represented using 
-ADFD strategy.\\
+\textbf{Chapter~\ref{chap:ADFD}} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy. \\
 
  
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:IGRS}} presents the newly developed Invariant Guided Random+ Strategy (IGRS) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. It uses Daikon, a tool to generate likely invariants, to identify and incorporate invariants in the SUT code which serves as contracts to filter any vague test cases. \\
+\textbf{Chapter~\ref{chap:IGRS}} presents the newly developed Invariant Guided Random+ Strategy (IGRS) developed with the focus on quick identification of faults. \\
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:conclusion}} is the concluding chapter, summarising the achievements of this research and discussing the future work.\\
+\textbf{Chapter~\ref{chap:conclusion}} gives an overall conclusion of the thesis and proposes several ways of future research. \\
 
  \hangindent=\parindent
  \hangafter=1
  \noindent
- \textbf{Appendix~\ref{chap:appendix1}} XXXXXXXX.\\
+ \textbf{Appendix~\ref{chap:appendix1}} Example output of YETI in CLI mode\\
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=15cm, height=16cm ]{chapter1/thesisOutline.png}
 		\caption{Structure of thesis outline}
-	\label{fig:SoftwareTesting1}
+	\label{fig:thesisOutline}
 \end{figure}
 
 
