@@ -9,7 +9,7 @@ The very famous quote of Paul, ``To err is human, but to really foul things up y
 	\label{fig:softwareTesting}
 \end{figure}
 
-In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. A successful test is one that finds a fault~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
+In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. The process of software testing in simplest form is shown in Figure~\ref{fig:softwareTesting}. A successful test is the one that fails a software or identify a fault in the sonftware~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
 
 The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product. 
 
@@ -52,16 +52,16 @@ Test plan is a document which defines the goal, scope, method, resources and tim
 Input domain comprises of all possible inputs to a software, including all the global variables, method arguments and the externally assigned variables, like keyboard inputs etc. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on. The domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
 
 \subsection{Test Case}
-\begin{wrapfigure}{r}{0.35\textwidth}
-  \vspace{-20pt}
-  \begin{center}
-    \includegraphics[width=0.30\textwidth]{chapter2/testCase.png}
-  \end{center}
-  \vspace{-20pt}
-  \caption{Test case}
-  \label{fig:testCase}
-  \vspace{-10pt}
-\end{wrapfigure}
+%\begin{wrapfigure}{r}{0.35\textwidth}
+%  \vspace{-20pt}
+%  \begin{center}
+%    \includegraphics[width=0.30\textwidth]{chapter2/testCase.png}
+%  \end{center}
+%  \vspace{-20pt}
+%  \caption{Test case}
+%  \label{fig:testCase}
+%  \vspace{-10pt}
+%\end{wrapfigure}
 A test case is an artifact which delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. After executing the test case, if the output obtained comply with the expected output, the test case is pass and the functionality is working correctly, otherwise the test case is fail, which represents identification of fault. Generally, a series of test cases, also known as test suite, are required to be executed for establishing the desired level of quality.
 
 \section{Software Testing Levels}
@@ -76,19 +76,18 @@ The primary purpose of software testing is identification of faults in the given
 Software testing can be divided into white-box and black-box testing on the basis of perspective taken. 
 
 \subsection{White-box testing}
-\begin{wrapfigure}{r}{0.35\textwidth}
+\begin{wrapfigure}{r}{0.36\textwidth}
   \vspace{-35pt}
   \begin{center}
     \includegraphics[width=0.30\textwidth]{chapter2/whiteBox.png}
   \end{center}
   \vspace{-20pt}
   \bigskip
-  \caption{Black-box testing}
+  \caption{White-box testing}
   \label{fig:blackBox}
   \vspace{-18pt}
 \end{wrapfigure}
-In white-box or structural testing, the testers must know about the complete structure of the software and can make necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the proper code is followed during test execution~\cite{ostrand2002white}. \\* 
-Some commonly used white-box testing techniques are stated below:
+In white-box or structural testing, the testers must know about the complete structure of the software and can make necessary modification, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the proper code is followed during test execution~\cite{ostrand2002white}. Some commonly used white-box testing techniques are stated below:
 
 \subsubsection{Data Flow Analysis}
 Data Flow Analysis (DFA) is a testing technique that focuses on the input values by observing the behaviour of respective variables during the execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphical representation of all possible states of a program, of a SUT is drawn to determine the paths that are traversed by the program during its execution. Test cases are generated and executed to verify its conformance with CFG. 
@@ -113,8 +112,7 @@ It is a testing technique in which additional instructions are added to the code
   \label{fig:blackBox}
   \vspace{-18pt}
 \end{wrapfigure}
-In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the software specifications and test passes if the result is according to expected output~\cite{beizer1995black}. \\*
-Some commonly used black-box testing techniques are stated below:
+In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the software specifications and test passes if the result is according to expected output~\cite{beizer1995black}. Some commonly used black-box testing techniques are stated below:
 
 \subsubsection{Use-case based testing}
 It is a verification and validation technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use case format includes brief description and flow of events, preconditions, postconditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  

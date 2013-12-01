@@ -41,7 +41,7 @@ Adaptive random testing (ART), proposed by Chen et al.~\cite{Chen2008} is based 
 	\label{fig:patterns2}
 \end{figure}
 
-In figure~\ref{fig:patterns2} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box indicates the point, block and strip fault patterns.
+In Figure~\ref{fig:patterns2} the square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip inside the respective box indicates the point, block and strip fault patterns.
 
 Chen et al. ~\cite{Chen2008} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more faults targeted test inputs, they proposed Adaptive Random Testing (ART) as a modified version of ordinary random testing where test values are selected at random as usual but are evenly spread across the input domain by using two sets. The executed set comprises the test cases executed by the system and the candidate set includes the test cases to be executed by the system. Initially both the sets are empty. The first test case is selected at random from the candidate set and stored in executed set after execution. The second test case is then selected from the candidate set which is far away from the last executed test case. In this way the whole input domain is tested with greater chances of generating test input from the existing fault patterns.
 
@@ -59,7 +59,7 @@ Mirror Adaptive Random Testing (MART)~\cite{Chen2003} is an improvement on ART b
 \end{center}  
 \end{figure}
 
-In this technique, the input domain of the program under test is divided into n disjoint sub-domains of equal size and shape. One of the sub-domains is called source sub-domain while all the others are termed as mirror sub-domains. ART is then applied only to the source sub-domain to select the test cases while from all other sub-domains test cases are selected by using mirror function. In MART {(0, 0), (u, v)} are used to represent the whole input domain where (0, 0) is the leftmost and (u, v) is the rightmost top corner of the two dimensional rectangle. On splitting it into two sub-domains we get {(0, 0), (u/2, v)} as source sub-domain and {(u/2, 0), (u, v)} as mirror sub-domain. Let suppose we get x and y test cases by applying ART to source sub-domain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the figure~\ref{fig:mirrorART}. Comparative study of MART with ART provide evidence of equally good results of the two strategies with MART having the added advantage of using only one quarter of the calculation as compared with ART and thereby reduces the overhead.
+In this technique, the input domain of the program under test is divided into n disjoint sub-domains of equal size and shape. One of the sub-domains is called source sub-domain while all the others are termed as mirror sub-domains. ART is then applied only to the source sub-domain to select the test cases while from all other sub-domains test cases are selected by using mirror function. In MART {(0, 0), (u, v)} are used to represent the whole input domain where (0, 0) is the leftmost and (u, v) is the rightmost top corner of the two dimensional rectangle. On splitting it into two sub-domains we get {(0, 0), (u/2, v)} as source sub-domain and {(u/2, 0), (u, v)} as mirror sub-domain. Let suppose we get x and y test cases by applying ART to source sub-domain, now we can linearly translate these test cases to achieve the mirrored effect, i.e. (x + (u/2), y) as shown in the Figure~\ref{fig:mirrorART}. Comparative study of MART with ART provide evidence of equally good results of the two strategies with MART having the added advantage of using only one quarter of the calculation as compared with ART and thereby reduces the overhead.
 
 
 \subsection{Restricted Random Testing}
@@ -261,7 +261,7 @@ The key benefit of Korat and TestEra, representation level approaches, is that n
 \newpage
 
 \section{YETI Overview}
-YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is its Graphical User Interface (GUI) for user friendliness and provide the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. The figure \ref{fig:yetiOverview} briefly describes working process of YETI tool. 
+YETI stands for York Extensible Testing Infrastructure. It is an automated random testing tool developed in Java that is capable of testing programs written in Java, JML and .NET languages~\cite{Oriol2010c}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is its Graphical User Interface (GUI) for user friendliness and provide the option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{Oriol2010}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. The Figure \ref{fig:yetiOverview} briefly describes working process of YETI tool. 
 
 \begin{figure}[h]
 	\centering
@@ -275,7 +275,7 @@ YETI stands for York Extensible Testing Infrastructure. It is an automated rando
 YETI has been designed with the provision of extensibility to facilitate future growth. YETI enforces strong decoupling between test strategies and the actual language constructs. Therefore, adding a new binding, needs no modification of the existing test strategies. YETI is divided into three main sections on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each section is briefly described below. 
 
 \subsubsection{Core Infrastructure}
-The core infrastructure is responsible for test data generation, test process management and generation of test report. It is further split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The yeti package uses classes from yeti.monitoring and yeti.strategies and calls classes in the yeti.environment as shown in the figure \ref{fig:yetiCore}. 
+The core infrastructure is responsible for test data generation, test process management and generation of test report. It is further split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The yeti package uses classes from yeti.monitoring and yeti.strategies and calls classes in the yeti.environment as shown in the Figure \ref{fig:yetiCore}. 
 
 \begin{figure}[h]
 	\centering
@@ -362,7 +362,7 @@ Options									&Purpose 			\\ \hline
 
 
 \subsection{YETI Execution}
-YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in figure~\ref{fig:yeticommand}.
+YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in Figure~\ref{fig:yeticommand}.
 
 \begin{figure}[h!]
 	\centering
@@ -406,7 +406,7 @@ YETI separates the bugs from successful executions to simplify the test report. 
 \end{figure}
 
 \subsection{YETI Graphical User Interface}
-YETI supports a GUI that not only allows test engineers to monitor the current test session but also to modify its characteristics in real time during test execution. It is useful to have the facility of modifying or aborting the test parameters at run time and observing the test behaviour in response. The figure \ref{fig:yetiGUI} present the YETI GUI comprising of six numbered windows (the windows are labelled for illustration purposes only).
+YETI supports a GUI that not only allows test engineers to monitor the current test session but also to modify its characteristics in real time during test execution. It is useful to have the facility of modifying or aborting the test parameters at run time and observing the test behaviour in response. The Figure \ref{fig:yetiGUI} present the YETI GUI comprising of six numbered windows (the windows are labelled for illustration purposes only).
 
 \begin{figure}[h]
 	\centering
