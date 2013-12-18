@@ -80,6 +80,7 @@ import yeti.stats.YetiDataSet;
 import yeti.stats.YetiMichaelisMentenEquation;
 import yeti.strategies.YetiDSSRStrategy;
 import yeti.strategies.YetiADFDStrategy;
+import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiRandomPlusDecreasing;
 import yeti.strategies.YetiRandomPlusPeriodicProbabilitiesStrategy;
 import yeti.strategies.YetiRandomPlusStrategy;
@@ -307,6 +308,7 @@ public class Yeti {
 		boolean isRandomPlusDecreasing = false;
 		boolean isDSSR = false;
 		boolean isADFD = false;
+		boolean isADFDPlus = false;
 		boolean isEvolutionary = false;
 		boolean isRunningFromChromosome = false;
 		String chromosomePath = null;
@@ -537,9 +539,17 @@ public class Yeti {
 				continue;
 			}
 
-			// we can use the Dirt Spot Sweeping strategy
+			// we can use the ADFD strategy
 			if (s0.equals("-ADFD")) {
 				isADFD = true;
+				continue;
+			}
+			
+			
+
+			// we can use the ADFD Plus
+			if (s0.equals("-ADFDPlus")) {
+				isADFDPlus = true;
 				continue;
 			}
 
@@ -829,6 +839,9 @@ public class Yeti {
 		}
 		if (isADFD) {
 			strategy = new YetiADFDStrategy(testManager);
+		}
+		if (isADFDPlus) {
+			strategy = new YetiADFDPlusStrategy(testManager);
 		}
 
 		if (isRunningFromChromosome) { // @YetiGeneticAlgorithmsStrategy
