@@ -444,7 +444,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	@Override
 	public String getName() {
-		return "Automated Discovery of Failure Domain";
+		return "ADFD strategy";
 	}
 
 }

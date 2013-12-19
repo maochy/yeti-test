@@ -32,6 +32,7 @@ import yeti.LogGrapher1;
 import yeti.LogGrapher2;
 import yeti.LogGrapher3;
 import yeti.strategies.YetiADFDStrategy;
+import yeti.strategies.YetiADFDPlusStrategy;
 
 import java.awt.*;
 import javax.swing.*;

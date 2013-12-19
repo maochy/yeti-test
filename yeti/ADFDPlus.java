@@ -32,6 +32,7 @@ import yeti.LogGrapher1;
 import yeti.LogGrapher2;
 import yeti.LogGrapher3;
 import yeti.strategies.YetiADFDStrategy;
+import yeti.strategies.YetiADFDPlusStrategy;
 
 import java.awt.*;
 import javax.swing.*;
@@ -99,7 +100,7 @@ public class ADFDPlus extends JFrame{
 	String 		testFilePathFinal 	 = "-yetiPath=.";
 	String 		fileName			 = "-testModules=yeti.test.YetiTest"; 
 	String 		language 			 = "-java";
-	String 		strategy 			 = "-ADFD";
+	String 		strategy 			 = "-ADFDPlus";
 	String 		gui 				 = "-gui";
 	String 		logs 				 = "-nologs";
 	String 		time 				 = "-time=5s";
@@ -110,7 +111,7 @@ public class ADFDPlus extends JFrame{
 
 
 	String[] languages = {"Java", ".Net", "JML", "Pharo", "CoFoJa", "Kermeta" };
-	String[] strategies = {"ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 	String[] time1 = {"2", "5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 	String[] time2 = {"Seconds", "Minutes" };
 	String[] command;
@@ -270,10 +271,13 @@ public class ADFDPlus extends JFrame{
 				} else if (strategy_ComboBox.getSelectedItem().equals("Evolutionary")){
 					strategy = "-evolutionary";
 					hideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("ADFD")){
+					strategy = "-ADFD";
+					hideItems();
 				}
 				else
 				{
-					strategy = "-ADFD";
+					strategy = "-ADFDPlus";
 					unhideItems();
 				}
 
@@ -662,8 +666,8 @@ public class ADFDPlus extends JFrame{
 		list.add(logs);
 		list.add(fileName);
 		list.add(testFilePathFinal);
-		YetiADFDStrategy.lowerLimit = minValue_TextField.getText();
-		YetiADFDStrategy.upperLimit = maxValue_TextField.getText();
+		YetiADFDPlusStrategy.lowerLimit = minValue_TextField.getText();
+		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
 
 		command = list.toArray(new String[list.size()]);
 
