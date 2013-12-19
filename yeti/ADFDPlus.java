@@ -80,7 +80,7 @@ public class ADFDPlus extends JFrame{
 	private JPanel panel2 = new JPanel();
 	static JPanel panel3 = new JPanel();
 	private JPanel panel4 = new JPanel(new BorderLayout());
-
+	private JScrollPane scrolling = new JScrollPane(panel3);
 
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
@@ -148,7 +148,8 @@ public class ADFDPlus extends JFrame{
 		panel4.add(panel1, BorderLayout.NORTH);
 		this.add(panel4, BorderLayout.WEST);
 		this.add(panel2, BorderLayout.NORTH);
-		this.add(panel3, BorderLayout.CENTER); 
+		//this.add(panel3, BorderLayout.CENTER);
+		this.add(scrolling, BorderLayout.CENTER);
 		this.setVisible(true);
 
 		//this.setAlwaysOnTop(true);
