@@ -179,7 +179,7 @@ public class ADFDPlus extends JFrame{
 
 	public static void main(String[] args){
 
-		new ADFDLauncher();
+		new ADFDPlus();
 
 
 
@@ -618,7 +618,7 @@ public class ADFDPlus extends JFrame{
 			}
 		});
 
-		JLabel heading_Label = new JLabel("Automated Discovery of Failure Domain");
+		JLabel heading_Label = new JLabel("ADFD+");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
 		panel2.add(heading_Label);
 		panel2.setBackground(Color.LIGHT_GRAY);

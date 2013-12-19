@@ -5,7 +5,7 @@ import java.util.*;
 
 import javax.swing.JOptionPane;
 
-import yeti.ADFDLauncher;
+import yeti.ADFDPlus;
 
 /*
  * This class reads the two files Pass and Fail line and by line.

@@ -76,7 +76,7 @@ public class LogGrapher1 {
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 
 		chartPanel.setPreferredSize(new Dimension(800, 600));
-		ADFDLauncher.panel3.add(chartPanel);
+		ADFDPlus.panel3.add(chartPanel);
 		//this.add(chartPanel, BorderLayout.CENTER);
 
 		//        JPanel buttonPanel = new JPanel();

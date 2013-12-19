@@ -75,8 +75,8 @@ public class LogGrapher2 {
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 
 		chartPanel.setPreferredSize(new Dimension(800, 600));
-		ADFDLauncher.panel3.add(chartPanel);
-
+	//ADFDLauncher.panel3.add(chartPanel);
+		ADFDPlus.panel3.add(chartPanel);
 	}
 
 	// This is the original one and the following same name method is the one i do mess.
