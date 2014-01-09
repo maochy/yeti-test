@@ -1,52 +1,54 @@
 \chapter{Literature Review: Software Testing}
 \label{chap:softwareTesting}
-The very famous quote of Paul, ``To err is human, but to really foul things up you need a computer, is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after its completion.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, the software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The very famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm, height=2.8cm]{chapter2/softwareTesting.png}
+	\includegraphics[width=15.5cm, height=4cm]{chapter2/softwareTesting.png}
 	\caption{The process of software testing}
 	\label{fig:softwareTesting}
 \end{figure}
 
-In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements and actual results. The process of software testing in simplest form is shown in Figure~\ref{fig:softwareTesting}. A successful test is the one that fails a software or identify a fault in the sonftware~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
+In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and actual results". The process of software testing in simplest form is shown in Figure~\ref{fig:softwareTesting}. A successful test is the one that fails a software or identify a fault in the sonftware~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product. 
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs"~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product. \\
 
 
 \begin{table}[ht]
 %\scriptsize
-\caption{Parts of Software Testing~\cite{adrion1982validation, chilenski1994applicability, gaudel2010software, richardson1992specification, tracey1998automated}} % title of Table
+\caption{Parts of Software Testing} % title of Table
 \smallskip
 \centering % used for centering table
+{\renewcommand{\arraystretch}{1.5} %<- modify value to suit your needs
 \begin{tabular}{| l | l | l | l | } % centered columns (4 columns)
 \hline
 
-Levels 					&Purpose		 		& Perspective						& Execution 	\\
+Levels 					&Purpose		 		& Perspective							& Execution 	\\
 \hline
-1. Unit					&1. Functionality			& 1. White Box						& 1. Static 	\\
-2. Integration			&2. Structural			& ~~~~~a. Data Flow Analysis			& 2. Dynamic\\
-3. System				&3. Robustness			& ~~~~~b. Control Flow Analysis		&			\\
-						&4. Stress				& ~~~~~c. Code-based fault injection testing &			\\
-						&5. Compatibility			&2. Black Box						&			\\
-						&6. Performance			& ~~~~~a. Use-case testing			&			\\
-						&						& ~~~~~b. Partition testing			&			\\
-						&						& ~~~~~c. Boundary Value testing		&			\\
-						&						& ~~~~~d. Formal Specification testing	&			\\
+Unit						& Functional			& White Box							& Static 		\\
+Integration				& Structural			& ~~~~~a. Data Flow Analysis				& Dynamic	\\
+System					& Robustness			& ~~~~~b. Control Flow Analysis			&			\\
+						& Stress				& ~~~~~c. Code-based fault injection testing 	&			\\
+						& Compatibility			& Black Box							&			\\
+						& Performance			& ~~~~~a. Use-case testing				&			\\
+						&					& ~~~~~b. Partition testing				&			\\
+						&					& ~~~~~c. Boundary Value testing			&			\\
+						&					& ~~~~~d. Formal Specification testing		&			\\
 
 
 
 \hline %inserts single line
 \end{tabular}
+}
 \bigskip
 \label{table:softwareTestingParts} % is used to refer this table in the text
 \end{table}
 
 \section{Definitions}
-Some important definitions are included in the section to facilitate understanding of the thesis.
+Some important related terms are defined in the section to facilitate the reader in understanding the thesis.
 
 \subsection{Test Plan}
-Test plan is a document which defines the goal, scope, method, resources and time schedule of the testing \cite{futrell2001quality}. In addition, it includes the testable deliverable and the associated risk assessment. Test plan explains, {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
+Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverable and the associated risk assessment. Test plan explains, {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
 
 \subsection{Input Domain} 
 Input domain comprises of all possible inputs to a software, including all the global variables, method arguments and the externally assigned variables, like keyboard inputs etc. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on. The domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.

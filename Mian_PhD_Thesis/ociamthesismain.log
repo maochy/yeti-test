@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  9 JAN 2014 23:06
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.9.30)  9 JAN 2014 23:25
 entering extended mode
 \write18 enabled.
  file:line:error style messages enabled.
@@ -626,7 +626,7 @@ l.11
 
 
 
-] <chapter1/SoftwareTesting1.png, id=808, 734.745pt x 308.15125pt>
+] <chapter1/SoftwareTesting1.png, id=798, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
@@ -685,7 +685,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
-[7] <chapter1/thesisOutline.png, id=886, 2333.71875pt x 1882.03125pt>
+[7] <chapter1/thesisOutline.png, id=876, 2333.71875pt x 1882.03125pt>
 File: chapter1/thesisOutline.png Graphic file (type png)
 
 <use chapter1/thesisOutline.png>
@@ -701,35 +701,44 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./chapter2/chapter2.tex
 Chapter 2.
-<chapter2/softwareTesting.png, id=894, 2293.56876pt x 460.72125pt>
+<chapter2/softwareTesting.png, id=884, 2293.56876pt x 460.72125pt>
 File: chapter2/softwareTesting.png Graphic file (type png)
 
-<use chapter2/softwareTesting.png> [9
+<use chapter2/softwareTesting.png>
+Overfull \hbox (7.37715pt too wide) in paragraph at lines 7--8
+ [][] 
+ []
+
+[9
 
 
 
  <./chapter2/softwareTesting.png>]
-Overfull \hbox (37.78923pt too wide) in paragraph at lines 22--43
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Overfull \hbox (1.04634pt too wide) in paragraph at lines 23--45
  [][] 
  []
 
-[10] [11] <chapter2/whiteBox.png, id=934, 530.98375pt x 644.4075pt>
+[10] [11] <chapter2/whiteBox.png, id=914, 530.98375pt x 644.4075pt>
 File: chapter2/whiteBox.png Graphic file (type png)
 
-<use chapter2/whiteBox.png> [12 <./chapter2/whiteBox.png>] [13]
-<chapter2/blackBox.png, id=956, 530.98375pt x 626.34pt>
+<use chapter2/whiteBox.png> [12] [13 <./chapter2/whiteBox.png>]
+<chapter2/blackBox.png, id=935, 530.98375pt x 626.34pt>
 File: chapter2/blackBox.png Graphic file (type png)
 
 <use chapter2/blackBox.png> [14 <./chapter2/blackBox.png>]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 132.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 134.
 
 
 (/usr/local/texlive/2008/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+) [15]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 135.
- [15]
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 137.
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ˜ in font phvr7t!
@@ -742,7 +751,7 @@ Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no “ in font phvr7t!
 
-Overfull \hbox (9.66393pt too wide) in paragraph at lines 276--277
+Overfull \hbox (9.66393pt too wide) in paragraph at lines 278--279
 []\OT1/phv/m/n/12 Consider a pro-gram with an ini-tial branch state-ment: $[]$
  []
 
@@ -751,7 +760,7 @@ Overfull \hbox (9.66393pt too wide) in paragraph at lines 276--277
 
  (./chapter3/chapter3.tex
 Chapter 3.
-<chapter3/randomTesting.jpg, id=1088, 441.90094pt x 118.19156pt>
+<chapter3/randomTesting.jpg, id=1071, 441.90094pt x 118.19156pt>
 File: chapter3/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter3/randomTesting.jpg> [25
@@ -767,15 +776,15 @@ File: omlphv.fd
 LaTeX Font Info:    Font shape `OML/phv/m/it' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 33.
 
-<chapter3/pointblockstrip.jpg, id=1129, 581.92406pt x 183.68625pt>
+<chapter3/pointblockstrip.jpg, id=1112, 581.92406pt x 183.68625pt>
 File: chapter3/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter3/pointblockstrip.jpg> [27 <./chapter3/pointblockstrip.jpg>]
-<chapter3/mart2.pdf, id=1143, 350.30875pt x 185.69376pt>
+<chapter3/mart2.pdf, id=1126, 350.30875pt x 185.69376pt>
 File: chapter3/mart2.pdf Graphic file (type pdf)
 
 <use chapter3/mart2.pdf> [28 <./chapter3/mart2.pdf>]
-<chapter3/RRT.pdf, id=1172, 370.38374pt x 247.67531pt>
+<chapter3/RRT.pdf, id=1155, 370.38374pt x 247.67531pt>
 File: chapter3/RRT.pdf Graphic file (type pdf)
  <use chapter3/RRT.pdf>
 [29 <./chapter3/RRT.pdf>] [30] [31]
@@ -784,7 +793,7 @@ Overfull \hbox (0.46378pt too wide) in paragraph at lines 145--146
 ed by Csall-ner and Smara-
  []
 
-<chapter3/JCrasher.png, id=1211, 867.24pt x 402.50375pt>
+<chapter3/JCrasher.png, id=1194, 867.24pt x 402.50375pt>
 File: chapter3/JCrasher.png Graphic file (type png)
 
 <use chapter3/JCrasher.png>
@@ -811,23 +820,23 @@ Overfull \hbox (1.56621pt too wide) in paragraph at lines 166--167
  []
 
 [33 <./chapter3/JCrasher.png (PNG copy)>]
-<chapter3/eclat_working.png, id=1229, 356.532pt x 235.1184pt>
+<chapter3/eclat_working.png, id=1212, 356.532pt x 235.1184pt>
 File: chapter3/eclat_working.png Graphic file (type png)
 
 <use chapter3/eclat_working.png> [34 <./chapter3/eclat_working.png>] [35]
-[36] <chapter3/autotest.png, id=1254, 292.14229pt x 156.78915pt>
+[36] <chapter3/autotest.png, id=1237, 292.14229pt x 156.78915pt>
 File: chapter3/autotest.png Graphic file (type png)
 
 <use chapter3/autotest.png> [37 <./chapter3/autotest.png (PNG copy)>]
-<chapter3/testera.png, id=1269, 379.20241pt x 142.17401pt>
+<chapter3/testera.png, id=1252, 379.20241pt x 142.17401pt>
 File: chapter3/testera.png Graphic file (type png)
 
 <use chapter3/testera.png> [38 <./chapter3/testera.png>] [39]
-<chapter3/yetiOverview.png, id=1294, 419.166pt x 102.3825pt>
+<chapter3/yetiOverview.png, id=1277, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png> [40 <./chapter3/yetiOverview.png (PNG copy)>]
-<chapter3/yetiCore.png, id=1304, 473.77pt x 190.7125pt>
+<chapter3/yetiCore.png, id=1287, 473.77pt x 190.7125pt>
 File: chapter3/yetiCore.png Graphic file (type png)
 
 <use chapter3/yetiCore.png>
@@ -863,20 +872,20 @@ Overfull \hbox (2.33018pt too wide) in paragraph at lines 324--325
 alls \OT1/phv/m/sl/12 Math.random() \OT1/phv/m/n/12 method
  []
 
-[43] [44] <chapter3/yetiCommandCLI.pdf, id=1346, 831.105pt x 95.35625pt>
+[43] [44] <chapter3/yetiCommandCLI.pdf, id=1329, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
-<chapter3/yetiCommandGUI.pdf, id=1349, 433.62pt x 494.84875pt>
+<chapter3/yetiCommandGUI.pdf, id=1332, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf> [45 <./chapter3/yetiCommandCLI.pdf> <./chapte
 r3/yetiCommandGUI.pdf>]
-<chapter3/yetiReport1.png, id=1374, 607.26875pt x 154.5775pt>
+<chapter3/yetiReport1.png, id=1357, 607.26875pt x 154.5775pt>
 File: chapter3/yetiReport1.png Graphic file (type png)
 
 <use chapter3/yetiReport1.png>
-<chapter3/yetiReport2.png, id=1375, 617.30624pt x 153.57375pt>
+<chapter3/yetiReport2.png, id=1358, 617.30624pt x 153.57375pt>
 File: chapter3/yetiReport2.png Graphic file (type png)
 
 <use chapter3/yetiReport2.png>
@@ -891,7 +900,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:yetiGUI' on page 46 undefined on input line 409.
 
 [46 <./chapter3/yetiReport1.png>]
-<chapter3/yetiGUI.png, id=1382, 1445.4pt x 903.375pt>
+<chapter3/yetiGUI.png, id=1365, 1445.4pt x 903.375pt>
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png> [47 <./chapter3/yetiReport2.png> <./chapter3/yetiGUI
@@ -973,15 +982,15 @@ m/n/12 MAX_INT-1\OT1/phv/m/n/12 , []\OT1/pcr/m/n/12 MAX_INT-2\OT1/phv/m/n/12 ;
 m/n/12 , []\OT1/pcr/m/n/12 MIN_INT+2\OT1/phv/m/n/12 .
  []
 
-[53] [54] <chapter4/ART_Patterns.png, id=1492, 376.40625pt x 101.62968pt>
+[53] [54] <chapter4/ART_Patterns.png, id=1475, 376.40625pt x 101.62968pt>
 File: chapter4/ART_Patterns.png Graphic file (type png)
 
 <use chapter4/ART_Patterns.png>
-<chapter4/block2.png, id=1495, 271.0125pt x 122.70844pt>
+<chapter4/block2.png, id=1478, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png> [55 <./chapter4/ART_Patterns.png> <./chapter4/block2.
-png>] <chapter4/flowchart1.pdf, id=1505, 193.19614pt x 195.7238pt>
+png>] <chapter4/flowchart1.pdf, id=1488, 193.19614pt x 195.7238pt>
 File: chapter4/flowchart1.pdf Graphic file (type pdf)
 
 <use chapter4/flowchart1.pdf> [56 <./chapter4/flowchart1.pdf>] [57]
@@ -998,7 +1007,7 @@ ill not be able to store the square of []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/
 phv/m/n/12 .
  []
 
-[58] <chapter4/hierarchy.pdf, id=1542, 98.56648pt x 125.337pt>
+[58] <chapter4/hierarchy.pdf, id=1525, 98.56648pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
@@ -1006,7 +1015,7 @@ File: chapter4/hierarchy.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [59] [60 <./chapter4/hierarchy.pdf>] [61] [62]
-<chapter4/DssrImprove.png, id=1585, 986.2446pt x 479.391pt>
+<chapter4/DssrImprove.png, id=1568, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
@@ -1032,15 +1041,15 @@ Chapter 5.
 
 
 
-] <chapter5/ART_Patterns.png, id=1691, 376.40625pt x 101.62968pt>
+] <chapter5/ART_Patterns.png, id=1674, 376.40625pt x 101.62968pt>
 File: chapter5/ART_Patterns.png Graphic file (type png)
 
 <use chapter5/ART_Patterns.png> [72 <./chapter5/ART_Patterns.png>]
-<chapter5/ADFD_Diagram1.png, id=1701, 589.20125pt x 414.54875pt>
+<chapter5/ADFD_Diagram1.png, id=1684, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
-<chapter5/ADFD_front_end.png, id=1702, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1685, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
@@ -1064,7 +1073,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--124
  []
 
 [75] [76]
-<chapter5/pointDomainOneArgument.png, id=1737, 780.9175pt x 570.13pt>
+<chapter5/pointDomainOneArgument.png, id=1720, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
@@ -1074,28 +1083,28 @@ Overfull \hbox (0.3433pt too wide) in paragraph at lines 255--256
  []
 
 [77 <./chapter5/pointDomainOneArgument.png (PNG copy)>] [78]
-<chapter5/PFDOne.png, id=1778, 790.955pt x 575.14874pt>
+<chapter5/PFDOne.png, id=1761, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
-<chapter5/PFDTwo.png, id=1779, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1762, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
-<chapter5/BFDOne.png, id=1784, 794.97pt x 575.14874pt>
+<chapter5/BFDOne.png, id=1767, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
-<chapter5/BFDTwo.png, id=1785, 787.94376pt x 573.14125pt>
+<chapter5/BFDTwo.png, id=1768, 787.94376pt x 573.14125pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png> [79 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png> <
 ./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>]
-<chapter5/SFDOne.png, id=1802, 789.95125pt x 573.14125pt>
+<chapter5/SFDOne.png, id=1785, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
-<chapter5/SFDTwo.png, id=1803, 788.9475pt x 575.14874pt>
+<chapter5/SFDTwo.png, id=1786, 788.9475pt x 575.14874pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png> [80 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>]
@@ -1168,7 +1177,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  10221 strings out of 493876
  150107 string characters out of 1150568
- 309577 words of memory out of 3000000
+ 309455 words of memory out of 3000000
  12394 multiletter control sequences out of 10000+50000
  45004 words of font info for 103 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
@@ -1190,9 +1199,9 @@ ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2008/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/urw/he
 lvetic/uhvro8a.pfb>
-Output written on ociamthesismain.pdf (112 pages, 1812306 bytes).
+Output written on ociamthesismain.pdf (112 pages, 1810092 bytes).
 PDF statistics:
- 2334 PDF objects out of 2487 (max. 8388607)
+ 2319 PDF objects out of 2487 (max. 8388607)
  753 named destinations out of 1000 (max. 131072)
  1196 words of extra memory for PDF output out of 10000 (max. 10000000)
 
