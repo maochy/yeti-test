@@ -29,7 +29,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import yeti.LogGrapher1;
-import yeti.LogGrapher2;
+import yeti.ScatterGraph;
 import yeti.LogGrapher3;
 import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
@@ -702,7 +702,7 @@ public class ADFDPlus extends JFrame{
 
 		}
 		else if (countCompileFiles == 2){
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+			ScatterGraph demo = new ScatterGraph("Failure Domains");
 	
 		}
 		else {
