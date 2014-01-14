@@ -1,46 +1,40 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Three main phases of random testing\relax }}{2}{figure.caption.4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Structure of thesis outline\relax }}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Three main phases of random testing}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Structure of thesis outline}}{8}{figure.1.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces The process of software testing\relax }}{9}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces White-box testing\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Black-box testing\relax }}{14}{figure.caption.9}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The process of software testing}}{9}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces White-box testing}}{13}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Black-box testing}}{14}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Random Testing\relax }}{25}{figure.caption.10}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Patterns of failure causing inputs\relax }}{27}{figure.caption.11}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Mirror Adaptive Random Testing\nobreakspace {}\cite {Chen2003}\relax }}{28}{figure.caption.12}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Input domain with exclusion zone around the selected test case\relax }}{29}{figure.caption.13}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of robustness testing of Java program with JCrasher\nobreakspace {}\cite {Pacheco2007b}\relax }}{33}{figure.caption.14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Main component of Eclat contributing to generate test input\nobreakspace {}\cite {Pacheco2005}\relax }}{34}{figure.caption.15}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Architecture of Autotest\relax }}{37}{figure.caption.16}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Architecture of TestEra\relax }}{38}{figure.caption.17}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces YETI test working process\relax }}{40}{figure.caption.18}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Main packages of YETI with dependencies \relax }}{41}{figure.caption.19}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Command to launch YETI from CLI\relax }}{45}{figure.caption.21}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces GUI launcher of YETI\relax }}{45}{figure.caption.22}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces YETI successful method calls\relax }}{46}{figure.caption.23}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces YETI bug reports.\relax }}{47}{figure.caption.24}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces GUI of YETI Tool\relax }}{47}{figure.caption.25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Random Testing}}{25}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Patterns of failure causing inputs}}{27}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Mirror Adaptive Random Testing\nobreakspace {}\cite {Chen2003}}}{28}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Input domain with exclusion zone around the selected test case}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Illustration of robustness testing of Java program with JCrasher\nobreakspace {}\cite {Pacheco2007b}}}{33}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Main component of Eclat contributing to generate test input\nobreakspace {}\cite {Pacheco2005}}}{34}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Architecture of Autotest}}{37}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Architecture of TestEra}}{38}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces YETI test working process}}{40}{figure.3.9}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Main packages of YETI with dependencies }}{41}{figure.3.10}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Command to launch YETI from CLI}}{45}{figure.3.11}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces GUI launcher of YETI}}{45}{figure.3.12}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces YETI successful method calls}}{46}{figure.3.13}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces YETI bug reports.}}{47}{figure.3.14}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces GUI of YETI Tool}}{47}{figure.3.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Failure patterns across input domain\nobreakspace {}\cite {Chen2008}\relax }}{55}{figure.caption.27}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces DSSR covering block and strip pattern\relax }}{55}{figure.caption.28}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Working mechanism of DSSR Strategy\relax }}{56}{figure.caption.29}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Class Hierarchy of DSSR in YETI\relax }}{60}{figure.caption.31}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Improvement of DSSR strategy over Random and Random+ strategy.\relax }}{63}{figure.caption.33}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Failure patterns across input domain\nobreakspace {}\cite {Chen2008}}}{55}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces DSSR covering block and strip pattern}}{55}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Working mechanism of DSSR Strategy}}{56}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Class Hierarchy of DSSR in YETI}}{60}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Improvement of DSSR strategy over Random and Random+ strategy.}}{63}{figure.4.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Failure domains across input domain \cite {Chan1996}\relax }}{72}{figure.caption.36}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Work flow of ADFD strategy\relax }}{73}{figure.caption.37}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Front-end of ADFD strategy\relax }}{74}{figure.caption.38}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces ADFD strategy plotting pass and fault domain of the given class\relax }}{77}{figure.caption.39}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Chart generated by ADFD strategy presenting point fault domain\relax }}{79}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{79}{figure.caption.41}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{79}{figure.caption.41}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Chart generated by ADFD strategy presenting block fault domain\relax }}{79}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{79}{figure.caption.42}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{79}{figure.caption.42}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Chart generated by ADFD strategy presenting Strip fault domain\relax }}{80}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{80}{figure.caption.43}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{80}{figure.caption.43}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Failure domains across input domain \cite {Chan1996}}}{72}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Work flow of ADFD strategy}}{73}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Front-end of ADFD strategy}}{74}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces ADFD strategy plotting pass and fault domain of the given class}}{77}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Chart generated by ADFD strategy presenting point fault domain}}{79}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Chart generated by ADFD strategy presenting block fault domain}}{79}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Chart generated by ADFD strategy presenting Strip fault domain}}{80}{figure.5.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
