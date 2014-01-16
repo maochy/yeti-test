@@ -702,7 +702,7 @@ public class ADFDPlus extends JFrame{
 
 		}
 		else if (countCompileFiles == 2){
-			ScatterGraph demo = new ScatterGraph("Failure Domains");
+			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 	
 		}
 		else {

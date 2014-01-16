@@ -64,10 +64,7 @@ public class LogGrapher2 {
 	 * @param title the frame title
 	 */
 	public LogGrapher2 (String title) {
-
-
 		final XYDataset dataset = createDataset();
-		
 		final JFreeChart chart = createChart(dataset);
 		
 
@@ -132,36 +129,36 @@ private XYDataset createDataset() {
 		
 		final XYSeries series1 = new XYSeries("Failing input");
 		final XYSeries series2 = new XYSeries("Passing input");
-		final XYSeries series3 = new XYSeries("Common Failing Values");
+//		final XYSeries series3 = new XYSeries("Common Failing Values");
 
-		for (int j =0; j < passValues.length; j=j+4){
+		for (int j =0; j < passValues.length; j=j+2){
 			
-			series2.add((double)passValues[j+1], (double)passValues[j]);
-			series2.add((double)passValues[j+3], (double)passValues[j+2]);
-			series2.add((double)passValues[j+2],null);
-			series2.add((double)passValues[j+3],null);
+			series2.add((double)passValues[j], (double)passValues[j+1]);
+//			series2.add((double)passValues[j+3], (double)passValues[j+2]);
+//			series2.add((double)passValues[j+2],null);
+//			series2.add((double)passValues[j+3],null);
 			
-			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
+//			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
 		loopHold = failValues.length;
 		loopHold = loopHold - 7;
 		
-		for (int i =0; i < loopHold; i=i+8 ){
-			series1.add((double)failValues[i],(double)failValues[i+1]);
-			series1.add((double)failValues[i+2],(double)failValues[i+3]);
-			//series1.add((double)failValues[i+2],null);
-			//series1.add((double)failValues[i+3],null);
-			//series1.add((double)failValues[i+3],null);
-			series3.add((double)failValues[i+5], (double)failValues[i+4]);
-			series3.add((double)failValues[i+7], (double)failValues[i+6]);
+		for (int i =0; i < loopHold; i=i+2 ){
+			series1.add((double)failValues[i],(double)failValues[i+2]);
+//			series1.add((double)failValues[i+2],(double)failValues[i+3]);
+//			//series1.add((double)failValues[i+2],null);
+//			//series1.add((double)failValues[i+3],null);
+//			//series1.add((double)failValues[i+3],null);
+//			series3.add((double)failValues[i+5], (double)failValues[i+4]);
+//			series3.add((double)failValues[i+7], (double)failValues[i+6]);
 			
-			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
+//			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
 		}
 		
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
-		dataset.addSeries(series3);
+//		dataset.addSeries(series3);
 		
 		return dataset;
 
@@ -193,10 +190,10 @@ private XYDataset createDataset() {
 	private JFreeChart createChart(XYDataset dataset) {
 
 		// create the chart...
-		JFreeChart chart = ChartFactory.createXYLineChart(
+		JFreeChart chart = ChartFactory.createScatterPlot(
 				"Serial Data", // chart title
-				"Domain", // domain axis label
-				"Range", // range axis label
+				"X", // domain axis label
+				"Y", // range axis label
 				dataset,  // initial series
 				PlotOrientation.VERTICAL, // orientation
 				true, // include legend
