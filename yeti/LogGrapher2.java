@@ -23,6 +23,7 @@ import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import org.jfree.chart.renderer.xy.XYItemRenderer;
 import java.awt.EventQueue;
 import java.awt.Stroke;
 import java.awt.event.ActionEvent;
@@ -56,7 +57,7 @@ import yeti.GraphDataScanner;
  */
 public class LogGrapher2 {
 
-	
+
 	public int loopHold;
 	/**
 	 * Construct a new frame
@@ -66,120 +67,51 @@ public class LogGrapher2 {
 	public LogGrapher2 (String title) {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
-		
 
-		
+
+
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 
 		chartPanel.setPreferredSize(new Dimension(800, 600));
-	//ADFDLauncher.panel3.add(chartPanel);
 		ADFDPlus.panel3.add(chartPanel);
 	}
 
 	// This is the original one and the following same name method is the one i do mess.
-//
-//private XYDataset createDataset() {
-//		
-//		
-//		final XYSeriesCollection dataset = new XYSeriesCollection();
-//		
-//		int failValues[] = GraphDataScanner.readFailDataFromFile();
-//		int passValues[] = GraphDataScanner.readPassDataFromFile();	
-//		
-//		final XYSeries series1 = new XYSeries("Failing input");
-//		final XYSeries series2 = new XYSeries("Passing input");
-//
-//		for (int j =0; j < passValues.length; j=j+4){
-//			
-//			series2.add((double)passValues[j+1], (double)passValues[j]);
-//			series2.add((double)passValues[j+3], (double)passValues[j+2]);
-//			series2.add((double)passValues[j+2],null);
-//			series2.add((double)passValues[j+3],null);
-//			
-//			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
-//		}
-//
-//
-//		for (int i =0; i < failValues.length; i=i+8 ){
-//			series1.add((double)failValues[i],(double)failValues[i+1]);
-//			series1.add((double)failValues[i+2],(double)failValues[i+3]);
-//			series1.add((double)failValues[i+2],null);
-//			//series1.add((double)failValues[i+3],null);
-//			series1.add((double)failValues[i+5], (double)failValues[i+4]);
-//			series1.add((double)failValues[i+7], (double)failValues[i+6]);
-//			
-//			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
-//		}
-//
-//		dataset.addSeries(series1);
-//		dataset.addSeries(series2);
-//
-//		return dataset;
-//
-//	}
 
 
-private XYDataset createDataset() {
-		
-		
+	private XYDataset createDataset() {
+
+
 		final XYSeriesCollection dataset = new XYSeriesCollection();
-		
+
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
 		int passValues[] = GraphDataScanner.readPassDataFromFile();	
-		
+
 		final XYSeries series1 = new XYSeries("Failing input");
 		final XYSeries series2 = new XYSeries("Passing input");
-//		final XYSeries series3 = new XYSeries("Common Failing Values");
 
 		for (int j =0; j < passValues.length; j=j+2){
-			
+
 			series2.add((double)passValues[j], (double)passValues[j+1]);
-//			series2.add((double)passValues[j+3], (double)passValues[j+2]);
-//			series2.add((double)passValues[j+2],null);
-//			series2.add((double)passValues[j+3],null);
-			
-//			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
+
 		}
 
 		loopHold = failValues.length;
 		loopHold = loopHold - 7;
-		
+
 		for (int i =0; i < loopHold; i=i+2 ){
 			series1.add((double)failValues[i],(double)failValues[i+2]);
-//			series1.add((double)failValues[i+2],(double)failValues[i+3]);
-//			//series1.add((double)failValues[i+2],null);
-//			//series1.add((double)failValues[i+3],null);
-//			//series1.add((double)failValues[i+3],null);
-//			series3.add((double)failValues[i+5], (double)failValues[i+4]);
-//			series3.add((double)failValues[i+7], (double)failValues[i+6]);
-			
-//			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
+
 		}
-		
+
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
-//		dataset.addSeries(series3);
-		
+
 		return dataset;
 
 	}
-	
-	
-	
-	//    /**
-	//     * Create a series
-	//     *
-	//     * @ return the series
-	//     */
-	//    private double[][] createSeries(int mean) {
-	//        double[][] series = new double[2][MAX];
-	//        for (int i = 0; i < MAX; i++) {
-	//            series[0][i] = (double) i;
-	//            //series[1][i] = mean + random.nextGaussian() / 2;
-	//            
-	//        }
-	//        return series;
-	//    }
+
+
 
 	/**
 	 * Create a chart.
@@ -208,6 +140,8 @@ private XYDataset createDataset() {
 		XYPlot plot = (XYPlot) chart.getPlot();
 		plot.setBackgroundPaint(new Color(0xffffe0));
 		plot.setDomainGridlinesVisible(true);
+		plot.setDomainCrosshairVisible(true);
+	    plot.setRangeCrosshairVisible(true);
 		plot.setDomainGridlinePaint(Color.lightGray);
 		plot.setRangeGridlinePaint(Color.lightGray);
 
@@ -219,14 +153,14 @@ private XYDataset createDataset() {
 		range.setStandardTickUnits(ticks);
 
 		// render shapes and lines
-		XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer(true, true);
+		XYItemRenderer renderer = plot.getRenderer();
 		plot.setRenderer(renderer);
-		renderer.setBaseShapesVisible(true);
-		renderer.setBaseShapesFilled(true);
-		
+//		renderer.setBaseShapesVisible(true);
+//		renderer.setBaseShapesFilled(true);
+
 		// This line is added by Mian to change the colour of series 3 (2 here) from green to red.
 		renderer.setSeriesPaint(2, Color.red);
-		
+
 
 		// set the renderer's stroke
 		Stroke stroke = new BasicStroke(
@@ -237,8 +171,6 @@ private XYDataset createDataset() {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
 		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
@@ -246,17 +178,6 @@ private XYDataset createDataset() {
 		return chart;
 	}
 
-	/** Main method */
-	//    public static void main(String[] args) {
-	//        EventQueue.invokeLater(new Runnable() {
-	//            public void run() {
-	//                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-	//                demo.pack();
-	//                demo.setLocationRelativeTo(null);
-	//                demo.setVisible(true);
-	//            }
-	//         });
-	//    }
 }
 
 

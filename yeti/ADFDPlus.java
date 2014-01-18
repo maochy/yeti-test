@@ -29,7 +29,6 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
 import yeti.LogGrapher1;
-import yeti.ScatterGraph;
 import yeti.LogGrapher3;
 import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
