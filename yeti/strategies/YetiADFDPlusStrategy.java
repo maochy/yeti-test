@@ -255,11 +255,10 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 
 					String programBegin = programBeginPart();
-					String programMiddle = programMiddlePart();
 					String programEnd = programEndPart();
 					String programEnd2 = programEndPart2();
 
-					String completeProgram = programBegin + call + programMiddle  + programEnd  + "   " + call  + programEnd2;
+					String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
 
 					generateProgram(completeProgram);
 
@@ -291,16 +290,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
 				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 				
-				+ " public static boolean startedByFailing = false;\n"
-				+ " public static boolean isCurrentlyFailing = false;\n\n"
-
-				//+ " public static int start = Integer.MIN_VALUE;\n"
-				//+ " public static int stop = Integer.MAX_VALUE;\n\n"
-				//	  reduce to 80 because the other one take a lot of time to process. In final version the value will be changed to max.
-				//+ " public static int  = " + lowerLimit + "\n;"
-				//+ " public static int stop = "+ upperLimit +";\n\n"
-				
-				+ " public static int range = 50;\n\n"
+				+ " public static int range = 5;\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
@@ -315,45 +305,16 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " for (int i=starterX + 1; i < stopperX; i++) {\n"
 				+ " for (int j = starterY + 1; j < stopperY; j++) \n"
 				+ " {\n"
-				+ " try{\n";
+				+ " checkFirstAndLastValue(i,j);\n"
+				+ " }\n"
+				+ " }\n"
+				+ "checkFirstAndLastValue(stopperX, stopperY);\n" 
+				+ "printRangeFail();\n" 
+				+ "printRangePass();\n" 
+				+ "}\n";
 		
 		return temp;
 	}
-
-	//%%%%%%%%%%%%%%%%%%%%%%%%%   MIDDLE PART %%%%%%%%%%%%%%%%%%%%//
-
-
-	public String programMiddlePart(){
-		String temp1 = 	  "; \n"
-						+ " if (isCurrentlyFailing) \n"
-						+ " {\n"
-						+ " fail.add(i-1);\n"
-						+ " fail.add(j-1);\n"
-						+ " pass.add(i);\n"
-						+ " pass.add(j);\n"
-						+ " isCurrentlyFailing=false; \n"
-						+ "} \n } \n "
-						+ "catch(Throwable t) {\n" 
-						+ "if (!isCurrentlyFailing) \n" 
-						+ "{\n"
-						+ "pass.add(i-1);\n"
-						+ "pass.add(j-1);\n"
-						+ "fail.add(i);\n"
-						+ "fail.add(j);\n"
-						+ "isCurrentlyFailing = true;\n"
-						+ "}\n"
-						+ "}\n"
-						+ "}\n"
-						+ "}\n"
-						+ "checkFirstAndLastValue(stopperX, stopperY);\n" 
-						+ "printRangeFail();\n" 
-						+ "printRangePass();\n" 
-						+ "}\n";
-
-		return temp1;
-	}
-
-
 
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
 
@@ -368,7 +329,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+"	 PrintWriter pw = new PrintWriter(new FileWriter (fw, true));\n"
 				//+"   int count = 1;\n"
 				+"   for (Integer i1 : fail) { \n"
-				+"      pw.append(i1+\"\\n \"); \n"
+				+"      pw.append(i1+\"\\n\"); \n"
 				//+"      if (count%2 == 0)\n"
 				//+"      	pw1.append(\"\\n\");\n"
 				//+"      count++; \n"
@@ -389,7 +350,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+"	 PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
 				//+"   int count = 1;\n"
 				+"   for (Integer i2 : pass) { \n"
-				+"      pw1.append(i2+\"\\n \");\n"
+				+"      pw1.append(i2+\"\\n\");\n"
 				//+"      if (count%2 == 0)\n"
 				//+"      	pw1.append(\" \");\n"
 				//+"      count++; \n"
@@ -412,8 +373,6 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 					 +  "  pass.add(j); \n"
 					 +  "  } \n"
 					 +  "  catch (Throwable t) { \n"
-					 +  "  startedByFailing = true; \n"
-					 +  "  isCurrentlyFailing = true; \n"
 					 +  "  fail.add(i); \n "
 					 +  "  fail.add(j); \n"
 					 + " } \n } \n }";

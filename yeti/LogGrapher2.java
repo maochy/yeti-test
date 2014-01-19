@@ -97,10 +97,10 @@ public class LogGrapher2 {
 		}
 
 		loopHold = failValues.length;
-		loopHold = loopHold - 7;
+		loopHold = loopHold - 1;
 
 		for (int i =0; i < loopHold; i=i+2 ){
-			series1.add((double)failValues[i],(double)failValues[i+2]);
+			series1.add((double)failValues[i],(double)failValues[i+1]);
 
 		}
 
