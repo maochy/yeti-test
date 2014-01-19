@@ -33,8 +33,7 @@ import yeti.monitoring.YetiUpdatableSlider;
 
 public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
-	public static String lowerLimit = "" + Integer.MIN_VALUE;
-	public static String upperLimit = "" + Integer.MAX_VALUE;
+	public static String rangeToPlot = "" + 30;
 	public static int argumentFirst = 0;
 	public static int argumentSecond = 0;
 	
@@ -290,7 +289,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
 				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 				
-				+ " public static int range = 5;\n\n"
+				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"

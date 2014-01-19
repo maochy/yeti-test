@@ -84,8 +84,8 @@ public class ADFDPlus extends JFrame{
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
-	JTextField		minValue_TextField;
-	JTextField		maxValue_TextField;
+	JTextField		rangeValue_TextField;
+//	JTextField		maxValue_TextField;
 	JButton 		plot1_Button;
 	JLabel 			execute_Label;
 	JLabel 			compile_Label;
@@ -405,45 +405,62 @@ public class ADFDPlus extends JFrame{
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
-
-		JLabel minValue_Label = new JLabel("Lower Limit:");
+		
+		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
 		gbc.gridy = 6;
 		gbc.gridwidth = 1;
-		panel1.add(minValue_Label, gbc);
-
-
-
+		panel1.add(range, gbc);
+		
 		// changed to 100 for test purpose.
 		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
-		minValue_TextField = new JTextField("" + -100);
+		rangeValue_TextField = new JTextField("" + 5);
 		gbc.gridx = 1;
 		gbc.gridy = 6;
 		gbc.gridwidth = 1;
-		panel1.add(minValue_TextField, gbc);
+		panel1.add(rangeValue_TextField, gbc);	
+		
+		
+// Commented for ADFDPlus
+//
+//		JLabel minValue_Label = new JLabel("Lower Limit:");
+//		gbc.gridx = 0;
+//		gbc.gridy = 6;
+//		gbc.gridwidth = 1;
+//		panel1.add(minValue_Label, gbc);
+//
+//
+//
+//		// changed to 100 for test purpose.
+//		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+//		minValue_TextField = new JTextField("" + -100);
+//		gbc.gridx = 1;
+//		gbc.gridy = 6;
+//		gbc.gridwidth = 1;
+//		panel1.add(minValue_TextField, gbc);
 
 
 		/////////////////////////////////////////////////////////////////
-
-
-
-		JLabel maxValue_Label = new JLabel("Upper Limit:");
-		gbc.gridx = 0;
-		gbc.gridy = 7;
-		gbc.gridwidth = 1;
-		panel1.add(maxValue_Label, gbc);
-
-
-
-		// changed to 100 for test purpose.
-		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
-		maxValue_TextField = new JTextField("" + 100);
-		gbc.gridx = 1;
-		gbc.gridy = 7;
-		gbc.gridwidth = 1;
-		panel1.add(maxValue_TextField, gbc);
-
-
+//  Commented for ADFDPlus
+//
+//
+//		JLabel maxValue_Label = new JLabel("Upper Limit:");
+//		gbc.gridx = 0;
+//		gbc.gridy = 7;
+//		gbc.gridwidth = 1;
+//		panel1.add(maxValue_Label, gbc);
+//
+//
+//
+//		// changed to 100 for test purpose.
+//		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+//		maxValue_TextField = new JTextField("" + 100);
+//		gbc.gridx = 1;
+//		gbc.gridy = 7;
+//		gbc.gridwidth = 1;
+//		panel1.add(maxValue_TextField, gbc);
+//
+//
 
 		/////////// Run Label, Button and ActionListener /////////////////
 
@@ -666,9 +683,9 @@ public class ADFDPlus extends JFrame{
 		list.add(logs);
 		list.add(fileName);
 		list.add(testFilePathFinal);
-		YetiADFDPlusStrategy.lowerLimit = minValue_TextField.getText();
-		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
-
+//		YetiADFDPlusStrategy.lowerLimit = rangeValue_TextField.getText();
+//		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
+		YetiADFDPlusStrategy.rangeToPlot = rangeValue_TextField.getText();
 		command = list.toArray(new String[list.size()]);
 
 
