@@ -78,18 +78,25 @@ The primary purpose of software testing is identification of faults in the given
 Software testing can be divided into white-box and black-box testing based on the perspective taken.
 
 \subsection{White-box testing}
-\begin{wrapfigure}{r}{0.36\textwidth}
-  \vspace{-35pt}
-  \begin{center}
-    \includegraphics[width=0.30\textwidth]{chapter2/whiteBox.png}
-  \end{center}
-  \vspace{-20pt}
-  \bigskip
-  \caption{White-box testing}
-  \label{fig:blackBox}
-  \vspace{-18pt}
-\end{wrapfigure}
 In white-box or structural testing, the testers must know about the complete structure of the software so that they may make necessary modifications, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the proper code is followed during test execution~\cite{ostrand2002white}. Some commonly used white-box testing techniques are as follows:
+\begin{figure}[h]
+\begin{center}
+	\includegraphics[width=5cm, height=6cm ]{chapter2/whiteBox.png}
+	\caption{White-box testing}
+	\label{fig:blackBox}
+\end{center}  
+\end{figure}
+%\begin{wrapfigure}{r}{0.36\textwidth}
+%  \vspace{-35pt}
+%  \begin{center}
+%   \includegraphics[width=0.30\textwidth]{chapter2/whiteBox.png}
+%  \end{center}
+%  \vspace{-20pt}
+%  \bigskip
+%  \caption{White-box testing}
+%  
+% \vspace{-18pt}
+%\end{wrapfigure}
 
 \subsubsection{Data Flow Analysis}
 Data Flow Analysis (DFA) is a testing technique which focuses on the input values by observing the behaviour of respective variables during the execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, drawn to determine the paths that are traversed by the program during its execution. Test cases are generated and executed to verify its conformance with CFG. 
@@ -103,19 +110,25 @@ Control Flow Analysis (CFA) is a testing technique which takes into consideratio
 It is a testing technique in which additional instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the anomaly \cite{voas1997software}. The process of code addition is called instrumentation which is performed before compilation and execution of software. Code is added for several reasons i.e. to find error handling behaviour of software by injecting faults, to examine the capability of test procedure with respect to the discovery of injected faults and to measure the code coverage achieved by the testing process.    
 
 \subsection{Black-box testing}
-\begin{wrapfigure}{r}{0.35\textwidth}
-  \vspace{-35pt}
-  \begin{center}
-    \includegraphics[width=0.30\textwidth]{chapter2/blackBox.png}
-  \end{center}
-  \vspace{-20pt}
-  \bigskip
-  \caption{Black-box testing}
-  \label{fig:blackBox}
-  \vspace{-18pt}
-\end{wrapfigure}
 In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the software specifications and test passes if the result is according to expected output~\cite{beizer1995black}. Some commonly used black-box testing techniques are stated below:
-
+\begin{figure}[h]
+\begin{center}
+	\includegraphics[width=5cm, height=6cm ]{chapter2/blackBox.png}
+	\caption{Black-box testing}
+ 	\label{fig:blackBox}
+\end{center}  
+\end{figure}
+%\begin{wrapfigure}{r}{0.35\textwidth}
+%  \vspace{-35pt}
+%  \begin{center}
+%    \includegraphics[width=0.30\textwidth]{chapter2/blackBox.png}
+%  \end{center}
+%  \vspace{-20pt}
+%  \bigskip
+%  \caption{Black-box testing}
+%  \label{fig:blackBox}
+%  \vspace{-18pt}
+% \end{wrapfigure}
 \subsubsection{Use-case based testing}
 It is a verification and validation technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, preconditions, postconditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
 
