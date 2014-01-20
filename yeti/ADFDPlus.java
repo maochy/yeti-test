@@ -714,7 +714,7 @@ public class ADFDPlus extends JFrame{
 		 */
 
 		if (countCompileFiles == 1){
-			LogGrapher1 demo = new LogGrapher1("Failure Domains");
+			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
 		}
 		else if (countCompileFiles == 2){

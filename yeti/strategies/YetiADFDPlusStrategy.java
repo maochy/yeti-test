@@ -176,18 +176,22 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 			YetiLog.printDebugLog("found bug in the strategy", this);
 			oldFaults1 = currentErrors;
+			
+			
+//*****************************************************************************
 
-			for (int j1 = 0; j1 < oldyt.length; j1++) {
-				YetiCard yc = oldyt[j1];
+//			for (int j1 = 0; j1 < oldyt.length; j1++) {
+//				YetiCard yc = oldyt[j1];
+			YetiCard yc = oldyt[0];
 
-				if (yc.getType().getName().equals("int")) {
+//				if (yc.getType().getName().equals("int")) {
 				
-				if(oldyt.length >= 1){	
-				if (j1 == 0){ argumentFirst = (Integer)oldyt[0].getValue();}
-				if (j1 == 1){ argumentSecond = (Integer)oldyt[1].getValue();}
-				}
-				
-
+//				if(oldyt.length >= 1){	
+//				if (j1 == 0){ argumentFirst = (Integer)oldyt[0].getValue();}
+//				if (j1 == 1){ argumentSecond = (Integer)oldyt[1].getValue();}
+//				}
+			argumentFirst = (Integer)oldyt[0].getValue();
+			argumentSecond = (Integer)oldyt[1].getValue();
 
 					String call = "";
 
@@ -198,7 +202,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 						call = "new "
 								+ c.getOriginatingModule().getModuleName()
 								+ "(" + args + "i";
-						for (int k = j1 + 1; k < oldyt.length; k++) {
+						for (int k = 0 + 1; k < oldyt.length; k++) {
 							call = call + ","
 									+ oldyt[k].getValue().toString();
 
@@ -240,7 +244,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 								call = "variable" + "."
 										+ m.getMethod().getName() + "("
 										+ args + "i";
-								for (int k = j1 + 1; k < oldyt.length; k++) {
+								for (int k = 0 + 1; k < oldyt.length; k++) {
 
 									call = call + "," + oldyt[k].getValue().toString();
 
@@ -266,9 +270,9 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 					args = args + yc.getValue() + ",";
 
 
-				}
+				//}
 
-			}
+			//}
 
 
 		}

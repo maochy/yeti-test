@@ -7,35 +7,35 @@
 \contentsline {subsection}{\numberline {1.3.3}Invariant Guided Random+ Strategy}{5}{subsection.1.3.3}
 \contentsline {section}{\numberline {1.4}Structure of the Thesis}{6}{section.1.4}
 \contentsline {chapter}{\numberline {2}Literature Review: Software Testing}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Definitions}{11}{section.2.1}
+\contentsline {section}{\numberline {2.1}Definitions}{10}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Test Plan}{11}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Input Domain}{11}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}Test Case}{11}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Software Testing Levels}{12}{section.2.2}
+\contentsline {section}{\numberline {2.2}Software Testing Levels}{11}{section.2.2}
 \contentsline {section}{\numberline {2.3}Software Testing Purpose}{12}{section.2.3}
-\contentsline {section}{\numberline {2.4}Software Testing Perspective}{13}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}White-box testing}{13}{subsection.2.4.1}
+\contentsline {section}{\numberline {2.4}Software Testing Perspective}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}White-box testing}{12}{subsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.1.1}Data Flow Analysis}{13}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Control Flow Analysis}{14}{subsubsection.2.4.1.2}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Control Flow Analysis}{13}{subsubsection.2.4.1.2}
 \contentsline {subsubsection}{\numberline {2.4.1.3}Code-based fault injection testing}{14}{subsubsection.2.4.1.3}
 \contentsline {subsection}{\numberline {2.4.2}Black-box testing}{14}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Use-case based testing}{15}{subsubsection.2.4.2.1}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Use-case based testing}{14}{subsubsection.2.4.2.1}
 \contentsline {subsubsection}{\numberline {2.4.2.2}Partition Testing}{15}{subsubsection.2.4.2.2}
 \contentsline {subsubsection}{\numberline {2.4.2.3}Boundary Value Analysis}{15}{subsubsection.2.4.2.3}
 \contentsline {subsubsection}{\numberline {2.4.2.4}Formal Specification Testing}{16}{subsubsection.2.4.2.4}
 \contentsline {subsection}{\numberline {2.4.3}Test Oracle}{16}{subsection.2.4.3}
 \contentsline {section}{\numberline {2.5}Software Test Execution}{17}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Manual Software Testing}{18}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.1}Manual Software Testing}{17}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Automated Software Testing}{18}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Test Data Generation}{19}{section.2.6}
+\contentsline {section}{\numberline {2.6}Test Data Generation}{18}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Path-wise Test Data Generator}{19}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generators}{20}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generators}{19}{subsection.2.6.2}
 \contentsline {subsubsection}{\numberline {2.6.2.1}Chaining Approach}{20}{subsubsection.2.6.2.1}
-\contentsline {subsubsection}{\numberline {2.6.2.2}Assertion-oriented Approach}{21}{subsubsection.2.6.2.2}
+\contentsline {subsubsection}{\numberline {2.6.2.2}Assertion-oriented Approach}{20}{subsubsection.2.6.2.2}
 \contentsline {subsection}{\numberline {2.6.3}Intelligent Test Data Generators}{21}{subsection.2.6.3}
 \contentsline {subsubsection}{\numberline {2.6.3.1}Genetic Algorithm}{21}{subsubsection.2.6.3.1}
-\contentsline {subsection}{\numberline {2.6.4}Random Test Data Generators}{22}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Search-based Test Data Generation}{23}{subsection.2.6.5}
+\contentsline {subsection}{\numberline {2.6.4}Random Test Data Generators}{21}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.5}Search-based Test Data Generation}{22}{subsection.2.6.5}
 \contentsline {section}{\numberline {2.7}Summary}{23}{section.2.7}
 \contentsline {chapter}{\numberline {3}Literature Review: Random Testing}{24}{chapter.3}
 \contentsline {section}{\numberline {3.1}Various versions of random testing}{25}{section.3.1}
@@ -118,9 +118,10 @@
 \contentsline {section}{\numberline {6.6}Discussion}{85}{section.6.6}
 \contentsline {section}{\numberline {6.7}Related Work}{85}{section.6.7}
 \contentsline {section}{\numberline {6.8}Conclusions}{85}{section.6.8}
-\contentsline {chapter}{\numberline {7}Conclusion and Future Work}{86}{chapter.7}
+\contentsline {chapter}{\numberline {7}Conclusion}{86}{chapter.7}
 \contentsline {section}{\numberline {7.1}Introduction}{86}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{87}{section.7.2}
-\contentsline {chapter}{\numberline {A} }{88}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{88}{section.A.1}
-\contentsline {chapter}{Bibliography}{93}{lstnumber.-13.16}
+\contentsline {chapter}{\numberline {8}Future Work}{88}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{88}{section.8.1}
+\contentsline {chapter}{\numberline {A} }{90}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{90}{section.A.1}
+\contentsline {chapter}{Bibliography}{95}{lstnumber.-13.16}
