@@ -71,8 +71,9 @@ public class LogGrapher2 {
 
 
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-
-		chartPanel.setPreferredSize(new Dimension(800, 600));
+	// I am trying to increase the size of the chart.
+	//	chartPanel.setPreferredSize(new Dimension(800, 600));
+		chartPanel.setPreferredSize(new Dimension(1200, 800));
 		ADFDPlus.panel3.add(chartPanel);
 	}
 
@@ -123,7 +124,7 @@ public class LogGrapher2 {
 
 		// create the chart...
 		JFreeChart chart = ChartFactory.createScatterPlot(
-				"Serial Data", // chart title
+				"Pass and Fail Values for the SUT", // chart title
 				"X", // domain axis label
 				"Y", // range axis label
 				dataset,  // initial series
@@ -171,7 +172,10 @@ public class LogGrapher2 {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
+		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
 

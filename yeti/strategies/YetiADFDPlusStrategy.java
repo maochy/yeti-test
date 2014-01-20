@@ -172,7 +172,9 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
-		if (currentErrors > oldFaults1) {
+// I want only one C0 file to generate for any number of errors. Therefore I am commenting the following line and adding the second line below it.		
+//		if (currentErrors > oldFaults1) {
+		if (currentErrors == 1){
 
 			YetiLog.printDebugLog("found bug in the strategy", this);
 			oldFaults1 = currentErrors;
