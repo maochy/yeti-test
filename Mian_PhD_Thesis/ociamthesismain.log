@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  21 JAN 2014 00:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  22 JAN 2014 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,7 +923,7 @@ File: chapter3/testera.png Graphic file (type png)
 
 <use chapter3/testera.png>
 Package pdftex.def Info: chapter3/testera.png used on input line 235.
-(pdftex.def)             Requested size: 426.80417pt x 256.1061pt.
+(pdftex.def)             Requested size: 426.80417pt x 284.56209pt.
  [37 <./chapter3/testera.png>] [38]
 Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
@@ -942,43 +942,38 @@ File: chapter3/yetiCore.png Graphic file (type png)
 <use chapter3/yetiCore.png>
 Package pdftex.def Info: chapter3/yetiCore.png used on input line 284.
 (pdftex.def)             Requested size: 426.80112pt x 199.1773pt.
- [40 <./chapter3/yetiCore.png>] [41]
-Missing character: There is no ‚ in font phvr7t!
-Missing character: There is no Ä in font phvr7t!
-Missing character: There is no ô in font phvr7t!
-
-Overfull \hbox (2.33018pt too wide) in paragraph at lines 326--327
-\OT1/phv/m/n/12 dou-ble, long etc., YETI, in its sim-plest ran-dom strat-egy, c
-alls \OT1/phv/m/sl/12 Math.random() \OT1/phv/m/n/12 method
+ [40 <./chapter3/yetiCore.png>] [41] [42]
+Overfull \hbox (12.16328pt too wide) in paragraph at lines 337--365
+ [][] 
  []
 
-[42] [43] <chapter3/yetiCommandCLI.pdf, id=1335, 831.105pt x 95.35625pt>
+[43] <chapter3/yetiCommandCLI.pdf, id=1335, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 371.
-(pdftex.def)             Requested size: 398.34251pt x 51.21513pt.
+Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 373.
+(pdftex.def)             Requested size: 426.7874pt x 56.90572pt.
 
 <chapter3/yetiCommandGUI.pdf, id=1338, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 380.
-(pdftex.def)             Requested size: 199.16988pt x 227.61809pt.
+Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 382.
+(pdftex.def)             Requested size: 227.62082pt x 284.52827pt.
  [44 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
 <chapter3/yetiReport1.png, id=1363, 607.26875pt x 154.5775pt>
 File: chapter3/yetiReport1.png Graphic file (type png)
 
 <use chapter3/yetiReport1.png>
-Package pdftex.def Info: chapter3/yetiReport1.png used on input line 398.
-(pdftex.def)             Requested size: 398.34308pt x 113.81474pt.
+Package pdftex.def Info: chapter3/yetiReport1.png used on input line 401.
+(pdftex.def)             Requested size: 426.79947pt x 142.27669pt.
 
 <chapter3/yetiReport2.png, id=1364, 617.30624pt x 153.57375pt>
 File: chapter3/yetiReport2.png Graphic file (type png)
 
 <use chapter3/yetiReport2.png>
-Package pdftex.def Info: chapter3/yetiReport2.png used on input line 406.
-(pdftex.def)             Requested size: 398.35257pt x 113.81151pt.
+Package pdftex.def Info: chapter3/yetiReport2.png used on input line 409.
+(pdftex.def)             Requested size: 426.79892pt x 142.27376pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -988,8 +983,8 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png>
-Package pdftex.def Info: chapter3/yetiGUI.png used on input line 415.
-(pdftex.def)             Requested size: 426.7863pt x 284.52328pt.
+Package pdftex.def Info: chapter3/yetiGUI.png used on input line 418.
+(pdftex.def)             Requested size: 426.7863pt x 256.07233pt.
  [46 <./chapter3/yetiReport2.png> <./chapter3/yetiGUI.png>]
 Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
@@ -1047,7 +1042,7 @@ Missing character: There is no ‚ in font phvr7t!
 Missing character: There is no Ä in font phvr7t!
 Missing character: There is no ù in font phvr7t!
 
-Overfull \hbox (61.52669pt too wide) in paragraph at lines 464--480
+Overfull \hbox (61.52669pt too wide) in paragraph at lines 467--483
  [][] 
  []
 
@@ -1262,37 +1257,40 @@ m/n/12 , []\OT1/pcr/m/n/12 MIN_INT+2\OT1/phv/m/n/12 .
 
  (./chapter7/chapter7.tex
 Chapter 7.
-[86
+Missing character: There is no ‚ in font phvr7t!
+Missing character: There is no Ä in font phvr7t!
+Missing character: There is no ô in font phvr7t!
+) [86
 
 
 
-]) [87]
+]
 \openout2 = `chapter8/chapter8.aux'.
 
  (./chapter8/chapter8.tex
 Chapter 8.
-[88
+) [87
 
 
 
-]) [89]
+]
 \openout2 = `appendix1/appendix1.aux'.
 
  (./appendix1/appendix1.tex
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 15.
-[90
+[88
 
 
 
-] [91] [92] [93]) [94] (./ociamthesismain.bbl
+] [89] [90] [91]) [92] (./ociamthesismain.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 6.
- [95
+ [93
 
 
-] [96] [97] [98]
+] [94] [95] [96]
 Missing character: There is no ‚ in font phvro7t!
 Missing character: There is no Ä in font phvro7t!
 Missing character: There is no î in font phvro7t!
@@ -1302,10 +1300,10 @@ Missing character: There is no î in font phvro7t!
 Missing character: There is no ‚ in font phvro7t!
 Missing character: There is no Ä in font phvro7t!
 Missing character: There is no ô in font phvro7t!
- [99]
-[100])
+ [97]
+[98])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [101]
+ [99]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (./ociamthesismain.aux (./abstract/abstract.aux)
 (./dedication/dedication.aux) (./acknowlegements/acknowlegements.aux)
@@ -1316,7 +1314,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
 Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
-(rerunfilecheck)             Checksum: 826647F06CBCE01FCFDBCDB9A825B3DA;9278.
+(rerunfilecheck)             Checksum: 4864F2DEB7997579DAB056E0F97C9231;9253.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1324,8 +1322,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 10536 strings out of 493315
- 153374 string characters out of 6137904
+ 10534 strings out of 493315
+ 153358 string characters out of 6137904
  337607 words of memory out of 5000000
  12884 multiletter control sequences out of 15000+600000
  44995 words of font info for 103 fonts, out of 8000000 for 9000
@@ -1349,10 +1347,10 @@ ts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/he
 lvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/
 uhvro8a.pfb>
-Output written on ociamthesismain.pdf (113 pages, 1589430 bytes).
+Output written on ociamthesismain.pdf (111 pages, 1585963 bytes).
 PDF statistics:
- 2371 PDF objects out of 2487 (max. 8388607)
- 2149 compressed objects within 22 object streams
- 759 named destinations out of 1000 (max. 500000)
+ 2335 PDF objects out of 2487 (max. 8388607)
+ 2115 compressed objects within 22 object streams
+ 757 named destinations out of 1000 (max. 500000)
  1192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
