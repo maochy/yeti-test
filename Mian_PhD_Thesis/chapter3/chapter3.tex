@@ -366,7 +366,7 @@ Options						&Purpose 										\\ \hline
 
 
 \subsection{YETI Execution}
-YETI being developed in Java is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. YETI can be executed from both command line and GUI. To build and execute YETI, it is necessary to specify the {\it project} and all the associated {\it .jar library files} particularly {\it javassist.jar} in the {\it CLASSPATH} to help JVM in identifying the YETI source. The typical command to invoke YETI is given in Figure~\ref{fig:yeticommand}.
+YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.
 
 \begin{figure}[h!]
 	\centering
@@ -375,49 +375,50 @@ YETI being developed in Java is highly portable and can easily run on any operat
 	\label{fig:yeticommand}
 \end{figure}
 
- In this particular command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. For details of other options please see table \ref{table:cliOptions}. Alternately, runnable jar file by the name {\it YetiLauncher} is also available to launch YETI from GUI. However, till the writing of this thesis, the GUI version of YETI only supports the basic options of YETI execution. Figure \ref{fig:yetiLauncher} shows the equivalent of above command in GUI mode.
+ In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. Other CLI options are already indicated in Table \ref{table:cliOptions}. To execute YETI from GUI, $YetiLauncher$ presented in Figure \ref{fig:yetiLauncher} has been created for use in the present study.
 
 \begin{figure}[h]
 	\centering
-	\frame{\includegraphics[width= 8cm, height = 10cm]{chapter3/yetiCommandGUI.pdf}}
+	\frame{\includegraphics[width= 9.5cm, height = 11.5cm]{chapter3/yetiCommandGUI.pdf}}
 	\caption{GUI launcher of YETI}
 	\label{fig:yetiLauncher}
 \end{figure}
 
 
-As a result of both the above commands YETI launch its own GUI window and start testing the assigned programs. 
-
 \subsection{YETI Test Oracle}
-Oracles in YETI are language dependant. YETI uses two approaches for oracle (pass/fail judgement). In the presence of program specifications, YETI checks for inconsistencies between the code and the specifications. In the absence of specifications YETI checks for assertion violations if assert statements are included by the programmer. However in the absence of both specifications and assertions YETI performs robustness testing that considers any undeclared runtime exceptions as failures. 
+YETI uses one of the two approaches for oracle. In the presence of program specifications, it checks for inconsistencies between the code and the specifications. In the absence of specifications it checks for assertion violation.% if assert statements are included by the programmer. However in the absence of 
+If specifications or assertions are absent, YETI performs robustness testing which considers any undeclared runtime exceptions as failures. 
 
 %If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing.
 %YETI deals with the oracle problem in two ways. If available, it uses code-contracts as oracles, however in the absence of contracts it uses runtime exceptions as errors which is also known as robustness testing.
 
 \subsection{YETI Report}
-YETI gives a complete test report after execution of each test. The report contain all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assign value to help in debugging the identified fault. 
+YETI gives a complete test report at the end of each test session. The report contains all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assigned values to help in debugging the identified fault. 
 \\
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport1.png}}
-	\caption{YETI successful method calls}
+	\caption{Successful method calls of YETI}
 \end{figure}
 
-YETI separates the bugs from successful executions to simplify the test report. This approach helps debuggers to easily track the origin of the problem and rectify it. When a bug is identified during testing YETI saves that state and present it in the bug report. The information includes all the identifiers of the parameters the method call had at the time of execution. It also report the time at which the exception occurs.
+YETI separates the found bugs from successful executions to simplify the test report. This helps debuggers to easily track the origin of the problem rectification. When a bug is identified during testing, YETI saves the details and present it in the bug report as shown in Figure \ref{bugReport}. The information includes all identifiers of the parameters the method call had along with the time at which the exception occurs.
 
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport2.png}}
-	\caption{YETI bug reports.}
+	\caption{A sample of YETI bug report}
+	\label{bugReport}
 \end{figure}
 
 \subsection{YETI Graphical User Interface}
-YETI supports a GUI that not only allows test engineers to monitor the current test session but also to modify its characteristics in real time during test execution. It is useful to have the facility of modifying or aborting the test parameters at run time and observing the test behaviour in response. The Figure \ref{fig:yetiGUI} present the YETI GUI comprising of six numbered windows (the windows are labelled for illustration purposes only).
+YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI1} present the YETI GUI comprising of thirteen labelled components.
 
 \begin{figure}[h]
 	\centering
-	\frame{\includegraphics[width= 15cm, height = 9cm]{chapter3/yetiGUI.png}}
-	\label{fig:yetiGUI}
+	%\frame{\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}}
+	\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}
 	\caption{GUI of YETI}
+	\label{fig:yetiGUI1}
 \end{figure}
 
 \begin{enumerate}
@@ -427,34 +428,28 @@ YETI supports a GUI that not only allows test engineers to monitor the current t
 \item Yeti menu:
 \item File menu:
 \end{enumerate}
-\item Standard toolbar:
-\begin{enumerate}
-\item Slider: “\%null values” displays probability to use a null instance at each variable. The probability is set before the testing by using the option –probabilityToUseNullValue. The default probability is 1. 
-\item Slider “\% new variables” displays probability to create new instances at each call. Same as “\%null values”, it is set before the testing by using the option –newInstanceInjectionProbability and the default value is 1. 
-\item Text box “Max variables per type” displays the cap on the number of instances for any given type. User can modify the sliders and text box during the testing ￼according different test strategies. 
-\item The progress bar “Testing session” indicates the percentage of the test progress.
-\end{enumerate}
+\item Slider of \% null values: It displays the set probability of null values in percentage used as null instance for each variable. The default value of probability is 1. 
+\item Slider of \% new variables: It displays the set probability of creating new instances at each call. The default value of probability is 1. 
+\item Text-box of Max variables per type: It displays the number of variables created for a given type. The default value is 1000.
+\item Progress bar of testing session: It displays the test progress in percentage.
+\item Slider of strategy: It displays the set random strategy for the test session. Each strategy has its own control to change its various parameters. 
 \item Module Name shows the list of the modules under the test. The
 modules with ticks are the modules under test. The module names also show all the
 class names in the test module.
-\item displays the number of unique of bugs detect in the module under
-test over time.
-\item displays the number of calls to the module under test over time.
-\item displays the number of failures over time. They are not both related
-to the module under test.
-\item displays the number of object instances created by YETI over time.
-\item displays all the routines in the module under test with a rectangle.
-Each rectangle presents the results of calls of the routine. The rectangle can have in 4 colors. Black indicates no any calls of this routine. Green indicates that has successful calls of this routine. Red indicates that this routine is called unsuccessfully which means that the call to this routine results in an exception. Yellow indicates undecidable calls, for example if a call cannot finish in predefined time and Yeti stops this call, in this case yeti cannot decide this call is successful or unsuccessful. The text next the routines name show how many calls of this routine and text displays percentage of passed, failed and undescided when the cursor over the rectangle.
-\item displays a table which contains the unique faults are detected by Yeti. It records the detail of exceptions.
-\item Window No 1 displays the failures of the tested module over time.
-\item Window No 2 displays the total number of failures over time. These may be generated from calls not related to the tested module.
-\item Window No 3 displays the total number of calls to the tested module over time. 
-\item Window No 4 displays the total number of variables generated by YETI over time.
-\item Window No 5 displays colored rectangles: one for each constructor and method under test. Each rectangle represents the calls to a constructor or a method.
-\item The colors in a rectangle have the following meaning:
-\item Green indicates successful calls (✓). A successful call is one that does not raise an exception or if it does, the method or the constructor declares to throw it.
-\item Red indicates failed calls (X). A failed call results from raised RuntimeException or one of its subclasses.
-\item Yellow indicates “undecidable” calls (?). A call is “undecidable” if for some reason it takes too long to complete and needs to be stopped, or if a YetiSecurityException (custom exception in YETI) is thrown.
+\item Graph window 1: It displays the total number of unique failures over time in the module under test.
+\item Graph window 2: It displays the total number of calls over time to the module under test.
+\item Routine's progress: It displays test progress of each routine in the module represented by four colours. Mostly green and red colour appears indicating successful and unsuccessful calls respectively. Occasionally black and yellow colours appear indicating no calls and incomplete calls respectively.
+\item Graph window 3: It displays the total number of failures over time in the module under test. 
+\item Graph window 4: It displays the total number of variables over time generated by YETI in the test session.
+%\item displays all the routines in the module under test with a rectangle.
+%Each rectangle presents the results of calls of the routine. The rectangle can have in 4 colors. Black indicates no any calls of this routine. Green indicates that has successful calls of this routine. Red indicates that this routine is called unsuccessfully which means that the call to this routine results in an exception. Yellow indicates undecidable calls, for example if a call cannot finish in predefined time and Yeti stops this call, in this case yeti cannot decide this call is successful or unsuccessful. The text next the routines name show how many calls of this routine and text displays percentage of passed, failed and undescided when the cursor over the rectangle.
+%\item displays a table which contains the unique faults are detected by Yeti. It records the detail of exceptions.
+%\item Window No 5 displays colored rectangles: one for each constructor and method under test. Each rectangle represents the calls to a constructor or a method.
+%\item The colors in a rectangle have the following meaning:
+%\item Green indicates successful calls (✓). A successful call is one that does not raise an exception or if it does, the method or the constructor declares to throw it.
+%\item Red indicates failed calls (X). A failed call results from raised RuntimeException or one of its subclasses.
+%\item Yellow indicates “undecidable” calls (?). A call is “undecidable” if for some reason it takes too long to complete and needs to be stopped, or if a YetiSecurityException (custom exception in YETI) is thrown.
+\item Report section: It displays the number of unique fault by date and time, location and type detected in the module under test. 
 \end{enumerate}
 
 
@@ -463,7 +458,7 @@ In this chapter we define random testing and the various ways of performing rand
 
 \begin{sidewaystable}
     \centering
-    \caption{Summary of automated testing tools}
+    \caption{Main features of automatic testing tools used in random testing}
    \begin{tabular}{|l|l|l|l|l|l|}
 \hline
 
