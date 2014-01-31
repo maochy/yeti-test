@@ -1,24 +1,152 @@
-\chapter{Dirt Spot Sweeping Random Strategy}
-\label{chap:DSSR}
-%\ifpdf
-%    \graphicspath{{Dssr/DssrFigs/PNG/}{Dssr/DssrFigs/PDF/}{Dssr/DssrFigs/}}
-%\else
- %   \graphicspath{{Dssr/DssrFigs/EPS/}{Dssr/DssrFigs/}}
-%\fi
+
+% THIS IS SIGPROC-SP.TEX - VERSION 3.1
+% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
+% APRIL 2009
+%
+% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
+% LaTeX2e document class file for Conference Proceedings submissions.
+% ----------------------------------------------------------------------------------------------------------------
+% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
+%       1) The Permission Statement
+%       2) The Conference (location) Info information
+%       3) The Copyright Line with ACM data
+%       4) Page numbering
+% ---------------------------------------------------------------------------------------------------------------
+% It is an example which *does* use the .bib file (from which the .bbl file
+% is produced).
+% REMEMBER HOWEVER: After having produced the .bbl file,
+% and prior to final submission,
+% you need to 'insert'  your .bbl file into your source .tex file so as to provide
+% ONE 'self-contained' source file.
+%
+% Questions regarding SIGS should be sent to
+% Adrienne Griscti ---> griscti@acm.org
+%
+% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
+% Gerald Murray ---> murray@hq.acm.org
+%
+% For tracking purposes - this is V3.1SP - APRIL 2009
+
+\documentclass{acm_proc_article-sp}
+
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage{float}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+ 
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+%numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=2,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+
+
+\restylefloat{table}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+
+\begin{document}
+
+
+
+\title{Automated Discovery of Failure Domain+}
+
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (matting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Mian Asbat Ahmad\\
+       \affaddr{Department of Computer Science}\\
+       \affaddr{The University of York}\\
+       \affaddr{York, United Kingdom}\\
+       \email{mian.ahmad@york.ac.uk}
+% Please Dr. Manuel, add your abb details. I am not able to create table here because of the format. Thanks.
+\alignauthor
+Manuel Oriol \\
+       \affaddr{Department of Computer Science}\\
+       \affaddr{The University of York}\\
+       \affaddr{York, United Kingdom}\\
+       \email{manuel.oriol@york.ac.uk}
+}
+
+
+
+\maketitle
+\begin{abstract}
+This paper presents a new, enhanced and improved form of automated random testing: the Dirt Spot Sweeping Random (DSSR) strategy. This strategy is based on the assumption that faults and unique failures reside in contiguous blocks and stripes. The DSSR strategy starts as a regular random+ testing strategy --- a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failures found in hope of finding failures of different kind in its vicinity.
+
+The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random (R) and random+ (R+) strategies by testing 60 classes (35,785 line of code) with one million ($10^5$) calls for each session, 30 times for each strategy.
+The results indicate that for 31 classes, all three strategies find the same unique failures. We analysed the 29 remaining classes using t-tests and found that for 7 classes DSSR is significantly better than both R+ and R, for 8 classes it performs similarly to R+ and is significantly better than R, and for 2 classes it performs similarly to random and is better than R+. In all other cases, DSSR, R+ and R do not perform significantly differently.
+Numerically, the DSSR strategy finds 43 more unique failures than R and 12 more unique failures than R+.
+\end{abstract}
+
+%A category including the fourth, optional field follows...
+\category{D.2.5}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+\terms{Comparison, Verification, }
+
+\keywords{software testing, automated random testing} % NOT required for Proceedings
+
 
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
-\section{Introduction}\label{sec:intro4}
-The success of a software testing technique is mainly based on the number of faults it discovers in the SUT. An efficient testing process discovers the maximum number of faults in a minimum possible time. Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of the input domain, limited resources and strict time constraints. Therefore, strategies in automated software testing tools are developed with the aim to select more fault-finding test input from input domain for a given SUT. Producing such targeted test input is difficult because each system has its own requirements and functionality.
+\section{Introduction}\label{sec:intro}
+Testing is the most widely used and essential method of software testing. Therefore, the aim of researchers is to improve the effectiveness and efficiency of software testing process. Testing effectiveness is the increase in number of faults found in a specific number of test cases, which is achieved by up-gradation of existing and development of new improved testing techniques. While the improve in testing efficiency is the decrease in the total time taken by a software testing process, which is most of the time accomplished by automation of the whole or a specific part of software testing process, like test data generation, execution and oracle formation.  
 
-Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causing inputs across the input domain. They divided the patterns into point, block and strip patterns on the basis of their occurrence across the input domain. Chen et al.~\cite{Chen2008} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance of random testing increases by up to 50\% when test input is selected evenly across the whole input domain. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure patterns. Similarly Restricted Random Testing \cite{Chan2002}, Feedback directed Random Test Generation \cite{Pacheco2007}, Mirror Adaptive Random Testing \cite{Chen2003} and Quasi Random Testing \cite{Chen2005} stress the need for test case selection covering the whole input domain to get better results.
+Daikon~\cite{} is a tool that automate part of the testing process by generating likely program invariants. The invariants are processed and can be annotated in the source code of the program to facilitate the testing process. While the tool helps to increase the efficiency, testing effectiveness is also dependant on it because the invariants produced by the tool are evaluated in the test execution to decide a pass and fail test case.
 
-In this chapter we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random (DSSR) strategy  which starts as a random+ strategy --- a random strategy focusing more on boundary values. When a new failure is found, it increases the chances of finding more faults using neighbouring values. As in previous studies~\cite{oriol2012law} we approximate faults with unique failures. Since this strategy is an extension of random testing strategy, it has the full potential to find all unique failures in the program, but additionally we expect it to be faster at finding unique failures, for classes in which failure domains are contiguous, as compared with random (R) and random+ (R+) strategies.
+In this paper we analysed the test results obtained from the same set of programs tested with and without the assistance of Daikon. For this purpose, we propose a new strategy Automated Discovery of Failure Domain+. It is based on the combination of our two previously proposed strategies Dirt Spot Sweeping Random (DSSR) and Automated Discovery of Failure Domain (ADFD), which discovers the fault surrounding values and graphically plot the fault domains respectively \cite{}.  
+
+
+
+
+The success of a software testing technique is mainly based on the number of faults it discovers in the Software Under Test (SUT). An efficient testing process discovers the maximum number of faults in a minimum possible time. Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of the input domain, limited resources and strict time constraints. Therefore, strategies in automated software testing tools are developed with the aim to select more fault-finding test input from input domain for a given SUT. Producing such targeted test input is difficult because each system has its own requirements and functionality.
+
+Chan et al.~\cite{Chan1996} discovered that there are patterns of failure-causing inputs across the input domain. They divided the patterns into point, block and strip patterns on the basis of their occurrence across the input domain. Chen et al.~\cite{Chen2008} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance of random testing increases by up to 50\% when test input is selected evenly across the whole input domain. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure patterns. Similarly Restricted Random Testing \cite{Chan2002}, Feedback directed Random Test Generation \cite{Pacheco2007a}, Mirror Adaptive Random Testing \cite{Chen2003} and Quasi Random Testing \cite{Chen2005} stress the need for test case selection covering the whole input domain to get better results.
+
+In this paper we take the assumption that for a significant number of classes failure domains are contiguous or are very close by. From this assumption, we devised the Dirt Spot Sweeping\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} Random (DSSR) strategy  which starts as a random+ strategy --- a random strategy focusing more on boundary values. When a new failure is found, it increases the chances of finding more faults using neighbouring values. As in previous studies~\cite{Oriol2012} we approximate faults with unique failures. Since this strategy is an extension of random testing strategy, it has the full potential to find all unique failures in the program, but additionally we expect it to be faster at finding unique failures, for classes in which failure domains are contiguous, as compared with random (R) and random+ (R+) strategies.
 
 We implemented the DSSR strategy in the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies find the same unique failures, for remaining 47\% DSSR strategy perform up to 33\% better than random strategy and up to 17\% better than random+ strategy.
 We also validated the approach by comparing the significance of these results using t-tests and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other cases, DSSR, R+ and R do not seem to perform significantly differently.
 Numerically, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
 
-%The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion3} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
+The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
 
 
 
@@ -29,43 +157,31 @@ Numerically, the DSSR strategy found 43 more unique failures than R and 12 more 
 The new software testing technique named, Dirt Spot Sweeping Random (DSSR) strategy combines the random+ strategy with a dirt spot sweeping functionality. It is based on two intuitions. First, boundaries have interesting values and using these values in isolation can provide high impact on test results. Second, faults and unique failures reside in contiguous block and strip pattern. If this is true, DSS increase the performance of the test strategy. Before presenting the details of the DSSR strategy, it is pertinent to review briefly the Random and the Random+ strategy.
 
 \subsection{Random Strategy (R)}
-The random strategy is a black-box testing technique in which the SUT is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracles. Because of its black-box testing nature, this strategy is particularly effective in testing softwares where the developers want to keep the source code secret~\cite{Chen2010}. The generation of random test data is comparatively cheap and does not require too much intellectual and computational efforts~\cite{Ciupa2009, Ciupa2008}. It is mainly for this reason that various researchers have recommended random strategy for automated testing tools \cite{Ciupa2008a}. YETI \cite{Oriol2010b, Oriol2010}, AutoTest \cite{Ciupa2007, Leitner2007}, QuickCheck \cite{Claessen2000}, Randoop \cite{Pacheco2007}, JArtege \cite{Oriat2004} are some of the most common automated testing tools based on random strategy.
+The random strategy is a black-box testing technique in which the SUT is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracles. Because of its black-box testing nature, this strategy is particularly effective in testing softwares where the developers want to keep the source code secret~\cite{Chen2010}. The generation of random test data is comparatively cheap and does not require too much intellectual and computational efforts~\cite{Ciupa2009, Ciupa2008}. It is mainly for this reason that various researchers have recommended random strategy for automated testing tools \cite{Ciupa2008a}. YETI \cite{Oriol2010a, Oriol2010}, AutoTest \cite{Leitner2007, Ciupa2007}, QuickCheck \cite{Claessen2000}, Randoop \cite{Pacheco2007}, JArtege \cite{Oriat2004} are some of the most common automated testing tools based on random strategy.
 
-\indent Efficiency of random testing was made suspicious with the intuitive statement of Myers \cite{Myers1979} who termed random testing as one of the poorest methods for software testing. However, experiments performed by various researchers, \cite{Ciupa2007, Duran1981, Duran1984, hamlet1994, Ntafos2001} have proved experimentally that random testing is simple to implement, cost effective, efficient and free from human bias as compared to its rival techniques.
+\indent Efficiency of random testing was made suspicious with the intuitive statement of Myers \cite{Myers2004} who termed random testing as one of the poorest methods for software testing. However, experiments performed by various researchers, \cite{Ciupa2007, Duran1981, Duran1984, Hamlet1994, Ntafos2001} have proved experimentally that random testing is simple to implement, cost effective, efficient and free from human bias as compared to its rival techniques.
 
 Programs tested at random typically fail a large number of times (there are a large number of calls), therefore, it is necessary to cluster failures that likely represent the same fault. The traditional way of doing it is to compare the full stack traces and error types and use this as an equivalence class~\cite{Ciupa2007,Oriol2012} called a unique failure. This way of grouping failures is also used for random+ and DSSR.
 
 \subsection{Random Plus Strategy (R+)}
-The random+ strategy~\cite{Leitner2007} is an extension of the random strategy. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{Beizer1990} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MAX_INT-2+; \verb+MIN_INT+, \verb-MIN_INT+1-, \verb-MIN_INT+2-. These special values can add a significant improvement to any testing method. For example:
-
-\begin{lstlisting}
-public void test (int arg) {
-arg = arg + 1;
-int [] intArray = new intArray[arg];
-...
-}
-\end{lstlisting}
-
-In the above piece of code, on passing interesting value \verb+MAX_INT+ as argument the code increment it by 1 making it a negative value and thus an error is generated when the system try to build an array of negative size. 
-
-Similarly, the tester might also add some other special values that he considers effective in finding faults for the SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5 and 45 to 55 to the pre-defined list of special values. This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of more relevance and high chances of finding faults for the given SUT. These special values have high impact on the results, particularly for detecting problems in specifications~\cite{Ciupa2008}.
+The random+ strategy~\cite{Leitner2007} is an extension of the random strategy. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{Beizer1990} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MAX_INT-2+; \verb+MIN_INT+, \verb-MIN_INT+1-, \verb-MIN_INT+2-. Similarly, the tester might also add some other special values that he considers effective in finding faults for the SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5 and 45 to 55 to the pre-defined list of special values. This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of more relevance and high chances of finding faults for the given SUT. These special values have high impact on the results, particularly for detecting problems in specifications~\cite{Ciupa2008}.
 
 
 \subsection{Dirt Spot Sweeping (DSS)}
-Chan et al.~\cite{Chan1996} found that there are patterns of failure-causing inputs across the input domain. Figure \ref{fig:patterns3} shows these patterns for two dimensional input domain. They divided these patterns into three types called points, block and strip patterns. The black area (points, block and strip) inside the box show the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these fault patterns if test cases far away from each other are selected. Other researchers~\cite{Chan2002, Chen2003, Chen2005}, also tried to generate test cases further away from one another targeting these patterns and achieved better performance. Such increase in performance indicate that faults more often occur contiguous across the input domain. In Dirt Spot Sweeping we propose that if a value reveals fault from the block or strip pattern then for the selection of the next test value, DSS may not look farthest away from the known value and rather pick the closest test value for the next couple of tests to find another fault from the same region.
+Chan et al.~\cite{Chan1996} found that there are patterns of failure-causing inputs across the input domain. Figure \ref{fig:patterns} shows these patterns for two dimensional input domain. They divided these patterns into three types called points, block and strip patterns. The black area (points, block and strip) inside the box show the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these fault patterns if test cases far away from each other are selected. Other researchers~\cite{Chan2002, Chen2003, Chen2005}, also tried to generate test cases further away from one another targeting these patterns and achieved better performance. Such increase in performance indicate that faults more often occur contiguous across the input domain. In Dirt Spot Sweeping we propose that if a value reveals fault from the block or strip pattern then for the selection of the next test value, DSS may not look farthest away from the known value and rather pick the closest test value to find another fault from the same region.
 
 \begin{figure}[ht]                                    
 \centering
-\includegraphics[width= 8cm,height=2.5cm]{chapter4/ART_Patterns.png}
+\includegraphics[width= 8cm,height=2.5cm]{ART_Patterns.png}
 \caption{Failure patterns across input domain~\cite{Chen2008}}
-\label{fig:patterns3}
+\label{fig:patterns}
 \end{figure}
 
 Dirt spot sweeping is the part of DSSR strategy that comes into action when a failure is found in the system. On finding a failure, it immediately adds the value causing the failure and its neighbouring values to the existing list of interesting values. For example, in a program when the \verb+int+ type value of 50 causes a failure in the system then spot sweeping will add values from 47 to 53 to the list of interesting values. If the failure lies in the block or strip pattern, then adding it's neighbouring values will explore other failures present in the block or strip. As against random plus where the list of interesting values remain static, in DSSR strategy the list of interesting values is dynamic and changes during the test execution of each program.
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=8cm,height=2.2cm]{chapter4/block2.png}
+\includegraphics[width=8cm,height=2.2cm]{block2.png}
 \caption{DSSR covering block and strip pattern}
 \label{fig:block2}
 \end{figure}
@@ -78,7 +194,7 @@ The DSSR strategy continuously tracks the number of failures during the executio
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=10cm, height=12cm]{chapter4/flowchart1.pdf}
+\includegraphics[width=\columnwidth]{flowchart1.pdf}
 \caption{Working mechanism of DSSR Strategy}
 \label{fig:Working_DSSS}
 \end{figure}
@@ -87,16 +203,15 @@ The flowchart presented in Figure~\ref{fig:Working_DSSS} depicts that, when the 
 
 Boundary and other special values that have a high tendency of finding faults in the SUT are added to the list of interesting values by random+ strategy prior to the start of test session where as in DSSR strategy the fault-finding and its surrounding values are added at runtime when a failure is found. 
 
-Table \ref{table:addvalues2} presents the values are added to the list of interesting values when a failure is found. In the table the test value is represented by $X$ where $X$ can be $int, double, float, long, byte, short, char$ and $String$. All values are converted to their respective types before adding them to the list of interesting values.
+Table \ref{table:addvalues} presents the values are added to the list of interesting values when a failure is found. In the table the test value is represented by X where X can be int, double, float, long, byte, short, char and String. All values are converted to their respective types before adding them to the list of interesting values.
 
 \begin{table}[ht]
 %\scriptsize
 \caption{Neighbouring values for primitive types and String} % title of Table
-\smallskip
 \centering % used for centering table
 \begin{tabular}{| l | l |} % centered columns (4 columns)
 \hline\hline %inserts double horizontal lines
-{\textbf {Type}} & {\textbf {Values to be added}}\\ [0.5ex] % inserts table
+Type & Values to be added\\ [0.5ex] % inserts table
 %heading
 \hline % inserts single horizontal line
 \multirow{1}{*}{X is int, double, float, } & ~ X,  X+1, X+2, X-1, X-2 \\ % inserting body of the
@@ -116,7 +231,7 @@ Table \ref{table:addvalues2} presents the values are added to the list of intere
 \hline %inserts single line
 \end{tabular}
 \bigskip
-\label{table:addvalues2} % is used to refer this table in the text
+\label{table:addvalues} % is used to refer this table in the text
 \end{table}
 
 
@@ -154,7 +269,7 @@ As the test starts, three faults are quickly discovered by DSSR strategy in the 
 
 \indent \textbf{Fault 2:} After discovering the first fault, the strategy adds it and its surrounding values to the list of interesting values i.e. \verb+0, 1, 2, 3 and -1, -2, -3+ in this case. In the second test case the strategy may pick \verb+-3+ as a test value which may lead to the second fault where assertion (2) fails because the square root of \verb+9+ is \verb+3+ instead of the input value -3.
 
-\indent \textbf{Fault 3:} After a few tests the strategy may select \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to discovery of the 3rd fault because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
+\indent \textbf{Fault 3:} After a few tests the strategy may select \\ \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to discovery of the 3rd fault because int variable \verb+result1+ will not be able to store the square of \\ \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
 
 The above process explains that including the border, fault-finding and surrounding values to the list of interesting values in DSSR strategy lead to the available faults quickly and in fewer tests as compared to random and random+ strategy. R and R+ takes more number of tests and time to discover the second and third faults because in these strategies the search for new unique failures starts again randomly in spite of the fact that the remaining faults are very close to the first one.
 
@@ -162,9 +277,9 @@ The above process explains that including the border, fault-finding and surround
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
 
 
-\section{Implementation of the DSSR strategy}\label{sec:imp}
+\section{Implementation of the DSSR \\ strategy}\label{sec:imp}
 
-Implementation of the DSSR strategy is made in the YETI open-source automated random testing tool. YETI, coded in Java language, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, high speed (up to one million calls per minute on java code), real time logging, real time GUI support, capability to test programs with multiple strategies and auto generation of test report at the end of test session. For large-scale testing there is a cloud-enabled version of YETI, capable of executing parallel test sessions in Cloud~\cite{Oriol2010}. A number of hitherto faults have successfully been found by YETI in various production softwares~\cite{Oriol2011, Oriol2012}.
+Implementation of the DSSR strategy is made in the YETI open-source automated random testing tool. YETI, coded in Java language, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, high speed ( up to one million calls per minute on java code), real time logging, real time GUI support, capability to test programs with multiple strategies and auto generation of test report at the end of test session. For large-scale testing there is a cloud-enabled version of YETI, capable of executing parallel test sessions in Cloud~\cite{Oriol2010}. A number of hitherto faults have successfully been found by YETI in various production softwares~\cite{Oriol2011, Oriol2012}.
 
 YETI can be divided into three decoupled main parts: the core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies define the procedure of selecting the modules (classes), the routines (methods) and generation of values for instances involved in the routines. By default, YETI uses the random strategy if no particular strategy is defined during test initialisation. It also enables the user to control the probability of using null values and the percentage of newly created objects for each test session. YETI provides an interactive Graphical User Interface (GUI) in which users can see the progress of the current test in real time. In addition to GUI, YETI also provides extensive logs of the test session for more in-depth analysis.
 
@@ -172,7 +287,7 @@ The DSSR strategy is an extension of YetiRandomPlusStrategy, an extended form of
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm,height=5cm]{chapter4/hierarchy.pdf}
+\includegraphics[width=4cm,height=5cm]{hierarchy.pdf}
 \caption{Class Hierarchy of DSSR in YETI}
 \label{fig:hierarchyofDSSR}
 \end{figure}
@@ -200,18 +315,18 @@ For evaluating the DSSR strategy, the following research questions have been add
 
 \subsection{Experiments}
 
-To evaluate the performance of DSSR we performed extensive testing of programs from the Qualitas Corpus~\cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects have been collected in an organised form containing the source and binary forms. Version 20101126, which contains 106 open source java projects is used in the current evaluation. In our experiments we selected 60 random classes from 32 random projects. All the selected classes produced at least one fault and did not time out with maximum testing session of 10 minutes. Every class is tested thirty times by each strategy (R, R+, DSSR). Name, version and size of the projects to which the classes belong are given in Table~\ref{table:projects} while test details of the classes is presented in Table~\ref{table:Results}. Line of Code (LOC) tested per class and its total is shown in column 3 of Table~\ref{table:Results}. 
+To evaluate the performance of DSSR we performed extensive testing of programs from the Qualitas Corpus~\cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects have been collected in an organised form containing the source and binary forms. Version 20101126, which contains 106 open source java projects is used in the current evaluation. In our experiments we selected 60 random classes from 32 random projects. All the selected classes produced at least one fault and did not time out with maximum testing session of 10 minutes. Every class is tested thirty times by each strategy (R, R+, DSSR). Name, version and size of the projects to which the classes belong are given in table~\ref{table:projects} while test details of the classes is presented in table~\ref{table:Results}. Line of Code (LOC) tested per class and its total is shown in column 3 of table~\ref{table:Results}. 
 
 Every class is evaluated through $10^5$ calls in each test session.\footnote{The total number of tests is thus $60\times 30\times 3 \times 10^5 = 540\times 10^6~tests$.} 
-Because of the absence of the contracts and assertions in the code under test, similar approach as used in previous studies ~\cite{Oriol2012}, is followed using undeclared exceptions to compute unique failures.
+Because of the absence of the contracts and assertions in the code under test, Similar approach as used in previous studies ~\cite{Oriol2012} is followed using undeclared exceptions to compute unique failures.
 
 
-\begin{table}[htp]
+\begin{table}[h]
 \caption{Name and versions of 32 Projects randomly selected from the Qualitas Corpus for the experiments}
 \centering
 \begin{tabular}{|r|l|r|r|}
 \hline
-{\textbf {S. No}}& 	{\textbf {Project Name}}	& 	{\textbf {Version}}		&	{\textbf {Size (MB)}}\\
+S. No& 	Project Name	& 	Version		&	Size (MB)\\
 \hline
 1	&	apache-ant	&	1.8.1			&	59\\
 2	&	antlr			&	3.2			&	13\\
@@ -257,16 +372,16 @@ All tests are performed with a 64-bit Mac OS X Lion Version 10.7.4 running on 2 
 
 
 \subsection{Performance measurement criteria}
-Various measures including the E-measure (expected number of failures detected), P-measure (probability of detecting at least one failure) and F-measure (number of test cases used to find the first fault) have been used by researchers to find the effectiveness of the random test strategy. The E-measure and P-measure have been heavily criticised~\cite{Chen2008} and are not considered effective measuring techniques while the F-measure has been often used by various researchers~\cite{Chen2004, Chen1996}. In our initial experiments the F-measure is used to evaluate the efficiency. However it was realised that this is not the right choice. In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair~\cite{Liu2012}.
+Various measures including the E-measure (expected number of failures detected), P-measure (probability of detecting at least one failure) and F-measure (number of test cases used to find the first fault) have been used by researchers to find the effectiveness of the random test strategy. The E-measure and P-measure have been heavily criticised~\cite{Chen2008} and are not considered effective measuring techniques while the F-measure has been often used by various researchers~\cite{Chen1996, Chen2004}. In our initial experiments the F-measure is used to evaluate the efficiency. However it was realised that this is not the right choice. In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair~\cite{Liu2012}.
 
 
   
-The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault. Currently automated testing tools test the whole system and print all discovered faults in one go therefore, F-measure is not the favourable choice. In our experiments, performance of the strategy is measured by the maximum number of faults detected in SUT by a particular number of test calls \cite{Ciupa2007, Ciupa2008b, Pacheco2007}. This measurement is effective because it considers the performance of the strategy when all other factors are kept constant.
+The literature review revealed that the F-measure is used where testing stops after identification of the first fault and the system is given back to the developers to remove the fault. Currently automated testing tools test the whole system and print all discovered faults in one go therefore, F-measure is not the favourable choice. In our experiments, performance of the strategy is measured by the maximum number of faults detected in SUT by a particular number of test calls \cite{Pacheco2007a, Ciupa2007, Ciupa2008b}. This measurement is effective because it considers the performance of the strategy when all other factors are kept constant.
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=14cm]{chapter4/DssrImprove.png}
+\includegraphics[width=17cm]{DssrImprove.png}
 \caption{Improvement of DSSR strategy over Random and Random+ strategy.}
 \label{fig:LineChart}
 \end{figure*}
@@ -277,17 +392,14 @@ The literature review revealed that the F-measure is used where testing stops af
 
 \begin{table*} [htp!]
   \scriptsize
- \caption{Experiments result presenting Serial Number (S.No), Class Name, Line of Code (LOC), mean, maximum and minimum number of faults and relative standard deviation for each Random (R), Random+ (R+) and Dirt Spot Sweeping Random (DSSR) strategies.}
-	%\begin{minipage}[h]{\pagewidth}\centering
-	\hspace{-2cm}
+ \caption{Complete results for R, R+ and DSSR. Results present Serial Number (S.No), Class Name, Line of Code (LOC), mean, maximum number of faults, minimum number of faults and relative standard deviation for each Random (R), Random+ (R+) and Dirt Spot Sweeping Random (DSSR) strategies.}
+	%\begin{minipage}[h]{\textwidth}\centering
 	\noindent\makebox[\textwidth]{
  	\begin{tabularx}{1 \textwidth}{r l r r r r r r r r r r r r r}
       %\aline
-
-      \multirow{2}{*}{{\textbf {S. No}}}		& \multirow{2}{*}{{\textbf {Class Name}}}		& \multirow{2}{*}{{\textbf {LOC}}}	& \multicolumn{4}{c}{{\textbf {R}}}							&	\multicolumn{4}{c}{{\textbf {R+}}}							&	\multicolumn{4}{c}{{\textbf {DSSR}}}	\\
+      \multirow{2}{*}{S. No}		& \multirow{2}{*}{Class Name}		& \multirow{2}{*}{LOC}	& \multicolumn{4}{c}{R}							&	\multicolumn{4}{c}{R+}							&	\multicolumn{4}{c}{DSSR}	\\
       %\cline{3-14} 
       						&						&			& Mean 	& Max	& Min 	& 	R-STD				& Mean 	& Max 	& Min 	&	 R-STD 			& Mean 		& Max 		& Min		& R-STD \\
-
 
 1						& ActionTranslator			&709		& 96		&	96	&	96	& 	0					& 96		& 96 		& 96		& 		0			& 96			& 96			& 96			&	0\\     
 2						& AjTypeImpl				&1180		& 80		&	83	&	79	& 	0.02					& 80		& 83 		& 79		& 		0.02			& 80			& 83			& 79			&	0.01\\      
@@ -377,17 +489,17 @@ The improvement of DSSR over R and R+ strategy is calculated by applying the for
 
 The findings show that DSSR strategy perform up to 33\% better than R and up to 17\% better than R+ strategy. In some cases DSSR perform equally well with R and R+ but in no case DSSR performed lower than R and R+. Based on the results it can be stated that DSSR strategy is a better choice than R and R+ strategy. 
 
+
+
 \begin{table*}[htp]
 \small
-\caption{T-test results of the classes}
-\smallskip
+\caption{T-test results of the classes showing different results}
 \centering
 \begin{tabular}{rlrrrl}
-\hline
- \multirow{2}{*} {{\textbf {S. No}}}	& \multirow{2}{*}{{\textbf {Class Name}}}	&  \multicolumn{3}{c}{{\textbf {T-test Results}}} & \multirow{2}{*}{{\textbf {Interpretation}}} \\
+ \multirow{2}{*} {S. No}	& \multirow{2}{*}{Class Name}	&  \multicolumn{3}{c}{T-test Results} & \multirow{2}{*}{Interpretation} \\
 
-		&					& 	DSSR, R			& DSSR, R+	&  R, R+ 		& 		\\
-\hline
+								& & 	DSSR, R	& DSSR, R+	&  R, R+ 	& 		\\
+
 1		&	AjTypeImpl		&	1 				& 1 			& 1			& 		\\	
 2		&	Apriori			&	\textbf{0.03}	 	& 0.49		& 0.16		&		\\	
 3		&	CheckAssociator	&	\textbf{0.04}	 	& \textbf{0.05}	& 0.44		& DSSR better		\\	
@@ -396,23 +508,23 @@ The findings show that DSSR strategy perform up to 33\% better than R and up to 
 6		&	DomParser		&	\textbf{0.05}	 	& 0.23		& 0.13		&				\\
 7		&	EntityDecoder		&	\textbf{0.04}	 	& 0.28		& 0.3			&		\\			
 8		&	Font				&	0.18	 			& 0.18		& 1			&		\\
-9		&	Group			&	0.33	 			& \textbf{0.03}	& \textbf{0.04}	& DSSR = R \textgreater R+	\\
+9		&	Group			&	0.33	 			& \textbf{0.03}	& \textbf{0.04}	& DSSR = R > R+	\\
 10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61		& DSSR better \\		
 11		&	InstrumentTask		&	0.16				& 0.33		& 0.57		& \\
-12		&	JavaWrapper		&	\textbf{0.001}		& 0.57		& 0.004		& DSSR = R+ \textgreater R \\
+12		&	JavaWrapper		&	\textbf{0.001}		& 0.57		& 0.004		& DSSR = R+ > R \\
 13		& 	JmxUtilities		&	0.13				& 0.71		& 0.08		&	\\
-14		&	List				& 	\textbf{0.01}		&0.25		&\textbf{0}		& DSSR = R+ \textgreater R \\
-15		&	NodeSequence	&	0.97				&\textbf{0.04}	&\textbf{0.06}	& DSSR = R \textgreater R+ \\
+14		&	List				& 	\textbf{0.01}		&0.25		&\textbf{0}		& DSSR = R+ > R \\
+15		&	NodeSequence	&	0.97				&\textbf{0.04}	&\textbf{0.06}	& DSSR = R > R+ \\
 16		&	NodeSet			&	\textbf{0.03}		&0.42		&0.26		& 	\\
 17		&	Project			&	\textbf{0.001}		&0.57		&\textbf{0.004}	& DSSR better \\		
-18		&	Repository		&	\textbf{0}			&1			&\textbf{0}		& DSSR = R+ \textgreater R \\
+18		&	Repository		&	\textbf{0}			&1			&\textbf{0}		& DSSR = R+ > R \\
 19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR better \\
 20		&	Scene			&	\textbf{0}			&\textbf{0}		& 1			& DSSR better \\
-21		&	Server			&	\textbf{0.03}		& 0.88		&\textbf{0.03} 	& DSSR = R+ \textgreater R \\
-22		&	Sorter			& 	\textbf{0}			& 0.33		&\textbf{0}		& DSSR = R+ \textgreater R \\
-23		&	Statistics			&	\textbf{0}			& 0.43		&\textbf{0}		& DSSR = R+ \textgreater R\\
-24		&	Stopwords		&	\textbf{0}			& 0.23		&\textbf{0}		& DSSR = R+ \textgreater R \\
-25		&	StringHelper		&	\textbf{0.03}		& 0.44		&0.44		& DSSR = R+ \textgreater R\\
+21		&	Server			&	\textbf{0.03}		& 0.88		&\textbf{0.03} 	& DSSR = R+ > R \\
+22		&	Sorter			& 	\textbf{0}			& 0.33		&\textbf{0}		& DSSR = R+ > R \\
+23		&	Statistics			&	\textbf{0}			& 0.43		&\textbf{0}		& DSSR = R+ > R\\
+24		&	Stopwords		&	\textbf{0}			& 0.23		&\textbf{0}		& DSSR = R+ > R \\
+25		&	StringHelper		&	\textbf{0.03}		& 0.44		&0.44		& DSSR = R+ > R\\
 26		& 	Trie				&	0.1				& 0.33		&0.47		& DSSR better \\
 27		&	WebMacro		&	0.33				& 1			&0.16		& \\
 28		&	XMLEntityManager	&	0.33				& 0.33		&0.16		& \\
@@ -423,6 +535,10 @@ The findings show that DSSR strategy perform up to 33\% better than R and up to 
 \bigskip
 \label{table:ttest}
 \end{table*}
+
+
+
+
 
 \subsection{Are there classes for which any of the three strategies provide better results?}
 
@@ -437,7 +553,7 @@ T-tests applied to the data given in Table~\ref{table:ttest} show that DSSR is s
 \centering
 \begin{tabular}{|r|l|r|}
 \hline
-{\textbf {S. No}}	& 	{\textbf {Category}}			& 	{\textbf {Result}}\\
+S. No	& 	Category			& 	Result\\
 \hline
 1		&	DSSR > R			&	12 \\	
 2		&	DSSR > R+		&	10 \\	
@@ -493,9 +609,8 @@ In spite of the better performance of DSSR strategy compared to R and R+ strateg
 
 %%%%%%%%%%%%%%%%%    DISCUSSION   %%%%%%%%%%%%%%%%%%%%
 
-\section{Discussion}\label{sec:discussion3}
+\section{Discussion}\label{sec:discussion}
 In this section we discuss various factors such as the time taken, effect of test duration, number of tests, number of faults in the different strategies and the effect of finding first fault in the DSSR strategy.
-
 \textbf{Time taken to execute an equal number of test cases:}
 The DSSR strategy takes slightly more time (up to 5\%) than both pure random and random plus which may be due to maintaining sets of interesting values during the execution. We do not believe that the overhead can be reduced. 
 
@@ -522,7 +637,10 @@ In the example above the value 34.4445 and its surrounding values would  be adde
 \textbf{DSSR strategy and coverage:} Random strategies typically achieve high level of coverage~\cite{Oriol2010}. It might also be interesting to compare R, R+ and DSSR with respect to the achieved coverage or even to use a DSSR variant that adds a new interesting value and its neighbours when a new branch is reached.
 
 
-\textbf{Threats to validity:} As usual with such empirical studies, the present work might suffer from a non-representative selection of classes. The selection in the current study is however made through random process and objective criteria, therefore, it seems likely that it would be representative. The parameters of the study might also have prompted incorrect results. But this is unlikely due to previous results on random testing~\cite{Oriol2012}.
+\textbf{Threats to validity:} As usual with such empirical studies, the present work might suffer from a non-representative selection of classes.
+The selection in the current study is however made through random process and objective criteria, therefore, it seems likely that it would be representative.
+
+The parameters of the study might also have prompted incorrect results. But this is unlikely due to previous results on random testing~\cite{Oriol2012}.
 
 
 
@@ -530,9 +648,9 @@ In the example above the value 34.4445 and its surrounding values would  be adde
 
 \section{Related Work}\label{sec:rw}
 
-Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and Java libraries~\cite{Csallner2004, Claessen2000, Pacheco2005}. Its simplicity, ease of implementation and efficiency in generating test cases make it the best choice for test automation~\cite{hamlet1994}. Some of the well known automated tools based on random strategy includes Jartege~\cite{Oriat2004}, Eclat~\cite{Pacheco2005}, JCrasher~\cite{Csallner2004}, AutoTest \cite{Ciupa2007, Ciupa2008a} and YETI~\cite{Oriol2012, Oriol2010}.
+Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and Java libraries~\cite{Pacheco2005, Csallner2004, Claessen2000a}. Its simplicity, ease of implementation and efficiency in generating test cases make it the best choice for test automation~\cite{Hamlet1994}. Some of the well known automated tools based on random strategy includes Jartege~\cite{Oriat2004}, Eclat~\cite{Pacheco2005}, JCrasher~\cite{Csallner2004}, AutoTest \cite{Ciupa2007, Ciupa2008a} and YETI~\cite{Oriol2010, Oriol2012}.
 
-In pursuit of better test results and lower overhead, many variations of random strategy have been proposed~\cite{Chan2002, Chen2003, Chen2010, Chen2005, Chen2004a}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. Mirror ART and ART through dynamic partitioning increased the performance by reducing the overhead of ART. The main reason behind better performance of the strategies is that even spread of test input increases the chance of exploring the fault patterns present in the input domain.
+In pursuit of better test results and lower overhead, many variations of random strategy have been proposed~\cite{Chen2010, Chen2005, Chan2002, Chen2004a, Chen2003}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. Mirror ART and ART through dynamic partitioning increased the performance by reducing the overhead of ART. The main reason behind better performance of the strategies is that even spread of test input increases the chance of exploring the fault patterns present in the input domain.
 
 A more recent research study \cite{Yoo2012} stresses on the effectiveness of data regeneration in close vicinity of the existing test data. Their findings showed up to two orders of magnitude more efficient test data generation than the existing techniques. Two major limitations of their study are the requirement of existing test cases to regenerate new test cases, and increased overhead due to ``meta heuristics search'' based on hill climbing algorithm to regenerate new data. In DSSR no pre-existing test cases are required because it utilises the border values from R+ and regenerate the data very cheaply in a dynamic fashion different for each class under test without any prior test data and with comparatively lower overhead. 
   
@@ -541,9 +659,9 @@ The random+ (R+) strategy is an extension of the random strategy in which intere
 %It is interesting that numerous efforts have been made to discover the fault patterns~\cite{Chen2010, Chen2005, Chan2002, Chen2004a, Chen2003}, etc. but in our knowledge, none has been published on covering/sweeping all the faults lying in a specific pattern once it has been discovered.
 
 
-A common practice to evaluate performance of an extended strategy is to compare the results obtained by applying the new and existing strategy to identical programs~\cite{Duran1984, Gutjahr1999, hamlet1990}. Arcuri et al. \cite{Arcuri2012}, stress on the use of random testing as a baseline for comparison with other test strategies. We followed the procedure and evaluated DSSR strategy against R and R+ strategies under identical conditions.
+A common practice to evaluate performance of an extended strategy is to compare the results obtained by applying the new and existing strategy to identical programs~\cite{Gutjahr1999, Duran1984, Hamlet1990}. Arcuri et al. \cite{Arcuri2012}, stress on the use of random testing as a baseline for comparison with other test strategies. We followed the procedure and evaluated DSSR strategy against R and R+ strategies under identical conditions.
 
-In our experiments we selected projects from the Qualitas Corpus~\cite{Tempero2010} which is a collection of open source java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of java applications~\cite{Oriol2012, Tempero2008,  Tempero2010a}.
+In our experiments we selected projects from the Qualitas Corpus~\cite{Tempero2010} which is a collection of open source java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of java applications~\cite{Oriol2012, Tempero2010a, Tempero2008}.
 
 
 %%%%%%%%%%%%%%%%%    CONCLUSIONS   %%%%%%%%%%%%%%%%%%%%
@@ -552,4 +670,27 @@ In our experiments we selected projects from the Qualitas Corpus~\cite{Tempero20
 \section{Conclusions}\label{sec:conc}
 The main goal of the present study was to develop a new random strategy which could find more faults in lower number of test cases. We developed a new strategy named. ``DSSR strategy'' as an extension of R+, based on the assumption that in a significant number of classes, failure domains are contiguous or located closely. The DSS strategy, a strategy which adds neighbouring values of the failure finding value to a list of interesting values, was implemented in the random testing tool YETI to test 60 classes, 30 times each, from Qualitas Corpus with each of the 3 strategies R, R+ and DSSR. The newly developed DSSR strategy uncovers more unique failures than both random and random+ strategies with a 5\% overhead. We found out that for 7 (12\%) classes DSSR was significantly better than both R+ and R, for 8 (13\%) classes DSSR performed similarly to R+ and significantly better than R, while in 2 (3\%) cases DSSR performed similarly to R and significantly better than R+. In all other cases, DSSR, R+ and R do not seem to perform significantly differently. Overall, DSSR yields encouraging results and advocates to develop the technique further for settings in which it is significantly better than both R and R+ strategies.
 
+%%%%%%%%%%%%%%%%%    ACKNOWDLEGEMENT   %%%%%%%%%%%%%%%%%%%%
+%\section{Acknowledgments}
+% should put it back in final version
+%The authors thank the Department of Computer Science, University of York for its financial support with the Departmental Overseas Research Scholarship (DORS) award. We also thanks to Richard Page for his valuable help and generous support.
 
+
+
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+\end{document}
