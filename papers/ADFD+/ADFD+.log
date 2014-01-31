@@ -1,0 +1,800 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  31 JAN 2014 04:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ADFD+.tex
+(./ADFD+.tex
+LaTeX2e <2011/06/27>
+Babel <3.9f> and hyphenation patterns for 78 languages loaded.
+(./acm_proc_article-sp.cls
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count79
+))
+\Gin@req@height=\dimen102
+\Gin@req@width=\dimen103
+)
+\epsfxsize=\dimen104
+\epsfysize=\dimen105
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks15
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip41
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen106
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen107
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count80
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count81
+\leftroot@=\count82
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count83
+\DOTSCASE@=\count84
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen108
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count85
+\c@MaxMatrixCols=\count86
+\dotsspace@=\muskip10
+\c@parentequation=\count87
+\dspbrk@lvl=\count88
+\tag@help=\toks17
+\row@=\count89
+\column@=\count90
+\maxfields@=\count91
+\andhelp@=\toks18
+\eqnshift@=\dimen109
+\alignsep@=\dimen110
+\tagshift@=\dimen111
+\tagwidth@=\dimen112
+\totwidth@=\dimen113
+\lineht@=\dimen114
+\@envbody=\toks19
+\multlinegap=\skip42
+\multlinetaggap=\skip43
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+Document Class 'acm_proc_article-sp' <22nd. April '09>. Modified by G.K.M. Tobi
+n
+Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
+shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
+Excerpts were taken from (Journal Style) 'esub2acm.cls'.
+****** Bugs/comments/suggestions to Gerry Murray -- murray@hq.acm.org ******
+\footheight=\dimen115
+\@maxsep=\dimen116
+\@dblmaxsep=\dimen117
+\aucount=\count92
+\originalaucount=\count93
+\auwidth=\dimen118
+\auskip=\dimen119
+\auskipcount=\count94
+\auskip=\dimen120
+\allauboxes=\dimen121
+\addauthors=\toks21
+\addauflag=\count95
+\subtitletext=\toks22
+\savesection=\count96
+\sectioncntr=\count97
+\c@figure=\count98
+\c@table=\count99
+\titleboxnotes=\toks23
+\titleboxnoteflag=\count100
+Document Class: acm_proc_article-sp 2009/04/22 - V3.2SP - based on esub2acm.sty
+ <23 April 96>
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
+)
+\@acmtitlebox=\box28
+\titlenotecount=\count101
+\tntoks=\toks24
+\tntokstwo=\toks25
+\tntoksthree=\toks26
+\tntoksfour=\toks27
+\tntoksfive=\toks28
+\catcount=\count102
+\copyrightnotice=\toks29
+\conf=\toks30
+\confinfo=\toks31
+\c@part=\count103
+\c@section=\count104
+\c@subsection=\count105
+\c@subsubsection=\count106
+\c@paragraph=\count107
+
+Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1236.
+\bibindent=\dimen122
+\colcntr=\count108
+\saveb@x=\box29
+\copyrtyr=\toks32
+\acmcopyr=\toks33
+\boilerplate=\toks34
+\copyrightetc=\toks35
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen123
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip44
+\subfigcapskip=\skip45
+\subfigcaptopadj=\dimen124
+\subfigbottomskip=\skip46
+\subfigcapmargin=\dimen125
+\subfiglabelskip=\skip47
+\c@subfigure=\count109
+\c@lofdepth=\count110
+\c@subtable=\count111
+\c@lotdepth=\count112
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2013/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip48
+\subfig@bottom=\skip49
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/rotating/rotating.sty
+Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@r@tfl@t=\count113
+\rotFPtop=\skip50
+\rotFPbot=\skip51
+\rot@float@box=\box30
+\rot@mess@toks=\toks36
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks37
+\verbatim@line=\toks38
+\verbatim@in@stream=\read1
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count114
+\float@exts=\toks39
+\float@box=\box31
+\@float@everytoks=\toks40
+\@floatcapt=\box32
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen126
+\extrarowheight=\dimen127
+\NC@list=\toks41
+\extratabsurround=\skip52
+\backup@length=\skip53
+)
+\TX@col@width=\dimen128
+\TX@old@table=\dimen129
+\TX@old@col=\dimen130
+\TX@target=\dimen131
+\TX@delta=\dimen132
+\TX@cols=\count115
+\TX@ftn=\toks42
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count116
+\lst@gtempboxa=\box33
+\lst@token=\toks43
+\lst@length=\count117
+\lst@currlwidth=\dimen133
+\lst@column=\count118
+\lst@pos=\count119
+\lst@lostspace=\dimen134
+\lst@width=\dimen135
+\lst@newlines=\count120
+\lst@lineno=\count121
+\abovecaptionskip=\skip54
+\belowcaptionskip=\skip55
+\lst@maxwidth=\dimen136
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count122
+\lst@skipnumbers=\count123
+\lst@framebox=\box34
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+\@float@every@table=\toks44
+
+(./ADFD+.aux)
+\openout1 = `ADFD+.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+
+(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count124
+\scratchdimen=\dimen137
+\scratchbox=\box35
+\nofMPsegments=\count125
+\nofMParguments=\count126
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen138
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
+\everyMPtoPDFconversion=\toks46
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\c@lstlisting=\count130
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+Overfull \hbox (5.78029pt too wide) in paragraph at lines 160--160
+[]\secfnt AUTOMATED DIS-COV-ERY OF FAIL-URE
+ []
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+
+LaTeX Warning: Citation `Chen2010' on page \thepage  undefined on input line 16
+4.
+
+
+LaTeX Warning: Citation `Ciupa2009' on page \thepage  undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `Ciupa2008' on page \thepage  undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `Ciupa2008a' on page \thepage  undefined on input line 
+164.
+
+
+LaTeX Warning: Citation `Oriol2010a' on page \thepage  undefined on input line 
+164.
+
+
+LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
+ 164.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `Claessen2000' on page \thepage  undefined on input lin
+e 164.
+
+
+LaTeX Warning: Citation `Pacheco2007' on page \thepage  undefined on input line
+ 164.
+
+
+LaTeX Warning: Citation `Oriat2004' on page \thepage  undefined on input line 1
+64.
+
+
+LaTeX Warning: Citation `Myers2004' on page \thepage  undefined on input line 1
+66.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 1
+66.
+
+
+LaTeX Warning: Citation `Duran1981' on page \thepage  undefined on input line 1
+66.
+
+
+LaTeX Warning: Citation `Duran1984' on page \thepage  undefined on input line 1
+66.
+
+
+LaTeX Warning: Citation `Hamlet1994' on page \thepage  undefined on input line 
+166.
+
+
+LaTeX Warning: Citation `Ntafos2001' on page \thepage  undefined on input line 
+166.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 1
+68.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 1
+68.
+
+
+LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
+ 171.
+
+
+LaTeX Warning: Citation `Beizer1990' on page \thepage  undefined on input line 
+171.
+
+LaTeX Font Info:    Try loading font information for T1+aett on input line 171.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+)
+
+LaTeX Warning: Citation `Ciupa2008' on page \thepage  undefined on input line 1
+71.
+
+
+LaTeX Warning: Citation `Chan1996' on page \thepage  undefined on input line 17
+5.
+
+
+LaTeX Warning: Citation `Chan2002' on page \thepage  undefined on input line 17
+5.
+
+
+LaTeX Warning: Citation `Chen2003' on page \thepage  undefined on input line 17
+5.
+
+
+LaTeX Warning: Citation `Chen2005' on page \thepage  undefined on input line 17
+5.
+
+<ART_Patterns.png, id=13, 376.40625pt x 101.62968pt>
+File: ART_Patterns.png Graphic file (type png)
+ <use ART_Patterns.png>
+Package pdftex.def Info: ART_Patterns.png used on input line 179.
+(pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
+
+
+LaTeX Warning: Citation `Chen2008' on page \thepage  undefined on input line 18
+0.
+
+<block2.png, id=15, 271.0125pt x 122.70844pt>
+File: block2.png Graphic file (type png)
+ <use block2.png>
+Package pdftex.def Info: block2.png used on input line 188.
+(pdftex.def)             Requested size: 227.62825pt x 62.59544pt.
+ [2 <./ART_Patterns.png> <./block2.png>]
+
+LaTeX Warning: Citation `Leitner2009' on page \thepage  undefined on input line
+ 197.
+
+<flowchart1.pdf, id=22, 193.19614pt x 195.7238pt>
+File: flowchart1.pdf Graphic file (type pdf)
+ <use flowchart1.pdf>
+Package pdftex.def Info: flowchart1.pdf used on input line 201.
+(pdftex.def)             Requested size: 240.0pt x 243.14894pt.
+
+
+LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
+(Font)              using `T1/aett/m/n' instead on input line 258.
+
+
+Overfull \hbox (3.63397pt too wide) in paragraph at lines 269--271
+\T1/aer/m/n/9 se-lect val-ues ([]\T1/aett/bx/n/9 0, Integer.MIN_VALUE \T1/aer/m
+/n/9 & []\T1/aett/bx/n/9 Integer.MAX_VALUE\T1/aer/m/n/9 )
+ []
+
+[3 <./flowchart1.pdf>]
+
+LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 2
+86.
+
+
+LaTeX Warning: Citation `Oriol2011' on page \thepage  undefined on input line 2
+86.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 2
+86.
+
+<hierarchy.pdf, id=27, 98.56648pt x 125.337pt>
+File: hierarchy.pdf Graphic file (type pdf)
+ <use hierarchy.pdf>
+Package pdftex.def Info: hierarchy.pdf used on input line 294.
+(pdftex.def)             Requested size: 113.8153pt x 142.27174pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
+ 308.
+
+
+LaTeX Warning: Citation `Tempero2010a' on page \thepage  undefined on input lin
+e 322.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 3
+25.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./hierarchy.pdf>]
+
+LaTeX Warning: Citation `Chen2008' on page \thepage  undefined on input line 37
+9.
+
+
+LaTeX Warning: Citation `Chen1996' on page \thepage  undefined on input line 37
+9.
+
+
+LaTeX Warning: Citation `Chen2004' on page \thepage  undefined on input line 37
+9.
+
+
+LaTeX Warning: Citation `Liu2012' on page \thepage  undefined on input line 379
+.
+
+
+LaTeX Warning: Citation `Pacheco2007a' on page \thepage  undefined on input lin
+e 383.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 3
+83.
+
+
+LaTeX Warning: Citation `Ciupa2008b' on page \thepage  undefined on input line 
+383.
+
+<DssrImprove.png, id=34, 986.2446pt x 479.391pt>
+File: DssrImprove.png Graphic file (type png)
+ <use DssrImprove.png>
+Package pdftex.def Info: DssrImprove.png used on input line 388.
+(pdftex.def)             Requested size: 483.69684pt x 235.11577pt.
+
+Underfull \hbox (badness 10000) in alignment at lines 471--471
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.5701pt too wide) in paragraph at lines 547--547
+[]\secfnt Are there classes for which any of the three
+ []
+
+[5] [6]
+Overfull \hbox (1.59169pt too wide) in paragraph at lines 628--630
+[]\T1/aer/bx/n/9 Dependence of DSSR strat-egy to find the first unique
+ []
+
+[7 <./DssrImprove.png>]
+
+LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 6
+41.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 6
+47.
+
+
+LaTeX Warning: Citation `Pacheco2005' on page \thepage  undefined on input line
+ 655.
+
+
+LaTeX Warning: Citation `Csallner2004' on page \thepage  undefined on input lin
+e 655.
+
+
+LaTeX Warning: Citation `Claessen2000a' on page \thepage  undefined on input li
+ne 655.
+
+
+LaTeX Warning: Citation `Hamlet1994' on page \thepage  undefined on input line 
+655.
+
+
+LaTeX Warning: Citation `Oriat2004' on page \thepage  undefined on input line 6
+55.
+
+
+LaTeX Warning: Citation `Pacheco2005' on page \thepage  undefined on input line
+ 655.
+
+
+LaTeX Warning: Citation `Csallner2004' on page \thepage  undefined on input lin
+e 655.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 6
+55.
+
+
+LaTeX Warning: Citation `Ciupa2008a' on page \thepage  undefined on input line 
+655.
+
+
+LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 6
+55.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 6
+55.
+
+
+LaTeX Warning: Citation `Chen2010' on page \thepage  undefined on input line 65
+7.
+
+
+LaTeX Warning: Citation `Chen2005' on page \thepage  undefined on input line 65
+7.
+
+
+LaTeX Warning: Citation `Chan2002' on page \thepage  undefined on input line 65
+7.
+
+
+LaTeX Warning: Citation `Chen2004a' on page \thepage  undefined on input line 6
+57.
+
+
+LaTeX Warning: Citation `Chen2003' on page \thepage  undefined on input line 65
+7.
+
+
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+
+
+LaTeX Warning: Citation `Yoo2012' on page \thepage  undefined on input line 659
+.
+
+
+LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
+ 661.
+
+
+LaTeX Warning: Citation `Beizer1990' on page \thepage  undefined on input line 
+661.
+
+
+LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
+ 661.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+
+LaTeX Warning: Citation `Gutjahr1999' on page \thepage  undefined on input line
+ 666.
+
+
+LaTeX Warning: Citation `Duran1984' on page \thepage  undefined on input line 6
+66.
+
+
+LaTeX Warning: Citation `Hamlet1990' on page \thepage  undefined on input line 
+666.
+
+
+LaTeX Warning: Citation `Arcuri2012' on page \thepage  undefined on input line 
+666.
+
+
+LaTeX Warning: Citation `Tempero2010' on page \thepage  undefined on input line
+ 668.
+
+
+LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 6
+68.
+
+
+LaTeX Warning: Citation `Tempero2010a' on page \thepage  undefined on input lin
+e 668.
+
+
+LaTeX Warning: Citation `Tempero2008' on page \thepage  undefined on input line
+ 668.
+
+No file ADFD+.bbl.
+[9
+
+] (./ADFD+.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 4805 strings out of 493315
+ 64181 string characters out of 6137904
+ 236608 words of memory out of 5000000
+ 8100 multiletter control sequences out of 15000+600000
+ 62962 words of font info for 98 fonts, out of 8000000 for 9000
+ 960 hyphenation exceptions out of 8191
+ 41i,12n,40p,1263b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
+w/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb>
+Output written on ADFD+.pdf (9 pages, 429751 bytes).
+PDF statistics:
+ 110 PDF objects out of 1000 (max. 8388607)
+ 74 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
