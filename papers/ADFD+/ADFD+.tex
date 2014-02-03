@@ -142,21 +142,59 @@ The rest of this paper is organised as follows: \\ Section~\ref{sec:adfd} descri
 
 \section{Automated Discovery of Failure Domain+}\label{sec:adfd}
 
-Automated Discovery of Failure Domain+ (ADFD+) is a successor of our previously developed technique Automated Discovery of Failure Domain (ADFD). ADFD is an automated framework that finds the failures, their domains and present these on a graphical chart\cite{ADFD}. 
-
-
+Automated Discovery of Failure Domain+ (ADFD+) is a combination of our two previously developed techniques namely Dirt Spot Sweeping Random strategy (DSSR) and Automated Discovery of Failure Domain (ADFD). Both the strategies are extended form of random+ strategies. In DSSR, the strategy first finds the failure and then search its immediate neighbours for any other failure and ADFD is an automated framework that finds the failures, their domains in some specified range and present them on a graphical chart\cite{DSSR, ADFD}. 
 
 \subsection{Workflow of ADFD+}
 Instead of front end give workflow. It will make more sense. Change the code of the program
-\subsection{Front-end of ADFD+}
-Front end of ADFD+ is showing in the Figure \ref{fig:adfdPlusFrontEnd}. Here the user had set range to 5 which means that ADFD+ strategy will search the region up to 5 values around the discovered failure. Here ADFD+ using random and random+ strategy found the first failure in the method under test when the argument x and y value were 10 and -3 respectively. As soon as the failure is discovered the strategy start for any other failures in the vicinity under the restricted range. The figure clearly show the fail values with red dots and the correct values with green dot on the graph. T
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width= 8cm,height=6cm]{adfdPlusWorkflow.png}
+\caption{Workflow of ADFD+}
+\label{fig:Workflow}
+\end{figure}
+
+\subsection{ADFD+ by an example}
+In this section we show how ADFD+ first discover a failure and then with its help it discover the whole failure domain. Suppose we have the following class under test.  Here the failure is discovered by 6 and 3 and then the neighbour is searched for more errors and the result is plotted on the graph.
+
+\begin{lstlisting}
+/** 
+* Calculate square of given number 
+* and verify results. 
+* The code contain 3 faults.
+* @author (Mian and Manuel)
+*/
+public class Error {
+
+public static void Error (int x, int y){
+int z;
+
+if (((x>=5)&&(x<=8))&&((y>=2)&&(y<=4)))
+ {
+ z = 50/0;}
+ } 
+}
+}
+\end{lstlisting}
 
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=17.5cm,height=11cm]{adfdPlusFrontEnd.png}
-\caption{Frond-end of ADFD+ test framework.}
+\includegraphics[width=17.5cm,height=11cm]{exampleError.png}
+\caption{Frond-end of ADFD+ test framework and the output of the above class.}
 \label{fig:adfdPlusFrontEnd}
 \end{figure*}
+
+
+
+\subsection{Front-end of ADFD+}
+Front end of ADFD+ is showing in the Figure \ref{fig:adfdPlusFrontEnd}. Here the user had set range to 5 which means that ADFD+ strategy will search the region up to 5 values around the discovered failure. Here ADFD+ using random and random+ strategy found the first failure in the method under test when the argument x and y value were 10 and -3 respectively. As soon as the failure is discovered the strategy start for any other failures in the vicinity under the restricted range. The figure clearly show the fail values with red dots and the correct values with green dot on the graph. T
+
+%\begin{figure*}[ht]
+%\centering
+%\includegraphics[width=17.5cm,height=11cm]{adfdPlusFrontEnd.png}
+%\caption{Frond-end of ADFD+ test framework.}
+%\label{fig:adfdPlusFrontEnd}
+%\end{figure*}
 
 
 ADFD+ is an extension of ADFD's algorithm with more accuracy to find and clarity to plot the failure domain on a graphical chart. Deriving failure domains using ADFD+ is a one click process and all the tester needs to input is the class to test and the range-value for which to search around the found failure. 
@@ -168,23 +206,7 @@ The workflow of ADFD and ADFD+ is the same except the following changes.
 1) ADFD+ generate a single Java file at run time to plot the failure domains instead of one Java file per failure as in ADFD. This saves a lot of execution time and makes the process much quicker.
 
 2) ADFD+ uses vector series to represent failure pattern as opposed to the line series in ADFD. The vector series allows more flexibility and clarity to represent a failure domain.   
-\begin{lstlisting}
-/** 
-* Calculate square of given number 
-* and verify results. 
-* The code contain 3 faults.
-* @author (Mian and Manuel)
-*/
-public class Math1 {
- public void calc (int num1) {
-  // Square num1 and store result. 
-  int result1 = num1 * num1;
-  int result2 = result1 / num1; // 1
-  assert Math.sqrt(result1) == num1; // 2
-  assert result1 >= num1; // 3
- } 
-}
-\end{lstlisting}
+
 The difference in representation of fault by ADFD and ADFD+ can be seen in figure .... Figure x is generated by ADFD with lower bound as ... and upper bound as ... While Figure Y is generated by ADFD+ with range ... for the same program given in appendix a. 
 
 

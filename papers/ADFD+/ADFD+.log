@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  1 FEB 2014 04:10
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  3 FEB 2014 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,19 +409,33 @@ Overfull \hbox (5.78029pt too wide) in paragraph at lines 143--143
  []
 
 
+LaTeX Warning: Citation `DSSR' on page \thepage  undefined on input line 145.
+
+
 LaTeX Warning: Citation `ADFD' on page \thepage  undefined on input line 145.
 
-<adfdPlusFrontEnd.png, id=1, 1926.19624pt x 986.68625pt>
-File: adfdPlusFrontEnd.png Graphic file (type png)
 
-<use adfdPlusFrontEnd.png>
-Package pdftex.def Info: adfdPlusFrontEnd.png used on input line 156.
-(pdftex.def)             Requested size: 497.91887pt x 312.97581pt.
+Overfull \hbox (11.14926pt too wide) in paragraph at lines 145--146
+\T1/aer/m/n/9 com-bi-na-tion of our two pre-vi-ously de-vel-oped tech-niques na
+mely
+ []
+
+
+Overfull \hbox (3.3649pt too wide) in paragraph at lines 145--146
+\T1/aer/m/n/9 mated Dis-cov-ery of Fail-ure Do-main (ADFD). Both the strate-
+ []
+
+<adfdPlusWorkflow.png, id=1, 906.38625pt x 557.08125pt>
+File: adfdPlusWorkflow.png Graphic file (type png)
+
+<use adfdPlusWorkflow.png>
+Package pdftex.def Info: adfdPlusWorkflow.png used on input line 152.
+(pdftex.def)             Requested size: 227.61945pt x 170.71281pt.
  [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 171.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 160.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
@@ -429,172 +443,177 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 178.
+(Font)              using `T1/aett/m/n' instead on input line 167.
 
+<exampleError.png, id=14, 1441.88687pt x 818.55812pt>
+File: exampleError.png Graphic file (type png)
+ <use exampleError.png>
+Package pdftex.def Info: exampleError.png used on input line 182.
+(pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
 
-Overfull \hbox (9.87051pt too wide) in paragraph at lines 188--189
-\T1/aer/m/n/9 The dif-fer-ence in rep-re-sen-ta-tion of fault by ADFD and ADFD+
-
+Overfull \hbox (9.87051pt too wide) in paragraph at lines 210--211
+[]\T1/aer/m/n/9 The dif-fer-ence in rep-re-sen-ta-tion of fault by ADFD and ADF
+D+
  []
 
 
 LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
- 217.
+ 239.
 
-[2 <./adfdPlusFrontEnd.png>]
 
 LaTeX Warning: Citation `Tempero2010a' on page \thepage  undefined on input lin
-e 231.
+e 253.
 
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 231.
+ine 253.
 
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 231.
+ine 253.
 
+[2 <./adfdPlusWorkflow.png>]
 
 LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 2
-34.
+56.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (7.5701pt too wide) in paragraph at lines 339--339
+Overfull \hbox (7.5701pt too wide) in paragraph at lines 361--361
 []\secfnt Are there classes for which any of the three
  []
 
-[3]
-Overfull \hbox (1.59169pt too wide) in paragraph at lines 420--422
+[3 <./exampleError.png>]
+Overfull \hbox (1.59169pt too wide) in paragraph at lines 442--444
 []\T1/aer/bx/n/9 Dependence of DSSR strat-egy to find the first unique
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
 LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 4
-33.
+55.
 
 
 LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 4
-39.
+61.
 
-[4]
 
 LaTeX Warning: Citation `Pacheco2005' on page \thepage  undefined on input line
- 447.
+ 469.
 
 
 LaTeX Warning: Citation `Csallner2004' on page \thepage  undefined on input lin
-e 447.
+e 469.
 
 
 LaTeX Warning: Citation `Claessen2000a' on page \thepage  undefined on input li
-ne 447.
+ne 469.
 
 
 LaTeX Warning: Citation `Hamlet1994' on page \thepage  undefined on input line 
-447.
+469.
 
 
 LaTeX Warning: Citation `Oriat2004' on page \thepage  undefined on input line 4
-47.
+69.
 
 
 LaTeX Warning: Citation `Pacheco2005' on page \thepage  undefined on input line
- 447.
+ 469.
 
 
 LaTeX Warning: Citation `Csallner2004' on page \thepage  undefined on input lin
-e 447.
+e 469.
 
 
 LaTeX Warning: Citation `Ciupa2007' on page \thepage  undefined on input line 4
-47.
+69.
 
 
 LaTeX Warning: Citation `Ciupa2008a' on page \thepage  undefined on input line 
-447.
+469.
 
 
 LaTeX Warning: Citation `Oriol2010' on page \thepage  undefined on input line 4
-47.
+69.
 
 
 LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 4
-47.
+69.
+
+[4]
+
+LaTeX Warning: Citation `Chen2010' on page \thepage  undefined on input line 47
+1.
 
 
-LaTeX Warning: Citation `Chen2010' on page \thepage  undefined on input line 44
-9.
+LaTeX Warning: Citation `Chen2005' on page \thepage  undefined on input line 47
+1.
 
 
-LaTeX Warning: Citation `Chen2005' on page \thepage  undefined on input line 44
-9.
-
-
-LaTeX Warning: Citation `Chan2002' on page \thepage  undefined on input line 44
-9.
+LaTeX Warning: Citation `Chan2002' on page \thepage  undefined on input line 47
+1.
 
 
 LaTeX Warning: Citation `Chen2004a' on page \thepage  undefined on input line 4
-49.
+71.
 
 
-LaTeX Warning: Citation `Chen2003' on page \thepage  undefined on input line 44
-9.
+LaTeX Warning: Citation `Chen2003' on page \thepage  undefined on input line 47
+1.
 
 
-LaTeX Warning: Citation `Yoo2012' on page \thepage  undefined on input line 451
+LaTeX Warning: Citation `Yoo2012' on page \thepage  undefined on input line 473
 .
 
 
+Underfull \vbox (badness 5288) has occurred while \output is active []
+
+
+
 LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
- 453.
+ 475.
 
 
 LaTeX Warning: Citation `Beizer1990' on page \thepage  undefined on input line 
-453.
+475.
 
 
 LaTeX Warning: Citation `Leitner2007' on page \thepage  undefined on input line
- 453.
+ 475.
 
 
 LaTeX Warning: Citation `Gutjahr1999' on page \thepage  undefined on input line
- 458.
+ 480.
 
 
 LaTeX Warning: Citation `Duran1984' on page \thepage  undefined on input line 4
-58.
+80.
 
 
 LaTeX Warning: Citation `Hamlet1990' on page \thepage  undefined on input line 
-458.
+480.
 
 
 LaTeX Warning: Citation `Arcuri2012' on page \thepage  undefined on input line 
-458.
+480.
 
 
 LaTeX Warning: Citation `Tempero2010' on page \thepage  undefined on input line
- 460.
+ 482.
 
 
 LaTeX Warning: Citation `Oriol2012' on page \thepage  undefined on input line 4
-60.
+82.
 
 
 LaTeX Warning: Citation `Tempero2010a' on page \thepage  undefined on input lin
-e 460.
+e 482.
 
 
 LaTeX Warning: Citation `Tempero2008' on page \thepage  undefined on input line
- 460.
+ 482.
 
 No file ADFD+.bbl.
 [5] (./ADFD+.aux)
@@ -606,13 +625,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4748 strings out of 493315
- 63471 string characters out of 6137904
- 164045 words of memory out of 5000000
- 8057 multiletter control sequences out of 15000+600000
+ 4751 strings out of 493315
+ 63537 string characters out of 6137904
+ 162045 words of memory out of 5000000
+ 8059 multiletter control sequences out of 15000+600000
  56902 words of font info for 85 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 41i,11n,40p,1246b,1388s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,40p,1246b,988s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texli
@@ -627,10 +646,10 @@ t/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb>
-Output written on ADFD+.pdf (5 pages, 276380 bytes).
+Output written on ADFD+.pdf (5 pages, 539222 bytes).
 PDF statistics:
- 74 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
