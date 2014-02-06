@@ -1,6 +1,6 @@
 \chapter{Literature Review: Software Testing}
 \label{chap:softwareTesting}
-The very famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of the best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million and many others were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The very famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \begin{figure}[h]
 	\centering
@@ -9,9 +9,9 @@ The very famous quote of Paul, ``to err is human, but to really foul things up y
 	\label{fig:softwareTesting}
 \end{figure}
 
-In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. A successful test is the one that fails a software or identify a fault in the sonftware~\cite{Myers1979}, where fault denotes the error made by programmers during software development~\cite{american1984}.
+In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing when a tester finds a fault in the given SUT, the software is returned to the developers for rectification and is consequently given back to the tester for retesting. It is important to note that, ``program testing can be used to show the presence of bugs, but never to show the absence of bugs"~\cite{Dijkstra1972}. In other words, a SUT that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. \\
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing, when testers find fault in the given software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{Myers1979}. Fault denotes error made by programmers during software development~\cite{american1984}. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. \\
 
 
 \begin{table}[ht]
@@ -23,12 +23,12 @@ The testing process, being an integral part of Software Development Life Cycle (
 \begin{tabular}{| l | l | l | l | } % centered columns (4 columns)
 \hline
 
-Levels 					&Purpose		 		& Perspective							& Execution 	\\
+Level 					&Purpose		 		& Perspective							& Execution 	\\
 \hline
 Unit						& Functional			& White Box							& Static 		\\
 Integration				& Structural			& ~~~~~a. Data Flow Analysis				& Dynamic	\\
 System					& Robustness			& ~~~~~b. Control Flow Analysis			&			\\
-						& Stress				& ~~~~~c. Code-based fault injection testing 	&			\\
+						& Stress				& ~~~~~c. Code-based fault injection &			\\
 						& Compatibility			& Black Box							&			\\
 						& Performance			& ~~~~~a. Use-case testing				&			\\
 						&					& ~~~~~b. Partition testing				&			\\
@@ -48,10 +48,10 @@ System					& Robustness			& ~~~~~b. Control Flow Analysis			&			\\
 This section presents important definitions:
 
 \subsection{Test Plan}
-Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains, {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
+Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
 
 \subsection{Input Domain} 
-The input domain comprises of all possible inputs for a software, including all the global variables, method arguments and the externally assigned variables, like keyboard inputs etc. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on. The domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
+The input domain comprises of all possible inputs for a software, including all the global variables, method arguments and the externally assigned variables. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on, the domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
 
 \subsection{Test Case}
 %\begin{wrapfigure}{r}{0.35\textwidth}
