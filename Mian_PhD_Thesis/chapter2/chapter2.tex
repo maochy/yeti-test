@@ -64,18 +64,18 @@ The input domain comprises of all possible inputs for a software, including all 
 %  \label{fig:testCase}
 %  \vspace{-10pt}
 %\end{wrapfigure}
-A test case is an artifact which delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. After executing the test case, if the output obtained comply with the expected output, the test case is pass and the functionality is working correctly, otherwise the test case is fail, which represents identification of fault. Generally, a series of test cases, also known as test suite, are required to be executed for establishing the desired level of quality.
+A test case is an artifact which delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. After executing the test case, if the output obtained comply with the expected output, the test case is declared pass which means that the functionality is working correctly, otherwise the test case is declared fail, which represents identification of fault. A series of test cases, also known as test suite, are usually required to be executed for establishing the desired level of quality.
 
 \section{Software Testing Levels}
-Unit testing, integration testing and system testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component is working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
+Unit testing, Integration testing and System testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component is working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
 
 \section{Software Testing Purpose}
-The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. In exhausting testing SUT is checked against all possible combinations of input data, and the results obtained are compared with the expected results for assessment. Exhaustive testing is not always possible in most scenarios because of limited resources and infinite number of input values that software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
+The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. In exhausting testing SUT is checked against all possible combinations of input data and for assessment the results obtained are compared with the results expected. Exhaustive testing is not always possible in most scenarios because of limited resources and infinite number of input values that software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
  %As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
 %A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
 
 \section{Software Testing Perspective}
-Software testing can be divided into white-box and black-box testing based on the perspective taken.
+Software testing is divided into white-box and black-box testing based on the perspective taken.
 
 \subsection{White-box testing}
 In white-box or structural testing, the testers must know about the complete structure of the software so that they may make necessary modifications, if so required. Test cases are derived from the code structure and test passes only if the results are correct and the proper code is followed during test execution~\cite{ostrand2002white}. Some commonly used white-box testing techniques are as follows:
@@ -99,15 +99,15 @@ In white-box or structural testing, the testers must know about the complete str
 %\end{wrapfigure}
 
 \subsubsection{Data Flow Analysis}
-Data Flow Analysis (DFA) is a testing technique which focuses on the input values by observing the behaviour of respective variables during the execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, drawn to determine the paths that are traversed by the program during its execution. Test cases are generated and executed to verify its conformance with CFG. 
+Data Flow Analysis (DFA) is a testing technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG. 
 
-Generally, program execution includes data input, its processing with the defined algorithm and output of results. The process can be looked into as data-flow from input to output where data may transform into several intermediary steps before reaching the final state. The process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables or change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
+The process of program execution can be looked into as data-flow from input to output where data may transform into several intermediary steps before reaching the final state. The process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables or change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
 
 \subsubsection{Control Flow Analysis}
-Control Flow Analysis (CFA) is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the individual statements, instructions or function calls are executed. In this technique a CFG, similar to the one required in DFA, is drawn to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control. Taking the example of following a specific path between two or more available choices at a particular state: efforts are made to ensure that, at least once, the set of selected test cases execute all the possible control choices. The effectiveness of the testing technique depends on measurement of control. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
+Control Flow Analysis (CFA) is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions or function calls are executed. In this technique a CFG, similar to the one required in DFA, is drawn to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control. Taking the example of following a specific path between two or more available choices at a particular state: efforts are made to ensure that, at least once, the set of selected test cases execute all the possible control choices. The effectiveness of the testing technique depends on measurement of control. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
 \subsubsection{Code-based fault injection testing}
-It is a testing technique in which additional instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the anomaly \cite{voas1997software}. The process of code addition is called instrumentation which is performed before compilation and execution of software. Code is added for several reasons i.e. to find error handling behaviour of software by injecting faults, to examine the capability of test procedure with respect to the discovery of injected faults and to measure the code coverage achieved by the testing process.    
+It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the instructions. \cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to: find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
 
 \subsection{Black-box testing}
 In black-box or functional testing, the testers do not need to know about internal code structure of the SUT. Test cases are derived from the software specifications and test passes if the result is according to expected output~\cite{beizer1995black}. Some commonly used black-box testing techniques are stated below:
@@ -130,26 +130,27 @@ In black-box or functional testing, the testers do not need to know about intern
 %  \vspace{-18pt}
 % \end{wrapfigure}
 \subsubsection{Use-case based testing}
-It is a verification and validation technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, preconditions, postconditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
+% check if it is use case-based testing or use case testing.
+It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
 
 % steps taken from presentation of Raional User Conference 2003. Check it for viva.
 \subsubsection{Partition Testing}
-It is a testing technique in which the input domain of a given SUT is divided into sub-domains for testing each sub-domain individually. The division is based on software specifications, structure of the code and the process involved in software development \cite{hamlet1990}. The performance of partition testing is directly dependant on the quality of sub-domain \cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called Proportional sampling strategy \cite{Chan1996} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided experimental evidence for the better performance of Proportional partition testing.
+It is a testing technique in which the input domain of a given SUT is divided into sub-domains for testing each sub-domain individually. The division is based on software specifications, structure of the code and the process involved in software development~\cite{hamlet1990}. The performance of partition testing is directly dependant on the quality of sub-domain~\cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called Proportional sampling strategy~\cite{Chan1996} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided evidence for better performance of Proportional partition testing.
 
 
 \subsubsection{Boundary Value Analysis}
-Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors may often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards \cite{radatz1990ieee}, boundary value is a value that corresponds to minimum or maximum input, internal or external value specified for a system. 
+Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards~\cite{radatz1990ieee}, boundary values contain minimum, maximum, internal and external values specified for a system. 
 
-The BVA technique and partition testing are also used simultaneously by choosing test values at the borders of each sub-domain as well as the whole input domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA compared to partition testing. However, they have indicated that better performance of BVA is based on accurate identification of partition and selection of boundary values.
+BVA  and partition testing may be used in combination by choosing test values from the whole input domain and also from the borders of each sub-domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA compared to partition testing. However, they have indicated that better performance of BVA is based on accurate identification of partition and selection of boundary values.
 
  The following code illustrates the ability of BVA to find a bug.  On passing interesting value \verb+MAX_INT+ as argument to the $test$ method, the code in the method increment it by 1 making it a negative value and thus an error is generated when the system try to build an array of negative size.
 
 \begin{lstlisting}
-public void test (int arg) {
-arg = arg + 1;
-int [] intArray = new intArray[arg];
-...
-}
+~public void test (int arg) {
+~~~~~arg = arg + 1;
+~~~~~int [] intArray = new intArray[arg];
+~~~~~...
+~}
 \end{lstlisting}
 
 
@@ -188,19 +189,19 @@ The formal specification testing is more productive because of the creation of t
 %\subsection{Generation Strategies}
 
 \subsection{Test Oracle}
-Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT" \cite{ahmed2010software}. According to Howden \cite{howden1986}, an oracle is a function which verifies if the output from program P is the same as the output from a ‘correct’ version of P. Test oracles set the acceptable behaviour for test executions~\cite{baresi2001test}. 
+Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT" \cite{ahmed2010software}. For a program P, an oracle is a function which verifies that the output from P is the same as the output from a ‘correct’ version of P~\cite{howden1986}. Test oracle set the acceptable behaviour for test execution~\cite{baresi2001test}. 
 
-All software-testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common issues associated with the orcale problem are as follows:
+All software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common oracle problems are as follows:
 \begin{enumerate}
 \item It is assumed that the test results are observable and comparable with the oracle.
 \item Ideally, test oracle would satisfy desirable properties of program specifications~\cite{baresi2001test}.
-\item A specific oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, ``truly general test oracles are often unobtainable''~\cite{weyuker1982testing}. 
+\item A test oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, ``truly general test oracles are often unobtainable''~\cite{weyuker1982testing}. 
 \end{enumerate}
 
-Some of the most common artifacts used as oracles are stated below.
+Some common artefacts used as oracles are as follows.
 \begin{enumerate}
 \item Specification and documentation to generate test oracle. 
-\item Products similar to the SUT but different in algorithm to solve the similar problem.
+\item Products similar to the SUT but different in algorithm. %to solve the similar problem.
 \item Heuristic algorithms to provide exact results for a set of test cases. % Hoffman, Douglas; Heuristic Test Oracles, Software Testing & Quality Engineering Magazine, 1999
 \item Statistical characteristics to generate test oracle. % \cite{mayer2004test}. 
 \item Comparison of the result of one test to another for consistency. % Hoffman, Douglas; Analysis of a Taxonomy for Test Oracles, Quality Week, 1998
