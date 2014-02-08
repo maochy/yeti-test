@@ -6,45 +6,45 @@ Database file #1: sigproc.bib
 Warning--entry type for "Oriol2011yeti" isn't style-file defined
 --line 82 of file sigproc.bib
 Warning--there's a number but no volume in white1980domain
-You've used 35 entries,
+You've used 38 entries,
             2118 wiz_defined-function locations,
-            747 strings with 9853 characters,
-and the built_in function-call counts, 13407 in all, are:
-= -- 1377
-> -- 541
-< -- 15
-+ -- 218
-- -- 178
-* -- 914
-:= -- 2098
-add.period$ -- 115
-call.type$ -- 35
-change.case$ -- 192
+            761 strings with 10312 characters,
+and the built_in function-call counts, 14766 in all, are:
+= -- 1530
+> -- 574
+< -- 18
++ -- 231
+- -- 188
+* -- 985
+:= -- 2284
+add.period$ -- 127
+call.type$ -- 38
+change.case$ -- 206
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 554
-empty$ -- 1091
-format.name$ -- 178
-if$ -- 2932
+cite$ -- 39
+duplicate$ -- 623
+empty$ -- 1214
+format.name$ -- 188
+if$ -- 3258
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 36
-newline$ -- 177
-num.names$ -- 70
-pop$ -- 203
+int.to.str$ -- 38
+missing$ -- 39
+newline$ -- 192
+num.names$ -- 76
+pop$ -- 226
 preamble$ -- 1
-purify$ -- 159
+purify$ -- 170
 quote$ -- 0
-skip$ -- 418
+skip$ -- 474
 stack$ -- 0
-substring$ -- 937
-swap$ -- 166
-text.length$ -- 15
+substring$ -- 1048
+swap$ -- 199
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
+type$ -- 148
 warning$ -- 1
-while$ -- 135
-width$ -- 37
-write$ -- 407
+while$ -- 150
+width$ -- 40
+write$ -- 443
 (There were 2 warnings)

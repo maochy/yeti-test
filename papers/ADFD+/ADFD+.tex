@@ -198,68 +198,60 @@ ADFD+ is an automatic process and all the user has to do is to specify the progr
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width= 8.5cm,height=6cm]{adfdPlusWorkflow.png}
+\includegraphics[width= 8.5cm,height=6.5cm]{adfdPlusWorkflow.png}
 \caption{Workflow of ADFD+}
 \label{fig:Workflow}
 \end{figure}
 
+
+%%%%%%%%%%%%%%%%%%%%
+%ADFD+ is an extension of ADFD's algorithm with more accuracy to find and clarity to plot the failure domain on a graphical chart. Deriving failure domains using ADFD+ is a one click process and all the tester needs to input is the class to test and the range-value for which to search around the found failure. 
 %%%%%%%%%%%%%%%%%%%%
 
+\subsection{Implementation of ADFD+}
+The ADFD+ strategy is implemented in a tool called York 
+Extensible Testing Infrastructure (YETI). YETI is available 
+in open-source at \url{http://code.google.com/p/yeti-test/}. In this section a brief overview of YETI is given with the focus on the parts relevant to the implementation of ADFD+ strategy. For verification of ADFD+ strategy in YETI, a program is used 
+as an example to illustrate the working of ADFD+ strategy. Please refer to \cite{Oriol2011yeti, oriol2012random, oriol2010testing, oriol2010yeti} for more details on YETI. 
+
+YETI is a testing tool developed in Java that test programs using random strategies in an automated fashion. YETI meta-model is language-agnostic which enables it to test 
+programs written in functional, procedural and object-oriented languages. 
+
+YETI consists of three main parts including core infrastructure for extendibility through specialization, strategies section for adjustment of multiple strategies and 
+languages section for supporting multiple languages. Both the languages and strategies sections have a pluggable architecture to easily incorporate new strategies and 
+languages making YETI a favorable choice to implement ADFD+ strategy. YETI is also capable of generating test cases to reproduce the faults found during the test session. 
+The strategies section in YETI contains all the strategies including random, random+ and DSSR to be selected for testing according to the specific needs. The default test 
+strategy for testing is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and is further, extended to get 
+ADFD+ strategy.
+
+
 \subsection{ADFD+ by an example}
-In this section we show how ADFD+ first discover a failure and then with its help it discover the whole failure domain. Suppose we have the following class under test.  Here the failure is discovered by 6 and 3 and then the neighbour is searched for more errors and the result is plotted on the graph.
+In this section we describe the working of ADFD+ with a motivating example. Suppose we have the following class name $Error$ under test. According to the code, the value of variable $x$ between 5 to 8 and the value of variable $y$ between 2 to 4 triggers a failure.   
 
 \begin{lstlisting}
-/** 
-* Calculate square of given number 
-* and verify results. 
-* The code contain 3 faults.
-* @author (Mian and Manuel)
-*/
+
 public class Error {
 
-public static void Error (int x, int y){
-int z;
+  public static void Error (int x, int y){
 
-if (((x>=5)&&(x<=8))&&((y>=2)&&(y<=4)))
- {
- z = 50/0;}
- } 
-}
+    int z;
+
+    if (((x>=5)&&(x<=8))&&((y>=2)&&(y<=4)))
+		 {
+			 z = 50/0;
+		 }
+   } 
 }
 \end{lstlisting}
+
+On execution, the ADFD+ strategy tests the class with the help of YETI and finds a failure at x = 6 and y = 3. Once a failure is discovered ADFD+ uses the surrounding values around the failure to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two dimensional graph with red dot indicating a failing value and green dot indicating the passing value as shown in the Figure~\ref{fig:adfdPlusExample}. 
 
 \begin{figure*}[ht]
 \centering
 \includegraphics[width=17.5cm,height=11cm]{exampleError.png}
-\caption{Frond-end of ADFD+ test framework and the output of the above class.}
-\label{fig:adfdPlusFrontEnd}
+\caption{The output of ADFD+ for the above code.}
+\label{fig:adfdPlusExample}
 \end{figure*}
-
-%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Front-end of ADFD+}
-Front end of ADFD+ is showing in the Figure \ref{fig:adfdPlusFrontEnd}. Here the user had set range to 5 which means that ADFD+ strategy will search the region up to 5 values around the discovered failure. Here ADFD+ using random and random+ strategy found the first failure in the method under test when the argument x and y value were 10 and -3 respectively. As soon as the failure is discovered the strategy start for any other failures in the vicinity under the restricted range. The figure clearly show the fail values with red dots and the correct values with green dot on the graph. T
-
-%\begin{figure*}[ht]
-%\centering
-%\includegraphics[width=17.5cm,height=11cm]{adfdPlusFrontEnd.png}
-%\caption{Frond-end of ADFD+ test framework.}
-%\label{fig:adfdPlusFrontEnd}
-%\end{figure*}
-
-
-ADFD+ is an extension of ADFD's algorithm with more accuracy to find and clarity to plot the failure domain on a graphical chart. Deriving failure domains using ADFD+ is a one click process and all the tester needs to input is the class to test and the range-value for which to search around the found failure. 
-
-%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%
-
-\section{Daikon}
-\subsection{Generation and Annotation of Invariants}
-
-
-
 
 \section{Experimental Setup}
 

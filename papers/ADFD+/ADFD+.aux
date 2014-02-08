@@ -14,6 +14,10 @@
 \citation{chan1996proportional}
 \citation{chan1996proportional}
 \citation{ahmad2013adfd}
+\citation{Oriol2011yeti}
+\citation{oriol2012random}
+\citation{oriol2010testing}
+\citation{oriol2010yeti}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Failure Patterns}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Failure patterns across input domain\nobreakspace  {}\cite  {chan1996proportional}}}{\thepage }}
 \newlabel{fig:failurePatterns}{{1}{\thepage }}
@@ -22,32 +26,28 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Workflow of ADFD+}{\thepage }}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Workflow of ADFD+}}{\thepage }}
 \newlabel{fig:Workflow}{{2}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}ADFD+ by an example}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Front-end of ADFD+}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Implementation of ADFD+}{\thepage }}
 \citation{Leitner2007}
 \citation{Tempero2010a}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Frond-end of ADFD+ test framework and the output of the above class.}}{\thepage }}
-\newlabel{fig:adfdPlusFrontEnd}{{3}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Daikon}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Generation and Annotation of Invariants}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Setup}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {6}results}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Threats to validity}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Future Work}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {11}Evaluation}{\thepage }}
-\newlabel{sec:eval}{{11}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Research questions}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Experiments}{\thepage }}
 \citation{Oriol2012}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Name and versions of 32 Projects randomly selected from the Qualitas Corpus for the experiments}}{\thepage }}
-\newlabel{table:projects}{{1}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Are there classes for which any of the three strategies provide better results?}{\thepage }}
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.4}Can we pick the best default strategy between R, R+ and DSSR?}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {12}Discussion}{\thepage }}
-\newlabel{sec:discussion}{{12}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}ADFD+ by an example}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental Setup}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {5}results}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Discussion}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Threats to validity}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Future Work}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Evaluation}{\thepage }}
+\newlabel{sec:eval}{{10}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Research questions}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Experiments}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Are there classes for which any of the three strategies provide better results?}{\thepage }}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Can we pick the best default strategy between R, R+ and DSSR?}{\thepage }}
 \citation{Oriol2010}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The output of ADFD+ for the above code.}}{\thepage }}
+\newlabel{fig:adfdPlusExample}{{3}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {11}Discussion}{\thepage }}
+\newlabel{sec:discussion}{{11}{\thepage }}
 \citation{Oriol2012}
 \citation{Pacheco2005}
 \citation{Csallner2004}
@@ -69,10 +69,6 @@
 \citation{Leitner2007}
 \citation{Beizer1990}
 \citation{Leitner2007}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces T-test results of the classes showing different results}}{\thepage }}
-\newlabel{table:ttest}{{2}{\thepage }}
-\@writefile{toc}{\contentsline {section}{\numberline {13}Related Work}{\thepage }}
-\newlabel{sec:rw}{{13}{\thepage }}
 \citation{Gutjahr1999}
 \citation{Duran1984}
 \citation{Hamlet1990}
@@ -81,7 +77,52 @@
 \citation{Oriol2012}
 \citation{Tempero2010a}
 \citation{Tempero2008}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces T-test results of the classes showing different results}}{\thepage }}
+\newlabel{table:ttest}{{2}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {12}Related Work}{\thepage }}
+\newlabel{sec:rw}{{12}{\thepage }}
 \bibstyle{abbrv}
 \bibdata{sigproc}
-\@writefile{toc}{\contentsline {section}{\numberline {14}Conclusions}{\thepage }}
-\newlabel{sec:conc}{{14}{\thepage }}
+\bibcite{ahmad2013adfd}{1}
+\bibcite{Arcuri2012}{2}
+\bibcite{Beizer1990}{3}
+\bibcite{chan1996proportional}{4}
+\bibcite{Chan2002}{5}
+\bibcite{Chen2004a}{6}
+\bibcite{Chen2003}{7}
+\bibcite{Chen2010}{8}
+\bibcite{Chen2005}{9}
+\bibcite{Ciupa2007}{10}
+\bibcite{Ciupa2008a}{11}
+\bibcite{Claessen2000a}{12}
+\bibcite{claessen2011quickcheck}{13}
+\bibcite{Csallner2004}{14}
+\bibcite{Duran1984}{15}
+\bibcite{ernst2007daikon}{16}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Name and versions of 32 Projects randomly selected from the Qualitas Corpus for the experiments}}{\thepage }}
+\newlabel{table:projects}{{1}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Conclusions}{\thepage }}
+\newlabel{sec:conc}{{13}{\thepage }}
+\@writefile{toc}{\contentsline {section}{\numberline {14}References}{\thepage }}
+\bibcite{finelli1991nasa}{17}
+\bibcite{Gutjahr1999}{18}
+\bibcite{Hamlet1990}{19}
+\bibcite{Hamlet1994}{20}
+\bibcite{Leitner2007}{21}
+\bibcite{Oriat2004}{22}
+\bibcite{oriat2005jartege}{23}
+\bibcite{Oriol2011yeti}{24}
+\bibcite{oriol2012random}{25}
+\bibcite{Oriol2012}{26}
+\bibcite{oriol2010testing}{27}
+\bibcite{oriol2010yeti}{28}
+\bibcite{Oriol2010}{29}
+\bibcite{pacheco2005eclat}{30}
+\bibcite{Pacheco2005}{31}
+\bibcite{pacheco2007randoop}{32}
+\bibcite{schneckenburger2007towards}{33}
+\bibcite{Tempero2008}{34}
+\bibcite{Tempero2010}{35}
+\bibcite{Tempero2010a}{36}
+\bibcite{white1980domain}{37}
+\bibcite{Yoo2012}{38}
