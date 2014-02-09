@@ -72,7 +72,7 @@ showstringspaces=false}
 
 
 
-\title{Automated Discovery of Failure Domain+ and Daikon to Analyse Boundaries}
+\title{Automated Discovery of Failure Domain+ and Daikon to Analyse Failure Boundaries}
 
 
 \numberofauthors{2} %  in this sample file, there are a *total*
@@ -244,7 +244,7 @@ public class Error {
 }
 \end{lstlisting}
 
-On execution, the ADFD+ strategy tests the class with the help of YETI and finds a failure at x = 6 and y = 3. Once a failure is discovered ADFD+ uses the surrounding values around the failure to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two dimensional graph with red dot indicating a failing value and green dot indicating the passing value as shown in the Figure~\ref{fig:adfdPlusExample}. 
+On execution, the ADFD+ strategy tests the class with the help of YETI and finds the first failure at x = 6 and y = 3. Once a failure is discovered ADFD+ uses the surrounding values around it to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two dimensional graph with red dot indicating a failing value and green dot indicating the passing value. Figure~\ref{fig:adfdPlusExample} clearly show that the failure domain forms a block pattern and the boundaries of the failure are $(5, 2), (5, 3),(5, 4), (6, 2), (6, 4), (7, 2), (7, 4), (8, 2), (8, 3), (8, 4)$.
 
 \begin{figure*}[ht]
 \centering
@@ -253,13 +253,7 @@ On execution, the ADFD+ strategy tests the class with the help of YETI and finds
 \label{fig:adfdPlusExample}
 \end{figure*}
 
-\section{Experimental Setup}
 
-\section{results}
-\section{Discussion}
-\section{Threats to validity}
-\section{Conclusion}
-\section{Future Work}
 
 
 
@@ -271,25 +265,49 @@ On execution, the ADFD+ strategy tests the class with the help of YETI and finds
 
 
 \section{Evaluation}\label{sec:eval}
-
-The DSSR strategy is experimentally evaluated by comparing its performance with that of random and random+ strategy ~\cite{Leitner2007}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability have been kept constant in the experiments.
+Because of using error-seeded one and two dimensional numerical programs, we were aware of the failure domain present in each program. The correct identification and presentation of the failure domain by ADFD+ prove the correct working of ADFD+. We then evaluated the same program by Daikon and plot its results. The unit test cases required by Daikon for generating invariants were generated using Randoop~\cite{}. YETI being capable of generating the test cases is not used for this step to keep the second completely independent from first. 
 
 \subsection{Research questions}
-For evaluating the DSSR strategy, the following research questions have been addressed in this study:
+For evaluating Daikon, the following research questions have been addressed in this study:
 \begin{enumerate}
-\item Is there an absolute best among R, R+ and DSSR strategies?
-\item Are there classes for which any of the three strategies provide better results?
-\item Can we pick the best default strategy between R, R+ and DSSR?
+\item If Daikon is capable of generating invariants to identify the failure?
+\item If Daikon is capable of generating invariants that identify the failure domain?
+\item If Daikon is capable of correctly identifying the boundaries of the failure domain?
 \end{enumerate}
 
-
-
 \subsection{Experiments}
+To evaluate the Daikon performance for failure domain, we performed testing of several error seeded one and two dimensional numerical programs written in Java. All the selected programs were seeded with at least one failure domain of point, block or strip nature. Every program is tested twenty times by both ADFD+ and Daikon. The program code is given in Appendix~\ref{} while the test details is presented in Table~\ref{table:Results}.
 
-To evaluate the performance of DSSR we performed extensive testing of programs from the Qualitas Corpus~\cite{Tempero2010a}. The Qualitas Corpus is a curated collection of open source java projects built with the aim of helping empirical research on  software engineering. These projects have been collected in an organised form containing the source and binary forms. Version 20101126, which contains 106 open source java projects is used in the current evaluation. In our experiments we selected 60 random classes from 32 random projects. All the selected classes produced at least one fault and did not time out with maximum testing session of 10 minutes. Every class is tested thirty times by each strategy (R, R+, DSSR). Name, version and size of the projects to which the classes belong are given in table~\ref{table:projects} while test details of the classes is presented in table~\ref{table:Results}. Line of Code (LOC) tested per class and its total is shown in column 3 of table~\ref{table:Results}. 
+Every class is evaluated through $10^5$ calls in each test session of ADFD+.
+%\footnote{The total number of tests is equal to $60\times 30\times 3 \times 10^5 = 540\times10^6~tests$.} 
+Because of the absence of the contracts and assertions in the code under test, similar approach as used in previous studies ~\cite{Oriol2012} is followed using undeclared exceptions to compute failures.
 
-Every class is evaluated through $10^5$ calls in each test session.\footnote{The total number of tests is thus $60\times 30\times 3 \times 10^5 = 540\times 10^6~tests$.} 
-Because of the absence of the contracts and assertions in the code under test, Similar approach as used in previous studies ~\cite{Oriol2012} is followed using undeclared exceptions to compute unique failures.
+
+All tests are performed with a 64-bit Mac OS X Lion Version 10.7.4 running on 2 x 2.66 GHz 6-Core Intel Xeon processor with 6 GB (1333 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. The machine took approximately 100 hours to process the experiments.
+
+\section{results}
+
+for point, block and strip of one dimensional program. Use the same programs of ADFD, same figures but analyse it again on Daikon. because ADFD and ADFD+ behave in the same way for one dimension.
+
+For point block and strip of two dimensional programs. Use adfd+ system.
+
+
+
+
+
+
+\section{Discussion}
+\section{Threats to validity}
+
+
+
+
+\section{Conclusion}
+
+\section{Future Work}
+to extend ADFD+ to multidimensional non numerical programs.
+
+
 
 
 \begin{table}[h]
@@ -339,7 +357,6 @@ S. No& 	Project Name	& 	Version		&	Size (MB)\\
 
 
 
-All tests are performed with a 64-bit Mac OS X Lion Version 10.7.4 running on 2 x 2.66 GHz 6-Core Intel Xeon processor with 6 GB (1333 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. The machine took approximately 100 hours to process the experiments.
 
 
 

@@ -27,9 +27,9 @@
 \contentsline {section}{\numberline {2.5}Software Test Execution}{17}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Manual Software Testing}{18}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Automated Software Testing}{18}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Test Data Generation}{19}{section.2.6}
+\contentsline {section}{\numberline {2.6}Test Data Generation}{18}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Path-wise Test Data Generator}{19}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generators}{20}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generators}{19}{subsection.2.6.2}
 \contentsline {subsubsection}{\numberline {2.6.2.1}Chaining Approach}{20}{subsubsection.2.6.2.1}
 \contentsline {subsubsection}{\numberline {2.6.2.2}Assertion-oriented Approach}{20}{subsubsection.2.6.2.2}
 \contentsline {subsection}{\numberline {2.6.3}Intelligent Test Data Generators}{21}{subsection.2.6.3}
@@ -99,29 +99,25 @@
 \contentsline {section}{\numberline {5.6}Threats to Validity}{80}{section.5.6}
 \contentsline {section}{\numberline {5.7}Related Works}{81}{section.5.7}
 \contentsline {section}{\numberline {5.8}Conclusion}{81}{section.5.8}
-\contentsline {chapter}{\numberline {6}Invariant Guided Random+ Strategy}{83}{chapter.6}
+\contentsline {chapter}{\numberline {6}Automated Discovery of Failure Domain+ and Daikon to Analyse Failure Boundaries}{83}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{83}{section.6.1}
-\contentsline {section}{\numberline {6.2}Invariant Guided Random+ Strategy}{83}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Daikon}{83}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Random Plus Strategy (R+)}{83}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Structure of the Invariant Guided Random+ Strategy}{84}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Explanation of IGRS strategy on a concrete example}{84}{subsection.6.2.4}
-\contentsline {section}{\numberline {6.3}Implementation of the IGRS strategy}{84}{section.6.3}
-\contentsline {section}{\numberline {6.4}Evaluation}{84}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Research questions}{84}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Experiments}{85}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Performance measurement criteria}{85}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Results}{85}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Answer A}{85}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Answer B}{85}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Answer C}{85}{subsection.6.5.3}
-\contentsline {section}{\numberline {6.6}Discussion}{85}{section.6.6}
-\contentsline {section}{\numberline {6.7}Related Work}{85}{section.6.7}
-\contentsline {section}{\numberline {6.8}Conclusions}{85}{section.6.8}
-\contentsline {chapter}{\numberline {7}Conclusion}{86}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction}{86}{section.7.1}
-\contentsline {chapter}{\numberline {8}Future Work}{87}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction}{87}{section.8.1}
-\contentsline {chapter}{\numberline {A} }{88}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{88}{section.A.1}
-\contentsline {chapter}{Bibliography}{93}{lstnumber.-13.16}
+\contentsline {section}{\numberline {6.2}Failure Patterns}{84}{section.6.2}
+\contentsline {section}{\numberline {6.3}Automated Discovery of Failure Domain+}{85}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{86}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{86}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}ADFD+ by an example}{87}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Evaluation}{88}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Research questions}{89}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Experiments}{89}{subsection.6.4.2}
+\contentsline {section}{\numberline {6.5}results}{90}{section.6.5}
+\contentsline {section}{\numberline {6.6}Discussion}{90}{section.6.6}
+\contentsline {section}{\numberline {6.7}Threats to validity}{90}{section.6.7}
+\contentsline {section}{\numberline {6.8}Conclusion}{90}{section.6.8}
+\contentsline {section}{\numberline {6.9}Future Work}{90}{section.6.9}
+\contentsline {chapter}{\numberline {7}Conclusion}{91}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{91}{section.7.1}
+\contentsline {chapter}{\numberline {8}Future Work}{92}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{92}{section.8.1}
+\contentsline {chapter}{\numberline {A} }{93}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{93}{section.A.1}
+\contentsline {chapter}{Bibliography}{98}{lstnumber.-14.16}

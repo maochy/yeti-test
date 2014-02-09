@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  8 FEB 2014 00:59
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  9 FEB 2014 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,44 +440,55 @@ Overfull \hbox (3.57765pt too wide) in paragraph at lines 239--240
 [][][][][][][][][][][][][][][][] 
  []
 
+
+Overfull \hbox (5.11888pt too wide) in paragraph at lines 247--248
+\OT1/cmr/m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 2)\OML/cmm/m/it/9 ; \OT1/cmr/
+m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 3)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (5\
+OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (6\OML/cmm/m
+/it/9 ; \OT1/cmr/m/n/9 2)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (6\OML/cmm/m/it/9 ; \
+OT1/cmr/m/n/9 4)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (7\OML/cmm/m/it/9 ; \OT1/cmr/m
+/n/9 2)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (7\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)\O
+ML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 2)\OML/cmm/m/
+it/9 ; \OT1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 3)\OML/cmm/m/it/9 ; \O
+T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 . 
+ []
+
 <exampleError.png, id=22, 1441.88687pt x 818.55812pt>
 File: exampleError.png Graphic file (type png)
  <use exampleError.png>
 Package pdftex.def Info: exampleError.png used on input line 251.
 (pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
 
+Overfull \hbox (4.59604pt too wide) in paragraph at lines 268--269
+\T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
+t
+ []
+
+
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 279.
+
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 289.
-
-
-LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 289.
+ine 279.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (7.5701pt too wide) in paragraph at lines 397--397
+Overfull \hbox (1.5701pt too wide) in paragraph at lines 414--414
 []\secfnt Are there classes for which any of the three
  []
 
 [3]
-Overfull \hbox (1.59169pt too wide) in paragraph at lines 478--480
+Overfull \hbox (1.59169pt too wide) in paragraph at lines 495--497
 []\T1/aer/bx/n/9 Dependence of DSSR strat-egy to find the first unique
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./exampleError.png>]
+[4 <./exampleError.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-(./ADFD+.bbl
-Underfull \vbox (badness 1137) has occurred while \output is active []
-
- [6]
+(./ADFD+.bbl [6]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ) [7]
@@ -488,12 +499,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4770 strings out of 493315
- 63926 string characters out of 6137904
+ 4771 strings out of 493315
+ 63928 string characters out of 6137904
  170045 words of memory out of 5000000
- 8075 multiletter control sequences out of 15000+600000
+ 8076 multiletter control sequences out of 15000+600000
  56902 words of font info for 85 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  41i,11n,40p,1246b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -511,7 +525,7 @@ t/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb>
-Output written on ADFD+.pdf (7 pages, 566487 bytes).
+Output written on ADFD+.pdf (7 pages, 565539 bytes).
 PDF statistics:
  88 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
