@@ -5,89 +5,11 @@ M.~A. Ahmad and M.~Oriol.
 \newblock Automated discovery of failure domain.
 \newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
 
-\bibitem{Arcuri2012}
-A.~Arcuri, M.~Z. Iqbal, and L.~Briand.
-\newblock Random testing: Theoretical results and practical implications.
-\newblock {\em IEEE Transactions on Software Engineering}, 38:258--277, 2012.
-
-\bibitem{Beizer1990}
-B.~Beizer.
-\newblock {\em Software testing techniques (2nd ed.)}.
-\newblock Van Nostrand Reinhold Co., New York, NY, USA, 1990.
-
 \bibitem{chan1996proportional}
 F.~Chan, T.~Y. Chen, I.~Mak, and Y.-T. Yu.
 \newblock Proportional sampling strategy: guidelines for software testing
   practitioners.
 \newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
-
-\bibitem{Chan2002}
-K.~P. Chan, T.~Y. Chen, and D.~Towey.
-\newblock Restricted random testing.
-\newblock In {\em Proceedings of the 7th International Conference on Software
-  Quality}, ECSQ '02, pages 321--330, London, UK, UK, 2002. Springer-Verlag.
-
-\bibitem{Chen2004a}
-T.~Chen, R.~Merkel, P.~Wong, and G.~Eddy.
-\newblock Adaptive random testing through dynamic partitioning.
-\newblock In {\em Quality Software, 2004. QSIC 2004. Proceedings. Fourth
-  International Conference on}, pages 79 -- 86, sept. 2004.
-
-\bibitem{Chen2003}
-T.~Y. Chen, F.~C. Kuo, R.~G. Merkel, and S.~P. Ng.
-\newblock Mirror adaptive random testing.
-\newblock In {\em Proceedings of the Third International Conference on Quality
-  Software}, QSIC '03, page~4, Washington, DC, USA, 2003. IEEE Computer
-  Society.
-
-\bibitem{Chen2010}
-T.~Y. Chen, F.-C. Kuo, R.~G. Merkel, and T.~H. Tse.
-\newblock Adaptive random testing: The art of test case diversity.
-\newblock {\em J. Syst. Softw.}, 83:60--66, January 2010.
-
-\bibitem{Chen2005}
-T.~Y. Chen and R.~Merkel.
-\newblock Quasi-random testing.
-\newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
-  Automated software engineering}, ASE '05, pages 309--312, New York, NY, USA,
-  2005. ACM.
-
-\bibitem{Ciupa2007}
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
-\newblock Experimental assessment of random testing for object-oriented
-  software.
-\newblock In {\em Proceedings of the 2007 international symposium on Software
-  testing and analysis}, ISSTA '07, pages 84--94, New York, NY, USA, 2007. ACM.
-
-\bibitem{Ciupa2008a}
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
-\newblock Artoo: adaptive random testing for object-oriented software.
-\newblock In {\em Proceedings of the 30th international conference on Software
-  engineering}, ICSE '08, pages 71--80, New York, NY, USA, 2008. ACM.
-
-\bibitem{Claessen2000a}
-K.~Claessen and J.~Hughes.
-\newblock Quickcheck: a lightweight tool for random testing of haskell
-  programs.
-\newblock {\em SIGPLAN Not.}, 35(9):268--279, Sept. 2000.
-
-\bibitem{claessen2011quickcheck}
-K.~Claessen and J.~Hughes.
-\newblock Quickcheck: a lightweight tool for random testing of haskell
-  programs.
-\newblock {\em Acm sigplan notices}, 46(4):53--64, 2011.
-
-\bibitem{Csallner2004}
-C.~Csallner and Y.~Smaragdakis.
-\newblock Jcrasher: An automatic robustness tester for {Java}.
-\newblock {\em Software---Practice \& Experience}, 34(11):1025--1050, Sept.
-  2004.
-
-\bibitem{Duran1984}
-J.~W. Duran and S.~C. Ntafos.
-\newblock An evaluation of random testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, SE-10(4):438 --444,
-  july 1984.
 
 \bibitem{ernst2007daikon}
 M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
@@ -99,42 +21,6 @@ M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
 G.~B. Finelli.
 \newblock Nasa software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
-
-\bibitem{Gutjahr1999}
-W.~Gutjahr.
-\newblock Partition testing vs. random testing: the influence of uncertainty.
-\newblock {\em Software Engineering, IEEE Transactions on}, 25(5):661 --674,
-  sep/oct 1999.
-
-\bibitem{Hamlet1990}
-D.~Hamlet and R.~Taylor.
-\newblock Partition testing does not inspire confidence [program testing].
-\newblock {\em Software Engineering, IEEE Transactions on}, 16(12):1402 --1411,
-  dec 1990.
-
-\bibitem{Hamlet1994}
-R.~Hamlet.
-\newblock Random testing.
-\newblock In {\em Encyclopedia of Software Engineering}, pages 970--978. Wiley,
-  1994.
-
-\bibitem{Leitner2007}
-A.~Leitner, I.~Ciupa, B.~Meyer, and M.~Howard.
-\newblock Reconciling manual and automated testing: The autotest experience.
-\newblock In {\em Proceedings of the 40th Annual Hawaii International
-  Conference on System Sciences}, HICSS '07, pages 261a--, Washington, DC, USA,
-  2007. IEEE Computer Society.
-
-\bibitem{Oriat2004}
-C.~Oriat.
-\newblock Jartege: a tool for random generation of unit tests for java classes.
-\newblock {\em CoRR}, abs/cs/0412012, 2004.
-
-\bibitem{oriat2005jartege}
-C.~Oriat.
-\newblock Jartege: a tool for random generation of unit tests for java classes.
-\newblock In {\em Quality of Software Architectures and Software Quality},
-  pages 242--256. Springer, 2005.
 
 \bibitem{Oriol2011yeti}
 M.~Oriol.
@@ -166,67 +52,15 @@ M.~Oriol and F.~Ullah.
 \newblock In {\em Software Testing, Verification, and Validation Workshops
   (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
 
-\bibitem{Oriol2010}
-M.~Oriol and F.~Ullah.
-\newblock Yeti on the cloud.
-\newblock {\em Software Testing Verification and Validation Workshop, IEEE
-  International Conference on}, 0:434--437, 2010.
-
-\bibitem{pacheco2005eclat}
-C.~Pacheco and M.~D. Ernst.
-\newblock {\em Eclat: Automatic generation and classification of test inputs}.
-\newblock Springer, 2005.
-
-\bibitem{Pacheco2005}
-C.~Pacheco and M.~D. Ernst.
-\newblock Eclat: Automatic generation and classification of test inputs.
-\newblock In {\em In 19th European Conference Object-Oriented Programming},
-  pages 504--527, 2005.
-
-\bibitem{pacheco2007randoop}
-C.~Pacheco and M.~D. Ernst.
-\newblock Randoop: feedback-directed random testing for java.
-\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
-  Object-oriented programming systems and applications companion}, pages
-  815--816. ACM, 2007.
-
 \bibitem{schneckenburger2007towards}
 C.~Schneckenburger and J.~Mayer.
 \newblock Towards the determination of typical failure patterns.
 \newblock In {\em Fourth international workshop on Software quality assurance:
   in conjunction with the 6th ESEC/FSE joint meeting}, pages 90--93. ACM, 2007.
 
-\bibitem{Tempero2008}
-E.~Tempero.
-\newblock An empirical study of unused design decisions in open source java
-  software.
-\newblock In {\em Software Engineering Conference, 2008. APSEC '08. 15th
-  Asia-Pacific}, pages 33 --40, dec. 2008.
-
-\bibitem{Tempero2010}
-E.~Tempero, C.~Anslow, J.~Dietrich, T.~Han, J.~Li, M.~Lumpe, H.~Melton, and
-  J.~Noble.
-\newblock Qualitas corpus: A curated collection of java code for empirical
-  studies.
-\newblock In {\em 2010 Asia Pacific Software Engineering Conference
-  (APSEC2010)}, Dec. 2010.
-
-\bibitem{Tempero2010a}
-E.~Tempero, S.~Counsell, and J.~Noble.
-\newblock An empirical study of overriding in open source java.
-\newblock In {\em Proceedings of the Thirty-Third Australasian Conferenc on
-  Computer Science - Volume 102}, ACSC '10, pages 3--12, Darlinghurst,
-  Australia, Australia, 2010. Australian Computer Society, Inc.
-
 \bibitem{white1980domain}
 L.~J. White and E.~I. Cohen.
 \newblock A domain strategy for computer program testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
-
-\bibitem{Yoo2012}
-S.~Yoo and M.~Harman.
-\newblock Test data regeneration: generating new test data from existing test
-  data.
-\newblock {\em Softw. Test. Verif. Reliab.}, 22(3):171--201, May 2012.
 
 \end{thebibliography}
