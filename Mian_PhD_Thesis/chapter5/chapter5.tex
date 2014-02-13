@@ -15,7 +15,7 @@ All the above-mentioned variations in random testing are based on the observatio
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=8cm,height=2cm]{chapter5/ART_Patterns.png}
+\includegraphics[width=14cm,height=5cm]{chapter5/ART_Patterns.png}
 \caption{Failure domains across input domain~\cite{Chan1996}}
 \label{fig:patterns}
 \end{figure}
@@ -96,7 +96,7 @@ The process is divided into five major steps given below and each step is briefl
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=10cm,height=6.5cm]{chapter5/ADFD_Diagram1.png}
+\includegraphics[width=15cm,height=10cm]{chapter5/ADFD_Diagram1.png}
 \caption{Work flow of ADFD strategy}
 \label{fig:ADFD-workflow}
 \end{figure}
@@ -104,7 +104,7 @@ The process is divided into five major steps given below and each step is briefl
 \begin{figure}[htp]
 \begin{center}
 %\centring
-\includegraphics[width=14cm,height=9cm]{chapter5/ADFD_front_end.png}
+\includegraphics[width=15cm,height=10cm]{chapter5/ADFD_front_end.png}
 \caption{Front-end of ADFD strategy}
 \label{fig:ADFD-frontend}
 \end{center}
@@ -222,7 +222,7 @@ public class PointDomainOneArgument{
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=8.2cm,height=4.5cm]{chapter5/pointDomainOneArgument.png}
+\includegraphics[width=12.2cm,height=8.5cm]{chapter5/pointDomainOneArgument.png}
 \caption{ADFD strategy plotting pass and fault domain of the given class}
 \label{fig:ADFD-example}
 \end{figure}
@@ -233,20 +233,20 @@ As soon as any one of the above four faults are discovered the ADFD strategy gen
 \begin{comment}
 %%%%%% They are commented in this format to decrease the text, for two column format uncomment them.
 
-ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI. 
+%ADFD can be activated by typing the command java -jar ADFD.jar. After the GUI of ADFD is launched we need to specify yeti specific values that include language of the program under test, strategy for the current test session, duration of test session (minutes or milli-second), display YETI GUI or not and display real time logs or not. Next we browse to select the file for testing and the run button starts testing the file with YETI. 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=8.2cm,height=5cm]{chapter5/pointDomainOneArgument.png}
+\includegraphics[width=12.2cm,height=8.5cm]{chapter5/pointDomainOneArgument.png}
 \caption{ADFD strategy plotting pass and fault domain of the given class}
 \label{fig:ADFD-plot}
 \end{figure}
 
-In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
+%In 5 second YETI found one fault out of the above 4 faults. The ADFD strategy in YETI generate a source file (C*.java) at the end of the test session. This file contain the code that searches for fault domains. The count button count the number of files. ADFD create the number of files on the basis of the number of arguments in the method under test. For one argument one method is created and for two argument two methods are created. 
 
-The next button is compile which compile the generated files and generate the byte code (.class files). The execute button execute the byte code and test the method under test for all the values between upper and lower bound. At the end of execution it generates two files (pass.txt and fail.txt). Pass file contain all the values for which the method performed correctly while fail file contain all the values for which the method under test fail.
+%The next button is compile which compile the generated files and generate the byte code (.class files). The execute button execute the byte code and test the method under test for all the values between upper and lower bound. At the end of execution it generates two files (pass.txt and fail.txt). Pass file contain all the values for which the method performed correctly while fail file contain all the values for which the method under test fail.
 
-The draw fault domain button reads the pass and fail files and plot them on the x, y graph where red line with squares show the failing values while the blue line with square shapes show the passing values.
+%The draw fault domain button reads the pass and fail files and plot them on the x, y graph where red line with squares show the failing values while the blue line with square shapes show the passing values.
 \end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -264,8 +264,10 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 \begin{table}[h]
 %\renewcommand{\arraystretch}{2}
-\centering
 \caption{Pass and Fail domain with respect to one and two dimensional program}
+\bigskip
+\centering
+{\renewcommand{\arraystretch}{1.5}
 \scriptsize
 %\normalsize
 
@@ -303,6 +305,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 				
 				
 \end{tabular}
+}
 \label{table:failtable}
 \end{table}
 
@@ -315,11 +318,11 @@ To elucidate the results, six programs were developed so as to have separate pro
 \begin{figure} [H]
 \centering
 \subfigure[One dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/PFDOne.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/PFDOne.png}
 \label{fig:PFDOne}
 }
 \subfigure[Two dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/PFDTwo.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/PFDTwo.png}
 \label{fig:PFDTwo}
 }
 
@@ -352,11 +355,11 @@ To elucidate the results, six programs were developed so as to have separate pro
 \begin{figure} [H]
 \centering
 \subfigure[One dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/BFDOne.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/BFDOne.png}
 \label{fig:BFDOne}
 }
 \subfigure[Two dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/BFDTwo.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/BFDTwo.png}
 \label{fig:BFDTwo}
 }
 
@@ -389,11 +392,11 @@ To elucidate the results, six programs were developed so as to have separate pro
 \begin{figure} [H]
 \centering
 \subfigure[One dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/SFDOne.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/SFDOne.png}
 \label{fig:SFDOne}
 }
 \subfigure[Two dimension module]{
-\includegraphics[width=7cm,height=4.5cm]{chapter5/SFDTwo.png}
+\includegraphics[width=14.2cm,height=10.5cm]{chapter5/SFDTwo.png}
 \label{fig:SFDTwo}
 }
 

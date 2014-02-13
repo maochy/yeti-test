@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  10 FEB 2014 21:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  13 FEB 2014 00:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -297,7 +297,26 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 \@float@every@table=\toks44
 
-(./ADFD+.aux)
+(./ADFD+.aux
+
+LaTeX Warning: Label `fig:PFDOne' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:PFDOne' multiply defined.
+
+
+LaTeX Warning: Label `fig:BFDOne' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:BFDOne' multiply defined.
+
+
+LaTeX Warning: Label `fig:SFDOne' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:SFDOne' multiply defined.
+
+)
 \openout1 = `ADFD+.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
@@ -312,8 +331,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
 LaTeX Font Info:    ... okay on input line 71.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
 \scratchdimen=\dimen137
@@ -437,17 +455,23 @@ LaTeX Font Info:    Try loading font information for T1+aett on input line 214.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
+<exampleError.png, id=15, 1441.88687pt x 818.55812pt>
+File: exampleError.png Graphic file (type png)
+ <use exampleError.png>
+Package pdftex.def Info: exampleError.png used on input line 229.
+(pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
+
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 233.
+(Font)              using `T1/aett/m/n' instead on input line 239.
 
 [2 <./ART_Patterns.png> <./adfdPlusWorkflow.png>]
-Overfull \hbox (3.57765pt too wide) in paragraph at lines 239--240
+Overfull \hbox (3.57765pt too wide) in paragraph at lines 245--246
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (5.11888pt too wide) in paragraph at lines 247--248
+Overfull \hbox (5.11888pt too wide) in paragraph at lines 253--254
 \OT1/cmr/m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 2)\OML/cmm/m/it/9 ; \OT1/cmr/
 m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 3)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (5\
 OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (6\OML/cmm/m
@@ -459,37 +483,125 @@ it/9 ; \OT1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 3)\OML/cmm/m/it/9 ; \O
 T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 . 
  []
 
-<exampleError.png, id=22, 1441.88687pt x 818.55812pt>
-File: exampleError.png Graphic file (type png)
- <use exampleError.png>
-Package pdftex.def Info: exampleError.png used on input line 251.
-(pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
 
-Overfull \hbox (4.59604pt too wide) in paragraph at lines 270--271
+Overfull \hbox (4.59604pt too wide) in paragraph at lines 271--272
 \T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
 t
  []
 
+[3 <./exampleError.png>]
 
-LaTeX Warning: Reference `' on page \thepage  undefined on input line 281.
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 282.
 
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 281.
+ine 282.
 
-[3] (./ADFD+.bbl) [4 <./exampleError.png>] (./ADFD+.aux)
+
+LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
+ine 282.
+
+
+Overfull \hbox (6.57433pt too wide) in paragraph at lines 294--294
+[]\secfnt Test of one-dimension pro-grams by ADFD+ 
+ []
+
+
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 295.
+
+<PFDOne.png, id=27, 790.955pt x 575.14874pt>
+File: PFDOne.png Graphic file (type png)
+ <use PFDOne.png>
+Package pdftex.def Info: PFDOne.png used on input line 302.
+(pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
+
+<BFDOne.png, id=28, 794.97pt x 575.14874pt>
+File: BFDOne.png Graphic file (type png)
+ <use BFDOne.png>
+Package pdftex.def Info: BFDOne.png used on input line 306.
+(pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
+
+<SFDOne.png, id=29, 789.95125pt x 573.14125pt>
+File: SFDOne.png Graphic file (type png)
+ <use SFDOne.png>
+Package pdftex.def Info: SFDOne.png used on input line 310.
+(pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--311
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--311
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (3.57433pt too wide) in paragraph at lines 318--318
+[]\secfnt Test of one-dimension pro-grams by Daikon 
+ []
+
+
+Overfull \hbox (7.11441pt too wide) in paragraph at lines 321--321
+[]\secfnt Test of two-dimension pro-grams by ADFD+ 
+ []
+
+
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 322.
+
+<PFDTwo.png, id=30, 1187.43625pt x 772.8875pt>
+File: PFDTwo.png Graphic file (type png)
+ <use PFDTwo.png>
+Package pdftex.def Info: PFDTwo.png used on input line 329.
+(pdftex.def)             Requested size: 227.60829pt x 170.708pt.
+
+<BFDTwo.png, id=31, 1192.455pt x 772.8875pt>
+File: BFDTwo.png Graphic file (type png)
+ <use BFDTwo.png>
+Package pdftex.def Info: BFDTwo.png used on input line 333.
+(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
+
+<SFDTwo.png, id=32, 1192.455pt x 772.8875pt>
+File: SFDTwo.png Graphic file (type png)
+ <use SFDTwo.png>
+Package pdftex.def Info: SFDTwo.png used on input line 337.
+(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--338
+[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--338
+[]
+ []
+
+[4 <./PFDOne.png> <./BFDOne.png> <./SFDOne.png>]
+Overfull \hbox (4.11441pt too wide) in paragraph at lines 343--343
+[]\secfnt Test of two-dimension pro-grams by Daikon 
+ []
+
+[5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFD+.bbl) [6
+
+] (./ADFD+.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 4713 strings out of 493315
- 63297 string characters out of 6137904
- 153045 words of memory out of 5000000
- 8032 multiletter control sequences out of 15000+600000
+ 4750 strings out of 493315
+ 63805 string characters out of 6137904
+ 148045 words of memory out of 5000000
+ 8063 multiletter control sequences out of 15000+600000
  49956 words of font info for 69 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  41i,11n,40p,1246b,1496s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -504,10 +616,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb>
-Output written on ADFD+.pdf (4 pages, 507822 bytes).
+Output written on ADFD+.pdf (6 pages, 684117 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
