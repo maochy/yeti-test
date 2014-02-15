@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  12 FEB 2014 15:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  13 FEB 2014 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1337,9 +1337,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 135.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 135.
-Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
-(rerunfilecheck)             Checksum: E4890304F25C1EBD2166F72903F3ECF9;9014.
 
+
+Package rerunfilecheck Warning: File `ociamthesismain.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ociamthesismain.out':
+(rerunfilecheck)             Before: E4890304F25C1EBD2166F72903F3ECF9;9014
+(rerunfilecheck)             After:  D23DDBDC1316B16BE6702C5A194BFCED;9016.
 
 LaTeX Warning: There were undefined references.
 
@@ -1351,7 +1357,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
 Here is how much of TeX's memory you used:
  10581 strings out of 493315
  154275 string characters out of 6137904
- 338033 words of memory out of 5000000
+ 339033 words of memory out of 5000000
  12915 multiletter control sequences out of 15000+600000
  44995 words of font info for 103 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1374,7 +1380,7 @@ ts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/he
 lvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/
 uhvro8a.pfb>
-Output written on ociamthesismain.pdf (120 pages, 1966849 bytes).
+Output written on ociamthesismain.pdf (120 pages, 1966745 bytes).
 PDF statistics:
  2379 PDF objects out of 2487 (max. 8388607)
  2144 compressed objects within 22 object streams

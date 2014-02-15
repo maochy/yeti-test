@@ -11,6 +11,13 @@ F.~Chan, T.~Y. Chen, I.~Mak, and Y.-T. Yu.
   practitioners.
 \newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
 
+\bibitem{ciupa2006object}
+I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
+\newblock Object distance and its application to adaptive random testing of
+  object-oriented programs.
+\newblock In {\em Proceedings of the 1st international workshop on Random
+  testing}, pages 55--63. ACM, 2006.
+
 \bibitem{ernst2007daikon}
 M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
   and C.~Xiao.
@@ -22,17 +29,6 @@ G.~B. Finelli.
 \newblock Nasa software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
 
-\bibitem{Oriol2011yeti}
-M.~Oriol.
-\newblock York extensible testing infrastructure, 2011.
-
-\bibitem{oriol2012random}
-M.~Oriol.
-\newblock Random testing: Evaluation of a law describing the number of faults
-  found.
-\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
-  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
-
 \bibitem{Oriol2012}
 M.~Oriol.
 \newblock Random testing: Evaluation of a law describing the number of faults
@@ -40,17 +36,12 @@ M.~Oriol.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, pages 201 --210, april 2012.
 
-\bibitem{oriol2010testing}
-M.~Oriol and S.~Tassis.
-\newblock Testing. net code with yeti.
-\newblock In {\em Engineering of Complex Computer Systems (ICECCS), 2010 15th
-  IEEE International Conference on}, pages 264--265. IEEE, 2010.
-
-\bibitem{oriol2010yeti}
-M.~Oriol and F.~Ullah.
-\newblock Yeti on the cloud.
-\newblock In {\em Software Testing, Verification, and Validation Workshops
-  (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
+\bibitem{pacheco2007randoop}
+C.~Pacheco and M.~D. Ernst.
+\newblock Randoop: feedback-directed random testing for java.
+\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
+  Object-oriented programming systems and applications companion}, pages
+  815--816. ACM, 2007.
 
 \bibitem{radatz1990ieee}
 J.~Radatz, A.~Geraci, and F.~Katki.
