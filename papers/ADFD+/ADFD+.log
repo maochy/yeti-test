@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  15 FEB 2014 17:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  15 FEB 2014 22:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -482,10 +482,6 @@ T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 .
  []
 
 
-LaTeX Warning: Citation `pacheco2007randoop' on page \thepage  undefined on inp
-ut line 269.
-
-
 Overfull \hbox (4.59604pt too wide) in paragraph at lines 269--270
 \T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
 t
@@ -500,51 +496,47 @@ LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
 ine 280.
 
 
-LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 280.
-
-
-Overfull \hbox (6.57433pt too wide) in paragraph at lines 297--297
+Overfull \hbox (6.57433pt too wide) in paragraph at lines 295--295
 []\secfnt Test of one-dimension pro-grams by ADFD+ 
  []
 
 <PFDOne.png, id=27, 790.955pt x 575.14874pt>
 File: PFDOne.png Graphic file (type png)
  <use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 305.
+Package pdftex.def Info: PFDOne.png used on input line 303.
 (pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
 
 <BFDOne.png, id=28, 794.97pt x 575.14874pt>
 File: BFDOne.png Graphic file (type png)
  <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 309.
+Package pdftex.def Info: BFDOne.png used on input line 307.
 (pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
 
 <SFDOne.png, id=29, 789.95125pt x 573.14125pt>
 File: SFDOne.png Graphic file (type png)
  <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 313.
+Package pdftex.def Info: SFDOne.png used on input line 311.
 (pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--314
+Underfull \hbox (badness 10000) in paragraph at lines 303--312
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--314
+Underfull \hbox (badness 10000) in paragraph at lines 303--312
 []
  []
 
 
-Underfull \vbox (badness 4927) has occurred while \output is active []
+Underfull \vbox (badness 6741) has occurred while \output is active []
 
 
-Overfull \hbox (3.57433pt too wide) in paragraph at lines 322--322
+Overfull \hbox (3.57433pt too wide) in paragraph at lines 320--320
 []\secfnt Test of one-dimension pro-grams by Daikon 
  []
 
 
-Overfull \hbox (7.11441pt too wide) in paragraph at lines 325--325
+Overfull \hbox (7.11441pt too wide) in paragraph at lines 323--323
 []\secfnt Test of two-dimension pro-grams by ADFD+ 
  []
 
@@ -552,27 +544,27 @@ Overfull \hbox (7.11441pt too wide) in paragraph at lines 325--325
 <PFDTwo.png, id=37, 1187.43625pt x 772.8875pt>
 File: PFDTwo.png Graphic file (type png)
  <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 333.
+Package pdftex.def Info: PFDTwo.png used on input line 331.
 (pdftex.def)             Requested size: 227.60829pt x 170.708pt.
 
 <BFDTwo.png, id=38, 1192.455pt x 772.8875pt>
 File: BFDTwo.png Graphic file (type png)
  <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 337.
+Package pdftex.def Info: BFDTwo.png used on input line 335.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
 <SFDTwo.png, id=39, 1192.455pt x 772.8875pt>
 File: SFDTwo.png Graphic file (type png)
  <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 341.
+Package pdftex.def Info: SFDTwo.png used on input line 339.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--342
+Underfull \hbox (badness 10000) in paragraph at lines 331--340
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--342
+Underfull \hbox (badness 10000) in paragraph at lines 331--340
 []
  []
 
@@ -580,18 +572,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--342
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (4.11441pt too wide) in paragraph at lines 377--377
+Overfull \hbox (4.11441pt too wide) in paragraph at lines 375--375
 []\secfnt Test of two-dimension pro-grams by Daikon 
  []
 
-
-LaTeX Warning: Citation `ciupa2006object' on page \thepage  undefined on input 
-line 419.
-
-[5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFD+.bbl [6]) [7
-
-]
-(./ADFD+.aux)
+[5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFD+.bbl) [6] (./ADFD+.aux
+)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -603,10 +589,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4758 strings out of 493315
- 63965 string characters out of 6137904
- 151045 words of memory out of 5000000
- 8071 multiletter control sequences out of 15000+600000
+ 4754 strings out of 493315
+ 63900 string characters out of 6137904
+ 150045 words of memory out of 5000000
+ 8067 multiletter control sequences out of 15000+600000
  49956 words of font info for 69 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
  41i,11n,40p,1246b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -621,10 +607,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb>
-Output written on ADFD+.pdf (7 pages, 689835 bytes).
+Output written on ADFD+.pdf (6 pages, 689965 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
