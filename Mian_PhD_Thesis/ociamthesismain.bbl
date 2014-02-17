@@ -1,5 +1,11 @@
 \begin{thebibliography}{100}
 
+\bibitem{Chan1996}
+F.T. Chan, T.Y. Chen, I.K. Mak, and Y.T. Yu.
+\newblock Proportional sampling strategy: guidelines for software testing
+  practitioners.
+\newblock {\em Information and Software Technology}, 38(12):775 -- 782, 1996.
+
 \bibitem{Chen2003}
 T.~Y. Chen, F.~C. Kuo, R.~G. Merkel, and S.~P. Ng.
 \newblock Mirror adaptive random testing.
@@ -18,46 +24,31 @@ Carlos Pacheco and Michael~D. Ernst.
 \newblock In {\em In 19th European Conference Object-Oriented Programming},
   pages 504--527, 2005.
 
+\bibitem{Leitner2007}
+Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
+\newblock Reconciling manual and automated testing: The autotest experience.
+\newblock In {\em Proceedings of the 40th Annual Hawaii International
+  Conference on System Sciences}, HICSS '07, pages 261a--, Washington, DC, USA,
+  2007. IEEE Computer Society.
+
+\bibitem{Khurshid2004}
+Sarfraz Khurshid and Darko Marinov.
+\newblock {TestEra:} {Specification-Based} testing of java programs using
+  {SAT}.
+\newblock {\em Automated Software Engineering}, 11:403--434, 2004.
+\newblock {10.1023/B:AUSE.0000038938.10589.b9}.
+
 \bibitem{Chen2008}
 T.~Y. Chen.
 \newblock Adaptive random testing.
 \newblock {\em Eighth International Conference on Qualify Software}, 0:443,
   2008.
 
-\bibitem{Chan1996}
-F.T. Chan, T.Y. Chen, I.K. Mak, and Y.T. Yu.
+\bibitem{chan1996proportional}
+FT~Chan, Tsong~Yueh Chen, IK~Mak, and Yuen-Tak Yu.
 \newblock Proportional sampling strategy: guidelines for software testing
   practitioners.
-\newblock {\em Information and Software Technology}, 38(12):775 -- 782, 1996.
-
-\bibitem{adrion1982validation}
-W~Richards Adrion, Martha~A Branstad, and John~C Cherniavsky.
-\newblock Validation, verification, and testing of computer software.
-\newblock {\em ACM Computing Surveys (CSUR)}, 14(2):159--192, 1982.
-
-\bibitem{chilenski1994applicability}
-John~Joseph Chilenski and Steven~P Miller.
-\newblock Applicability of modified condition/decision coverage to software
-  testing.
-\newblock {\em Software Engineering Journal}, 9(5):193--200, 1994.
-
-\bibitem{gaudel2010software}
-Marie-Claude Gaudel.
-\newblock Software testing based on formal specification.
-\newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
-  Springer, 2010.
-
-\bibitem{richardson1992specification}
-Debra~J Richardson, Stephanie~Leif Aha, and T~Owen O'malley.
-\newblock Specification-based test oracles for reactive systems.
-\newblock In {\em Proceedings of the 14th international conference on Software
-  engineering}, pages 105--118. ACM, 1992.
-
-\bibitem{tracey1998automated}
-Nigel Tracey, John Clark, Keith Mander, and John McDermid.
-\newblock An automated framework for structural test-data generation.
-\newblock In {\em Automated Software Engineering, 1998. Proceedings. 13th IEEE
-  International Conference on}, pages 285--288. IEEE, 1998.
+\newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
 
 \bibitem{Maurice1985}
 Maurice Wilkes.
@@ -77,13 +68,6 @@ National~Institute for Standards and Technology.
 \newblock The economic impacts of inadequate infrastructure for software
   testing.
 \newblock Plannin Report 02-03, May 2002.
-
-\bibitem{american1984}
-NY. American National Standards Institute. New~York, Institute of~Electrical,
-  and Electronics Engineers.
-\newblock {\em Software Engineering Standards: ANSI/IEEE Std 729-1983, Glossary
-  of Software Engineering Terminology}.
-\newblock Inst. of Electrical and Electronics Engineers, 1984.
 
 \bibitem{Dijkstra1972}
 Edsger~W. Dijkstra.
@@ -178,15 +162,16 @@ A.~Jefferson Offutt and J.~Huffman Hayes.
 \newblock A semantic model of program faults.
 \newblock {\em SIGSOFT Softw. Eng. Notes}, 21(3):195--200, May 1996.
 
-\bibitem{Tassey2002}
-Tassey.
-\newblock The economic impacts of inadequate infrastructure for software
-  testing.
-\newblock Technical report, National Institute of Science and Technology, 2002.
-
 \bibitem{toweysoftware}
 Dave Towey.
 \newblock Software quality assurance.
+
+\bibitem{american1984}
+NY. American National Standards Institute. New~York, Institute of~Electrical,
+  and Electronics Engineers.
+\newblock {\em Software Engineering Standards: ANSI/IEEE Std 729-1983, Glossary
+  of Software Engineering Terminology}.
+\newblock Inst. of Electrical and Electronics Engineers, 1984.
 
 \bibitem{Myers1979}
 Glenford~J. Myers.
@@ -202,6 +187,12 @@ Robert~T Futrell, Linda~I Shafer, and Donald~F Shafer.
 Ashfaque Ahmed.
 \newblock {\em Software testing as a service}.
 \newblock CRC Press, 2010.
+
+\bibitem{chilenski1994applicability}
+John~Joseph Chilenski and Steven~P Miller.
+\newblock Applicability of modified condition/decision coverage to software
+  testing.
+\newblock {\em Software Engineering Journal}, 9(5):193--200, 1994.
 
 \bibitem{cohen2005robustness}
 Julie Cohen, Daniel Plakosh, and Kristi~L Keeler.
@@ -262,7 +253,7 @@ Simeon Ntafos.
 
 \bibitem{radatz1990ieee}
 Jane Radatz, Anne Geraci, and Freny Katki.
-\newblock Ieee standard glossary of software engineering terminology.
+\newblock I{EEE} standard glossary of software engineering terminology.
 \newblock {\em IEEE Std}, 610121990:121990, 1990.
 
 \bibitem{reid1997empirical}
@@ -272,27 +263,17 @@ Stuart~C Reid.
 \newblock In {\em Software Metrics Symposium, 1997. Proceedings., Fourth
   International}, pages 64--73. IEEE, 1997.
 
-\bibitem{formal1997specification}
-Ralston~T Craigen~D, Gerhart~S.
-\newblock On the use of formal methods in industry -- an authoritative
-  assessment of the efficacy, utility, and applicability of formal methods to
-  systems design and engineering by the analysis of real industrial cases.
-\newblock In {\em Report to the US National Institute of Standards and
-  Technology}, 1993.
-
-\bibitem{Hierons2009}
-Robert~M. Hierons, Kirill Bogdanov, Jonathan~P. Bowen, Rance Cleaveland, John
-  Derrick, Jeremy Dick, Marian Gheorghe, Mark Harman, Kalpesh Kapoor, Paul
-  Krause, Gerald L\"{u}ttgen, Anthony J.~H. Simons, Sergiy Vilkomir, Martin~R.
-  Woodward, and Hussein Zedan.
-\newblock Using formal specifications to support testing.
-\newblock {\em ACM Comput. Surv.}, 41(2):9:1--9:76, February 2009.
-
 \bibitem{donat1997automating}
 Michael~R Donat.
 \newblock Automating formal specification-based testing.
 \newblock In {\em TAPSOFT'97: Theory and Practice of Software Development},
   pages 833--847. Springer, 1997.
+
+\bibitem{gaudel2010software}
+Marie-Claude Gaudel.
+\newblock Software testing based on formal specification.
+\newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
+  Springer, 2010.
 
 \bibitem{bertolino2007software}
 Antonia Bertolino.
@@ -310,22 +291,6 @@ Elaine~J Weyuker.
 \newblock On testing non-testable programs.
 \newblock {\em The Computer Journal}, 25(4):465--470, 1982.
 
-\bibitem{mayer2004test}
-Johannes Mayer, Ralph Guderlei, et~al.
-\newblock Test oracles using statistical methods.
-\newblock In {\em SOQUA/TECOS}, pages 179--189, 2004.
-
-\bibitem{robinson1999finite}
-Harry Robinson.
-\newblock Finite state model-based testing on a shoestring.
-\newblock In {\em Proceedings of the 1999 International Conference on Software
-  Testing Analysis and Review (STARWEST 1999)}, 1999.
-
-\bibitem{jalote1997integrated}
-Pankaj Jalote.
-\newblock {\em An integrated approach to software engineering}.
-\newblock Springer, 1997.
-
 \bibitem{fairley1978tutorial}
 Richard~E Fairley.
 \newblock Tutorial: Static analysis and dynamic testing of computer software.
@@ -342,13 +307,6 @@ Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
 Jan Tretmans and Axel Belinfante.
 \newblock Automatic testing with formal methods.
 \newblock 1999.
-
-\bibitem{Leitner2007}
-Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
-\newblock Reconciling manual and automated testing: The autotest experience.
-\newblock In {\em Proceedings of the 40th Annual Hawaii International
-  Conference on System Sciences}, HICSS '07, pages 261a--, Washington, DC, USA,
-  2007. IEEE Computer Society.
 
 \bibitem{huang2003automated}
 Zhenyu Huang.
@@ -376,22 +334,11 @@ Roger Ferguson and Bogdan Korel.
 \newblock {\em ACM Transactions on Software Engineering and Methodology
   (TOSEM)}, 5(1):63--86, 1996.
 
-\bibitem{korel1996assertion}
-Bogdan Korel and Ali~M Al-Yami.
-\newblock Assertion-oriented automated test data generation.
-\newblock In {\em Software Engineering, 1996., Proceedings of the 18th
-  International Conference on}, pages 71--80. IEEE, 1996.
-
 \bibitem{pargas1999test}
 Roy~P Pargas, Mary~Jean Harrold, and Robert~R Peck.
 \newblock Test-data generation using genetic algorithms.
 \newblock {\em Software Testing Verification and Reliability}, 9(4):263--282,
   1999.
-
-\bibitem{tracey2000automated}
-Nigel Tracey, John Clark, Keith Mander, and John McDermid.
-\newblock Automated test-data generation for exception conditions.
-\newblock {\em Software-Practice and Experience}, 30(1):61--79, 2000.
 
 \bibitem{hanford1970automatic}
 Kenneth~V. Hanford.
@@ -494,23 +441,6 @@ Bertrand Meyer, Jean-Marc Nerson, and Masanobu Matsuo.
 \newblock Eiffel: object-oriented design for software engineering.
 \newblock In {\em ESEC'87}, pages 221--229. Springer, 1987.
 
-\bibitem{meyer1992applying}
-Bertrand Meyer.
-\newblock Applying'design by contract'.
-\newblock {\em Computer}, 25(10):40--51, 1992.
-
-\bibitem{meyer1988object}
-Bertrand Meyer.
-\newblock {\em Object-oriented software construction}, volume~2.
-\newblock Prentice hall New York, 1988.
-
-\bibitem{daniel2007automated}
-Brett Daniel, Danny Dig, Kely Garcia, and Darko Marinov.
-\newblock Automated testing of refactoring engines.
-\newblock In {\em Proceedings of the the 6th joint meeting of the European
-  software engineering conference and the ACM SIGSOFT symposium on The
-  foundations of software engineering}, pages 185--194. ACM, 2007.
-
 \bibitem{chan1999java}
 Patrick Chan, Rosanna Lee, and Douglas Kramer.
 \newblock {\em The Java Class Libraries, Volume 1: Supplement for the Java 2
@@ -529,7 +459,7 @@ Willem Visser, Corina~S P?s?reanu, and Sarfraz Khurshid.
 
 \bibitem{Claessen2000}
 Koen Claessen and John Hughes.
-\newblock Quick{C}heck: a lightweight tool for random testing of {H}askell
+\newblock Quickcheck: a lightweight tool for random testing of haskell
   programs.
 \newblock In {\em Proceedings of the fifth ACM SIGPLAN international conference
   on Functional programming}, ICFP '00, pages 268--279, New York, NY, USA,
@@ -541,13 +471,6 @@ Paul Hudak, John Hughes, Simon~Peyton Jones, and Philip Wadler.
 \newblock In {\em HOPL III: Proceedings of the third ACM SIGPLAN conference on
   History of programming languages}, pages 12--1--12--55, New York, NY, USA,
   2007. ACM.
-
-\bibitem{Khurshid2004}
-Sarfraz Khurshid and Darko Marinov.
-\newblock {TestEra:} {Specification-Based} testing of {J}ava programs using
-  {SAT}.
-\newblock {\em Automated Software Engineering}, 11:403--434, 2004.
-\newblock {10.1023/B:AUSE.0000038938.10589.b9}.
 
 \bibitem{jackson2001micromodularity}
 Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
@@ -562,7 +485,7 @@ Daniel Jackson, Ian Schechter, and Ilya Shlyakhter.
 
 \bibitem{Boyapati2002}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
-\newblock {K}orat: automated testing based on {J}ava predicates.
+\newblock Korat: automated testing based on java predicates.
 \newblock In {\em ISSTA '02: Proceedings of the 2002 ACM SIGSOFT international
   symposium on Software testing and analysis}, pages 123--133, New York, NY,
   USA, 2002. ACM.
@@ -582,7 +505,7 @@ Sarfraz Khurshid and Darko Marinov.
 
 \bibitem{Oriol2010c}
 Manuel Oriol and Sotirios Tassis.
-\newblock Testing .{N}et code with yeti.
+\newblock Testing .net code with yeti.
 \newblock In {\em Proceedings of the 2010 15th IEEE International Conference on
   Engineering of Complex Computer Systems}, ICECCS '10, pages 264--265,
   Washington, DC, USA, 2010. IEEE Computer Society.
@@ -780,5 +703,46 @@ James~A. Jones, Mary~Jean Harrold, and John Stasko.
 \newblock Visualization of test information to assist fault localization.
 \newblock In {\em Proceedings of the 24th International Conference on Software
   Engineering}, ICSE '02, pages 467--477, New York, NY, USA, 2002. ACM.
+
+\bibitem{ernst2007daikon}
+Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos
+  Pacheco, Matthew~S Tschantz, and Chen Xiao.
+\newblock The daikon system for dynamic detection of likely invariants.
+\newblock {\em Science of Computer Programming}, 69(1):35--45, 2007.
+
+\bibitem{ahmad2013adfd}
+Mian~A Ahmad and Manuel Oriol.
+\newblock Automated discovery of failure domain.
+\newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
+
+\bibitem{finelli1991nasa}
+George~B Finelli.
+\newblock Nasa software failure characterization experiments.
+\newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
+
+\bibitem{schneckenburger2007towards}
+Christoph Schneckenburger and Johannes Mayer.
+\newblock Towards the determination of typical failure patterns.
+\newblock In {\em Fourth international workshop on Software quality assurance:
+  in conjunction with the 6th ESEC/FSE joint meeting}, pages 90--93. ACM, 2007.
+
+\bibitem{white1980domain}
+Lee~J White and Edward~I Cohen.
+\newblock A domain strategy for computer program testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
+
+\bibitem{pacheco2007randoop}
+Carlos Pacheco and Michael~D Ernst.
+\newblock Randoop: feedback-directed random testing for java.
+\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
+  Object-oriented programming systems and applications companion}, pages
+  815--816. ACM, 2007.
+
+\bibitem{ciupa2006object}
+Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
+\newblock Object distance and its application to adaptive random testing of
+  object-oriented programs.
+\newblock In {\em Proceedings of the 1st international workshop on Random
+  testing}, pages 55--63. ACM, 2006.
 
 \end{thebibliography}
