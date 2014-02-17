@@ -54,7 +54,7 @@
 \contentsline {subsection}{\numberline {3.2.5}QuickCheck}{35}{subsection.3.2.5}
 \contentsline {subsection}{\numberline {3.2.6}Autotest}{35}{subsection.3.2.6}
 \contentsline {subsection}{\numberline {3.2.7}TestEra}{37}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}Korat}{38}{subsection.3.2.8}
+\contentsline {subsection}{\numberline {3.2.8}Korat}{37}{subsection.3.2.8}
 \contentsline {section}{\numberline {3.3}YETI Overview}{39}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}YETI Design}{39}{subsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.1.1}Core Infrastructure}{40}{subsubsection.3.3.1.1}
@@ -77,12 +77,12 @@
 \contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR strategy on a concrete example}{56}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Implementation of the DSSR strategy}{58}{section.4.3}
 \contentsline {section}{\numberline {4.4}Evaluation}{59}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Research questions}{59}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experiments}{59}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Performance measurement criteria}{60}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.1}Research questions}{60}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experiments}{60}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Performance measurement criteria}{62}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Results}{62}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Is there an absolute best among R, R+ and DSSR strategies?}{64}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{64}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{66}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy between R, R+ and DSSR?}{66}{subsection.4.5.3}
 \contentsline {section}{\numberline {4.6}Discussion}{66}{section.4.6}
 \contentsline {section}{\numberline {4.7}Related Work}{68}{section.4.7}
@@ -103,26 +103,26 @@
 \contentsline {section}{\numberline {6.1}Introduction}{87}{section.6.1}
 \contentsline {section}{\numberline {6.2}Preliminaries}{88}{section.6.2}
 \contentsline {section}{\numberline {6.3}Automated Discovery of Failure Domain+}{89}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{89}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{90}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{90}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{91}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Example to illustrate working of ADFD+}{91}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Daikon}{92}{section.6.4}
+\contentsline {section}{\numberline {6.4}Daikon}{93}{section.6.4}
 \contentsline {section}{\numberline {6.5}Evaluation of Daikon by ADFD+}{93}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Research questions}{93}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Experimental setup}{93}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.2}Experimental setup}{94}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}results}{94}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Test of one-dimension programs by ADFD+}{94}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Test of one-dimension programs by Daikon}{95}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Test of two-dimension programs by ADFD+}{95}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Test of two-dimension programs by Daikon}{96}{subsection.6.6.4}
-\contentsline {section}{\numberline {6.7}Discussion}{96}{section.6.7}
-\contentsline {section}{\numberline {6.8}Threats to validity}{98}{section.6.8}
-\contentsline {section}{\numberline {6.9}Conclusion}{98}{section.6.9}
-\contentsline {section}{\numberline {6.10}Future Work}{99}{section.6.10}
-\contentsline {chapter}{\numberline {7}Conclusion}{100}{chapter.7}
-\contentsline {section}{\numberline {7.1}Introduction}{100}{section.7.1}
-\contentsline {chapter}{\numberline {8}Future Work}{101}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction}{101}{section.8.1}
-\contentsline {chapter}{\numberline {A} }{102}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{102}{section.A.1}
-\contentsline {chapter}{Bibliography}{107}{lstnumber.-14.16}
+\contentsline {subsection}{\numberline {6.6.2}Test of one-dimension programs by Daikon}{96}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Test of two-dimension programs by ADFD+}{96}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}Test of two-dimension programs by Daikon}{98}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Discussion}{98}{section.6.7}
+\contentsline {section}{\numberline {6.8}Threats to validity}{99}{section.6.8}
+\contentsline {section}{\numberline {6.9}Conclusion}{100}{section.6.9}
+\contentsline {section}{\numberline {6.10}Future Work}{100}{section.6.10}
+\contentsline {chapter}{\numberline {7}Conclusion}{102}{chapter.7}
+\contentsline {section}{\numberline {7.1}Introduction}{102}{section.7.1}
+\contentsline {chapter}{\numberline {8}Future Work}{103}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{103}{section.8.1}
+\contentsline {chapter}{\numberline {A} }{104}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{104}{section.A.1}
+\contentsline {chapter}{Bibliography}{109}{lstnumber.-14.16}

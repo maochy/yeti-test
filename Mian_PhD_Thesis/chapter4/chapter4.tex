@@ -40,9 +40,9 @@ The random+ strategy~\cite{Leitner2007} is an extension of the random strategy. 
 
 \begin{lstlisting}
 public void test (int arg) {
-arg = arg + 1;
-int [] intArray = new intArray[arg];
-...
+	arg = arg + 1;
+	int [] intArray = new intArray[arg];
+	...
 }
 \end{lstlisting}
 
@@ -56,7 +56,7 @@ Chan et al.~\cite{Chan1996} found that there are patterns of failure-causing inp
 
 \begin{figure}[ht]                                    
 \centering
-\includegraphics[width= 8cm,height=2.5cm]{chapter4/ART_Patterns.png}
+\includegraphics[width= 10cm,height=4cm]{chapter4/ART_Patterns.png}
 \caption{Failure patterns across input domain~\cite{Chen2008}}
 \label{fig:patterns3}
 \end{figure}
@@ -65,7 +65,7 @@ Dirt spot sweeping is the part of DSSR strategy that comes into action when a fa
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=8cm,height=2.2cm]{chapter4/block2.png}
+\includegraphics[width=10cm,height=4cm]{chapter4/block2.png}
 \caption{DSSR covering block and strip pattern}
 \label{fig:block2}
 \end{figure}
@@ -78,7 +78,7 @@ The DSSR strategy continuously tracks the number of failures during the executio
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=10cm, height=12cm]{chapter4/flowchart1.pdf}
+\includegraphics[width=12cm, height=14cm]{chapter4/flowchart1.pdf}
 \caption{Working mechanism of DSSR Strategy}
 \label{fig:Working_DSSS}
 \end{figure}
@@ -92,7 +92,7 @@ Table \ref{table:addvalues2} presents the values are added to the list of intere
 \begin{table}[ht]
 %\scriptsize
 \caption{Neighbouring values for primitive types and String} % title of Table
-\smallskip
+\bigskip
 \centering % used for centering table
 \begin{tabular}{| l | l |} % centered columns (4 columns)
 \hline\hline %inserts double horizontal lines
@@ -172,7 +172,7 @@ The DSSR strategy is an extension of YetiRandomPlusStrategy, an extended form of
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4cm,height=5cm]{chapter4/hierarchy.pdf}
+\includegraphics[width=6cm,height=7cm]{chapter4/hierarchy.pdf}
 \caption{Class Hierarchy of DSSR in YETI}
 \label{fig:hierarchyofDSSR}
 \end{figure}
@@ -208,6 +208,7 @@ Because of the absence of the contracts and assertions in the code under test, s
 
 \begin{table}[htp]
 \caption{Name and versions of 32 Projects randomly selected from the Qualitas Corpus for the experiments}
+\bigskip
 \centering
 \begin{tabular}{|r|l|r|r|}
 \hline
@@ -266,7 +267,7 @@ The literature review revealed that the F-measure is used where testing stops af
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=14cm]{chapter4/DssrImprove.png}
+\includegraphics[width=15.5cm,height=9cm]{chapter4/DssrImprove.png}
 \caption{Improvement of DSSR strategy over Random and Random+ strategy.}
 \label{fig:LineChart}
 \end{figure*}

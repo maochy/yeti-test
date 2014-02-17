@@ -30,7 +30,7 @@ A number of empirical evidence confirms that failure revealing test cases tend t
 
 \begin{figure}[ht]                                    
 \centering
-\includegraphics[width= 8cm,height=3cm]{chapter6/ART_Patterns.png}
+\includegraphics[width=12cm,height=4cm]{chapter6/ART_Patterns.png}
 \caption{Failure domains across input domain~\cite{chan1996proportional}}
 \label{fig:failurePatterns}
 \end{figure}
@@ -72,7 +72,7 @@ ADFD+ is a completely automatic process and all the user has to do is to specify
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width= 8.5cm,height=7cm]{chapter6/adfdPlusWorkflow.png}
+\includegraphics[width= 14cm,height=10cm]{chapter6/adfdPlusWorkflow.png}
 \caption{Workflow of ADFD+}
 \label{fig:Workflow}
 \end{figure}
@@ -96,7 +96,7 @@ strategy for testing is random. In strategies package, on top of the hierarchy, 
 
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=17.5cm,height=11cm]{chapter6/exampleError.png}
+\includegraphics[width=15.5cm,height=11cm]{chapter6/exampleError.png}
 \caption{The output of ADFD+ for the above code.}
 \label{fig:adfdPlusExample}
 \end{figure*}
@@ -120,7 +120,7 @@ public class Error {
 }
 \end{lstlisting}
 
-On test execution, the ADFD+ strategy evaluates the class with the help of YETI and finds the first failure at x = 6 and y = 3. Once a failure is identified ADFD+ uses the surrounding values around it to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two-dimensional graph with red filled circles indicating fail values and blue filled circles indicating pass values. Figure~\ref{fig:adfdPlusExample} shows that the failure domain forms a block pattern and the boundaries of the failure are $(5, 2), (5, 3),(5, 4), (6, 2), (6, 4), (7, 2), (7, 4), (8, 2), (8, 3), (8, 4)$. 
+On test execution, the ADFD+ strategy evaluates the class with the help of YETI and finds the first failure at x = 6 and y = 3. Once a failure is identified ADFD+ uses the surrounding values around it to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two-dimensional graph with red filled circles indicating fail values and blue filled circles indicating pass values. Figure~\ref{fig:adfdPlusExample} shows that the failure domain forms a block pattern and the boundaries of the failure are $(5, 2), (5, 3),(5, 4), (6, 2), (6, 4), (7, 2), (7, 4),\\ (8, 2), (8, 3), (8, 4)$. 
 
 
 
@@ -168,17 +168,17 @@ The results are split in to four sub-sections for convenience.
 In each of the 30 experiments, The ADFD+ successfully discovered and plotted the failure domains for point, block and strip pattern as shown in the Figure~\ref{fig:failureDomainsOneDimension}. The lower and upper bound for each experiment are set to -100 and 100 respectively.
 
 \begin{figure} [H]
-
+\centering
 \subfigure[Point failure domain in one-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/PFDOne.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/PFDOne.png}
 \label{fig:PFDOne}
 }
 \subfigure[Block failure domain in one-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/BFDOne.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/BFDOne.png}
 \label{fig:BFDOne}
 }
 \subfigure[Strip failure domain in one dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/SFDOne.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/SFDOne.png}
 \label{fig:SFDOne}
 }
 \caption{Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}
@@ -198,15 +198,15 @@ In each of the 30 experiments, The ADFD+ once again successfully discovered and 
 \begin{figure} [H]
 
 \subfigure[Point failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/PFDTwo.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/PFDTwo.png}
 \label{fig:PFDOne}
 }
 \subfigure[Block failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/BFDTwo.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/BFDTwo.png}
 \label{fig:BFDOne}
 }
 \subfigure[Strip failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/SFDTwo.png}
+\includegraphics[width=14cm,height=6.2cm]{chapter6/SFDTwo.png}
 \label{fig:SFDOne}
 }
 \caption{Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}
@@ -217,6 +217,7 @@ In each of the 30 experiments, The ADFD+ once again successfully discovered and 
 
 \begin{table}[h]
 \caption{Table depicting values of x and y arguments responsible for forming point, block and strip failure domain in Figure 1(a), Figure 1(b) and Figure= 1(c) respectively}
+\bigskip
 \centering
 {\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|l|l|l|}
@@ -252,6 +253,7 @@ x = 9, y = 10	& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
 
 \begin{table*}[ht]
 \caption{Table depicting values of failure points identified by ADFD+ Daikon}
+\bigskip
 \centering
 {\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{|l|l|r|r|r|r|}
