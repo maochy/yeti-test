@@ -7,11 +7,11 @@
 %\fi
 
 \section{Introduction}\label{sec:intro5}
-Testing is fundamental requirement to assess the quality of any software. Manual testing is labour-intensive and error-prone; therefore emphasis is to use automated testing that significantly reduces the cost of software development process and its maintenance~\cite{beizer1995black}. Most of the modern black-box testing techniques execute the SUT with specific input and compare the obtained results against the test oracle. A report is generated at the end of each test session containing any discovered faults and the input values which triggers the faults. Debuggers fix the discovered faults in the SUT with the help of these reports. The revised version of the system is given back to the testers to find more faults and this process continues till the desired level of quality, set in test plan, is achieved.
+Testing is a fundamental requirement for assessing the quality of any software. Manual testing is labour-intensive and error-prone; therefore automated testing is often used which significantly reduces the cost of software development and its maintenance~\cite{beizer1995black}. Most of the modern black-box testing techniques execute the SUT with specific input and results obtained are compared against the test oracle. A report is generated at the end of each test session depicting any discovered faults and the input values which triggers the faults. Debuggers fix the discovered faults in the SUT with the help of these reports. The revised version of the system is given back to the testers to find more faults and this process continues till the desired level of quality already set in test plan is achieved.
 
-The fact that exhaustive testing for any non-trivial program is impossible, compels the testers to come up with some strategy of input selection from the whole input domain. Pure random is one of the possible strategies widely used in automated tools. It is intuitively simple and easy to implement~\cite{Ciupa2008, Forrester2000}. It involves minimum or no overhead in input selection and lacks human bias~\cite{hamlet1994, Linger1993}. While pure random testing has many benefits, there are some limitations as well, including low code coverage~\cite{Offutt1996} and discovery of lower number of faults~\cite{Chen1994}. To overcome these limitations while keeping its benefits intact many researchers successfully refined pure random testing. Adaptive Random Testing (ART) is the most significant refinements of random testing. Experiments performed using ART showed up to 50\% better results compared to the traditional/pure random testing ~\cite{Chen2008}.  Similarly Restricted Random Testing (RRT)~\cite{Chan2002}, Mirror Adaptive Random Testing (MART) ~\cite{Chen2004}, Adaptive Random Testing for Object Oriented Programs (ARTOO)~\cite{Ciupa2008}, Directed Adaptive Random Testing (DART) ~\cite{Godefroid2005}, Lattice-based Adaptive Random Testing (LART)~\cite{Mayer2005} and Feedback-directed Random Testing (FRT)~\cite{Pacheco2007} are some of the variations of random testing aiming to increase the overall performance of pure random testing.
+The fact that exhaustive testing for any non-trivial program is not possible, compels the testers to come up with some strategy of input selection from the whole input domain. Random is one of the possible strategies widely used in automated tools. It is intuitively simple and easy to implement~\cite{Ciupa2008, Forrester2000}. It involves minimum or no overhead in input selection and lacks human bias~\cite{hamlet1994, Linger1993}. Random testing has several benefits but there are some limitations as well, including low code coverage~\cite{Offutt1996} and discovery of lower number of faults~\cite{Chen1994}. To overcome these limitations and retain the benefits intact many researchers have successfully refined random testing. Adaptive Random Testing (ART) is one of the most significant refined version of of random testing. Experiments performed using ART showed up to 50\% better results compared to the traditional random testing ~\cite{Chen2008}.  Similarly Restricted Random Testing (RRT)~\cite{Chan2002}, Mirror Adaptive Random Testing (MART) ~\cite{Chen2004}, Adaptive Random Testing for Object Oriented program (ARTOO)~\cite{Ciupa2008}, Directed Adaptive Random Testing (DART) ~\cite{Godefroid2005}, Lattice-based Adaptive Random Testing (LART)~\cite{Mayer2005} and Feedback-directed Random Testing (FRT)~\cite{Pacheco2007} are some of the improved versions of random testing.
 
-All the above-mentioned variations in random testing are based on the observation of Chan et. al.~\cite{Chan1996} that failure causing inputs across the whole input domain form certain kinds of domains. They classified these domains into point, block and strip fault domain. In Figure \ref{fig:patterns} the square box represents the whole input domain. The black point, block and strip area inside the box represent the faulty values while white area inside the box represent legitimate values for a specific system. They further suggested that the fault finding ability of testing could be improved by taking into consideration these failure domains.
+All the above-mentioned versions of random testing are based on the observation of Chan et. al.~\cite{Chan1996} that failure causing inputs across the whole input domain form certain kinds of domains. They classified these domains into point, block \& strip fault domain and suggested that the fault finding ability of testing could be improved by taking into consideration these failure domains. In Figure \ref{fig:patterns} the square boxes represent the whole input domain. The black points, block and strip inside the boxes represent the faulty values while the white area inside the boxes represent legitimate values for a specific system. 
 
 \begin{figure}[h]
 \centering
@@ -41,13 +41,13 @@ All the above-mentioned variations in random testing are based on the observatio
 
 %Mirror Adaptive Random Testing (MART) ~\cite{Chen2003}, Feedback-directed Random Testing (FDRT)~\cite{Pacheco2007}, Restricted Random Testing (RRT)~\cite{Chan2002} and Quasi Random Testing  (QRT)~\cite{Chen2005} are the strategies based on the same principle that found better results compared to ordinary random testing.
 
-It is interesting that where many random strategies are based on the principle of contiguous fault domains inside the input domain, no specific strategy is developed to evaluate these fault domains. This chapter describes a new test strategy called Automated Discovery of Failure Domain (ADFD), which not only finds the pass and fail input values but also finds their domains. The idea of identification of pass and fail domain is attractive as it provides an insight of the domains in the given SUT. Some important aspects of ADFD strategy presented in the paper include:
+It is interesting that where many random strategies are based on the principle of contiguous fault domains inside the input domain, no specific strategy has been developed to evaluate these fault domains. This chapter describes a new test strategy called Automated Discovery of Failure Domain (ADFD), which not only finds the pass and fail input values but also finds their domains. The idea of identification of pass and fail domain is attractive as it provides an insight of the domains in the given SUT. Some important aspects of ADFD strategy presented in the chapter include:
 
 \begin{itemize}
 \item Implementation of the new ADFD strategy in York Extensible Testing Infrastructure (YETI).
 \item Evaluation to assess ADFD strategy by testing classes with different fault domains.
-\item Decrease in overall test duration by identification of all the fault domains instead of a single instance of fault.
-\item Increase in test efficiency by helping debugger to keep in view all the fault occurrences when debugging. 
+\item Reduction in test duration by identification of all fault domains instead of a single instance of fault.
+\item Improvement in test efficiency by helping debugger to consider all fault occurrences during debugging. 
 \end{itemize}
 
 
@@ -110,20 +110,20 @@ The process is divided into five major steps given below and each step is briefl
 \end{center}
 \end{figure}
 
-\noindent \textbf{GUI front-end for providing input:}\\*
-ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input including language of the program, strategy, duration, enable or disable YETI GUI, logs and a program to test in the form of java byte code. In addition it also takes minimum and maximum values to search for fault domain in the specified range. Default range for minimum and maximum is Integer.MIN\_INT and Integer.MAX\_INT respectively.\\*
+\noindent \textbf{GUI front-end for providing input:}\\
+ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input, including program language, strategy, duration, enable or disable YETI GUI, logs and program in byte code. In addition, it also takes minimum and maximum values to search for fault domain in the specified range. Default range for minimum and maximum is taken as Integer.MIN\_INT and Integer.MAX\_INT respectively.\\
 
-\noindent \textbf{Automated finding of fault:}\\*
-To find the failure domain for a specific fault, the first requirement is to identify that fault in the system. ADFD strategy extends R+ strategy and rely on R+ strategy to find the first fault. Random+ (R+) is an improvement over random strategy with preference to the boundary values to provide better fault finding ability. ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\*
+\noindent \textbf{Automated finding of fault:}\\
+ADFD, being extended form of R+ strategy, relies on R+ to find the first fault. Random+ is an improvement on random strategy with preference for the boundary values to provide better fault finding ability. % ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\
 
-\noindent \textbf{Automated generation of modules:}\\*
-After a fault is found in the SUT, ADFD strategy generate complete new Java program to search for fault domains in the given SUT.  These programs with ``.java" extensions are generated through dynamic compiler API included in Java 6 under javax.tools package. The number of programs generated can be one or more, depending on the number of arguments in the test module i.e. for module with one argument one program is generated, for two argument two programs and so on. To track fault domain the program keeps one or more than one argument constant and only one argument variable in the generated program.\\*
+\noindent \textbf{Automated generation of modules:}\\
+After a fault is found in the SUT, ADFD strategy generates complete new Java program to search for fault domains in the given SUT.  These programs with ``.java" extensions are generated through dynamic compiler API included in Java 6 under javax.tools package. The number of programs generated can be one or more, depending on the number of arguments in the test module i.e. for module with one argument one program is generated, for module with two arguments two programs and so on. To track fault domain, the program keeps only one argument as variable and the remaining arguments as constant in the program generated at run time.
 
-\noindent \textbf{Automated compilation and execution of modules to discover domains:}\\*
-The java modules generated in previous step are compiled using $javac *$ command to get their binary $.class$ files. The $java *$ command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receive all the values in range, from minimum to maximum, specified in the beginning of the test. After execution is completed we get two text files of $Pass.txt$ and $Fail.txt$. Pass file contains all the values for which the modules behave correctly while fail file contains all the values for which the modules fail.\\*
+\noindent \textbf{Automated compilation and execution of modules to discover domains:}\\
+The java modules generated in previous step are compiled using $javac *$ command to get their binary $.class$ files. The $java *$ command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receives all the values ranging, from minimum to maximum, specified in the beginning of the test. After execution is completed we get two text files of $Pass.txt$ and $Fail.txt$. Pass file contains all the values for which the modules behave correctly while fail file contains all the values for which the modules fail.\\*
 
 \noindent \textbf{Automated generation of graph showing domains:}\\*
-The values from the pass and fail files are used to plot (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs in their applications~\cite{Gilbert2008}. Green colour lines with circle represents pass values while red colour line with squares represents the fail values. Resultant graph clearly depicts both the pass and fail domain across the specified input domain. The graph shows red points in case the program fails for only one value, blocks when the program fails for multiple values and strips when a program fails for a long range of values.%\subsection{Flow Chart of the process}
+The values from the pass and fail files are used to plot (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs~\cite{Gilbert2008}. Lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. Resultant graph clearly depicts both the pass and fail domain across the specified input domain. The graph shows red points when the program fails for only one value, blocks when the program fails for multiple values and strips when the program fails for a long range of values.%\subsection{Flow Chart of the process}
 
 %The following flow chart clearly identify the workflow of the whole process and the various steps involved in the process.
 
@@ -178,12 +178,12 @@ The values from the pass and fail files are used to plot (x, y) chart using JFre
 The ADFD strategy is implemented in a tool called York Extensible Testing Infrastructure (YETI). YETI is available in open-source at \url{http://code.google.com/p/yeti-test/}. In this section a brief overview of YETI is given with the focus on the parts relevant to the implementation of ADFD strategy. For integration of ADFD strategy in YETI, a program is used as an example to illustrate the working of ADFD strategy. Please refer to ~\cite{Oriol2011, Oriol2012, Oriol2010, Oriol2010b} for more details on YETI.
 
 \subsection{York Extensible Testing Infrastructure}
-YETI is a testing tool developed in Java that test programs using random strategies in an automated fashion. YETI meta-model is language-agnostic which enables it to test programs written in functional, procedural and object-oriented languages.
+YETI is a testing tool developed in Java that tests programs using random strategies in an automated fashion. YETI meta-model is language-agnostic which enables it to test programs written in functional, procedural and object-oriented languages.
 
 YETI consists of three main parts including core infrastructure for extendibility through specialisation, strategies section for adjustment of multiple strategies and languages section for supporting multiple languages. Both the languages and strategies sections have a pluggable architecture to easily incorporate new strategies and languages making YETI a favourable choice to implement ADFD strategy. YETI is also capable of generating test cases to reproduce the faults found during the test session.
  
  \subsection{ADFD strategy in YETI}
-The strategies section in YETI contains all the strategies including random, random+ and DSSR to be selected for testing according to the specific needs. The default test strategy for testing is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and it is further extended to get ADFD strategy.
+ADFD strategy is implemented in the strategies section of YETI. This section contains various strategies including random, random+ and DSSR to be selected for testing according to the specific needs. The default strategy for testing YETI is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and it is further extended to get ADFD strategy.
 % as shown in figure \ref{fig:hierarchy}. 
  
 %\begin{figure}[h]
@@ -227,7 +227,7 @@ public class PointDomainOneArgument{
 \label{fig:ADFD-example}
 \end{figure}
 
-As soon as any one of the above four faults are discovered the ADFD strategy generate a dynamic program given in Appendix \ref{sec:appendix1} (1). This program is automatically compiled to get binary file and then executed to find the pass and fail domains inside the specified range. The identified domains are plotted on two-dimensional graph. It is evident from the output presented in Figure \ref{fig:ADFD-example} that ADFD strategy not only finds all the faults but also the pass and fail domains.
+As soon as any one of the above four faults are discovered the ADFD strategy generates a dynamic program given in Appendix \ref{sec:appendix1} (1). This program is automatically compiled to get binary file and then executed to find the pass and fail domains inside the specified range. The identified domains are plotted on two-dimensional graph. It is evident from the output presented in Figure \ref{fig:ADFD-example} that ADFD strategy not only finds all the faults but also plots the pass and fail domains.
 
 
 \begin{comment}
@@ -238,7 +238,7 @@ As soon as any one of the above four faults are discovered the ADFD strategy gen
 \begin{figure}[ht]
 \centering
 \includegraphics[width=12.2cm,height=8.5cm]{chapter5/pointDomainOneArgument.png}
-\caption{ADFD strategy plotting pass and fault domain of the given class}
+\caption{ADFD strategy plotting pass and fail domains of the given class}
 \label{fig:ADFD-plot}
 \end{figure}
 
@@ -252,19 +252,19 @@ As soon as any one of the above four faults are discovered the ADFD strategy gen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Experimental Results} \label{sec:experimentalResults}
-This section includes the experimental set-up and results obtained after using ADFD strategy. Six numerical programs of one and two-dimension were selected. These programs were error-seeded in such a way to get all the three forms of fault domains including point, block and strip fault domains. Each selected program contained various combinations of one or more fault domains. 
+This section includes the experimental set-up and results obtained by using ADFD strategy. Six numerical programs of one and two-dimension were selected. These programs were error-seeded in such a way to get all the three forms of point, block and strip domains. Each selected program contained various combinations of one or more fault domains. 
 
 All experiments were performed on a 64-bit Mac OS X Lion Version 10.7.5 running on 2 x 2.66 GHz 6-Core Intel Xeon with 6.00 GB (1333 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. 
 
-To elucidate the results, six programs were developed so as to have separate program for one and two-dimension point, block and strip fault domains. The code of selected programs is given in Appendix \ref{sec:appendix1} (2-7). The experimental results are presented in Table \ref{table:failtable} and described under the following three headings.
-To elucidate the results, six programs were developed so as to have separate program for one and two-dimension point, block and strip fault domains. The code of selected programs is given in Appendix \ref{sec:appendix1} (2-7). The experimental results are presented in Table \ref{table:failtable} and described under the following three headings.
+To elucidate the results, six programs were developed so as to have separate program for one and two-dimensional point, block and strip fault domains. The code of selected program is given in Appendix \ref{sec:appendix1} (2-7). The experimental results are presented in Table \ref{table:failtable} followed by description under three headings.
+%To elucidate the results, six programs were developed so as to have separate program for one and two-dimension point, block and strip fault domains. The code of selected programs is given in Appendix \ref{sec:appendix1} (2-7). The experimental results are presented in Table \ref{table:failtable} and described under the following three headings.
 %\begin{center}
 
 %\end{center}
 
 \begin{table}[h]
 %\renewcommand{\arraystretch}{2}
-\caption{Pass and Fail domain with respect to one and two dimensional program}
+\caption{Experimental results of programs tested with ADFD strategy}
 \bigskip
 \centering
 {\renewcommand{\arraystretch}{1.5}
@@ -312,7 +312,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 
 
-\noindent \textbf{Point Fault Domain:}  Two separate Java programs Pro2 and Pro3 given in Appendix \ref{sec:appendix1} (2, 3) were tested with ADFD strategy in YETI to get the findings for point fault domain in one and two-dimension program. Figure \ref{fig:PFDOne} present range of pass and fail values for point fault domain in one-dimension whereas Figure \ref{fig:PFDTwo} present range of pass and fail values for point fault domain in two-dimension program. The range of pass and fail values for each program in point fault domain are given in (Table \ref{table:failtable}, Serial No. 1).
+\noindent \textbf{Point Fault Domain:}  Two separate Java programs Pro2 and Pro3, given in Appendix \ref{sec:appendix1} (2, 3), were tested with ADFD strategy in YETI to get the findings for point fault domain in one and two-dimension program. Figure \ref{5.5(a)} presents range of pass and fail values for point fault domain in one-dimension whereas Figure \ref{fig:PFDTwo} presents range of pass and fail values for point fault domain in two-dimension program. The range of pass and fail values for each program in point fault domain is given in Table \ref{table:failtable}.
 %%%%%%%%%%%%%%%%Point Domain%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure} [H]
@@ -344,7 +344,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 %\end{figure}
 
 
-\noindent \textbf{Block Fault Domain:}  Two separate Java programs Pro4 and Pro5 given in Appendix \ref{sec:appendix1} (4, 5) were tested with ADFD strategy in YETI to get the findings for block fault domain in one and two-dimension program. Figure \ref{fig:BFDOne} present range of pass and fail values for block fault domain in one-dimension whereas Figure \ref{fig:BFDTwo} present range of pass and fail values for block fault domain in two-dimension program. The range of pass and fail values for each program in block fault domain are given in (Table \ref{table:failtable}, Serial No. 2).
+\noindent \textbf{Block Fault Domain:}  Two separate Java programs Pro4 and Pro5 given in Appendix \ref{sec:appendix1} (4, 5) were tested with ADFD strategy in YETI to get the findings for block fault domain in one and two-dimensional program. Figure \ref{5.6 a} presents range of pass and fail values for block fault domain in one-dimension whereas Figure \ref{5.6b} presents range of pass and fail values for block fault domain in two-dimension program. The range of pass and fail values for each program in block fault domain is given in Table \ref{table:failtable}.
 %%%%%%%%%%%%%%%Block domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
 
@@ -384,7 +384,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 
 
-\noindent \textbf{Strip Fault Domain:} Two separate Java programs Pro6 and Pro7 given in Appendix \ref{sec:appendix1} (6, 7) were tested with ADFD strategy in YETI to get the findings for strip fault domain in one and two-dimension program. Figure \ref{fig:SFDOne} present range of pass and fail values for strip fault domain in one-dimension whereas Figure \ref{fig:SFDTwo} present range of pass and fail values for strip fault domain in two-dimension program. The range of pass and fail values for each program in strip fault domain are given in (Table \ref{table:failtable}, Serial No. 3).
+\noindent \textbf{Strip Fault Domain:} Two separate Java programs Pro6 and Pro7 given in Appendix \ref{sec:appendix1} (6, 7) were tested with ADFD strategy in YETI to get the findings for strip fault domain in one and two-dimension program. Figure \ref{5.7a} presents range of pass and fail values for strip fault domain in one-dimension whereas Figure \ref{5.7b} presents range of pass and fail values for strip fault domain in two-dimension program. The range of pass and fail values for each program in strip fault domain is given in Table \ref{table:failtable}.
 
 
 %
@@ -426,41 +426,39 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 \section{Discussion} \label{sec:discussion4}
 
-ADFD strategy with a simple graphical user interface is a fully automated process to identify and plot the pass and fault domains on the chart. Since the default settings are all set to optimum the user needs only to specify the module to be tested and click ``Draw fault domain" button to start test execution. All the steps including Identification of fault, generation of dynamic java program to find domain of the identified fault, saving the program to a permanent media, compiling the program to get its binary, execution of binaries to get pass and fail domain and plotting these values on the graph are done completely automated without any human intervention.
+ADFD, with a simple graphical user interface, is a fully automated testing strategy which identify faults, fault domains and visually present the pass and fail domains in the form of chart. Since all the default settings are set to optimum level, the user needs only to specify the module to be tested and click ``Draw fault domain" button to start test execution. All the steps including Identification of fault, generation of dynamic java program to find domain of the identified fault, saving the program to a permanent media, compiling the program to get its binary, execution of binaries to get pass and fail domain and plotting these values on the graph are done completely automatically without any human intervention.
 
-In the experiments (Section \ref{sec:experimentalResults}), the ADFD strategy effectively identified faults and faults domain in a program. Identification of fault domain is simple for one and two dimension numerical program but the difficulty increases as the program dimension increases beyond two. Similarly no clear boundaries are defined for non-numerical data therefore it is not possible to plot domains for non-numerical data unless some boundary criteria is defined.
+As evident from the results, ADFD strategy effectively identified faults and fault domains in a program. Identification of fault domain is simple for one and two-dimensional numerical program but as the dimension increases the process gets more and more complicated. Moreover, no clear boundaries are defined for non-numerical data, therefore it is not possible to plot domains for non-numerical data unless some boundary criteria are defined.
 
-ADFD strategy initiate testing with random+ strategy to find the fault and later switch to brute-force strategy to apply all the values between upper and lower bound for finding pass and fault domain. 
-It is found that faults at boundary of the input domain can pass unnoticed through ordinary random test strategy but not from ADFD strategy as it scan all the values between lower and upper range.
+ADFD strategy initiates testing with random+ strategy to find the fault and later switches to brute-force strategy to apply all the values between upper and lower bounds for finding pass and fault domains. It was found that faults at boundary of the input domain usually passes unnoticed through random test strategy but not through ADFD strategy because it scans all the values between lower and upper bounds.
 
 
-The overhead in terms of execution time associated with ADFD strategy is dependent mainly on the lower and upper bound. If the lower and upper bound is set to maximum range (i.e. minimum for int is Integer.MIN\_INT and maximum Integer.MAX\_INT) then the test duration is maximum. It is rightly so because for identification of fault domain the program is executed for every input available in the specified range. Similarly increasing the range also shrinks the produced graph making it difficult to identify clearly point, block and strip domain unless they are of considerable size. Beside range factor, test duration is also influenced by the identification of the fault and the complexity of module under test.
+The overhead in terms of execution time associated with ADFD strategy is dependent mainly on the lower and upper bounds. If the lower and upper bounds are set to maximum range (i.e. minimum for int is Integer.MIN\_INT and maximum Integer.MAX\_INT) then the test duration is also maximum. It is rightly so because for identification of fault domain the program is executed for every input available in the specified range. Similarly increasing the range also shrinks the produced graph making it difficult to identify clearly point, block and strip domains unless they are of considerable size. Test duration is also influenced by identification of the first fault and the complexity of module under test.
 
-ADFD strategy can help the debuggers in two ways. First, it reduces the to and from movement of the project between the testers and debuggers as it identity all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.
+ADFD strategy can help the debuggers in two ways. First, it reduces the `to' and `from' movement of the program between the testers and debuggers as it identity all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.
 
 
 \section{Threats to Validity} \label{sec:validity}
 The major external threat to the use of ADFD strategy on commercial scale is the selection of small set of error-seeded programs of only primitive types such as integer used in the experiments. However, the present study will serve as foundation for future work to expand it to general-purpose real world production application containing scalar and non-scalar data types.
 
-Another issue is the easy plotting of numerical data in the form of distinctive units, because it is difficult to split the composite objects containing many fields into units for plotting. Some work has been done to quantify composite objects into units on the basis of multiple features~\cite{Ciupa2006},to facilitate easy plotting. Plotting composite objects is beyond the scope of the present study. However, further studies are required to look in to the matter in depth. 
+Another issue is the plotting of the objects in the form of distinctive units, because it is difficult to split the composite objects containing many fields into units for plotting. Some work has been done to quantify composite objects into units on the basis of multiple features~\cite{Ciupa2006},to facilitate easy plotting. Plotting composite objects is beyond the scope of the present study. However, further studies are required to look in to the matter in depth. 
 
-Another threat to validity includes evaluating program with complex and more than two input arguments. ADFD strategy has so far only considered scalar data of one and two-dimensions. However, plotting domain of programs with complex non-scalar and more than two dimension argument is much more complicated and needs to be taken up in future studies.
+Another threat to validity includes evaluating program with complex and more than two input arguments. In the current study, ADFD strategy has only considered scalar data of one and two-dimensions. Plotting domain of programs with complex non-scalar and more than two dimension argument is much more complicated and needs to be taken up in future studies.
 
-Finally, plotting the range of pass or fail values for a large input domain (Integer.MIN\_INT to Integer.MAX\_INT) is difficult to adjust and does not give a clearly understandable view on the chart. Therefore zoom feature is added to the strategy to zoom into the areas of interest on the chart.
+Finally, plotting the range of pass or fail values for a large input domain (Integer.MIN\_INT to Integer.MAX\_INT) is difficult to adjust and does not give a clear view on the chart. To solve this problem, zoom feature was added to the strategy to magnify the areas of interest on the chart.
 
 
 
 \section{Related Works} \label{sec:relatedWork}
 Traditional random testing is quick, easy to implement and free from any bias. In spite of these benefits, the lower fault finding ability of traditional random testing is often criticised~\cite{Myers2011, Offutt1996}. To overcome the performance issues without compromising on its benefits, various researchers have altered its algorithm as explained in section~\ref{sec:intro5}. Most of the alterations are based on the existence of faults and fault domains across the input domain~\cite{Chan1996}. 
 
-Identification, classification of pass and fail domains and visualisation of domains have not received due attention of the researchers. Podgurski et. al.,~\cite{Podgurski2003} proposed a semi-automated procedure to classify similar faults and plot them by using a Hierarchical Multi Dimension Scaling (HMDS) algorithm. A tool named Xslice~\cite{agrawal1995fault} visually differentiates the execution slices of passing and failing part of a test. Another tool called Tarantula uses colour coding to track the statements of a program during and after the execution of the test suite~\cite{Jones2002}. A serious limitation of the above mentioned tools is that they are not fully automated and require human interaction during execution. Moreover these tools are based on the already existing test cases where as ADFD strategy generate test cases, discover faults, identify pass and fault domains and visualise them in a fully automated manner. 
+Identification, classification of pass and fail domains and visualisation of domains have not received due attention of the researchers. Podgurski et. al.,~\cite{Podgurski2003} proposed a semi-automated procedure to classify faults and plot them by using a Hierarchical Multi Dimension Scaling (HMDS) algorithm. A tool named Xslice~\cite{agrawal1995fault} visually differentiates the execution slices of passing and failing part of a test. Another tool called Tarantula uses colour coding to track the statements of a program during and after the execution of the test suite~\cite{Jones2002}. A serious limitation of the above mentioned tools is that they are not fully automated and require human intervention during execution. Moreover these tools are based on the already existing test cases where as ADFD strategy generates test cases, discovers faults, identifies pass and fault domains and visualises them in graphical form in a fully automated manner. 
 
 
 \section{Conclusion} \label{sec:conclusion}
+Experimental results obtained by ADFD strategy to error-seeded numerical program provide evidence that the strategy is highly effective in identifying the faults and plotting pass and fail domains of a given SUT. ADFD strategy can find boundary faults quickly as against the traditional random testing, which is either, unable or takes comparatively longer time to discover the faults.
 
-Results of the experiments (Section \ref{sec:experimentalResults}), based on applying ADFD strategy to error-seeded numerical programs provide, evidence that the strategy is highly effective in identifying the faults and plotting pass and fail domains of a given SUT. It further suggests that the strategy may prove effective for large programs. However, it must be confirmed with programs of more than two-dimension and different non-scalar argument types. ADFD strategy can find boundary faults quickly as against the traditional random testing, which is either, unable or takes comparatively long time to discover the faults.
-
-The use of ADFD strategy is highly effective in testing and debugging. It provides an easy to understand test report visualising pass and fail domains. It reduces the number of switches of SUT between testers and debuggers because all the faults are identified after a single execution. It improves debugging efficiency as the debuggers keep all the instances of a fault under consideration when debugging the fault.
+The use of ADFD strategy is highly effective in testing and debugging. It provides an easy to understand test report visualising pass and fail domains. It reduces the number of switches of SUT between testers and debuggers because all the faults are identified with a single execution. It improves debugging efficiency as the debuggers keep all the instances of a fault under consideration during debugging. The strategy has the potential to be used at large scale. However future studies are required to use it with programs of more than two dimension and different non-scaler argument types.
 
 
 
