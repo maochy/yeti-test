@@ -1,23 +1,33 @@
 \begin{thebibliography}{100}
 
-\bibitem{Pacheco2005}
-Carlos Pacheco and Michael~D. Ernst.
-\newblock Eclat: Automatic generation and classification of test inputs.
-\newblock In {\em In 19th European Conference Object-Oriented Programming},
-  pages 504--527, 2005.
-
-\bibitem{Khurshid2004}
-Sarfraz Khurshid and Darko Marinov.
-\newblock {TestEra:} {Specification-Based} testing of java programs using
-  {SAT}.
-\newblock {\em Automated Software Engineering}, 11:403--434, 2004.
-\newblock {10.1023/B:AUSE.0000038938.10589.b9}.
-
 \bibitem{chan1996proportional}
 FT~Chan, Tsong~Yueh Chen, IK~Mak, and Yuen-Tak Yu.
 \newblock Proportional sampling strategy: guidelines for software testing
   practitioners.
 \newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
+
+\bibitem{chen2004mirror}
+Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
+\newblock Mirror adaptive random testing.
+\newblock {\em Information and Software Technology}, 46(15):1001--1010, 2004.
+
+\bibitem{pacheco2005eclat}
+Carlos Pacheco and Michael~D Ernst.
+\newblock {\em Eclat: Automatic generation and classification of test inputs}.
+\newblock Springer, 2005.
+
+\bibitem{pacheco2007randoop}
+Carlos Pacheco and Michael~D Ernst.
+\newblock Randoop: feedback-directed random testing for java.
+\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
+  Object-oriented programming systems and applications companion}, pages
+  815--816. ACM, 2007.
+
+\bibitem{marinov2001testera}
+Darko Marinov and Sarfraz Khurshid.
+\newblock Testera: A novel framework for automated testing of java programs.
+\newblock In {\em Automated Software Engineering, 2001.(ASE 2001). Proceedings.
+  16th Annual International Conference on}, pages 22--31. IEEE, 2001.
 
 \bibitem{wilkes1985memoirs}
 Maurice Wilkes.
@@ -38,6 +48,16 @@ Gregory Tassey.
   testing.
 \newblock {\em National Institute of Standards and Technology, RTI Project},
   7007(011), 2002.
+
+\bibitem{patton2001software}
+Ron Patton.
+\newblock {\em Software testing}, volume~2.
+\newblock Sams Indianapolis, 2001.
+
+\bibitem{myers2011art}
+Glenford~J Myers, Corey Sandler, and Tom Badgett.
+\newblock {\em The art of software testing}.
+\newblock John Wiley \& Sons, 2011.
 
 \bibitem{dahl1972structured}
 Ole-Johan Dahl, Edsger~Wybe Dijkstra, and Charles Antony~Richard Hoare.
@@ -66,11 +86,6 @@ Bogdan Korel.
 \newblock {\em Software Engineering, IEEE Transactions on}, 16(8):870--879,
   1990.
 
-\bibitem{wiki2013}
-Wikipedia.
-\newblock Plagiarism --- {W}ikipedia{,} the free encyclopedia, 20013.
-\newblock [Online; accessed 23-Mar-2013].
-
 \bibitem{ciupa2007experimental}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock Experimental assessment of random testing for object-oriented
@@ -87,58 +102,6 @@ Patrice Godefroid, Nils Klarlund, and Koushik Sen.
 Lee~J. White.
 \newblock Software testing and verification.
 \newblock {\em Advances in Computers}, 26(1):335--390, 1987.
-
-\bibitem{myers2011art}
-Glenford~J Myers, Corey Sandler, and Tom Badgett.
-\newblock {\em The art of software testing}.
-\newblock John Wiley \& Sons, 2011.
-
-\bibitem{ciupa2008artoo}
-Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
-\newblock Artoo.
-\newblock In {\em Software Engineering, 2008. ICSE'08. ACM/IEEE 30th
-  International Conference on}, pages 71--80. IEEE, 2008.
-
-\bibitem{chen2005adaptive}
-Tsong~Yueh Chen, Hing Leung, and IK~Mak.
-\newblock Adaptive random testing.
-\newblock In {\em Advances in Computer Science-ASIAN 2004. Higher-Level
-  Decision Making}, pages 320--329. Springer, 2005.
-
-\bibitem{chan2006restricted}
-Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
-\newblock Restricted random testing.
-\newblock In {\em Software Quality�ECSQ 2002}, pages 321--330. Springer, 2006.
-
-\bibitem{pacheco2007randoop}
-Carlos Pacheco and Michael~D Ernst.
-\newblock Randoop: feedback-directed random testing for java.
-\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
-  Object-oriented programming systems and applications companion}, pages
-  815--816. ACM, 2007.
-
-\bibitem{chen2004mirror}
-Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
-\newblock Mirror adaptive random testing.
-\newblock {\em Information and Software Technology}, 46(15):1001--1010, 2004.
-
-\bibitem{chen2007quasi}
-Tsong~Yueh Chen and Robert Merkel.
-\newblock Quasi-random testing.
-\newblock {\em Reliability, IEEE Transactions on}, 56(3):562--568, 2007.
-
-\bibitem{cohen1997aetg}
-David~M. Cohen, Siddhartha~R. Dalal, Michael~L Fredman, and Gardner~C. Patton.
-\newblock The aetg system: An approach to testing based on combinatorial
-  design.
-\newblock {\em Software Engineering, IEEE Transactions on}, 23(7):437--444,
-  1997.
-
-\bibitem{offutt1996semantic}
-A~Jefferson Offutt and J~Huffman Hayes.
-\newblock A semantic model of program faults.
-\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
-  195--200. ACM, 1996.
 
 \bibitem{toweysoftware}
 Dave Towey.
@@ -328,10 +291,22 @@ David~L. Bird and Carlos~Urias Munoz.
 \newblock Automatic generation of random self-checking test cases.
 \newblock {\em IBM systems journal}, 22(3):229--245, 1983.
 
-\bibitem{hamlet1994}
+\bibitem{chan2003normalized}
+Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
+\newblock Normalized restricted random testing.
+\newblock In {\em Reliable Software Technologies—Ada-Europe 2003}, pages
+  368--381. Springer, 2003.
+
+\bibitem{hamlet1994random}
 Richard Hamlet.
 \newblock Random testing.
 \newblock {\em Encyclopedia of software Engineering}, 1994.
+
+\bibitem{ciupa2008artoo}
+Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
+\newblock Artoo.
+\newblock In {\em Software Engineering, 2008. ICSE'08. ACM/IEEE 30th
+  International Conference on}, pages 71--80. IEEE, 2008.
 
 \bibitem{pacheco2009directed}
 Carlos Pacheco.
@@ -351,12 +326,11 @@ Andreas Leitner, Manuel Oriol, Andreas Zeller, Ilinca Ciupa, and Bertrand
 \newblock In {\em Proceedings of the twenty-second IEEE/ACM international
   conference on Automated software engineering}, pages 417--420. ACM, 2007.
 
-\bibitem{Duran1981}
-Joe~W. Duran and Simeon Ntafos.
+\bibitem{duran1981report}
+Joe~W Duran and Simeon Ntafos.
 \newblock A report on random testing.
 \newblock In {\em Proceedings of the 5th international conference on Software
-  engineering}, ICSE '81, pages 179--183, Piscataway, NJ, USA, 1981. IEEE
-  Press.
+  engineering}, pages 179--183. IEEE Press, 1981.
 
 \bibitem{miller1990empirical}
 Barton~P Miller, Louis Fredriksen, and Bryan So.
@@ -389,42 +363,45 @@ Alex Groce, Gerard Holzmann, and Rajeev Joshi.
 \newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
   Conference on}, pages 621--631. IEEE, 2007.
 
+\bibitem{chen2005adaptive}
+Tsong~Yueh Chen, Hing Leung, and IK~Mak.
+\newblock Adaptive random testing.
+\newblock In {\em Advances in Computer Science-ASIAN 2004. Higher-Level
+  Decision Making}, pages 320--329. Springer, 2005.
+
 \bibitem{chen2009enhanced}
 Tsong~Yueh Chen, De~Hao Huang, F-C Kuo, Robert~G Merkel, and Johannes Mayer.
 \newblock Enhanced lattice-based adaptive random testing.
 \newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
   pages 422--429. ACM, 2009.
 
-\bibitem{chan2003normalized}
-Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
-\newblock Normalized restricted random testing.
-\newblock In {\em Reliable Software Technologies—Ada-Europe 2003}, pages
-  368--381. Springer, 2003.
+\bibitem{chen2007quasi}
+Tsong~Yueh Chen and Robert Merkel.
+\newblock Quasi-random testing.
+\newblock {\em Reliability, IEEE Transactions on}, 56(3):562--568, 2007.
 
-\bibitem{Pacheco2007}
-Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
-\newblock Feedback-directed random test generation.
-\newblock In {\em Proceedings of the 29th international conference on Software
-  Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
-  Computer Society.
-
-\bibitem{Ciupa2006}
+\bibitem{ciupa2006object}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock Object distance and its application to adaptive random testing of
   object-oriented programs.
 \newblock In {\em Proceedings of the 1st international workshop on Random
-  testing}, RT '06, pages 55--63, New York, NY, USA, 2006. ACM.
+  testing}, pages 55--63. ACM, 2006.
 
-\bibitem{Levenshtein1966}
-V.~I. Levenshtein.
-\newblock Binary codes capable of correcting deletions, insertions, and
+\bibitem{levenshtein1966binary}
+Vladimir~I Levenshtein.
+\newblock Binary codes capable of correcting deletions, insertions and
   reversals.
-\newblock 10(8):707--710, 1966.
+\newblock In {\em Soviet physics doklady}, volume~10, page 707, 1966.
 
 \bibitem{meyer1987eiffel}
 Bertrand Meyer, Jean-Marc Nerson, and Masanobu Matsuo.
 \newblock Eiffel: object-oriented design for software engineering.
 \newblock In {\em ESEC'87}, pages 221--229. Springer, 1987.
+
+\bibitem{csallner2004jcrasher}
+Christoph Csallner and Yannis Smaragdakis.
+\newblock Jcrasher: an automatic robustness tester for java.
+\newblock {\em Software: Practice and Experience}, 34(11):1025--1050, 2004.
 
 \bibitem{chan1999java}
 Patrick Chan, Rosanna Lee, and Douglas Kramer.
@@ -432,30 +409,28 @@ Patrick Chan, Rosanna Lee, and Douglas Kramer.
   Platform, Standard Edition, V 1.2}, volume~1.
 \newblock Addison-Wesley Professional, 1999.
 
-\bibitem{Oriat2004}
+\bibitem{oriat2005jartege}
 Catherine Oriat.
 \newblock Jartege: a tool for random generation of unit tests for java classes.
-\newblock {\em CoRR}, abs/cs/0412012, 2004.
+\newblock In {\em Quality of Software Architectures and Software Quality},
+  pages 242--256. Springer, 2005.
 
 \bibitem{visser2004test}
 Willem Visser, Corina~S P?s?reanu, and Sarfraz Khurshid.
 \newblock Test input generation with java pathfinder.
 \newblock {\em ACM SIGSOFT Software Engineering Notes}, 29(4):97--107, 2004.
 
-\bibitem{Claessen2000}
+\bibitem{claessen2011quickcheck}
 Koen Claessen and John Hughes.
 \newblock Quickcheck: a lightweight tool for random testing of haskell
   programs.
-\newblock In {\em Proceedings of the fifth ACM SIGPLAN international conference
-  on Functional programming}, ICFP '00, pages 268--279, New York, NY, USA,
-  2000. ACM.
+\newblock {\em Acm sigplan notices}, 46(4):53--64, 2011.
 
-\bibitem{Hudak2007}
-Paul Hudak, John Hughes, Simon~Peyton Jones, and Philip Wadler.
+\bibitem{hudak2007history}
+Paul Hudak, John Hughes, Simon Peyton~Jones, and Philip Wadler.
 \newblock A history of haskell: being lazy with class.
-\newblock In {\em HOPL III: Proceedings of the third ACM SIGPLAN conference on
-  History of programming languages}, pages 12--1--12--55, New York, NY, USA,
-  2007. ACM.
+\newblock In {\em Proceedings of the third ACM SIGPLAN conference on History of
+  programming languages}, pages 12--1. ACM, 2007.
 
 \bibitem{jackson2001micromodularity}
 Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
@@ -468,12 +443,11 @@ Daniel Jackson, Ian Schechter, and Ilya Shlyakhter.
 \newblock In {\em Software Engineering, 2000. Proceedings of the 2000
   International Conference on}, pages 730--733. IEEE, 2000.
 
-\bibitem{Boyapati2002}
+\bibitem{boyapati2002korat}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
-\newblock Korat: automated testing based on java predicates.
-\newblock In {\em ISSTA '02: Proceedings of the 2002 ACM SIGSOFT international
-  symposium on Software testing and analysis}, pages 123--133, New York, NY,
-  USA, 2002. ACM.
+\newblock Korat: Automated testing based on java predicates.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~27, pages
+  123--133. ACM, 2002.
 
 \bibitem{chang1999structural}
 Juei Chang and Debra~J Richardson.
@@ -500,6 +474,13 @@ Manuel Oriol and Faheem Ullah.
 \newblock Yeti on the cloud.
 \newblock {\em Software Testing Verification and Validation Workshop, IEEE
   International Conference on}, 0:434--437, 2010.
+
+\bibitem{Pacheco2007}
+Carlos Pacheco, Shuvendu~K. Lahiri, Michael~D. Ernst, and Thomas Ball.
+\newblock Feedback-directed random test generation.
+\newblock In {\em Proceedings of the 29th international conference on Software
+  Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
+  Computer Society.
 
 \bibitem{oriol2012law}
 M.~Oriol.
@@ -593,12 +574,6 @@ Ilinca Ciupa, Alexander Pretschner, Andreas Leitner, Manuel Oriol, and Bertrand
 \newblock In {\em Proceedings of the 2008 International Conference on Software
   Testing, Verification, and Validation}, pages 72--81, Washington, DC, USA,
   2008. IEEE Computer Society.
-
-\bibitem{Csallner2004}
-Christoph Csallner and Yannis Smaragdakis.
-\newblock Jcrasher: An automatic robustness tester for {Java}.
-\newblock {\em Software---Practice \& Experience}, 34(11):1025--1050, September
-  2004.
 
 \bibitem{Chen2004a}
 T.Y. Chen, R.~Merkel, P.K. Wong, and G.~Eddy.
@@ -715,12 +690,5 @@ Christoph Schneckenburger and Johannes Mayer.
 Lee~J White and Edward~I Cohen.
 \newblock A domain strategy for computer program testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
-
-\bibitem{ciupa2006object}
-Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
-\newblock Object distance and its application to adaptive random testing of
-  object-oriented programs.
-\newblock In {\em Proceedings of the 1st international workshop on Random
-  testing}, pages 55--63. ACM, 2006.
 
 \end{thebibliography}
