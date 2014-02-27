@@ -227,7 +227,8 @@ Test data generation in software testing is the process of identifying test inpu
 
 A typical test data generator consists of three parts: Program analyser, Strategy handler and Generator~\cite{edvardsson1999survey}. Program analyser performs initial assessment of software prior to testing and may alter the code if so required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A Strategy handler defines the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from program analyser or user before or during execution. The generator taking inputs from the program analyser and strategy handler generates test cases according to the set selection criteria. Test data generators, based on their approaches, are classified into path-wise, goal-oriented, intelligent and random. Each type is briefly described in the following section.
 
-\subsection{Path-wise Test Data Generator}
+\subsection{Path-wise Test Data Generator} 
+\label{sec:pathwise_2}
 It is a technique in which the test data is generated to target path, statement and branch coverage in a given SUT. The approach generally consists of three main parts: CFG construction, path selection and test data generation. 
 
 In path-wise test data generation, the program path to the selected statement is identified and the input data are generated for evaluating the path which can be either generated automatically or provided by the user. The data generated in path testing expresses boolean behaviour i.e. true or false for a particular node in a path. 
@@ -238,6 +239,7 @@ A complete path contains multiple sub-domains, each sub-domain consists of test 
 
 
 \subsection{Goal-oriented Test Data Generators}
+\label{sec:goaloriented_2}
 It is a technique in which the test data is generated to target a specific program point rather than a program path \cite{chungautomated}. The tester can select any path among a set of existing paths as long as it reaches to the specified program point. This technique utilizes runtime information for computing accurate test data~\cite{ferguson1996chaining}. Among various methods used in goal-oriented test data generation the following two commonly adopted approaches are briefly described.
 
 \subsubsection{Chaining Approach}
@@ -255,6 +257,7 @@ It is not always possible to generate test cases that violate assertions. Howeve
 
 
 \subsection{Intelligent Test Data Generators}
+\label{sec:intelligent_2}
  Intelligent test data generation is a technique used to overcome the problems associated with traditional data generation techniques like generation of meaningless data, duplicated data and failing to generate complex test data. The approach increases users confidence in the generated test data and the testing process~\cite{ramamoorthy1975testing}. It performs sophisticated analysis, such as fuzzy logic, neural networks and genetic algorithms on the SUT to assist in finding the appropriate test data. It involves complex analysis to anticipate different situations that may arise at any point. The approach produces test data which satisfy the SUT requirements, however, it consumes more time and resources.
 
 \subsubsection{Genetic Algorithm}
@@ -265,7 +268,7 @@ The benefit of the genetic approach is quick generation of test data with focus 
 % Please paraphrase the above section genetic algorithm.
 
 \subsection{Random Test Data Generators}
-
+\label{sec:randomgenerator_2}
 Random test data generator is the simplest technique for generation of test data. It has the advantage of being used to generate input data for any type of program. However, random test data generation is based solely on probability and cannot accomplish high coverage as its chances of finding semantically small faults are quite low [3find that reference].
 
 If a fault is only revealed by a small percentage of the program input it is said to be a semantically small fault. For example of a semantically small fault consider the following code:
