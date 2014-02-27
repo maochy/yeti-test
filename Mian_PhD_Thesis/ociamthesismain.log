@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  26 FEB 2014 11:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  27 FEB 2014 00:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,11 +599,11 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 
 
 
-]
-[2])
+])
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 95.
- (./ociamthesismain.toc
+
+(./ociamthesismain.toc
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
@@ -620,71 +620,79 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 2.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [3
+) [2
 
 
-] [4] [5]
-Overfull \hbox (1.41573pt too wide) detected at line 119
+] [3] [4]
+Overfull \hbox (1.41573pt too wide) detected at line 120
  []\OT1/phv/m/n/12 100
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 120
- []\OT1/phv/m/n/12 101
- []
-
-
 Overfull \hbox (1.41573pt too wide) detected at line 121
- []\OT1/phv/m/n/12 101
+ []\OT1/phv/m/n/12 100
  []
 
 
 Overfull \hbox (1.41573pt too wide) detected at line 123
- []\OT1/phv/m/n/12 103
+ []\OT1/phv/m/n/12 102
  []
 
 
 Overfull \hbox (1.41573pt too wide) detected at line 125
- []\OT1/phv/m/n/12 104
+ []\OT1/phv/m/n/12 103
  []
 
 
 Overfull \hbox (1.41573pt too wide) detected at line 127
- []\OT1/phv/m/n/12 105
+ []\OT1/phv/m/n/12 104
  []
 
-[6])
+[5])
 \tf@toc=\write4
 \openout4 = `ociamthesismain.toc'.
 
- [7] (./ociamthesismain.lof [8
+ [6] (./ociamthesismain.lof
+
+LaTeX Warning: Citation `Pacheco2007b' on page vii undefined on input line 12.
+
+
+LaTeX Warning: Citation `pacheco2005eclat' on page vii undefined on input line 
+13.
+
+
+LaTeX Warning: Citation `marinov2001testera' on page vii undefined on input lin
+e 15.
+
+
+LaTeX Warning: Citation `Chen2008' on page vii undefined on input line 25.
+
+
+LaTeX Warning: Citation `Chan1996' on page vii undefined on input line 31.
+
+[7
 
 ])
 \tf@lof=\write5
 \openout5 = `ociamthesismain.lof'.
 
- [9] (./ociamthesismain.lot
-Overfull \hbox (1.41573pt too wide) detected at line 22
- []\OT1/phv/m/n/12 100
- []
-
-)
+ [8] (./ociamthesismain.lot)
 \tf@lot=\write6
 \openout6 = `ociamthesismain.lot'.
 
- [10
+ [9
 
 ]
 \openout2 = `dedication/dedication.aux'.
 
- (./dedication/dedication.tex [11
+ (./dedication/dedication.tex [10
 
 
 ])
 \openout2 = `acknowlegements/acknowlegements.aux'.
 
 
-(./acknowlegements/acknowlegements.tex [12
+(./acknowlegements/acknowlegements.tex [11
 
 
 
@@ -703,7 +711,7 @@ l.22
 
 
 
-] <chapter1/SoftwareTesting1.png, id=836, 734.745pt x 308.15125pt>
+] <chapter1/SoftwareTesting1.png, id=822, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
@@ -714,72 +722,78 @@ Overfull \hbox (1.71445pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-[2 <./chapter1/SoftwareTesting1.png>] [3]
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 37.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 37.
+ [2 <./chapter1/SoftwareTesting1.png>] [3]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 61.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 68.
  [4]
 
-LaTeX Warning: Reference `chap:IGRS' on page 5 undefined on input line 71.
+LaTeX Warning: Reference `chap:IGRS' on page 5 undefined on input line 78.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 90--92
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
 
-Overfull \hbox (6.73962pt too wide) in paragraph at lines 106--108
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
+
+ []
+
+
+Overfull \hbox (6.73962pt too wide) in paragraph at lines 113--115
 \OT1/phv/b/n/12 Chapter [][]6[][] \OT1/phv/m/n/12 presents the Au-to-mated Dis-
 cov-ery of Fail-ure Do-main+ Strat-egy (ADFD+),
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
+Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 122--124
+Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
-[7] <chapter1/thesisOutline.png, id=913, 2258.4375pt x 2221.29875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--125
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--131
+
+ []
+
+[7] <chapter1/thesisOutline.png, id=900, 2258.4375pt x 2221.29875pt>
 File: chapter1/thesisOutline.png Graphic file (type png)
 
 <use chapter1/thesisOutline.png>
-Package pdftex.def Info: chapter1/thesisOutline.png used on input line 128.
+Package pdftex.def Info: chapter1/thesisOutline.png used on input line 135.
 (pdftex.def)             Requested size: 455.22897pt x 569.0505pt.
 
-Overfull \hbox (21.60898pt too wide) in paragraph at lines 128--129
+Overfull \hbox (21.60898pt too wide) in paragraph at lines 135--136
  [][] 
  []
 
@@ -791,7 +805,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
  (./chapter2/chapter2.tex
 Chapter 2.
-<chapter2/softwareTesting.png, id=921, 2293.56876pt x 460.72125pt>
+<chapter2/softwareTesting.png, id=908, 2293.56876pt x 460.72125pt>
 File: chapter2/softwareTesting.png Graphic file (type png)
 
 <use chapter2/softwareTesting.png>
@@ -813,7 +827,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 51.
-[10] [11] <chapter2/whiteBox.png, id=952, 530.98375pt x 644.4075pt>
+[10] [11] <chapter2/whiteBox.png, id=937, 530.98375pt x 644.4075pt>
 File: chapter2/whiteBox.png Graphic file (type png)
 
 <use chapter2/whiteBox.png>
@@ -824,7 +838,7 @@ Package pdftex.def Info: chapter2/whiteBox.png used on input line 84.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [12] [13 <./chapter2/whiteBox.png>]
-<chapter2/blackBox.png, id=973, 530.98375pt x 626.34pt>
+<chapter2/blackBox.png, id=957, 530.98375pt x 626.34pt>
 File: chapter2/blackBox.png Graphic file (type png)
 
 <use chapter2/blackBox.png>
@@ -837,6 +851,10 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 146.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 149.
 Missing character: There is no â in font phvr7t!
@@ -845,19 +863,36 @@ Missing character: There is no ˜ in font phvr7t!
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ™ in font phvr7t!
- [16] [17]
-[18] [19] [20] [21]
+[16] [17] [18] [19] [20] [21]
 Overfull \hbox (9.66393pt too wide) in paragraph at lines 286--287
 []\OT1/phv/m/n/12 Consider a pro-gram with an ini-tial branch state-ment: $[]$
  []
 
-[22] <chapter3/randomTesting.jpg, id=1094, 441.90094pt x 118.19156pt>
+[22]
+
+LaTeX Warning: Citation `hamlet1994random' on page 23 undefined on input line 3
+23.
+
+<chapter3/randomTesting.jpg, id=1078, 441.90094pt x 118.19156pt>
 File: chapter3/randomTesting.jpg Graphic file (type jpg)
 
 <use chapter3/randomTesting.jpg>
 Package pdftex.def Info: chapter3/randomTesting.jpg used on input line 327.
 (pdftex.def)             Requested size: 284.54181pt x 71.1337pt.
- [23 <./chapter3/randomTesting.jpg>] [24]
+
+
+LaTeX Warning: Citation `hamlet1994random' on page 23 undefined on input line 3
+31.
+
+
+LaTeX Warning: Citation `duran1981report' on page 23 undefined on input line 33
+1.
+
+
+LaTeX Warning: Citation `duran1981report' on page 23 undefined on input line 33
+1.
+
+[23 <./chapter3/randomTesting.jpg>] [24]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 342.
 
@@ -878,21 +913,21 @@ LaTeX Warning: Command \textless invalid in math mode on input line 342.
 
 LaTeX Warning: Command \textless invalid in math mode on input line 342.
 
-<chapter3/pointblockstrip.jpg, id=1135, 581.92406pt x 183.68625pt>
+<chapter3/pointblockstrip.jpg, id=1115, 581.92406pt x 183.68625pt>
 File: chapter3/pointblockstrip.jpg Graphic file (type jpg)
 
 <use chapter3/pointblockstrip.jpg>
 Package pdftex.def Info: chapter3/pointblockstrip.jpg used on input line 348.
 (pdftex.def)             Requested size: 369.89061pt x 162.19092pt.
  [25 <./chapter3/pointblockstrip.jpg>]
-<chapter3/mart2.pdf, id=1150, 350.30875pt x 185.69376pt>
+<chapter3/mart2.pdf, id=1131, 350.30875pt x 185.69376pt>
 File: chapter3/mart2.pdf Graphic file (type pdf)
 
 <use chapter3/mart2.pdf>
 Package pdftex.def Info: chapter3/mart2.pdf used on input line 365.
 (pdftex.def)             Requested size: 384.13812pt x 184.94809pt.
  [26 <./chapter3/mart2.pdf>]
-<chapter3/RRT.pdf, id=1178, 370.38374pt x 247.67531pt>
+<chapter3/RRT.pdf, id=1159, 370.38374pt x 247.67531pt>
 File: chapter3/RRT.pdf Graphic file (type pdf)
  <use chapter3/RRT.pdf>
 Package pdftex.def Info: chapter3/RRT.pdf used on input line 381.
@@ -901,18 +936,35 @@ Package pdftex.def Info: chapter3/RRT.pdf used on input line 381.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[27] [28 <./chapter3/RRT.pdf>] [29]
+
+LaTeX Warning: Citation `Godefroid2005' on page 27 undefined on input line 391.
+
+
+[27] [28 <./chapter3/RRT.pdf>]
+
+LaTeX Warning: Citation `levenshtein1966binary' on page 29 undefined on input l
+ine 413.
+
+[29]
+
+LaTeX Warning: Citation `csallner2004jcrasher' on page 30 undefined on input li
+ne 456.
+
+
 Overfull \hbox (0.46378pt too wide) in paragraph at lines 456--457
 \OT1/phv/m/n/12 JCrasher is an au-to-matic ro-bust-ness test-ing tool de-vel-op
 ed by Csall-ner and Smara-
  []
 
-<chapter3/JCrasher.png, id=1216, 867.24pt x 402.50375pt>
+<chapter3/JCrasher.png, id=1192, 867.24pt x 402.50375pt>
 File: chapter3/JCrasher.png Graphic file (type png)
 
 <use chapter3/JCrasher.png>
 Package pdftex.def Info: chapter3/JCrasher.png used on input line 460.
 (pdftex.def)             Requested size: 426.79071pt x 227.6177pt.
+
+
+LaTeX Warning: Citation `Pacheco2007b' on page 30 undefined on input line 461.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -923,25 +975,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 465--466
  []
 
 [30]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 475.
 
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 475.
- [31 <./chapter3/JCrasher.png>]
+LaTeX Warning: Citation `oriat2005jartege' on page 31 undefined on input line 4
+73.
+
+[31 <./chapter3/JCrasher.png>]
 Overfull \hbox (1.56621pt too wide) in paragraph at lines 477--478
 []\OT1/phv/m/n/12 Probability of cre-at-ing new ob-jects dur-ing test pro-cess.
  Low prob-a-bil-ity means
  []
 
-<chapter3/eclat_working.png, id=1235, 356.532pt x 235.1184pt>
+
+LaTeX Warning: Citation `pacheco2005eclat' on page 32 undefined on input line 4
+83.
+
+<chapter3/eclat_working.png, id=1207, 356.532pt x 235.1184pt>
 File: chapter3/eclat_working.png Graphic file (type png)
 
 <use chapter3/eclat_working.png>
 Package pdftex.def Info: chapter3/eclat_working.png used on input line 487.
 (pdftex.def)             Requested size: 426.82436pt x 298.78357pt.
+
+
+LaTeX Warning: Citation `pacheco2005eclat' on page 32 undefined on input line 4
+88.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -952,129 +1009,223 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--494
  []
 
 [32] [33 <./chapter3/eclat_working.png>]
-<chapter3/autotest.png, id=1252, 292.14229pt x 156.78915pt>
+
+LaTeX Warning: Citation `claessen2011quickcheck' on page 34 undefined on input 
+line 508.
+
+
+LaTeX Warning: Citation `hudak2007history' on page 34 undefined on input line 5
+08.
+
+[34] <chapter3/autotest.png, id=1226, 292.14229pt x 156.78915pt>
 File: chapter3/autotest.png Graphic file (type png)
 
 <use chapter3/autotest.png>
-Package pdftex.def Info: chapter3/autotest.png used on input line 525.
+Package pdftex.def Info: chapter3/autotest.png used on input line 526.
 (pdftex.def)             Requested size: 369.9066pt x 199.17741pt.
- [34] [35 <./chapter3/autotest.png (PNG copy)>]
-<chapter3/testera.png, id=1273, 379.20241pt x 142.17401pt>
+
+
+LaTeX Warning: Citation `marinov2001testera' on page 35 undefined on input line
+ 541.
+
+[35 <./chapter3/autotest.png (PNG copy)>]
+<chapter3/testera.png, id=1239, 379.20241pt x 142.17401pt>
 File: chapter3/testera.png Graphic file (type png)
 
 <use chapter3/testera.png>
-Package pdftex.def Info: chapter3/testera.png used on input line 546.
+Package pdftex.def Info: chapter3/testera.png used on input line 547.
 (pdftex.def)             Requested size: 398.34785pt x 341.47406pt.
 
 
+LaTeX Warning: Citation `marinov2001testera' on page 36 undefined on input line
+ 548.
+
+
 LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Citation `boyapati2002korat' on page 36 undefined on input line 
+559.
+
+
+LaTeX Warning: Citation `marinov2001testera' on page 36 undefined on input line
+ 559.
 
 [36] [37 <./chapter3/testera.png>]) [38]
 \openout2 = `chapter3/chapter3.aux'.
 
  (./chapter3/chapter3.tex
 Chapter 3.
-[39
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-<chapter3/yetiOverview.png, id=1307, 419.166pt x 102.3825pt>
+<chapter3/yetiOverview.png, id=1265, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png>
-Package pdftex.def Info: chapter3/yetiOverview.png used on input line 22.
+Package pdftex.def Info: chapter3/yetiOverview.png used on input line 19.
 (pdftex.def)             Requested size: 426.79533pt x 128.04498pt.
- [40 <./chapter3/yetiOverview.png (PNG copy)>]
-<chapter3/yetiCore.png, id=1316, 473.77pt x 190.7125pt>
-File: chapter3/yetiCore.png Graphic file (type png)
-
-<use chapter3/yetiCore.png>
-Package pdftex.def Info: chapter3/yetiCore.png used on input line 36.
-(pdftex.def)             Requested size: 426.80112pt x 199.1773pt.
- [41 <./chapter3/yetiCore.png>] [42] [43]
-Overfull \hbox (12.16328pt too wide) in paragraph at lines 89--117
- [][] 
- []
-
-[44] <chapter3/yetiCommandCLI.pdf, id=1361, 831.105pt x 95.35625pt>
-File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
-
-<use chapter3/yetiCommandCLI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 125.
-(pdftex.def)             Requested size: 426.7874pt x 56.90572pt.
-
-<chapter3/yetiCommandGUI.pdf, id=1364, 433.62pt x 494.84875pt>
-File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
-
-<use chapter3/yetiCommandGUI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 134.
-(pdftex.def)             Requested size: 270.31049pt x 327.20525pt.
- [45 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
-<chapter3/yetiReport1.png, id=1389, 607.26875pt x 154.5775pt>
-File: chapter3/yetiReport1.png Graphic file (type png)
-
-<use chapter3/yetiReport1.png>
-Package pdftex.def Info: chapter3/yetiReport1.png used on input line 152.
-(pdftex.def)             Requested size: 426.79947pt x 142.27669pt.
-
-<chapter3/yetiReport2.png, id=1391, 617.30624pt x 153.57375pt>
-File: chapter3/yetiReport2.png Graphic file (type png)
-
-<use chapter3/yetiReport2.png>
-Package pdftex.def Info: chapter3/yetiReport2.png used on input line 160.
-(pdftex.def)             Requested size: 426.79892pt x 142.27376pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[46 <./chapter3/yetiReport1.png>]
-<chapter3/yetiGUI.png, id=1398, 1445.4pt x 903.375pt>
-File: chapter3/yetiGUI.png Graphic file (type png)
+[39
 
-<use chapter3/yetiGUI.png>
-Package pdftex.def Info: chapter3/yetiGUI.png used on input line 171.
-(pdftex.def)             Requested size: 426.7863pt x 278.84412pt.
- [47 <./chapter3/yetiReport2.png> <./chapter3/yetiGUI.png>] [48]
-Overfull \hbox (61.52669pt too wide) in paragraph at lines 215--231
+
+
+] <chapter3/yetiCore.png, id=1274, 473.77pt x 190.7125pt>
+File: chapter3/yetiCore.png Graphic file (type png)
+
+<use chapter3/yetiCore.png>
+Package pdftex.def Info: chapter3/yetiCore.png used on input line 33.
+(pdftex.def)             Requested size: 426.80112pt x 199.1773pt.
+ [40 <./chapter3/yetiOverview.png (PNG copy)> <./chapter3/yetiCore.png>] [41] [
+42]
+Overfull \hbox (12.16328pt too wide) in paragraph at lines 86--114
  [][] 
  []
 
-) [49] [50]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<chapter3/yetiCommandCLI.pdf, id=1313, 831.105pt x 95.35625pt>
+File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
+
+<use chapter3/yetiCommandCLI.pdf>
+Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 122.
+(pdftex.def)             Requested size: 426.7874pt x 56.90572pt.
+
+<chapter3/yetiCommandGUI.pdf, id=1316, 433.62pt x 494.84875pt>
+File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
+
+<use chapter3/yetiCommandGUI.pdf>
+Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 131.
+(pdftex.def)             Requested size: 270.31049pt x 327.20525pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[43 <./chapter3/yetiCommandCLI.pdf>]
+<chapter3/yetiReport1.png, id=1333, 607.26875pt x 154.5775pt>
+File: chapter3/yetiReport1.png Graphic file (type png)
+
+<use chapter3/yetiReport1.png>
+Package pdftex.def Info: chapter3/yetiReport1.png used on input line 149.
+(pdftex.def)             Requested size: 426.79947pt x 142.27669pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[44 <./chapter3/yetiCommandGUI.pdf>]
+<chapter3/yetiReport2.png, id=1349, 617.30624pt x 153.57375pt>
+File: chapter3/yetiReport2.png Graphic file (type png)
+
+<use chapter3/yetiReport2.png>
+Package pdftex.def Info: chapter3/yetiReport2.png used on input line 157.
+(pdftex.def)             Requested size: 426.79892pt x 142.27376pt.
+
+<chapter3/yetiGUI.png, id=1351, 1445.4pt x 903.375pt>
+File: chapter3/yetiGUI.png Graphic file (type png)
+
+<use chapter3/yetiGUI.png>
+Package pdftex.def Info: chapter3/yetiGUI.png used on input line 168.
+(pdftex.def)             Requested size: 426.7863pt x 278.84412pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[45 <./chapter3/yetiReport1.png> <./chapter3/yetiReport2.png>] [46 <./chapter3/
+yetiGUI.png>]
+Overfull \hbox (61.52669pt too wide) in paragraph at lines 212--228
+ [][] 
+ []
+
+) [47] [48] [49]
 \openout2 = `chapter4/chapter4.aux'.
 
  (./chapter4/chapter4.tex
 Chapter 4.
-[51
+
+LaTeX Warning: Citation `Chan1996' on page 50 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Chen2008' on page 50 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Chan2002' on page 50 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Chen2003' on page 50 undefined on input line 9.
+
+
+LaTeX Warning: Citation `Chen2005' on page 50 undefined on input line 9.
+
+[50
 
 
 
-] [52] [53] [54]
-<chapter4/ART_Patterns.png, id=1507, 376.40625pt x 101.62968pt>
+] [51]
+
+LaTeX Warning: Citation `Ciupa2008' on page 52 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Ciupa2008a' on page 52 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page 52 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Leitner2007' on page 52 undefined on input line 30.
+
+
+LaTeX Warning: Citation `Myers1979' on page 52 undefined on input line 32.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page 52 undefined on input line 32.
+
+
+LaTeX Warning: Citation `Ciupa2007' on page 52 undefined on input line 34.
+
+
+LaTeX Warning: Citation `Leitner2007' on page 52 undefined on input line 37.
+
+[52]
+
+LaTeX Warning: Citation `Ciupa2008' on page 53 undefined on input line 49.
+
+
+LaTeX Warning: Citation `Chan1996' on page 53 undefined on input line 53.
+
+
+LaTeX Warning: Citation `Chen2003' on page 53 undefined on input line 53.
+
+
+LaTeX Warning: Citation `Chan2002' on page 53 undefined on input line 53.
+
+
+LaTeX Warning: Citation `Chen2005' on page 53 undefined on input line 53.
+
+[53] <chapter4/ART_Patterns.png, id=1451, 376.40625pt x 101.62968pt>
 File: chapter4/ART_Patterns.png Graphic file (type png)
 
 <use chapter4/ART_Patterns.png>
 Package pdftex.def Info: chapter4/ART_Patterns.png used on input line 57.
 (pdftex.def)             Requested size: 284.54968pt x 113.81516pt.
 
-<chapter4/block2.png, id=1509, 271.0125pt x 122.70844pt>
+
+LaTeX Warning: Citation `Chen2008' on page 54 undefined on input line 58.
+
+<chapter4/block2.png, id=1452, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
 Package pdftex.def Info: chapter4/block2.png used on input line 66.
 (pdftex.def)             Requested size: 284.53842pt x 113.81433pt.
- [55 <./chapter4/ART_Patterns.png> <./chapter4/block2.png>] <chapter4/flowchart
-1.pdf, id=1518, 193.19614pt x 195.7238pt>
+ [54 <./chapter4/ART_Patterns.png> <./chapter4/block2.png>] <chapter4/flowchart
+1.pdf, id=1461, 193.19614pt x 195.7238pt>
 File: chapter4/flowchart1.pdf Graphic file (type pdf)
 
 <use chapter4/flowchart1.pdf>
 Package pdftex.def Info: chapter4/flowchart1.pdf used on input line 79.
 (pdftex.def)             Requested size: 341.44713pt x 398.34543pt.
- [56 <./chapter4/flowchart1.pdf>] [57]
+ [55 <./chapter4/flowchart1.pdf>] [56]
 Overfull \hbox (7.48506pt too wide) in paragraph at lines 148--150
 \OT1/phv/m/n/12 strat-egy fur-ther se-lect val-ues ([]\OT1/pcr/m/n/12 0, Intege
 r.MIN_VALUE \OT1/phv/m/n/12 & []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/phv/m/n/1
@@ -1088,7 +1239,7 @@ ill not be able to store the square of []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/
 phv/m/n/12 .
  []
 
-[58] <chapter4/hierarchy.pdf, id=1555, 98.56648pt x 125.337pt>
+[57] <chapter4/hierarchy.pdf, id=1499, 98.56648pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
@@ -1098,8 +1249,18 @@ Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 173.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[59] [60 <./chapter4/hierarchy.pdf>] [61] [62]
-<chapter4/DssrImprove.png, id=1600, 986.2446pt x 479.391pt>
+
+LaTeX Warning: Citation `Leitner2007' on page 58 undefined on input line 187.
+
+[58] [59 <./chapter4/hierarchy.pdf>]
+
+LaTeX Warning: Citation `Chen2008' on page 60 undefined on input line 258.
+
+[60] [61]
+
+LaTeX Warning: Citation `Ciupa2007' on page 62 undefined on input line 262.
+
+<chapter4/DssrImprove.png, id=1540, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
@@ -1115,7 +1276,7 @@ Overfull \hbox (93.70477pt too wide) in alignment at lines 353--353
 [][][][][][][][][][][][][][][] 
  []
 
-[63 <./chapter4/DssrImprove.png>] [64]
+[62 <./chapter4/DssrImprove.png>] [63]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 385.
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10.95> not available
@@ -1125,30 +1286,82 @@ Overfull \hbox (13.48961pt too wide) in paragraph at lines 383--423
  [][] 
  []
 
-[65] [66] [67] [68] [69]) [70]
+[64] [65] [66]
+
+LaTeX Warning: Citation `Ciupa2007' on page 67 undefined on input line 521.
+
+
+LaTeX Warning: Citation `Ciupa2008a' on page 67 undefined on input line 521.
+
+[67]
+
+LaTeX Warning: Citation `Chan2002' on page 68 undefined on input line 523.
+
+
+LaTeX Warning: Citation `Chen2003' on page 68 undefined on input line 523.
+
+
+LaTeX Warning: Citation `Chen2005' on page 68 undefined on input line 523.
+
+
+LaTeX Warning: Citation `Leitner2007' on page 68 undefined on input line 527.
+
+
+LaTeX Warning: Citation `Leitner2007' on page 68 undefined on input line 527.
+
+
+LaTeX Warning: Citation `hamlet1990' on page 68 undefined on input line 532.
+
+[68]) [69]
 \openout2 = `chapter5/chapter5.aux'.
 
  (./chapter5/chapter5.tex
 Chapter 5.
-[71
+
+LaTeX Warning: Citation `Ciupa2008' on page 70 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Offutt1996' on page 70 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Chen2008' on page 70 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Chan2002' on page 70 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Ciupa2008' on page 70 undefined on input line 12.
+
+
+LaTeX Warning: Citation `Godefroid2005' on page 70 undefined on input line 12.
+
+[70
 
 
 
-] <chapter5/ART_Patterns.png, id=1708, 376.40625pt x 101.62968pt>
+]
+
+LaTeX Warning: Citation `Chan1996' on page 71 undefined on input line 14.
+
+<chapter5/ART_Patterns.png, id=1634, 376.40625pt x 101.62968pt>
 File: chapter5/ART_Patterns.png Graphic file (type png)
 
 <use chapter5/ART_Patterns.png>
 Package pdftex.def Info: chapter5/ART_Patterns.png used on input line 18.
 (pdftex.def)             Requested size: 398.36841pt x 142.26971pt.
- [72 <./chapter5/ART_Patterns.png>]
-<chapter5/ADFD_Diagram1.png, id=1718, 589.20125pt x 414.54875pt>
+
+
+LaTeX Warning: Citation `Chan1996' on page 71 undefined on input line 19.
+
+[71 <./chapter5/ART_Patterns.png>]
+<chapter5/ADFD_Diagram1.png, id=1642, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
 Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 99.
 (pdftex.def)             Requested size: 426.79584pt x 284.53346pt.
 
-<chapter5/ADFD_front_end.png, id=1719, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1643, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
@@ -1159,111 +1372,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 113--115
 
  []
 
-[73]
+[72]
 Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
-[74 <./chapter5/ADFD_Diagram1.png>] [75 <./chapter5/ADFD_front_end.png>]
-[76] <chapter5/pointDomainOneArgument.png, id=1749, 780.9175pt x 570.13pt>
+[73 <./chapter5/ADFD_Diagram1.png>] [74 <./chapter5/ADFD_front_end.png>]
+[75] <chapter5/pointDomainOneArgument.png, id=1675, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
 Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
  225.
 (pdftex.def)             Requested size: 347.11993pt x 241.84532pt.
- [77] [78 <./chapter5/pointDomainOneArgument.png>]
+ [76] [77 <./chapter5/pointDomainOneArgument.png>]
 
-LaTeX Warning: Reference `5.5(a)' on page 79 undefined on input line 315.
+LaTeX Warning: Reference `5.5(a)' on page 78 undefined on input line 315.
 
-<chapter5/PFDOne.png, id=1787, 790.955pt x 575.14874pt>
+<chapter5/PFDOne.png, id=1711, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
 Package pdftex.def Info: chapter5/PFDOne.png used on input line 323.
 (pdftex.def)             Requested size: 404.03345pt x 298.76312pt.
 
-<chapter5/PFDTwo.png, id=1788, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1712, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
 Package pdftex.def Info: chapter5/PFDTwo.png used on input line 327.
 (pdftex.def)             Requested size: 404.03615pt x 298.76103pt.
- [79]
+ [78]
 Overfull \vbox (18.77805pt too high) has occurred while \output is active []
 
 
-[80 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>]
+[79 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>]
 
-LaTeX Warning: Reference `5.6 a' on page 81 undefined on input line 347.
+LaTeX Warning: Reference `5.6 a' on page 80 undefined on input line 347.
 
 
-LaTeX Warning: Reference `5.6b' on page 81 undefined on input line 347.
+LaTeX Warning: Reference `5.6b' on page 80 undefined on input line 347.
 
-<chapter5/BFDOne.png, id=1803, 794.97pt x 575.14874pt>
+<chapter5/BFDOne.png, id=1728, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
 Package pdftex.def Info: chapter5/BFDOne.png used on input line 360.
 (pdftex.def)             Requested size: 404.03436pt x 298.76312pt.
 
-<chapter5/BFDTwo.png, id=1804, 787.94376pt x 573.14125pt>
+<chapter5/BFDTwo.png, id=1729, 787.94376pt x 573.14125pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
 Package pdftex.def Info: chapter5/BFDTwo.png used on input line 364.
 (pdftex.def)             Requested size: 404.02217pt x 298.76103pt.
- [81]
+ [80]
 Overfull \vbox (18.77805pt too high) has occurred while \output is active []
 
 
-[82 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>]
+[81 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>]
 
-LaTeX Warning: Reference `5.7a' on page 83 undefined on input line 387.
+LaTeX Warning: Reference `5.7a' on page 82 undefined on input line 387.
 
 
-LaTeX Warning: Reference `5.7b' on page 83 undefined on input line 387.
+LaTeX Warning: Reference `5.7b' on page 82 undefined on input line 387.
 
-<chapter5/SFDOne.png, id=1819, 789.95125pt x 573.14125pt>
+<chapter5/SFDOne.png, id=1744, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
 Package pdftex.def Info: chapter5/SFDOne.png used on input line 397.
 (pdftex.def)             Requested size: 404.02695pt x 298.76103pt.
 
-<chapter5/SFDTwo.png, id=1820, 788.9475pt x 575.14874pt>
+<chapter5/SFDTwo.png, id=1745, 788.9475pt x 575.14874pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
 Package pdftex.def Info: chapter5/SFDTwo.png used on input line 401.
 (pdftex.def)             Requested size: 404.03122pt x 298.76312pt.
- [83]
+ [82]
 Overfull \vbox (18.77805pt too high) has occurred while \output is active []
 
 
-[84 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>] [85] [86]) [87]
+[83 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>] [84]
+
+LaTeX Warning: Citation `Myers2011' on page 85 undefined on input line 453.
+
+
+LaTeX Warning: Citation `Offutt1996' on page 85 undefined on input line 453.
+
+
+LaTeX Warning: Citation `Chan1996' on page 85 undefined on input line 453.
+
+[85]) [86]
 \openout2 = `chapter6/chapter6.aux'.
 
-
-(./chapter6/chapter6.tex
+ (./chapter6/chapter6.tex
 Chapter 6.
-[88
+[87
 
 
 
-] <chapter6/ART_Patterns.png, id=1874, 376.40625pt x 101.62968pt>
+] <chapter6/ART_Patterns.png, id=1797, 376.40625pt x 101.62968pt>
 File: chapter6/ART_Patterns.png Graphic file (type png)
 
 <use chapter6/ART_Patterns.png>
 Package pdftex.def Info: chapter6/ART_Patterns.png used on input line 33.
 (pdftex.def)             Requested size: 341.45618pt x 113.81516pt.
- [89]
+ [88]
 Underfull \hbox (badness 10000) in paragraph at lines 68--70
 
  []
 
-[90 <./chapter6/ART_Patterns.png>]
-<chapter6/adfdPlusWorkflow.png, id=1893, 906.38625pt x 557.08125pt>
+[89 <./chapter6/ART_Patterns.png>]
+<chapter6/adfdPlusWorkflow.png, id=1816, 906.38625pt x 557.08125pt>
 File: chapter6/adfdPlusWorkflow.png Graphic file (type png)
 
 <use chapter6/adfdPlusWorkflow.png>
@@ -1275,8 +1497,8 @@ Overfull \hbox (2.54884pt too wide) in paragraph at lines 86--87
  p / yeti-[]test/$[][]\OT1/phv/m/n/12 . A brief overview of YETI
  []
 
-[91 <./chapter6/adfdPlusWorkflow.png>]
-<chapter6/exampleError.png, id=1900, 1441.88687pt x 818.55812pt>
+[90 <./chapter6/adfdPlusWorkflow.png>]
+<chapter6/exampleError.png, id=1823, 1441.88687pt x 818.55812pt>
 File: chapter6/exampleError.png Graphic file (type png)
 
 <use chapter6/exampleError.png>
@@ -1287,7 +1509,7 @@ Overfull \hbox (7.39793pt too wide) in paragraph at lines 99--100
  [][] 
  []
 
-[92]
+[91]
 Overfull \hbox (0.20345pt too wide) in paragraph at lines 123--124
 \OT1/phv/m/n/12 tern and the bound-aries of the fail-ure are $\OT1/cmr/m/n/12 (
 5\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (5\OML
@@ -1299,47 +1521,47 @@ cmr/m/n/12 2)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (7\OML/cmm/m/it/12 ; \OT1/cmr/m
 /n/12 4)\OML/cmm/m/it/12 ; [] 
  []
 
-[93 <./chapter6/exampleError.png>] [94]
+[92 <./chapter6/exampleError.png>] [93]
 
-LaTeX Warning: Reference `' on page 95 undefined on input line 152.
+LaTeX Warning: Reference `' on page 94 undefined on input line 152.
 
-<chapter6/PFDOne.png, id=1939, 790.955pt x 575.14874pt>
+<chapter6/PFDOne.png, id=1861, 790.955pt x 575.14874pt>
 File: chapter6/PFDOne.png Graphic file (type png)
 
 <use chapter6/PFDOne.png>
 Package pdftex.def Info: chapter6/PFDOne.png used on input line 175.
 (pdftex.def)             Requested size: 398.33688pt x 176.40741pt.
 
-<chapter6/BFDOne.png, id=1940, 794.97pt x 575.14874pt>
+<chapter6/BFDOne.png, id=1862, 794.97pt x 575.14874pt>
 File: chapter6/BFDOne.png Graphic file (type png)
 
 <use chapter6/BFDOne.png>
 Package pdftex.def Info: chapter6/BFDOne.png used on input line 179.
 (pdftex.def)             Requested size: 398.34528pt x 176.40741pt.
 
-<chapter6/SFDOne.png, id=1941, 789.95125pt x 573.14125pt>
+<chapter6/SFDOne.png, id=1863, 789.95125pt x 573.14125pt>
 File: chapter6/SFDOne.png Graphic file (type png)
 
 <use chapter6/SFDOne.png>
 Package pdftex.def Info: chapter6/SFDOne.png used on input line 183.
 (pdftex.def)             Requested size: 398.33762pt x 176.40385pt.
- [95] [96 <./chapter6/PFDOne.png> <./chapter6/BFDOne.png> <./chapter6/SFDOne.pn
+ [94] [95 <./chapter6/PFDOne.png> <./chapter6/BFDOne.png> <./chapter6/SFDOne.pn
 g>]
-<chapter6/PFDTwo.png, id=1961, 1187.43625pt x 772.8875pt>
+<chapter6/PFDTwo.png, id=1882, 1187.43625pt x 772.8875pt>
 File: chapter6/PFDTwo.png Graphic file (type png)
 
 <use chapter6/PFDTwo.png>
 Package pdftex.def Info: chapter6/PFDTwo.png used on input line 203.
 (pdftex.def)             Requested size: 398.3417pt x 176.40414pt.
 
-<chapter6/BFDTwo.png, id=1962, 1192.455pt x 772.8875pt>
+<chapter6/BFDTwo.png, id=1883, 1192.455pt x 772.8875pt>
 File: chapter6/BFDTwo.png Graphic file (type png)
 
 <use chapter6/BFDTwo.png>
 Package pdftex.def Info: chapter6/BFDTwo.png used on input line 207.
 (pdftex.def)             Requested size: 398.33315pt x 176.40414pt.
 
-<chapter6/SFDTwo.png, id=1963, 1192.455pt x 772.8875pt>
+<chapter6/SFDTwo.png, id=1884, 1192.455pt x 772.8875pt>
 File: chapter6/SFDTwo.png Graphic file (type png)
 
 <use chapter6/SFDTwo.png>
@@ -1355,22 +1577,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 203--212
 [][]
  []
 
-[97] [98 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.png
->] [99] [100]
+[96] [97 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.png
+>] [98] [99]
 Overfull \hbox (4.5192pt too wide) in paragraph at lines 313--314
 \OT1/phv/m/n/12 The cur-rent ap-proach can be ex-tended to a larger set of real
  world multi-dimensional
  []
 
-[101]) [102]
+[100]) [101]
 \openout2 = `chapter7/chapter7.aux'.
 
  (./chapter7/chapter7.tex
 Chapter 7.
-Missing character: There is no â in font phvr7t!
-Missing character: There is no € in font phvr7t!
-Missing character: There is no ™ in font phvr7t!
-) [103
+
+LaTeX Warning: Reference `chap:chapter4' on page 102 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `chap:chapter5' on page 102 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `chap:chapter6' on page 102 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `sec:chapter6' on page 102 undefined on input line 10.
+
+
+
+LaTeX Warning: Reference `sec:chapter6' on page 102 undefined on input line 10.
+
+
+) [102
 
 
 
@@ -1379,7 +1618,7 @@ Missing character: There is no ™ in font phvr7t!
 
  (./chapter8/chapter8.tex
 Chapter 8.
-) [104
+) [103
 
 
 
@@ -1390,31 +1629,33 @@ Chapter 8.
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 15.
-[105
+[104
 
 
 
-] [106] [107] [108]) [109] (./ociamthesismain.bbl
+] [105] [106] [107]) [108] (./ociamthesismain.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 7.
- [110
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 6.
+ [109
 
 
-] [111] [112]
+]
+Missing character: There is no Ñ in font phvro7t!
+ [110] [111]
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ” in font phvro7t!
 
-[113]
+[112]
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ” in font phvro7t!
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ™ in font phvro7t!
- [114] [115])
+ [113] [114])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 135.
- [116]
+ [115]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 135.
  (./ociamthesismain.aux (./abstract/abstract.aux)
 (./dedication/dedication.aux) (./acknowlegements/acknowlegements.aux)
@@ -1436,13 +1677,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 135.
  ) 
 Here is how much of TeX's memory you used:
- 10629 strings out of 493315
- 155016 string characters out of 6137904
- 338553 words of memory out of 5000000
- 12946 multiletter control sequences out of 15000+600000
+ 10649 strings out of 493315
+ 155659 string characters out of 6137904
+ 338588 words of memory out of 5000000
+ 12971 multiletter control sequences out of 15000+600000
  44995 words of font info for 103 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 35i,12n,72p,2367b,1695s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,12n,72p,2419b,1695s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{lstnumber.-14.16} has been referenced but does no
 t exist, replaced by a fixed one
 
@@ -1461,10 +1702,10 @@ ts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/he
 lvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/
 uhvro8a.pfb>
-Output written on ociamthesismain.pdf (129 pages, 2130145 bytes).
+Output written on ociamthesismain.pdf (127 pages, 2141021 bytes).
 PDF statistics:
- 2470 PDF objects out of 2487 (max. 8388607)
- 2213 compressed objects within 23 object streams
- 788 named destinations out of 1000 (max. 500000)
+ 2394 PDF objects out of 2487 (max. 8388607)
+ 2140 compressed objects within 22 object streams
+ 783 named destinations out of 1000 (max. 500000)
  1245 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,65 +15,83 @@ A level-1 auxiliary file: chapter8/chapter8.aux
 A level-1 auxiliary file: appendix1/appendix1.aux
 The style file: unsrt.bst
 Database file #1: references1/refs.bib
-Repeated entry---line 1200 of file references1/refs.bib
+Repeated entry---line 1127 of file references1/refs.bib
  : @article{radatz1990ieee
  :                        ,
 I'm skipping whatever remains of this entry
-Warning--empty journal in Standards2002
-Warning--empty booktitle in Dijkstra1972
-Warning--there's a number but no volume in howden1986
-Warning--can't use both volume and number fields in mccabe1983
-Warning--can't use both volume and number fields in Godefroid2005
+Repeated entry---line 1774 of file references1/refs.bib
+ : @inproceedings{pacheco2007randoop
+ :                                  ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Chan1996"
+Warning--I didn't find a database entry for "Chen2003"
+Warning--I didn't find a database entry for "Pacheco2007b"
+Warning--I didn't find a database entry for "Leitner2007"
+Warning--I didn't find a database entry for "Chen2008"
+Warning--I didn't find a database entry for "Chan2002"
+Warning--I didn't find a database entry for "Ciupa2008a"
+Warning--I didn't find a database entry for "Myers1979"
+Warning--I didn't find a database entry for "Ciupa2007"
+Warning--I didn't find a database entry for "Ciupa2008"
+Warning--I didn't find a database entry for "hamlet1990"
+Warning--I didn't find a database entry for "Chen2005"
+Warning--I didn't find a database entry for "Godefroid2005"
+Warning--I didn't find a database entry for "Offutt1996"
+Warning--I didn't find a database entry for "Myers2011"
+Warning--there's a number but no volume in howden1986functional
+Warning--can't use both volume and number fields in mccabe1983structured
+Warning--can't use both volume and number fields in godefroid2005dart
+Warning--can't use both volume and number fields in offutt1996semantic
 Warning--empty journal in toweysoftware
 Warning--empty year in toweysoftware
 Warning--empty journal in cohen2005robustness
 Warning--can't use both volume and number fields in ntafos1998random
-Warning--empty journal in tretmans1999
+Warning--empty journal in tretmans2000automatic
 Warning--can't use both volume and number fields in ramamoorthy1975testing
 Warning--empty journal in chungautomated
 Warning--empty year in chungautomated
 Warning--empty journal in Levenshtein1966
 Warning--empty note in Oriol2010b
 Warning--there's a number but no volume in white1980domain
-You've used 125 entries,
+You've used 122 entries,
             1791 wiz_defined-function locations,
-            1193 strings with 23742 characters,
-and the built_in function-call counts, 34197 in all, are:
-= -- 3373
-> -- 1116
-< -- 60
-+ -- 427
-- -- 302
-* -- 2101
-:= -- 4895
-add.period$ -- 418
-call.type$ -- 125
-change.case$ -- 112
+            1184 strings with 23519 characters,
+and the built_in function-call counts, 33737 in all, are:
+= -- 3328
+> -- 1100
+< -- 59
++ -- 420
+- -- 298
+* -- 2072
+:= -- 4806
+add.period$ -- 407
+call.type$ -- 122
+change.case$ -- 109
 chr.to.int$ -- 0
-cite$ -- 141
-duplicate$ -- 1724
-empty$ -- 3442
-format.name$ -- 302
-if$ -- 8105
+cite$ -- 137
+duplicate$ -- 1694
+empty$ -- 3397
+format.name$ -- 298
+if$ -- 7995
 int.to.chr$ -- 0
-int.to.str$ -- 125
-missing$ -- 132
-newline$ -- 625
-num.names$ -- 125
-pop$ -- 464
+int.to.str$ -- 122
+missing$ -- 129
+newline$ -- 610
+num.names$ -- 122
+pop$ -- 465
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 957
+skip$ -- 947
 stack$ -- 0
-substring$ -- 2538
-swap$ -- 600
-text.length$ -- 60
+substring$ -- 2560
+swap$ -- 605
+text.length$ -- 59
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 16
-while$ -- 354
-width$ -- 128
-write$ -- 1429
-(There was 1 error message)
+warning$ -- 15
+while$ -- 352
+width$ -- 125
+write$ -- 1383
+(There were 2 error messages)

@@ -3,6 +3,14 @@
 
 \section{Introduction}\label{sec:intro7}
 
-This project describes a method to automatically generate program contracts using Daikon and increases the confidence of generated contracts using ESC/Java2. The random test case generator developed does not guarantee code coverage, but tuning it to generate large number of test cases produced strong and usable results on tested data structures. Contracts produced describe post conditions and frame conditions for each method and class invariants. Statically checking the suggested invariants using ESC/Java2 was less useful than expected because of strong assumptions about code which are made by ESC/Java, which resulted in high number of false negatives. The only way to efficiently use ESC/Java2’s capabilities is to annotate the code manually and evolve the annotations based on output of ESC/Java2, and it is not a good idea to use it to check automatically generated invariants without any user input.
+
+
+The thesis has introduced and assessed the efficiency's of three new automated strategies to perform random testing, namely Dirt Spot Sweeping Random (Chapter~\ref{chap:chapter4}), Automated Discovery of Failure Domain (Chapter~\ref{chap:chapter5} and Automated Discovery of Failure Domain+ (Chapter~\ref{chap:chapter6}). 
+
+Section ~\ref{sec:chapter6} (page x) and Section ~\ref{sec:chapter6} (page x) presented the goals and contributions of the research, which are briefly recapped here.
+
+The first strategy DSSR, tries to finds a failure and search for more failures around the discovered one by taking into consideration its boundary values. The second strategy, ADFD identifies failure and failure-domains in one and two-dimensional numerical programs and present them in a graphical report on X, Y chart. The third and final strategy, ADFD+ is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains and its presentation in the graphical form. The ADFD+ output is compared with the Daikon's output to analyse their behaviour in response to known failure domains. It also give suggestions towards improving the Daikon algorithm with respect to failure-domains.
+
+
 
 
