@@ -9,7 +9,7 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Patterns of failure causing inputs\nobreakspace {}\cite {chan1996proportional}}}{25}{figure.2.5}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Mirror Adaptive Random Testing\nobreakspace {}\cite {chen2004mirror}}}{26}{figure.2.6}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Input domain with exclusion zone around the selected test case}}{28}{figure.2.7}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of robustness testing of Java program with JCrasher\nobreakspace {}\cite {Pacheco2007b}}}{31}{figure.2.8}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Illustration of robustness testing of Java program with JCrasher\nobreakspace {}\cite {csallner2004jcrasher}}}{31}{figure.2.8}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Main component of Eclat contributing to generate test input\nobreakspace {}\cite {pacheco2005eclat}}}{33}{figure.2.9}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Architecture of Autotest\nobreakspace {}\cite {pacheco2007randoop}}}{35}{figure.2.10}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Architecture of TestEra \nobreakspace {}\cite {marinov2001testera}}}{37}{figure.2.11}
@@ -22,7 +22,7 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces A sample of YETI bug report}}{45}{figure.3.6}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces GUI of YETI}}{46}{figure.3.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Failure patterns across input domain\nobreakspace {}\cite {Chen2008}}}{54}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Failure patterns across input domain\nobreakspace {}\cite {chan1996proportional}}}{54}{figure.4.1}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Exploration of failures by DSS in block and strip pattern}}{54}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Working mechanism of DSSR Strategy}}{55}{figure.4.3}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Class Hierarchy of DSSR in YETI}}{59}{figure.4.4}
@@ -45,8 +45,8 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{89}{figure.6.1}
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Workflow of ADFD+}}{90}{figure.6.2}
 \contentsline {figure}{\numberline {6.3}{\ignorespaces The output of ADFD+ for the above code.}}{92}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}}{95}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}}{97}{figure.6.5}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pass and fail values plotted by ADFD+ for one-dimension programs}}{95}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Pass and fail values plotted by ADFD+ for two-dimension programs}}{97}{figure.6.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
