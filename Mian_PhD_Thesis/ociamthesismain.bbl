@@ -536,6 +536,10 @@ Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
 \newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
   International Conference on}, pages 416--425. IEEE, 2009.
 
+\bibitem{Oriol2011}
+M.~Oriol.
+\newblock York extensible testing infrastructure, 2011.
+
 \bibitem{tempero2010empirical}
 Ewan Tempero, Steve Counsell, and James Noble.
 \newblock An empirical study of overriding in open source java.
@@ -613,20 +617,17 @@ Ewan Tempero.
 \newblock In {\em Software Engineering Conference, 2008. APSEC'08. 15th
   Asia-Pacific}, pages 33--40. IEEE, 2008.
 
-\bibitem{Forrester2000}
-Justin~E. Forrester and Barton~P. Miller.
-\newblock An empirical study of the robustness of windows nt applications using
-  random testing.
-\newblock In {\em Proceedings of the 4th conference on USENIX Windows Systems
-  Symposium - Volume 4}, WSS'00, pages 6--6, Berkeley, CA, USA, 2000. USENIX
-  Association.
-
-\bibitem{Linger1993}
-Richard~C. Linger.
+\bibitem{linger1993cleanroom}
+Richard~C Linger.
 \newblock Cleanroom software engineering for zero-defect software.
 \newblock In {\em Proceedings of the 15th international conference on Software
-  Engineering}, ICSE '93, pages 2--13, Los Alamitos, CA, USA, 1993. IEEE
-  Computer Society Press.
+  Engineering}, pages 2--13. IEEE Computer Society Press, 1993.
+
+\bibitem{offutt1996semantic}
+A~Jefferson Offutt and J~Huffman Hayes.
+\newblock A semantic model of program faults.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
+  195--200. ACM, 1996.
 
 \bibitem{Chen1994}
 T.Y. Chen and Y.T. Yu.
@@ -634,27 +635,23 @@ T.Y. Chen and Y.T. Yu.
 \newblock {\em Software Engineering, IEEE Transactions on}, 20(12):977 --980,
   dec 1994.
 
-\bibitem{Mayer2005}
+\bibitem{mayer2005lattice}
 Johannes Mayer.
 \newblock Lattice-based adaptive random testing.
 \newblock In {\em Proceedings of the 20th IEEE/ACM international Conference on
   Automated software engineering}, pages 333--336. ACM, 2005.
 
-\bibitem{Gilbert2008}
-D.~Gilbert.
-\newblock {\em The JFreeChart class library version 1.0.9: Developer's guide}.
-\newblock Refinery Limited, Hertfordshire, 2008.
+\bibitem{gilbert2008jfreechart}
+D~Gilbert.
+\newblock The jfreechart class library version 1.0. 9: Developer’s guide.
+\newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
 
-\bibitem{Oriol2011}
-M.~Oriol.
-\newblock York extensible testing infrastructure, 2011.
-
-\bibitem{Podgurski2003}
-A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, Jiayang Sun, and Bin
-  Wang.
+\bibitem{podgurski2003automated}
+Andy Podgurski, David Leon, Patrick Francis, Wes Masri, Melinda Minch, Jiayang
+  Sun, and Bin Wang.
 \newblock Automated support for classifying software failure reports.
 \newblock In {\em Software Engineering, 2003. Proceedings. 25th International
-  Conference on}, pages 465 -- 475, may 2003.
+  Conference on}, pages 465--475. IEEE, 2003.
 
 \bibitem{agrawal1995fault}
 Hiraral Agrawal, Joseph~R Horgan, Saul London, and W~Eric Wong.
@@ -662,11 +659,11 @@ Hiraral Agrawal, Joseph~R Horgan, Saul London, and W~Eric Wong.
 \newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
   International Symposium on}, pages 143--151. IEEE, 1995.
 
-\bibitem{Jones2002}
-James~A. Jones, Mary~Jean Harrold, and John Stasko.
+\bibitem{jones2002visualization}
+James~A Jones, Mary~Jean Harrold, and John Stasko.
 \newblock Visualization of test information to assist fault localization.
-\newblock In {\em Proceedings of the 24th International Conference on Software
-  Engineering}, ICSE '02, pages 467--477, New York, NY, USA, 2002. ACM.
+\newblock In {\em Proceedings of the 24th international conference on Software
+  engineering}, pages 467--477. ACM, 2002.
 
 \bibitem{ernst2007daikon}
 Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos

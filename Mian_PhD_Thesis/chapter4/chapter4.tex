@@ -93,6 +93,7 @@ Table \ref{table:addvalues2} presents the values added to the list of interestin
 \caption{Neighbouring values for primitive types and String} % title of Table
 \bigskip
 \centering % used for centering table
+{\renewcommand{\arraystretch}{1.5} %<- modify value to suit your needs
 \begin{tabular}{| l | l |} % centered columns (4 columns)
 \hline\hline %inserts double horizontal lines
 {\textbf {Type}} & {\textbf {Values to be added}}\\ [0.5ex] % inserts table
@@ -114,6 +115,7 @@ Table \ref{table:addvalues2} presents the values added to the list of interestin
 \hline
 \hline %inserts single line
 \end{tabular}
+}
 \bigskip
 \label{table:addvalues2} % is used to refer this table in the text
 \end{table}
@@ -147,15 +149,15 @@ public class Math1 {
 \end{lstlisting}
 
 In the above code, one primitive variable of type \verb+int+ is used, therefore, the input domain for DSSR strategy is from \verb+-2,147,483,648 to 2,147,483,647+. The strategy further select values (\verb+0, Integer.MIN_VALUE+ \& \verb+Integer.MAX_VALUE+) as interesting values which are prioritised for selection as inputs. 
-As the test starts, three faults are quickly discovered by DSSR strategy in the following order.
+As the test starts, three failures are quickly discovered by DSSR strategy in the following order.
 
-\indent \textbf{Fault 1:} The strategy select value \verb+0+ for variable \verb+num1+  in the first test case because \verb+0+ is available in the list of interesting values and therefore its priority is higher than other values. This will cause Java to generate division by zero exception (1).
+\indent \textbf{Failure 1:} The strategy select value \verb+0+ for variable \verb+num1+  in the first test case because \verb+0+ is available in the list of interesting values and therefore its priority is higher than other values. This will cause violation of assertion (1) and Java to generate division by zero exception.
 
-\indent \textbf{Fault 2:} After discovering the first fault, the strategy adds it and its surrounding values to the list of interesting values i.e. \verb+0, 1, 2, 3 and -1, -2, -3+ in this case. In the second test case the strategy may pick \verb+-3+ as a test value which may lead to the second fault where assertion (2) fails because the square root of \verb+9+ is \verb+3+ instead of the input value -3.
+\indent \textbf{Failure 2:} After discovering the first failure, the strategy adds it and its surrounding values to the list of interesting values i.e. \verb+0, 1, 2, 3 and -1, -2, -3+ in this case. In the second test case the strategy may pick \verb+-3+ as a test value which may lead to the second failure where assertion (2) fails because the square root of \verb+9+ is \verb+3+ instead of the input value -3.
 
-\indent \textbf{Fault 3:} After a few tests the strategy may select \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of 3rd fault because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
+\indent \textbf{Failure 3:} After a few tests the strategy may select \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of 3rd failure because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value (Java language rule) to variable result1 that will lead to the violation of the next assertion (3).
 
-The above process explains that including the border, fault-finding and surrounding values to the list of interesting values in DSSR strategy leadss to the available faults quickly and in fewer tests as compared to random and random+ strategy. R and R+ takes more number of tests and time to discover the second and third faults because in these strategies the search for new unique failures starts again randomly in spite of the fact that the remaining faults lie in close proximity to the first one.
+The above process explains that including the border, failure-finding and surrounding values to the list of interesting values in DSSR strategy leads to the available failures quickly and in fewer tests as compared to random and random+ strategy. R and R+ takes more number of tests and time to discover the second and third failures because in these strategies the search for new unique failures starts again randomly in spite of the fact that the remaining failures lie in close proximity to the first one.
 
 
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
@@ -163,7 +165,7 @@ The above process explains that including the border, fault-finding and surround
 
 \section{Implementation of the DSSR strategy}\label{sec:imp}
 
-The DSSR strategy is implemented in YETI open-source automated random testing tool. YETI, coded in Java language, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, high speed (up to one million calls per minute on java code), real time logging, real time GUI support, capability to test programs with multiple strategies and auto generation of test report at the end of test session. For large-scale testing there is a cloud-enabled version of YETI, capable of executing parallel test sessions in Cloud~\cite{oriol2010yeti}. A number of hitherto faults have successfully been found by YETI in various production software~\cite{Oriol2012, oriol2012random}.
+The DSSR strategy is implemented in YETI open-source automated random testing tool. YETI, coded in Java language, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, high speed (up to one million calls per minute on java code), real time logging, real time GUI support, capability to test programs with multiple strategies and auto generation of test report at the end of test session. For large-scale testing there is a cloud-enabled version of YETI, capable of executing parallel test sessions in Cloud~\cite{oriol2010yeti}. A number of hitherto faults have successfully been found by YETI in various production software~\cite{Oriol2011, oriol2012random}.
 
 YETI can be divided into three decoupled main parts: the core infrastructure, language-specific bindings and strategies. The core infrastructure contains representation for routines, a group of types and a pool of specific type objects. The language specific bindings contain the code to make the call and process the results. The strategies define the procedure of selecting the modules (classes), the routines (methods) and generation of values for instances involved in the routines. By default, YETI uses random strategy if no particular strategy is defined during test initialisation. It also enables the user to control the probability of using null values and the percentage of newly created objects for each test session. YETI provides an interactive Graphical User Interface (GUI) in which users can see progress of the current test in real time. In addition to GUI, YETI also provides extensive logs of the test session for more in-depth analysis.
 
@@ -208,44 +210,46 @@ The approach similar to that used in previous studies when the contracts and ass
 \caption{Specifications of projects randomly selected from Qualitas Corpus}
 \bigskip
 \centering
+{\renewcommand{\arraystretch}{1.3} %<- modify value to suit your needs
 \begin{tabular}{|r|l|r|r|}
 \hline
 {\textbf {S. No}}& 	{\textbf {Project Name}}	& 	{\textbf {Version}}		&	{\textbf {Size (MB)}}\\
 \hline
 1	&	apache-ant	&	1.8.1			&	59\\
-2	&	antlr			&	3.2			&	13\\
+2	&	antlr		&	3.2				&	13\\
 3	&	aoi			&	2.8.1			&	35\\
-4	&	argouml		&	0.30.2		&	112\\
-5	&	artofillusion	&	281			&	5.4\\
+4	&	argouml		&	0.30.2			&	112\\
+5	&	artofillusion	&	281				&	5.4\\
 6	&	aspectj		&	1.6.9			&	109.6\\
-7	&	axion		&	1.0-M2		&	13.3\\
-8	&	azureus		&	1			&	99.3\\
+7	&	axion		&	1.0-M2			&	13.3\\
+8	&	azureus		&	1				&	99.3\\
 9	&	castor		&	1.3.1			&	63.2\\
 10	&	cayenne		&	3.0.1			&	4.1\\
-11	&	cobertura		&	1.9.4.1		&	26.5\\
+11	&	cobertura	&	1.9.4.1			&	26.5\\
 12	&	colt			&	1.2.0			&	40\\
 13	&	emma		&	2.0.5312		&	7.4\\
 14	&	freecs		&	1.3.20100406	&	11.4\\
-15	&	hibernate		&	3.6.0			&	733\\
+15	&	hibernate	&	3.6.0			&	733\\
 16	&	hsqldb		&	2.0.0			&	53.9\\
-17	&	itext			&	5.0.3			&	16.2\\
+17	&	itext		&	5.0.3			&	16.2\\
 18	&	jasml		&	0.10			&	7.5 \\
 19	&	jmoney		&	0.4.4			&	5.3\\
-20	&	jruby			&	1.5.2			&	140.7\\
+20	&	jruby		&	1.5.2			&	140.7\\
 21	&	jsXe			&	04\_beta		&	19.9\\
 22	&	quartz		&	1.8.3			&	20.4\\
-23	&	sandmark		&	3.4			&	18.8\\
+23	&	sandmark	&	3.4				&	18.8\\
 24	&	squirrel-sql	&	3.1.2			&	61.5\\
-25	&	tapestry		&	5.1.0.5		&	69.2\\
+25	&	tapestry		&	5.1.0.5			&	69.2\\
 26	&	tomcat		&	7.0.2			&	24.1\\
-27	&	trove			&	2.1.0			&	18.2\\
+27	&	trove		&	2.1.0			&	18.2\\
 28	&	velocity		&	1.6.4			&	27.1\\
 29	&	weka		&	3.7.2			&	107\\
 30	&	xalan		&	2.7.1			&	85.4\\
-31	&	xerces		&	2.10.0		&	43.4\\
+31	&	xerces		&	2.10.0			&	43.4\\
 32	&	xmojo		&	5.0.0			&	15\\
 \hline
 \end{tabular}
+}
 \bigskip
 \label{table:projects}
 \end{table}
@@ -278,6 +282,7 @@ The literature review revealed that the F-measure is used where testing stops af
   \scriptsize
  \caption{Comparative performance of R, R+ and DSSR strategies}
 	%\begin{minipage}[h]{\pagewidth}\centering
+	\bigskip
 	\hspace{-2cm}
 	\noindent\makebox[\textwidth]{
  	\begin{tabularx}{1 \textwidth}{r l r r r r r r r r r r r r r}
@@ -286,6 +291,7 @@ The literature review revealed that the F-measure is used where testing stops af
       \multirow{2}{*}{{\textbf {S. No}}}		& \multirow{2}{*}{{\textbf {Class Name}}}		& \multirow{2}{*}{{\textbf {LOC}}}	& \multicolumn{4}{c}{{\textbf {R}}}							&	\multicolumn{4}{c}{{\textbf {R+}}}							&	\multicolumn{4}{c}{{\textbf {DSSR}}}	\\
       %\cline{3-14} 
       						&						&			& Mean 	& Max	& Min 	& 	R-STD				& Mean 	& Max 	& Min 	&	 R-STD 			& Mean 		& Max 		& Min		& R-STD \\
+      						
 
 
 1						& ActionTranslator			&709		& 96		&	96	&	96	& 	0					& 96		& 96 		& 96		& 		0			& 96			& 96			& 96			&	0\\     
@@ -379,8 +385,9 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \begin{table*}[htp]
 \small
 \caption{Results of T-test applied on the experimental data of 29 classes}
-\smallskip
+\bigskip
 \centering
+{\renewcommand{\arraystretch}{1.5} 
 \begin{tabular}{rlrrrl}
 \hline
  \multirow{2}{*} {{\textbf {S. No}}}	& \multirow{2}{*}{{\textbf {Class Name}}}	&  \multicolumn{3}{c}{{\textbf {T-test Results}}} & \multirow{2}{*}{{\textbf {Interpretation}}} \\
@@ -389,71 +396,71 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \hline
 1		&	AjTypeImpl		&	1 				& 1 				& 1				& Difference not significant		\\	
 2		&	Apriori			&	\textbf{0.03}	 	& 0.49			& 0.16			& Difference not significant		\\	
-3		&	CheckAssociator	&	\textbf{0.04}	 	& \textbf{0.05}	& 0.44			& DSSR > R \& R+ 				\\	
+3		&	CheckAssociator	&	\textbf{0.04}	 	& \textbf{0.05}	& 0.44			& DSSR \textgreater~R \& R+ 				\\	
 4		&	Debug			&	\textbf{0.03}	 	& 0.14			& 0.56			& Difference not significant		\\	
-5		&	DirectoryScanner	&	\textbf{0.04}	 	& \textbf{0.01}	& 0.43			& DSSR > R \& R+				\\
+5		&	DirectoryScanner	&	\textbf{0.04}	 	& \textbf{0.01}	& 0.43			& DSSR \textgreater~R \& R+				\\
 6		&	DomParser		&	\textbf{0.05}	 	& 0.23			& 0.13			& Difference not significant		\\
 7		&	EntityDecoder	&	\textbf{0.04}	 	& 0.28			& 0.3			& Difference not significant		\\			
 8		&	Font			&	0.18	 		& 0.18			& 1				& Difference not significant		\\
 9		&	Group			&	0.33	 		& \textbf{0.03}	& \textbf{0.04}	& DSSR = R \textgreater R+		\\
-10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61			& DSSR > R \& R+ 				\\		
+10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61			& DSSR \textgreater~R \& R+ 				\\		
 11		&	InstrumentTask	&	0.16			& 0.33			& 0.57			& Difference not significant		\\
 12		&	JavaWrapper		&	\textbf{0.001}	& 0.57			& 0.004			& DSSR = R+ \textgreater R 		\\
 13		& 	JmxUtilities		&	0.13			& 0.71			& 0.08			& Difference not significant		\\
 14		&	List				& 	\textbf{0.01}		&0.25			&\textbf{0}		& DSSR = R+ \textgreater R 		\\
 15		&	NodeSequence	&	0.97			&\textbf{0.04}	&\textbf{0.06}	& DSSR = R \textgreater R+ 		\\
 16		&	NodeSet			&	\textbf{0.03}		&0.42			&0.26			& Difference not significant		\\
-17		&	Project			&	\textbf{0.001}	&0.57			&\textbf{0.004}	& DSSR > R \& R+ 				\\		
+17		&	Project			&	\textbf{0.001}	&0.57			&\textbf{0.004}	& DSSR \textgreater~R \& R+ 				\\		
 18		&	Repository		&	\textbf{0}		&1				&\textbf{0}		& DSSR = R+ \textgreater R 		\\
-19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR > R \& R+  				\\
-20		&	Scene			&	\textbf{0}		&\textbf{0}		& 1				& DSSR > R \& R+  				\\
+19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR \textgreater~R \& R+  				\\
+20		&	Scene			&	\textbf{0}		&\textbf{0}		& 1				& DSSR \textgreater~R \& R+  				\\
 21		&	Server			&	\textbf{0.03}		& 0.88			&\textbf{0.03} 	& DSSR = R+ \textgreater R 		\\
 22		&	Sorter			& 	\textbf{0}		& 0.33			&\textbf{0}		& DSSR = R+ \textgreater R 		\\
 23		&	Statistics		&	\textbf{0}		& 0.43			&\textbf{0}		& DSSR = R+ \textgreater R 		\\
 24		&	Stopwords		&	\textbf{0}		& 0.23			&\textbf{0}		& DSSR = R+ \textgreater R 		\\
 25		&	StringHelper		&	\textbf{0.03}		& 0.44			&0.44			& DSSR = R+ \textgreater R 		\\
-26		& 	Trie				&	0.1				& 0.33			&0.47			& DSSR > R \& R+  				\\
+26		& 	Trie				&	0.1				& 0.33			&0.47			& DSSR \textgreater~R \& R+  				\\
 27		&	WebMacro		&	0.33			& 1				&0.16			& Difference not significant		\\
 28		&	XMLEntityManager&	0.33			& 0.33			&0.16			& Difference not significant		\\
 29 		&	XString			&	0.14			&\textbf{0.03}	&0.86			& Difference not significant		\\
 
 
 \end{tabular}
+}
 \bigskip
 \label{table:ttest}
 \end{table*}
 
 \subsection{Are there classes for which any of the three strategies provide better results?}
 
-
 T-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 7 classes from both R and R+ strategies, in 8 classes from R strategy and in 2 classes from R+ strategy. In no class R and R+ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R+. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R+ strategy. 
 
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
-\begin{comment}
-\begin{table}[h]
-\caption{Results of the 60 classes are divided into 11 categories}
-\centering
-\begin{tabular}{|r|l|r|}
-\hline
-{\textbf {S. No}}	& 	{\textbf {Category}}	& 	{\textbf {Result}}\\
-\hline
-1				&	DSSR > R			&	12 \\	
-2				&	DSSR > R+			&	10 \\	
-3				&	DSSR = R			&	5 \\	
-4				&	DSSR = R+			&	7 \\	
-5				&	R+ > R 				&	10 \\	
-6				&	R+ < R				&	5 \\	
-7				&	R+ = R				&	2 \\	
-8				&	R > R+				&	4 \\
-9				&	DSSR < R			&	0 \\	
-10				&	DSSR < R+			&	0 \\
-11				&	DSSR = R = R+		&	43 \\			
-\hline
-\end{tabular}
-\bigskip
-\label{table:categories}
-\end{table}
+
+%\begin{table}[h]
+%\caption{Results of the 60 classes are divided into 11 categories}
+%\centering
+%\begin{tabular}{|r|l|r|}
+%\hline
+%{\textbf {S. No}}	& 	{\textbf {Category}}	& 	{\textbf {Result}}\\
+%\hline
+%1				&	DSSR > R			&	12 \\	
+%2				&	DSSR > R+			&	10 \\	
+%3				&	DSSR = R			&	5 \\	
+%4				&	DSSR = R+			&	7 \\	
+%5				&	R+ > R 				&	10 \\	
+%6				&	R+ < R				&	5 \\	
+%7				&	R+ = R				&	2 \\	
+%8				&	R > R+				&	4 \\
+%9				&	DSSR < R			&	0 \\	
+%10				&	DSSR < R+			&	0 \\
+%11				&	DSSR = R = R+		&	43 \\			
+%\hline
+%\end{tabular}
+%\bigskip
+%\label{table:categories}
+%\end{table}
 
 % pie chart is removed because the length of the paper is exceeding 10 pages and also it don't make much sense i believe.
 %\begin{figure}[h]
@@ -464,18 +471,16 @@ T-test applied to data given in Table~\ref{table:ttest} indicated significantly 
 %\end{figure}
 
 
-The first category contain 12 classes where DSSR strategy performs better than R. 
-The second category contain 10 classes where DSSR strategy performs better than R+. 
-The third category contain 5 classes where DSSR strategy and R performs equally well.
-The fourth category contain 7 classes where DSSR and R+ performs equally well. 
-The fifth category contain 10 classes where R+ performs better than R.
-The sixth category contain 5 classes where R performs better than R+.
-The seventh category contain 2 classes where R and R+ performs equally well.
-The eighth category contain 4 classes where R performs better than R+.
-Category 9 and 10 shows that neither R nor R+ performed better than DSSR strategy.
-The last category shows each strategy performing equally well for 43 classes. Expressing in percentage, 72\% classes do not show different behaviours whereas in 28\% of classes, the DSSR strategy performs better than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
-
-\end{comment}
+%The first category contain 12 classes where DSSR strategy performs better than R. 
+%The second category contain 10 classes where DSSR strategy performs better than R+. 
+%The third category contain 5 classes where DSSR strategy and R performs equally well.
+%The fourth category contain 7 classes where DSSR and R+ performs equally well. 
+%The fifth category contain 10 classes where R+ performs better than R.
+%The sixth category contain 5 classes where R performs better than R+.
+%The seventh category contain 2 classes where R and R+ performs equally well.
+%The eighth category contain 4 classes where R performs better than R+.
+%Category 9 and 10 shows that neither R nor R+ performed better than DSSR strategy.
+%The last category shows each strategy performing equally well for 43 classes. Expressing in percentage, 72\% classes do not show different behaviours whereas in 28\% of classes, the DSSR strategy performs better than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
 
 \subsection{Can we pick the best default strategy amongst R, R+ \& DSSR?}
 
@@ -503,7 +508,9 @@ During the experiments, It was noticed that quick identification of first failur
 
 \begin{lstlisting}
 public void test(float value){
- if(value == 34.4445)   10/0;
+ if(value == 34.4445)   {
+ 	10/0;
+ }
 }
 \end{lstlisting}
 
@@ -519,9 +526,9 @@ In this case, we could add constant literals from the SUT to the list of interes
 
 \section{Related Work}\label{sec:rw}
 
-Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and Java libraries~\cite{pacheco2005eclat,claessen2011quickcheck, csallner2004jcrasher}. Its simplicity, ease of implementation and efficiency in generating test cases make it the best choice for test automation~\cite{hamlet1994random}. Some of the well known automated tools based on random strategy includes Jartege~\cite{oriat2005jartege}, Eclat~\cite{pacheco2005eclat}, JCrasher~\cite{csallner2004jcrasher}, AutoTest~\cite{ciupa2007experimental, ciupa2008artoo} and YETI~\cite{oriol2010yeti, oriol2012random}.
+Random testing is a popular technique with simple algorithm but proven to find subtle faults in complex programs and Java libraries~\cite{csallner2004jcrasher, pacheco2005eclat,claessen2011quickcheck}. Its simplicity, ease of implementation and efficiency in generating test cases make it the best choice for test automation~\cite{hamlet1994random}. Some of the well known automated tools based on random strategy includes JCrasher~\cite{csallner2004jcrasher}, Eclat~\cite{pacheco2005eclat}, AutoTest~\cite{ciupa2007experimental, ciupa2008artoo}, Jartege~\cite{oriat2005jartege} and YETI~\cite{oriol2010yeti, oriol2012random}.
 
-In pursuit of better test results and lower overhead, many variations of random strategy have been proposed~\cite{chen2004mirror, chan2006restricted, chen2007quasi, chen2010adaptive, chen2004adaptive}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. ART through dynamic partitioning and MART are the two strategies developed to improve the performance of ART by reducing the overhead. This was achieved mainly by the even spread of test input to increase the chance of exploring the fault patterns present in the input domain.
+In pursuit of better test results and lower overhead, many variations of random strategy have been proposed~\cite{chen2004mirror, chen2007quasi, chen2010adaptive, chan2006restricted, chen2004adaptive}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. ART through dynamic partitioning and MART are the two strategies developed to improve the performance of ART by reducing the overhead. This was achieved mainly by the even spread of test input to increase the chance of exploring the fault patterns present in the input domain.
 
 A more recent research study~\cite{yoo2012test} stresses on the effectiveness of data regeneration in close vicinity of the existing test data. Their findings showed up to two orders of magnitude more efficient test data generation than the existing techniques. Two major limitations of their study are the requirement of existing test cases to regenerate new test cases, and increased overhead due to ``meta heuristics search'' based on hill climbing algorithm to regenerate new data. In DSSR no pre-existing test cases are required because it utilises the border values from R+ and regenerate the data very cheaply in a dynamic fashion different for each class under test without any prior test data and with comparatively lower overhead. 
   
@@ -530,9 +537,9 @@ The R+ strategy is an extension of the random strategy in which interesting valu
 %It is interesting that numerous efforts have been made to discover the fault patterns~\cite{Chen2010, Chen2005, Chan2002, Chen2004a, Chen2003}, etc. but in our knowledge, none has been published on covering/sweeping all the faults lying in a specific pattern once it has been discovered.
 
 
-A common practice to evaluate performance of an extended strategy is to compare the results obtained by applying the new and existing strategy to identical programs~\cite{duran1984evaluation, gutjahr1999partition, hamlet1990partition}. Arcuri et al.~\cite{arcuri2012random}, stress on the use of random testing as a baseline for comparison with other test strategies. We followed the procedure and evaluated DSSR strategy against R and R+ strategies under identical conditions.
+A common practice to evaluate performance of an extended strategy is to compare the results obtained by applying the new and existing strategy to identical programs~\cite{hamlet1990partition, duran1984evaluation, gutjahr1999partition}. Arcuri et al.~\cite{arcuri2012random}, stress on the use of random testing as a baseline for comparison with other test strategies. We followed the procedure and evaluated DSSR strategy against R and R+ strategies under identical conditions.
 
-In our experiments we selected projects from the Qualitas Corpus~\cite{tempero2010qualitas} which is a collection of open source java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of java applications~\cite{oriol2012random, tempero2008empirical,  tempero2010empirical}.
+In our experiments we selected projects from the Qualitas Corpus~\cite{tempero2010qualitas} which is a collection of open source java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of java applications~\cite{oriol2012random, tempero2010empirical, tempero2008empirical}.
 
 
 %%%%%%%%%%%%%%%%%    CONCLUSIONS   %%%%%%%%%%%%%%%%%%%%
