@@ -14,7 +14,7 @@ In this chapter we assume that failure domains are contiguous for a significant 
 
 
 We implemented the DSSR strategy in the random testing tool YETI\footnote{\url{http://www.yetitest.org}}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus\footnote{\url{http://www.qualitascorpus.com}} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies perform equally, for remaining 47\% classes, DSSR strategy performs up to 33\% better than R and up to 17\% better than R+ strategy.
-We also validated the approach by comparing the significance of these results using T-test and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no statistically no significant difference. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
+We also validated the approach by comparing the significance of these results using T-test and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no significant difference statistically. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
 
 %The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion3} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
 
@@ -211,10 +211,9 @@ The approach similar to that used in previous studies when the contracts and ass
 \bigskip
 \centering
 {\renewcommand{\arraystretch}{1.3} %<- modify value to suit your needs
-\begin{tabular}{|r|l|r|r|}
-\hline
+\begin{tabular}{|rlrr}
+
 {\textbf {S. No}}& 	{\textbf {Project Name}}	& 	{\textbf {Version}}		&	{\textbf {Size (MB)}}\\
-\hline
 1	&	apache-ant	&	1.8.1			&	59\\
 2	&	antlr		&	3.2				&	13\\
 3	&	aoi			&	2.8.1			&	35\\

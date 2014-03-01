@@ -11,7 +11,7 @@ The very famous quote of Paul, ``to err is human, but to really foul things up y
 
 In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing, when testers find fault in the given software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. \\
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing, when testers find fault in the given software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{table:softwareTestingParts}\\
 
 
 \begin{table}[ht]
@@ -44,27 +44,7 @@ System					& Robustness		& ~~~~Control Flow Analysis			& ~~~~Walkthroughs		\\
 \label{table:softwareTestingParts} % is used to refer this table in the text
 \end{table}
 
-\section{Definitions}
-This section presents important definitions:
 
-\subsection{Test Plan}
-Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
-
-\subsection{Input Domain} 
-The input domain comprises of all possible inputs for a software, including all the global variables, method arguments and the externally assigned variables. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on, the domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
-
-\subsection{Test Case}
-%\begin{wrapfigure}{r}{0.35\textwidth}
-%  \vspace{-20pt}
-%  \begin{center}
-%    \includegraphics[width=0.30\textwidth]{chapter2/testCase.png}
-%  \end{center}
-%  \vspace{-20pt}
-%  \caption{Test case}
-%  \label{fig:testCase}
-%  \vspace{-10pt}
-%\end{wrapfigure}
-A test case is an artifact which delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. After executing the test case, if the output obtained comply with the expected output, the test case is declared pass which means that the functionality is working correctly, otherwise the test case is declared fail, which represents identification of fault. A series of test cases, also known as test suite, are usually required to be executed for establishing the desired level of quality.
 
 \section{Software Testing Levels}
 Unit testing, Integration testing and System testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component is working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
@@ -337,14 +317,36 @@ Generating test data by random generator is quite economical and requires less i
 \section{Various versions of random testing}
 Researchers have tried various approaches to bring about improved versions of random testing with better performance. The prominent versions of random testing are as follows:
 
-\subsection{Adaptive Random Testing}
-\label{sec:artpatterns_2}
-Adaptive random testing (ART), proposed by Chen et al.~\cite{chen2005adaptive} is based on the previous work of Chan et al.~\cite{chan1996proportional} regarding the existence of failure patterns across the input domain. Chan et al. observed that failure inducing inputs formed certain geometrical patterns in the whole input domain which were divided into point, block and strip patterns described below.
+\section{Definitions}
+This section presents important definitions:
+
+\subsection{Test Plan}
+Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
+
+\subsection{Test Case}
+%\begin{wrapfigure}{r}{0.35\textwidth}
+%  \vspace{-20pt}
+%  \begin{center}
+%    \includegraphics[width=0.30\textwidth]{chapter2/testCase.png}
+%  \end{center}
+%  \vspace{-20pt}
+%  \caption{Test case}
+%  \label{fig:testCase}
+%  \vspace{-10pt}
+%\end{wrapfigure}
+A test case is an artifact which delineates the input, action and expected output corresponding to that input \cite{ahmed2010software}. After executing the test case, if the output obtained comply with the expected output, the test case is declared pass which means that the functionality is working correctly, otherwise the test case is declared fail, which represents identification of fault. A series of test cases, also known as test suite, are usually required to be executed for establishing the desired level of quality.
+
+\subsection{Input Domain} 
+The input domain comprises of all possible inputs for a software, including all the global variables, method arguments and the externally assigned variables. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on, the domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
+
+\subsection{Genuine and Failure-domain}
+\label{sec:genuineandfailuredomain}
+Chan et al. observed that failure inducing inputs are contagious and form certain geometrical shapes in the whole input domain which were divided into point, block and strip failure-domains as described below.
 
 \begin{enumerate}
-\item {\bf Point pattern:} In the point pattern, inputs inducing failures are scattered across the input domain in the form of stand-alone points. Example of point pattern is the division by zero in the statement: $total = num1/num2;$ where $num1$, $num2$ and $total$ are variables of type integer.
-\item {\bf Block pattern:} In the block pattern, inputs inducing failures lie in close vicinity to form a block in the input domain. Example of block pattern is failure caused by the statement: $if ( (num \textgreater 10) \&\& (num \textless 20) )$. Here 11 to 19 are a block of faults.
-\item {\bf Strip pattern:} In the strip pattern, inputs inducing failures form a strip across the input domain. Example of strip pattern is failure caused by the statement: $num1 + num2 = 20$. Here multiple values of $num1$ and $num2$ can lead to the fault value 20. 
+\item {\bf Point:} In the point failure-domain, inputs inducing failures are scattered across the input domain in the form of stand-alone points. Example of point failure-domain is the failure caused by the statement: $total = num1/num2;$ where $num1$, $num2$ and $total$ are variables of type integer.
+\item {\bf Block:} In the block failure-domain, inputs inducing failures lie in close vicinity to form a block in the input domain. Example of block failure-domain is failure caused by the statement: $if ( (num \textgreater 10) \&\& (num \textless 20) )$. Here 11 to 19 are a block of failures.
+\item {\bf Strip:} In the strip failure-domain, inputs inducing failures form a strip across the input domain. Example of strip failure-domain is failure caused by the statement: $num1 + num2 = 20$. Here multiple values of $num1$ and $num2$ can lead to the fault value 20. 
 \end{enumerate}
 
 \begin{figure}[h]
@@ -354,7 +356,12 @@ Adaptive random testing (ART), proposed by Chen et al.~\cite{chen2005adaptive} i
 	\label{fig:patterns2}
 \end{figure}
 
-In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip, inside the respective boxes indicates the faults in the form of point, block and strip patterns.
+In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip, inside the respective boxes indicates the failures in the form of point, block and strip failure-domains.
+
+
+\subsection{Adaptive Random Testing}
+\label{sec:artpatterns_2}
+Adaptive random testing (ART), proposed by Chen et al.~\cite{chen2005adaptive} is based on the previous work of Chan et al.~\cite{chan1996proportional} regarding the existence of failure domains across the input domain (Section~\ref{sec:genuineandfailuredomain} 
 
 Chen et al.~\cite{chen2005adaptive} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more fault-targeted test inputs, they proposed Adaptive Random Testing (ART) as a modified version of random testing where test values are selected at random as usual but are evenly spread across the input domain by using two sets. The executed set comprises the test cases and the candidate set includes the test cases to be executed by the system. Initially both the sets are empty. The first test case is selected at random from the candidate set and stored in executed set after execution. The second test case is then selected from the candidate set which is far away from the last executed test case. In this way the whole input domain is tested with greater chances of generating test input from the existing fault patterns.
 
