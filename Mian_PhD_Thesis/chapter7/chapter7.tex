@@ -1,15 +1,19 @@
-\chapter{Conclusion}
-\label{chap:conclusion}
+\externaldocument{chapter7}
+\chapter{Conclusions}
+\label{chap:conclusions}
 
-\section{Introduction}\label{sec:intro7}
+%\section{Introduction}\label{sec:intro7}
 
 
+The thesis explored various aspects of failure-domains across the input domain with respect to automated random testing. It investigated and established three new techniques that could effectively identify and plot the failure-domains. The thesis mainly focused on: First, to minimize the number of test cases required to discover a failure-domain by using the neighbouring values surrounding the randomly generated value which lead to the discovery of first failure. Second, to represent the legitimate and failure-domain in a graphical form by collecting and evaluating the results of the tests execution. Section ~\ref{ResearchGoals_1} and Section ~\ref{contributions_1} presented the goals and contributions of the research.
 
-The thesis has introduced and assessed the efficiency's of three new automated strategies to perform random testing, namely Dirt Spot Sweeping Random (Chapter~\ref{chap:chapter4}), Automated Discovery of Failure Domain (Chapter~\ref{chap:chapter5} and Automated Discovery of Failure Domain+ (Chapter~\ref{chap:chapter6}). 
+ % which are briefly recapped here.
 
-Section ~\ref{sec:chapter6} (page x) and Section ~\ref{sec:chapter6} (page x) presented the goals and contributions of the research, which are briefly recapped here.
+Failures reside in contagious locations forming point, block and strip failure-domains. The existing random test strategies tries to find individual failures but do not focus on its domain. Providing the knowledge of failure along with its domain benefits debuggers to remove the failure from root quickly and effectively. The test reports could be further simplified when the tested values are shown on a graphical form separating pass and fail values. 
 
-The first strategy DSSR, tries to finds a failure and search for more failures around the discovered one by taking into consideration its boundary values. The second strategy, ADFD identifies failure and failure-domains in one and two-dimensional numerical programs and present them in a graphical report on X, Y chart. The third and final strategy, ADFD+ is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains and its presentation in the graphical form. The ADFD+ output is compared with the Daikon's output to analyse their behaviour in response to known failure domains. It also give suggestions towards improving the Daikon algorithm with respect to failure-domains.
+The thesis describe three techniques, Dirt Spot Sweeping Random (Chapter~\ref{chap:DSSR}), Automated Discovery of Failure Domain (Chapter~\ref{chap:ADFD}) and Automated Discovery of Failure Domain+ (Chapter~\ref{chap:ADFD+}) to discover, analyse and present the failure-domains in a graphical form. All the techniques are implemented in YETI which is available for download from \url{https://code.google.com/p/yeti-test/}.
+
+The first technique DSSR, tries to finds a failure and search for more failures around the discovered one by taking into consideration its boundary values. The second technique, ADFD identifies failure and failure-domains in one and two-dimensional numerical programs and present them in a graphical report on X, Y chart. The third and final technique, ADFD+ is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains and its presentation in the graphical form. The ADFD+ output is compared with the Daikon's output to analyse their behaviour in response to known failure domains. It also give suggestions towards improving the Daikon algorithm with respect to failure-domains.
 
 
 
