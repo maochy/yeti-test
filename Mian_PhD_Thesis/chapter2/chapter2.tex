@@ -1,17 +1,17 @@
-\chapter{Literature Review: Software Testing}
+\chapter{Literature Review: Automated Random Software Testing }
 \label{chap:softwareTesting}
-The very famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million was due to a small error in formula coded incorrectly by programmer. The Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15.5cm, height=4cm]{chapter2/softwareTesting.png}
+	\includegraphics[width=15.2cm, height=4.6cm]{chapter2/softwareTesting.png}
 	\caption{The process of software testing}
 	\label{fig:softwareTesting}
 \end{figure}
 
 In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing, when testers find fault in the given software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{table:softwareTestingParts}\\
+The testing process, being an integral part of Software Development Life Cycle (SDLC), is started from requirement phase and continues throughout the life of the software. In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Table~\ref{table:softwareTestingParts}\\
 
 
 \begin{table}[ht]
@@ -47,10 +47,10 @@ System					& Robustness		& ~~~~Control Flow Analysis			& ~~~~Walkthroughs		\\
 
 
 \section{Software Testing Levels}
-Unit testing, Integration testing and System testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component is working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
+Unit testing, Integration testing and System testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component are working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
 
 \section{Software Testing Purpose}
-The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. In exhausting testing SUT is checked against all possible combinations of input data and for assessment the results obtained are compared with the results expected. Exhaustive testing is not always possible in most scenarios because of limited resources and infinite number of input values that software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
+The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. However, exhaustive testing is not always possible because of limited resources and infinite number of input values that a software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
  %As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
 %A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
 
@@ -111,11 +111,11 @@ In black-box or functional testing, the testers do not need to know about intern
 % \end{wrapfigure}
 \subsubsection{Use-case based testing}
 % check if it is use case-based testing or use case testing.
-It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
+It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case~\cite{armour2000advanced}. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
 
 % steps taken from presentation of Raional User Conference 2003. Check it for viva.
 \subsubsection{Partition Testing}
-It is a testing technique in which the input domain of a given SUT is divided into sub-domains for testing each sub-domain individually. The division is based on software specifications, structure of the code and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly dependant on the quality of sub-domain~\cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called Proportional sampling strategy~\cite{chan1996proportional} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided evidence for better performance of Proportional partition testing.
+It is a testing technique in which the input domain of a given SUT is divided into equal sub-domains for testing each sub-domain individually. The division is based on software specifications, structure of the code and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly dependant on the quality of sub-domain~\cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called Proportional sampling strategy~\cite{chan1996proportional} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided evidence for better performance of Proportional partition testing.
 
 
 \subsubsection{Boundary Value Analysis}
@@ -307,15 +307,11 @@ Random testing is a dynamic black-box testing technique in which the software is
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm, height=2.5cm ]{chapter3/randomTesting.jpg}
+	\includegraphics[width=10cm, height=2.5cm ]{chapter2/randomTesting.jpg}
 	\caption{Random Testing}
 \end{figure}
 
 Generating test data by random generator is quite economical and requires less intellectual and computational efforts~\cite{ciupa2008artoo}. Moreover, no human intervention is involved in data generation which ensures an unbiased testing process. However, generating test cases with out using any background information makes random testing susceptible to criticism. Random testing is criticized for generating many of the test cases that falls at the same state of software. It is also stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{myers2011art}. However, Ciupa et al. stated~\cite{ciupa2007experimental}, that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers~\cite{ciupa2008finding, hamlet1994random,  leitner2007efficient, duran1981report} confirmed that random testing is as effective as any other testing technique. It is reported~\cite{duran1981report} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It is pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective~\cite{hamlet1990partition}. A comparative study conducted by Ntafos~\cite{ntafos1998random} concluded that random testing is more effective as compared to proportional partition testing. A prominent work to mention is that of Miller et al.~\cite{miller1990empirical}, who generated and used random ASCII character streams to test Unix utilities for abnormal termination or non-terminating behaviour. Subsequently the same technique was extended to discover errors in software running on X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Other famous studies using random testing includes low-level system calls \cite{kropp1998automated}, and file systems used in missions at NASA \cite{groce2007randomized}.
-
-
-\section{Various versions of random testing}
-Researchers have tried various approaches to bring about improved versions of random testing with better performance. The prominent versions of random testing are as follows:
 
 \section{Definitions}
 This section presents important definitions:
@@ -351,13 +347,16 @@ Chan et al. observed that failure inducing inputs are contagious and form certai
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm, height=5.7cm ]{chapter3/pointblockstrip.jpg}
+	\includegraphics[width=13cm, height=5.7cm ]{chapter2/pointblockstrip.jpg}
 	\caption{Patterns of failure causing inputs~\cite{chan1996proportional}}
 	\label{fig:patterns2}
 \end{figure}
 
 In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip, inside the respective boxes indicates the failures in the form of point, block and strip failure-domains.
 
+
+\section{Various versions of random testing}
+Researchers have tried various approaches to bring about improved versions of random testing with better performance. The prominent versions of random testing are as follows:
 
 \subsection{Adaptive Random Testing}
 \label{sec:artpatterns_2}
@@ -373,7 +372,7 @@ Mirror Adaptive Random Testing (MART)~\cite{chen2004mirror} is an improvement on
 
 \begin{figure}[h]
 \begin{center}
-	\includegraphics[width=13.5cm, height=6.5cm ]{chapter3/mart2.pdf}
+	\includegraphics[width=13.5cm, height=6.5cm ]{chapter2/mart2.pdf}
 	\caption{Mirror Adaptive Random Testing~\cite{chen2004mirror}}
 \label{fig:mirrorART}
 \end{center}  
@@ -389,7 +388,7 @@ Restricted Random Testing~\cite{chan2003normalized} is another approach to overc
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width= 8cm, height = 6.5cm]{chapter3/RRT.pdf}
+	\includegraphics[width= 8cm, height = 6.5cm]{chapter2/RRT.pdf}
 	\caption{Input domain with exclusion zone around the selected test case}
 \end{figure}
 
@@ -468,7 +467,7 @@ JCrasher is an automatic robustness testing tool developed by Csallner and Smara
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=8cm]{chapter3/JCrasher.png}
+	\includegraphics[width=15cm, height=8cm]{chapter2/JCrasher.png}
 	\caption{Illustration of robustness testing of Java program with JCrasher~\cite{csallner2004jcrasher}}
 	\label{fig:JCrasher}
 \end{figure}
@@ -495,7 +494,7 @@ Eclat~\cite{pacheco2005eclat} is an automated testing tool which generates and c
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=10.5cm]{chapter3/eclat_working.png}
+	\includegraphics[width=15cm, height=10.5cm]{chapter2/eclat_working.png}
 	\caption{Main component of Eclat contributing to generate test input~\cite{pacheco2005eclat}}
 	\label{fig:eclat}
 \end{figure}
@@ -513,7 +512,7 @@ The tool takes a software and a set of test cases for which the software runs pr
 
 
 \subsection{Randoop}
-Random tester for Object Oriented Programs (RANDOOP) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. RANDOOP is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, contracts, filters and time limit and gives output either as a suite of JUnit or NUnit for Java and .Net program respectively. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). RANDOOP builds the sequence incrementally by randomly selecting a public method from the class under test and arguments for these methods are selected from the predefined pool in case of primitive types and a sequence or null value in case of reference type. RANDOOP maintains two sets called ErrorSeqs and NonErrorSeqs to record the feedback. It extends ErrorSeqs set in case of contract or filter violation and NonErrorSeqs set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, ErrorSeqs and NonErrorSeqs are produced as JUnit/NUnit test suite. In terms of coverage and number of faults discovered, RANDOOP implementing FDRT was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that RANDOOP achieved more coverage than JCrasher in branch coverage and faults detection. It can achieve on par coverage with systematic approaches like JavaPathFinder. 
+Random tester for object oriented programs (Randoop) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, contracts, filters and time limit and gives output either as a suite of JUnit or NUnit for Java and .Net program respectively. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test and arguments for these methods are selected from the predefined pool in case of primitive types and a sequence or null value in case of reference type. Randoop maintains two sets called $ErrorSeqs$ and $NonErrorSeqs$ to record the feedback. It extends $ErrorSeqs$ set in case of contract or filter violation and $NonErrorSeqs$ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, $ErrorSeqs$ and $NonErrorSeqs$ are produced as JUnit/NUnit test suite. In terms of coverage and number of faults discovered, Randoop implementing FDRT was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that Randoop achieved more coverage than JCrasher in branch coverage and faults detection. It can achieve on par coverage with systematic approaches like JavaPathFinder. 
 
 \subsection{QuickCheck}
 QuickCheck~\cite{claessen2011quickcheck} is a lightweight random testing tool used for testing of Haskell programs~\cite{hudak2007history}. Haskell is a functional programming language where programs are evaluated by using expressions rather than statements as in imperative programming. In Haskell most of the functions are pure except the IO functions, thus main focus of the tool is on testing pure functions. QuickCheck is designed to have a simple domain-specific language of testable specifications embedded in Haskell. This language is used to define expected properties of the functions under test %- for example, reversing a list with single element must result in the same list.\\ %(author check the definition of pure functions)\\
@@ -531,10 +530,10 @@ The QuickCheck takes function to be tested and properties of the program defined
 
 \subsection{Autotest}
 The Autotest, based on formal automated testing is used to test Eiffel language programs~\cite{pacheco2007randoop}. The Eiffel language uses the concept of contracts which is effectively utilized by Autotest. For example, the auto generated input is filtered using pre-conditions and unwanted test input is discarded. The contracts are also used as test oracle to determine if the test is pass or fail. Beside automated testing the Autotest also allows the tester to manually write the test cases to target specific section of the code. The Autotest may have a single method/class or suite of methods/classes as inputs, it then automatically generate test input data according to the requirement of the methods or classes.
-
+\bigskip
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm, height=7cm]{chapter3/autotest.png}
+	\includegraphics[width=14cm, height=8cm]{chapter2/autotest.png}
 	\caption{Architecture of Autotest~\cite{pacheco2007randoop}}
 	\label{fig:autotest}
 \end{figure}
@@ -555,7 +554,7 @@ TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to e
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=14cm, height=12cm]{chapter3/testera.png}
+	\includegraphics[width=14.9cm, height=12cm]{chapter2/testera.png}
 	\caption{Architecture of TestEra ~\cite{marinov2001testera}}
 	\label{fig:testera}
 \end{figure}
