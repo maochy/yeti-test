@@ -1,19 +1,19 @@
 \externaldocument{chapter2}
-\chapter{Literature Review: Automated Random Software Testing}
+\chapter{Literature Review}
 \label{chap:softwareTesting}
-The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{tassey2002economic}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \section{Software Testing}
-In the IEEE standard glossary of software engineering terminology~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
+In the IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies the specified requirements and results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=4.5cm]{chapter2/softwareTesting.png}
+	\centerline{\includegraphics[width=16cm, height=5cm]{chapter2/softwareTesting.png}}
 	\caption{The process of software testing}
 	\label{fig:softwareTesting}
 \end{figure}
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains {\it {who, when, why}} and {\it {how}} to perform a specific activity in the testing process. 
+The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
 
 In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Table~\ref{table:softwareTestingParts}.
 
@@ -54,7 +54,7 @@ System					& Robustness		& ~~~~Control Flow Analysis			& ~~~~Walkthroughs		\\
 Unit testing, Integration testing and System testing are the three main levels of software testing reported in the literature~\cite{chilenski1994applicability}. Unit testing deals with evaluation of code piece-by-piece and each piece is considered as independent unit. Units are combined together to form components. Integration testing is performed to make sure that integration of units in a component are working properly. Finally, system testing ensures that the system formed by the combination of components proceeds properly to give the required output.
 
 \section{Software Testing Purpose}
-The primary purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. However, exhaustive testing is not always possible because of limited resources and infinite number of input values that a software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
+The purpose of software testing is identification of faults in the given SUT for necessary correction in order to achieve high quality. Maximum number of faults can be identified if software is tested exhaustively. However, exhaustive testing is not always possible because of limited resources and infinite number of input values that a software can take. Therefore, the purpose of testing is generally directed to achieve confidence in the system involved from a specific point of view. For example, functionality testing is performed to check that functional aspect are working correctly. Structural testing analyses the code structure for generating test cases in order to evaluate paths of execution and identification of unreachable or dead code. In robustness testing the software behaviour is observed in the case when software receives input outside the expected input range. Stress and performance testing aims at testing the response of software under high load and checking its ability to process different nature of tasks~\cite{cohen2005robustness}. Finally, compatibility testing is performed to see the interaction of software with the underlying operating system.
  %As proper planning is the key to success for many projects this is often also true with software testing. A software test plan is a well defined document that defines the goal, scope, method, resources and time schedule of the testing.
 %A software testing technique in which a software is tested with all possible combination of inputs. This technique can prove conclusively that the software meet its specification however exhaustive testing is seldom feasible because of the large input domain or too many paths in a software code. 
 
@@ -130,8 +130,6 @@ Boundary Value Analysis (BVA) is a testing technique based on the assumption tha
 
 BVA and partition testing may be used in combination by choosing test values from the whole input domain and also from the borders of each sub-domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA compared to partition testing. However, they have indicated that better performance of BVA is based on accurate identification of partition and selection of boundary values.
 
-
-
 \begin{lstlisting}
  public void test (int arg) {
 	arg = arg + 1;
@@ -193,13 +191,14 @@ A test case is an artifact which delineates the input, action and expected outpu
 Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT" \cite{ahmed2010software}. For a program P, an oracle is a function which verifies that the output from P is the same as the output from a ‘correct’ version of P~\cite{howden1986functional}. Test oracle set the acceptable behaviour for test execution~\cite{baresi2001test}. 
 
 All software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common oracle problems are as follows:
+
 \begin{enumerate}
 \item It is assumed that the test results are observable and comparable with the oracle.
 \item Ideally, test oracle would satisfy desirable properties of program specifications~\cite{baresi2001test}.
 \item A test oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, ``truly general test oracles are often unobtainable''~\cite{weyuker1982testing}. 
 \end{enumerate}
-
-Some common artefacts used as oracles are as follows.
+\bigskip
+Postconditions of a method are the most commonly used test oracle in automated software testing. Postconditions are conditions which must be true after a method is executed. In such oracle a fault is signalled when a postcondition is violated \cite{meyer2009programs}. Some common artefacts used as oracles are as follows.\\*
 \begin{enumerate}
 \item Specification and documentation to generate test oracle. 
 \item Products similar to the SUT but different in algorithm. %to solve the similar problem.
@@ -215,8 +214,6 @@ There are two forms of software testing: static and dynamic. In static testing, 
 
 %Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
 
-
-
 \subsection{Manual Software Testing}
 Manual testing is the technique of finding faults in software in which the tester writes the code manually to create test cases and test oracles~\cite{ciupa2008finding}. Manual testing may be effective at smaller scale but it is generally laborious, time consuming and error-prone~\cite{tretmans2000automatic}. Additionally, testers must have appropriate skills, experience and knowledge of the SUT for evaluation from different perspectives.
  
@@ -226,7 +223,13 @@ Automated testing is the technique of finding faults in a software in which a te
 \section{Test Data Generation}
 Test data generation in software testing is the process of identifying test input data which satisfies the given test selection criterion. A test data generator is used to assist testers in the generation of test data while the test selection criterion defines the properties of test cases to be generated based on the test plan and perspective taken \cite{korel1990automated}. Various artefacts of the SUT can be considered to generate test data like requirements, model, code etc. The choice of artefacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
-A typical test data generator consists of three parts: Program analyser, Strategy handler and Generator~\cite{edvardsson1999survey}. Program analyser performs initial assessment of software prior to testing and may alter the code if so required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A Strategy handler defines the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from program analyser or user before or during execution. The generator taking inputs from the program analyser and strategy handler generates test cases according to the set selection criteria. Test data generators, based on their approaches, are classified into path-wise, goal-oriented, intelligent and random. Each type is briefly described in the following section.
+A typical test data generator consists of three parts: Program analyser, Strategy handler and Generator~\cite{edvardsson1999survey}. Program analyser performs initial assessment of software prior to testing and may alter the code if so required. For example it performs code instrumentation or construction of CFG to measure the code coverage during testing. A Strategy handler defines the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths, normalisation of constraints, etc. It may also get input from program analyser or user before or during execution. The generator taking inputs from the program analyser and strategy handler generates test cases according to the set selection criteria. Test data generators, based on their approaches, are classified into path-wise, goal-oriented, intelligent, random and search-based as showing in Figure \ref{testDataGenerators_2}. Each type is briefly described in the following section.
+\begin{figure}[h]
+	\centering
+	\centerline{\includegraphics[width=16.5cm, height=5.2cm ]{chapter2/testDataGenerators.png}}
+	\caption{Types of test data generators}
+	\label{testDataGenerators_2}
+\end{figure}
 
 \subsection{Path-wise Test Data Generator} 
 \label{sec:pathwise_2}
@@ -274,7 +277,7 @@ Random test data generator is the simplest technique for generation of test data
 
 If a fault is only revealed by a small percentage of the program input it is said to be a semantically small fault. For example of a semantically small fault consider the following code:
 \begin{lstlisting}
-void test(char x,char y) {
+void test(int x, int y) {
     if (x==y){
         System.out.println("Equal");
     }
@@ -341,8 +344,16 @@ Random testing is a dynamic black-box testing technique in which the software is
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm, height=2.5cm ]{chapter2/randomTesting.jpg}
+	\includegraphics[width=11cm, height=2.5cm ]{chapter2/randomTesting.jpg}
 	\caption{Random Testing}
+\end{figure}
+
+
+
+\begin{figure}[h]
+	\centering
+	\centerline{\includegraphics[width=16.5cm, height=15cm ]{chapter2/randomTestingFlow.png}}
+	\caption{Hierarchy and working of Random testing}
 \end{figure}
 
 Generating test data by random generator is quite economical and requires less intellectual and computational efforts~\cite{ciupa2008artoo}. Moreover, no human intervention is involved in data generation which ensures an unbiased testing process. However, generating test cases with out using any background information makes random testing susceptible to criticism. Random testing is criticized for generating many of the test cases that falls at the same state of software. It is also stated that, random testing generates test inputs that violates requirements of the given SUT making it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{myers2011art}. However, Ciupa et al. stated~\cite{ciupa2007experimental}, that Myers statement was not based on any experimental evidence. Later experiments performed by several researchers~\cite{ciupa2008finding, hamlet1994random,  leitner2007efficient, duran1981report} confirmed that random testing is as effective as any other testing technique. It is reported~\cite{duran1981report} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It is pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison proves that random testing and partition testing are equally effective~\cite{hamlet1990partition}. A comparative study conducted by Ntafos~\cite{ntafos1998random} concluded that random testing is more effective as compared to proportional partition testing. A prominent work to mention is that of Miller et al.~\cite{miller1990empirical}, who generated and used random ASCII character streams to test Unix utilities for abnormal termination or non-terminating behaviour. Subsequently the same technique was extended to discover errors in software running on X Windows, Windows NT and Mac OS X \cite{forrester2000empirical, miller2006empirical}. Other famous studies using random testing includes low-level system calls \cite{kropp1998automated}, and file systems used in missions at NASA \cite{groce2007randomized}.
@@ -361,10 +372,12 @@ Chan et al. observed that failure inducing inputs are contagious and form certai
 \item {\bf Strip:} In the strip failure-domain, inputs inducing failures form a strip across the input domain. Example of strip failure-domain is failure caused by the statement: $num1 + num2 = 20$. Here multiple values of $num1$ and $num2$ can lead to the fault value 20. 
 \end{enumerate}
 
+
+
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=13cm, height=5.7cm ]{chapter2/pointblockstrip.jpg}
-	\caption{Patterns of failure causing inputs~\cite{chan1996proportional}}
+	\centerline{\includegraphics[width=13cm, height=5cm ]{chapter2/pointblockstrip.jpg}}
+	\caption{Domains of failure causing inputs~\cite{chan1996proportional}}
 	\label{fig:patterns2}
 \end{figure}
 
@@ -373,6 +386,22 @@ In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input do
 
 \section{Various versions of random testing}
 Researchers have tried various approaches to bring about improved versions of random testing with better performance. The prominent versions of random testing are as follows:
+
+\subsection{Random+ Testing}
+The random+ testing~\cite{leitner2007reconciling} is an extension of the random testing. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{beizer2003software} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+Integer.MAX_VALUE+, \verb+Integer.MAX_VALUE-1+, \verb+Integer.MAX_VALUE-2+; \verb+Integer.MIN_VALUE+, \verb-Integer.MIN_VALUE+1-, \verb-Integer.MIN_VALUE+2-. These special values can add a significant improvement to any testing method. For example:
+
+\begin{lstlisting}
+public void test (int arg) {
+	arg = arg + 1;
+	int [] intArray = new intArray[arg];
+	...
+}
+\end{lstlisting}
+
+In the above piece of code, on passing interesting value \verb+MAX_INT+ as argument, the code increment it by 1 making it a negative value and thus an error is generated when the system tries to build an array of negative size. 
+
+Similarly, the tester might also add some other special values that he considers effective in finding faults for the SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5 and 45 to 55 to the pre-defined list of special values. This static list of interesting values is manually updated before the start of the test and has slightly high priority than selection of random values because of more relevance and high chances of finding faults for the given SUT. These special values have high impact on the results, particularly for detecting problems in specifications~\cite{ciupa2008finding}.
+
 
 \subsection{Adaptive Random Testing}
 \label{sec:artpatterns_2}
