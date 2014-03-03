@@ -5,15 +5,52 @@
 %\section{Introduction}\label{sec:intro7}
 
 
-The thesis explored various aspects of failure-domains across the input domain with respect to automated random testing. It investigated and established three new techniques that could effectively identify and plot the failure-domains. The thesis mainly focused on: First, to minimize the number of test cases required to discover a failure-domain by using the neighbouring values surrounding the randomly generated value which lead to the discovery of first failure. Second, to represent the legitimate and failure-domain in a graphical form by collecting and evaluating the results of the tests execution. Section ~\ref{ResearchGoals_1} and Section ~\ref{contributions_1} presented the goals and contributions of the research.
+The thesis explored various aspects of failure-domains across the input domain with respect to automated random testing. It investigated and established three new techniques that could effectively identify and plot the failure-domains. The thesis mainly focused on: First, to minimize the number of test cases required to discover a failure-domain.
+%by using the neighbouring values surrounding the randomly generated value which lead to the discovery of first failure. 
+Second, to identify the legitimate and failure-domains and represent them in a graphical form. Third, to upgrade the existing strategy and compare its behaviour with Daikon in finding the failure-domain.
+%by collecting and evaluating the results of the tests execution. 
+ Section ~\ref{ResearchGoals_1} and Section ~\ref{contributions_1} presented the goals and contributions of the thesis.
 
  % which are briefly recapped here.
 
-Failures reside in contagious locations forming point, block and strip failure-domains. The existing random test strategies tries to find individual failures but do not focus on its domain. Providing the knowledge of failure along with its domain benefits debuggers to remove the failure from root quickly and effectively. The test reports could be further simplified when the tested values are shown on a graphical form separating pass and fail values. 
+Failures reside in contagious locations forming point, block and strip failure-domains. The existing random test strategies tries to find individual failures but do not focus on its domain. Providing the knowledge of failure along with its domain benefits debuggers to remove the failure from its root quickly and effectively. The test reports could be further simplified when the tested values are shown on a graphical form separating pass and fail values and highlighting the failure domains.
 
-The thesis describe three techniques, Dirt Spot Sweeping Random (Chapter~\ref{chap:DSSR}), Automated Discovery of Failure Domain (Chapter~\ref{chap:ADFD}) and Automated Discovery of Failure Domain+ (Chapter~\ref{chap:ADFD+}) to discover, analyse and present the failure-domains in a graphical form. All the techniques are implemented in YETI which is available for download from \url{https://code.google.com/p/yeti-test/}.
+%The thesis describe three techniques, Dirt Spot Sweeping Random (Chapter~\ref{chap:DSSR}), Automated Discovery of Failure Domain (Chapter~\ref{chap:ADFD}) and Automated Discovery of Failure Domain+ (Chapter~\ref{chap:ADFD+}) to discover, analyse and present the failure-domains in a graphical form. All the techniques are implemented in YETI which is available for download from \url{https://code.google.com/p/yeti-test/}.
 
-The first technique DSSR, tries to finds a failure and search for more failures around the discovered one by taking into consideration its boundary values. The second technique, ADFD identifies failure and failure-domains in one and two-dimensional numerical programs and present them in a graphical report on X, Y chart. The third and final technique, ADFD+ is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains and its presentation in the graphical form. The ADFD+ output is compared with the Daikon's output to analyse their behaviour in response to known failure domains. It also give suggestions towards improving the Daikon algorithm with respect to failure-domains.
+A set of techniques and tools have been developed for improving the effectiveness of automated random testing in finding failures and failure-domains. The first technique DSSR (Chapter \ref{chap:DSSR}), starts with random strategy to find the first failure. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Experimental results show that DSSR performed significantly better than random and random+ strategy. The second technique ADFD (Chapter \ref{chap:ADFD}), starts with random+ strategy to find the first failure. When a failure is identified a new Java program is dynamically created at run-time. The program is compiled and executed to search for failure-domains in the specified range. The output of the tests are collected and represented in the graphical form. It improves the debugging efficiency as debuggers keep all the instances of a failure under consideration during debuggin. Experimental results show that ADFD technique correctly identified the failure domains in the error-seeded programs. The third and final technique ADFD+ ((Chapter \ref{chap:ADFD+}), is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains. It searches for the failure-domains around the found failure in a given radius instead of the lower and upper bound. The results are collected and  represented on a graph in a more simplified manner. The ADFD+ output is also compared with the Daikon's output to analyse their behaviour in response to known failure domains. Experimental results show that ADFD+ correctly pointed out the planted failure-domains whereas Daikon, which rely on the existing of test cases to generate invariants, was not able to generate invariants that correctly point to the failure-domain. The ADFD+ graphical output is made further user friendly providing labelled graphs making it more simple to understand. Testers and/or developers can inspect those generated graphs for failures and failure-domains, instead of inspecting a large number of all generated tests. 
+
+\section{Lessons Learned}
+Research in the field of software testing has been carried out for more than three years. However, only a handful of fully automated testing tools are available free and open-source. Better tool support is needed to help the research community in order to devise new testing techniques to meet the demand for high software reliability. The research in this thesis has developed new techniques to improve the effectiveness of automated random testing. Our research is motivated to investigate how to improve the effectiveness of random testing for contagious failures across the input domain and graphical representation of the failure-domains. Our research has shed light on this promising direction and pointed out future work along this direction. In this section, we summarize some lessons that we learned from this research and we hope these lessons may be helpful to other researchers in pursuing future research.
+
+\textbf{Test results of random testing can be fluctuating}
+To reduce fluctuation experiment must be executed for several times.
+or a large number of classes must be tested
+or error-seeded programs must be tested.
+
+ 
+\textbf{Performance measurement criteria may be carefully chosen}
+F-measure, E-measure, P-measure or average.
+Define all of them and then tell that (take it from DSSR paper)
+
+   
+\textbf{Too much computation decrease performance and increase overhead}
+So ART quickly find the first failure but computation is too much.
+Simple Random can do more tests in the same time to reach to the fault.
+
+\textbf{Starting with Random and turn to sequential strategy helps}
+
+\textbf{Graphical form helps in easily understand the output}
+
+\textbf{Plotting of reference data type is complicated}
+
+\textbf{Contracts are helpful to find failures and used as oracle}
+
+\textbf{Importance of automating testing cant be ignored}
+
+\textbf{Auto generation of reference data type is complicated}
+
+\textbf{Random testing may be a good way to go on with robustness testing}
+
 
 
 
