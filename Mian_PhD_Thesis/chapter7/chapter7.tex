@@ -22,34 +22,38 @@ A set of techniques and tools have been developed for improving the effectivenes
 \section{Lessons Learned}
 Research in the field of software testing has been carried out for more than three years. However, only a handful of fully automated testing tools are available free and open-source. Better tool support is needed to help the research community in order to devise new testing techniques to meet the demand for high software reliability. The research in this thesis has developed new techniques to improve the effectiveness of automated random testing. Our research is motivated to investigate how to improve the effectiveness of random testing for contagious failures across the input domain and graphical representation of the failure-domains. Our research has shed light on this promising direction and pointed out future work along this direction. In this section, we summarize some lessons that we learned from this research and we hope these lessons may be helpful to other researchers in pursuing future research.
 
-\textbf{Test results of random testing can be fluctuating}
-To reduce fluctuation experiment must be executed for several times.
-or a large number of classes must be tested
-or error-seeded programs must be tested.
-
  
-\textbf{Performance measurement criteria may be carefully chosen}
-F-measure, E-measure, P-measure or average.
-Define all of them and then tell that (take it from DSSR paper)
+\subsection{Performance Measurement criteria may be carefully chosen}
+Various measures including the E-measure (expected number of failures detected), P-measure (probability of detecting at least one failure) and F-measure (number of test cases used to find the first fault) have been reported in the literature for finding the effectiveness of random test strategy. The E-measure and P-measure have been criticised~\cite{chen2005adaptive} and are not considered effective measuring techniques while the F-measure has been often used by various researchers~\cite{chen2004statistical, chen1996expected}. In our initial experiments, the F-measure was used to evaluate the efficiency of test strategy. However it was later realised that this was not the right choice. In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair~\cite{liu2012comparison}.
+
+\subsection{Test results of random testing are fluctuating} 
+In random testing the results of the experiments keep on changing even if all the test parameters and the program under test remain the same. The difference in results is due to the random generation of test input. It is therefore complicated to find the efficiency of one technique in comparison to the other technique. We cope the problem in four different ways. 1) To repeat the experiment for sufficient number of times (30 times in our case) and calculate the average. 2) To execute tests in each experiment for relatively large number of times (10,000 in our case). 3) To take sufficient number of test samples (60 in our case) before reaching any conclusion. 4) To Experiment on error-seeded programs where the precise locations of faults are well know before the test. All the above suggestions minimize the effect of randomness, however, the experiments must be repeated for at least 30 times before deciding the effectiveness of one approach over the other.
 
    
-\textbf{Too much computation decrease performance and increase overhead}
-So ART quickly find the first failure but computation is too much.
-Simple Random can do more tests in the same time to reach to the fault.
+\subsection{More computation decreases performance and increases overhead}
+Versions of random testing \cite{} improves the fault finding ability of the technique, however, the cost of generating test data is too high and results in unwanted overhead. It is difficult to achieve high quality strategy without any overhead but efforts should be made to keep it to bare minimum. For example, if we test a program with two strategies A and B. Strategy A consumes 100 tests to find a fault while strategy B consumes 500 tests to find the same fault.  It looks that strategy A supersedes strategy B however the time to generate the test cases may also be considered which can be equal for both the strategies. In addition to time other resources like hardware etc should also be kept minimum.
 
-\textbf{Starting with Random and turn to sequential strategy helps}
 
-\textbf{Graphical form helps in easily understand the output}
+\subsection{Starting with Random testing and switching to exhaustive strategy helps}
+In our techniques ADFD and ADFD+, we started the test using random strategy and later switched to exhaustive strategy to find the failure domain of a program. In the strategies the testing starts with random strategy and when a failure is identified the test strategy changes to exhaustive strategy and search all the values around the failure to the specified range set by the tester. The benefit of the approach is that it quickly identify the neighbouring faults which may be difficult to find using random strategy. 
 
-\textbf{Plotting of reference data type is complicated}
 
-\textbf{Contracts are helpful to find failures and used as oracle}
+\subsection{Graphical form helps in easily understand the output}
+In our technique we represented the test output in an easy to understand graphical form. The lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. The graph shows red points when the program fails for only one value, block when the program fails for multiple values and strip when the program fails for a long range of values.  The technique help the debuggers in two ways. First, it reduces the `to' and `from' movement of the program between the testers and debuggers as it identify all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.
 
-\textbf{Importance of automating testing cant be ignored}
 
-\textbf{Auto generation of reference data type is complicated}
+\subsection{Plotting of reference data type is complicated}
 
-\textbf{Random testing may be a good way to go on with robustness testing}
+
+
+
+\subsection{Contracts are helpful to find failures and used as oracle}
+
+\subsection{Importance of automating testing cant be ignored}
+
+\subsection{Auto generation of reference data type is complicated}
+
+\subsection{Random testing may be a good way to go on with robustness testing}
 
 
 
