@@ -24,11 +24,11 @@
 \BOOKMARK [2][-]{subsection.2.5.1}{Manual Software Testing}{section.2.5}% 24
 \BOOKMARK [2][-]{subsection.2.5.2}{Automated Software Testing}{section.2.5}% 25
 \BOOKMARK [1][-]{section.2.6}{Test Data Generation}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.6.1}{Path-wise Test Data Generator}{section.2.6}% 27
+\BOOKMARK [2][-]{subsection.2.6.1}{Path-wise Test Data Generators}{section.2.6}% 27
 \BOOKMARK [2][-]{subsection.2.6.2}{Goal-oriented Test Data Generators}{section.2.6}% 28
 \BOOKMARK [2][-]{subsection.2.6.3}{Intelligent Test Data Generators}{section.2.6}% 29
-\BOOKMARK [2][-]{subsection.2.6.4}{Random Test Data Generators}{section.2.6}% 30
-\BOOKMARK [2][-]{subsection.2.6.5}{Search-based Test Data Generation}{section.2.6}% 31
+\BOOKMARK [2][-]{subsection.2.6.4}{Search-based Test Data Generation}{section.2.6}% 30
+\BOOKMARK [2][-]{subsection.2.6.5}{Random Test Data Generators}{section.2.6}% 31
 \BOOKMARK [1][-]{section.2.7}{Random Testing}{chapter.2}% 32
 \BOOKMARK [1][-]{section.2.8}{Input Domain}{chapter.2}% 33
 \BOOKMARK [2][-]{subsection.2.8.1}{Genuine and Failure-domain}{section.2.8}% 34
@@ -125,13 +125,11 @@
 \BOOKMARK [2][-]{subsection.7.1.3}{More computation decreases performance and increases overhead}{section.7.1}% 125
 \BOOKMARK [2][-]{subsection.7.1.4}{Starting with Random testing and switching to exhaustive strategy helps}{section.7.1}% 126
 \BOOKMARK [2][-]{subsection.7.1.5}{Graphical form helps in easily understand the output}{section.7.1}% 127
-\BOOKMARK [2][-]{subsection.7.1.6}{Plotting of reference data type is complicated}{section.7.1}% 128
-\BOOKMARK [2][-]{subsection.7.1.7}{Contracts are helpful to find failures and used as oracle}{section.7.1}% 129
-\BOOKMARK [2][-]{subsection.7.1.8}{Importance of automating testing cant be ignored}{section.7.1}% 130
-\BOOKMARK [2][-]{subsection.7.1.9}{Auto generation of reference data type is complicated}{section.7.1}% 131
-\BOOKMARK [2][-]{subsection.7.1.10}{Random testing may be a good way to go on with robustness testing}{section.7.1}% 132
-\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 133
-\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 134
-\BOOKMARK [0][-]{appendix.A}{ }{}% 135
-\BOOKMARK [1][-]{section.A.1}{Sample code to identify failure domains}{appendix.A}% 136
-\BOOKMARK [0][-]{lstnumber.-16.16}{Bibliography}{}% 137
+\BOOKMARK [2][-]{subsection.7.1.6}{Auto-generation of data is simple for primitive types and complicated for reference types}{section.7.1}% 128
+\BOOKMARK [2][-]{subsection.7.1.7}{Graphical representation of multi-argument method and reference data type is complicated}{section.7.1}% 129
+\BOOKMARK [2][-]{subsection.7.1.8}{Contracts are helpful to find failures, used as documentation and oracle}{section.7.1}% 130
+\BOOKMARK [0][-]{chapter.8}{Future Work}{}% 131
+\BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 132
+\BOOKMARK [0][-]{appendix.A}{ }{}% 133
+\BOOKMARK [1][-]{section.A.1}{Sample code to identify failure domains}{appendix.A}% 134
+\BOOKMARK [0][-]{lstnumber.-16.16}{Bibliography}{}% 135

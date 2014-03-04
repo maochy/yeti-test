@@ -41,19 +41,19 @@ In our techniques ADFD and ADFD+, we started the test using random strategy and 
 \subsection{Graphical form helps in easily understand the output}
 In our technique we represented the test output in an easy to understand graphical form. The lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. The graph shows red points when the program fails for only one value, block when the program fails for multiple values and strip when the program fails for a long range of values.  The technique help the debuggers in two ways. First, it reduces the `to' and `from' movement of the program between the testers and debuggers as it identify all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.
 
-
-\subsection{Plotting of reference data type is complicated}
-
-
+\subsection{Auto-generation of data is simple for primitive types and complicated for reference types}
+We found that comparatively it is less challenging to auto-generate primitive data type values than reference or object or user defined data type values using random testing. To meet the challenge our strategy constructed test cases by creating objects of the classes under test and randomly calls its methods with random inputs according to the parameter's-space. We divided input values into two types i.e. primitive data types and user defined data types. For primitive data types as methods parameters, the random strategy calls \verb+Math.random()+ method to generate arithmetic values which are converted to the required type using Java cast operation. For user-defined data type as a parameter the strategy calls the constructor to generate object of the class at run time. The constructor may possibly require another object, then the strategy recursively calls the constructor of that object. This process is continued till an object with empty constructor or a constructor with only primitive types or the set level of recursion is reached.
 
 
-\subsection{Contracts are helpful to find failures and used as oracle}
+\subsection{Graphical representation of multi-argument method and reference data type is complicated}
+The difficulty to represent results is directly proportional to the number of arguments used in a method. Which means as the number of arguments in a method increases, the more dimensions we need and the more complicated the process get in to. Though it is not difficult to extend the approach to test more than two-dimensional programs containing other primitive types, it would however be difficult to plot them on the chart. The approach can also be extended to test object-oriented programs by implementing objects distance proposed by Ciupa et al. \cite{ciupa2006object}. The details of such an implementation with graphical representation will be complicated.
 
-\subsection{Importance of automating testing cant be ignored}
 
-\subsection{Auto generation of reference data type is complicated}
+\subsection{Contracts are helpful to find failures, used as documentation and oracle}
+Although our research has developed testing techniques that do not require contracts, we found that the effectiveness of automated testing could be further improved if the tools are given extra guidance in the form of pre-conditions, post-conditions and class invariants. Contracts are like assert statements and its violation i.e. when its value turn false indicate an error in the program. It also serves the purpose of documentation and you can tell on the fly what data a software take and the state before and after execution. The post-condition of a program also serves as an oracle.
 
-\subsection{Random testing may be a good way to go on with robustness testing}
+
+%\subsection{Random testing may be a good way to go on with robustness testing}
 
 
 
