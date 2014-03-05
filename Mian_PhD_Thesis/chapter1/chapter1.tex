@@ -19,14 +19,14 @@ The margin of error in mission-critical and safety-critical systems is so small 
 
 %The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. Software testing is by far the most recognized and widely used technique to verify the correctness and ensure quality of the software ~\cite{Standards2002, Myers2011, patton2001software, young2008software}.  According to Myers et al. some software companies spend up to 50\% cost of the total cost of software development and maintenance on testing~\cite{Myers2011}. 
 
-\subsection{Software testing} 
+\subsection{Software Testing} 
 It is a technique used during Verification and Validation (V \& V) process to ensure that the software adheres to the desired specifications. According to Dijkstra, program testing can be used to show the presence of bugs, but never to show the absence of bugs~\cite{dahl1972structured}. It means that, a software under test (SUT) that passes all the tests without giving any error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
 
 Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of the input domain, limited resources and strict time constraints. Therefore, the usual practice is the selection of test data set from a large/infinite domain. Careful selection of the test data set, as a subset of the whole input domain, is a crucial factor in any testing technique because it represents the whole domain for evaluating the structural and/or functional properties~\cite{howden1986functional, mccabe1983structured}. Miller and Maloney were the first who comprehensively described a systematic approach of test data set selection known as path coverage. They proposed that testers should select the test data so that all paths of the SUT are executed at least once~\cite{miller1963systematic}. The approach resulted in higher standards of test quality and a large number of test strategies were subsequently developed such as boundary value analysis and equivalence class. 
 
 Test data set can be generated manually and automatically. However, generating test data set manually is a time-consuming and laborious exercise~\cite{korel1990automated}, therefore, automated test data set generation is always preferred. Data generators can be of different types i.e. Path-wise (Section~\ref{sec:pathwise_2}), Goal-oriented (Section~\ref{sec:goaloriented_2}), Intelligent (Section~\ref{sec:intelligent_2}) and Random (Section~\ref{sec:randomgenerator_2}). Random generator produces test data set randomly from the whole domain. Unlike other approaches random technique is simple, widely applicable, easy to implement, faster in computation, free from bias and costs minimum overhead~\cite{ciupa2007experimental}. 
 
-\subsection{Random testing} 
+\subsection{Random Testing} 
 It is a process in which generation of test data is created at random but according to requirements, specifications or any other test adequacy criteria. The given SUT is executed against the test data and results obtained are evaluated to determine whether the output produced satisfies the expected results. According to Godefroid et al.~\cite{godefroid2005dart} ``Random testing is a simple and well-known technique which can be remarkably effective in discovering software bugs". The three main phases of random testing i.e. test data generation, execution and evaluation are shown in Figure~\ref{fig:SoftwareTesting1}.
 \\
 \begin{figure}[h]
@@ -50,17 +50,17 @@ Despite the benefits of random testing, its simplistic and non-systematic nature
 \item Incompetence of RT to represent results in graphical form. 
 \end{enumerate}
 
-\subsection{Limitation of RT in the discovery of contagious failures}
+\subsection{Limitation of RT in the Discovery of Contagious Failures}
 Chan et al.~\cite{chan1996proportional} observed that failure inducing inputs are contagious and form certain geometrical patterns in the whole input domain. They divided them into point, block and strip patterns on the basis of their shape (Section~\ref{sec:artpatterns_2}). % put the failure domains section label in the preceeding reference.
 The failure-finding ability of random testing technique decreases when the failures lie in contiguous block and strip patterns across the input domain.
 
-\subsection{Inability of RT to identify failure-domains}
+\subsection{Inability of RT to Identify Failure-domains}
 %As stated above, the failures in the input domain are contiguous and form point, block and strip patterns. 
 The existing random strategies of software testing tries to discover failure individually and lack the capability to discover the failure domain.
 
 %Random testing is also considered weak in providing high code coverage~\cite{cohen1997aetg, offutt1996semantic}. For example, in random testing when the conditional statement  ``$if (x == 25) then ... $"  is exposed to execution then there is only one chance, of the ``$then...$" part of the statement, to be executed out of $2^\text{32}$ available options. If $x$ is an integer variable of 32 bit value~\cite{godefroid2005dart}. 
 
-\subsection{Incompetence of RT to represent results in a graphical form}
+\subsection{Incompetence of RT to Represent Results in a Graphical Form}
 Random testing is no exception when it comes to the complexity of understanding and evaluating test results. Modern testing techniques simplify results by truncating the lengthy log files and displaying only the fault revealing test cases in the form of unit tests. No random strategy seems to provide graphical representation of the failures and failure-domains. Efforts are therefore required to get the test results of random testing in a user-friendly graphical form. 
 
 
@@ -90,7 +90,7 @@ The failure-finding ability of the random testing technique decreases when the f
 \subsection{Automated Discovery of Failure Domain}
 The existing random strategies of software testing discover the faults in the SUT but lack the capability of presenting the fault domains. In the present study, a fully automated testing strategy named, ``Automated Discovery of Failure Domain (ADFD)" is developed with the ability to find the failures as well as the failure domains in a given SUT and provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results prove that ADFD strategy automatically performs identification of failures and failure-domains and provides the results in graphical form.
 
-\subsection{Automated Discovery of Failure Domain+ Strategy}
+\subsection{Automated Discovery of Failure Domain+}
 Another random test strategy named, ``Automated Discovery of Failure Domain+ Strategy'' (ADFD+) is developed in the current research study. 
 
 %IGRS is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon, filtered by using DynComp and annotated in to source code as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:ADFD+} indicate improved features of IGRS in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies are either unable to accomplish or require larger duration.  
@@ -136,7 +136,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:conclusion}} provides conclusion of the thesis \\
+\textbf{Chapter~\ref{chap:conclusions_7}} concludes with a summary of the contributions and the lessons learned.\\
 
 \hangindent=\parindent
 \hangafter=1

@@ -4,18 +4,18 @@
 The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster (1996) costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{tassey2002economic}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \section{Software Testing}
-According to the IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting}. 
+According to the IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting_2}. 
 
 \begin{figure}[h]
 	\centering
 	\centerline{\includegraphics[width=16cm, height=5cm]{chapter2/softwareTesting.png}}
 	\caption{A simplified version of software testing process}
-	\label{fig:softwareTesting}
+	\label{fig:softwareTesting_2}
 \end{figure}
 
 The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
 
-In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{fig:softwareTestingFlow}.
+In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{fig:softwareTestingFlow_2}.
 
 
 \begin{figure}[H]
@@ -23,7 +23,7 @@ In traditional testing, when testers find a fault in the software, it is returne
 	%\centerline{\includegraphics[width=16cm, height=16cm]{chapter2/softwareTestingFlow.png}}
 	\centerline{\includegraphics[width=\textwidth]{chapter2/softwareTestingFlow.png}}
 	\caption{Testing from various views}
-	\label{fig:softwareTesting}
+	\label{fig:softwareTestingFlow_2}
 \end{figure}
 
 
@@ -39,7 +39,7 @@ In traditional testing, when testers find a fault in the software, it is returne
 %
 %Level 					&Purpose		 		& Perspective					& Form 					\\
 %\hline
-%Unit						& Functional			& White Box							& Static 					\\
+%Unit					& Functional			& White Box							& Static 					\\
 %Integration				& Structural			& ~~~~Data Flow Analysis				& ~~~~Reviews			\\
 %System					& Robustness		& ~~~~Control Flow Analysis			& ~~~~Walkthroughs		\\
 %						& Stress				& ~~~~Code-based fault injection 		& ~~~~Inspection		\\
@@ -71,7 +71,7 @@ The purpose of software testing is identification of faults in the given SUT for
 \section{Software Testing Perspective}
 Software testing is divided into white-box and black-box testing based on the perspective taken.
 
-\subsection{White-box testing}
+\subsection{White-box Testing}
 \begin{wrapfigure}{r}{0.36\textwidth}
   \vspace{-35pt}
   \begin{center}
@@ -93,17 +93,17 @@ In white-box or structural testing, the testers must know about the complete str
 
 
 \subsubsection{Data Flow Analysis}
-Data Flow Analysis (DFA) is a testing technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG. 
+Data Flow Analysis (DFA) is a technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG. 
 
 The process of program execution can be looked into as data-flow from input to output where data may transform into several intermediary steps before reaching the final state. The process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables or change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
 
 \subsubsection{Control Flow Analysis}
-Control Flow Analysis (CFA) is a testing technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function calls are executed. In this technique a CFG, similar to the one required in DFA, is drawn to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control. Taking the example of following a specific path between two or more available choices at a particular state, efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. The effectiveness of the testing technique depends on measurement of control. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
+Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function calls are executed. In this technique a CFG, similar to the one required in DFA, is drawn to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control. Taking the example of following a specific path between two or more available choices at a particular state, efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
 \subsubsection{Code-based Fault Injection Testing}
 It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the instructions. \cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
 
-\subsection{Black-box testing}
+\subsection{Black-box Testing}
 \begin{wrapfigure}{r}{0.36\textwidth}
   \vspace{-35pt}
   \begin{center}
@@ -126,7 +126,7 @@ In black-box or functional testing, the testers do not need to know about the in
 
 
 
-\subsubsection{Use-case based testing}
+\subsubsection{Use-case Based Testing}
 % check if it is use case-based testing or use case testing.
 It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case~\cite{armour2000advanced}. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
 
@@ -203,7 +203,7 @@ Test oracle is defined as, ``a source containing expected results for comparison
 All software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special ways to overcome the oracle problem. Some of the common oracle problems are as follows:
 
 \begin{enumerate}
-\item It is assumed that the test results are observable and comparable with the oracle.
+\item It is assumed that the test results are observable and comparable with the oracle~\cite{weyuker1982testing}.
 \item Ideally, test oracle would satisfy desirable properties of program specifications~\cite{baresi2001test}.
 \item A test oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, ``truly general test oracles are often unobtainable''~\cite{weyuker1982testing}. 
 \end{enumerate}
@@ -396,7 +396,7 @@ Chan et al. observed that failure inducing inputs are contagious and form certai
 In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip, inside the respective boxes indicates the failures in the form of point, block and strip failure-domains.
 
 
-\section{Various versions of random testing}
+\section{Versions of Random testing}
 Researchers have tried various approaches to bring about improved versions of random testing with better performance. The prominent versions of random testing are as follows:
 
 \subsection{Random+ Testing}
@@ -588,8 +588,8 @@ QuickCheck inputs is the function to be tested and properties of the program def
 %\subsection{AgitarOne}
 %AgitarOne is a commercial tool that automatically generates unit tests. It has a Junit Generator engine that can create 25,000 lines or more of Junit per hour [29]. It can be easily integrated into famous IDE like Eclipse. It takes as input, classes under test, time and optionally any knowledge or test cases that has a positive influence on the performance of the testing process. The generated Junit tests can be run from the same IDE and can also be used for later regression testing. The GUI interface is called a dashboard which provides in depth knowledge of the tests conducted, failures detected, alerts and the archieves of the tests conducted earlier. It also shows the coverage obtained after executing the Junits against the code under test.
 
-\subsection{Autotest} \label{autotest_2}
-The Autotest, based on formal automated testing is used to test Eiffel language programs~\cite{pacheco2007randoop}. The Eiffel language uses the concept of contracts which is effectively utilized by Autotest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The contracts are also used as test oracle to determine if the testa are pass or fail. Beside automated testing the Autotest also allows the tester to manually write the test cases to target specific section of the code. The Autotest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
+\subsection{AutoTest} \label{autotest_2}
+The AutoTest, based on formal automated testing is used to test Eiffel language programs~\cite{pacheco2007randoop}. The Eiffel language uses the concept of contracts which is effectively utilized by AutoTest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The contracts are also used as test oracle to determine if the tests are pass or fail. Beside automated testing the AutoTest also allows the tester to manually write the test cases to target specific section of the code. The AutoTest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -598,7 +598,7 @@ The Autotest, based on formal automated testing is used to test Eiffel language 
 	\label{fig:autotest}
 \end{figure}
 
-\noindent According to Figure~\ref{fig:autotest}, the architecture of Autotest can be split into the following main parts:
+\noindent According to Figure~\ref{fig:autotest}, the architecture of AutoTest can be split into the following main parts:
 \begin{enumerate}
 \item \textbf{Testing Strategy:} It is a pluggable component where testers can fit any strategy according to the testing requirement. The strategy contains the directions for testing.%- for example what instructions should be executed on the SUT. Using the information the strategy synthesize test cases and forward it to the proxy. 
 The default strategy creates random data to evaluate the methods/classes under test.

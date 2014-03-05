@@ -128,7 +128,7 @@ Table \ref{table:addvalues2} presents the values added to the list of interestin
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% EXPLANATION OF DSSR STRATEGY %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Explanation of DSSR strategy by example}
+\subsection{Explanation of DSSR Strategy by Example}
 The DSSR strategy is explained through a simple program seeded with three faults. The first fault is a division by zero exception denoted by 1 while the second and third faults are failing assertion denoted by 2 and 3 in the given program below: 
 
 \begin{lstlisting}
@@ -164,7 +164,7 @@ The above process explains that including the border, failure-finding and surrou
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
 
 
-\section{Implementation of the DSSR strategy}\label{sec:imp}
+\section{Implementation of the DSSR Strategy}\label{sec:imp}
 
 The DSSR strategy is implemented in YETI open-source automated random testing tool. YETI, coded in Java language, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language-agnostic meta model enables it to test programs written in multiple languages including Java, C\#, JML and .Net. The core features of YETI include easy extensibility for future growth, high speed (up to one million calls per minute on java code), real time logging, real time GUI support, capability to test programs with multiple strategies and auto generation of test report at the end of test session. For large-scale testing there is a cloud-enabled version of YETI, capable of executing parallel test sessions in Cloud~\cite{oriol2010yeti}. A number of hitherto faults have successfully been found by YETI in various production software~\cite{Oriol2011, oriol2012random}.
 
@@ -190,7 +190,7 @@ The DSSR strategy is an extension of YetiRandomPlusStrategy. The class hierarchy
 
 The DSSR strategy is experimentally evaluated by comparing its performance with that of random and random+ strategy ~\cite{leitner2007reconciling}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and interesting value injection probability have been kept constant in the experiments.
 
-\subsection{Research questions}
+\subsection{Research Questions}
 For evaluating the DSSR strategy, the following research questions have been addressed in this study:
 \begin{enumerate}
 \item Is there an absolute best amongst R, R+ and DSSR strategies?
@@ -259,7 +259,7 @@ The approach similar to that used in previous studies when the contracts and ass
 All tests are performed with a 64-bit Mac OS X Lion Version 10.7.4 running on 2 x 2.66 GHz 6-Core Intel Xeon processor with 6 GB (1333 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. The machine took approximately 100 hours to process the experiments.
 
 
-\subsection{Performance measurement criteria}
+\subsection{Performance Measurement Criteria}
 Various measures including the E-measure (expected number of failures detected), P-measure (probability of detecting at least one failure) and F-measure (number of test cases used to find the first fault) have been reported in the literature for finding the effectiveness of random test strategy. The E-measure and P-measure have been criticised~\cite{chen2005adaptive} and are not considered effective measuring techniques while the F-measure has been often used by various researchers~\cite{chen2004statistical, chen1996expected}. In our initial experiments, the F-measure was used to evaluate the efficiency of test strategy. However it was later realised that this was not the right choice. In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair~\cite{liu2012comparison}.
 
 

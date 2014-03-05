@@ -180,7 +180,7 @@ public class BlockDomainTwoArgument{
 
 	public static void pointErrors (int x, int y){
 
-		if(((x > 0)\&\&(x < 20)) || ((y > 0) \&\& (y < 20))){
+		if(((x > 0)&&(x < 20)) || ((y > 0) && (y < 20))){
 		x = 5/0;
 		}
   	
@@ -201,7 +201,7 @@ public class StripDomainOneArgument{
 
 	public static void stripErrors (int x){
 	
-		if((x > -5) \&\& (x < 35))
+		if((x > -5) && (x < 35))
 			x = 5/0;
   	 }
 }
@@ -217,7 +217,7 @@ public class StripDomainTwoArgument{
 
 	public static void pointErrors (int x, int y){
 
-		if(((x > 0)\&\&(x < 40)) || ((y > 0) \&\& (y < 40))){
+		if(((x > 0)&&(x < 40)) || ((y > 0) && (y < 40))){
 		x = 5/0;
 		}
   	
