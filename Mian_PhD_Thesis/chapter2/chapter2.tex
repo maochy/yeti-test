@@ -366,7 +366,7 @@ Random testing is a dynamic black-box testing technique in which the software is
 
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16.5cm, height=15cm ]{chapter2/randomTestingFlow.png}}
+	\centerline{\includegraphics[width=16.5cm, height=8cm ]{chapter2/randomTestingMechanism.png}}
 	\caption{Working mechanism of random testing}
 \end{figure}
 
@@ -429,7 +429,7 @@ Mirror Adaptive Random Testing (MART) is an improvement on ART by using mirror-p
 \begin{figure}[h]
 \begin{center}
 	\includegraphics[width=13.5cm, height=6.5cm ]{chapter2/mart2.pdf}
-	\caption{Mirror Adaptive Random Testing~\cite{chen2004mirror}}
+	\caption{Simple mirror functions for mapping of test cases~\cite{chen2004mirror}}
 \label{fig:mirrorART}
 \end{center}  
 \end{figure}
@@ -552,7 +552,7 @@ Eclat~\cite{pacheco2005eclat} is an automated testing tool which generates and c
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm, height=10.5cm]{chapter2/eclat_working.png}
-	\caption{Main components of Eclat~\cite{pacheco2005eclat}}
+	\caption{The input selection technique. Implicit in the diagram is the program under test. Rectangles with rounded corners represent steps in the technique, and rectangles with square corners represent artifacts~\cite{pacheco2005eclat}}
 	\label{fig:eclat}
 \end{figure}
 
@@ -588,12 +588,12 @@ QuickCheck takes the function to be tested and properties of the program (Haskel
 %AgitarOne is a commercial tool that automatically generates unit tests. It has a Junit Generator engine that can create 25,000 lines or more of Junit per hour [29]. It can be easily integrated into famous IDE like Eclipse. It takes as input, classes under test, time and optionally any knowledge or test cases that has a positive influence on the performance of the testing process. The generated Junit tests can be run from the same IDE and can also be used for later regression testing. The GUI interface is called a dashboard which provides in depth knowledge of the tests conducted, failures detected, alerts and the archieves of the tests conducted earlier. It also shows the coverage obtained after executing the Junits against the code under test.
 
 \subsection{AutoTest} \label{autotest_2}
-The AutoTest is used to test Eiffel language programs~\cite{pacheco2007randoop}. The Eiffel language uses the concept of contracts which is effectively utilized by AutoTest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The post-conditions are used as test oracle to determine whether the test passes or fail. Beside automated testing the AutoTest also allows the tester to manually write the test cases to target specific section of the code. The AutoTest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
+The AutoTest is used to test Eiffel language programs~\cite{ciupa2007automatic}. The Eiffel language uses the concept of contracts which is effectively utilized by AutoTest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The post-conditions are used as test oracle to determine whether the test passes or fail. Beside automated testing the AutoTest also allows the tester to manually write the test cases to target specific section of the code. The AutoTest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
 \bigskip
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm, height=8cm]{chapter2/autotest.png}
-	\caption{The architecture of Autotest~\cite{pacheco2007randoop}}
+	\caption{AutoTest architecture~\cite{leitner2007reconciling}}
 	\label{fig:autotest}
 \end{figure}
 

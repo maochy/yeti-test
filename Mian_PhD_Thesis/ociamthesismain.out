@@ -27,7 +27,7 @@
 \BOOKMARK [2][-]{subsection.2.6.1}{Path-wise Test Data Generators}{section.2.6}% 27
 \BOOKMARK [2][-]{subsection.2.6.2}{Goal-oriented Test Data Generators}{section.2.6}% 28
 \BOOKMARK [2][-]{subsection.2.6.3}{Intelligent Test Data Generators}{section.2.6}% 29
-\BOOKMARK [2][-]{subsection.2.6.4}{Search-based Test Data Generation}{section.2.6}% 30
+\BOOKMARK [2][-]{subsection.2.6.4}{Search-based Test Data Generators}{section.2.6}% 30
 \BOOKMARK [2][-]{subsection.2.6.5}{Random Test Data Generators}{section.2.6}% 31
 \BOOKMARK [1][-]{section.2.7}{Random Testing}{chapter.2}% 32
 \BOOKMARK [1][-]{section.2.8}{Input Domain}{chapter.2}% 33
@@ -130,6 +130,14 @@
 \BOOKMARK [2][-]{subsection.7.1.8}{Contracts are helpful in finding failures, used as documentation and oracle}{section.7.1}% 130
 \BOOKMARK [0][-]{chapter.8}{Future Work}{}% 131
 \BOOKMARK [1][-]{section.8.1}{Introduction}{chapter.8}% 132
-\BOOKMARK [0][-]{appendix.A}{ }{}% 133
-\BOOKMARK [1][-]{section.A.1}{Sample code to identify failure domains}{appendix.A}% 134
-\BOOKMARK [0][-]{lstnumber.-16.16}{Bibliography}{}% 135
+\BOOKMARK [2][-]{subsection.8.1.1}{Use of contracts and assertions to find a failure}{section.8.1}% 133
+\BOOKMARK [2][-]{subsection.8.1.2}{introducing object distance in DSSR}{section.8.1}% 134
+\BOOKMARK [2][-]{subsection.8.1.3}{Measure of the coverage achieved by DSSR, ADFD and ADFD+}{section.8.1}% 135
+\BOOKMARK [2][-]{subsection.8.1.4}{Extend ADFD and ADFD+ to test non-numerical and reference type data}{section.8.1}% 136
+\BOOKMARK [2][-]{subsection.8.1.5}{Extend ADFD and ADFD+ to represent multi-dimensional programs}{section.8.1}% 137
+\BOOKMARK [2][-]{subsection.8.1.6}{Improving the user interface of ADFD+}{section.8.1}% 138
+\BOOKMARK [2][-]{subsection.8.1.7}{Evaluating the effectiveness of ADFD+ in real world programs}{section.8.1}% 139
+\BOOKMARK [2][-]{subsection.8.1.8}{Characterizing the number of programs containing point, block and strip failure-domains}{section.8.1}% 140
+\BOOKMARK [0][-]{appendix.A}{ }{}% 141
+\BOOKMARK [1][-]{section.A.1}{Sample code to identify failure domains}{appendix.A}% 142
+\BOOKMARK [0][-]{lstnumber.-16.16}{Bibliography}{}% 143

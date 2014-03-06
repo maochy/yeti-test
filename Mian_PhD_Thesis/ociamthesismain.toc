@@ -37,26 +37,26 @@
 \contentsline {subsubsection}{\numberline {2.6.2.2}Assertion-oriented Approach}{21}{subsubsection.2.6.2.2}
 \contentsline {subsection}{\numberline {2.6.3}Intelligent Test Data Generators}{21}{subsection.2.6.3}
 \contentsline {subsubsection}{\numberline {2.6.3.1}Genetic Algorithm}{22}{subsubsection.2.6.3.1}
-\contentsline {subsection}{\numberline {2.6.4}Search-based Test Data Generation}{22}{subsection.2.6.4}
+\contentsline {subsection}{\numberline {2.6.4}Search-based Test Data Generators}{22}{subsection.2.6.4}
 \contentsline {subsection}{\numberline {2.6.5}Random Test Data Generators}{23}{subsection.2.6.5}
 \contentsline {section}{\numberline {2.7}Random Testing}{24}{section.2.7}
-\contentsline {section}{\numberline {2.8}Input Domain}{26}{section.2.8}
+\contentsline {section}{\numberline {2.8}Input Domain}{25}{section.2.8}
 \contentsline {subsection}{\numberline {2.8.1}Genuine and Failure-domain}{26}{subsection.2.8.1}
 \contentsline {section}{\numberline {2.9}Versions of Random testing}{27}{section.2.9}
 \contentsline {subsection}{\numberline {2.9.1}Random+ Testing}{27}{subsection.2.9.1}
 \contentsline {subsection}{\numberline {2.9.2}Adaptive Random Testing}{28}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Mirror Adaptive Random Testing}{29}{subsection.2.9.3}
-\contentsline {subsection}{\numberline {2.9.4}Restricted Random Testing}{30}{subsection.2.9.4}
-\contentsline {subsection}{\numberline {2.9.5}Directed Automated Random Testing}{31}{subsection.2.9.5}
+\contentsline {subsection}{\numberline {2.9.3}Mirror Adaptive Random Testing}{28}{subsection.2.9.3}
+\contentsline {subsection}{\numberline {2.9.4}Restricted Random Testing}{29}{subsection.2.9.4}
+\contentsline {subsection}{\numberline {2.9.5}Directed Automated Random Testing}{30}{subsection.2.9.5}
 \contentsline {subsection}{\numberline {2.9.6}Quasi Random Testing}{31}{subsection.2.9.6}
-\contentsline {subsection}{\numberline {2.9.7}Feedback-directed Random Testing}{32}{subsection.2.9.7}
+\contentsline {subsection}{\numberline {2.9.7}Feedback-directed Random Testing}{31}{subsection.2.9.7}
 \contentsline {subsection}{\numberline {2.9.8}The Artoo Testing}{32}{subsection.2.9.8}
-\contentsline {section}{\numberline {2.10}Tools for Automated Random Testing}{33}{section.2.10}
+\contentsline {section}{\numberline {2.10}Tools for Automated Random Testing}{32}{section.2.10}
 \contentsline {subsection}{\numberline {2.10.1}JCrasher}{33}{subsection.2.10.1}
 \contentsline {subsection}{\numberline {2.10.2}Jartege}{34}{subsection.2.10.2}
 \contentsline {subsection}{\numberline {2.10.3}Eclat}{35}{subsection.2.10.3}
 \contentsline {subsection}{\numberline {2.10.4}Randoop}{36}{subsection.2.10.4}
-\contentsline {subsection}{\numberline {2.10.5}QuickCheck}{37}{subsection.2.10.5}
+\contentsline {subsection}{\numberline {2.10.5}QuickCheck}{36}{subsection.2.10.5}
 \contentsline {subsection}{\numberline {2.10.6}AutoTest}{37}{subsection.2.10.6}
 \contentsline {subsection}{\numberline {2.10.7}TestEra}{38}{subsection.2.10.7}
 \contentsline {subsection}{\numberline {2.10.8}Korat}{39}{subsection.2.10.8}
@@ -143,6 +143,14 @@
 \contentsline {subsection}{\numberline {7.1.8}Contracts are helpful in finding failures, used as documentation and oracle}{108}{subsection.7.1.8}
 \contentsline {chapter}{\numberline {8}Future Work}{109}{chapter.8}
 \contentsline {section}{\numberline {8.1}Introduction}{109}{section.8.1}
-\contentsline {chapter}{\numberline {A} }{110}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{110}{section.A.1}
-\contentsline {chapter}{Bibliography}{115}{lstnumber.-16.16}
+\contentsline {subsection}{\numberline {8.1.1}Use of contracts and assertions to find a failure}{109}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}introducing object distance in DSSR}{110}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Measure of the coverage achieved by DSSR, ADFD and ADFD+}{110}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Extend ADFD and ADFD+ to test non-numerical and reference type data}{110}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Extend ADFD and ADFD+ to represent multi-dimensional programs}{111}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Improving the user interface of ADFD+}{111}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}Evaluating the effectiveness of ADFD+ in real world programs}{111}{subsection.8.1.7}
+\contentsline {subsection}{\numberline {8.1.8}Characterizing the number of programs containing point, block and strip failure-domains}{111}{subsection.8.1.8}
+\contentsline {chapter}{\numberline {A} }{113}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{113}{section.A.1}
+\contentsline {chapter}{Bibliography}{118}{lstnumber.-16.16}
