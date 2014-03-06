@@ -74,83 +74,83 @@
 \contentsline {subsection}{\numberline {3.1.6}YETI Report}{47}{subsection.3.1.6}
 \contentsline {subsection}{\numberline {3.1.7}YETI Graphical User Interface}{48}{subsection.3.1.7}
 \contentsline {subsection}{\numberline {3.1.8}Summary}{50}{subsection.3.1.8}
-\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{53}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}
-\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{54}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Random Strategy (R)}{55}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Random+ Strategy (R+)}{55}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping (DSS)}{56}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{58}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR Strategy by Example}{60}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Implementation of the DSSR Strategy}{61}{section.4.3}
-\contentsline {section}{\numberline {4.4}Evaluation}{62}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Research Questions}{62}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experiments}{63}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Performance Measurement Criteria}{63}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Results}{67}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Is there an absolute best amongst R, R+ \& DSSR strategies?}{67}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{68}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy amongst R, R+ \& DSSR?}{68}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Discussion}{68}{section.4.6}
-\contentsline {section}{\numberline {4.7}Related Work}{71}{section.4.7}
-\contentsline {section}{\numberline {4.8}Conclusions}{72}{section.4.8}
-\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{73}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{73}{section.5.1}
-\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{75}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}GUI front-end for Providing Input:}{75}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Automated Finding of Fault:}{76}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Automated Generation of Modules:}{76}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules to Discover Domains:}{77}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph Showing Domains:}{78}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Implementation}{78}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{78}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{79}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Example}{79}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Experimental Results}{80}{section.5.4}
-\contentsline {section}{\numberline {5.5}Discussion}{87}{section.5.5}
-\contentsline {section}{\numberline {5.6}Threats to Validity}{88}{section.5.6}
-\contentsline {section}{\numberline {5.7}Related Works}{88}{section.5.7}
-\contentsline {section}{\numberline {5.8}Conclusions}{89}{section.5.8}
-\contentsline {chapter}{\numberline {6}Analysis of Failure-Domain by ADFD+ and Daikon}{90}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{90}{section.6.1}
-\contentsline {section}{\numberline {6.2}Preliminaries}{91}{section.6.2}
-\contentsline {section}{\numberline {6.3}Automated Discovery of Failure Domain+}{92}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{93}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{94}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Example to Illustrate Working of ADFD+}{94}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Daikon}{96}{section.6.4}
-\contentsline {section}{\numberline {6.5}Evaluation of Daikon by ADFD+}{96}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Research Questions}{96}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Experimental Setup}{97}{subsection.6.5.2}
-\contentsline {section}{\numberline {6.6}Results}{97}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Test of One-dimension Programs by ADFD+}{97}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Test of One-dimension Programs by Daikon}{99}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Test of Two-dimension Programs by ADFD+}{99}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Test of Two-dimension Programs by Daikon}{101}{subsection.6.6.4}
-\contentsline {section}{\numberline {6.7}Discussion}{101}{section.6.7}
-\contentsline {section}{\numberline {6.8}Threats to Validity}{102}{section.6.8}
-\contentsline {section}{\numberline {6.9}Conclusions}{103}{section.6.9}
-\contentsline {section}{\numberline {6.10}Future Work}{103}{section.6.10}
-\contentsline {chapter}{\numberline {7}Conclusions}{104}{chapter.7}
-\contentsline {section}{\numberline {7.1}Lessons Learned}{105}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Performance measurement criteria may be carefully chosen}{106}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Test results of random testing are fluctuating}{106}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}More computation decreases performance and increases overhead}{107}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}Starting with random testing and switching to exhaustive strategy helps}{107}{subsection.7.1.4}
-\contentsline {subsection}{\numberline {7.1.5}Graphical form helps to easily understand the output}{107}{subsection.7.1.5}
-\contentsline {subsection}{\numberline {7.1.6}Auto-generation of data is simple for primitive types and complicated for reference data types}{108}{subsection.7.1.6}
-\contentsline {subsection}{\numberline {7.1.7}Graphical representation of multi-argument method and reference data type is complicated}{108}{subsection.7.1.7}
-\contentsline {subsection}{\numberline {7.1.8}Contracts are helpful in finding failures, used as documentation and oracle}{109}{subsection.7.1.8}
-\contentsline {chapter}{\numberline {8}Future Work}{110}{chapter.8}
-\contentsline {section}{\numberline {8.1}Introduction}{110}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Use of contracts and assertions to find a failure}{110}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}introducing object distance in DSSR}{111}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}Measure of the coverage achieved by DSSR, ADFD and ADFD+}{111}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}Extend ADFD and ADFD+ to test non-numerical and reference type data}{111}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}Extend ADFD and ADFD+ to represent multi-dimensional programs}{112}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}Improving the user interface of ADFD+}{112}{subsection.8.1.6}
-\contentsline {subsection}{\numberline {8.1.7}Evaluating the effectiveness of ADFD+ in real world programs}{112}{subsection.8.1.7}
-\contentsline {subsection}{\numberline {8.1.8}Characterizing the number of programs containing point, block and strip failure-domains}{112}{subsection.8.1.8}
-\contentsline {chapter}{\numberline {A} }{114}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{114}{section.A.1}
-\contentsline {chapter}{Bibliography}{119}{lstnumber.-16.16}
+\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{52}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{53}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Random Strategy (R)}{54}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Random+ Strategy (R+)}{54}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping (DSS)}{55}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Structure of the Dirt Spot Sweeping Random Strategy}{57}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR Strategy by Example}{59}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Implementation of the DSSR Strategy}{60}{section.4.3}
+\contentsline {section}{\numberline {4.4}Evaluation}{61}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Research Questions}{61}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experiments}{62}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Performance Measurement Criteria}{62}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Results}{66}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Is there an absolute best amongst R, R+ \& DSSR strategies?}{66}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{67}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy amongst R, R+ \& DSSR?}{67}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Discussion}{67}{section.4.6}
+\contentsline {section}{\numberline {4.7}Related Work}{70}{section.4.7}
+\contentsline {section}{\numberline {4.8}Conclusions}{71}{section.4.8}
+\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{72}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{72}{section.5.1}
+\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{74}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}GUI front-end for Providing Input:}{74}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Automated Finding of Fault:}{75}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Automated Generation of Modules:}{75}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules to Discover Domains:}{76}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph Showing Domains:}{77}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Implementation}{77}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{77}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{78}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Example}{78}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Experimental Results}{79}{section.5.4}
+\contentsline {section}{\numberline {5.5}Discussion}{86}{section.5.5}
+\contentsline {section}{\numberline {5.6}Threats to Validity}{87}{section.5.6}
+\contentsline {section}{\numberline {5.7}Related Works}{87}{section.5.7}
+\contentsline {section}{\numberline {5.8}Conclusions}{88}{section.5.8}
+\contentsline {chapter}{\numberline {6}Analysis of Failure-Domain by ADFD+ and Daikon}{89}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{89}{section.6.1}
+\contentsline {section}{\numberline {6.2}Preliminaries}{90}{section.6.2}
+\contentsline {section}{\numberline {6.3}Automated Discovery of Failure Domain+}{91}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{92}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{93}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Example to Illustrate Working of ADFD+}{93}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Daikon}{95}{section.6.4}
+\contentsline {section}{\numberline {6.5}Evaluation of Daikon by ADFD+}{95}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Research Questions}{95}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Experimental Setup}{96}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Results}{96}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Test of One-dimension Programs by ADFD+}{96}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Test of One-dimension Programs by Daikon}{98}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Test of Two-dimension Programs by ADFD+}{98}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}Test of Two-dimension Programs by Daikon}{100}{subsection.6.6.4}
+\contentsline {section}{\numberline {6.7}Discussion}{100}{section.6.7}
+\contentsline {section}{\numberline {6.8}Threats to Validity}{101}{section.6.8}
+\contentsline {section}{\numberline {6.9}Conclusions}{102}{section.6.9}
+\contentsline {section}{\numberline {6.10}Future Work}{102}{section.6.10}
+\contentsline {chapter}{\numberline {7}Conclusions}{103}{chapter.7}
+\contentsline {section}{\numberline {7.1}Lessons Learned}{104}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Performance measurement criteria may be carefully chosen}{105}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Test results of random testing are fluctuating}{105}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}More computation decreases performance and increases overhead}{106}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Starting with random testing and switching to exhaustive strategy helps}{106}{subsection.7.1.4}
+\contentsline {subsection}{\numberline {7.1.5}Graphical form helps to easily understand the output}{106}{subsection.7.1.5}
+\contentsline {subsection}{\numberline {7.1.6}Auto-generation of data is simple for primitive types and complicated for reference data types}{107}{subsection.7.1.6}
+\contentsline {subsection}{\numberline {7.1.7}Graphical representation of multi-argument method and reference data type is complicated}{107}{subsection.7.1.7}
+\contentsline {subsection}{\numberline {7.1.8}Contracts are helpful in finding failures, used as documentation and oracle}{108}{subsection.7.1.8}
+\contentsline {chapter}{\numberline {8}Future Work}{109}{chapter.8}
+\contentsline {section}{\numberline {8.1}Introduction}{109}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Use of contracts and assertions to find a failure}{109}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}introducing object distance in DSSR}{110}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Measure of the coverage achieved by DSSR, ADFD and ADFD+}{110}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}Extend ADFD and ADFD+ to test non-numerical and reference type data}{110}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}Extend ADFD and ADFD+ to represent multi-dimensional programs}{111}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}Improving the user interface of ADFD+}{111}{subsection.8.1.6}
+\contentsline {subsection}{\numberline {8.1.7}Evaluating the effectiveness of ADFD+ in real world programs}{111}{subsection.8.1.7}
+\contentsline {subsection}{\numberline {8.1.8}Characterizing the number of programs containing point, block and strip failure-domains}{111}{subsection.8.1.8}
+\contentsline {chapter}{\numberline {A} }{113}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{113}{section.A.1}
+\contentsline {chapter}{Bibliography}{118}{lstnumber.-16.16}
