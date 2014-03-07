@@ -57,12 +57,33 @@ Similarly, the tester might also add some other special values that he considers
 \subsection{Dirt Spot Sweeping}
 Chan et al.~\cite{chan1996proportional} found that there are domains of failure-causing inputs across the input domain. Figure \ref{fig:patterns3} shows these domains for two-dimensional input domain. They divided these domains into three types called point, block and strip domains. The black area inside the box in the form of points, block and strip shows the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these failure domains if test cases far away from each other are selected. Other researchers~\cite{chen2004mirror, chan2003normalized, chen2007quasi}, also tried to generate test cases further away from one another targeting these domains and achieved better performance. The increase in performance indicates that failures more often occur contiguously across the input domain. When test value reveals a failure in a program then DSS may not look farthest away for the selection of next test value but picks the closest test values for the next several tests to find another failure from the same region.
 
-\begin{figure}[ht]                                    
+\begin{figure} [H]
 \centering
-\includegraphics[width= 10cm,height=4cm]{chapter4/ART_Patterns.png}
+\subfigure[Point domain]{
+\includegraphics[width=3.6cm,height=3.6cm]{chapter4/point.png}
+\label{fig:point}
+}
+\subfigure[Block domain]{
+\includegraphics[width=3.6cm,height=3.6cm]{chapter4/block.png}
+\label{fig:block}
+}
+\subfigure[Strip domain]{
+\includegraphics[width=3.6cm,height=3.6cm]{chapter4/strip.png}
+\label{fig:strip}
+}
+
 \caption{Failure domains across input domain~\cite{chan1996proportional}}
 \label{fig:patterns3}
 \end{figure}
+
+
+
+%\begin{figure}[ht]                                    
+%\centering
+%\includegraphics[width= 10cm,height=4cm]{chapter4/ART_Patterns.png}
+%\caption{Failure domains across input domain~\cite{chan1996proportional}}
+%\label{fig:patterns3}
+%\end{figure}
 
 Dirt spot sweeping is the feature of DSSR strategy that comes into action when a failure is found in the system. On finding a failure, it immediately adds the value causing the failure and its neighbouring values to the existing list of interesting values. For example, in a program when the \verb+int+ type value of 50 causes a failure in the system then spot sweeping will add values from 47 to 53 to the list of interesting values. If the failure lies in the block or strip domain, then adding it's neighbouring values will explore other failures present in the block or strip. In DSSR strategy the list of interesting values is dynamic and changes during the test execution of each program. While in R+ strategy, the list of interesting values remain static and manually changed before the start of each test.
 
@@ -81,7 +102,7 @@ The DSSR strategy continuously tracks the number of failures during the executio
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=12cm, height=14cm]{chapter4/flowchart1.pdf}
+\includegraphics[width=12cm, height=14cm]{chapter4/flowchart1.png}
 \caption{Working mechanism of DSSR Strategy}
 \label{fig:Working_DSSS}
 \end{figure}
