@@ -21,12 +21,11 @@ Carlos Pacheco and Michael~D Ernst.
 \newblock {\em Eclat: Automatic generation and classification of test inputs}.
 \newblock Springer, 2005.
 
-\bibitem{pacheco2007randoop}
-Carlos Pacheco and Michael~D Ernst.
-\newblock Randoop: feedback-directed random testing for java.
-\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
-  Object-oriented programming systems and applications companion}, pages
-  815--816. ACM, 2007.
+\bibitem{leitner2007reconciling}
+Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
+\newblock Reconciling manual and automated testing: The autotest experience.
+\newblock In {\em System Sciences, 2007. HICSS 2007. 40th Annual Hawaii
+  International Conference on}, pages 261a--261a. IEEE, 2007.
 
 \bibitem{marinov2001testera}
 Darko Marinov and Sarfraz Khurshid.
@@ -259,12 +258,6 @@ Jan Tretmans and Axel Belinfante.
 \newblock Automatic testing with formal methods.
 \newblock 2000.
 
-\bibitem{leitner2007reconciling}
-Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
-\newblock Reconciling manual and automated testing: The autotest experience.
-\newblock In {\em System Sciences, 2007. HICSS 2007. 40th Annual Hawaii
-  International Conference on}, pages 261a--261a. IEEE, 2007.
-
 \bibitem{huang2003automated}
 Zhenyu Huang.
 \newblock Automated solutions: Improving the efficiency of software testing,
@@ -401,6 +394,13 @@ Tsong~Yueh Chen and Robert Merkel.
 \newblock Quasi-random testing.
 \newblock {\em Reliability, IEEE Transactions on}, 56(3):562--568, 2007.
 
+\bibitem{pacheco2007randoop}
+Carlos Pacheco and Michael~D Ernst.
+\newblock Randoop: feedback-directed random testing for java.
+\newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
+  Object-oriented programming systems and applications companion}, pages
+  815--816. ACM, 2007.
+
 \bibitem{ciupa2006object}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock Object distance and its application to adaptive random testing of
@@ -432,7 +432,7 @@ Catherine Oriat.
   pages 242--256. Springer, 2005.
 
 \bibitem{visser2004test}
-Willem Visser, Corina~S P?s?reanu, and Sarfraz Khurshid.
+Willem Visser, Corina~S Pasareanu, and Sarfraz Khurshid.
 \newblock Test input generation with java pathfinder.
 \newblock {\em ACM SIGSOFT Software Engineering Notes}, 29(4):97--107, 2004.
 
@@ -447,6 +447,12 @@ Paul Hudak, John Hughes, Simon Peyton~Jones, and Philip Wadler.
 \newblock A history of haskell: being lazy with class.
 \newblock In {\em Proceedings of the third ACM SIGPLAN conference on History of
   programming languages}, pages 12--1. ACM, 2007.
+
+\bibitem{ciupa2007automatic}
+Ilinca Ciupa, Andreas Leitner, et~al.
+\newblock Automatic testing of object-oriented software.
+\newblock In {\em In Proceedings of SOFSEM 2007 (Current Trends in Theory and
+  Practice of Computer Science}. Citeseer, 2007.
 
 \bibitem{jackson2001micromodularity}
 Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
@@ -478,19 +484,18 @@ Sarfraz Khurshid and Darko Marinov.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
   55(3):322--342, 2001.
 
-\bibitem{Oriol2010c}
-Manuel Oriol and Sotirios Tassis.
-\newblock Testing .net code with yeti.
-\newblock In {\em Proceedings of the 2010 15th IEEE International Conference on
-  Engineering of Complex Computer Systems}, ICECCS '10, pages 264--265,
-  Washington, DC, USA, 2010. IEEE Computer Society.
+\bibitem{oriol2010yeti}
+Manuel Oriol and Faheem Ullah.
+\newblock Yeti on the cloud.
+\newblock In {\em Software Testing, Verification, and Validation Workshops
+  (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
 
-\bibitem{oriol2012law}
-M.~Oriol.
+\bibitem{oriol2012random}
+Manuel Oriol.
 \newblock Random testing: Evaluation of a law describing the number of faults
   found.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
-  IEEE Fifth International Conference on}, pages 201--210, 2012.
+  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
 
 \bibitem{chen2010adaptive}
 Tsong~Yueh Chen, Fei-Ching Kuo, Robert~G Merkel, and TH~Tse.
@@ -503,17 +508,6 @@ Ilinca Ciupa, Alexander Pretschner, Manuel Oriol, Andreas Leitner, and Bertrand
 \newblock On the number and nature of faults found by random testing.
 \newblock {\em Software Testing, Verification and Reliability}, 21(1):3--28,
   2011.
-
-\bibitem{Oriol2010b}
-M.~Oriol.
-\newblock The york extensible testing infrastructure (yeti).
-\newblock 2010.
-
-\bibitem{oriol2010yeti}
-Manuel Oriol and Faheem Ullah.
-\newblock Yeti on the cloud.
-\newblock In {\em Software Testing, Verification, and Validation Workshops
-  (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
 
 \bibitem{pacheco2007feedback}
 Carlos Pacheco, Shuvendu~K Lahiri, Michael~D Ernst, and Thomas Ball.
@@ -533,23 +527,12 @@ Simeon~C. Ntafos.
 \newblock {\em Software Engineering, IEEE Transactions on}, 27(10):949--960,
   2001.
 
-\bibitem{oriol2012random}
-Manuel Oriol.
-\newblock Random testing: Evaluation of a law describing the number of faults
-  found.
-\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
-  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
-
 \bibitem{leitner2009effectiveness}
 Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
   Oriol.
 \newblock On the effectiveness of test extraction without overhead.
 \newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
   International Conference on}, pages 416--425. IEEE, 2009.
-
-\bibitem{Oriol2011}
-M.~Oriol.
-\newblock York extensible testing infrastructure, 2011.
 
 \bibitem{tempero2010empirical}
 Ewan Tempero, Steve Counsell, and James Noble.
