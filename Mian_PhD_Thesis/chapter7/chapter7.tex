@@ -52,6 +52,7 @@ The third technique, Automated Discovery of Failure Domain+ (ADFD+) is an upgrad
 
 %The third technique ADFD+ ((Chapter \ref{chap:ADFD+}), is an improvement of ADFD strategy with a better algorithm to find failure and failure-domains. It searches for the failure-domains around the found failure in a given radius instead of the lower and upper bound. The results are collected and  represented on a graph in a more simplified manner. The ADFD+ output is also compared with the Daikon's output to analyse their behaviour in response to known failure domains. Experimental results show that ADFD+ correctly pointed out the planted failure-domains whereas Daikon, which rely on the existing of test cases to generate invariants, was not able to generate invariants that correctly point to the failure-domain. The ADFD+ graphical output is made further user friendly providing labelled graphs making it more simple to understand. Testers and/or developers can inspect those generated graphs for failures and failure-domains, instead of inspecting a large number of all generated tests. 
 
+\newpage
 \section{Lessons Learned}
 Research in the field of software testing has been in progress for more than three decades but only a handful of free and open source fully automated testing tools are available for software testing. The current study is in continuation of the research efforts to find improved testing techniques capable to identify failures and failure domains quickly, efficiently and effectively. In the following section, the lessons learned during the study are presented in the summarized form which may be of interest to the researchers pursuing future research.\\
 
@@ -63,43 +64,78 @@ Research in the field of software testing has been in progress for more than thr
   
     
 %\subsection{Performance measurement criteria may be carefully chosen}
-\textbf{Careful selection of performance measurement criteria}
 
-Various measures including the E-measure, P-measure and F-measure have been reported in the literature for finding the effectiveness of random test strategy. The E-measure and P-measure have been criticised~\cite{chen2005adaptive} and are not considered effective while the F-measure has been often used by various researchers~\cite{chen2004statistical, chen1996expected}. In our initial experiments, the F-measure was used to evaluate the efficiency of test strategy. However it was later realised that this was not the right choice. In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair
-~\cite{liu2012comparison}. \\
 
-\textbf{Test results of random testing are fluctuating} 
 
-In random testing the results of the experiments keep on changing even if all the test parameters and the program under test remain the same. The difference in results is due to the random generation of test input. It is therefore complicated to find the efficiency of one technique in comparison to the other technique. We cope the problem in five different ways. 1) To repeat the experiment for sufficient number of times (30 times in our case) and calculate the average. 2) To execute tests in each experiment for relatively large number of times (10,000 in our case). 3) To take sufficient number of test samples (60 in our case) before reaching any conclusion. 4) To Experiment on error-seeded programs where the precise locations of faults are well know before the test. 5) To compare the obtained results with other relevant strategies and find the statistical significance. All the above suggestions minimize the effect of randomness, however, the experiments must be repeated for at least 30 times before deciding the effectiveness of one approach over the other.\\
+
+
+
+
+
+
+\textbf{Selection of performance measurement criteria}
+
+Among the three measuring techniques used for finding the effectiveness of random testing, E-measure and P-measure have been criticised~\cite{chen2005adaptive} while F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing which counts the number of test cases used to find the first failure and the system is then handed over to developers for fixing the identified failure. Presently automated testing tools test the whole system and report all discovered failures in one go, thus F-measure is not the favourable choice. We addressed the issue by measuring the maximum number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the test strategy.\\
+
+%In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair
+%~\cite{liu2012comparison}. 
+%The literature review revealed that the F-measure is used where testing stops after identification of the first failure and the system is given back to the developers to remove the fault. Currently automated testing tools test the whole system and print all discovered failures in one go and F-measure is not the favourable choice. In our experiments, performance of the strategy was measured by the maximum number of failures detected in SUT by a particular number of test calls \cite{ciupa2007experimental, pacheco2007feedback, ciupa2008predictability}. This measurement was effective because it considers the performance of the strategy when all other factors are kept constant.\\
+
+
+
+
+
+
+
+
+
+\textbf{Test results in random testing keep on changing} 
+
+In random testing, due to the random generation of test input, the results keep on changing even if all the test parameters and the program under test remain the same. Therefore the efficiency of one technique in comparison with the other becomes difficult. We addressed  the issue by taking five steps. 1) Each experiment was repeated 30 times and the average was taken for comparison 2) In each experiment 10000 test cases were executed to minimize the random effect 3) Sufficiently large number of representative test samples (60) were taken for evaluation 4) Error seeded programs with known locations of faults were used to verify the results 5) The experimental results were statistically analysed to estimate the difference on statistical basis.\\
+
 
    
-\textbf{More computation decreases performance and increases overhead}
+\textbf{Higher computation increases overhead and decreases performance}
 
-Versions of random testing \cite{} improves the fault finding ability of the technique, however, the cost of generating test data is too high and results in unwanted overhead. It is difficult to achieve high quality strategy without any overhead but efforts should be made to keep it to bare minimum. For example, if we test a program with two strategies A and B. Strategy A consumes 100 tests to find a fault while strategy B consumes 500 tests to find the same fault.  It looks that strategy A supersedes strategy B however the time to generate the test cases may also be considered which can be equal for both the strategies. In addition to time other resources like hardware etc should also be kept minimum.\\
-
-
-\textbf{Starting with random testing and switching to exhaustive strategy helps}
-
-In our techniques ADFD and ADFD+, we started the test using random strategy and later switched to exhaustive strategy to find the failure domain of a program. In the strategies the testing starts with random strategy and when a failure is identified the test strategy changes to exhaustive strategy and search all the values around the failure to the specified range set by the tester. The benefit of the approach is that it quickly identify the neighbouring faults which may be difficult to find using random strategy. \\
+Attempts to evolve new versions of random testing with higher fault finding ability usually result in increased computation, higher overhead and lower performance. We addressed the issue by developing new strategies which uses neighbouring values around the failure finding value for the subsequent tests. This approach saves the computation involved in generating suitable test values from the whole input domain. \\
+%It is difficult to achieve high quality strategy without any overhead but efforts should be made to keep it to bare minimum. For example, if we test a program with two strategies A and B. Strategy A consumes 100 tests to find a fault while strategy B consumes 500 tests to find the same fault.  It looks that strategy A supersedes strategy B however the time to generate the test cases may also be considered which can be equal for both the strategies. In addition to time other resources like hardware etc should also be kept minimum.\\
 
 
-\textbf{Graphical form helps to easily understand the output}
+\textbf{Random testing coupled with exhaustive testing}
 
-In our technique we represented the test output in an easy to understand graphical form. The lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. The graph shows red points when the program fails for only one value, block when the program fails for multiple values and strip when the program fails for a long range of values.  The technique help the debuggers in two ways. First, it reduces the `to' and `from' movement of the program between the testers and debuggers as it identify all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.\\
-
-\textbf{Auto-generation of data is simple for primitive types and complicated for reference data types}
-
-We found that comparatively it is less challenging to auto-generate primitive data type values than reference or object or user defined data type values using random testing. To meet the challenge our strategy constructed test cases by creating objects of the classes under test and randomly calls its methods with random inputs according to the parameter's-space. We divided input values into two types i.e. primitive data types and user defined data types. For primitive data types as methods parameters, the random strategy calls \verb+Math.random()+ method to generate arithmetic values which are converted to the required type using Java cast operation. For user-defined data type as a parameter the strategy calls the constructor to generate object of the class at run time. The constructor may possibly require another object, then the strategy recursively calls the constructor of that object. This process is continued till an object with empty constructor or a constructor with only primitive types or the set level of recursion is reached.\\
+Random testing generates test values from the input domain at random. Exhaustive testing although very effective yet it is not feasible for the whole input domain. The issue was addressed in our experiments by coupling the random testing with exhaustive testing. In our newly developed strategies the testing starts at random till a failure is identified and switches to exhaustive testing to select the values around the failure finding value in the specified range set by the tester. This results in quick identification of the neighbouring failures which may be difficult to find by using random strategy.\\
 
 
-\textbf{Graphical representation of multi-argument method and reference data type is complicated}
+%\textbf{Starting with random testing and switching to exhaustive strategy helps}
 
-The difficulty to represent results is directly proportional to the number of arguments used in a method. Which means as the number of arguments in a method increases, the more dimensions we need and the more complicated the process get in to. Though it is not difficult to extend the approach to test more than two-dimensional programs containing other primitive types, it would however be difficult to plot them on the chart. The approach can also be extended to test object-oriented programs by implementing objects distance proposed by Ciupa et al. \cite{ciupa2006object}. The details of such an implementation with graphical representation will be complicated.\\
+%In our techniques ADFD and ADFD+, we started the test using random strategy and later switched to exhaustive strategy to find the failure domain of a program. In the strategies the testing starts with random strategy and when a failure is identified the test strategy changes to exhaustive strategy and search all the values around the failure to the specified range set by the tester. The benefit of the approach is that it quickly identify the neighbouring faults which may be difficult to find using random strategy. \\
 
 
-\textbf{Contracts are helpful in finding failures, used as documentation and oracle}
 
-Although our research has developed testing techniques that do not require contracts, we found that the effectiveness of automated testing could be further improved if the tools are given extra guidance in the form of pre-conditions, post-conditions and class invariants. Contracts are like assert statements and its violation i.e. when its value turn false indicate an error in the program. It also serves the purpose of documentation and you can tell on the fly what data a software take and the state before and after execution. The post-condition of a program also serves as an oracle.\\
+
+\textbf{Easy to understand user friendly test output}
+Random testing is no exception when it comes to the complexity of understanding and evaluating test results. No random strategy seems to provide graphical representation of the failures and failure-domains. The issue of getting in easy to understand user friendly format has been addressed the present study. The ADFD strategy has been developed with the feature of giving the result output in the visualized graphical form. This feature has been further improved in the ADFD+ strategy which clarify and label individual failures and the failure domains in two-dimensional graph. The identification of failures and failure domains in graphical form helps debuggers keep in view all the occurrences while fixing the fault.  \\
+
+
+%Random testing lacks the capability to 
+%In our technique we represented the test output in an easy to understand graphical form. The lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. The graph shows red points when the program fails for only one value, block when the program fails for multiple values and strip when the program fails for a long range of values.  The technique help the debuggers in two ways. First, it reduces the `to' and `from' movement of the program between the testers and debuggers as it identify all the faults in one go. Second, it identifies locations of all fault domains across the input domain in a user-friendly way helping debugger to fix the fault keeping in view its all occurrences.\\
+%\textbf{Graphical representation of multi-argument method and reference data type is complicated}
+%Results of random testing contains No attempt has been made to represent 
+%The difficulty to represent results is directly proportional to the number of arguments used in a method. Which means as the number of arguments in a method increases, the more dimensions we need and the more complicated the process get in to. Though it is not difficult to extend the approach to test more than two-dimensional programs containing other primitive types, it would however be difficult to plot them on the chart. The approach can also be extended to test object-oriented programs by implementing objects distance proposed by Ciupa et al. \cite{ciupa2006object}. The details of such an implementation with graphical representation will be complicated.\\
+
+
+\textbf{Auto-generation of primitive and user-defined data types}
+
+We noticed that auto-generation of user defined data type is more complex as compared to the primitive data type. We addressed the issue by creating objects of the classes under test and randomly calling the methods with random inputs in accordance with the parameter's space. The inputs were divided into primitive and user defined data types.  For primitive data generation \verb+Math.random()+ method is used and for generation of user-defined data object of the class is created at run time as stated in Section{}. The approach adopted helps in achieving a fully automated testing system.
+
+%The constructor of may possibly require another object, then the strategy recursively calls the constructor of that object. This process is continued till an object with empty constructor or a constructor with only primitive types or the set level of recursion is reached.\\
+
+
+% Send this to future work.
+
+%\textbf{Contracts are helpful in finding failures, used as documentation and oracle}
+
+%Although our research has developed testing techniques that do not require contracts, we found that the effectiveness of automated testing could be further improved if the tools are given extra guidance in the form of pre-conditions, post-conditions and class invariants. Contracts are like assert statements and its violation i.e. when its value turn false indicate an error in the program. It also serves the purpose of documentation and you can tell on the fly what data a software take and the state before and after execution. The post-condition of a program also serves as an oracle.\\
 
 
 %\subsection{Random testing may be a good way to go on with robustness testing}
