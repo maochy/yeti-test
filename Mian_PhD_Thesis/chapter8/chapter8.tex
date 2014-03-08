@@ -4,33 +4,40 @@
 
 \section{Introduction}\label{sec:intro8}
 	
-While this research has demonstrated some of the potential of the newly developed automated random strategies, many opportunities for extending the work exist. This chapter presents a few of the potential directions that such extensions could take. These include improving the implementation of DSSR to reduce overhead (Sections \ref{sec:}); Use of contracts and assertions to find a failure (\ref{}); introducing object distance in DSSR suggested by Ciupa et al. \cite{}; measure of the coverage achieved by DSSR, ADFD and ADFD+ (\ref{}); extend tool to test non-numerical and reference type data in ADFD+ (Section \ref{}); adding the feature of plotting more than two dimensional charts(Sectoin \ref{}); improving the user interface of ADFD+; evaluating the effectiveness of ADFD+ on real world applications (Sections 9.5 and 9.6); and characterizing the number of programs containing point, block and strip failure-domains.
+While this research has demonstrated some of the potential of the newly developed automated random strategies, many opportunities for extending the work exist. This chapter presents a few of the potential directions that such extensions could take. These include improving the implementation of DSSR to reduce overhead (Sections \ref{sec:}); Use of contracts and assertions to find a failure (\ref{}); introducing object distance in DSSR suggested by Ciupa et al. \cite{}; measure of the coverage achieved by DSSR, ADFD and ADFD+ (\ref{}); extend tool to test non-numerical and reference type data in ADFD+ (Section \ref{}); adding the feature of plotting more than two dimensional charts(Sectoin \ref{}); improving the user interface of ADFD+; evaluating the effectiveness of ADFD+ on real world applications (Sections 9.5 and 9.6); and characterizing the number of programs containing point, block and strip failure-domains.\\
 	
-\subsection{Use of contracts and assertions to find a failure}
-No explicit oracles were defined in our experiments to keep the process fully automated. It is a common practice to use the undefined run-time exceptions of the programming language as test oracles in the absence of contracts or assertions. It is assumed that the fault-detection ability could be further improved by keeping the system fully automated if tool like Daikon is integrated with the system which can automatically generate the invariants and annotate these in to the source code.
+\textbf{Use of contracts and assertions to find a failure}
 
-\subsection{introducing object distance in DSSR}
-In the current implementation of DSSR, The techniques add the neighbouring values for primitive types data and Strings. However if a failure is found by a reference data type then no neighbouring value is added. DSSR can be extended to implement support for finding and adding the neighbouring objects by using Artoo \ref{}. Artoo specifies the distance between the objects however it requires a lot of computation in doing so.  
+No explicit oracles were defined in our experiments to keep the process fully automated. It is a common practice to use the undefined run-time exceptions of the programming language as test oracles in the absence of contracts or assertions. It is assumed that the fault-detection ability could be further improved by keeping the system fully automated if tool like Daikon is integrated with the system which can automatically generate the invariants and annotate these in to the source code.\\
 
+\textbf{introducing object distance in DSSR}
 
-\subsection{Measure of the coverage achieved by DSSR, ADFD and ADFD+}
-We predict that the techniques developed in the study will achieve better coverage because they generate more test cases from the area where one failure is discovered. The discovery of failure identifies a legitimate value in most of the cases. However, Random strategies typically achieve low level of coverage~\cite{oriol2010yeti} and all the techniques are originated from random strategy. Therefore, it would be interesting to measure the coverage achieved by DSSR, ADFD and ADFD+.
+In the current implementation of DSSR, The techniques add the neighbouring values for primitive types data and Strings. However if a failure is found by a reference data type then no neighbouring value is added. DSSR can be extended to implement support for finding and adding the neighbouring objects by using Artoo \ref{}. Artoo specifies the distance between the objects however it requires a lot of computation in doing so.  \\
 
 
-\subsection{Extend ADFD and ADFD+ to test non-numerical and reference type data}
-Current implementation of ADFD and ADFD+ tests only numerical programs. This restricts the usability of ADFD+ for production software of non-numerical data types. This can be solved by extending the tool to include testing of other primitive and reference data types. 
+\textbf{Measure of the coverage achieved by DSSR, ADFD and ADFD+}
 
-\subsection{Extend ADFD and ADFD+ to represent multi-dimensional programs}
-The ADFD and ADFD+ in its present state is capable of graphical representation of only one and two dimensional numerical programs. While it would be difficult, it is definitely worthwhile to graphically represent multi dimensional numerical and non numerical programs.
+We predict that the techniques developed in the study will achieve better coverage because they generate more test cases from the area where one failure is discovered. The discovery of failure identifies a legitimate value in most of the cases. However, Random strategies typically achieve low level of coverage~\cite{oriol2010yeti} and all the techniques are originated from random strategy. Therefore, it would be interesting to measure the coverage achieved by DSSR, ADFD and ADFD+.\\
 
-\subsection{Improving the user interface of ADFD+}
-The GUI of ADFD+ provides a fully automated way of evaluating the program under test and representing the results in a graphical form. However the GUI can be extended to give the tester more control (like real time interaction and manual addition of test cases) and better sight of the output graph. More views can also be added like thumbnail view to show more graphs on a single screen and 3D support to present multi-dimensional arguments.
+\textbf{Extend ADFD and ADFD+ to test non-numerical and reference type data}
 
-\subsection{Evaluating the effectiveness of ADFD+ in real world programs}
-The experiments performed to assess the effectiveness of ADFD and ADFD+ used error-seeded programs. This generate a threat to validity i.e. to what degree the classes under test are representatives of true practice. The threat may be reduced to a greater extent in future experiments by taking programs containing both numerical and non-numerical data.  
+Current implementation of ADFD and ADFD+ tests only numerical programs. This restricts the usability of ADFD+ for production software of non-numerical data types. This can be solved by extending the tool to include testing of other primitive and reference data types. \\
 
-\subsection{Characterizing the number of programs containing point, block and strip failure-domains}
-While we know from the literature that the point, block and strip domain of failure exist in the input domain. There is no concrete study to verify how frequent they are and which failure-domain exist more in number than the other two. Its identification can help testers to apply the most appropriate testing technique to the SUT becuase we know that random testing performs better when errors forms block and strip domains as against point domains.
+\textbf{Extend ADFD and ADFD+ to represent multi-dimensional programs}
+
+The ADFD and ADFD+ in its present state is capable of graphical representation of only one and two dimensional numerical programs. While it would be difficult, it is definitely worthwhile to graphically represent multi dimensional numerical and non numerical programs.\\
+
+\textbf{Improving the user interface of ADFD+}
+
+The GUI of ADFD+ provides a fully automated way of evaluating the program under test and representing the results in a graphical form. However the GUI can be extended to give the tester more control (like real time interaction and manual addition of test cases) and better sight of the output graph. More views can also be added like thumbnail view to show more graphs on a single screen and 3D support to present multi-dimensional arguments.\\
+
+\textbf{Evaluating the effectiveness of ADFD+ in real world programs}
+
+The experiments performed to assess the effectiveness of ADFD and ADFD+ used error-seeded programs. This generate a threat to validity i.e. to what degree the classes under test are representatives of true practice. The threat may be reduced to a greater extent in future experiments by taking programs containing both numerical and non-numerical data.  \\
+
+\textbf{Characterizing the number of programs containing point, block and strip failure-domains}
+
+While we know from the literature that the point, block and strip domain of failure exist in the input domain. There is no concrete study to verify how frequent they are and which failure-domain exist more in number than the other two. Its identification can help testers to apply the most appropriate testing technique to the SUT becuase we know that random testing performs better when errors forms block and strip domains as against point domains.\\
 	
 
 
