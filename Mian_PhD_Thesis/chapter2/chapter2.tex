@@ -1,21 +1,21 @@
-\externaldocument{chapter2}
+\externaldocument{chapter2} 
 \chapter{Literature Review}
 \label{chap:softwareTesting}
-The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster (1996) costing \$500 million were caused by minor errors in the software \cite{toweysoftware}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{tassey2002economic}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
+The famous quote of Paul, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. Therefore, in spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may cause a large upset in the system. The destruction of Mariner 1 rocket (1962) due to unit conversion error costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster (1996) costing \$500 million and many more were caused by minor errors in the software \cite{garfinkel2005history, toweysoftware}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{tassey2002economic}. To achieve high quality, a software has to satisfy rigorous stages of testing. The more complex the software, the higher the requirements for software testing and the larger the damage caused when a bug remains in the software.
 
 \section{Software Testing}
-According to the IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTesting_2}. 
+According to the IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTestingParts_2}. 
 
 \begin{figure}[h]
 	\centering
 	\centerline{\includegraphics[width=16cm, height=5cm]{chapter2/softwareTesting.png}}
 	\caption{A simplified version of software testing process}
-	\label{fig:softwareTesting_2}
+	\label{fig:softwareTestingParts_2}
 \end{figure}
 
 The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
 
-In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies fault in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{fig:softwareTestingFlow_2}.
+In traditional testing, when testers find a fault in the software, it is returned to the developers for rectification and consequently given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies failure in the software~\cite{myers2011art}. Fault denotes error made by programmers during software development~\cite{american1984}. The faults on execution can lead to software failures. A software that passes all the tests without giving a single error is not guaranteed to contain no error. The testing process, however, increases reliability and confidence of users in the tested product. Software testing can be divided in to various parts as shown in Figure~\ref{fig:softwareTestingFlow_2}.
 
 
 \begin{figure}[H]
@@ -132,7 +132,7 @@ It is a testing technique which utilizes use-cases of the system to generate tes
 
 % steps taken from presentation of Raional User Conference 2003. Check it for viva.
 \subsubsection{Partition Testing}
-It is a testing technique in which the input domain of a given SUT is divided into equal sub-domains for testing each sub-domain individually. The division is based on software specifications, structure of the code and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly proportional to the quality of sub-domain~\cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called proportional sampling strategy~\cite{chan1996proportional} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided evidence for better performance of proportional partition testing.
+It is a testing technique in which the input domain of a given SUT is divided into equal sub-domains for testing each sub-domain individually. The division is based on software specifications, code structure and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly proportional to the quality of sub-domain~\cite{weyuker1991analyzing}. However, division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called proportional sampling strategy~\cite{chan1996proportional} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} has provided evidence for better performance of proportional partition testing.
 
 
 \subsubsection{Boundary Value Analysis}
@@ -208,7 +208,7 @@ All software testing techniques depend on the availability of test oracle~\cite{
 \item A test oracle to satisfy all conditions is seldom available as rightly pointed out by Weyuker, ``truly general test oracles are often unobtainable''~\cite{weyuker1982testing}. 
 \end{enumerate}
 \bigskip
-Postconditions of a method are the most commonly used test oracle in automated software testing. Postconditions are conditions which must be true after a method is executed. In such oracle a fault is signalled when a postcondition is violated \cite{meyer2009programs}. Some common artefacts used as oracles are as follows.\\*
+Postconditions of a method are the most commonly used test oracle in automated software testing. Postconditions are conditions which must be true after a method is executed. In such oracle a fault is signalled when a post-condition is violated \cite{meyer2009programs}. Some common artefacts used as oracles are as follows.\\*
 \begin{enumerate}
 \item Specification and documentation to generate test oracle. 
 \item Products similar to the SUT but different in algorithm. %to solve the similar problem.
@@ -294,7 +294,7 @@ The benefit of the genetic approach is quick generation of test data with focus 
 
 % Please paraphrase the above section genetic algorithm.
 
-\subsection{Search-based Test Data Generators}
+\subsection{Search-based Test Data Generators} \label{sec:search_based_2}
 It is a technique which uses meta-heuristic algorithms to generate test data. In search-based test data generation technique each input vector~\verb+x+ can be associated with a measure ~\verb+cost(x)+ which represents the difference between the input value~\verb+x+ and the set goal. Input value closer to the set goal has low cost value as against the input value away from the set goal. \\*
 Let us consider the following program.
 
@@ -368,11 +368,11 @@ Random testing is mentioned in the literature for the first time by Hanford in 1
 
 Random testing is a dynamic black-box testing technique in which the software is tested with non-correlated unpredictable test data from the specified input domain~\cite{chan2003normalized}. As stated by Richard~\cite{hamlet1994random}, input domain is first identified then test data are randomly taken from it by means of random generator. The program under test is executed on the test data and the results obtained are compared with the program specifications. The test fails if the results are not according to the specifications and vice versa. Fail results of the test cases reflects failure in the SUT.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=11cm, height=2.5cm ]{chapter2/randomTesting.jpg}
-	\caption{Random Testing}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\includegraphics[width=11cm, height=2.5cm ]{chapter2/randomTesting.jpg}
+%	\caption{Random Testing}
+%\end{figure}
 
 
 
@@ -392,7 +392,7 @@ Generating test data by random generator is quite economical and requires less i
 \section{Input Domain} 
 The input domain comprises all possible inputs for a software, including all the global variables, method arguments and the externally assigned variables. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on, the domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
 
-\subsection{Genuine and Failure-domain}
+\subsection{Genuine and Failure-domain} \label{sec:failuredomains_2}
 \label{sec:genuineandfailuredomain}
 Chan et al. \cite{chan1996proportional} observed that inputs inducing failures are contagious and form certain geometrical shapes in the whole input domain which were divided into point, block and strip failure-domains as described below.
 
@@ -431,7 +431,7 @@ Chan et al. \cite{chan1996proportional} observed that inputs inducing failures a
 
 In Figure~\ref{fig:patterns2} the three square boxes indicate the whole input domains. The white space in each box shows legitimate and faultless values while the black colour in the form of points, block and strip, inside the respective boxes indicates the failures in the form of point, block and strip failure-domains.
 
-
+\newpage
 \section{Versions of Random testing}
 Researchers have tried various approaches to develop improved versions of random testing with better performance. The prominent versions of random testing are as follows:
 \begin{figure}[H]
@@ -439,7 +439,7 @@ Researchers have tried various approaches to develop improved versions of random
 	\centerline{\includegraphics[width=16.5cm, height=18cm]{chapter2/randomTestingVariations.png}}
 	%\centerline{\includegraphics[width=\textwidth]{chapter2/randomTestingVariations.png}}
 	\caption{Various versions of random testing}
-	\label{fig:softwareTestingFlow_2}
+	\label{fig:randomTestingVersions_2}
 \end{figure}
 
 \subsection{Random+ Testing}
@@ -654,7 +654,7 @@ TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to e
 
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16cm, height=12cm]{chapter2/TestEra.png}}
+	\centerline{\includegraphics[width=16cm, height=11.5cm]{chapter2/TestEra.png}}
 	\caption{The architecture of TestEra ~\cite{marinov2001testera}}
 	\label{fig:testera}
 \end{figure}
@@ -695,7 +695,7 @@ The chapter gives an overview of software testing, including definition, common 
 \begin{figure}[H]
 	\centering
 	%\centerline{\includegraphics[width=16cm, height=16cm]{chapter2/softwareTestingFlow.png}}
-	\centerline{\includegraphics[width=15cm, height=14cm]{chapter2/Tools.png}}
+	\centerline{\includegraphics[width=15.5cm, height=15cm]{chapter2/Tools.png}}
 	\caption{Main features of automatic testing tools used in random testing}
 	\label{fig:Tools}
 \end{figure}

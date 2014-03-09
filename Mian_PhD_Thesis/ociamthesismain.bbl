@@ -107,6 +107,11 @@ Lee~J. White.
 \newblock Software testing and verification.
 \newblock {\em Advances in Computers}, 26(1):335--390, 1987.
 
+\bibitem{garfinkel2005history}
+Simson Garfinkel.
+\newblock History’s worst software bugs.
+\newblock {\em Wired News, Nov}, 2005.
+
 \bibitem{toweysoftware}
 Dave Towey.
 \newblock Software quality assurance.
@@ -484,18 +489,17 @@ Sarfraz Khurshid and Darko Marinov.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
   55(3):322--342, 2001.
 
+\bibitem{oriol2010testing}
+Manuel Oriol and Sotirios Tassis.
+\newblock Testing .net code with yeti.
+\newblock In {\em Engineering of Complex Computer Systems (ICECCS), 2010 15th
+  IEEE International Conference on}, pages 264--265. IEEE, 2010.
+
 \bibitem{oriol2010yeti}
 Manuel Oriol and Faheem Ullah.
 \newblock Yeti on the cloud.
 \newblock In {\em Software Testing, Verification, and Validation Workshops
   (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
-
-\bibitem{oriol2012random}
-Manuel Oriol.
-\newblock Random testing: Evaluation of a law describing the number of faults
-  found.
-\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
-  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
 
 \bibitem{chen2010adaptive}
 Tsong~Yueh Chen, Fei-Ching Kuo, Robert~G Merkel, and TH~Tse.
@@ -526,6 +530,13 @@ Simeon~C. Ntafos.
   testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, 27(10):949--960,
   2001.
+
+\bibitem{oriol2012random}
+Manuel Oriol.
+\newblock Random testing: Evaluation of a law describing the number of faults
+  found.
+\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
+  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
 
 \bibitem{leitner2009effectiveness}
 Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
@@ -685,5 +696,10 @@ Christoph Schneckenburger and Johannes Mayer.
 Lee~J White and Edward~I Cohen.
 \newblock A domain strategy for computer program testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
+
+\bibitem{Oriol2011yeti}
+Manuel Oriol.
+\newblock York extensible testing infrastructure.
+\newblock 2011.
 
 \end{thebibliography}

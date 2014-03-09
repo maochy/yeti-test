@@ -14,19 +14,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{YETI Overview}
-York Extensible Testing Infrastructure (YETI), an automated random testing tool developed in Java, is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a fault. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
+York Extensible Testing Infrastructure (YETI), an automated random testing tool developed in Java, is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=4.5cm]{chapter3/yetiOverview.png}
+	\includegraphics[width=15cm, height=4cm]{chapter3/yetiOverview.png}
 	\caption{Working process of YETI}
 	\label{fig:yetiOverview}
 \end{figure}
 
 
-\subsection{YETI Design}
+\section{YETI Design}
 YETI has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
 
-\subsubsection{Core Infrastructure}
+\subsection{Core Infrastructure}
 The core infrastructure is responsible for test data generation, test process management and test report generation. The core infrastructure is split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The package yeti uses classes from yeti.monitoring and yeti.strategies packages and calls classes in the yeti.environment package as shown in the Figure \ref{fig:yetiCore}. 
 
 \begin{figure}[h]
@@ -47,19 +47,19 @@ The most essential classes included in the YETI core infrastructure are:
 \item {\textbf{YetiInitializer:}} It is an abstract class for test initialization.
 \end{enumerate}
 
-\subsubsection{Strategy}
+\subsection{Strategy}
 The strategy defines a specific way to generate test inputs. This part contains six essential strategies stated below.
 \begin{enumerate}
 \item {\textbf{YetiStrategy:}} It is an abstract class which provides interface for every strategy in YETI.
 \item {\textbf{YetiRandomStrategy:}} It implements the random strategy and generates random values for testing. The strategy gives choice to the user to adjust null values probability and the percentage of creating new objects for the test session. 
 \item {\textbf{YetiRandomPlusStrategy:}} It extends the random strategy by adding interesting values to the list of test values. The strategy gives the choice to the user to select the percentage of interesting values used in the test session.
-\item {\textbf{DSSRStrategy:}} It extends random+ strategy by adding the values surrounding the fault value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
-\item {\textbf{ADFDStrategy:}} It extends random+ strategy by adding the feature of graphical representation of faults and their domains. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{DSSRStrategy:}} It extends random+ strategy by adding the values surrounding the failure value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
+\item {\textbf{ADFDStrategy:}} It extends random+ strategy by adding the feature of graphical representation of failures and their domains. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
 \item {\textbf{YetiRandomDecreasingStrategy:}} It extends the random+ strategy by setting the probability value to starts at 100\% and ends at 0\% when the test finishes.
 \item {\textbf{YetiRandomPeriodicStrategy:}} It extends random+ strategy by setting the probability in such a way that it decreases and increases randomly during test session.
 \end{enumerate}
 
-\subsubsection{Language-specific Binding}
+\subsection{Language-specific Binding}
 The language-specific binding facilitates modelling of programming languages. It is extended to provide support for a new language in YETI. The language-specific binding includes the following classes:
 \begin{enumerate}
 \item {\textbf{YetiVariable:}} It is a sub-class of YetiCard, which represents a variable in YETI.
@@ -152,7 +152,7 @@ YETI gives a complete test report at the end of each test session. The report co
 \end{figure}
 
 YETI separates the found bugs from successful executions to simplify the test report. This helps debuggers to easily track the origin of the problem rectification. When a bug is identified during testing, YETI saves the details and present it in the bug report as shown in Figure \ref{bugReport}. The information includes all identifiers of the parameters the method call had along with the time at which the exception occurs.
-
+\bigskip
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport2.png}}
@@ -161,36 +161,46 @@ YETI separates the found bugs from successful executions to simplify the test re
 \end{figure}
 
 \subsection{YETI Graphical User Interface}
-YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI1} present the YETI GUI comprising of thirteen labelled components.
+YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI_3} present the YETI GUI comprising of thirteen labelled components.
 
-\begin{figure}[h]
-	\centering
-	%\frame{\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}}
-	\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}
-	\caption{GUI of YETI}
-	\label{fig:yetiGUI1}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	%\frame{\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}}
+%	\includegraphics[width= 15cm, height = 9.8cm]{chapter3/yetiGUI.png}
+%	\caption{GUI of YETI}
+%	\label{fig:yetiGUI1}
+%\end{figure}
+
+\begin{sidewaysfigure}[htp]
+\centering
+\centerline{\includegraphics[width=24cm,height=16cm]{chapter3/yetiGUI.png}}
+%\includegraphics[width=14cm,height=20cm]{myfigures/plan/project_table.pdf}
+\caption{GUI front-end of YETI}
+\label{fig:yetiGUI_3}
+\end{sidewaysfigure}
+
+
 
 \begin{enumerate}
 
-\item Menu bar:
+\item \textbf{Menu bar:} It contains two menu items i.e. Yeti and File.
 \begin{enumerate}
-\item Yeti menu:
-\item File menu:
+\item \textbf{Yeti menu:} It provides information about YETI contributors and the option to quit the GUI.
+\item \textbf{File menu:} It provides the option to rerun the previously executed scripts.
 \end{enumerate}
-\item Slider of \% null values: It displays the set probability of null values in percentage used as null instance for each variable. The default value of probability is 1. 
-\item Slider of \% new variables: It displays the set probability of creating new instances at each call. The default value of probability is 1. 
-\item Text-box of Max variables per type: It displays the number of variables created for a given type. The default value is 1000.
-\item Progress bar of testing session: It displays the test progress in percentage.
-\item Slider of strategy: It displays the set random strategy for the test session. Each strategy has its own control to change its various parameters. 
-\item Module Name shows the list of the modules under the test. The
+\item \textbf{Slider of \% null values:} It displays the set probability of null values in percentage used as null instance for each variable. The default value of probability is 1. 
+\item \textbf{Slider of \% new variables:} It displays the set probability of creating new instances at each call. The default value of probability is 1. 
+\item \textbf{Text-box of Max variables per type:} It displays the number of variables created for a given type. The default value is 1000.
+\item \textbf{Progress bar of testing session:} It displays the test progress in percentage.
+\item \textbf{Slider of strategy:} It displays the set random strategy for the test session. Each strategy has its own control to change its various parameters. 
+\item \textbf{Module Name:} It shows the list of the modules under the test. The
 modules with ticks are the modules under test. The module names also show all the
 class names in the test module.
-\item Graph window 1: It displays the total number of unique failures over time in the module under test.
-\item Graph window 2: It displays the total number of calls over time to the module under test.
-\item Routine's progress: It displays test progress of each routine in the module represented by four colours. Mostly green and red colour appears indicating successful and unsuccessful calls respectively. Occasionally black and yellow colours appear indicating no calls and incomplete calls respectively.
-\item Graph window 3: It displays the total number of failures over time in the module under test. 
-\item Graph window 4: It displays the total number of variables over time generated by YETI in the test session.
+\item \textbf{Graph window 1:} It displays the total number of unique failures over time in the module under test.
+\item \textbf{Graph window 2:} It displays the total number of calls over time to the module under test.
+\item \textbf{Routine's progress:} It displays test progress of each routine in the module represented by four colours. Mostly green and red colour appears indicating successful and unsuccessful calls respectively. Occasionally black and yellow colours appear indicating no calls and incomplete calls respectively.
+\item \textbf{Graph window 3:} It displays the total number of failures over time in the module under test. 
+\item \textbf{Graph window 4:} It displays the total number of variables over time generated by YETI in the test session.
 %\item displays all the routines in the module under test with a rectangle.
 %Each rectangle presents the results of calls of the routine. The rectangle can have in 4 colors. Black indicates no any calls of this routine. Green indicates that has successful calls of this routine. Red indicates that this routine is called unsuccessfully which means that the call to this routine results in an exception. Yellow indicates undecidable calls, for example if a call cannot finish in predefined time and Yeti stops this call, in this case yeti cannot decide this call is successful or unsuccessful. The text next the routines name show how many calls of this routine and text displays percentage of passed, failed and undescided when the cursor over the rectangle.
 %\item displays a table which contains the unique faults are detected by Yeti. It records the detail of exceptions.
@@ -199,12 +209,15 @@ class names in the test module.
 %\item Green indicates successful calls (✓). A successful call is one that does not raise an exception or if it does, the method or the constructor declares to throw it.
 %\item Red indicates failed calls (X). A failed call results from raised RuntimeException or one of its subclasses.
 %\item Yellow indicates “undecidable” calls (?). A call is “undecidable” if for some reason it takes too long to complete and needs to be stopped, or if a YetiSecurityException (custom exception in YETI) is thrown.
-\item Report section: It displays the number of unique fault by date and time, location and type detected in the module under test. 
+\item \textbf{Report section:} It displays the number of unique failure by date and time, location and type detected in the module under test. 
 \end{enumerate}
 
 
-\subsection{Summary}
-The chapter explains in detail the YETI which is being used in this study. The main features of all the tools are noted in the following table.
+\section{Summary}
+The chapter explains in detail the tool YETI which is being used in this study. YETI has been thoroughly reviewed including an overview, design, core infrastructure, strategy, language-specific binding, construction of test cases, command line options, execution, test oracle, report generation and graphical user interface.
+
+
+%The main features of all the tools are noted in the following table.
 
 
 

@@ -15,29 +15,26 @@ A level-1 auxiliary file: chapter8/chapter8.aux
 A level-1 auxiliary file: appendix1/appendix1.aux
 The style file: unsrt.bst
 Database file #1: references1/refs.bib
-Repeated entry---line 781 of file references1/refs.bib
+Repeated entry---line 788 of file references1/refs.bib
  : @article{claessen2011quickcheck
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1000 of file references1/refs.bib
+Repeated entry---line 1007 of file references1/refs.bib
  : @article{radatz1990ieee
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1331 of file references1/refs.bib
+Repeated entry---line 1338 of file references1/refs.bib
  : @incollection{oriat2005jartege
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1429 of file references1/refs.bib
+Repeated entry---line 1427 of file references1/refs.bib
  : @inproceedings{miller2006empirical
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1486 of file references1/refs.bib
+Repeated entry---line 1484 of file references1/refs.bib
  : @inproceedings{pacheco2007randoop
  :                                  ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Oriol2010c"
-Warning--I didn't find a database entry for "Oriol2010b"
-Warning--I didn't find a database entry for "Oriol2011"
 Warning--there's a number but no volume in howden1986functional
 Warning--can't use both volume and number fields in mccabe1983structured
 Warning--can't use both volume and number fields in godefroid2005dart
@@ -53,45 +50,46 @@ Warning--can't use both volume and number fields in boyapati2002korat
 Warning--there's a number but no volume in duran1984evaluation
 Warning--can't use both volume and number fields in offutt1996semantic
 Warning--there's a number but no volume in white1980domain
-You've used 118 entries,
+Warning--empty note in Oriol2011yeti
+You've used 121 entries,
             1791 wiz_defined-function locations,
-            1081 strings with 22473 characters,
-and the built_in function-call counts, 32776 in all, are:
-= -- 3241
-> -- 1083
-< -- 61
-+ -- 412
-- -- 294
-* -- 1994
-:= -- 4664
-add.period$ -- 400
-call.type$ -- 118
-change.case$ -- 103
+            1089 strings with 22804 characters,
+and the built_in function-call counts, 33377 in all, are:
+= -- 3302
+> -- 1099
+< -- 62
++ -- 419
+- -- 298
+* -- 2018
+:= -- 4755
+add.period$ -- 410
+call.type$ -- 121
+change.case$ -- 106
 chr.to.int$ -- 0
-cite$ -- 133
-duplicate$ -- 1654
-empty$ -- 3308
-format.name$ -- 294
-if$ -- 7764
+cite$ -- 137
+duplicate$ -- 1687
+empty$ -- 3368
+format.name$ -- 298
+if$ -- 7906
 int.to.chr$ -- 0
-int.to.str$ -- 118
-missing$ -- 130
-newline$ -- 590
-num.names$ -- 118
-pop$ -- 486
+int.to.str$ -- 121
+missing$ -- 132
+newline$ -- 605
+num.names$ -- 121
+pop$ -- 496
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 889
+skip$ -- 908
 stack$ -- 0
-substring$ -- 2446
-swap$ -- 601
-text.length$ -- 61
+substring$ -- 2478
+swap$ -- 613
+text.length$ -- 62
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 15
-while$ -- 351
-width$ -- 121
-write$ -- 1326
+warning$ -- 16
+while$ -- 357
+width$ -- 124
+write$ -- 1357
 (There were 5 error messages)

@@ -18,6 +18,7 @@ Random (DSSR) strategy  which starts as a random+ (R+) strategy focusing more on
 
 
 We implemented the DSSR strategy in York Extensible Testing Infrastructure (YETI) \url{http://www.yetitest.org}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus \url{http://www.qualitascorpus.com} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies perform equally, for remaining 47\% classes, DSSR strategy performed up to 33\% better than R and up to 17\% better than R+ strategy.
+
 We also validated the approach by comparing the significance of these results using TTest and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no significant difference statistically. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
 
 %The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion3} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
@@ -55,26 +56,26 @@ Similarly, the tester might also add some other special values that he considers
 
 
 \subsection{Dirt Spot Sweeping}
-Chan et al.~\cite{chan1996proportional} found that there are domains of failure-causing inputs across the input domain. Figure \ref{fig:patterns3} shows these domains for two-dimensional input domain. They divided these domains into three types called point, block and strip domains. The black area inside the box in the form of points, block and strip shows the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these failure domains if test cases far away from each other are selected. Other researchers~\cite{chen2004mirror, chan2003normalized, chen2007quasi}, also tried to generate test cases further away from one another targeting these domains and achieved better performance. The increase in performance indicates that failures more often occur contiguously across the input domain. When test value reveals a failure in a program then DSS may not look farthest away for the selection of next test value but picks the closest test values for the next several tests to find another failure from the same region.
+Chan et al.~\cite{chan1996proportional} found that there are domains of failure-causing inputs across the input domain. Section~\ref{sec:failuredomains_2} shows these domains for two-dimensional input domain. They divided these domains into three types called point, block and strip domains. The black area inside the box in the form of points, block and strip shows the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these failure domains if test cases far away from each other are selected. Other researchers~\cite{chen2004mirror, chan2003normalized, chen2007quasi}, also tried to generate test cases further away from one another targeting these domains and achieved better performance. The increase in performance indicates that failures more often occur contiguously across the input domain. When test value reveals a failure in a program then DSS may not look farthest away for the selection of next test value but picks the closest test values for the next several tests to find another failure from the same region.
 
-\begin{figure} [H]
-\centering
-\subfigure[Point domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter4/point.png}
-\label{fig:point}
-}
-\subfigure[Block domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter4/block.png}
-\label{fig:block}
-}
-\subfigure[Strip domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter4/strip.png}
-\label{fig:strip}
-}
+%\begin{figure} [H]
+%\centering
+%\subfigure[Point domain]{
+%\includegraphics[width=3.6cm,height=3.6cm]{chapter4/point.png}
+%\label{fig:point}
+%}
+%\subfigure[Block domain]{
+%\includegraphics[width=3.6cm,height=3.6cm]{chapter4/block.png}
+%\label{fig:block}
+%}
+%\subfigure[Strip domain]{
+%\includegraphics[width=3.6cm,height=3.6cm]{chapter4/strip.png}
+%\label{fig:strip}
+%}
 
-\caption{Failure domains across input domain~\cite{chan1996proportional}}
-\label{fig:patterns3}
-\end{figure}
+%\caption{Failure domains across input domain~\cite{chan1996proportional}}
+%\label{fig:patterns3}
+%\end{figure}
 
 
 
@@ -204,7 +205,7 @@ The DSSR strategy is an extension of YetiRandomPlusStrategy. The class hierarchy
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=6cm,height=8cm]{chapter4/hierarchy.pdf}
+\includegraphics[width=7cm,height=9cm]{chapter4/hierarchy.pdf}
 \caption{Class Hierarchy of DSSR in YETI}
 \label{fig:hierarchyofDSSR}
 \end{figure}
@@ -231,7 +232,7 @@ For evaluating the DSSR strategy, the following research questions have been add
 
 
 \subsection{Experiments}
-We performed extensive testing of programs from the Qualitas Corpus~\cite{tempero2010empirical}. The Qualitas Corpus is a curated collection of open source Java projects built with the aim of helping empirical research in the field of software engineering. These projects have been collected in an organised form containing the source and binary forms. Version 20101126 containing 106 open source Java projects was used in the current evaluation. In our experiments we randomly selected 60 classes from 32 projects taken at random. All the selected classes produced at least one failure and did not time out with maximum testing session of 10 minutes. Every class was tested thirty times by each strategy (R, R+, DSSR). Name, version and size of the projects to which the classes belong are given in Table~\ref{table:projects} while test details of the classes are presented in Table~\ref{table:Results}. Line of Code (LOC) tested per class and the total LOC's tested are shown in column 3 of Table~\ref{table:Results}. 
+We performed extensive testing of programs from the Qualitas Corpus~\cite{tempero2010empirical}. The Qualitas Corpus is a curated collection of open source Java projects built with the aim of helping empirical research in the field of software engineering. These projects have been collected in an organised form containing the source and binary forms. The Qualitas Corpus [version 20101126] containing 106 open source Java projects was used in the current evaluation. In our experiments we randomly selected 60 classes from 32 projects taken at random. All the selected classes produced at least one failure and did not time out with maximum testing session of 10 minutes. Every class was tested thirty times by each strategy (R, R+, DSSR). Name, version and size of the projects to which the classes belong are given in Table~\ref{table:projects} while test details of the classes are presented in Table~\ref{table:Results}. Line of Code (LOC) tested per class and the total LOC's tested are shown in column 3 of Table~\ref{table:Results}. 
 
 Every class is evaluated through $10^5$ calls in each test session. %\footnote{The total number of tests is thus \verb+60\times 30\times 3 \times 10^5 = 540\times 10^6~tests+.} 
 The approach similar to that used in previous studies when the contracts and assertions in the code under test are absent was followed in the study~\cite{oriol2012random}. The undeclared exceptions were treated as failures.
