@@ -78,12 +78,12 @@ YETI construct test cases by creating objects of the classes under test and rand
 \subsection{Command-line Options}
 YETI is provided with several command line options which a tester can enable or disable according to the test requirement. These options are case insensitive and can be provided in any order as input to YETI from command line interface. As an example, a tester can use command line option $-nologs$ to bypass real time logging and save processing power by reducing overhead. Table~\ref{table:cliOptions} includes some of the common command line options available in YETI.
 
-\begin{table}[h]
+\begin{table}[H]
 %\scriptsize
 \caption{YETI command line options} % title of Table
 \bigskip
 \centering
-{\renewcommand{\arraystretch}{1.5}
+{\renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|l|} % centered columns (4 columns)
 \hline
 
@@ -116,7 +116,7 @@ Options						&Purpose 										\\ \hline
 
 
 \subsection{YETI Execution}
-YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.
+YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.\\
 
 \begin{figure}[h!]
 	\centering
@@ -125,7 +125,8 @@ YETI, developed in Java, is highly portable and can easily run on any operating 
 	\label{fig:yeticommand}
 \end{figure}
 
- In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. Other CLI options are already indicated in Table \ref{table:cliOptions}. To execute YETI from GUI, $YetiLauncher$ presented in Figure \ref{fig:yetiLauncher} has been created for use in the present study.
+\bigskip
+In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. Other CLI options are already indicated in Table \ref{table:cliOptions}. To execute YETI from GUI, $YetiLauncher$ presented in Figure \ref{fig:yetiLauncher} has been created for use in the present study.
 
 \begin{figure}[h]
 	\centering
@@ -144,7 +145,7 @@ If specifications or assertions are absent, YETI performs robustness testing whi
 
 \subsection{YETI Report}
 YETI gives a complete test report at the end of each test session. The report contains all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assigned values to help in debugging the identified fault. 
-\\
+
 \begin{figure}[h]
 	\centering
 	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport1.png}}
