@@ -119,7 +119,7 @@ public class Error {
 }
 \end{lstlisting}
 
-On test execution, the ADFD+ strategy evaluates the class with the help of YETI and finds the first failure at x = 6 and y = 3. Once a failure is identified ADFD+ uses the surrounding values around it to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two-dimensional graph with red filled circles indicating fail values and blue filled circles indicating pass values. Figure~\ref{fig:adfdPlusExample} shows that the failure domain forms a block pattern and the boundaries of the failure are $(5, 2), (5, 3),(5, 4), (6, 2), (6, 4), (7, 2), (7, 4),\\ (8, 2), (8, 3), (8, 4)$. 
+On test execution, the ADFD+ strategy evaluates the class with the help of YETI and finds the first failure at x = 6 and y = 3. Once a failure is identified ADFD+ uses the surrounding values around it to find a failure domain. The range of surrounding values is limited to the value set by the user in the $Domain Range$ variable. When the value of $Domain Range$ is 5, ADFD+ evaluates total of 83 values of $x$ and $y$ around the found failure. All evaluated (x, y) values are plotted on a two-dimensional graph with red filled circles indicating fail values and blue filled circles indicating pass values. Figure~\ref{fig:adfdPlusExample} shows that the failure domain forms a block pattern and the boundaries of the failure are $(5, 2), (5, 3),(5, 4), (6, 2), (6, 4), (7, 2), (7, 4), (8, 2), (8, 3), (8, 4)$. 
 
 
 
@@ -159,12 +159,8 @@ Due to the absence of contracts and assertions in the code under test, undeclare
 The results are split in to four sub-sections for convenience. 
 
 
-
-
-
-
 \subsection{Test of One-dimension Programs by ADFD+}\label{sec:intro6_10}
-In each of the 30 experiments, The ADFD+ successfully discovered and plotted the failure domains for point, block and strip pattern as shown in the Figure~\ref{fig:failureDomainsOneDimension_6}. The lower and upper bound for each experiment are set to -100 and 100 respectively.
+In each of the 30 experiments, The ADFD+ successfully discovered and plotted the failure domains for point, block and strip pattern as shown in the Figure~\ref{fig:failureDomainsOneDimension_6}. The range value for each experiment was set to 100.
 
 \begin{figure} [H]
 \centering
@@ -207,6 +203,14 @@ x =~~23 		& 	 				& 					\\
 
 
 \subsection{Test of One-dimension Programs by Daikon}
+
+
+
+
+
+
+
+
 
 
 \subsection{Test of Two-dimension Programs by ADFD+}\label{sec:intro6_11}
@@ -263,6 +267,14 @@ x = 9, y = 10	& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
 \end{table}
 
 \subsection{Test of Two-dimension Programs by Daikon}\label{sec:intro6_12}
+
+
+
+
+
+
+
+
 
 
 
