@@ -13,7 +13,7 @@
 %														 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{YETI Overview}
+\section{Overview}
 York Extensible Testing Infrastructure (YETI), an automated random testing tool developed in Java, is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{https://code.google.com/p/yeti-test/downloads/list}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
 \begin{figure}[h]
 	\centering
@@ -23,7 +23,7 @@ York Extensible Testing Infrastructure (YETI), an automated random testing tool 
 \end{figure}
 
 
-\section{YETI Design}
+\section{Design}
 YETI has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
 
 \subsection{Core Infrastructure}
@@ -115,7 +115,7 @@ Options						&Purpose 										\\ \hline
 \end{table}
 
 
-\subsection{YETI Execution}
+\subsection{Execution}
 YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.\\
 
 \begin{figure}[h!]
@@ -136,14 +136,14 @@ In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 9
 \end{figure}
 
 
-\subsection{YETI Test Oracle}
+\subsection{Test Oracle}
 YETI uses one of the two approaches for oracle. In the presence of program specifications, it checks for inconsistencies between the code and the specifications. In the absence of specifications it checks for assertion violation.% if assert statements are included by the programmer. However in the absence of 
 If specifications or assertions are absent, YETI performs robustness testing which considers any undeclared runtime exceptions as failures. 
 
 %If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing.
 %YETI deals with the oracle problem in two ways. If available, it uses code-contracts as oracles, however in the absence of contracts it uses runtime exceptions as errors which is also known as robustness testing.
 
-\subsection{YETI Report}
+\subsection{Report}
 YETI gives a complete test report at the end of each test session. The report contains all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assigned values to help in debugging the identified fault. 
 
 \begin{figure}[h]
@@ -161,7 +161,7 @@ YETI separates the found bugs from successful executions to simplify the test re
 	\label{bugReport}
 \end{figure}
 
-\subsection{YETI Graphical User Interface}
+\subsection{Graphical User Interface}
 YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI_3} present the YETI GUI comprising of thirteen labelled components.
 
 %\begin{figure}[h]

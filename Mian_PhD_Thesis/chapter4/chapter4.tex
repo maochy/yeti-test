@@ -19,7 +19,7 @@ Random (DSSR) strategy  which starts as a random+ (R+) strategy focusing more on
 
 We implemented the DSSR strategy in York Extensible Testing Infrastructure (YETI) \url{http://www.yetitest.org}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus \url{http://www.qualitascorpus.com} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies perform equally, for remaining 47\% classes, DSSR strategy performed up to 33\% better than R and up to 17\% better than R+ strategy.
 
-We also validated the approach by comparing the significance of these results using TTest and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no significant difference statistically. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
+We also validated the approach by comparing the significance of these results using t test and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no significant difference statistically. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
 
 %The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion3} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
 
@@ -413,7 +413,7 @@ DSSR found higher number of maximum unique failures (1118) than R (1075), and R+
 % How to write relative standard deviation.
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
 
-\subsection{Is there an absolute best amongst R, R+ \& DSSR strategies?}
+\subsection{Absolute best in R, R+ \& DSSR strategies}
 Based on our findings DSSR is at least as good as R and R+ in almost all cases, it is significantly better than both R and R+ in 12\% of the classes. Figure~\ref{fig:LineChart} presents the performance of DSSR in comparison with R and R+ strategies in 17 classes showing significant difference. The blue line with diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R+ strategy. 
 
 The improvement of DSSR over R and R+ strategy is calculated by applying the formula (1) and (2) respectively.
@@ -426,13 +426,13 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 
 \begin{table*}[htp]
 \small
-\caption{Results of TTest applied on the experimental data of 29 classes}
+\caption{Results of t test applied on experimental}
 \bigskip
 \centering
 {\renewcommand{\arraystretch}{1.5} 
 \begin{tabular}{rlrrrl}
 \hline
- \multirow{2}{*} {{\textbf {S. No}}}	& \multirow{2}{*}{{\textbf {Class Name}}}	&  \multicolumn{3}{c}{{\textbf {TTest Results}}} & \multirow{2}{*}{{\textbf {Interpretation}}} \\
+ \multirow{2}{*} {{\textbf {S. No}}}	& \multirow{2}{*}{{\textbf {Class Name}}}	&  \multicolumn{3}{c}{{\textbf {t test Results}}} & \multirow{2}{*}{{\textbf {Interpretation}}} \\
 
 		&					& 	DSSR - R		& DSSR - R+		&  R - R+ 		& 		\\
 \hline
@@ -473,9 +473,9 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \label{table:ttest}
 \end{table*}
 
-\subsection{Are there classes for which any of the three strategies provide better results?}
+\subsection{Classes for which any of the three strategies perform better}
 
-TTest applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 7 classes from both R and R+ strategies, in 8 classes from R strategy and in 2 classes from R+ strategy. In no class R and R+ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R+. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R+ strategy. 
+T test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 7 classes from both R and R+ strategies, in 8 classes from R strategy and in 2 classes from R+ strategy. In no class R and R+ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R+. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R+ strategy. 
 
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
@@ -524,7 +524,7 @@ TTest applied to data given in Table~\ref{table:ttest} indicated significantly b
 %Category 9 and 10 shows that neither R nor R+ performed better than DSSR strategy.
 %The last category shows each strategy performing equally well for 43 classes. Expressing in percentage, 72\% classes do not show different behaviours whereas in 28\% of classes, the DSSR strategy performs better than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
 
-\subsection{Can we pick the best default strategy amongst R, R+ \& DSSR?}
+\subsection{The best default strategy in R, R+ \& DSSR}
 
 Analysis of the experimental data revealed that DSSR strategy had an edge over R and R+. This is because of the additional feature of spot sweeping in DSSR strategy. In spite of the better performance of DSSR as compared to R and R+ strategies, the present study does not provide ample evidence to pick it as the best default strategy. This is primarily due to the overhead induced by DSSR strategy, discussed in Section~\ref{sec:discussion3}. Further study might provide some conclusive findings. 
 
@@ -587,7 +587,7 @@ In our experiments we selected projects from the Qualitas Corpus~\cite{tempero20
 %%%%%%%%%%%%%%%%%    CONCLUSIONS   %%%%%%%%%%%%%%%%%%%%
 
 
-\section{Conclusions}\label{sec:conc}
+\section{Summary}\label{sec:conc}
 The main goal of the present study was to develop a new R strategy which could find more failures in lower number of test cases. We developed the ``DSSR strategy'' as an extension of R+, based on the assumption that in a significant number of classes, failure domains are contiguous. The DSS feature of DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. The strategy was implemented in the random testing tool YETI to test 60 classes from Qualitas Corpus, 30 times each with each of the three strategies i.e. R, R+ and DSSR. The newly developed DSSR strategy uncovered more unique failures than both R and R+ strategies with a 5\% overhead. We found out that for 7 (12\%) classes DSSR was significantly better than both R+ and R, for 8 (13\%) classes DSSR performed significantly better than R, while in 2 (3\%) classes DSSR performed significantly better than R+. In all other cases, performance of DSSR, R and R+ showed no significant difference. On overall basis, DSSR produced encouraging results. 
 
 

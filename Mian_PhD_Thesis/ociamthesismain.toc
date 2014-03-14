@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {2.5}Forms of Software Testing}{17}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Manual Software Testing}{18}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Automated Software Testing}{18}{subsection.2.5.2}
-\contentsline {subsection}{\numberline {2.5.3}Software Testing Summary}{18}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.3}Summary}{18}{subsection.2.5.3}
 \contentsline {section}{\numberline {2.6}Test Data Generation}{19}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Path-wise Test Data Generators}{20}{subsection.2.6.1}
 \contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generators}{21}{subsection.2.6.2}
@@ -63,17 +63,17 @@
 \contentsline {subsection}{\numberline {2.10.8}Korat}{40}{subsection.2.10.8}
 \contentsline {section}{\numberline {2.11}Summary}{42}{section.2.11}
 \contentsline {chapter}{\numberline {3}York Extensible Testing Infrastructure}{43}{chapter.3}
-\contentsline {section}{\numberline {3.1}YETI Overview}{43}{section.3.1}
-\contentsline {section}{\numberline {3.2}YETI Design}{44}{section.3.2}
+\contentsline {section}{\numberline {3.1}Overview}{43}{section.3.1}
+\contentsline {section}{\numberline {3.2}Design}{44}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Core Infrastructure}{44}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Strategy}{45}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Language-specific Binding}{46}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Construction of Test Cases}{46}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Command-line Options}{47}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}YETI Execution}{48}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}YETI Test Oracle}{48}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}YETI Report}{48}{subsection.3.2.8}
-\contentsline {subsection}{\numberline {3.2.9}YETI Graphical User Interface}{49}{subsection.3.2.9}
+\contentsline {subsection}{\numberline {3.2.6}Execution}{48}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Test Oracle}{48}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Report}{48}{subsection.3.2.8}
+\contentsline {subsection}{\numberline {3.2.9}Graphical User Interface}{49}{subsection.3.2.9}
 \contentsline {section}{\numberline {3.3}Summary}{52}{section.3.3}
 \contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{53}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{53}{section.4.1}
@@ -89,20 +89,20 @@
 \contentsline {subsection}{\numberline {4.4.2}Experiments}{62}{subsection.4.4.2}
 \contentsline {subsection}{\numberline {4.4.3}Performance Measurement Criteria}{63}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Results}{65}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Is there an absolute best amongst R, R+ \& DSSR strategies?}{67}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Are there classes for which any of the three strategies provide better results?}{69}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Can we pick the best default strategy amongst R, R+ \& DSSR?}{69}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.1}Absolute best in R, R+ \& DSSR strategies}{67}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Classes for which any of the three strategies perform better}{69}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}The best default strategy in R, R+ \& DSSR}{69}{subsection.4.5.3}
 \contentsline {section}{\numberline {4.6}Discussion}{69}{section.4.6}
 \contentsline {section}{\numberline {4.7}Related Work}{71}{section.4.7}
-\contentsline {section}{\numberline {4.8}Conclusions}{72}{section.4.8}
+\contentsline {section}{\numberline {4.8}Summary}{72}{section.4.8}
 \contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{73}{chapter.5}
 \contentsline {section}{\numberline {5.1}Introduction}{73}{section.5.1}
 \contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{75}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}GUI front-end for Providing Input:}{76}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Automated Finding of Failure:}{76}{subsection.5.2.2}
 \contentsline {subsection}{\numberline {5.2.3}Automated Generation of Modules:}{77}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules to Discover Domains:}{77}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph Showing Domains:}{77}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules:}{77}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph:}{77}{subsection.5.2.5}
 \contentsline {section}{\numberline {5.3}Implementation}{78}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{78}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{78}{subsection.5.3.2}
@@ -111,27 +111,26 @@
 \contentsline {section}{\numberline {5.5}Discussion}{87}{section.5.5}
 \contentsline {section}{\numberline {5.6}Threats to Validity}{88}{section.5.6}
 \contentsline {section}{\numberline {5.7}Related Works}{88}{section.5.7}
-\contentsline {section}{\numberline {5.8}Conclusions}{89}{section.5.8}
+\contentsline {section}{\numberline {5.8}Summary}{89}{section.5.8}
 \contentsline {chapter}{\numberline {6}Analysis of Failure-Domain by ADFD+ and Daikon}{90}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{90}{section.6.1}
 \contentsline {section}{\numberline {6.2}Preliminaries}{91}{section.6.2}
 \contentsline {section}{\numberline {6.3}Automated Discovery of Failure Domain+}{91}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Workflow of ADFD+}{92}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Implementation of ADFD+}{93}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Example to Illustrate Working of ADFD+}{94}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Example to Illustrate ADFD+}{94}{subsection.6.3.3}
 \contentsline {section}{\numberline {6.4}Daikon}{95}{section.6.4}
 \contentsline {section}{\numberline {6.5}Evaluation of Daikon by ADFD+}{96}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Research Questions}{96}{subsection.6.5.1}
 \contentsline {subsection}{\numberline {6.5.2}Experimental Setup}{96}{subsection.6.5.2}
 \contentsline {section}{\numberline {6.6}Results}{97}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Test of One-dimension Programs by ADFD+}{97}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Test of One-dimension Programs by Daikon}{99}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}Test of Two-dimension Programs by ADFD+}{99}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}Test of Two-dimension Programs by Daikon}{101}{subsection.6.6.4}
+\contentsline {subsection}{\numberline {6.6.1}Test of One-dimensional Programs by ADFD+}{97}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Test of One-dimensional Programs by Daikon}{99}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}Test of Two-dimensional Programs by ADFD+}{99}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}Test of Two-dimensional Programs by Daikon}{101}{subsection.6.6.4}
 \contentsline {section}{\numberline {6.7}Discussion}{101}{section.6.7}
 \contentsline {section}{\numberline {6.8}Threats to Validity}{102}{section.6.8}
-\contentsline {section}{\numberline {6.9}Conclusions}{103}{section.6.9}
-\contentsline {section}{\numberline {6.10}Future Work}{103}{section.6.10}
+\contentsline {section}{\numberline {6.9}Summary}{103}{section.6.9}
 \contentsline {chapter}{\numberline {7}Conclusions}{104}{chapter.7}
 \contentsline {section}{\numberline {7.1}Lessons Learned}{105}{section.7.1}
 \contentsline {chapter}{\numberline {8}Future Work}{108}{chapter.8}
