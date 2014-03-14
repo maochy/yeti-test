@@ -192,6 +192,29 @@ As the test starts, three failures are quickly discovered by DSSR strategy in th
 The above process explains that including the border, failure-finding and surrounding values to the list of interesting values in DSSR strategy leads to the available failures quickly and in fewer tests as compared to R and R+ strategy. R and R+ takes more number of tests and time to discover the second and third failures because in these strategies the search for new unique failures starts again randomly in spite of the fact that the remaining failures lie in close proximity to the first one.
 
 
+
+
+\begin{figure}[H]
+\centering
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=15cm,height=9cm]{chapter4/random.png}}
+\caption{Test result of random strategy for the example code}
+\label{fig:random_result}
+\end{figure}
+
+\bigskip
+
+\begin{figure}[H]
+\centering
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{1pt}%
+\fbox{\includegraphics[width=15cm,height=9cm]{chapter4/DSSR.png}}
+\caption{Test result of DSSR strategy for the example code}
+\label{fig:dssr_result}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%    IMPLEMENTATION OF DSSR STRATEGY   %%%%%%%%%%%%
 
 
