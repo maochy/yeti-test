@@ -45,27 +45,29 @@ Despite the benefits of random testing, its simplistic and non-systematic nature
 
 
 \begin{enumerate}
-\item Limitation of RT in the discovery of contagious failures.
+\item Limitation of RT to discover contiguous failures.
 \item Inability of RT to identify failure-domains.
-\item Incompetence of RT to represent results in graphical form. 
+\item Incompetence of RT to present results in graphical form. 
 \end{enumerate}
 
-\subsection{Limitation of RT in the Discovery of Contagious Failures}
-Chan et al.~\cite{chan1996proportional} observed that failure inducing inputs are contagious and form certain geometrical patterns in the whole input domain. They divided them into point, block and strip patterns on the basis of their shape (Section~\ref{sec:artpatterns_2}). % put the failure domains section label in the preceeding reference.
-The failure-finding ability of random testing technique decreases when the failures lie in contiguous block and strip patterns across the input domain.
+\subsection{Limitation of RT to discover contiguous failures}
+Chan et al.~\cite{chan1996proportional} observed that failure inducing inputs are contiguous and form certain geometrical patterns in the whole input domain. They divided them into point, block and strip patterns on the basis of their shape (Section~\ref{sec:artpatterns_2}). % put the failure domains section label in the preceeding reference.
+The failure-finding ability of random testing technique decreases when the failures lie in contiguous block and strip patterns across the input domain. Attempts are needed to overcome this limitation of RT by developing suitable random strategy.
 
 \subsection{Inability of RT to Identify Failure-domains}
 %As stated above, the failures in the input domain are contiguous and form point, block and strip patterns. 
-Although failures reside in contagious locations and form certain failure domains across the input domain~\cite{chan1996proportional}, the existing random strategies of software testing tries to discover failure individually from the domains and lack the capability to discover the whole failure domain.
+Although failures reside in contiguous locations and form certain failure domains across the input domain~\cite{chan1996proportional}, the existing random strategies of software testing tries to discover failures individually from the domains and lack the capability to discover the failure-domains. Endeavours are required to be undertaken for developing appropriate random strategy with the potential to identify the failures as well as failure-domains. 
 
 %Random testing is also considered weak in providing high code coverage~\cite{cohen1997aetg, offutt1996semantic}. For example, in random testing when the conditional statement  ``$if (x == 25) then ... $"  is exposed to execution then there is only one chance, of the ``$then...$" part of the statement, to be executed out of $2^\text{32}$ available options. If $x$ is an integer variable of 32 bit value~\cite{godefroid2005dart}. 
 
-\subsection{Incompetence of RT to Represent Results in a Graphical Form}
-Random testing is no exception when it comes to the complexity of understanding and evaluating test results. Modern testing techniques simplify results by truncating the lengthy log files and displaying only the fault revealing test cases in the form of unit tests. No random strategy seems to provide graphical representation of the failures and failure-domains. Efforts are therefore required to get the test results of random testing in a user-friendly graphical form. 
+\subsection{Incompetence of RT to Present Results in Graphical Form}
+Random testing is no exception when it comes to the complexity of understanding and evaluating test results. Modern testing techniques simplify results by truncating the lengthy log files and displaying only the fault revealing test cases in the form of unit tests. No random strategy seems to provide graphical representation of the failures and failure-domains. Efforts are therefore required to get the test results of random testing in user-friendly graphical form. 
 
 
 \section{Research Goals}\label{ResearchGoals_1}
-Goals of the research study are discovering how to leverage failure domain for finding more bugs and understanding the nature of failures and to develop new improved automated random test strategies to achieve the desired goals.
+Goals of the research study are: to understand the nature of failures, how to leverage failure domain for finding more bugs, to develop new improved automated random strategies.
+
+%Goals of the research study are discovering how to leverage failure domain for finding more bugs and understanding the nature of failures and to develop new improved automated random test strategies to achieve the desired goals.
 
 %The main goal of the research study is to develop new techniques for automated random testing with the aim to achieve the following objectives:
 
@@ -85,13 +87,13 @@ The main contributions of the thesis research are as follows:
 %Development of a new enhanced and improved form of automated random testing: the Dirt Spot Sweeping Random (DSSR) strategy. This strategy is based on the assumption that faults and unique failures reside in contiguous blocks and stripes. The DSSR strategy starts as a regular random+ testing strategy � a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failures found in hope of finding failures of different kind in its vicinity.
 %The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random (R) and random+ (R+) strategies by testing 60 classes (35,785 line of code) with one million ($10^\text{6}$) calls for each session, 30 times for each strategy. The results indicate that for 31 classes, all three strategies find the same unique failures. We analysed the 29 remaining classes using t-tests and found that for 7 classes DSSR is significantly better than both R+ and R, for 8 classes it performs similarly to R+ and is significantly better than R, and for 2 classes it performs similarly to random and is better than R+. In all other cases, DSSR, R+ and R do not perform significantly differently. Numerically, the DSSR strategy finds 43 more unique failures than R and 12 more unique failures than R+.
 
-The failure-finding ability of the random testing technique decreases when the failures lie in contiguous locations across the input domain. To overcome the problem, a new automated technique: Dirt Spot Sweeping Random (DSSR) strategy was developed. It is based on the assumption that unique failures reside in contiguous blocks and strips. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Results presented in Chapter~\ref{chap:DSSR} indicate higher failure-finding ability of DSSR strategy as compared with Random (R) and Random+ (R+) strategies.
+The failure-finding ability of the random testing technique decreases when the failures lie in contiguous locations across the input domain. Dirt Spot Sweeping Random (DSSR) strategy was developed as a new automated technique to overcome the problem. It is based on the assumption that unique failures reside in contiguous blocks and strips. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Results presented in Chapter~\ref{chap:DSSR} indicate higher failure-finding ability of DSSR strategy as compared with Random and Random+ strategies.
 
 \subsection{Automated Discovery of Failure Domain}
-The existing random strategies of software testing discover the failures in the SUT but lack the capability of presenting the failure domains. In the present study, a fully automated testing strategy named, ``Automated Discovery of Failure Domain (ADFD)" is developed with the ability to find the failures as well as the failure domains in a given SUT and provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results prove that ADFD strategy automatically performs identification of failures and failure-domains and provides the results in graphical form.
+The existing random strategies of software testing discover the failures in the SUT but lack the capability of presenting the failure domains. In the present study, a fully automated testing strategy named, ``Automated Discovery of Failure Domain (ADFD)" is developed with the ability to find failures as well as failure domains in a given SUT and provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results provide evidence that the newly developed ADFD strategy performs identification of failures as well as failure-domains and provides the results in graphical form.
 
 \subsection{Automated Discovery of Failure Domain+}
-Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. The ADFD+ graphical output was further improved by providing labelled graphs to make it easily understandable and user friendly. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
+Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure-domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. In addition, ADFD output is improved to provide labelled graphs which make ADFD+ output easily understandable and user friendly. To find the effectiveness of ADFD+, it was compared with Daikon by using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
 
 %IGRS is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon, filtered by using DynComp and annotated in to source code as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:ADFD+} indicate improved features of IGRS in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies are either unable to accomplish or require larger duration.  
 
@@ -118,7 +120,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:DSSR}} describes Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures as compared with random and random+ strategies. 
+\textbf{Chapter~\ref{chap:DSSR}} describes Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures and failure domains as compared with random and random+ strategies. \\
 % In majority of the classes DSSR strategy indicates higher fault-finding ability than random and random+ strategies. \\
 
 \hangindent=\parindent
@@ -130,7 +132,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:ADFD+}} presents the Automated Discovery of Failure Domain+ Strategy (ADFD+) strategy. It is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs and the results are reported.\\ 
+\textbf{Chapter~\ref{chap:ADFD+}} presents the Automated Discovery of Failure Domain+ (ADFD+) strategy. It is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs and the results are reported.\\ 
 
 
 %Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
@@ -140,18 +142,18 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:conclusions_7}} concludes with a summary of the contributions and the lessons learned.\\
+\textbf{Chapter~\ref{chap:conclusions_7}} provides conclusions of the study including contributions and the lessons learned.\\
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:futureWork}} highlights the opportunities for future work and challenges that lie ahead in order to make the tool practical. It also suggests the possible approaches to overcome the challanges.\\
+\textbf{Chapter~\ref{chap:futureWork}} highlights the opportunities for future work, challenges that may be faced and possible approaches to overcome the challenges.\\
 
 
  \hangindent=\parindent
  \hangafter=1
  \noindent
- \textbf{Appendix~\ref{chap:appendix1}} ADFD logic implementation and java programs with point, block and strip failure domain.\\
+ \textbf{Appendix~\ref{chap:appendix1}} includes ADFD logic implementation and Java programs with point, block and strip failure domains.\\
 
 \newpage
 \begin{figure}[h]
