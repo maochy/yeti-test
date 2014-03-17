@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  15 MAR 2014 12:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  17 MAR 2014 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -234,6 +234,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks40
 \@floatcapt=\box32
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen126
+\WF@size=\dimen127
+\c@WF@wrappedlines=\count115
+\WF@box=\box33
+\WF@everypar=\toks41
+Package: wrapfig 2003/01/31  v 3.6
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -243,41 +251,41 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen126
-\extrarowheight=\dimen127
-\NC@list=\toks41
+\col@sep=\dimen128
+\extrarowheight=\dimen129
+\NC@list=\toks42
 \extratabsurround=\skip52
 \backup@length=\skip53
 )
-\TX@col@width=\dimen128
-\TX@old@table=\dimen129
-\TX@old@col=\dimen130
-\TX@target=\dimen131
-\TX@delta=\dimen132
-\TX@cols=\count115
-\TX@ftn=\toks42
+\TX@col@width=\dimen130
+\TX@old@table=\dimen131
+\TX@old@col=\dimen132
+\TX@target=\dimen133
+\TX@delta=\dimen134
+\TX@cols=\count116
+\TX@ftn=\toks43
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count116
-\lst@gtempboxa=\box33
-\lst@token=\toks43
-\lst@length=\count117
-\lst@currlwidth=\dimen133
-\lst@column=\count118
-\lst@pos=\count119
-\lst@lostspace=\dimen134
-\lst@width=\dimen135
-\lst@newlines=\count120
-\lst@lineno=\count121
+\lst@mode=\count117
+\lst@gtempboxa=\box34
+\lst@token=\toks44
+\lst@length=\count118
+\lst@currlwidth=\dimen135
+\lst@column=\count119
+\lst@pos=\count120
+\lst@lostspace=\dimen136
+\lst@width=\dimen137
+\lst@newlines=\count121
+\lst@lineno=\count122
 \abovecaptionskip=\skip54
 \belowcaptionskip=\skip55
-\lst@maxwidth=\dimen136
+\lst@maxwidth=\dimen138
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count122
-\lst@skipnumbers=\count123
-\lst@framebox=\box34
+\c@lstnumber=\count123
+\lst@skipnumbers=\count124
+\lst@framebox=\box35
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2007/02/22 1.4 listings configuration
@@ -295,7 +303,7 @@ Package color Info: Driver file: pdftex.def on input line 130.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-\@float@every@table=\toks44
+\@float@every@table=\toks45
 
 (./ADFD+.aux
 
@@ -316,34 +324,37 @@ LaTeX Warning: Label `fig:SFDOne' multiply defined.
 
 LaTeX Warning: Label `sub@fig:SFDOne' multiply defined.
 
+
+LaTeX Warning: Label `table:failureDomains' multiply defined.
+
 )
 \openout1 = `ADFD+.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
+LaTeX Font Info:    ... okay on input line 72.
  (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen137
-\scratchbox=\box35
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen138
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count125
+\scratchdimen=\dimen139
+\scratchbox=\box36
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen140
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks47
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -392,28 +403,28 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count130
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+\c@lstlisting=\count131
+LaTeX Font Info:    Try loading font information for U+msa on input line 112.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 112.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 111.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 112.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-Overfull \hbox (3.36452pt too wide) in paragraph at lines 115--116
+Overfull \hbox (3.36452pt too wide) in paragraph at lines 116--117
 \T1/aer/m/n/9 ated in-de-pen-dently for 30 times by both ADFD+ and Daikon.
  []
 
 
-Overfull \hbox (4.6065pt too wide) in paragraph at lines 146--148
+Overfull \hbox (4.6065pt too wide) in paragraph at lines 147--149
 \T1/aer/m/n/9 plot fail-ure do-mains in multi-dimensional non-numerical
  []
 
@@ -424,15 +435,15 @@ Overfull \hbox (4.6065pt too wide) in paragraph at lines 146--148
 <ART_Patterns.png, id=12, 376.40625pt x 101.62968pt>
 File: ART_Patterns.png Graphic file (type png)
  <use ART_Patterns.png>
-Package pdftex.def Info: ART_Patterns.png used on input line 161.
+Package pdftex.def Info: ART_Patterns.png used on input line 162.
 (pdftex.def)             Requested size: 227.62596pt x 85.36058pt.
 
-Overfull \hbox (5.78029pt too wide) in paragraph at lines 173--173
+Overfull \hbox (5.78029pt too wide) in paragraph at lines 174--174
 []\secfnt AUTOMATED DIS-COV-ERY OF FAIL-URE
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--198
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
 
  []
 
@@ -440,14 +451,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--198
 File: adfdPlusWorkflow.png Graphic file (type png)
 
 <use adfdPlusWorkflow.png>
-Package pdftex.def Info: adfdPlusWorkflow.png used on input line 203.
+Package pdftex.def Info: adfdPlusWorkflow.png used on input line 204.
 (pdftex.def)             Requested size: 241.83702pt x 199.16353pt.
 
-Overfull \hbox (1.83702pt too wide) in paragraph at lines 203--204
+Overfull \hbox (1.83702pt too wide) in paragraph at lines 204--205
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 214.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 215.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -455,21 +466,21 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 <exampleError.png, id=15, 1441.88687pt x 818.55812pt>
 File: exampleError.png Graphic file (type png)
  <use exampleError.png>
-Package pdftex.def Info: exampleError.png used on input line 227.
+Package pdftex.def Info: exampleError.png used on input line 228.
 (pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
 
 [2 <./ART_Patterns.png> <./adfdPlusWorkflow.png>]
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
-(Font)              using `T1/aett/m/n' instead on input line 237.
+(Font)              using `T1/aett/m/n' instead on input line 238.
 
 
-Overfull \hbox (3.57765pt too wide) in paragraph at lines 243--244
+Overfull \hbox (3.57765pt too wide) in paragraph at lines 244--245
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (5.11888pt too wide) in paragraph at lines 251--252
+Overfull \hbox (5.11888pt too wide) in paragraph at lines 252--253
 \OT1/cmr/m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 2)\OML/cmm/m/it/9 ; \OT1/cmr/
 m/n/9 (5\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 3)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (5\
 OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 (6\OML/cmm/m
@@ -482,102 +493,149 @@ T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 .
  []
 
 
-Overfull \hbox (4.59604pt too wide) in paragraph at lines 269--270
+Overfull \hbox (3.93236pt too wide) in paragraph at lines 269--269
+[]\secfnt COMPARISON OF ADFD+ AND DAIKON 
+ []
+
+
+Overfull \hbox (4.59604pt too wide) in paragraph at lines 270--271
 \T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
 t
  []
 
 [3 <./exampleError.png>]
+Overfull \hbox (5.54268pt too wide) in paragraph at lines 277--278
+[]\T1/aer/m/n/9 Is ADFD+ and Daikon ca-pa-ble of iden-ti-fy-ing the bound-
+ []
 
-LaTeX Warning: Reference `' on page \thepage  undefined on input line 280.
+
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 281.
 
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 280.
+ine 281.
 
 
-Overfull \hbox (6.57433pt too wide) in paragraph at lines 295--295
-[]\secfnt Test of one-dimension pro-grams by ADFD+ 
+Overfull \hbox (10.05093pt too wide) in paragraph at lines 281--282
+\T1/aer/m/n/9 ried out test-ing of sev-eral error-seeded one and two-dimensiona
+l
  []
 
 <PFDOne.png, id=27, 790.955pt x 575.14874pt>
 File: PFDOne.png Graphic file (type png)
  <use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 303.
+Package pdftex.def Info: PFDOne.png used on input line 304.
 (pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
 
 <BFDOne.png, id=28, 794.97pt x 575.14874pt>
 File: BFDOne.png Graphic file (type png)
  <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 307.
+Package pdftex.def Info: BFDOne.png used on input line 308.
 (pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
 
 <SFDOne.png, id=29, 789.95125pt x 573.14125pt>
 File: SFDOne.png Graphic file (type png)
  <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 311.
+Package pdftex.def Info: SFDOne.png used on input line 312.
 (pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--312
+Underfull \hbox (badness 10000) in paragraph at lines 304--313
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--312
-[]
- []
-
-
-Underfull \vbox (badness 6741) has occurred while \output is active []
-
-
-Overfull \hbox (3.57433pt too wide) in paragraph at lines 320--320
-[]\secfnt Test of one-dimension pro-grams by Daikon 
- []
-
-
-Overfull \hbox (7.11441pt too wide) in paragraph at lines 323--323
-[]\secfnt Test of two-dimension pro-grams by ADFD+ 
- []
-
-[4 <./PFDOne.png> <./BFDOne.png> <./SFDOne.png>]
-<PFDTwo.png, id=37, 1187.43625pt x 772.8875pt>
-File: PFDTwo.png Graphic file (type png)
- <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 331.
-(pdftex.def)             Requested size: 227.60829pt x 170.708pt.
-
-<BFDTwo.png, id=38, 1192.455pt x 772.8875pt>
-File: BFDTwo.png Graphic file (type png)
- <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 335.
-(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
-
-<SFDTwo.png, id=39, 1192.455pt x 772.8875pt>
-File: SFDTwo.png Graphic file (type png)
- <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 339.
-(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--340
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 331--340
+Underfull \hbox (badness 10000) in paragraph at lines 304--313
 []
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[4 <./PFDOne.png> <./BFDOne.png> <./SFDOne.png>]
+<PFDTwo.png, id=38, 1187.43625pt x 772.8875pt>
+File: PFDTwo.png Graphic file (type png)
+ <use PFDTwo.png>
+Package pdftex.def Info: PFDTwo.png used on input line 347.
+(pdftex.def)             Requested size: 227.60829pt x 170.708pt.
 
-Overfull \hbox (4.11441pt too wide) in paragraph at lines 375--375
-[]\secfnt Test of two-dimension pro-grams by Daikon 
+<BFDTwo.png, id=39, 1192.455pt x 772.8875pt>
+File: BFDTwo.png Graphic file (type png)
+ <use BFDTwo.png>
+Package pdftex.def Info: BFDTwo.png used on input line 351.
+(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
+
+<SFDTwo.png, id=40, 1192.455pt x 772.8875pt>
+File: SFDTwo.png Graphic file (type png)
+ <use SFDTwo.png>
+Package pdftex.def Info: SFDTwo.png used on input line 355.
+(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--356
+[][]
  []
 
-[5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFD+.bbl) [6] (./ADFD+.aux
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--356
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 393.
+
+[5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] [6] (./ADFD+.bbl)
+<mian.jpg, id=50, 50.3481pt x 65.043pt>
+File: mian.jpg Graphic file (type jpg)
+ <use mian.jpg>
+Package pdftex.def Info: mian.jpg used on input line 542.
+(pdftex.def)             Requested size: 65.52246pt x 84.65314pt.
+
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 542--544
+ [] 
+ []
+
+<manuel.jpg, id=51, 100.12407pt x 126.4725pt>
+File: manuel.jpg Graphic file (type jpg)
+ <use manuel.jpg>
+Package pdftex.def Info: manuel.jpg used on input line 546.
+(pdftex.def)             Requested size: 65.52246pt x 82.76964pt.
+
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 546--547
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 550--551
+[]\T1/aer/bx/n/9 Mian As-bat Ah-mad \T1/aer/m/n/9 is a PhD
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 550--551
+\T1/aer/m/n/9 UK. He com-pleted his M(IT) and
+ []
+
+
+Underfull \hbox (badness 2005) in paragraph at lines 554--555
+\T1/aer/m/n/9 soft-ware test-ing, soft-ware en-gi-neer-
+ []
+
+[7 <./mian.jpg> <./manuel.jpg>]
+Overfull \hbox (32.08554pt too wide) in paragraph at lines 633--634
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (32.08554pt too wide) in paragraph at lines 670--671
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[8] (./ADFD+.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -589,28 +647,32 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4754 strings out of 493315
- 63900 string characters out of 6137904
- 150045 words of memory out of 5000000
- 8067 multiletter control sequences out of 15000+600000
- 49956 words of font info for 69 fonts, out of 8000000 for 9000
+ 4855 strings out of 493315
+ 65200 string characters out of 6137904
+ 182304 words of memory out of 5000000
+ 8148 multiletter control sequences out of 15000+600000
+ 57248 words of font info for 82 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 41i,11n,40p,1246b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,40p,1024b,1471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
-live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/201
-3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texm
-f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb>
-Output written on ADFD+.pdf (6 pages, 689965 bytes).
+exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/tex
+live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texli
+ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive
+/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2013/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2013/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texmf-dist/
+fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
+w/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on ADFD+.pdf (8 pages, 750056 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
