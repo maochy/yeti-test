@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  17 MAR 2014 00:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  18 MAR 2014 18:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,30 +493,30 @@ T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 .
  []
 
 
-Overfull \hbox (3.93236pt too wide) in paragraph at lines 269--269
-[]\secfnt COMPARISON OF ADFD+ AND DAIKON 
+LaTeX Warning: Citation `visser2004test' on page \thepage  undefined on input l
+ine 261.
+
+
+Overfull \hbox (16.04033pt too wide) in paragraph at lines 270--270
+[]\secfnt COMPARISON OF ADFD+ AND RAN-DOOP 
  []
 
 
-Overfull \hbox (4.59604pt too wide) in paragraph at lines 270--271
+Overfull \hbox (4.59604pt too wide) in paragraph at lines 271--272
 \T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
 t
  []
 
 [3 <./exampleError.png>]
-Overfull \hbox (5.54268pt too wide) in paragraph at lines 277--278
-[]\T1/aer/m/n/9 Is ADFD+ and Daikon ca-pa-ble of iden-ti-fy-ing the bound-
- []
 
-
-LaTeX Warning: Reference `' on page \thepage  undefined on input line 281.
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 283.
 
 
 LaTeX Warning: Reference `table:Results' on page \thepage  undefined on input l
-ine 281.
+ine 283.
 
 
-Overfull \hbox (10.05093pt too wide) in paragraph at lines 281--282
+Overfull \hbox (10.05093pt too wide) in paragraph at lines 283--284
 \T1/aer/m/n/9 ried out test-ing of sev-eral error-seeded one and two-dimensiona
 l
  []
@@ -524,27 +524,27 @@ l
 <PFDOne.png, id=27, 790.955pt x 575.14874pt>
 File: PFDOne.png Graphic file (type png)
  <use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 304.
+Package pdftex.def Info: PFDOne.png used on input line 306.
 (pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
 
 <BFDOne.png, id=28, 794.97pt x 575.14874pt>
 File: BFDOne.png Graphic file (type png)
  <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 308.
+Package pdftex.def Info: BFDOne.png used on input line 310.
 (pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
 
 <SFDOne.png, id=29, 789.95125pt x 573.14125pt>
 File: SFDOne.png Graphic file (type png)
  <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 312.
+Package pdftex.def Info: SFDOne.png used on input line 314.
 (pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--313
+Underfull \hbox (badness 10000) in paragraph at lines 306--315
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--313
+Underfull \hbox (badness 10000) in paragraph at lines 306--315
 []
  []
 
@@ -555,27 +555,27 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <PFDTwo.png, id=38, 1187.43625pt x 772.8875pt>
 File: PFDTwo.png Graphic file (type png)
  <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 347.
+Package pdftex.def Info: PFDTwo.png used on input line 349.
 (pdftex.def)             Requested size: 227.60829pt x 170.708pt.
 
 <BFDTwo.png, id=39, 1192.455pt x 772.8875pt>
 File: BFDTwo.png Graphic file (type png)
  <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 351.
+Package pdftex.def Info: BFDTwo.png used on input line 353.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
 <SFDTwo.png, id=40, 1192.455pt x 772.8875pt>
 File: SFDTwo.png Graphic file (type png)
  <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 355.
+Package pdftex.def Info: SFDTwo.png used on input line 357.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--356
+Underfull \hbox (badness 10000) in paragraph at lines 349--358
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--356
+Underfull \hbox (badness 10000) in paragraph at lines 349--358
 []
  []
 
@@ -587,51 +587,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Reference `' on page \thepage  undefined on input line 393.
+LaTeX Warning: Reference `' on page \thepage  undefined on input line 395.
 
 [5 <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] [6] (./ADFD+.bbl)
 <mian.jpg, id=50, 50.3481pt x 65.043pt>
 File: mian.jpg Graphic file (type jpg)
  <use mian.jpg>
-Package pdftex.def Info: mian.jpg used on input line 542.
+Package pdftex.def Info: mian.jpg used on input line 544.
 (pdftex.def)             Requested size: 65.52246pt x 84.65314pt.
 
-Overfull \hbox (5.04492pt too wide) in paragraph at lines 542--544
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 544--546
  [] 
  []
 
 <manuel.jpg, id=51, 100.12407pt x 126.4725pt>
 File: manuel.jpg Graphic file (type jpg)
  <use manuel.jpg>
-Package pdftex.def Info: manuel.jpg used on input line 546.
+Package pdftex.def Info: manuel.jpg used on input line 548.
 (pdftex.def)             Requested size: 65.52246pt x 82.76964pt.
 
-Overfull \hbox (5.04492pt too wide) in paragraph at lines 546--547
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 548--549
  [][] 
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 550--551
+Underfull \hbox (badness 2662) in paragraph at lines 552--553
 []\T1/aer/bx/n/9 Mian As-bat Ah-mad \T1/aer/m/n/9 is a PhD
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 550--551
+Underfull \hbox (badness 1616) in paragraph at lines 552--553
 \T1/aer/m/n/9 UK. He com-pleted his M(IT) and
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 554--555
+Underfull \hbox (badness 2005) in paragraph at lines 556--557
 \T1/aer/m/n/9 soft-ware test-ing, soft-ware en-gi-neer-
  []
 
 [7 <./mian.jpg> <./manuel.jpg>]
-Overfull \hbox (32.08554pt too wide) in paragraph at lines 633--634
+Overfull \hbox (32.08554pt too wide) in paragraph at lines 635--636
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (32.08554pt too wide) in paragraph at lines 670--671
+Overfull \hbox (32.08554pt too wide) in paragraph at lines 672--673
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -647,13 +647,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4855 strings out of 493315
- 65200 string characters out of 6137904
+ 4856 strings out of 493315
+ 65216 string characters out of 6137904
  182304 words of memory out of 5000000
- 8148 multiletter control sequences out of 15000+600000
+ 8149 multiletter control sequences out of 15000+600000
  57248 words of font info for 82 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 41i,11n,40p,1024b,1471s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,40p,1498b,1471s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texli
@@ -669,7 +669,7 @@ fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on ADFD+.pdf (8 pages, 750056 bytes).
+Output written on ADFD+.pdf (8 pages, 751137 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream
