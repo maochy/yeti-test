@@ -18,16 +18,27 @@ I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
 \newblock In {\em Proceedings of the 1st international workshop on Random
   testing}, pages 55--63. ACM, 2006.
 
-\bibitem{ernst2007daikon}
-M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
-  and C.~Xiao.
-\newblock The daikon system for dynamic detection of likely invariants.
-\newblock {\em Science of Computer Programming}, 69(1):35--45, 2007.
+\bibitem{Ciupa2007}
+I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
+\newblock Experimental assessment of random testing for object-oriented
+  software.
+\newblock In {\em Proceedings of the 2007 international symposium on Software
+  testing and analysis}, ISSTA '07, pages 84--94, New York, NY, USA, 2007. ACM.
+
+\bibitem{ciupa2008finding}
+I.~Ciupa, B.~Meyer, M.~Oriol, and A.~Pretschner.
+\newblock Finding faults: Manual testing vs. random+ testing vs. user reports.
+\newblock In {\em Software Reliability Engineering, 2008. ISSRE 2008. 19th
+  International Symposium on}, pages 157--166. IEEE, 2008.
 
 \bibitem{finelli1991nasa}
 G.~B. Finelli.
 \newblock Nasa software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
+
+\bibitem{Oriol2011yeti}
+M.~Oriol.
+\newblock York extensible testing infrastructure, 2011.
 
 \bibitem{Oriol2012}
 M.~Oriol.
@@ -42,11 +53,6 @@ C.~Pacheco and M.~D. Ernst.
 \newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
   Object-oriented programming systems and applications companion}, pages
   815--816. ACM, 2007.
-
-\bibitem{radatz1990ieee}
-J.~Radatz, A.~Geraci, and F.~Katki.
-\newblock I{EEE} standard glossary of software engineering terminology.
-\newblock {\em IEEE Std}, 610121990:121990, 1990.
 
 \bibitem{schneckenburger2007towards}
 C.~Schneckenburger and J.~Mayer.
