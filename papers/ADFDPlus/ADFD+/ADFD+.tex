@@ -73,7 +73,7 @@ showstringspaces=false}
 
 
 
-\title{Automated Discover of Failure Domain+}
+\title{ADFD+: An Automatic Tool for Finding and Presenting \\* Failures \& Failure domains}
 
 
 \numberofauthors{2} %  in this sample file, there are a *total*
@@ -236,7 +236,7 @@ strategy for testing is random. In strategies package, on top of the hierarchy, 
 
 \begin{figure*}[ht]
 \centering
-\includegraphics[width=17.5cm,height=11cm]{exampleError.png}
+\includegraphics[width=17cm,height=10.2cm]{exampleError.png}
 \caption{The output of ADFD+ for the above code.}
 \label{fig:adfdPlusExample}
 \end{figure*}
@@ -279,33 +279,47 @@ Random tester for object oriented programs (Randoop) is a fully automatic tool, 
 
 
 %%%%%%%%%%%%%%%%%    EVALUATION   %%%%%%%%%%%%%%%%%%%%
+%\section{Comparison of ADFD+ \& Randoop}\label{sec:eval}
+%In order to check the performance and efficiency of ADFD+ we compared it with a random testing tool Randoop. Our subject classes for these experiments were the same that were used in evaluation of ADFD \cite{ahmad2013adfd}. We ran ADFD+ and Randoop for 30 times on each error-seeded one and two dimensional numerical programs, measuring its effectiveness by the total number of test cases used to detect all the failures and its efficiency by the CPU time consumed. 
 
-
-\section{Comparison of ADFD+ \& Randoop}\label{sec:eval}
-Because of using error-seeded one and two dimensional numerical programs, we were aware of the failure domain present in each program. The correct identification and presentation of the failure domain by ADFD+ prove the correct working of ADFD+. We then evaluated the same program by Randoop. 
-
-\subsection{Research questions}
-Beside the main question of finding the performance of ADFD+ with respect to time and number of test cases, the following research questions have also been addressed in this study:
-\begin{enumerate}
-\item Is ADFD+ and Randoop capable of identifying the failure?
-\item Is ADFD+ and Randoop capable of identifying the failure domain?
-\item Is ADFD+ and Randoop capable of identifying the boundaries of the failure domain?
+%\subsection{Research questions}
+%Beside the main question of finding the performance of ADFD+ with respect to time and number of test cases, the following research questions have also been addressed in this study:
+%\begin{enumerate}
+%\item Is ADFD+ and Randoop capable of identifying the failure?
+%\item Is ADFD+ and Randoop capable of identifying the failure domain?
+%\item Is ADFD+ and Randoop capable of identifying the boundaries of the failure domain?
 % you will also prove it through figure but you can also say ADFD+ clarify it further by showing the boundaries in graphical form.
-\end{enumerate}
+%\end{enumerate}
 
-\subsection{Experimental setup}
-To evaluate the performance of ADFD+ and Randoop, we carried out testing of several error-seeded one and two-dimensional numerical programs written in Java. The programs were divided in to two sets. Set A and B contains one and two-dimensional programs respectively. Each program was injected with at least one failure domain of point, block or strip nature. Every program was tested independently for 30 times by both ADFD+ and Daikon on the basis of time and number of tests required to find all the failures. The external parameters were kept constant in each test. The detail of failure values and domain are given in Table~\ref{table:}. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
+
+%Because of using error-seeded one and two dimensional numerical programs, we were aware of the failure domain present in each program. The correct identification and presentation of the failure domain by ADFD+ prove the correct working of ADFD+. We then evaluated the same program by Randoop. 
+
+
+\section{Evaluation} \label{evaluation}
+To evaluate the performance and efficiency of ADFD+, we followed the common practice \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra} which is to compare it against another random testing tool. We used Randoop for comparison. We carried out testing of several error-seeded one and two dimensional numerical programs written in Java. Our subject programs were the same used in evaluation of ADFD \cite{ahmad2013adfd}. The programs were divided in to two sets. Set A and B contains one and two-dimensional programs respectively. Each class was injected with at least one failure domain of point, block or strip nature. The values forming the failure domains are given in Table \ref{table:failureDomains}. Every program was tested independently for 30 times by both ADFD+ and Randoop on the basis of time taken and number of tests used to find all the failures. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
 
 %The code for the programs under test is given in Appendix~\ref{} while the test details are presented in Table~\ref{table:Results}. 
 %Every class was evaluated through $10^5$ calls in each test session of ADFD+.
 %\footnote{The total number of tests is equal to $60\times 30\times 3 \times 10^5 = 540\times10^6~tests$.} 
+\subsection{Experimental setup}
+All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. %The machine took approximately 100 hours to process the experiments.
+The ADFD+ Jar file is available at \url{https://code.google.com/p/yeti-test/downloads/list/} and Randoop at \url{https://randoop.googlecode.com/files/randoop.1.3.3.zip}.
 
-All tests were performed with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. %The machine took approximately 100 hours to process the experiments.
+The following commands (1) and (2) were used to run the ADFD+ and Randoop. Both ADFD+ and Randoop were executed with default settings except that Randoop was provided with a seed value.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
+\begin{lstlisting}[language=bash]
+$ java -jar adfd_yeti.jar -------------(1)
+
+$ java randoop.main.Main gentests \
+--testclass=OneDimPointFailDomain \
+--testclass=Values --timelimit=100 ----(2)
+\end{lstlisting}
+
+
 
 \begin{table}[h]
 \caption{Table depicting values of x and y arguments forming point, block and strip failure domain in Figure 6(a), 6(b), 6(c) and Figure 7(a), 7(b), 7(c) respectively}
 \centering
-{\renewcommand{\arraystretch}{1.3}
+{\renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|l|l|l|}
 \hline
 Dim & Point failure		& 	Block failure		& 	Strip failure		\\
@@ -336,11 +350,18 @@ Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 \label{table:failureDomains}
 \end{table}
 
-\section{results}
+\section{Experimental results}
+The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. The results are split in to two sections for convenience. The first section contains results of effectiveness and the second section contains  results of efficiency of the two tools.
+\subsection{Efficiency}
+For finding the efficiency, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
 
-%The results are split in to two sections for convenience. The first section ? contains results of the experiments performed by ADFD+ strategy and the second section ? contains results of Daikon on one and two dimensional numerical programs.  
+\subsection{Effectiveness}
+For finding the performance, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
 
-%\subsection{ADFD+ results} \label{adfd+_results}
+
+
+
+
 
 %\subsubsection{Test of one-dimension programs by ADFD+}
 %In each of the 30 experiments, The ADFD+ successfully discovered and plotted the failure domains for point, block and strip pattern as shown in the Figure~\ref{fig:failureDomainsOneDimension}. The lower and upper bound for each experiment are set to -100 and 100 respectively.
@@ -351,24 +372,38 @@ Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 %\subsection{Daikon results} \label{daikon_results}
 %In initial set of experiments, Daikon failed to generate an invariant for identifying a single failure. On analysis It is found that Daikon rely on the existing set of test cases to generate invariants. Since the test cases produced by Randoop did not generate any test case from failure domain therefore Daikon could not generate an assertion to point out the failure. To enable Randoop to generate test case from failure domain we directed it to produce random values between a limited range. In this way we were able to generate interesting test cases from Randoop. Test results of Randoop are shown in Table \ref{}
 
-\section{Evaluation} \label{evaluation}
-Write evaluation if any because you mentioned it in the structure of the paper.
 
 
-\begin{figure}[ht]
+
+%\begin{figure}[!Htp]
+%\centering
+%\includegraphics[width=8.7cm,height=6.5cm]{timetaken.png}
+%\caption{Time taken to find failures}
+%\label{fig:timelimit}
+%\end{figure}
+
+%\begin{figure}[!Htp]
+%\centering
+%\includegraphics[width=8.7cm,height=6.5cm]{TestCases.png}
+%\caption{Number of test cases taken to find failures}
+%\label{fig:numberoftests}
+%\end{figure}
+
+\begin{figure*}[!Htp]
 \centering
-\includegraphics[width=8.5cm,height=5.5cm]{timeADFD+vsRandoop.png}
-\caption{Number of failures time}
-\label{fig:timelimit}
-\end{figure}
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=8.5cm,height=5.5cm]{NumberTestCasesADFD+vsRandoop.png}
-\caption{Number of failures number of tests}
-\label{fig:numberoftests}
-\end{figure}
-
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=7.5cm,height=8cm]{timetaken.png}
+  \caption{Time taken to find failure domains}
+  \label{fig:testtime}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=7.5cm,height=8cm]{TestCases.png}
+  \caption{Test cases taken to find failure domains}
+  \label{fig:testcases}
+\end{minipage}
+\end{figure*}
 
 
 

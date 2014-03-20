@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  20 MAR 2014 01:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  20 MAR 2014 20:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -307,12 +307,6 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 
 (./ADFD+.aux
 
-LaTeX Warning: Label `fig:adfdPlusExample' multiply defined.
-
-
-LaTeX Warning: Label `fig:adfdPlusExample' multiply defined.
-
-
 LaTeX Warning: Label `fig:PFDOne' multiply defined.
 
 
@@ -476,7 +470,7 @@ File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 File: exampleError.png Graphic file (type png)
  <use exampleError.png>
 Package pdftex.def Info: exampleError.png used on input line 239.
-(pdftex.def)             Requested size: 497.91354pt x 312.9788pt.
+(pdftex.def)             Requested size: 483.67863pt x 290.22171pt.
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/n' undefined
@@ -501,167 +495,144 @@ T1/cmr/m/n/9 (8\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 4)$\T1/aer/m/n/9 .
  []
 
 [2 <./adfdPlusWorkflow.png>]
-Overfull \hbox (4.59604pt too wide) in paragraph at lines 285--286
-\T1/aer/m/n/9 mer-i-cal pro-grams, we were aware of the fail-ure do-main presen
-t
+Overfull \hbox (2.57805pt too wide) in paragraph at lines 305--307
+\T1/aett/bx/n/9 com / p / yeti-[]test / downloads / list/$ \T1/aer/m/n/9 and Ra
+n-doop at $\T1/aett/bx/n/9 https :
  []
 
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) [3 <./exampleError.png>] <timetaken.png, id=32, 389.2944pt x 515.526pt>
+File: timetaken.png Graphic file (type png)
 
-Overfull \hbox (10.6363pt too wide) in paragraph at lines 288--289
-\T1/aer/m/n/9 Beside the main ques-tion of find-ing the per-for-mance of ADFD+
- []
+<use timetaken.png>
+Package pdftex.def Info: timetaken.png used on input line 396.
+(pdftex.def)             Requested size: 213.39975pt x 227.61877pt.
+ <TestCases.png, id=33, 450.9648pt x 491.436pt>
+File: TestCases.png Graphic file (type png)
 
+<use TestCases.png>
+Package pdftex.def Info: TestCases.png used on input line 402.
+(pdftex.def)             Requested size: 213.39851pt x 227.62303pt.
+ [4] (./ADFD+.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `table:' on page \thepage  undefined on input line 297
-.
-
-
-Overfull \hbox (22.38965pt too wide) in paragraph at lines 297--298
-\T1/aer/m/n/9 car-ried out test-ing of sev-eral error-seeded one and two-dimens
-ional
- []
-
-[3 <./exampleError.png>]
-<timeADFD+vsRandoop.png, id=31, 880.7304pt x 457.2282pt>
-File: timeADFD+vsRandoop.png Graphic file (type png)
-
-<use timeADFD+vsRandoop.png>
-Package pdftex.def Info: timeADFD+vsRandoop.png used on input line 360.
-(pdftex.def)             Requested size: 241.84547pt x 156.48808pt.
-
-Overfull \hbox (1.84547pt too wide) in paragraph at lines 360--361
- [][] 
- []
-
-<NumberTestCasesADFD+vsRandoop.png, id=32, 1104.7674pt x 487.0998pt>
-File: NumberTestCasesADFD+vsRandoop.png Graphic file (type png)
-
-<use NumberTestCasesADFD+vsRandoop.png>
-Package pdftex.def Info: NumberTestCasesADFD+vsRandoop.png used on input line 3
-67.
-(pdftex.def)             Requested size: 241.83585pt x 156.48457pt.
-
-Overfull \hbox (1.83585pt too wide) in paragraph at lines 367--368
- [][] 
- []
-
-
-Underfull \vbox (badness 1205) has occurred while \output is active []
-
- [4 <./timeADFD+vsRandoop.png> <./NumberTestCasesADFD+vsRandoop.png>] (./ADFD+.
-bbl)
-<mian.jpg, id=39, 50.3481pt x 65.043pt>
+ [5 <./timetaken.png> <./TestCases.png>]) <mian.jpg, id=43, 50.3481pt x 65.043p
+t>
 File: mian.jpg Graphic file (type jpg)
- <use mian.jpg>
-Package pdftex.def Info: mian.jpg used on input line 527.
+
+<use mian.jpg>
+Package pdftex.def Info: mian.jpg used on input line 562.
 (pdftex.def)             Requested size: 65.52246pt x 84.65314pt.
 
-Overfull \hbox (5.04492pt too wide) in paragraph at lines 527--529
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 562--564
  [] 
  []
 
-<manuel.jpg, id=40, 100.12407pt x 126.4725pt>
+<manuel.jpg, id=44, 100.12407pt x 126.4725pt>
 File: manuel.jpg Graphic file (type jpg)
  <use manuel.jpg>
-Package pdftex.def Info: manuel.jpg used on input line 531.
+Package pdftex.def Info: manuel.jpg used on input line 566.
 (pdftex.def)             Requested size: 65.52246pt x 82.76964pt.
 
-Overfull \hbox (5.04492pt too wide) in paragraph at lines 531--532
+Overfull \hbox (5.04492pt too wide) in paragraph at lines 566--567
  [][] 
  []
 
 
-Underfull \hbox (badness 2662) in paragraph at lines 535--536
+Underfull \hbox (badness 2662) in paragraph at lines 570--571
 []\T1/aer/bx/n/9 Mian As-bat Ah-mad \T1/aer/m/n/9 is a PhD
  []
 
 
-Underfull \hbox (badness 1616) in paragraph at lines 535--536
+Underfull \hbox (badness 1616) in paragraph at lines 570--571
 \T1/aer/m/n/9 UK. He com-pleted his M(IT) and
  []
 
 
-Underfull \hbox (badness 2005) in paragraph at lines 539--540
+Underfull \hbox (badness 2005) in paragraph at lines 574--575
 \T1/aer/m/n/9 soft-ware test-ing, soft-ware en-gi-neer-
  []
 
-[5 <./mian.jpg> <./manuel.jpg>] <PFDOne.png, id=45, 790.955pt x 575.14874pt>
+<PFDOne.png, id=45, 790.955pt x 575.14874pt>
 File: PFDOne.png Graphic file (type png)
-
-<use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 549.
+ <use PFDOne.png>
+Package pdftex.def Info: PFDOne.png used on input line 584.
 (pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
- <BFDOne.png, id=46, 794.97pt x 575.14874pt>
+
+<BFDOne.png, id=46, 794.97pt x 575.14874pt>
 File: BFDOne.png Graphic file (type png)
  <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 553.
+Package pdftex.def Info: BFDOne.png used on input line 588.
 (pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
 
 <SFDOne.png, id=47, 789.95125pt x 573.14125pt>
 File: SFDOne.png Graphic file (type png)
  <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 557.
+Package pdftex.def Info: SFDOne.png used on input line 592.
 (pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--558
+Underfull \hbox (badness 10000) in paragraph at lines 584--593
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--558
+Underfull \hbox (badness 10000) in paragraph at lines 584--593
 []
  []
 
 <PFDTwo.png, id=48, 1187.43625pt x 772.8875pt>
 File: PFDTwo.png Graphic file (type png)
  <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 571.
+Package pdftex.def Info: PFDTwo.png used on input line 606.
 (pdftex.def)             Requested size: 227.60829pt x 170.708pt.
 
 <BFDTwo.png, id=49, 1192.455pt x 772.8875pt>
 File: BFDTwo.png Graphic file (type png)
  <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 575.
+Package pdftex.def Info: BFDTwo.png used on input line 610.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
 <SFDTwo.png, id=50, 1192.455pt x 772.8875pt>
 File: SFDTwo.png Graphic file (type png)
  <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 579.
+Package pdftex.def Info: SFDTwo.png used on input line 614.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--580
+Underfull \hbox (badness 10000) in paragraph at lines 606--615
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--580
+Underfull \hbox (badness 10000) in paragraph at lines 606--615
 []
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [6 <./PFDOne.png> <./BFDOne.png> <./SFDOne.png> <./PFDTwo.png> <./BFDTwo.png> 
-<./SFDTwo.png>] (./ADFD+.aux)
+ [6 <./mian.jpg> <./manuel.jpg> <./PFDOne.png> <./BFDOne.png> <./SFDOne.png>] [
+7
+
+ <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFD+.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4857 strings out of 493315
- 65377 string characters out of 6137904
- 153304 words of memory out of 5000000
- 8159 multiletter control sequences out of 15000+600000
+ 4943 strings out of 493315
+ 66336 string characters out of 6137904
+ 161571 words of memory out of 5000000
+ 8241 multiletter control sequences out of 15000+600000
  49956 words of font info for 69 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 41i,11n,40p,1007b,965s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,47p,1148b,967s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texli
@@ -673,10 +644,10 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2013/texm
 f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/
 fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb>
-Output written on ADFD+.pdf (6 pages, 860697 bytes).
+Output written on ADFD+.pdf (7 pages, 797230 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 98 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

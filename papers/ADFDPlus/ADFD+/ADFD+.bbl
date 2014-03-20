@@ -36,6 +36,12 @@ G.~B. Finelli.
 \newblock Nasa software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
 
+\bibitem{oriat2005jartege}
+C.~Oriat.
+\newblock Jartege: a tool for random generation of unit tests for java classes.
+\newblock In {\em Quality of Software Architectures and Software Quality},
+  pages 242--256. Springer, 2005.
+
 \bibitem{Oriol2011yeti}
 M.~Oriol.
 \newblock York extensible testing infrastructure, 2011.
@@ -46,6 +52,11 @@ M.~Oriol.
   found.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, pages 201 --210, april 2012.
+
+\bibitem{pacheco2005eclat}
+C.~Pacheco and M.~D. Ernst.
+\newblock {\em Eclat: Automatic generation and classification of test inputs}.
+\newblock Springer, 2005.
 
 \bibitem{pacheco2007randoop}
 C.~Pacheco and M.~D. Ernst.
@@ -64,5 +75,12 @@ C.~Schneckenburger and J.~Mayer.
 L.~J. White and E.~I. Cohen.
 \newblock A domain strategy for computer program testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
+
+\bibitem{xie2005symstra}
+T.~Xie, D.~Marinov, W.~Schulte, and D.~Notkin.
+\newblock Symstra: A framework for generating object-oriented unit tests using
+  symbolic execution.
+\newblock In {\em Tools and Algorithms for the Construction and Analysis of
+  Systems}, pages 365--381. Springer, 2005.
 
 \end{thebibliography}
