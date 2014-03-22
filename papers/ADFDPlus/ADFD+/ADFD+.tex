@@ -1,33 +1,4 @@
-
-% THIS IS SIGPROC-SP.TEX - VERSION 3.1
-% WORKS WITH V3.2SP OF ACM_PROC_ARTICLE-SP.CLS
-% APRIL 2009
-%
-% It is an example file showing how to use the 'acm_proc_article-sp.cls' V3.2SP
-% LaTeX2e document class file for Conference Proceedings submissions.
-% ----------------------------------------------------------------------------------------------------------------
-% This .tex file (and associated .cls V3.2SP) *DOES NOT* produce:
-%       1) The Permission Statement
-%       2) The Conference (location) Info information
-%       3) The Copyright Line with ACM data
-%       4) Page numbering
-% ---------------------------------------------------------------------------------------------------------------
-% It is an example which *does* use the .bib file (from which the .bbl file
-% is produced).
-% REMEMBER HOWEVER: After having produced the .bbl file,
-% and prior to final submission,
-% you need to 'insert'  your .bbl file into your source .tex file so as to provide
-% ONE 'self-contained' source file.
-%
-% Questions regarding SIGS should be sent to
-% Adrienne Griscti ---> griscti@acm.org
-%
-% Questions/suggestions regarding the guidelines, .tex and .cls files, etc. to
-% Gerald Murray ---> murray@hq.acm.org
-%
-% For tracking purposes - this is V3.1SP - APRIL 2009
-
-\documentclass{acm_proc_article-sp}
+\documentclass[conference]{IEEEtran}
 
 \usepackage{multirow}
 \usepackage{subfigure}
@@ -36,8 +7,9 @@
 \usepackage{rotating}
 \usepackage{verbatim}
 \usepackage{float}
-\usepackage{wrapfig}
+\usepackage{lipsum}
 \usepackage{url}
+\usepackage{wrapfig}
 \usepackage{tabularx}
 \usepackage{amsmath}
 \usepackage{listings}
@@ -61,55 +33,37 @@ tabsize=4,
 showspaces=false,
 showstringspaces=false}
 
-
-
-\restylefloat{table}
-
-\hyphenation{op-tical net-works semi-conduc-tor}
-
-
-
-\begin{document}
-
-
-
-\title{ADFD+: An Automatic Tool for Finding and Presenting \\* Failures \& Failure domains}
-
-
-\numberofauthors{2} %  in this sample file, there are a *total*
-% of EIGHT authors. SIX appear on the 'first-page' (matting
-% reasons) and the remaining two appear in the \additionalauthors section.
-%
-\author{
-% You can go ahead and credit any number of authors here,
-% e.g. one 'row of three' or two rows (consisting of one row of three
-% and a second row of one, two or three).
-%
-% The command \alignauthor (no curly braces needed) should
-% precede each author name, affiliation/snail-mail address and
-% e-mail address. Additionally, tag each line of
-% affiliation/address with \affaddr, and tag the
-% e-mail address with \email.
-%
-% 1st. author
-\alignauthor
-Mian Asbat Ahmad\\
-       \affaddr{Department of Computer Science}\\
-       \affaddr{The University of York}\\
-       \affaddr{York, United Kingdom}\\
-       \email{mian.ahmad@york.ac.uk}
-% Please Dr. Manuel, add your abb details. I am not able to create table here because of the format. Thanks.
-\alignauthor
-Manuel Oriol \\
-       \affaddr{Department of Computer Science}\\
-       \affaddr{The University of York}\\
-       \affaddr{York, United Kingdom}\\
-       \email{manuel.oriol@york.ac.uk}
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
 }
+%\restylefloat{table}
 
-
-
+%\ifCLASSINFOpdf
+%\else
+%\fi
+%\hyphenation{op-tical net-works semi-conduc-tor}
+\begin{document}
+\title{ADFD+: An Automatic Tool for Finding and Presenting Failure domains}
+\author{Mian Asbat Ahmad and Manuel Oriol}
+%\author{\IEEEauthorblockN{Mian Asbat Ahmad}
+%\IEEEauthorblockA{Department of Computer Science\\
+%University of York\\
+%York, United Kingdom\\
+%Email: mian.ahmad@york.ac.uk}
+%\and
+%\author{Manuel Oriol}
+%\IEEEauthorblockN{Manuel Oriol}
+%Department of Computer Science\\
+%University of York\\
+%York, United Kingdom\\
+%Email: manuel.oriol@york.ac.uk
+%}
 \maketitle
+\vspace*{0\baselineskip}
+\IEEEtitleabstractindextext{
 \begin{abstract}
 %This paper verifies the accuracy of invariants generated automatically by Daikon and suggests how to improve their quality. To achieve this, it uses a newly developed Automated Discovery of Failure Domain+ (ADFD+) technique. ADFD+ is a testing frame-work which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is presented graphically on a two-dimension chart.
 This paper presents Automated Discovery of Failure Domain+ (ADFD+), an improvement on our previously developed Automated Discovery of Failure Domain (ADFD) technique.  ADFD+ is a random testing technique which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is graphically presented. To find the effectiveness of our Technique, several error-seeded one and two-dimensional numerical programs with point, block and strip failure domain were evaluated independently for 30 times by both ADFD+ and Randoop. Results indicated that ADFD+ can identify failure and failure-domain sufficiently quick and in fewer number of test cases as compared to Randoop. Additionally ADFD+ presents the failure and failure domains in a graphical form.
@@ -119,17 +73,20 @@ This paper presents Automated Discovery of Failure Domain+ (ADFD+), an improveme
 %\category{D.2.5}{Software Engineering}{Metrics}[complexity measures, performance measures]
 
 %\terms{Comparison, Verification, }
+%\terms{software testing, automated random testing, ADFD}
+\begin{IEEEkeywords}
+software testing, automated random testing, ADFD.
+\end{IEEEkeywords}}
 
-\keywords{software testing, automated random testing, ADFD} % NOT required for Proceedings
 
-
+\IEEEpeerreviewmaketitle
 
 
 
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}\label{sec:intro}
-Testing is an essential and most widely used method for verification and validation process. Efforts have been continuously made by researchers to make it more and more effective and efficient. Testing is effective when it finds maximum number of faults in minimum number of test cases and efficient when it executes maximum number of test cases in minimum possible time. Upgrading existing techniques and developing new test strategies focus on increasing test effectiveness while automating one or more components or complete system aims at increasing efficiency.
+Testing is an essential and most widely used method for verification and validation process. Efforts have been continuously made by researchers to make it more and more effective and efficient. Testing is effective when it finds maximum number of faults in minimum number of test cases and efficient when it executes maximum number of test cases in minimum possible time. Upgrading existing techniques and developing new test strategies focus on increasing test effectiveness while automating one or more components or complete system aims at increasing efficiency.\blfootnote{Manuscript received Feb 5, 2014; revised March 20, 2013. The authors are with the Department of Computer Science, University of York, YO10 5DD, UK (e-mail: mian.ahmad@york.ac.uk, manuel.oriol@york.ac.uk).}
 
 %Boundary Value Analysis (BVA) is one of the technique used of increasing test effectiveness. In BVA test cases with boundary values are added to the test suite with the assumption that errors reside along the boundaries~\cite{radatz1990ieee}. Daikon~\cite{ernst2007daikon} is an automatic tool used to improve the efficiency. It saves testers time by automatically generating likely program invariants.
 %However, the two approaches can adversely affect the testing process if wrong boundaries or invariants are taken into consideration. It is therefore motivating to accurately identify the boundaries of the input domain in BVA and measure the degree of correctness of auto-generated invariants by Daikon in the case of point, block and strip failure domain. 

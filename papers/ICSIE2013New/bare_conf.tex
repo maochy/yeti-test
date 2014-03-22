@@ -64,6 +64,8 @@ showstringspaces=false}
 \maketitle
 \vspace*{0\baselineskip}
 
+\IEEEtitleabstractindextext{
+
 %%%%%%%%%%%%%%%%%    ABSTRACT   %%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 The paper presents a new and improved automated random testing technique named as Dirt Spot Sweeping Random (DSSR) strategy based on the rationale that, ``when failures lies in the contiguous locations across the input domain, the effectiveness of random testing can be further improved through diversity of test cases". The DSSR strategy selects neighbouring values for the subsequent tests on identification of failure. Resultantly, selected values sweep around the failure leading to the discovery of new failures in the vicinity. To evaluate the effectiveness of DSSR strategy a total of 60 classes (35,785 lines of code), each class with 30 x $\boldsymbol{10^5}$ calls, were tested by Random (R), Random+ (R+) and DSSR strategies. TTest analysis showed significantly better performance of DSSR compared to R strategy in 17 classes and R+ strategy in 9 classes. In the remaining classes all the three strategies performed equally well. Numerically, the DSSR strategy found 43 and 12 more unique failures than R and R+ strategies respectively. This study comprehends that DSSR strategy will have a profound positive impact on the failure-finding ability of R and R+ testing.
@@ -74,6 +76,13 @@ The paper presents a new and improved automated random testing technique named a
 %It is evaluated against random (R) and random+ (R+) strategies by testing 60 classes (35,785 lines of code) with one hundred thousands ($10^5$) calls for each session, 30 times for each strategy. The results indicate that for 31 classes, all three strategies find the same unique failures. We analysed the 29 remaining classes using t-tests and found that for 7 classes DSSR is significantly better than both R+ and R, for 8 classes it performs similarly to R+ and is significantly better than R, and for 2 classes it performs similarly to R and is better than R+. In all other cases, DSSR, R+ and R do not perform significantly differently. Numerically, the DSSR strategy finds 43 more unique failures than R and 12 more unique failures than R+.
 
 \end{abstract}
+
+%\keywords{ software testing, automated random testing, ADFD} % NOT required for Proceedings
+\begin{IEEEkeywords}
+software testing, automated random testing, ADFD.
+\end{IEEEkeywords}}
+
+
 \IEEEpeerreviewmaketitle
 
 
