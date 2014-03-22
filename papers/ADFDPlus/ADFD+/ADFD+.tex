@@ -282,18 +282,34 @@ Random tester for object oriented programs (Randoop) is a fully automatic tool, 
 %\section{Comparison of ADFD+ \& Randoop}\label{sec:eval}
 %In order to check the performance and efficiency of ADFD+ we compared it with a random testing tool Randoop. Our subject classes for these experiments were the same that were used in evaluation of ADFD \cite{ahmad2013adfd}. We ran ADFD+ and Randoop for 30 times on each error-seeded one and two dimensional numerical programs, measuring its effectiveness by the total number of test cases used to detect all the failures and its efficiency by the CPU time consumed. 
 
-%\subsection{Research questions}
-%Beside the main question of finding the performance of ADFD+ with respect to time and number of test cases, the following research questions have also been addressed in this study:
-%\begin{enumerate}
-%\item Is ADFD+ and Randoop capable of identifying the failure?
-%\item Is ADFD+ and Randoop capable of identifying the failure domain?
-%\item Is ADFD+ and Randoop capable of identifying the boundaries of the failure domain?
-% you will also prove it through figure but you can also say ADFD+ clarify it further by showing the boundaries in graphical form.
-%\end{enumerate}
+\section{Research questions}
+Beside the main question of finding the performance of ADFD+ with respect to time and number of test cases, the following research questions have also been addressed in this study:
+\begin{enumerate}
+\item \textbf{Efficiency:} How efficient is ADFD+, compared to Randoop, across different input domains?
+\item \textbf{Effectiveness:} How effective is ADFD+, compared to Randoop, across different input domains?
+\item \textbf{Failure-domains:} How the boundaries of a failure domains are presented by ADFD+ and Randoop?
+%5 you will also prove it through figure but you can also say ADFD+ clarify it further by showing the boundaries in graphical form.
+\end{enumerate}
 
 
 %Because of using error-seeded one and two dimensional numerical programs, we were aware of the failure domain present in each program. The correct identification and presentation of the failure domain by ADFD+ prove the correct working of ADFD+. We then evaluated the same program by Randoop. 
 
+
+\begin{figure*}[!Htp]
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=7.5cm,height=8cm]{timeTakenBar.png}
+  \caption{Time taken to find failure domains}
+  \label{fig:testtime}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=7.5cm,height=8cm]{testCasesBar.png}
+  \caption{Test cases taken to find failure domains}
+  \label{fig:testcases}
+\end{minipage}
+\end{figure*}
 
 \section{Evaluation} \label{evaluation}
 To evaluate the performance and efficiency of ADFD+, we followed the common practice \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra} which is to compare it against another random testing tool. We used Randoop for comparison. We carried out testing of several error-seeded one and two dimensional numerical programs written in Java. Our subject programs were the same used in evaluation of ADFD \cite{ahmad2013adfd}. The programs were divided in to two sets. Set A and B contains one and two-dimensional programs respectively. Each class was injected with at least one failure domain of point, block or strip nature. The values forming the failure domains are given in Table \ref{table:failureDomains}. Every program was tested independently for 30 times by both ADFD+ and Randoop on the basis of time taken and number of tests used to find all the failures. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
@@ -316,51 +332,55 @@ $ java randoop.main.Main gentests \
 
 
 
-\begin{table}[h]
-\caption{Table depicting values of x and y arguments forming point, block and strip failure domain in Figure 6(a), 6(b), 6(c) and Figure 7(a), 7(b), 7(c) respectively}
-\centering
-{\renewcommand{\arraystretch}{1.1}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Dim & Point failure		& 	Block failure		& 	Strip failure		\\
-\hline
-One & x = -66			&	x = -1, 0, 1		&	x = -4 -- 34 	\\	
-& x = -2			 	&	x =-26 -- -29	&					\\	
-& x= 51 				&	x = 51 -- 54 	&					\\
-& x= 23 				& 	 				& 					\\
-\hline
-Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\	
-&x=4, y=10			&	x = 6, y = 2		&	x = 8,~~y = 0	\\	
-&x=7, y=10			&	x = 7, y = 2		&	x = 8,~~y = 1	\\
-&x=9, y=10			& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
-&					& 	x = 5, y = 3 		& 	x = 9,~~y = 2	\\
-&					& 	x = 6, y = 3 		& 	x = 10, y = 2	\\
-&					& 	x = 7, y = 3 		& 	x = 10, y = 3	\\
-&					& 	x = 8, y = 3 		& 	x = 11, y = 3	\\
-&					& 	x = 5, y = 4 		& 	x = 11, y = 4	\\
-&					& 	x = 6, y = 4 		& 	x = 12, y = 4	\\
-&					& 	x = 7, y = 4 		& 	x = 12, y = 5	\\
-&					& 	x = 8, y = 4 		& 	x = 13, y = 6	\\
-&					&			      		& 	x = 14, y = 6	\\				
-&					&			      		& 	x = 14, y = 7	\\
-\hline
-\end{tabular}
-}
-\bigskip
-\label{table:failureDomains}
-\end{table}
+%\begin{table}[h]
+%\caption{Table depicting values of x and y arguments forming point, block and strip failure domain in Figure 6(a), 6(b), 6(c) and Figure 7(a), 7(b), 7(c) respectively}
+%\centering
+%{\renewcommand{\arraystretch}{1.1}
+%\begin{tabular}{|l|l|l|l|}
+%\hline
+%Dim & Point failure		& 	Block failure		& 	Strip failure		\\
+%\hline
+%One & x = -66			&	x = -1, 0, 1		&	x = -4 -- 34 	\\	
+%& x = -2			 	&	x =-26 -- -29	&					\\	
+%& x= 51 				&	x = 51 -- 54 	&					\\
+%& x= 23 				& 	 				& 					\\
+%\hline
+%Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\	
+%&x=4, y=10			&	x = 6, y = 2		&	x = 8,~~y = 0	\\	
+%&x=7, y=10			&	x = 7, y = 2		&	x = 8,~~y = 1	\\
+%&x=9, y=10			& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
+%&					& 	x = 5, y = 3 		& 	x = 9,~~y = 2	\\
+%&					& 	x = 6, y = 3 		& 	x = 10, y = 2	\\
+%&					& 	x = 7, y = 3 		& 	x = 10, y = 3	\\
+%&					& 	x = 8, y = 3 		& 	x = 11, y = 3	\\
+%&					& 	x = 5, y = 4 		& 	x = 11, y = 4	\\
+%&					& 	x = 6, y = 4 		& 	x = 12, y = 4	\\
+%&					& 	x = 7, y = 4 		& 	x = 12, y = 5	\\
+%&					& 	x = 8, y = 4 		& 	x = 13, y = 6	\\
+%&					&			      		& 	x = 14, y = 6	\\				
+%&					&			      		& 	x = 14, y = 7	\\
+%\hline
+%\end{tabular}
+%}
+%\bigskip
+%\label{table:failureDomains}
+%\end{table}
+
 
 \section{Experimental results}
-The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. The results are split in to two sections for convenience. The first section contains results of effectiveness and the second section contains  results of efficiency of the two tools.
-\subsection{Efficiency}
-For finding the efficiency, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
+%The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. 
+Results are split in to two sections depicting efficiency and effectiveness of the two tools.
+\subsection{Efficiency Evaluation}
+Figure \ref{fig:testtime} shows the efficiency measurement of the ADFD+ and Randoop against the selected programs. The x-axis represents one and two-dimensional programs with point, block and strip failure domain. The y-axis represents average time taken by both the tools to detect the whole failure domains. ADFD+ outperformed Randoop in the time taken to discover all forms of failure domains. Overall, this answers \textbf{RQ1} positively. The experimental analysis shows that there is a sufficient gain in efficiency when ADFD+ is used. The amount of gain in efficiency is up to two orders of magnitude.
 
-\subsection{Effectiveness}
-For finding the performance, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
+It should be noted that the part of the gain may also be due to the fast processing of the underlying tool YETI, which is capable of executing $10^6$ test calls per minute on Java code. Therefore, to find the performance of only ADFD+ we performed the second set of experiments to measure effectiveness.
 
+%For finding the efficiency, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
+\subsection{Effectiveness Evaluation}
+Figure \ref{fig:testcases} shows the effectiveness measurement by ADFD+ and Randoop to find the whole failure domains. The x-axis represents one and two-dimensional programs with point, block and strip failure domain. The y-axis represents average number of test cases used by both the tools to detect the whole failure domains. The ADFD+ uses sufficiently lower number of test cases as compared to Randoop to find the whole failure domains. The amount of gain in performance is up to 50\% or more. This provide a positive answer for \textbf{RQ2}.
 
-
-
+\subsection{Failure Domains}
+Both the tools found all the failure domains in specific time or using specific number of test cases. The ADFD+ also provide the added benefit of presenting the failure domains in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. The red and blue circle represents the failing and passing values respectively. The user can also enable or disable the option of showing the failing values on the graph. In Randoop there is no graphical representation or textual option to show failure domains separately. This provide a positive answer for \textbf{RQ3}.
 
 
 %\subsubsection{Test of one-dimension programs by ADFD+}
@@ -371,9 +391,6 @@ For finding the performance, the CPU time consumed from the start of the test to
 
 %\subsection{Daikon results} \label{daikon_results}
 %In initial set of experiments, Daikon failed to generate an invariant for identifying a single failure. On analysis It is found that Daikon rely on the existing set of test cases to generate invariants. Since the test cases produced by Randoop did not generate any test case from failure domain therefore Daikon could not generate an assertion to point out the failure. To enable Randoop to generate test case from failure domain we directed it to produce random values between a limited range. In this way we were able to generate interesting test cases from Randoop. Test results of Randoop are shown in Table \ref{}
-
-
-
 
 %\begin{figure}[!Htp]
 %\centering
@@ -389,21 +406,7 @@ For finding the performance, the CPU time consumed from the start of the test to
 %\label{fig:numberoftests}
 %\end{figure}
 
-\begin{figure*}[!Htp]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=7.5cm,height=8cm]{timetaken.png}
-  \caption{Time taken to find failure domains}
-  \label{fig:testtime}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=7.5cm,height=8cm]{TestCases.png}
-  \caption{Test cases taken to find failure domains}
-  \label{fig:testcases}
-\end{minipage}
-\end{figure*}
+
 
 
 
@@ -477,7 +480,7 @@ For finding the performance, the CPU time consumed from the start of the test to
 
 
 \section{Discussion}
-We have shown that ADFD+ is a promising technique to find a failure and using it as a focal point find the whole failure domain. We have also shown that ADFD+ can graphically draw the failure domain on a chart. The failure values are drawn in red and the pass values are drawn in green. The pictorial representation of failure domain helps in easily identifying the underlying pattern and its boundaries.
+We have shown that ADFD+ is a promising technique to find a failure and using it as a focal point find the whole failure domain. We have also shown that ADFD+ can graphically draw the failure domain on a chart. The pictorial representation of failure domain helps in easily identifying the underlying domain and its boundaries, which can be helpful to developers in debugging.
 
 As a pilot study, we also ran an empirical study to evaluate several error-seeded programs. While it would be surprising if production programs produced much different results, it would be worthwhile to check.
 

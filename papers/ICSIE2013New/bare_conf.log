@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  12 MAR 2014 23:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  22 MAR 2014 03:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -171,6 +171,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks20
 \@floatcapt=\box29
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2011/04/14 v1.2 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count98
+)
 (/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
@@ -178,7 +182,7 @@ Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen122
 \WF@size=\dimen123
-\c@WF@wrappedlines=\count98
+\c@WF@wrappedlines=\count99
 \WF@box=\box30
 \WF@everypar=\toks21
 Package: wrapfig 2003/01/31  v 3.6
@@ -199,7 +203,7 @@ Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \TX@old@col=\dimen128
 \TX@target=\dimen129
 \TX@delta=\dimen130
-\TX@cols=\count99
+\TX@cols=\count100
 \TX@ftn=\toks23
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
@@ -222,13 +226,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count100
+\inf@bad=\count101
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count101
-\leftroot@=\count102
+\uproot@=\count102
+\leftroot@=\count103
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count103
-\DOTSCASE@=\count104
+\classnum@=\count104
+\DOTSCASE@=\count105
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
@@ -237,15 +241,15 @@ LaTeX Info: Redefining \cdots on input line 466.
 \big@size=\dimen133
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count105
-\c@MaxMatrixCols=\count106
+\macc@depth=\count106
+\c@MaxMatrixCols=\count107
 \dotsspace@=\muskip11
-\c@parentequation=\count107
-\dspbrk@lvl=\count108
+\c@parentequation=\count108
+\dspbrk@lvl=\count109
 \tag@help=\toks25
-\row@=\count109
-\column@=\count110
-\maxfields@=\count111
+\row@=\count110
+\column@=\count111
+\maxfields@=\count112
 \andhelp@=\toks26
 \eqnshift@=\dimen134
 \alignsep@=\dimen135
@@ -261,23 +265,23 @@ LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count112
+\lst@mode=\count113
 \lst@gtempboxa=\box33
 \lst@token=\toks29
-\lst@length=\count113
+\lst@length=\count114
 \lst@currlwidth=\dimen140
-\lst@column=\count114
-\lst@pos=\count115
+\lst@column=\count115
+\lst@pos=\count116
 \lst@lostspace=\dimen141
 \lst@width=\dimen142
-\lst@newlines=\count116
-\lst@lineno=\count117
+\lst@newlines=\count117
+\lst@lineno=\count118
 \lst@maxwidth=\dimen143
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count118
-\lst@skipnumbers=\count119
+\c@lstnumber=\count119
+\lst@skipnumbers=\count120
 \lst@framebox=\box34
 )
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/listings.cfg
@@ -296,37 +300,35 @@ Package color Info: Driver file: pdftex.def on input line 130.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-\@float@every@table=\toks30
-
 (./bare_conf.aux)
 \openout1 = `bare_conf.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
+LaTeX Font Info:    ... okay on input line 48.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count120
+\scratchcounter=\count121
 \scratchdimen=\dimen144
 \scratchbox=\box35
-\nofMPsegments=\count121
-\nofMParguments=\count122
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count123
+\nofMPsegments=\count122
+\nofMParguments=\count123
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count124
 \MPscratchDim=\dimen145
-\MPnumerator=\count124
-\makeMPintoPDFobject=\count125
-\everyMPtoPDFconversion=\toks32
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -375,91 +377,84 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count126
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 111.
+\c@lstlisting=\count127
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 117.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+)
+<ART_Patterns.png, id=1, 376.40625pt x 101.62968pt>
+File: ART_Patterns.png Graphic file (type png)
+ <use ART_Patterns.png>
+Package pdftex.def Info: ART_Patterns.png used on input line 124.
+(pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
+
+[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-<ART_Patterns.png, id=15, 376.40625pt x 101.62968pt>
-File: ART_Patterns.png Graphic file (type png)
- <use ART_Patterns.png>
-Package pdftex.def Info: ART_Patterns.png used on input line 118.
-(pdftex.def)             Requested size: 227.62596pt x 71.13408pt.
-
 <block2.png, id=17, 271.0125pt x 122.70844pt>
 File: block2.png Graphic file (type png)
  <use block2.png>
-Package pdftex.def Info: block2.png used on input line 126.
+Package pdftex.def Info: block2.png used on input line 132.
 (pdftex.def)             Requested size: 187.7928pt x 56.90529pt.
 
 <flowchart4.pdf, id=18, 193.19618pt x 195.72382pt>
 File: flowchart4.pdf Graphic file (type pdf)
  <use flowchart4.pdf>
-Package pdftex.def Info: flowchart4.pdf used on input line 139.
+Package pdftex.def Info: flowchart4.pdf used on input line 145.
 (pdftex.def)             Requested size: 256.08392pt x 227.62512pt.
 
-Overfull \hbox (4.08392pt too wide) in paragraph at lines 139--140
+Overfull \hbox (4.08392pt too wide) in paragraph at lines 145--146
  [][] 
  []
 
 [2 <./ART_Patterns.png> <./block2.png> <./flowchart4.pdf>]
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 194.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 202.
 
-Underfull \hbox (badness 2042) in paragraph at lines 207--208
+Underfull \hbox (badness 2042) in paragraph at lines 215--216
 \OT1/ptm/m/n/10 its sur-round-ing val-ues to the list of in-ter-est-ing val-ues
 
  []
 
-[3] <DssrImprove.png, id=93, 986.2446pt x 479.391pt>
+[3] <DssrImprove.png, id=97, 986.2446pt x 479.391pt>
 File: DssrImprove.png Graphic file (type png)
  <use DssrImprove.png>
-Package pdftex.def Info: DssrImprove.png used on input line 318.
+Package pdftex.def Info: DssrImprove.png used on input line 326.
 (pdftex.def)             Requested size: 483.69684pt x 235.11577pt.
 
-Underfull \hbox (badness 10000) in alignment at lines 403--403
+Underfull \hbox (badness 10000) in alignment at lines 411--411
 [][][][][][][][][][][][][][][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 447.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 456.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 447.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 456.
  [4] [5]
-(./bare_conf.bbl [6 <./DssrImprove.png>]
-Underfull \vbox (badness 1924) has occurred while \output is active []
-
-)
+(./bare_conf.bbl [6 <./DssrImprove.png>])
 <mian.jpg, id=108, 50.3481pt x 65.043pt>
 File: mian.jpg Graphic file (type jpg)
  <use mian.jpg>
-Package pdftex.def Info: mian.jpg used on input line 636.
+Package pdftex.def Info: mian.jpg used on input line 646.
 (pdftex.def)             Requested size: 67.08252pt x 86.66885pt.
 
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 636--637
+Overfull \hbox (5.16504pt too wide) in paragraph at lines 646--647
  [] 
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 641--642
-\OT1/ptm/m/n/10 new au-to-mated ran-dom soft-ware test-ing
  []
 
 <manuel.jpg, id=109, 100.12407pt x 126.4725pt>
 File: manuel.jpg Graphic file (type jpg)
  <use manuel.jpg>
-Package pdftex.def Info: manuel.jpg used on input line 652.
+Package pdftex.def Info: manuel.jpg used on input line 662.
 (pdftex.def)             Requested size: 67.08252pt x 84.73999pt.
 
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 652--653
+Overfull \hbox (5.16504pt too wide) in paragraph at lines 662--663
 [][] 
  []
 
@@ -476,12 +471,12 @@ Before submitting the final camera ready copy, remember to:
 
 [7 <./mian.jpg> <./manuel.jpg>] (./bare_conf.aux) ) 
 Here is how much of TeX's memory you used:
- 4872 strings out of 493315
- 71548 string characters out of 6137904
- 249808 words of memory out of 5000000
- 8210 multiletter control sequences out of 15000+600000
- 47754 words of font info for 96 fonts, out of 8000000 for 9000
- 960 hyphenation exceptions out of 8191
+ 5049 strings out of 493315
+ 73654 string characters out of 6137904
+ 340369 words of memory out of 5000000
+ 8385 multiletter control sequences out of 15000+600000
+ 49478 words of font info for 98 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
  38i,12n,40p,1253b,979s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/tex
 mf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/t
@@ -499,7 +494,7 @@ s/cm/cmsy8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrb
 /texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/
 2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf
 -dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on bare_conf.pdf (7 pages, 406193 bytes).
+Output written on bare_conf.pdf (7 pages, 397463 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  102 compressed objects within 2 object streams
