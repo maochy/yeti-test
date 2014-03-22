@@ -67,10 +67,9 @@ showstringspaces=false}
 \begin{abstract}
 %This paper verifies the accuracy of invariants generated automatically by Daikon and suggests how to improve their quality. To achieve this, it uses a newly developed Automated Discovery of Failure Domain+ (ADFD+) technique. ADFD+ is a testing frame-work which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is presented graphically on a two-dimension chart.
 
-% It will be the new abstract for the paper
-%Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure do- mains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. The ADFD+ graphical output was further improved by providing labelled graphs to make it easily understandable and user friendly. To find the effective- ness of ADFD+, it was compared with Daikon using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
+This paper presents Automated Discovery of Failure Domain+ (ADFD+), an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. The ADFD+ graphical output is further improved by providing labelled graphs to make it easily understandable and user friendly. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains. Evaluating the effectiveness and efficiency of the newly developed ADFD+ technique, its performance is compared with that of a mature random testing tool Randoop. The comparative results obtained are reported.
 
-This paper presents Automated Discovery of Failure Domain+ (ADFD+), an improvement on our previously developed Automated Discovery of Failure Domain (ADFD) technique.  ADFD+ is a random testing technique which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is graphically presented. To find the effectiveness of our Technique, several error-seeded one and two-dimensional numerical programs with point, block and strip failure domain were evaluated independently for 30 times by both ADFD+ and Randoop. Results indicated that ADFD+ can identify failure and failure-domain sufficiently quick and in fewer number of test cases as compared to Randoop. Additionally ADFD+ presents the failure and failure domains in a graphical form.
+%This paper presents Automated Discovery of Failure Domain+ (ADFD+), an improvement on our previously developed Automated Discovery of Failure Domain (ADFD) technique.  ADFD+ is a random testing technique which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is graphically presented. To find the effectiveness of our Technique, several error-seeded one and two-dimensional numerical programs with point, block and strip failure domain were evaluated independently for 30 times by both ADFD+ and Randoop. Results indicated that ADFD+ can identify failure and failure-domain sufficiently quick and in fewer number of test cases as compared to Randoop. Additionally ADFD+ presents the failure and failure domains in a graphical form.
 \end{abstract}
 
 %A category including the fourth, optional field follows...
@@ -95,30 +94,11 @@ Software testing is most widely used for verification and validation process. Ef
 %Boundary Value Analysis (BVA) is one of the technique used of increasing test effectiveness. In BVA test cases with boundary values are added to the test suite with the assumption that errors reside along the boundaries~\cite{radatz1990ieee}. Daikon~\cite{ernst2007daikon} is an automatic tool used to improve the efficiency. It saves testers time by automatically generating likely program invariants.
 %However, the two approaches can adversely affect the testing process if wrong boundaries or invariants are taken into consideration. It is therefore motivating to accurately identify the boundaries of the input domain in BVA and measure the degree of correctness of auto-generated invariants by Daikon in the case of point, block and strip failure domain. 
 
-This paper describes the new ADFD+ technique developed for automatically finding failures, failure domains and graphical presentation of results. In this technique, the test execution is initiated by random+  and continues till the first failure is found in the SUT. The technique then copies the values leading to the failure and the surrounding values to the dynamic list of interesting values. The resultant list provides relevant test data for the remaining test session and the generated test cases are more targeted towards finding new failures around the existing failures in the given SUT.
-%The technique uses random+ \cite{Ciupa2007, ciupa2008finding} in the initial phase. After identification of a failure, ADFD+ searches its surrounding to find its failure domain within the specified range. 
-The results obtained are presented in graphical form. Evaluating the effectiveness and efficiency of the newly developed ADFD+ technique, its performance is compared with that of a mature random testing tool Randoop \cite{pacheco2007randoop}. The comparative results obtained are reported.  
 
-This paper is organized as follows: Section~\ref{sec:adfd+} describes the improvement in ADFD+ over ADFD. Section~\ref{workflow} presents the workflow of ADFD+, its implementation in YETI and its illustration with help of an example. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} reveals results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc} concludes the study.
-
-
-%The main contributions of the study are:
-%\begin{itemize}
-%\item \textbf{ADFD+:} It is an extension of Automated Discovery of Failure Domain (ADFD) strategy developed by Ahmad and Oriol~\cite{ahmad2013adfd}. The new technique improves the search algorithm of ADFD and makes the report more intuitive (Section \ref{sec:adfd+}).
-%\item \textbf{Implementation of ADFD+:} It is implemented and integrated in the York Extensible Testing Infrastructure \cite{Oriol2011yeti} (Section \ref{implementation_yeti}).
-%\item \textbf{Evaluation:} The results generated by ADFD+ and Randoop about failure domains in the error-seeded programs are evaluated (Section \ref{evaluation}). The results show that although ADFD+ outperform Randoop with respect to time and number of test cases to find a failure domain. Additionally ADFD+ presents the results graphically. 
-%\item \textbf{Future work:} ADFD+ can be extended to find and plot failure domains in multi-dimensional non-numerical programs (Section \ref{futurework}).
-% A case study suggesting that boundaries are properly recognized by Daikon and ADFD+ or Daikon lake .... etc.
-%\end{itemize}
-%The rest of this paper is organised as follows: \\ Section~\ref{sec:adfd} describes the ADFD+ strategy. Section~\ref{sec:imp} presents implementation of the ADFD+ strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
-
-
-%In the later part we plot the domain on the basis of invariants generated by Daikon and compare both the domains.
-
-%%%%%%%%%%%%%%%%%    Background   %%%%%%%%%%%%%%%%%%%
-
-\section{Preliminaries} \label{preliminaries}
 A number of empirical evidence confirms that failure revealing test cases tend to cluster in contiguous regions across the input domain~\cite{finelli1991nasa, schneckenburger2007towards, white1980domain}. According to Chan et al.~\cite{chan1996proportional} the clusters are arranged in the form of point, block and strip failure domains. In the point domain the failure revealing inputs stand-alone and are evenly spread through out the input domain. In block domain the failure revealing inputs are contiguously clustered in one area. In strip domain the failure revealing inputs are clustered in one long elongated area.  Figure~\ref{fig:patterns2} shows failure domains of the three types for two-dimensional program. 
+
+
+The paper describes ADFD+, an improved form of ADFD strategy developed previously by Ahmad and Oriol~\cite{ahmad2013adfd}. It is an automated framework which finds the failures and their domains within a specified range and present the results on a graphical chart. Evaluating the effectiveness and efficiency of the newly developed ADFD+ technique, its performance is compared with that of a mature random testing tool Randoop \cite{pacheco2007randoop}. The comparative results obtained are reported.
 
 %\begin{figure}[H]                                    
 %\centering
@@ -144,6 +124,32 @@ A number of empirical evidence confirms that failure revealing test cases tend t
 \caption{Failure domains across input domain~\cite{chan1996proportional}}
 \label{fig:patterns2}
 \end{figure}
+%This paper describes the new ADFD+ technique developed for automatically finding failures, failure domains and graphical presentation of results. In this technique, the test execution is initiated by random+  and continues till the first failure is found in the SUT. The technique then copies the values leading to the failure and the surrounding values to the dynamic list of interesting values. The resultant list provides relevant test data for the remaining test session and the generated test cases are more targeted towards finding new failures around the existing failures in the given SUT.
+%The technique uses random+ \cite{Ciupa2007, ciupa2008finding} in the initial phase. After identification of a failure, ADFD+ searches its surrounding to find its failure domain within the specified range. 
+
+
+
+This paper is organized as follows: Section~\ref{sec:adfd+} describes the ADFD+, improvement over ADFD, workflow, implementation and illustrate the working of ADFD+ with the help of an example. Section~\ref{sec:randoop} describes the random testing tool Randoop, Section~\ref{sec:evaluation} explains the experimental setup. Section~\ref{sec:result} reveals results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:relatedwork} presents related work, Section~\ref{sec:conclusion} concludes the study and finally future work.
+
+
+%The main contributions of the study are:
+%\begin{itemize}
+%\item \textbf{ADFD+:} It is an extension of Automated Discovery of Failure Domain (ADFD) strategy developed by Ahmad and Oriol~\cite{ahmad2013adfd}. The new technique improves the search algorithm of ADFD and makes the report more intuitive (Section \ref{sec:adfd+}).
+%\item \textbf{Implementation of ADFD+:} It is implemented and integrated in the York Extensible Testing Infrastructure \cite{Oriol2011yeti} (Section \ref{implementation_yeti}).
+%\item \textbf{Evaluation:} The results generated by ADFD+ and Randoop about failure domains in the error-seeded programs are evaluated (Section \ref{evaluation}). The results show that although ADFD+ outperform Randoop with respect to time and number of test cases to find a failure domain. Additionally ADFD+ presents the results graphically. 
+%\item \textbf{Future work:} ADFD+ can be extended to find and plot failure domains in multi-dimensional non-numerical programs (Section \ref{futurework}).
+% A case study suggesting that boundaries are properly recognized by Daikon and ADFD+ or Daikon lake .... etc.
+%\end{itemize}
+%The rest of this paper is organised as follows: \\ Section~\ref{sec:adfd} describes the ADFD+ strategy. Section~\ref{sec:imp} presents implementation of the ADFD+ strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
+
+
+%In the later part we plot the domain on the basis of invariants generated by Daikon and compare both the domains.
+
+%%%%%%%%%%%%%%%%%    Background   %%%%%%%%%%%%%%%%%%%
+
+%\section{Preliminaries} \label{preliminaries}
+
+
 %In Section~\ref{sec:adfd+} we describe the ADFD+ framework that can find the failure, its domain and plot the domain up to the specified range in a graphical form. Experiments confirms the successful working of ADFD+.
 
 
@@ -152,8 +158,7 @@ A number of empirical evidence confirms that failure revealing test cases tend t
 %%%%%%%%%%%%%%%%%    ADFD+   %%%%%%%%%%%%%%%%%%%
 
 \section{Automated Discovery of Failure Domain+}\label{sec:adfd+}
-ADFD+ is an improved and extended form of ADFD strategy developed previously by Ahmad and Oriol~\cite{ahmad2013adfd}. It is an automated framework which finds the failures and their domains within a specified range and present the results on a graphical chart. 
-
+ADFD+ is an improved form of ADFD strategy developed previously by Ahmad and Oriol~\cite{ahmad2013adfd}. The technique automatically finds failures, failure domains and present the results in graphical form. In this technique, the test execution is initiated by random+  and continues till the first failure is found in the SUT. The technique then copies the values leading to the failure and the surrounding values to the dynamic list of interesting values. The resultant list provides relevant test data for the remaining test session and the generated test cases are more targeted towards finding new failures around the existing failures in the given SUT. \\*
 The improvements made in ADFD+ in comparison with ADFD strategy are stated as follows.
 \begin{itemize}
 \item ADFD+ generates a single Java file dynamically at run time to plot the failure domains as compared to one Java file per failure in ADFD. This saves sufficient time and makes the execution process quicker.
@@ -172,7 +177,7 @@ The improvements made in ADFD+ in comparison with ADFD strategy are stated as fo
 
 %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Workflow of ADFD+} \label{workflow}
+\subsection{Workflow of ADFD+} \label{sec:workflow}
 ADFD+ is a completely automatic technique requiring the user to specify program and domain range followed by clicking the $Draw Fault Domain$ button to execute testing. %The default range value is set to 5 meaning that ADFD+ will search 83 values around the failure. 
 As soon as the button is clicked, YETI comes in to play with ADFD+ strategy to search for failures in the program under test. On finding a failure, the ADFD+ strategy creates a Java file which contains calls to the program on the failing and the surrounding values within the specified range. The Java file is executed after compilation and the results obtained are analysed to separate  pass and fail values which are accordingly stored in the text files. At the end of test, all the values are plotted on the graph with pass values in blue and fail values in red colour as shown in Figure~\ref{fig:adfdPlusExample}.
 \\
@@ -191,7 +196,7 @@ As soon as the button is clicked, YETI comes in to play with ADFD+ strategy to s
 %ADFD+ is an extension of ADFD's algorithm with more accuracy to find and clarity to plot the failure domain on a graphical chart. Deriving failure domains using ADFD+ is a one click process and all the tester needs to input is the class to test and the range-value for which to search around the found failure. 
 %%%%%%%%%%%%%%%%%%%%
 
-\subsection{Implementation of ADFD+} \label{implementation_yeti}
+\subsection{Implementation of ADFD+} \label{sec:implementation}
 The ADFD+ technique is implemented in YETI which is available in open-source at \url{http://code.google.com/p/yeti-test/}. A brief overview of YETI is given with the focus on parts relevant to implementation of ADFD+ strategy. \\*
 YETI is a testing tool developed in Java for automatic testing of programs using random strategies. YETI meta-model is language-agnostic which enables it to test 
 programs written in functional, procedural and object-oriented languages. YETI consists of three main parts including core infrastructure for extendibility, strategies section for adjustment of multiple strategies and languages section for supporting multiple languages. Both strategies and languages sections have pluggable architecture to easily incorporate new strategies and 
@@ -227,8 +232,8 @@ At the beginning of the test, ADFD+ strategy evaluates the given class with the 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Randoop} \label{randoop}
-Random tester for object oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes to test, time limit or number of tests to stop and and optionally a set of configuration files to assist testing as input. Randoop checks for are assertion violations, access violations and un-expected program termination in a given class. Its output a suite of JUnit for Java and NUnit for .Net program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test and arguments for these methods are selected from the pre-defined pool in case of primitive types and as sequence of null values in case of reference type. It uses feedback mechanism to filter out duplicate test cases. 
+\section{Randoop} \label{sec:randoop}
+Random tester for object oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, time limit or number of tests and optionally a set of configuration files to assist testing. Randoop checks for assertion violations, access violations and un-expected program termination in a given class. Its output is a suite of JUnit for Java and NUnit for .Net program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting public methods from the class under test. Arguments for these methods are selected from the pre-defined pool in case of primitive types and as sequence of null values in case of reference type. Randoop uses feedback mechanism to filter out duplicate test cases. 
 
  
 
@@ -246,12 +251,15 @@ Random tester for object oriented programs (Randoop) is a fully automatic tool, 
 %\section{Comparison of ADFD+ \& Randoop}\label{sec:eval}
 %In order to check the performance and efficiency of ADFD+ we compared it with a random testing tool Randoop. Our subject classes for these experiments were the same that were used in evaluation of ADFD \cite{ahmad2013adfd}. We ran ADFD+ and Randoop for 30 times on each error-seeded one and two dimensional numerical programs, measuring its effectiveness by the total number of test cases used to detect all the failures and its efficiency by the CPU time consumed. 
 
-\section{Research questions}
-Beside the main question of finding the performance of ADFD+ with respect to time and number of test cases, the following research questions have also been addressed in this study:
+\section{Research questions} \label{sec:questions}
+The following research questions have been addressed in the study for evaluating ADFD+ strategy with respect to efficiency, effectiveness and presentation of failure domains:
 \begin{enumerate}
-\item \textbf{Efficiency:} How efficient is ADFD+, compared to Randoop, across different input domains?
-\item \textbf{Effectiveness:} How effective is ADFD+, compared to Randoop, across different input domains?
-\item \textbf{Failure-domains:} How the boundaries of a failure domains are presented by ADFD+ and Randoop?
+%\item \textbf{Efficiency:} How efficient is ADFD+, compared to Randoop, across different failure domains?
+\item How efficient is ADFD+ as compared to Randoop?
+%\item \textbf{Effectiveness:} How effective is ADFD+, compared to Randoop, across different failure domains?
+\item How effective is ADFD+ as compared to Randoop?
+%\item \textbf{Failure-domains:} How the boundaries of a failure domains are presented by ADFD+ and Randoop?
+\item How failure domains are presented by ADFD+ as compared to Randoop?
 %5 you will also prove it through figure but you can also say ADFD+ clarify it further by showing the boundaries in graphical form.
 \end{enumerate}
 
@@ -275,8 +283,8 @@ Beside the main question of finding the performance of ADFD+ with respect to tim
 \end{minipage}
 \end{figure*}
 
-\section{Evaluation} \label{evaluation}
-To evaluate the performance and efficiency of ADFD+, we followed the common practice \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra} which is to compare it against another random testing tool. We used Randoop for comparison. We carried out testing of several error-seeded one and two dimensional numerical programs written in Java. Our subject programs were the same used in evaluation of ADFD \cite{ahmad2013adfd}. The programs were divided in to two sets. Set A and B contains one and two-dimensional programs respectively. Each class was injected with at least one failure domain of point, block or strip nature. The values forming the failure domains are given in Table \ref{table:failureDomains}. Every program was tested independently for 30 times by both ADFD+ and Randoop on the basis of time taken and number of tests used to find all the failures. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
+\section{Evaluation} \label{sec:evaluation}
+For evaluating the effectiveness and efficiency, we compared ADFD+ with Randoop, following the common practice of comparison of the new tool with a mature random testing tool \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra}. Testing of several error-seeded one and two dimensional numerical programs was carried out as per program code already published in the article \cite{ahmad2013adfd}. The programs were divided in to set A and B containing one and two-dimensional programs respectively. Each program was injected with at least one failure domain of point, block or strip nature. Every program was tested independently for 30 times by both ADFD+ and Randoop. Time taken and number of tests executed to find all failures were used as criteria for efficiency and effectiveness respectively. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
 
 %The code for the programs under test is given in Appendix~\ref{} while the test details are presented in Table~\ref{table:Results}. 
 %Every class was evaluated through $10^5$ calls in each test session of ADFD+.
@@ -285,7 +293,7 @@ To evaluate the performance and efficiency of ADFD+, we followed the common prac
 All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. %The machine took approximately 100 hours to process the experiments.
 The ADFD+ Jar file is available at \url{https://code.google.com/p/yeti-test/downloads/list/} and Randoop at \url{https://randoop.googlecode.com/files/randoop.1.3.3.zip}.
 
-The following commands (1) and (2) were used to run the ADFD+ and Randoop. Both ADFD+ and Randoop were executed with default settings except that Randoop was provided with a seed value.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
+The following two commands were used to run the ADFD+ and Randoop respectively. Both tools were executed with default settings, however, Randoop was provided with a seed value as well.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
 \begin{lstlisting}[language=bash]
 $ java -jar adfd_yeti.jar -------------(1)
 
@@ -331,13 +339,14 @@ $ java randoop.main.Main gentests \
 %\end{table}
 
 
-\section{Experimental results} \label{results}
+\section{Experimental results} \label{sec:result}
 %The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. 
-Results are split in to two sections depicting efficiency and effectiveness of the two tools.
-\subsection{Efficiency Evaluation}
-Figure \ref{fig:testtime} shows the efficiency measurement of the ADFD+ and Randoop against the selected programs. The x-axis represents one and two-dimensional programs with point, block and strip failure domain. The y-axis represents average time taken by both the tools to detect the whole failure domains. ADFD+ outperformed Randoop in the time taken to discover all forms of failure domains. Overall, this answers \textbf{RQ1} positively. The experimental analysis shows that there is a sufficient gain in efficiency when ADFD+ is used. The amount of gain in efficiency is up to two orders of magnitude.
+%Results are split in to two sections depicting efficiency and effectiveness of the two tools.
+\subsection{Efficiency}
+Figure \ref{fig:testtime} shows the efficiency measurement of ADFD+ and Randoop. The $x-axis$ represents one and two-dimensional programs with point, block and strip failure domains while the $y-axis$ represents average time taken by the tools to detect the whole failure domains. ADFD+ outperformed Randoop in the time taken to discover all forms of failure domains. % Overall, this answers \textbf{RQ1} positively. 
+The Figure \ref{fig:testtime} shows extra ordinary efficiency in case of  ADFD+, amounting up to two orders of magnitude, which may be partially attributed to the very fast processing of YETI integrated with ADFD+. YETI is capable of executing $10^6$ test calls per minute on Java code.
 
-It should be noted that the part of the gain may also be due to the fast processing of the underlying tool YETI, which is capable of executing $10^6$ test calls per minute on Java code. Therefore, to find the performance of only ADFD+ we performed the second set of experiments to measure effectiveness.
+%It should be noted that the part of the gain may also be due to the fast processing of the underlying tool YETI, which is capable of executing $10^6$ test calls per minute on Java code. Therefore, to find the performance of only ADFD+ we performed the second set of experiments to measure effectiveness.
 
 %For finding the efficiency, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
 \subsection{Effectiveness Evaluation}
@@ -443,7 +452,7 @@ Both the tools found all the failure domains in specific time or using specific 
 
 
 
-\section{Discussion}
+\section{Discussion}\label{sec:discussion}
 We have shown that ADFD+ is a promising technique to find a failure and using it as a focal point find the whole failure domain. We have also shown that ADFD+ can graphically draw the failure domain on a chart. The pictorial representation of failure domain helps in easily identifying the underlying domain and its boundaries, which can be helpful to developers in debugging.
 
 As a pilot study, we also ran an empirical study to evaluate several error-seeded programs. While it would be surprising if production programs produced much different results, it would be worthwhile to check.
@@ -455,12 +464,12 @@ The ADFD+ range value specifies how many values to test around the failure. The 
 
 
 
-\section{Threats to validity}
+\section{Threats to validity} \label{sec:threat}
 The research study faces threats to external and internal validity. The threats to external validity are the same, which are common to most of the empirical evaluations i.e. to what degree the classes under test and test generation tool (Randoop) are representatives of true practice. The classes under test contains failure patterns in only one and two-dimensional input domain. The threats may be reduced to a greater extent in future experiments by taking several types of classes and different test generation tools. 
 
 The threat to internal validity includes annotation of invariants that can bias the results, which may have been caused by error-seeded classes used in our experiments. Internal threats may be avoided by taking real classes and failures in the experiments. Moreover, testing a higher number of classes will also increase the validity of the results.
 
-\section{Conclusion}
+\section{Conclusion} \label{sec:conclusion}
 Automated Discovery of Failure Domain+ (ADFD+) is distinctive from other random test strategies in the sense that it is not only limited to identifying a failure in the program. Instead, the failure is exploited to identify and graphically plot its failure domain.
 
 In the first section, we describe ADFD+ in detail which is based on our previous approach ADFD~\cite{ahmad2013adfd}. We then describe the main improvements of ADFD+ over ADFD. 
@@ -469,7 +478,7 @@ In the second section, we analysed and compared the results of the experiments p
 
 We showed that Daikon lakes to accurately identify the failure boundary and therefore cannot generate invariants for such failures.  We further explain why Daikon does not work well for boundary failures. The main reason we identified for this behaviour is Daikons dependence on initial set of test cases, which are required by Daikon for generating invariants. With increase in number of test suite or high quality test suite improves the performance of invariants. 
 
-\section{Future Work} \label{futurework}
+\section{Future Work} \label{sec:futurework}
 The current approach can be extended to a larger set of real world multi-dimensional programs, using real failure instead of error-seeded programs. However, to plot failure domains of complex multi-dimensional nature, more sophisticated graphical tools like Matlab will be required rather than JFreeChart used in the current study. This may not restrict the formation of new failure domains to point, block and strip failure domain in one and two-dimensional numerical programs. 
 
 
