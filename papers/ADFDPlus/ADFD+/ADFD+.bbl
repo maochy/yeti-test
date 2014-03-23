@@ -11,6 +11,12 @@ F.~Chan, T.~Y. Chen, I.~Mak, and Y.-T. Yu.
   practitioners.
 \newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
 
+\bibitem{Chen2008}
+T.~Y. Chen.
+\newblock Adaptive random testing.
+\newblock {\em Eighth International Conference on Qualify Software}, 0:443,
+  2008.
+
 \bibitem{ciupa2006object}
 I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
 \newblock Object distance and its application to adaptive random testing of
@@ -18,18 +24,11 @@ I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
 \newblock In {\em Proceedings of the 1st international workshop on Random
   testing}, pages 55--63. ACM, 2006.
 
-\bibitem{Ciupa2007}
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
-\newblock Experimental assessment of random testing for object-oriented
-  software.
-\newblock In {\em Proceedings of the 2007 international symposium on Software
-  testing and analysis}, ISSTA '07, pages 84--94, New York, NY, USA, 2007. ACM.
-
-\bibitem{ciupa2008finding}
-I.~Ciupa, B.~Meyer, M.~Oriol, and A.~Pretschner.
-\newblock Finding faults: Manual testing vs. random+ testing vs. user reports.
-\newblock In {\em Software Reliability Engineering, 2008. ISSRE 2008. 19th
-  International Symposium on}, pages 157--166. IEEE, 2008.
+\bibitem{Csallner2004}
+C.~Csallner and Y.~Smaragdakis.
+\newblock Jcrasher: An automatic robustness tester for {Java}.
+\newblock {\em Software---Practice \& Experience}, 34(11):1025--1050, Sept.
+  2004.
 
 \bibitem{finelli1991nasa}
 G.~B. Finelli.
@@ -41,10 +40,6 @@ C.~Oriat.
 \newblock Jartege: a tool for random generation of unit tests for java classes.
 \newblock In {\em Quality of Software Architectures and Software Quality},
   pages 242--256. Springer, 2005.
-
-\bibitem{Oriol2011yeti}
-M.~Oriol.
-\newblock York extensible testing infrastructure, 2011.
 
 \bibitem{Oriol2012}
 M.~Oriol.
@@ -58,12 +53,25 @@ C.~Pacheco and M.~D. Ernst.
 \newblock {\em Eclat: Automatic generation and classification of test inputs}.
 \newblock Springer, 2005.
 
+\bibitem{Pacheco2005}
+C.~Pacheco and M.~D. Ernst.
+\newblock Eclat: Automatic generation and classification of test inputs.
+\newblock In {\em In 19th European Conference Object-Oriented Programming},
+  pages 504--527, 2005.
+
 \bibitem{pacheco2007randoop}
 C.~Pacheco and M.~D. Ernst.
 \newblock Randoop: feedback-directed random testing for java.
 \newblock In {\em Companion to the 22nd ACM SIGPLAN conference on
   Object-oriented programming systems and applications companion}, pages
   815--816. ACM, 2007.
+
+\bibitem{Pacheco2007a}
+C.~Pacheco, S.~K. Lahiri, M.~D. Ernst, and T.~Ball.
+\newblock Feedback-directed random test generation.
+\newblock In {\em Proceedings of the 29th international conference on Software
+  Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
+  Computer Society.
 
 \bibitem{schneckenburger2007towards}
 C.~Schneckenburger and J.~Mayer.
