@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{agrawal1995fault}
+H.~Agrawal, J.~R. Horgan, S.~London, and W.~E. Wong.
+\newblock Fault localization using execution slices and dataflow tests.
+\newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
+  International Symposium on}, pages 143--151. IEEE, 1995.
+
 \bibitem{ahmad2013adfd}
 M.~A. Ahmad and M.~Oriol.
 \newblock Automated discovery of failure domain.
@@ -17,13 +23,6 @@ T.~Y. Chen.
 \newblock {\em Eighth International Conference on Qualify Software}, 0:443,
   2008.
 
-\bibitem{ciupa2006object}
-I.~Ciupa, A.~Leitner, M.~Oriol, and B.~Meyer.
-\newblock Object distance and its application to adaptive random testing of
-  object-oriented programs.
-\newblock In {\em Proceedings of the 1st international workshop on Random
-  testing}, pages 55--63. ACM, 2006.
-
 \bibitem{Csallner2004}
 C.~Csallner and Y.~Smaragdakis.
 \newblock Jcrasher: An automatic robustness tester for {Java}.
@@ -34,6 +33,12 @@ C.~Csallner and Y.~Smaragdakis.
 G.~B. Finelli.
 \newblock Nasa software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
+
+\bibitem{jones2002visualization}
+J.~A. Jones, M.~J. Harrold, and J.~Stasko.
+\newblock Visualization of test information to assist fault localization.
+\newblock In {\em Proceedings of the 24th international conference on Software
+  engineering}, pages 467--477. ACM, 2002.
 
 \bibitem{oriat2005jartege}
 C.~Oriat.
@@ -72,6 +77,12 @@ C.~Pacheco, S.~K. Lahiri, M.~D. Ernst, and T.~Ball.
 \newblock In {\em Proceedings of the 29th international conference on Software
   Engineering}, ICSE '07, pages 75--84, Washington, DC, USA, 2007. IEEE
   Computer Society.
+
+\bibitem{podgurski2003automated}
+A.~Podgurski, D.~Leon, P.~Francis, W.~Masri, M.~Minch, J.~Sun, and B.~Wang.
+\newblock Automated support for classifying software failure reports.
+\newblock In {\em Software Engineering, 2003. Proceedings. 25th International
+  Conference on}, pages 465--475. IEEE, 2003.
 
 \bibitem{schneckenburger2007towards}
 C.~Schneckenburger and J.~Mayer.
