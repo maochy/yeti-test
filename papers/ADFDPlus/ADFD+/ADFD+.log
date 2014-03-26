@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  24 MAR 2014 00:45
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  26 MAR 2014 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -418,16 +418,16 @@ File: strip.png Graphic file (type png)
  <use strip.png>
 Package pdftex.def Info: strip.png used on input line 124.
 (pdftex.def)             Requested size: 71.13438pt x 56.9063pt.
-
-
-LaTeX Warning: Reference `sec:relatedwork' on page 1 undefined on input line 13
-3.
-
-[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./point.png> <./block.png> <./strip.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 182--185
+Underfull \hbox (badness 1783) in paragraph at lines 181--184
+[]\OT1/ptm/m/n/10 ADFD+ is a fully au-to-matic tech-nique re-quir-ing the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
@@ -435,33 +435,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 182--185
 File: adfdPlusWorkflow.png Graphic file (type png)
 
 <use adfdPlusWorkflow.png>
-Package pdftex.def Info: adfdPlusWorkflow.png used on input line 190.
+Package pdftex.def Info: adfdPlusWorkflow.png used on input line 189.
 (pdftex.def)             Requested size: 241.83702pt x 199.16353pt.
 
 <exampleError.png, id=17, 1441.88687pt x 818.55812pt>
 File: exampleError.png Graphic file (type png)
  <use exampleError.png>
-Package pdftex.def Info: exampleError.png used on input line 209.
-(pdftex.def)             Requested size: 483.67863pt x 298.75249pt.
+Package pdftex.def Info: exampleError.png used on input line 207.
+(pdftex.def)             Requested size: 483.67863pt x 293.06946pt.
 
-Underfull \hbox (badness 1496) in paragraph at lines 216--217
+Underfull \hbox (badness 1496) in paragraph at lines 213--214
 \OT1/ptm/m/n/10 der test. It is ev-i-dent from the pro-gram code that an
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 218.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 215.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 219.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 216.
 
-Overfull \hbox (6.00262pt too wide) in paragraph at lines 222--223
+Overfull \hbox (6.00262pt too wide) in paragraph at lines 219--220
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.72215pt too wide) in paragraph at lines 229--230
+Overfull \hbox (12.72215pt too wide) in paragraph at lines 226--227
 \OT1/cmr/m/n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 ; \OT1/
 cmr/m/n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3)\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
@@ -478,14 +478,14 @@ t/10 ; \OT1/cmr/m/n/10 4)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (8\OML/cmm/m/it/10
 <timeTakenBar.png, id=28, 346.4142pt x 260.6538pt>
 File: timeTakenBar.png Graphic file (type png)
  <use timeTakenBar.png>
-Package pdftex.def Info: timeTakenBar.png used on input line 276.
-(pdftex.def)             Requested size: 213.39497pt x 227.63002pt.
+Package pdftex.def Info: timeTakenBar.png used on input line 275.
+(pdftex.def)             Requested size: 213.39497pt x 241.85664pt.
 
 <testCasesBar.png, id=29, 312.2064pt x 263.0628pt>
 File: testCasesBar.png Graphic file (type png)
  <use testCasesBar.png>
-Package pdftex.def Info: testCasesBar.png used on input line 282.
-(pdftex.def)             Requested size: 213.39323pt x 227.63449pt.
+Package pdftex.def Info: testCasesBar.png used on input line 281.
+(pdftex.def)             Requested size: 213.39323pt x 241.86014pt.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
@@ -499,37 +499,42 @@ Underfull \hbox (badness 1931) in paragraph at lines 325--326
  []
 
 [4 <./timeTakenBar.png> <./testCasesBar.png>]
-Underfull \hbox (badness 1406) in paragraph at lines 477--482
+Underfull \hbox (badness 10000) in paragraph at lines 438--439
+
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 482--487
 []\OT1/ptm/m/n/10 The ADFD+ strat-egy is ca-pa-ble of test-ing nu-mer-i-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 477--482
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
 
  []
 
-(./ADFD+.bbl [5]) <mian.jpg, id=44, 50.3481pt x 65.043pt>
+[5] (./ADFD+.bbl) <mian.jpg, id=44, 50.3481pt x 65.043pt>
 File: mian.jpg Graphic file (type jpg)
  <use mian.jpg>
-Package pdftex.def Info: mian.jpg used on input line 542.
+Package pdftex.def Info: mian.jpg used on input line 545.
 (pdftex.def)             Requested size: 67.08252pt x 86.66885pt.
 
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 542--544
+Overfull \hbox (5.16504pt too wide) in paragraph at lines 545--547
  [] 
  []
 
 <manuel.jpg, id=45, 100.12407pt x 126.4725pt>
 File: manuel.jpg Graphic file (type jpg)
  <use manuel.jpg>
-Package pdftex.def Info: manuel.jpg used on input line 546.
+Package pdftex.def Info: manuel.jpg used on input line 549.
 (pdftex.def)             Requested size: 67.08252pt x 84.73999pt.
 
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 546--547
+Overfull \hbox (5.16504pt too wide) in paragraph at lines 549--550
  [][] 
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 550--551
+Underfull \hbox (badness 1394) in paragraph at lines 553--554
 \OT1/ptm/m/n/10 new au-to-mated ran-dom soft-ware test-ing
  []
 
@@ -537,53 +542,53 @@ Underfull \hbox (badness 1394) in paragraph at lines 550--551
 File: PFDOne.png Graphic file (type png)
 
 <use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 598.
+Package pdftex.def Info: PFDOne.png used on input line 601.
 (pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
  <BFDOne.png, id=50, 794.97pt x 575.14874pt>
 File: BFDOne.png Graphic file (type png)
  <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 602.
+Package pdftex.def Info: BFDOne.png used on input line 605.
 (pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
 
 <SFDOne.png, id=51, 789.95125pt x 573.14125pt>
 File: SFDOne.png Graphic file (type png)
  <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 606.
+Package pdftex.def Info: SFDOne.png used on input line 609.
 (pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--607
+Underfull \hbox (badness 10000) in paragraph at lines 601--610
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--607
+Underfull \hbox (badness 10000) in paragraph at lines 601--610
 []
  []
 
 <PFDTwo.png, id=52, 1187.43625pt x 772.8875pt>
 File: PFDTwo.png Graphic file (type png)
  <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 620.
+Package pdftex.def Info: PFDTwo.png used on input line 623.
 (pdftex.def)             Requested size: 227.60829pt x 170.708pt.
 
 <BFDTwo.png, id=53, 1192.455pt x 772.8875pt>
 File: BFDTwo.png Graphic file (type png)
  <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 624.
+Package pdftex.def Info: BFDTwo.png used on input line 627.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
 <SFDTwo.png, id=54, 1192.455pt x 772.8875pt>
 File: SFDTwo.png Graphic file (type png)
  <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 628.
+Package pdftex.def Info: SFDTwo.png used on input line 631.
 (pdftex.def)             Requested size: 227.62413pt x 170.708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--629
+Underfull \hbox (badness 10000) in paragraph at lines 623--632
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 620--629
+Underfull \hbox (badness 10000) in paragraph at lines 623--632
 []
  []
 
@@ -605,20 +610,17 @@ Before submitting the final camera ready copy, remember to:
 [7 <./PFDOne.png> <./BFDOne.png> <./SFDOne.png> <./PFDTwo.png> <./BFDTwo.png> <
 ./SFDTwo.png>] (./ADFD+.aux)
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5137 strings out of 493315
- 75011 string characters out of 6137904
- 263714 words of memory out of 5000000
- 8479 multiletter control sequences out of 15000+600000
+ 5136 strings out of 493315
+ 74994 string characters out of 6137904
+ 264009 words of memory out of 5000000
+ 8478 multiletter control sequences out of 15000+600000
  42316 words of font info for 82 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,47p,1157b,1508s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,47p,1178b,971s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
@@ -631,7 +633,7 @@ nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
 urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on ADFD+.pdf (7 pages, 822006 bytes).
+Output written on ADFD+.pdf (7 pages, 822527 bytes).
 PDF statistics:
  102 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
