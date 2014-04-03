@@ -547,16 +547,16 @@ A number of open-source and commercial automatic random testing tools reported i
 
 
 \subsection{JCrasher}
-JCrasher is an automatic robustness testing tool developed by Csallner and Smaragadakis \cite{csallner2004jcrasher}. JCrasher tries to crash the Java program with random input and exceptions thrown during the process are recorded. The exceptions are then compared with the list of acceptable standards defined in advance as heuristics. The undefined runtime exceptions are considered as errors. Since users interact with programs through its public methods with different kinds of inputs, therefore, JCrasher is designed to test only the public methods of sSUT with random inputs.
+JCrasher is an automatic robustness testing tool developed by Csallner and Smaragadakis \cite{csallner2004jcrasher}. JCrasher tries to crash the Java program with random input, and exceptions thrown during the process are recorded. The exceptions are then compared with the list of acceptable standards defined in advance as heuristics. The undefined runtime exceptions are considered as errors. JCrasher randomly tests only the public methods of SUT because users interact with programs through public methods with different kinds of inputs.
+
+The working mechanism of JCrasher is illustrated by testing a \verb+.java+ program as shown in Figure~\ref{fig:JCrasher}. The source file is first compiled using \verb+javac+ and the byte code obtained is passed as input to JCrasher which uses Java reflection library~\cite{chan1999java} to analyse all the methods declared by class \verb+T+. The JCrasher uses methods transitive parameter types \verb+P+ to generate the most appropriate test data set which is written to a file \verb+TTest.java+. The file is compiled and executed by JUnit. All exceptions produced during test case executions are collected and compared with robustness heuristic for any violation and reported as errors.
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm, height=8cm]{chapter2/JCrasher.png}
-	\caption{Illustration of robustness testing of Java program with JCrasher~\cite{csallner2004jcrasher}}
+	\caption{How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic~\cite{csallner2004jcrasher}. Denotes the Kleene star operator.}
 	\label{fig:JCrasher}
 \end{figure}
-
-The working of JCrasher is illustrated by testing a \verb+.java+ program as shown in Figure~\ref{fig:JCrasher}. The source file is first compiled using \verb+javac+ and the byte code obtained is passed as input to JCrasher which uses Java reflection library~\cite{chan1999java} to analyse all the methods declared by class \verb+T+. The JCrasher uses methods transitive parameter types \verb+P+ to generate the most appropriate test data set which is written to a file \verb+TTest.java+. The file is compiled and executed by JUnit. All the exceptions produced during test case executions are collected and compared with robustness heuristic for any violation and reported as errors.
 
 JCrasher is a pioneering tool with the capability to perform fully automatic testing, including test case generation, execution, filtration and report generation. JCrasher has the novelty to generate test cases as JUnit files which can also be easily read and used for regression testing. Another important feature of JCrasher is execution of each new test on a ``clean slate" which ensures that the changes made by the previous tests do not affect the new test.  
 
@@ -564,7 +564,7 @@ JCrasher is a pioneering tool with the capability to perform fully automatic tes
 
 
 \subsection{Jartege} \label{jartege_2}
-Jartege (Java random test generator) is an automated testing tool~\cite{oriat2005jartege} that randomly generates unit tests for Java classes with contracts specified in JML. The contracts include method's pre and post-conditions and class invariants. Initially Jartege uses the contracts to eliminate irrelevant test cases and later on the same contracts serve as test oracle to differentiate between errors and false positives. Jartege uses simple random testing to test classes and generate test cases. In addition, it parametrise its random aspect in order to prioritise testing a specific part of the class or to get interesting sequences of calls. The parameters include the following: 
+Jartege (Java random test generator) is an automated testing tool~\cite{oriat2005jartege} that randomly generates unit tests for Java classes with contracts specified in JML. The contracts include pre and post-conditions method and class invariants. Initially Jartege uses the contracts to eliminate irrelevant test cases and later on the same contracts serve as test oracle to differentiate between errors and false positives. Jartege uses simple random testing to test classes and generate test cases. Additionally, testing of a specific part of the class can be prioritized by changing the parameters to get interesting sequences of calls if so desired by the tester. The parameters include the following: 
 
 \begin{itemize}
 \item Operational profile of the classes i.e. the likely use of the class under test by other classes.  
@@ -575,7 +575,12 @@ Jartege (Java random test generator) is an automated testing tool~\cite{oriat200
 The Jartege technique evaluates a class by entry pre-conditions and internal pre-conditions. Entry pre-conditions are the contracts to be met by the generated test data for testing the method while internal pre-conditions are the contracts which are inside the methods and their violations are considered as errors either in the methods or in the specifications. The Jartege checks for errors in program code as well as in specifications and the Junit tests produced by Jartege can be used later for regression testing. Its limitation is the prior requirement of JML specifications of the program.
 
 \subsection{Eclat}
-Eclat~\cite{pacheco2005eclat} is an automated testing tool which generates and classifies unit tests for Java classes. The tool takes a software and a set of test cases for which the software runs properly. It creates an operational model, based on the correct software operations, and apply the test data. If the operational pattern of execution of the test data differs from the model, the following three outcomes may be possible: (a) a fault in the given SUT (b) model violation despite normal operation (c) illegal input which the program is unable to handle.
+Eclat~\cite{pacheco2005eclat} is an automated testing tool which generates and classifies unit tests for Java classes. The tool takes a software and a set of test cases for which the software runs properly. It creates an operational model, based on the correct software operations, and apply the test data. If the operational pattern of the test data differs from the model, the following three outcomes may be possible: (a) a fault in the given SUT (b) model violation despite normal operation (c) illegal input which the program is unable to handle.
+
+The testing process is accomplished by Eclat in three stages as shown in Figure~\ref{fig:eclat} . \\
+In the first stage, a small subset of test inputs is selected, which may likely reveal faults in the given SUT. \\
+In the second stage, reducer function is used to discard any redundant input, leaving only a single input per operational pattern. \\
+In the third stage, the acquired test inputs are converted into test cases and oracles are created to determine the success or failure of the test.
 
 \begin{figure}[h]
 	\centering
@@ -584,10 +589,6 @@ Eclat~\cite{pacheco2005eclat} is an automated testing tool which generates and c
 	\label{fig:eclat}
 \end{figure}
 
-The process is accomplished in three stages. \\*
-In the first stage, it selects a small subset of test inputs that is likely to reveal faults in the given SUT. \\*
-In the second stage, reducer function is used to discard any redundant input, leaving only a single input per operational pattern. \\*
-In the third stage, the acquired test inputs are converted into test cases and oracles are created to determine the success or failure of the test.
 
 Csallner and Smaragdakis~\cite{pacheco2007randoop} compared Eclat with JCrasher by executing nine programs on  both tools. They reported that Eclat performed better than JCrasher. On the average, Eclat selected 5.0 inputs per run out of which 30\% revealed faults while JCrasher selected 1.13 inputs per run out of which 0.92\% revealed faults. The limitation of Eclat is dependence on initial pool of correct test cases. Existence of errors in the pool leads to the creation of wrong operational model which adversely affects the testing process.   
 
@@ -599,12 +600,12 @@ Csallner and Smaragdakis~\cite{pacheco2007randoop} compared Eclat with JCrasher 
 
 
 \subsection{Randoop}
-Random tester for object oriented programs (Randoop) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes, contracts, filters and time limit as input and gives a suite of JUnit for Java and NUnit for .Net program as output. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test and arguments for these methods are selected from the predefined pool in case of primitive types and as sequence of null values in case of reference type. Randoop maintains two sets called \verb+ErrorSeqs+ and \verb+NonErrorSeqs+ to record the feedback. It extends \verb+ErrorSeqs+ set in case of contract or filter violation and \verb+NonErrorSeqs+ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, \verb+ErrorSeqs+ and \verb+NonErrorSeqs+ are produced as JUnit/NUnit test suite. In terms of coverage and number of faults discovered, Randoop implementing FDRT was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that Randoop achieved more branch coverage and better fault detection than JCrasher. 
+Random tester for object oriented programs (Randoop) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes, contracts, filters and time limit as input and gives a suite of JUnit for Java and NUnit for .Net program as output. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test.  Arguments for these methods are selected from the predefined pool in case of primitive type and as sequence of null values in case of reference type. Randoop maintains two sets called \verb+ErrorSeqs+ and \verb+NonErrorSeqs+ to record the feedback. It extends \verb+ErrorSeqs+ set in case of contract or filter violation and \verb+NonErrorSeqs+ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, \verb+ErrorSeqs+ and \verb+NonErrorSeqs+ are produced as JUnit/NUnit test suite. In terms of coverage and number of faults discovered, Randoop using FDRT technique was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that Randoop achieved more branch coverage and better fault detection than JCrasher. 
 
 \subsection{QuickCheck}
 QuickCheck~\cite{claessen2011quickcheck} is a lightweight random testing tool used for testing of Haskell programs~\cite{hudak2007history}. Haskell is a functional programming language where programs are evaluated by using expressions rather than statements. Most of the functions in Haskell are pure except the IO functions, therefore QuickCheck mainly focuses on testing pure functions. QuickCheck is designed to have a simple domain-specific language of testable specifications embedded in Haskell. This language is used to define expected properties of the functions under test. %- for example, reversing a list with single element must result in the same list.\\ %(author check the definition of pure functions)\\
 
-QuickCheck takes the function to be tested and properties of the program (Haskell functions) as inputs. The tool uses built-in random generator to generate test data, but it is also capable to use custom built data generator. The tester-defined-properties must hold while executing the function on the generated test data. Any violation of the defined properties will indicate error in the function.
+QuickCheck takes as inputs the function to be tested and properties of the program (Haskell functions). The tool uses built-in random generator to generate test data, but it is also capable to use custom built data generator. The tester-defined-properties must hold while executing the function on the generated test data. Any violation of the defined properties will indicate error in the function.
 
 
 
@@ -616,7 +617,7 @@ QuickCheck takes the function to be tested and properties of the program (Haskel
 %AgitarOne is a commercial tool that automatically generates unit tests. It has a Junit Generator engine that can create 25,000 lines or more of Junit per hour [29]. It can be easily integrated into famous IDE like Eclipse. It takes as input, classes under test, time and optionally any knowledge or test cases that has a positive influence on the performance of the testing process. The generated Junit tests can be run from the same IDE and can also be used for later regression testing. The GUI interface is called a dashboard which provides in depth knowledge of the tests conducted, failures detected, alerts and the archieves of the tests conducted earlier. It also shows the coverage obtained after executing the Junits against the code under test.
 
 \subsection{AutoTest} \label{autotest_2}
-The AutoTest is used to test Eiffel language programs~\cite{ciupa2007automatic}. The Eiffel language uses the concept of contracts which is effectively utilized by AutoTest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The post-conditions are used as test oracle to determine whether the test passes or fail. Beside automated testing the AutoTest also allows the tester to manually write the test cases to target specific section of the code. The AutoTest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
+The AutoTest is used to test Eiffel language programs~\cite{ciupa2007automatic}. The Eiffel language uses the concept of contracts which is effectively utilized by AutoTest. For example, the auto generated inputs are filtered using pre-conditions and non complying test inputs are discarded. The post-conditions are used as test oracle to determine whether the test passes or fails. Beside automated testing the AutoTest also allows the tester to manually write the test cases to target specific section of the code. The AutoTest takes one or more methods/classes as inputs and automatically generate test input data according to the requirements of the methods or classes.
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -625,19 +626,20 @@ The AutoTest is used to test Eiffel language programs~\cite{ciupa2007automatic}.
 	\label{fig:autotest}
 \end{figure}
 
-\noindent According to Figure~\ref{fig:autotest}, the architecture of AutoTest can be split into the following main parts:
+\noindent As shown in Figure~\ref{fig:autotest}, the architecture of AutoTest can be split into the following four parts:
 \begin{enumerate}
-\item \textbf{Testing Strategy:} It is a pluggable component where testers can fit any strategy according to the testing requirement. The strategy contains the directions for testing.%- for example what instructions should be executed on the SUT. Using the information the strategy synthesize test cases and forward it to the proxy. 
+\item \textbf{Strategy:} It is a pluggable component where testers can fit any strategy according to the testing requirement. The strategy contains the directions for testing.%- for example what instructions should be executed on the SUT. Using the information the strategy synthesize test cases and forward it to the proxy. 
 The default strategy creates random data to evaluate the methods/classes under test.
 \item \textbf{Proxy:} It handles inter-process communication. The proxy receives execution requests from the strategy and forward these to the interpreter. It also sends the execution results to the oracle part.
-\item \textbf{Interpreter:} It execute operations on the SUT. The most common operations include: create object, invoke routine and assign result. The interpreter is kept separate to increase robustness.
-\item \textbf{Oracle:} It is based on contract-based testing. It evaluate the results to see if the contracts are satisfied. The outcome of the tests are formatted in HTML and stored on disk.
+\item \textbf{Interpreter:} It executes operations on the SUT. The most common operations include: create object, invoke routine and assign result. The interpreter is kept separate to increase robustness.
+\item \textbf{Oracle:} It is based on contract-based testing. It evaluates the results to see if the contracts are satisfied. The outcome of the tests are formatted in HTML and stored on disk.
 \end{enumerate}
 
 \subsection{TestEra}
-TestEra~\cite{marinov2001testera} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes specifications, numerical value and the method to be tested as input. It uses pre-conditions of a method to generate all non isomorphic valid test inputs to the specified limit. The test inputs are executed on the method and the results are compared against the post-conditions of the method serving as oracle. Any test case that fails to satisfy post-condition is considered as a fault. 
+TestEra~\cite{marinov2001testera} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes specifications, numerical value and the method to be tested as input. It uses pre-conditions of a method to generate all non isomorphic valid test inputs to the specified limit. The test inputs are executed and the results are compared against the post-conditions of the method serving as oracle. Any test case that fails to satisfy post-condition is considered as a fault. 
 
-TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints on test inputs and Alloy Analyser~\cite{jackson2000alcoa} to solve these constraints and generate test inputs. Alloy Analyzer performs the following three functions: (a) it translates Alloy predicates into propositional formulas, i.e. constraints where all variables are boolean (b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
+TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints on test inputs and uses Alloy Analyser~\cite{jackson2000alcoa} to solve these constraints and generate test inputs. Alloy Analyzer performs the following three functions: (a) it translates Alloy predicates into propositional formulas%, i.e. constraints where all variables are boolean 
+ (b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
 
 \begin{figure}[h]
 	\centering
@@ -647,15 +649,15 @@ TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to e
 \end{figure}
 
 
-TestEra uses program specifications to guide the auto generation of test inputs. However, in Jartege (Section \ref{jartege_2}) and AutoTest (Section \ref{autotest_2}) specifications are used to filter the irrelevant random generated test data. All the tools uses specifications in a similar way for oracle. 
+TestEra uses program specifications to guide the auto generation of test inputs as against Jartege (Section \ref{jartege_2}) and AutoTest (Section \ref{autotest_2}) which use program specifications for filtrating the irrelevant random generated test data. However, all the three tools use program specifications in a similar way for test oracle. 
 
 
 %Testera use specifications to guide the automatic generation of test inputs. It uses Alloy language for specification and Alloy Analyser to generate all non-isomorphic instances for a given size according to the specification automatically. Then, TestEra translate the instances to Java input as test cases for the program under test. After executing the test, TestEra then translate the outputs back to Alloy and Alloy Analyzer check the input and output against the correctness criteria given in Alloy. When it detects a violation, TestEra generates report in the form of concrete counterexamples. Figure 2.6 [50] illustrates the basic framework of TestEra.
 
 \subsection{Korat} % please read thesis of khurshid in Mendeley in phd thesis section for more information.
-Korat~\cite{boyapati2002korat} is a framework for automated testing of Java programs based on the formal specifications~\cite{chang1999structural}. Korat and TestEra~\cite{marinov2001testera}, developed by the same team, perform specification based testing. The difference however is that unlike TestEra which uses Alloy Modelling Language (AML) Korat uses Java Modelling Language (JML) for specifications. Moreover, Korat uses bounded-exhaustive testing in which the code is tested against all possible inputs within the given small bound~\cite{khurshid2001checking}. Korat generate structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates it to a boolean value. Korat takes imperative predicates and finitization value as inputs. It systematically explores the predicates input space and generates all non-isomorphic inputs for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter out the fields accessed during executions. These inputs are taken as test cases. 
+Korat~\cite{boyapati2002korat} is a framework for automated testing of Java programs based on the formal specifications~\cite{chang1999structural}. Korat and TestEra~\cite{marinov2001testera}, developed by the same team, perform specification based testing. The difference however is that unlike TestEra which uses Alloy Modelling Language (AML) Korat uses Java Modelling Language (JML) for specifications. Moreover, Korat uses bounded-exhaustive testing in which the code is tested against all possible inputs within the given bounds~\cite{khurshid2001checking}. Korat generates structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates it to a boolean value. Korat takes imperative predicates and finitization value as inputs. It systematically explores the input space of the predicates and generates all non-isomorphic inputs for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter out the fields accessed during executions. These inputs are taken as test cases. 
 
-Korat depends on developers written \verb+repOK()+ and \verb+checkRep()+ methods, where \verb+repOK()+ is used to check the class invariants and \verb+checkRep()+ is used to verify the post-conditions to validate the correctness of the test case. The key benefit of Korat and TestEra is that no existing set of operations are required to create input values. Therefore, they can create input values that may be difficult or impossible to create using a given set of operations. The disadvantage of the approaches however is the requirement of significant amount of manual efforts \cite{pacheco2009directed}.    
+Korat uses \verb+repOK()+ and \verb+checkRep()+ methods. The \verb+repOK()+ is used to check the class invariants for validating test inputs while \verb+checkRep()+ is used to verify the post-conditions for validating the test case. Korat does not require existing set of operations to create input values. Therefore it has the advantage of generating input values that may be difficult or impossible with a given set of operations. The disadvantage of the approach is the requirement of significant manual efforts \cite{pacheco2009directed}.    
 
 %As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
 
@@ -685,7 +687,7 @@ The software testing is summarized graphically with the help of two dimensional 
 \end{figure}
 
 
-The chapter gives an overview of software testing, including definition, common types, need, purpose and uses. It differentiates manual and automated software testing and describes various ways of software test data generation, being the crucial part of any testing system. The later part describes random testing and the various ways of performing random testing. Finally we showed how the automated testing tools implement random technique for software testing.
+The chapter gives an overview of software testing, including definition, common types, need, purpose and uses. It differentiates manual and automated software testing and describes various ways of software test data generation, being the crucial part of any testing system. The later part describes random testing and the various ways of improving the performance of random testing. Finally, information is presented on how the automated testing tools implement random technique for software testing. Main features of automatic testing tools used in random testing are summarized in Table ???.
 
 
 \begin{figure}[H]
