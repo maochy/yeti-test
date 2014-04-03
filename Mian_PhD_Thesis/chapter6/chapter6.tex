@@ -1,5 +1,5 @@
 \externaldocument{chapter6}
-\chapter{ADFD+: An Automatic Testing Technique for Finding and Presenting Failure domains}
+\chapter{Automated Discovery of Failure Domain Plus}
 \label{chap:ADFD+}
 
 This paper presents Automated Discovery of Failure Domain+ (ADFD+), an upgraded version of ADFD technique with respect to algorithm and graphical presentation of failure domains. The new algorithm used in ADFD+ searches for failure domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. This results in consumption of lower number of test cases for detecting failure domain. The output has been improved in ADFD+ to provide labelled graphs for depicting the results in easily understandable user friendly form. ADFD+ is compared with Randoop to find the comparative performance of the two techniques. The results indicate that ADFD+ is a promising technique for finding failure and failure domain efficiently and effectively. In comparison with Randoop, its efficiency is evident by taking two orders of magnitude less time and its effectiveness is shown by taking 50\% or less number of test cases to discover failure domains. ADFD+ has the added advantage of presenting the output in graphical form showing point, block and strip domains visually as against Randoop which lacks graphical user interface.
@@ -121,7 +121,7 @@ As soon as the button is clicked, YETI comes in to play with ADFD+ strategy to s
 
 %Instead of front end give workflow. It will make more sense. Change the code of the program
 
-\begin{figure}[ht]
+\begin{figure}[htp]
 \centering
 \includegraphics[width= 10.5cm,height=8cm]{chapter6/adfdPlusWorkflow.png}
 \caption{Workflow of ADFD+}
@@ -186,7 +186,42 @@ At the beginning of the test, ADFD+ strategy evaluates the given class with the 
 
 
 \section{Evaluation} \label{sec:evaluation}
-For evaluating the efficiency and effectiveness, we compared ADFD+ with Randoop, following the common practice of comparison of the new tool with a mature random testing tool \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra}. Testing of several error-seeded one and two dimensional numerical programs was carried out as per program code \cite{ahmad2013adfd}. The programs were divided in to set A and B containing one and two-dimensional programs respectively. Each program was injected with at least one failure domain of point, block or strip nature. The failure causing values are given in Table \ref{table:failureDomains6}. Every program was tested independently for 30 times by both ADFD+ and Randoop. Time taken and number of tests executed to find all failure domains were used as criteria for efficiency and effectiveness respectively. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
+For evaluating the efficiency and effectiveness, we compared ADFD+ with Randoop, following the common practice of comparison of the new tool with a mature random testing tool \cite{oriat2005jartege, pacheco2005eclat, xie2005symstra}. Testing of several error-seeded one and two dimensional numerical programs was carried out as per program code \cite{ahmad2013adfd}. The programs were divided in to set A and B containing one and two-dimensional programs respectively. Each program was injected with at least one failure domain of point, block or strip nature. The failure causing values are given in Table \ref{table:failureDomains6}. Every program was tested independently for 30 times by both ADFD+ and Randoop. Time taken and number of tests executed to find all failure domains were used as criteria for efficiency and effectiveness respectively. The external parameters were kept constant in each test. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, oriol2012random}.
+
+\begin{table}[h]
+\caption{Table depicting values of x and y arguments forming point, block and strip failure domain in Figure 6(a), 6(b), 6(c) and Figure 7(a), 7(b), 7(c) respectively}
+\bigskip
+\centering
+{\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{|l|l|l|l|}
+\hline
+Dim & Point failure		& 	Block failure		& 	Strip failure		\\
+\hline
+One & x = -66			&	x = -1, 0, 1		&	x = -4 -- 34 	\\	
+& x = -2			 	&	x =-26 -- -29	&					\\	
+& x= 51 				&	x = 51 -- 54 	&					\\
+& x= 23 				& 	 				& 					\\
+\hline
+Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\	
+&x=4, y=10			&	x = 6, y = 2		&	x = 8,~~y = 0	\\	
+&x=7, y=10			&	x = 7, y = 2		&	x = 8,~~y = 1	\\
+&x=9, y=10			& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
+&					& 	x = 5, y = 3 		& 	x = 9,~~y = 2	\\
+&					& 	x = 6, y = 3 		& 	x = 10, y = 2	\\
+&					& 	x = 7, y = 3 		& 	x = 10, y = 3	\\
+&					& 	x = 8, y = 3 		& 	x = 11, y = 3	\\
+&					& 	x = 5, y = 4 		& 	x = 11, y = 4	\\
+&					& 	x = 6, y = 4 		& 	x = 12, y = 4	\\
+&					& 	x = 7, y = 4 		& 	x = 12, y = 5	\\
+&					& 	x = 8, y = 4 		& 	x = 13, y = 6	\\
+&					&			      		& 	x = 14, y = 6	\\				
+&					&			      		& 	x = 14, y = 7	\\
+\hline
+\end{tabular}
+}
+\bigskip
+\label{table:failureDomains6}
+\end{table}
 
 
 \subsection{Research questions} \label{sec:questions}
@@ -206,21 +241,10 @@ The following research questions have been addressed in the study for evaluating
 
 
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=7.5cm,height=8.5cm]{chapter6/timeTakenBar.png}
- \caption{Time taken to find failure domains}
-  \label{fig:testtime6}
-\end{figure}
 
 
 
-\begin{figure}[ht]
-  \centering
-  \includegraphics[width=7.5cm,height=8.5cm]{chapter6/testCasesBar.png}
-  \caption{Test cases taken to find failure domains}
-  \label{fig:testcases6}
-\end{figure}
+
 
 
 
@@ -266,8 +290,30 @@ $ java randoop.main.Main gentests \
 \section{Experimental results} \label{sec:result6}
 %The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. 
 %Results are split in to two sections depicting efficiency and effectiveness of the two tools.
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm,height=9cm]{chapter6/timetaken.png}
+\caption{Time taken to find failures}
+\label{fig:timelimit}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm,height=9cm]{chapter6/TestCases.png}
+\caption{Number of test cases taken to find failures}
+\label{fig:numberoftests}
+\end{figure}
+
+\newpage
 \subsection{Efficiency}
-Figure \ref{fig:testtime} shows the comparative efficiency of ADFD+ and Randoop. The $x-axis$ represents one and two-dimensional programs with point, block and strip failure domains while the $y-axis$ represents average time taken by the tools to detect the failure domains. As shown in the figure ADFD+ showed extra ordinary efficiency by taking two orders of magnitude less time to discover failure domains as compared to Randoop. 
+Figure \ref{fig:testtime6} shows the comparative efficiency of ADFD+ and Randoop. The $x-axis$ represents one and two-dimensional programs with point, block and strip failure domains while the $y-axis$ represents average time taken by the tools to detect the failure domains. As shown in the figure ADFD+ showed extra ordinary efficiency by taking two orders of magnitude less time to discover failure domains as compared to Randoop. 
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=10.5cm,height=10.5cm]{chapter6/timeTakenBar.png}
+ \caption{Time taken to find failure domains}
+  \label{fig:testtime6}
+\end{figure}
 
 This may be partially attributed to the very fast processing of YETI, integrated with ADFD+. YETI is capable of executing $10^6$ test calls per minute on Java code. To counter the contribution of YETI and assess the performance of ADFD+ by itself, the effectiveness of ADFD+ was compared with Randoop in terms of the number of test cases required to identify the failure domains without giving any consideration to the time consumed for completing the test session. The results are presented in the following section.
 
@@ -275,7 +321,15 @@ This may be partially attributed to the very fast processing of YETI, integrated
 
 %For finding the efficiency, the CPU time consumed from the start of the test to the identification of last failure was measured for each experiment of ADFD+ and Randoop.  Figure \ref{fig:testtime} shows the results in a box-and-whisker plot. The figure shows that ADFD+ in no case took more than ten seconds to find the failures where Randoop consumed at least  80 seconds to find the same failures.
 \subsection{Effectiveness}
-Figure \ref{fig:testcases} shows the comparative effectiveness of ADFD+ and Randoop. The $x-axis$ represents one and two-dimensional programs with point, block and strip failure domains while the $y-axis$ represents average number of test cases used by the tools to detect the failure domains. The figure shows higher effectiveness in case of ADFD+, amounting to 100\% or more. The higher effectiveness of ADFD+ may be attributed to its working mechanism in comparison with Randoop for identifying failures. ADFD+ dynamically changes its algorithm to exhaustive testing in a specified radius around the failure as against Randoop which uses the same random algorithm for searching failures.
+Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD+ and Randoop. The $x-axis$ represents one and two-dimensional programs with point, block and strip failure domains while the $y-axis$ represents average number of test cases used by the tools to detect the failure domains. The figure shows higher effectiveness in case of ADFD+, amounting to 100\% or more. The higher effectiveness of ADFD+ may be attributed to its working mechanism in comparison with Randoop for identifying failures. ADFD+ dynamically changes its algorithm to exhaustive testing in a specified radius around the failure as against Randoop which uses the same random algorithm for searching failures.
+
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=10.5cm,height=10.5cm]{chapter6/testCasesBar.png}
+  \caption{Test cases taken to find failure domains}
+  \label{fig:testcases6}
+\end{figure}
 
 \subsection{Failure Domains}
  The comparative results of the two tools with respect to presentation of the identified failure domains reveal better performance of ADFD+ by providing the benefit of presenting the failure domains in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension6} and \ref{fig:failureDomainsTwoDimension6}. The user can also enable or disable the option of showing the failing values on the graph. In comparison Randoop lacks the ability of graphical presentation and the option of showing the failure domains separately and provides the results scattered across the textual files. 
@@ -292,19 +346,7 @@ Figure \ref{fig:testcases} shows the comparative effectiveness of ADFD+ and Rand
 %\subsection{Daikon results} \label{daikon_results}
 %In initial set of experiments, Daikon failed to generate an invariant for identifying a single failure. On analysis It is found that Daikon rely on the existing set of test cases to generate invariants. Since the test cases produced by Randoop did not generate any test case from failure domain therefore Daikon could not generate an assertion to point out the failure. To enable Randoop to generate test case from failure domain we directed it to produce random values between a limited range. In this way we were able to generate interesting test cases from Randoop. Test results of Randoop are shown in Table \ref{}
 
-%\begin{figure}[!Htp]
-%\centering
-%\includegraphics[width=8.7cm,height=6.5cm]{timetaken.png}
-%\caption{Time taken to find failures}
-%\label{fig:timelimit}
-%\end{figure}
 
-%\begin{figure}[!Htp]
-%\centering
-%\includegraphics[width=8.7cm,height=6.5cm]{TestCases.png}
-%\caption{Number of test cases taken to find failures}
-%\label{fig:numberoftests}
-%\end{figure}
 
 
 
@@ -416,11 +458,11 @@ The study faces threats to external and internal validity. The external threats 
 
 
 \section{Related Work}
-The increase in complexity of programs poses new challenges to researchers  for finding more efficient and effective ways of software testing with user friendly easy to understand test results. Adaptive Random Testing \cite{Chen2008}, Proportional random testing \cite{chan1996proportional} and feedback directed random testing \cite{Pacheco2007a} are some of the prominent upgraded versions of random testing with better performance. Automated random testing is simple to implement and capable of finding hitherto bugs in complex programs \cite{Csallner2004, Pacheco2005}. %ADFD+ is an upgraded version of ADFD technique \cite{ahmad2013adfd} to find a failure and using it can effectively and efficiently detect the whole failure domain.
+The increase in complexity of programs poses new challenges to researchers  for finding more efficient and effective ways of software testing with user friendly easy to understand test results. Adaptive Random Testing \cite{chen2005adaptive}, Proportional random testing \cite{chan1996proportional} and feedback directed random testing \cite{pacheco2007randoop} are some of the prominent upgraded versions of random testing with better performance. Automated random testing is simple to implement and capable of finding hitherto bugs in complex programs \cite{csallner2004jcrasher, pacheco2005eclat}. %ADFD+ is an upgraded version of ADFD technique \cite{ahmad2013adfd} to find a failure and using it can effectively and efficiently detect the whole failure domain.
 ADFD+ is a promising technique for finding failures and failure domains efficiently and effectively with the added advantage of presenting the output in graphical form showing point, block and strip domains.
 
 
-Some previous research studies have reported work on Identification, classification and visualisation of pass and fail domains in the past \cite{agrawal1995fault, jones2002visualization, podgurski2003automated}. This includes Xslice~\cite{agrawal1995fault} is used to differentiate the execution slices of passing and failing part of a test in a visual form. Another tool called Tarantula uses colour coding to track the statements of a program during and after the execution of the test suite~\cite{jones2002visualization}. Hierarchical Multi Dimension Scaling (HMDS) describes a semi-automated procedure of classifying and plotting the faults \cite{podgurski2003automated}. A serious limitation of the above mentioned tools is that they are not fully automated and require human intervention during execution. Moreover these tools need the requirement of existing test cases to work on where as ADFD+ strategy generates test cases, discovers failures, identifies pass and fail domains and visualises the results in a graphical form operating in fully automated manner. 
+Some previous research studies have reported work on Identification, classification and visualisation of pass and fail domains in the past \cite{podgurski2003automated, agrawal1995fault, jones2002visualization}. This includes Xslice~\cite{agrawal1995fault} is used to differentiate the execution slices of passing and failing part of a test in a visual form. Another tool called Tarantula uses colour coding to track the statements of a program during and after the execution of the test suite~\cite{jones2002visualization}. Hierarchical Multi Dimension Scaling (HMDS) describes a semi-automated procedure of classifying and plotting the faults \cite{podgurski2003automated}. A serious limitation of the above mentioned tools is that they are not fully automated and require human intervention during execution. Moreover these tools need the requirement of existing test cases to work on where as ADFD+ strategy generates test cases, discovers failures, identifies pass and fail domains and visualises the results in a graphical form operating in fully automated manner. 
 
 
 
@@ -510,53 +552,21 @@ ADFD+ has the capability of graphical presentation of results for one and two-di
 
 %\bigskip
 %\bigskip
-\textbf{Appendix}
-\begin{table}[h]
-\caption{Table depicting values of x and y arguments forming point, block and strip failure domain in Figure 6(a), 6(b), 6(c) and Figure 7(a), 7(b), 7(c) respectively}
-\centering
-{\renewcommand{\arraystretch}{1.4}
-\begin{tabular}{|l|l|l|l|}
-\hline
-Dim & Point failure		& 	Block failure		& 	Strip failure		\\
-\hline
-One & x = -66			&	x = -1, 0, 1		&	x = -4 -- 34 	\\	
-& x = -2			 	&	x =-26 -- -29	&					\\	
-& x= 51 				&	x = 51 -- 54 	&					\\
-& x= 23 				& 	 				& 					\\
-\hline
-Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\	
-&x=4, y=10			&	x = 6, y = 2		&	x = 8,~~y = 0	\\	
-&x=7, y=10			&	x = 7, y = 2		&	x = 8,~~y = 1	\\
-&x=9, y=10			& 	x = 8, y = 2 		& 	x = 9,~~y = 1	\\
-&					& 	x = 5, y = 3 		& 	x = 9,~~y = 2	\\
-&					& 	x = 6, y = 3 		& 	x = 10, y = 2	\\
-&					& 	x = 7, y = 3 		& 	x = 10, y = 3	\\
-&					& 	x = 8, y = 3 		& 	x = 11, y = 3	\\
-&					& 	x = 5, y = 4 		& 	x = 11, y = 4	\\
-&					& 	x = 6, y = 4 		& 	x = 12, y = 4	\\
-&					& 	x = 7, y = 4 		& 	x = 12, y = 5	\\
-&					& 	x = 8, y = 4 		& 	x = 13, y = 6	\\
-&					&			      		& 	x = 14, y = 6	\\				
-&					&			      		& 	x = 14, y = 7	\\
-\hline
-\end{tabular}
-}
-\bigskip
-\label{table:failureDomains6}
-\end{table}
 
 \newpage
-\begin{figure} [H]
+
+\begin{figure} [htp]
+\centering
 \subfigure[Point failure domain in one-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/PFDOne.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDOne.png}
 \label{fig:PFDOne6}
 }
 \subfigure[Block failure domain in one-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/BFDOne.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDOne.png}
 \label{fig:BFDOne6}
 }
 \subfigure[Strip failure domain in one dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/SFDOne.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDOne.png}
 \label{fig:SFDOne6}
 }
 \caption{Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}
@@ -567,18 +577,18 @@ Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 
 
 
-\begin{figure} [H]
-
+\begin{figure} [htp]
+\centering
 \subfigure[Point failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/PFDTwo.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDTwo.png}
 \label{fig:PFDOne6}
 }
 \subfigure[Block failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/BFDTwo.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDTwo.png}
 \label{fig:BFDOne6}
 }
 \subfigure[Strip failure domain in two-dimension]{
-\includegraphics[width=8cm,height=6cm]{chapter6/SFDTwo.png}
+\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDTwo.png}
 \label{fig:SFDOne6}
 }
 \caption{Pass and fail values of plotted by ADFD+ in three different cases of two-dimension programs}
