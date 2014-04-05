@@ -457,7 +457,7 @@ Mirror Adaptive Random Testing (MART) is an improvement on ART by using mirror-p
 \begin{figure}[h]
 \begin{center}
 	\includegraphics[width=13.5cm, height=6.5cm ]{chapter2/mart2.pdf}
-	\caption{Simple mirror functions for mapping of test cases~\cite{chen2004mirror}}
+	\caption{Mirror functions for mapping of test cases}
 \label{fig:mirrorART}
 \end{center}  
 \end{figure}
@@ -554,7 +554,7 @@ The working mechanism of JCrasher is illustrated by testing a \verb+.java+ progr
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=15cm, height=8cm]{chapter2/JCrasher.png}
-	\caption{How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic~\cite{csallner2004jcrasher}. Denotes the Kleene star operator.}
+	\caption{How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic~\cite{csallner2004jcrasher}}
 	\label{fig:JCrasher}
 \end{figure}
 
@@ -638,15 +638,17 @@ The default strategy creates random data to evaluate the methods/classes under t
 \subsection{TestEra}
 TestEra~\cite{marinov2001testera} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes specifications, numerical value and the method to be tested as input. It uses pre-conditions of a method to generate all non isomorphic valid test inputs to the specified limit. The test inputs are executed and the results are compared against the post-conditions of the method serving as oracle. Any test case that fails to satisfy post-condition is considered as a fault. 
 
+\begin{figure}[h]
+	\centering
+	\centerline{\includegraphics[width=15cm, height=10.7cm]{chapter2/TestEra.png}}
+	\caption{TestEra framework~\cite{marinov2001testera}}
+	\label{fig:testera}
+\end{figure}
+
 TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints on test inputs and uses Alloy Analyser~\cite{jackson2000alcoa} to solve these constraints and generate test inputs. Alloy Analyzer performs the following three functions: (a) it translates Alloy predicates into propositional formulas%, i.e. constraints where all variables are boolean 
  (b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
 
-\begin{figure}[h]
-	\centering
-	\centerline{\includegraphics[width=16cm, height=11.5cm]{chapter2/TestEra.png}}
-	\caption{The architecture of TestEra ~\cite{marinov2001testera}}
-	\label{fig:testera}
-\end{figure}
+
 
 
 TestEra uses program specifications to guide the auto generation of test inputs as against Jartege (Section \ref{jartege_2}) and AutoTest (Section \ref{autotest_2}) which use program specifications for filtrating the irrelevant random generated test data. However, all the three tools use program specifications in a similar way for test oracle. 
@@ -687,16 +689,25 @@ The software testing is summarized graphically with the help of two dimensional 
 \end{figure}
 
 
-The chapter gives an overview of software testing, including definition, common types, need, purpose and uses. It differentiates manual and automated software testing and describes various ways of software test data generation, being the crucial part of any testing system. The later part describes random testing and the various ways of improving the performance of random testing. Finally, information is presented on how the automated testing tools implement random technique for software testing. Main features of automatic testing tools used in random testing are summarized in Table ???.
-
+The chapter gives an overview of software testing, including definition, common types, need, purpose and uses. It differentiates manual and automated software testing and describes various ways of software test data generation, being the crucial part of any testing system. The later part describes random testing and the various ways of improving the performance of random testing. Finally, information is presented on how the automated testing tools implement random technique for software testing. Main features of automatic testing tools used in random testing are summarized in Figure~\ref{fig:Tools}.
 
 \begin{figure}[H]
 	\centering
 	%\centerline{\includegraphics[width=16cm, height=16cm]{chapter2/softwareTestingFlow.png}}
-	\centerline{\includegraphics[width=15.5cm, height=15cm]{chapter2/Tools.png}}
-	\caption{Main features of automatic testing tools used in random testing}
+	%\centerline{\includegraphics[width=15.5cm, height=15cm]{chapter2/Tools.png}}
+	\centerline{\includegraphics[width=17.5cm, height=15cm]{chapter2/RandomTools1.png}}
+	\caption{Main features of automatic testing tools using random testing}
 	\label{fig:Tools}
 \end{figure}
+
+
+%\begin{figure}[H]
+%	\centering
+%	%\centerline{\includegraphics[width=16cm, height=16cm]{chapter2/softwareTestingFlow.png}}
+%	\centerline{\includegraphics[width=15.5cm, height=15cm]{chapter2/Tools.png}}
+%	\caption{Main features of automatic testing tools used in random testing}
+%	\label{fig:Tools}
+%\end{figure}
 
 
 
