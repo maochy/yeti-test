@@ -6,14 +6,9 @@ FT~Chan, Tsong~Yueh Chen, IK~Mak, and Yuen-Tak Yu.
   practitioners.
 \newblock {\em Information and Software Technology}, 38(12):775--782, 1996.
 
-\bibitem{chen2004mirror}
-Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
-\newblock Mirror adaptive random testing.
-\newblock {\em Information and Software Technology}, 46(15):1001--1010, 2004.
-
 \bibitem{csallner2004jcrasher}
 Christoph Csallner and Yannis Smaragdakis.
-\newblock Jcrasher: an automatic robustness tester for java.
+\newblock J{C}rasher: an automatic robustness tester for {J}ava.
 \newblock {\em Software: Practice and Experience}, 34(11):1025--1050, 2004.
 
 \bibitem{pacheco2005eclat}
@@ -29,7 +24,8 @@ Andreas Leitner, Ilinca Ciupa, Bertrand Meyer, and Mark Howard.
 
 \bibitem{marinov2001testera}
 Darko Marinov and Sarfraz Khurshid.
-\newblock Testera: A novel framework for automated testing of java programs.
+\newblock Test{E}ra: A novel framework for automated testing of {J}ava
+  programs.
 \newblock In {\em Automated Software Engineering, 2001.(ASE 2001). Proceedings.
   16th Annual International Conference on}, pages 22--31. IEEE, 2001.
 
@@ -99,7 +95,7 @@ Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 
 \bibitem{godefroid2005dart}
 Patrice Godefroid, Nils Klarlund, and Koushik Sen.
-\newblock Dart: directed automated random testing.
+\newblock {DART:} directed automated random testing.
 \newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
 
 \bibitem{white1987software}
@@ -119,8 +115,8 @@ Dave Towey.
 \bibitem{american1984}
 NY. American National Standards Institute. New~York, Institute of~Electrical,
   and Electronics Engineers.
-\newblock {\em Software Engineering Standards: ANSI/IEEE Std 729-1983, Glossary
-  of Software Engineering Terminology}.
+\newblock {\em Software Engineering Standards: {ANSI/IEEE} Std 729-1983,
+  Glossary of Software Engineering Terminology}.
 \newblock Inst. of Electrical and Electronics Engineers, 1984.
 
 \bibitem{futrell2001quality}
@@ -348,13 +344,13 @@ Joe~W Duran and Simeon Ntafos.
 
 \bibitem{miller1990empirical}
 Barton~P Miller, Louis Fredriksen, and Bryan So.
-\newblock An empirical study of the reliability of unix utilities.
+\newblock An empirical study of the reliability of {UNIX} utilities.
 \newblock {\em Communications of the ACM}, 33(12):32--44, 1990.
 
 \bibitem{forrester2000empirical}
 Justin~E Forrester and Barton~P Miller.
-\newblock An empirical study of the robustness of windows nt applications using
-  random testing.
+\newblock An empirical study of the robustness of {W}indows {NT} applications
+  using random testing.
 \newblock In {\em Proceedings of the 4th USENIX Windows System Symposium},
   pages 59--68, 2000.
 
@@ -393,6 +389,11 @@ Tsong~Yueh Chen, De~Hao Huang, F-C Kuo, Robert~G Merkel, and Johannes Mayer.
 \newblock Enhanced lattice-based adaptive random testing.
 \newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
   pages 422--429. ACM, 2009.
+
+\bibitem{chen2004mirror}
+Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
+\newblock Mirror adaptive random testing.
+\newblock {\em Information and Software Technology}, 46(15):1001--1010, 2004.
 
 \bibitem{chen2007quasi}
 Tsong~Yueh Chen and Robert Merkel.
@@ -438,18 +439,18 @@ Catherine Oriat.
 
 \bibitem{visser2004test}
 Willem Visser, Corina~S Pasareanu, and Sarfraz Khurshid.
-\newblock Test input generation with java pathfinder.
+\newblock Test input generation with {J}ava {P}ath{F}inder.
 \newblock {\em ACM SIGSOFT Software Engineering Notes}, 29(4):97--107, 2004.
 
 \bibitem{claessen2011quickcheck}
 Koen Claessen and John Hughes.
-\newblock Quick{C}heck: a lightweight tool for random testing of haskell
+\newblock Quick{C}heck: a lightweight tool for random testing of {H}askell
   programs.
 \newblock {\em Acm sigplan notices}, 46(4):53--64, 2011.
 
 \bibitem{hudak2007history}
 Paul Hudak, John Hughes, Simon Peyton~Jones, and Philip Wadler.
-\newblock A history of haskell: being lazy with class.
+\newblock A history of {H}askell: being lazy with class.
 \newblock In {\em Proceedings of the third ACM SIGPLAN conference on History of
   programming languages}, pages 12--1. ACM, 2007.
 
@@ -466,13 +467,13 @@ Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
 
 \bibitem{jackson2000alcoa}
 Daniel Jackson, Ian Schechter, and Ilya Shlyakhter.
-\newblock Alcoa: The alloy constraint analyzer.
+\newblock {ALCOA}: The alloy constraint analyzer.
 \newblock In {\em Software Engineering, 2000. Proceedings of the 2000
   International Conference on}, pages 730--733. IEEE, 2000.
 
 \bibitem{boyapati2002korat}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
-\newblock Korat: Automated testing based on java predicates.
+\newblock Korat: {A}utomated testing based on {J}ava predicates.
 \newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~27, pages
   123--133. ACM, 2002.
 
@@ -485,19 +486,20 @@ Juei Chang and Debra~J Richardson.
 
 \bibitem{khurshid2001checking}
 Sarfraz Khurshid and Darko Marinov.
-\newblock Checking java implementation of a naming architecture using testera.
+\newblock Checking {J}ava implementation of a naming architecture using
+  {T}est{E}ra.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
   55(3):322--342, 2001.
 
 \bibitem{oriol2010testing}
 Manuel Oriol and Sotirios Tassis.
-\newblock Testing .net code with yeti.
+\newblock Testing {.NET} code with {YETI}.
 \newblock In {\em Engineering of Complex Computer Systems (ICECCS), 2010 15th
   IEEE International Conference on}, pages 264--265. IEEE, 2010.
 
 \bibitem{oriol2010yeti}
 Manuel Oriol and Faheem Ullah.
-\newblock Yeti on the cloud.
+\newblock {YETI} on the cloud.
 \newblock In {\em Software Testing, Verification, and Validation Workshops
   (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
 
@@ -610,14 +612,14 @@ Andrea Arcuri, Muhammad~Zohaib Iqbal, and Lionel Briand.
 \bibitem{tempero2010qualitas}
 Ewan Tempero, Craig Anslow, Jens Dietrich, Ted Han, Jing Li, Markus Lumpe,
   Hayden Melton, and James Noble.
-\newblock The qualitas corpus: A curated collection of java code for empirical
-  studies.
+\newblock The {Q}ualitas {C}orpus: A curated collection of {J}ava code for
+  empirical studies.
 \newblock In {\em Software Engineering Conference (APSEC), 2010 17th Asia
   Pacific}, pages 336--345. IEEE, 2010.
 
 \bibitem{tempero2008empirical}
 Ewan Tempero.
-\newblock An empirical study of unused design decisions in open source java
+\newblock An empirical study of unused design decisions in open source {J}ava
   software.
 \newblock In {\em Software Engineering Conference, 2008. APSEC'08. 15th
   Asia-Pacific}, pages 33--40. IEEE, 2008.
@@ -648,7 +650,7 @@ Johannes Mayer.
 
 \bibitem{gilbert2008jfreechart}
 D~Gilbert.
-\newblock The jfreechart class library version 1.0. 9: Developer’s guide.
+\newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloper’s guide.
 \newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
 
 \bibitem{podgurski2003automated}
@@ -672,7 +674,7 @@ James~A Jones, Mary~Jean Harrold, and John Stasko.
 
 \bibitem{finelli1991nasa}
 George~B Finelli.
-\newblock Nasa software failure characterization experiments.
+\newblock {NASA} software failure characterization experiments.
 \newblock {\em Reliability Engineering \& System Safety}, 32(1):155--169, 1991.
 
 \bibitem{schneckenburger2007towards}
