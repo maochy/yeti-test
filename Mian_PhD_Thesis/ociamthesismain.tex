@@ -5,6 +5,8 @@
 %load any additional packages
 %\usepackage{amssymb}
 \usepackage{tabularx}
+\usepackage{hanging}
+\usepackage{scrextend}
 \usepackage{wrapfig}
 \usepackage{multirow}
 \usepackage{parskip}
@@ -16,6 +18,7 @@
 \usepackage{amsmath,epsfig}
 \usepackage{times}
 \usepackage{float}
+\usepackage{glossaries}
 \usepackage{epsfig}
 \usepackage{latexsym}
 \usepackage{enumerate}
@@ -55,6 +58,8 @@ showstringspaces=false}
     linkcolor=blue,
     urlcolor=blue
 }
+
+
 
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
@@ -103,8 +108,8 @@ showstringspaces=false}
 
 \include{dedication/dedication}        % include a dedication.tex file
 \include{acknowlegements/acknowlegements} %include an acknowledgements.tex file
+\include{glossary1/glossary1}
 \include{declaration/declaration}
-
 \end{romanpages}            % end roman page numbering
 
 

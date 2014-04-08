@@ -183,6 +183,38 @@
 % themselves appear in a quote environment, i.e. tabbed in at both sides, and
 % on its own page.
 
+\newenvironment{glossary1}
+{\begin{alwayssingle} \thispagestyle{plain}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Glossary}
+\end{center}
+\vspace{0.5cm}
+\begin{quote}}
+{\end{quote}\end{alwayssingle}}
+
+% The acknowledgementslong environment puts a large, bold, centered 
+% "Acknowledgements" label at the top of the page. The acknowledgement itself 
+% does not appears in a quote environment so you can get more in.
+
+\newenvironment{glossarylong1}
+{\begin{alwayssingle} \thispagestyle{empty}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Glossary}
+\end{center}
+\vspace{0.5cm}}
+{\end{alwayssingle}}
+
+
+
+% DECLARATION
+%
+% The acknowledgements environment puts a large, bold, centered 
+% "Acknowledgements" label at the top of the page. The acknowledgements
+% themselves appear in a quote environment, i.e. tabbed in at both sides, and
+% on its own page.
+
 \newenvironment{declaration}
 {\begin{alwayssingle} \thispagestyle{plain}
 \begin{center}
@@ -205,9 +237,6 @@
 \end{center}
 \vspace{0.5cm}}
 {\end{alwayssingle}}
-
-
-
 
 % STATEMENT OF ORIGINALITY (AS SUGGESTED BY GSW)
 %
