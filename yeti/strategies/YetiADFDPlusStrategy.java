@@ -36,7 +36,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	public static String rangeToPlot = "" + 30;
 	public static int argumentFirst = 0;
 	public static int argumentSecond = 0;
-	
+
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
@@ -96,7 +96,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 		// we generate a panel to contain both the label and the slider
 		JPanel p = new JPanel();
 		p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
-		
+
 		//because we dont need interesting values here.
 		//JLabel txt = new JLabel("% interesting values: ");
 		//p.add(txt);
@@ -142,7 +142,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 		YetiGUI.allComponents.add(useInterestingValuesSlider);
 		useInterestingValuesSlider.setMaximumSize(new Dimension(130, 50));
 		useInterestingValuesSlider.setAlignmentX(0);
-		
+
 		// Not required in ADFD i think.
 		//p.add(useInterestingValuesSlider);
 
@@ -163,7 +163,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	public static long uid = 0;
 	String argumentTwo = "";
 	public String args = "";
-	
+
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
 			throws ImpossibleToMakeConstructorException {
@@ -172,107 +172,107 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
-// I want only one C0 file to generate for any number of errors. Therefore I am commenting the following line and adding the second line below it.		
-//		if (currentErrors > oldFaults1) {
+		// I want only one C0 file to generate for any number of errors. Therefore I am commenting the following line and adding the second line below it.		
+		//		if (currentErrors > oldFaults1) {
 		if (currentErrors == 1){
 
 			YetiLog.printDebugLog("found bug in the strategy", this);
 			oldFaults1 = currentErrors;
-			
-			
-//*****************************************************************************
 
-//			for (int j1 = 0; j1 < oldyt.length; j1++) {
-//				YetiCard yc = oldyt[j1];
+
+			//*****************************************************************************
+
+			//			for (int j1 = 0; j1 < oldyt.length; j1++) {
+			//				YetiCard yc = oldyt[j1];
 			YetiCard yc = oldyt[0];
 
-//				if (yc.getType().getName().equals("int")) {
-				
-//				if(oldyt.length >= 1){	
-//				if (j1 == 0){ argumentFirst = (Integer)oldyt[0].getValue();}
-//				if (j1 == 1){ argumentSecond = (Integer)oldyt[1].getValue();}
-//				}
+			//				if (yc.getType().getName().equals("int")) {
+
+			//				if(oldyt.length >= 1){	
+			//				if (j1 == 0){ argumentFirst = (Integer)oldyt[0].getValue();}
+			//				if (j1 == 1){ argumentSecond = (Integer)oldyt[1].getValue();}
+			//				}
 			argumentFirst = (Integer)oldyt[0].getValue();
 			argumentSecond = (Integer)oldyt[1].getValue();
 
-					String call = "";
+			String call = "";
 
-					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
-					
-					if (jroutine instanceof YetiJavaConstructor) {
-						YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
-						call = "new "
-								+ c.getOriginatingModule().getModuleName()
-								+ "(" + args + "i";
-						for (int k = 0 + 1; k < oldyt.length; k++) {
-							call = call + ","
-									+ oldyt[k].getValue().toString();
+			YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
 
-						}
-						call = call + ")";
+			if (jroutine instanceof YetiJavaConstructor) {
+				YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
+				call = "new "
+						+ c.getOriginatingModule().getModuleName()
+						+ "(" + args + "i";
+				for (int k = 0 + 1; k < oldyt.length; k++) {
+					call = call + ","
+							+ oldyt[k].getValue().toString();
 
-					} else {
+				}
+				call = call + ")";
 
-//******************************************************************************
-						if (jroutine instanceof YetiJavaMethod) {
-							YetiJavaMethod m = (YetiJavaMethod) jroutine;
-							if (m.isStatic) {
-								
-								call = ""
-										+ m.getOriginatingModule()
-										.getModuleName() + "."
-										+ m.getMethod().getName() + "("
-										
+			} else {
+
+				//******************************************************************************
+				if (jroutine instanceof YetiJavaMethod) {
+					YetiJavaMethod m = (YetiJavaMethod) jroutine;
+					if (m.isStatic) {
+
+						call = ""
+								+ m.getOriginatingModule()
+								.getModuleName() + "."
+								+ m.getMethod().getName() + "("
+
 										+ "i , j"
-										
+
 										+ ")";
-								}
-								
-
-							//			+ args + "i";
-
-							//	for (int k = j1 + 1; k < oldyt.length; k++) {
-
-							//		call = call + "," + oldyt[k].getValue().toString();
-
-							//	}
-							//	call = call + ")";
-							//} 
-
-
-//******************************************************************************
-							
-						else {
-								call = "variable" + "."
-										+ m.getMethod().getName() + "("
-										+ args + "i";
-								for (int k = 0 + 1; k < oldyt.length; k++) {
-
-									call = call + "," + oldyt[k].getValue().toString();
-
-								}
-								call = call + ")";	
-							}
-
-						}
-
 					}
 
 
-					String programBegin = programBeginPart();
-					String programEnd = programEndPart();
-					String programEnd2 = programEndPart2();
+					//			+ args + "i";
 
-					String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
+					//	for (int k = j1 + 1; k < oldyt.length; k++) {
 
-					generateProgram(completeProgram);
+					//		call = call + "," + oldyt[k].getValue().toString();
 
-					argumentTwo = ""+yc.getValue();
-					
-					args = args + yc.getValue() + ",";
+					//	}
+					//	call = call + ")";
+					//} 
 
 
-				//}
+					//******************************************************************************
+
+					else {
+						call = "variable" + "."
+								+ m.getMethod().getName() + "("
+								+ args + "i";
+						for (int k = 0 + 1; k < oldyt.length; k++) {
+
+							call = call + "," + oldyt[k].getValue().toString();
+
+						}
+						call = call + ")";	
+					}
+
+				}
+
+			}
+
+
+			String programBegin = programBeginPart();
+			String programEnd = programEndPart();
+			String programEnd2 = programEndPart2();
+
+			String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
+
+			generateProgram(completeProgram);
+
+			argumentTwo = ""+yc.getValue();
+
+			args = args + yc.getValue() + ",";
+
+
+			//}
 
 			//}
 
@@ -294,7 +294,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " \n{\n" 
 				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
 				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
-				
+
 				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
@@ -306,18 +306,17 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
-				+ " checkFirstAndLastValue(starterX, starterY);\n"
-				+ " for (int i=starterX + 1; i < stopperX; i++) {\n"
-				+ " for (int j = starterY + 1; j < stopperY; j++) \n"
-				+ " {\n"
-				+ " checkFirstAndLastValue(i,j);\n"
-				+ " }\n"
-				+ " }\n"
-				+ "checkFirstAndLastValue(stopperX, stopperY);\n" 
-				+ "printRangeFail();\n" 
-				+ "printRangePass();\n" 
-				+ "}\n";
-		
+				+ "   checkFirstAndLastValue(starterX, starterY);\n"
+				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
+				+ "     for (int j = starterY + 1; j < stopperY; j++) {\n"
+				+ "       checkFirstAndLastValue(i,j);\n"
+				+ "     }\n"
+				+ "   }\n"
+				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
+				+ "   printRangeFail();\n" 
+				+ "   printRangePass();\n" 
+				+ " }\n";
+
 		return temp;
 	}
 
@@ -326,47 +325,46 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	public String programEndPart(){
 		String temp3 = "\n public static void printRangeFail() { \n"
 				+"   try { \n"
-				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
-				+"   File fw = new File(\"Fail.txt\"); \n"
-				+"   if (fw.exists() == false) { \n"
-				+" 	 fw.createNewFile(); \n"	
-				+"   }\n"
-				+"	 PrintWriter pw = new PrintWriter(new FileWriter (fw, true));\n"
-				//+"   int count = 1;\n"
-				+"   for (Integer i1 : fail) { \n"
-				+"      pw.append(i1+\"\\n\"); \n"
-				//+"      if (count%2 == 0)\n"
-				//+"      	pw1.append(\"\\n\");\n"
-				//+"      count++; \n"
-				+"   } \n"
-				+"   pw.close(); \n"
-				+"   } \n"
-				+"   catch(Exception e) { \n"
-				+"   System.err.println(\" Error : e.getMessage() \"); \n"
+				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
+				+"     File fw = new File(\"Fail.txt\"); \n"
+				+"     if (fw.exists() == false) { \n"
+				+" 	     fw.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw = new PrintWriter(new FileWriter (fw, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i1 : fail) { \n"
+				+"        pw.append(i1+\"\\n\"); \n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\"\\n\");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw.close(); \n"
+				+"   } catch(Exception e) { \n"
+				+"     System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
 				+" } \n"
-				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
-				+"  public static void printRangePass() { \n"
+				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
+				+" public static void printRangePass() { \n"
 				+"   try { \n"
-				+"   File fw1 = new File(\"Pass.txt\"); \n"
-				+"   if (fw1.exists() == false) { \n"
-				+" 	 fw1.createNewFile(); \n"	
-				+"   }\n"
-				+"	 PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
-				//+"   int count = 1;\n"
-				+"   for (Integer i2 : pass) { \n"
-				+"      pw1.append(i2+\"\\n\");\n"
-				//+"      if (count%2 == 0)\n"
-				//+"      	pw1.append(\" \");\n"
-				//+"      count++; \n"
-				+"   } \n"
-				+"   pw1.close(); \n"
+				+"     File fw1 = new File(\"Pass.txt\"); \n"
+				+"     if (fw1.exists() == false) { \n"
+				+" 	     fw1.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i2 : pass) { \n"
+				+"        pw1.append(i2+\"\\n\");\n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\" \");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw1.close(); \n"
 				+"   } \n"
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
 				+" } \n"
-				+"   public static void checkFirstAndLastValue(int i, int j) { \n"
+				+" public static void checkFirstAndLastValue(int i, int j) { \n"
 				+"   try { \n";
 		return temp3;
 	}
@@ -374,13 +372,17 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 
 	public String programEndPart2(){
-		String temp4 = "; \n pass.add(i); \n"
-					 +  "  pass.add(j); \n"
-					 +  "  } \n"
-					 +  "  catch (Throwable t) { \n"
-					 +  "  fail.add(i); \n "
-					 +  "  fail.add(j); \n"
-					 + " } \n } \n }";
+		String temp4 = "; \n"
+				+ "     pass.add(i); \n"
+				+ "     pass.add(j); \n"
+				+ "   } catch (Throwable t) { \n"
+				+ "    fail.add(i); \n "
+				+ "    fail.add(j); \n"
+				+ "    failureDomain(i,j);\n"
+				+ "   } \n } "
+				+ " public static void failureDomain(int i, int j){}\n"
+				+ "\n}"
+				;
 
 		return temp4;
 	}

@@ -32,6 +32,7 @@ public class YetiCallContext {
 	/**
 	 * The trace that was produced
 	 */
+	@SuppressWarnings("unused")
 	private Throwable trace = null;
 
 	/**

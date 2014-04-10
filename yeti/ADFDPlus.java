@@ -5,17 +5,15 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.Image;
 import java.awt.Insets;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
-import org.jfree.ui.RefineryUtilities;
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -26,14 +24,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 import javax.swing.border.TitledBorder;
-import yeti.LogGrapher1;
+
 import yeti.LogGrapher3;
-import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 
-import java.awt.*;
 import javax.swing.*;
 
 
@@ -73,6 +68,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 
+/**
+ * Class that represents... 
+ * 
+ * @author Manuel Oriol (manuel@cs.york.ac.uk)
+ * @date 10 Apr 2014
+ *
+ */
 public class ADFDPlus extends JFrame{
 
 	private JPanel panel1 = new JPanel();
@@ -85,7 +87,7 @@ public class ADFDPlus extends JFrame{
 	JTextField		compile_TextField;
 	JTextField 		execute_TextField;
 	JTextField		rangeValue_TextField;
-//	JTextField		maxValue_TextField;
+	//	JTextField		maxValue_TextField;
 	JButton 		plot1_Button;
 	JLabel 			execute_Label;
 	JLabel 			compile_Label;
@@ -100,7 +102,7 @@ public class ADFDPlus extends JFrame{
 	String 		fileName			 = "-testModules=yeti.test.YetiTest"; 
 	String 		language 			 = "-java";
 	String 		strategy 			 = "-ADFDPlus";
-	String 		gui 				 = "-gui";
+	String 		gui 				 = "";
 	String 		logs 				 = "-nologs";
 	String 		time 				 = "-time=5s";
 	static	int totalFiles 			 = 0;
@@ -121,7 +123,7 @@ public class ADFDPlus extends JFrame{
 
 	Thread thread1 = new Thread(new Thread1());
 
-	
+
 	GridBagConstraints 	gbc;
 	JProgressBar 		execute_ProgressBar;
 	ImageIcon 			duckImage;
@@ -153,7 +155,7 @@ public class ADFDPlus extends JFrame{
 
 		//this.setAlwaysOnTop(true);
 		//this.pack();
-	
+
 
 
 	}
@@ -405,13 +407,13 @@ public class ADFDPlus extends JFrame{
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
-		
+
 		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
 		gbc.gridy = 6;
 		gbc.gridwidth = 1;
 		panel1.add(range, gbc);
-		
+
 		// changed to 100 for test purpose.
 		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
 		rangeValue_TextField = new JTextField("" + 5);
@@ -419,48 +421,48 @@ public class ADFDPlus extends JFrame{
 		gbc.gridy = 6;
 		gbc.gridwidth = 1;
 		panel1.add(rangeValue_TextField, gbc);	
-		
-		
-// Commented for ADFDPlus
-//
-//		JLabel minValue_Label = new JLabel("Lower Limit:");
-//		gbc.gridx = 0;
-//		gbc.gridy = 6;
-//		gbc.gridwidth = 1;
-//		panel1.add(minValue_Label, gbc);
-//
-//
-//
-//		// changed to 100 for test purpose.
-//		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
-//		minValue_TextField = new JTextField("" + -100);
-//		gbc.gridx = 1;
-//		gbc.gridy = 6;
-//		gbc.gridwidth = 1;
-//		panel1.add(minValue_TextField, gbc);
+
+
+		// Commented for ADFDPlus
+		//
+		//		JLabel minValue_Label = new JLabel("Lower Limit:");
+		//		gbc.gridx = 0;
+		//		gbc.gridy = 6;
+		//		gbc.gridwidth = 1;
+		//		panel1.add(minValue_Label, gbc);
+		//
+		//
+		//
+		//		// changed to 100 for test purpose.
+		//		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
+		//		minValue_TextField = new JTextField("" + -100);
+		//		gbc.gridx = 1;
+		//		gbc.gridy = 6;
+		//		gbc.gridwidth = 1;
+		//		panel1.add(minValue_TextField, gbc);
 
 
 		/////////////////////////////////////////////////////////////////
-//  Commented for ADFDPlus
-//
-//
-//		JLabel maxValue_Label = new JLabel("Upper Limit:");
-//		gbc.gridx = 0;
-//		gbc.gridy = 7;
-//		gbc.gridwidth = 1;
-//		panel1.add(maxValue_Label, gbc);
-//
-//
-//
-//		// changed to 100 for test purpose.
-//		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
-//		maxValue_TextField = new JTextField("" + 100);
-//		gbc.gridx = 1;
-//		gbc.gridy = 7;
-//		gbc.gridwidth = 1;
-//		panel1.add(maxValue_TextField, gbc);
-//
-//
+		//  Commented for ADFDPlus
+		//
+		//
+		//		JLabel maxValue_Label = new JLabel("Upper Limit:");
+		//		gbc.gridx = 0;
+		//		gbc.gridy = 7;
+		//		gbc.gridwidth = 1;
+		//		panel1.add(maxValue_Label, gbc);
+		//
+		//
+		//
+		//		// changed to 100 for test purpose.
+		//		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
+		//		maxValue_TextField = new JTextField("" + 100);
+		//		gbc.gridx = 1;
+		//		gbc.gridy = 7;
+		//		gbc.gridwidth = 1;
+		//		panel1.add(maxValue_TextField, gbc);
+		//
+		//
 
 		/////////// Run Label, Button and ActionListener /////////////////
 
@@ -545,45 +547,45 @@ public class ADFDPlus extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 
 				try{
-					
-					
+
+
 					// The runTest method executes YETi 
-					
+
 					runTest();
-					
+
 					// This time is used so that count etc dont execute untill yeti is finished 
 					// So once yeti is finished the count will execute to count the generated files
 					// then compile to compile it and execute to execute it.
 					// Each one also has some delay inside their for loop because
 					// creating text files and compiling etc takes some time.
-					
+
 					new java.util.Timer().schedule( 
-					        new java.util.TimerTask() {
-					            @Override
-					            public void run() {
+							new java.util.TimerTask() {
+								@Override
+								public void run() {
 									countFiles();
 									compileFiles();
 									executeFiles();
 									drawGraph();
 									panel3.revalidate();
-								
-					            }
-					        }, 
-					        waitForYetiToFinish
-					);
-					
-					
+
+								}
+							}, 
+							waitForYetiToFinish
+							);
+
+
 				}
 				catch(Exception e1){
 					e1.printStackTrace();
 				}
-				
-				
+
+
 			}
-			
+
 
 		});
-		
+
 		roseImage();
 
 		// this label are added to create a gap between exit and help from plot button.
@@ -679,12 +681,13 @@ public class ADFDPlus extends JFrame{
 		list.add(language);
 		list.add(strategy);
 		list.add(time);
-		list.add(gui);
+		if (!gui.isEmpty())
+			list.add(gui);
 		list.add(logs);
 		list.add(fileName);
 		list.add(testFilePathFinal);
-//		YetiADFDPlusStrategy.lowerLimit = rangeValue_TextField.getText();
-//		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
+		//		YetiADFDPlusStrategy.lowerLimit = rangeValue_TextField.getText();
+		//		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
 		YetiADFDPlusStrategy.rangeToPlot = rangeValue_TextField.getText();
 		command = list.toArray(new String[list.size()]);
 
@@ -699,12 +702,12 @@ public class ADFDPlus extends JFrame{
 	}
 
 
-////////////////////////////////////////////
+	////////////////////////////////////////////
 	public void drawGraph(){
-		
-	
+
+
 		JOptionPane.showMessageDialog(null,  " Graph is");
-	
+
 		/* I added this if statement to control the graphs
 		 * so if we get one fault then one C file will be generated and
 		 * thus one argument graph will be create 
@@ -719,13 +722,13 @@ public class ADFDPlus extends JFrame{
 		}
 		else if (countCompileFiles == 2){
 			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-	
+
 		}
 		else {
 			LogGrapher3 demo = new LogGrapher3("Failure Domains");
 
 		}
-		
+
 
 	}
 
@@ -764,17 +767,17 @@ public class ADFDPlus extends JFrame{
 			e1.printStackTrace();
 		}
 	}
-	//////////////////////////////////////////
 
-
-
+	/**
+	 * This methid compiles files generated by the ADFD+ strategy
+	 */
 	public void compileFiles() {
 		try{
 			int count = 0;
 			for (int i = 0; i < filesToCompileArray.length; i++){
 				Process pro1;
 				Thread.sleep(200);
-				pro1 = Runtime.getRuntime().exec("javac " + testFilePathInitial + filesToCompileArray[i]);
+				pro1 = Runtime.getRuntime().exec("javac -g " + testFilePathInitial + filesToCompileArray[i]);
 				count = count + 1;
 			}
 			countCompileFiles = count;
@@ -787,8 +790,10 @@ public class ADFDPlus extends JFrame{
 
 	}
 
-	///////////////////////////////////////
 
+	/**
+	 * TODO
+	 */
 	public void executeFiles(){
 		try{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
@@ -816,29 +821,26 @@ public class ADFDPlus extends JFrame{
 	}
 	//////////////////////////////////////////
 
-	
+
 
 	//////Thread 2 to initialize the progress bar to indeterminate state ///////////////
 
 
-		public void progressStart(){
+	public void progressStart(){
 
-			try {
-				execute_ProgressBar.setIndeterminate(true);
-				execute_ProgressBar.setStringPainted(true); 
+		try {
+			execute_ProgressBar.setIndeterminate(true);
+			execute_ProgressBar.setStringPainted(true); 
 
-			}
-
-			catch (Exception e1){
-				e1.printStackTrace();
-			}
 		}
 
+		catch (Exception e1){
+			e1.printStackTrace();
+		}
+	}
 
-	//////Thread 3 to execute javac files generated ///////////////
 
-	//private class Thread3 implements Runnable{
-	@SuppressWarnings("deprecation")
+
 	public void executeJavaFiles(){
 		try {
 			int count = 0;
@@ -849,43 +851,103 @@ public class ADFDPlus extends JFrame{
 			}
 
 			totalFiles = count;
+
+		}
+
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+		executeDaikon();
+	}
+
+	
+	/**
+	 * Executes Daikon on each failure file.
+	 */
+	public void executeDaikon(){
 		
+		String daikonOptions = "--config_option daikon.inv.unary.scalar.LowerBound.minimal_interesting=-1000 "+// TODO Adapt to boundaries set up for the failure
+				"--config_option daikon.inv.unary.scalar.LowerBound.maximal_interesting=2000 "+ // TODO
+				"--config_option daikon.inv.unary.scalar.UpperBound.maximal_interesting=2000 "+// TODO
+				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-1000 "+// TODO
+				"--config_option daikon.PptRelation.enable_object_user=true "+
+				"--config_option daikon.PptSliceEquality.set_per_var=true "+
+				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
+		
+		try {
+			int count = 0;
+			for (int i = 0; i < filesToCompileArray.length; i++){
+				Thread.sleep(2000);
+				Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
+				p0.waitFor();
+				File trace = new File("C"+i+".dtrace.gz");
+				while (!trace.exists()){
+					Thread.sleep(100);
+				}
+				
+				
+				System.err.println("file C"+i+".dtrace.gz exists and has length "+trace.length());
+				Process p = Runtime.getRuntime().exec("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
+				System.err.println("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
+				p.waitFor();  // wait for process to finish then continue.
+				BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
+				String execResult = "";
+				String tmp;
+				boolean traceOn = false;
+				while ((tmp = bri.readLine())!=null){
+					System.err.println(tmp);
+					if (tmp.contains("failureDomain")&&tmp.contains("ENTER")){
+						traceOn=true;
+						continue;
+					}
+					if (traceOn){
+						if (tmp.contains("===========================================================================")){
+							traceOn=false;
+							continue;
+						}
+						execResult=execResult+"\n"+tmp;
+					}
+				}
+				JOptionPane.showMessageDialog(null, execResult, "Result of Daikon for C"+i, JOptionPane.INFORMATION_MESSAGE);
+				count++;
+			}
+
+			totalFiles = count;
+
 		}
 
 		catch(Exception e1){
 			e1.printStackTrace();
 		}
 	}
-	//}
-
 
 
 	//////Thread 4 to update the status of progressbar when pass and fail files are generated ///////////////
 
-		public void progressStop(){
+	public void progressStop(){
 
 
-			File file = new File(testFilePathInitial + "Pass.txt");
-			boolean exists = false;
+		File file = new File(testFilePathInitial + "Pass.txt");
+		boolean exists = false;
 
-			while (!exists){
+		while (!exists){
 
-				exists = file.exists();
+			exists = file.exists();
 
-
-			}
-			try {
-				execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
-				execute_ProgressBar.setIndeterminate(false);
-				execute_TextField.setText(totalFiles + " files");
-		
-
-			}
-			catch(Exception e1){
-				e1.printStackTrace();
-			}
 
 		}
+		try {
+			execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
+			execute_ProgressBar.setIndeterminate(false);
+			execute_TextField.setText(totalFiles + " files");
+
+
+		}
+		catch(Exception e1){
+			e1.printStackTrace();
+		}
+
+	}
 
 	//////Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable ///////////////
 	@SuppressWarnings("unused")
@@ -936,14 +998,14 @@ public class ADFDPlus extends JFrame{
 		}
 		catch (Exception e1){
 			e1.printStackTrace();
-		
+
 		}
-		
+
 
 
 	}
 
-	
+
 
 }
 

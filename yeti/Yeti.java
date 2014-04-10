@@ -705,7 +705,6 @@ public class Yeti {
 								Process p = run.exec(command); // @YetiDotNETBinding
 								InputStream in = p.getInputStream(); // @YetiDotNETBinding
 																		// @YetiDotNETBinding
-								@SuppressWarnings("unused")
 								// @YetiDotNETBinding
 								int c; // @YetiDotNETBinding
 								while ((c = in.read()) != -1) { // @YetiDotNETBinding
@@ -1013,6 +1012,7 @@ public class Yeti {
 				ps.print(fileContent);
 				System.out.println("/** Saved test cases in " + fileName
 						+ " **/");
+				ps.close();
 			} catch (Exception e) {
 				// in case it did not work
 				System.out
