@@ -23,6 +23,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
@@ -77,11 +78,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 public class ADFDPlus extends JFrame{
 
+	private static final boolean DEBUG = false;
 	private JPanel panel1 = new JPanel();
 	private JPanel panel2 = new JPanel();
 	static JPanel panel3 = new JPanel();
 	private JPanel panel4 = new JPanel(new BorderLayout());
+	private JTextArea panel5 = new JTextArea();
 	private JScrollPane scrolling = new JScrollPane(panel3);
+	private JScrollPane scrolling1 = new JScrollPane(panel5);
 
 	JTextField 		generated_TextField;
 	JTextField		compile_TextField;
@@ -145,14 +149,13 @@ public class ADFDPlus extends JFrame{
 		this.setSize(xPos, yPos);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		drawAllComponents();
-		panel4.setBackground(Color.LIGHT_GRAY);
+		panel4.setBackground(Color.WHITE);
 		panel4.add(panel1, BorderLayout.NORTH);
 		this.add(panel4, BorderLayout.WEST);
 		this.add(panel2, BorderLayout.NORTH);
 		//this.add(panel3, BorderLayout.CENTER);
 		this.add(scrolling, BorderLayout.CENTER);
 		this.setVisible(true);
-
 		//this.setAlwaysOnTop(true);
 		//this.pack();
 
@@ -184,11 +187,6 @@ public class ADFDPlus extends JFrame{
 
 		new ADFDPlus();
 
-
-
-
-
-
 	}
 
 
@@ -200,7 +198,7 @@ public class ADFDPlus extends JFrame{
 		gbc = new GridBagConstraints();
 		panel1.setBorder(new TitledBorder("Test Settings"));
 		panel1.setLayout(new GridBagLayout());
-		panel1.setBackground(Color.LIGHT_GRAY);
+		panel1.setBackground(Color.WHITE);
 		gbc.insets = new Insets(2, 2, 8, 2);
 		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.fill = GridBagConstraints.BOTH;
@@ -644,10 +642,10 @@ public class ADFDPlus extends JFrame{
 		JLabel heading_Label = new JLabel("ADFD+");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
 		panel2.add(heading_Label);
-		panel2.setBackground(Color.LIGHT_GRAY);
+		panel2.setBackground(Color.WHITE);
 
 		panel3.setBorder(new TitledBorder("Plot Fault Domain "));
-		panel3.setBackground(Color.LIGHT_GRAY);
+		panel3.setBackground(Color.WHITE);
 
 
 	}
@@ -706,7 +704,7 @@ public class ADFDPlus extends JFrame{
 	public void drawGraph(){
 
 
-		JOptionPane.showMessageDialog(null,  " Graph is");
+		//JOptionPane.showMessageDialog(null,  " Graph is");
 
 		/* I added this if statement to control the graphs
 		 * so if we get one fault then one C file will be generated and
@@ -728,6 +726,9 @@ public class ADFDPlus extends JFrame{
 			LogGrapher3 demo = new LogGrapher3("Failure Domains");
 
 		}
+		ADFDPlus.panel3.validate();
+		panel3.add(scrolling1,BorderLayout.SOUTH);
+
 
 
 	}
@@ -778,6 +779,7 @@ public class ADFDPlus extends JFrame{
 				Process pro1;
 				Thread.sleep(200);
 				pro1 = Runtime.getRuntime().exec("javac -g " + testFilePathInitial + filesToCompileArray[i]);
+				pro1.waitFor();
 				count = count + 1;
 			}
 			countCompileFiles = count;
@@ -804,6 +806,9 @@ public class ADFDPlus extends JFrame{
 			executeJavaFiles();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
+			String result = executeDaikon();
+			
+			panel5.setText("Candidate invariant:"+result);
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
@@ -845,8 +850,8 @@ public class ADFDPlus extends JFrame{
 		try {
 			int count = 0;
 			for (int i = 0; i < filesToCompileArray.length; i++){
-				Thread.sleep(2000);
-				Runtime.getRuntime().exec("java C"+ i);
+				Process p = Runtime.getRuntime().exec("java C"+ i);
+				p.waitFor();
 				count++;
 			}
 
@@ -857,15 +862,14 @@ public class ADFDPlus extends JFrame{
 		catch(Exception e1){
 			e1.printStackTrace();
 		}
-		executeDaikon();
 	}
 
-	
+
 	/**
 	 * Executes Daikon on each failure file.
 	 */
-	public void executeDaikon(){
-		
+	public String executeDaikon(){
+		String result = ""; 
 		String daikonOptions = "--config_option daikon.inv.unary.scalar.LowerBound.minimal_interesting=-1000 "+// TODO Adapt to boundaries set up for the failure
 				"--config_option daikon.inv.unary.scalar.LowerBound.maximal_interesting=2000 "+ // TODO
 				"--config_option daikon.inv.unary.scalar.UpperBound.maximal_interesting=2000 "+// TODO
@@ -873,9 +877,10 @@ public class ADFDPlus extends JFrame{
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
 				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
-		
+
 		try {
 			int count = 0;
+			// for each file we will execute a session with Daikon
 			for (int i = 0; i < filesToCompileArray.length; i++){
 				Thread.sleep(2000);
 				Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
@@ -884,11 +889,11 @@ public class ADFDPlus extends JFrame{
 				while (!trace.exists()){
 					Thread.sleep(100);
 				}
-				
-				
-				System.err.println("file C"+i+".dtrace.gz exists and has length "+trace.length());
+
+
+				if (DEBUG) System.err.println("file C"+i+".dtrace.gz exists and has length "+trace.length());
 				Process p = Runtime.getRuntime().exec("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
-				System.err.println("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
+				if (DEBUG) System.err.println("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
 				p.waitFor();  // wait for process to finish then continue.
 				BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
 				String execResult = "";
@@ -908,7 +913,7 @@ public class ADFDPlus extends JFrame{
 						execResult=execResult+"\n"+tmp;
 					}
 				}
-				JOptionPane.showMessageDialog(null, execResult, "Result of Daikon for C"+i, JOptionPane.INFORMATION_MESSAGE);
+				result= execResult;
 				count++;
 			}
 
@@ -919,6 +924,7 @@ public class ADFDPlus extends JFrame{
 		catch(Exception e1){
 			e1.printStackTrace();
 		}
+		return result;
 	}
 
 

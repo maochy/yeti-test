@@ -74,6 +74,7 @@ public class LogGrapher2 {
 	// I am trying to increase the size of the chart.
 	//	chartPanel.setPreferredSize(new Dimension(800, 600));
 		chartPanel.setPreferredSize(new Dimension(1200, 800));
+		chartPanel.setVisible(true);
 		ADFDPlus.panel3.add(chartPanel);
 	}
 
