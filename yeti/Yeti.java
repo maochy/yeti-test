@@ -642,6 +642,7 @@ public class Yeti {
 			// by default we ignore IllegalArgumentExceptions
 			if (s0.equals("-javaBased:doNotIngoreIllegalArgumentExceptions")) {
 				YetiJavaProperties.ignoreIllegalArgumentExceptions = false;
+				continue;
 			}
 
 			System.out.println("Yeti could not understand option: " + s0);

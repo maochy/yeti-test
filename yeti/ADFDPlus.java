@@ -639,7 +639,7 @@ public class ADFDPlus extends JFrame{
 			}
 		});
 
-		JLabel heading_Label = new JLabel("ADFD+");
+		JLabel heading_Label = new JLabel("  Automated Discovery of Failure Domain Plus");
 		heading_Label.setFont(heading_Label.getFont().deriveFont(32.0f ));
 		panel2.add(heading_Label);
 		panel2.setBackground(Color.WHITE);
