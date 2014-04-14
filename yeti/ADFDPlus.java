@@ -69,11 +69,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 
+
 /**
- * Class that represents... 
+ * Class that represents the GUI of ADFD+. It takes input from the user, pass the input to YETI, collect the results from YETI
+ * Execute Daikon on the results, and then compile the results to generate invariants and draw the failure domain.
  * 
- * @author Manuel Oriol (manuel@cs.york.ac.uk)
- * @date 10 Apr 2014
+ * @author Mian Asbat Ahmad (mian.ahmad@york.ac.uk)
+ * @date 14 Apr 2014
  *
  */
 public class ADFDPlus extends JFrame{
@@ -134,9 +136,9 @@ public class ADFDPlus extends JFrame{
 	JLabel				duckImageLabel;
 
 
-
-	// Constructor of the class to create frame and draw components on the frame. //////
-
+	/**
+	 * Constructor of the class to create frame and draw components on the frame. 
+	 */
 	public ADFDPlus(){
 		// A method is added to automatically delete the unwanted files before the next run.
 		deleteOldTestFiles();
@@ -165,6 +167,11 @@ public class ADFDPlus extends JFrame{
 
 
 
+	/**
+	 * This method delete the test files of the last executed experiment/Test.
+	 * It is added to simplify the process. If the files from the last test remain in the folder
+	 * then the results of new tests are misleading.
+	 */
 	public void deleteOldTestFiles(){
 
 		File directory = new File(".");
@@ -181,8 +188,11 @@ public class ADFDPlus extends JFrame{
 
 
 
-	// Main method of the class.
 
+	/**
+	 * @param args
+	 * // Main method of the class. It calls the constructor of the class to draw the ADFD+ GUI.
+	 */
 	public static void main(String[] args){
 
 		new ADFDPlus();
@@ -191,8 +201,13 @@ public class ADFDPlus extends JFrame{
 
 
 
-	// Method draw all the components on the frame. 
 
+
+	/**
+	 *  Method to draw all the components on the frame.
+	 *  It adds and arranges all the labels, textboxes and buttons etc to the panel and
+	 *  arrange the panels in a proper way.
+	 */
 	public void drawAllComponents(){
 
 		gbc = new GridBagConstraints();
@@ -233,10 +248,11 @@ public class ADFDPlus extends JFrame{
 
 			}
 		});
+
+
 		//////////////////////////////////////////////////////////////////
-
-
 		/////////// Strategy Label, ComboBox and ActionListener //////////
+		//////////////////////////////////////////////////////////////////
 
 		JLabel strategy_Label = new JLabel("Strategy:");
 		gbc.gridx = 0;
@@ -288,6 +304,7 @@ public class ADFDPlus extends JFrame{
 
 		//////////////////////////////////////////////////////////////////
 		///////// Time label, Time1 Combo Box and Time2 Combo Box ////////
+		//////////////////////////////////////////////////////////////////
 
 
 		JLabel duration_Label = new JLabel("Duration:");
@@ -305,8 +322,9 @@ public class ADFDPlus extends JFrame{
 		gbc.gridy = 2;
 		panel1.add(time2_ComboBox, gbc);
 
-		///////////////////////////////////////////////////////////////
-		/////////// GUI Label, check box and ActionListener //////////
+		//////////////////////////////////////////////////////////////////
+		/////////// GUI Label, check box and ActionListener //////////////
+		//////////////////////////////////////////////////////////////////
 
 		JLabel gui_Label = new JLabel("GUI:");
 		gbc.gridx = 0;
@@ -327,8 +345,9 @@ public class ADFDPlus extends JFrame{
 			}
 		});
 
-		///////////////////////////////////////////////////////////////
-		/////////// Logs Label, check box and ActionListener //////////
+		//////////////////////////////////////////////////////////////////
+		/////////// Logs Label, check box and ActionListener /////////////
+		//////////////////////////////////////////////////////////////////
 
 		JLabel logs_Label = new JLabel("Logs:");
 		gbc.gridx = 0;
@@ -354,6 +373,7 @@ public class ADFDPlus extends JFrame{
 
 		//////////////////////////////////////////////////////////////////
 		/////////// Browse Label, Button, TextField and ActionListener ///
+		//////////////////////////////////////////////////////////////////
 
 		JLabel browse_Label = new JLabel("Test File:");
 		gbc.gridx = 0;
@@ -401,10 +421,6 @@ public class ADFDPlus extends JFrame{
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
 		//////////////////////////////////////////////////////////////////
-		//////////////////////////////////////////////////////////////////
-		//////////////////////////////////////////////////////////////////
-		//////////////////////////////////////////////////////////////////
-		//////////////////////////////////////////////////////////////////
 
 		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
@@ -421,56 +437,10 @@ public class ADFDPlus extends JFrame{
 		panel1.add(rangeValue_TextField, gbc);	
 
 
-		// Commented for ADFDPlus
-		//
-		//		JLabel minValue_Label = new JLabel("Lower Limit:");
-		//		gbc.gridx = 0;
-		//		gbc.gridy = 6;
-		//		gbc.gridwidth = 1;
-		//		panel1.add(minValue_Label, gbc);
-		//
-		//
-		//
-		//		// changed to 100 for test purpose.
-		//		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
-		//		minValue_TextField = new JTextField("" + -100);
-		//		gbc.gridx = 1;
-		//		gbc.gridy = 6;
-		//		gbc.gridwidth = 1;
-		//		panel1.add(minValue_TextField, gbc);
 
-
-		/////////////////////////////////////////////////////////////////
-		//  Commented for ADFDPlus
-		//
-		//
-		//		JLabel maxValue_Label = new JLabel("Upper Limit:");
-		//		gbc.gridx = 0;
-		//		gbc.gridy = 7;
-		//		gbc.gridwidth = 1;
-		//		panel1.add(maxValue_Label, gbc);
-		//
-		//
-		//
-		//		// changed to 100 for test purpose.
-		//		//		maxValue_TextField = new JTextField("" + Integer.MAX_VALUE);
-		//		maxValue_TextField = new JTextField("" + 100);
-		//		gbc.gridx = 1;
-		//		gbc.gridy = 7;
-		//		gbc.gridwidth = 1;
-		//		panel1.add(maxValue_TextField, gbc);
-		//
-		//
-
-		/////////// Run Label, Button and ActionListener /////////////////
-
-
-
-
-
-
-		//////////////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of generated Files //////
+		/////////////////////////////////////////////////////////////////////////////////////
 
 		generated_Label = new JLabel("Count Files:");
 		gbc.gridx = 0;
@@ -486,8 +456,9 @@ public class ADFDPlus extends JFrame{
 
 
 
-		///////////////////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of compiled Files //////
+		////////////////////////////////////////////////////////////////////////////////////
 
 
 		compile_Label = new JLabel("Compile Files:");
@@ -507,8 +478,9 @@ public class ADFDPlus extends JFrame{
 
 
 
-		/////////////////////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and actionlistener for the number of executed Files /////
+		//////////////////////////////////////////////////////////////////////////////////
 
 
 		execute_Label = new JLabel("Execute Files:");
@@ -532,7 +504,9 @@ public class ADFDPlus extends JFrame{
 
 
 		///////////////////////////////////////////////////////////////////////////
-		////// Button and action listener for plotting graph /////
+		////// Button and action listener for plotting graph //////////////////////
+		///////////////////////////////////////////////////////////////////////////
+
 
 		plot1_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
@@ -586,7 +560,7 @@ public class ADFDPlus extends JFrame{
 
 		roseImage();
 
-		// this label are added to create a gap between exit and help from plot button.
+		// this label is added to create a gap between exit and help from plot button.
 
 		JLabel emptyLabel1 = new JLabel("");
 		gbc.gridx = 0;
@@ -651,8 +625,11 @@ public class ADFDPlus extends JFrame{
 	}
 
 
-	///////////////////////////////////////
 
+	/**
+	 * Method to parse the arguments of YETI and passed it to the YETI.
+	 * It takes the user supplied arguments from ADFD+ GUI and execute YETI to test it.
+	 */
 
 	public void runTest() {
 
@@ -700,7 +677,14 @@ public class ADFDPlus extends JFrame{
 	}
 
 
-	////////////////////////////////////////////
+
+	/**
+	 * This method draw the graph of failure domain and pass domain. It create an object of the class LogGrapher on 
+	 * the basis of the number of C* files created by YETI ADFD+ strategy. At the moment it can evaluate a method of 
+	 * up to 3 arguments where C0, C1 and C2 files will be created.
+	 *  
+	 */
+
 	public void drawGraph(){
 
 
@@ -734,10 +718,11 @@ public class ADFDPlus extends JFrame{
 	}
 
 
-	///////////////////////////////////////
-
-
-
+	
+	/**
+	 * This method count the number of C*.java files created dynamically by ADFD+.
+	 *  
+	 */
 	public void countFiles() {
 		try{
 
@@ -770,7 +755,7 @@ public class ADFDPlus extends JFrame{
 	}
 
 	/**
-	 * This methid compiles files generated by the ADFD+ strategy
+	 * This method compiles files generated by the ADFD+ strategy
 	 */
 	public void compileFiles() {
 		try{
@@ -794,7 +779,7 @@ public class ADFDPlus extends JFrame{
 
 
 	/**
-	 * TODO
+	 * This method calls the progress bar method, executejavafiles method and executeDaikon method.
 	 */
 	public void executeFiles(){
 		try{
@@ -807,7 +792,7 @@ public class ADFDPlus extends JFrame{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
 			String result = executeDaikon();
-			
+
 			panel5.setText("Candidate invariant:"+result);
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
@@ -828,9 +813,12 @@ public class ADFDPlus extends JFrame{
 
 
 
-	//////Thread 2 to initialize the progress bar to indeterminate state ///////////////
+	
 
-
+	/**
+	 * This method shows and control the progress bar. 
+	 * Thread 2 to initialize the progress bar to indeterminate state.
+	 */
 	public void progressStart(){
 
 		try {
@@ -846,6 +834,9 @@ public class ADFDPlus extends JFrame{
 
 
 
+	/**
+	 * This method execute the dynamically generated and compiled C*.class files.
+	 */
 	public void executeJavaFiles(){
 		try {
 			int count = 0;
@@ -928,8 +919,11 @@ public class ADFDPlus extends JFrame{
 	}
 
 
-	//////Thread 4 to update the status of progressbar when pass and fail files are generated ///////////////
 
+
+	/**
+	 * 	Thread 4 to update the status of progress bar when pass and fail files are generated 
+	 */
 	public void progressStop(){
 
 
@@ -969,8 +963,11 @@ public class ADFDPlus extends JFrame{
 		}
 	}
 
-	///// Method hides item in case strategy other than ADFD is selected for the current test session.
+	
 
+	/**
+	 * Method hides item in case strategy other than ADFD is selected for the current test session.
+	 */
 	public void hideItems(){
 		execute_TextField.setVisible(false);
 		execute_Label.setVisible(false);
@@ -983,6 +980,10 @@ public class ADFDPlus extends JFrame{
 
 
 	}
+	
+	/**
+	 * This method unhide components if ADFD strategy is selected.
+	 */
 	public void unhideItems(){
 		execute_TextField.setVisible(true);
 		execute_Label.setVisible(true);
@@ -996,6 +997,9 @@ public class ADFDPlus extends JFrame{
 
 	}
 
+	/**
+	 * This method adds ADFD+ logo at the right of the title in GUI.
+	 */
 	public void roseImage(){
 		try{
 			duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));

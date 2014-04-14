@@ -1,15 +1,22 @@
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
 \externaldocument{chapter1}
 \chapter{Introduction}
 \label{Introduction1}
+\invisiblesection{Preliminaries}
 %This chapter includes motivation for the research study followed by the problems in random testing, the alternative approaches to overcome these problems, the research objectives and contributions of the study. At the end of the chapter, the structure of the remaining thesis is given.
 %\section{Motivation} %In recent years there has been a particular increase in performing automated random testing and, specifically, the techniques for automatic generation of fault targeting test data. 
 %Computer processors execute instructions composing programs designed and created by programmers. The set of all such machine readable instructions of a system is called software. This includes human-understandable instructions (source code) as well as machine-understandable instructions (binary code). Software is often written in high level languages that are close to natural language and are generally portable to multiple architectures. These languages require compiler or interpreter to transform them into an architecture specific, machine language before execution. 
 
-Software is an important and essential component of computer system without which no task can be accomplished. Some software are developed for use in simple day to day operations while others are for highly complex processes in specialised fields including education, business, finance, health, science and technology etc. The ever increasing dependency on software expect us to believe that software are reliable, robust, safe and secure. However, like every other man-made items software are also prone to errors. Maurice Wilkes~\cite{wilkes1985memoirs}, a British computer pioneer stated that,
+%Software is an important and essential component of computer system without which no task can be accomplished. 
+Some software are developed for use in simple day to day operations while others are for highly complex processes in specialised fields including education, business, finance, health, science and technology etc. The ever increasing dependency on software expect us to believe that software are reliable, robust, safe and secure. Like every other man-made items software are also prone to errors. Maurice Wilkes~\cite{wilkes1985memoirs}, a British computer pioneer stated that,
 \begin{quote}
 ``As soon as we started programming, we found to our surprise that it was not as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
 \end{quote}
-The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures~\cite{tassey2002economic}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software before its practical application. Software testing is the most recognized and widely used technique to verify correctness and ensure quality of the software~\cite{patton2001software}. According to Myers et al. some software companies spend up to 50\% of the total development and maintenance cost on software testing~\cite{myers2011art}. 
+The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to large economic losses~\cite{huang2004securing}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures~\cite{tassey2002economic}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software before its practical application. Software testing is the most recognized and widely used technique to verify correctness and ensure quality of the software~\cite{patton2001software}. According to Myers et al. some software companies spend up to 50\% of the total development and maintenance cost on software testing~\cite{myers2011art}. 
 %The process of evaluating the correctness and quality of the software or its component is called software testing. 
 
 %Software is a very important and essential component of computer system without which no task can be accomplished. Some softwares are developed for use in simple day to day operations while others are for highly complex processes in specialized fields like research and education, business and finance, defence and security, health and medicine, science and technology, aeronautics and astronautics, commerce and industry, information and communication, environment and safety etc. The ever increasing dependency of software expect us to believe that the software in use is reliable, robust, safe and secure. Unfortunately, the performance of software in general is not what is expected. According to the National Institute of Standards and Technology (NIST), US companies alone bear \$60 billion loss every year due to software failures and one-third of that can be eliminated by an improved testing infrastructure~\cite{Standards2002}. Humans are prone to errors and programmers are no exceptions. Maurice Wilkes~\cite{Maurice1985}, a British computer pioneer, stated that:
@@ -20,7 +27,7 @@ The margin of error in mission-critical and safety-critical systems is so small 
 %The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to huge economic losses~\cite{huang2004securing}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software. Software testing is by far the most recognized and widely used technique to verify the correctness and ensure quality of the software ~\cite{Standards2002, Myers2011, patton2001software, young2008software}.  According to Myers et al. some software companies spend up to 50\% cost of the total cost of software development and maintenance on testing~\cite{Myers2011}. 
 
 \subsection{Software Testing} 
-It is a Verification and Validation (V\&V) technique used to ensure that the software adheres to the desired specifications. According to Dijkstra, program testing can be used to show the presence of bugs but never to show the absence of bugs~\cite{dahl1972structured}. It means that a software under test (SUT) that passes all the tests without giving any error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
+Software testing is a Verification and Validation (V\&V) technique used to ensure that the software adheres to the desired specifications. According to Edsger Dijkstra, program testing can be used to show the presence of bugs but never to show the absence of bugs~\cite{dahl1972structured}. It means that a software under test (SUT) that passes all the tests without giving any error is not guaranteed to contain no error. However, the testing process increases reliability and confidence of users in the tested product.
 
 Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of the input domain, limited resources and strict time constraints. Therefore, the usual practice is the selection of test data set from a large/infinite domain. Careful selection of the test data set, as a subset of the whole input domain, is a crucial factor in any testing technique because it represents the whole domain for evaluating the structural and/or functional properties~\cite{howden1986functional, mccabe1983structured}. Miller and Maloney were the first who comprehensively described a systematic approach of test data set selection known as path coverage. They proposed that testers should select the test data so that all paths of the SUT are executed at least once~\cite{miller1963systematic}. The approach resulted in higher standard of test quality. A large number of test strategies were subsequently developed such as boundary value analysis and equivalence class. 
 
@@ -37,7 +44,7 @@ It is a process in which generation of test data is created at random but accord
 	\label{fig:SoftwareTesting1}
 \end{figure}
 
-This thesis is a humble contribution to the literature on the subject, with the aim to bring about improvement in software testing by devising new, improved and effective automated software testing techniques based on random strategy.
+This thesis is a contribution to the literature on the subject, with the aim to bring about improvement in software testing by devising new, improved and effective automated software testing techniques based on random strategy.
 \newpage
 \section{The Problems}
 Despite the benefits of random testing, its simplistic and non-systematic nature exposes it to high criticism~\cite{myers2011art, white1987software}. This research study focuses on the following problems in automated Random Testing (RT):
@@ -120,7 +127,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:DSSR}} describes Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures and failure domains as compared with random and random+ strategies. \\
+\textbf{Chapter~\ref{chap:DSSR}} describes the Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures and failure domains as compared with random and random+ strategies. \\
 % In majority of the classes DSSR strategy indicates higher fault-finding ability than random and random+ strategies. \\
 
 \hangindent=\parindent
