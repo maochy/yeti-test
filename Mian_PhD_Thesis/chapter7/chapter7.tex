@@ -74,7 +74,7 @@ Research in the field of software testing has been proceeding for more than thre
 
 \textbf{Selection of performance measurement criteria}
 
-Among the three measuring techniques used for finding the effectiveness of random testing, the E-measure and P-measure have been criticised~\cite{chen2005adaptive} whereas the F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, the F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing and counts the number of test cases used to find the first failure and the system is then handed over to developers for fixing the identified failure. Automated testing tools test the whole system and report all discovered failures in one go, thus the F-measure is not the favourable choice. We addressed the issue by measuring the maximum number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the test strategy.\\
+Among the three measuring techniques used for finding the effectiveness of random testing, the E-measure and P-measure have been criticised~\cite{chen2005adaptive} whereas the F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, the F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing and counts the number of test cases used to find the first failure. The system is then handed over to developers for fixing the identified failure. Automated testing tools test the whole system and report all discovered failures in one go, thus the F-measure is not the favourable choice. We addressed the issue by measuring the maximum number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the test strategy.\\
 
 %In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair
 %~\cite{liu2012comparison}. 
@@ -94,15 +94,15 @@ In random testing, due to the random generation of test input, the results keep 
 
 
    
-\textbf{Higher computation increases overhead and decreases performance}
+\textbf{Testing of neighbouring values around the failure decreases computation}
 
-Attempts to evolve new versions of random testing with higher fault finding ability usually result in increased computation, higher overhead and lower performance. We addressed the issue by developing new strategies which uses neighbouring values around the failure finding value for the subsequent tests. This approach saves the computation involved in generating suitable test values from the whole input domain. \\
+Developing new versions of random testing with higher fault finding ability usually result in increased computation, higher overhead and lower performance. We addressed the issue by developing new strategies which uses neighbouring values around the failure finding value for the subsequent tests. This approach saves the computation involved in generating suitable test values from the whole input domain. \\
 %It is difficult to achieve high quality strategy without any overhead but efforts should be made to keep it to bare minimum. For example, if we test a program with two strategies A and B. Strategy A consumes 100 tests to find a fault while strategy B consumes 500 tests to find the same fault.  It looks that strategy A supersedes strategy B however the time to generate the test cases may also be considered which can be equal for both the strategies. In addition to time other resources like hardware etc should also be kept minimum.\\
 \\
 
 \textbf{Random testing coupled with exhaustive testing}
 
-Random testing generates test values from the input domain at random. Exhaustive testing although very effective yet it is not feasible for the whole input domain. The issue was addressed in our experiments by coupling the random testing with exhaustive testing. In our newly developed strategies the testing starts at random till a failure is identified and switches to exhaustive testing to select the values around the failure finding value in the specified range set by the tester. This results in quick identification of the neighbouring failures which may be difficult to find by using random strategy.\\
+Random testing test values at random while exhaustive testing test the whole input domain which is very effective but not usually feasible for a larger domain. The issue was addressed by coupling the random testing with exhaustive testing. In our newly developed strategies the testing starts at random till a failure is identified and then switches to exhaustive testing to select the values around the failure finding value in the sub-domain set by the tester. This partially provides the benefit of exhaustive testing in the random testing and results in quick identification of the neighbouring failures which may be difficult to find by using random testing alone.\\
 
 
 %\textbf{Starting with random testing and switching to exhaustive strategy helps}
@@ -114,7 +114,7 @@ Random testing generates test values from the input domain at random. Exhaustive
 
 \textbf{Easy to understand user friendly test output}
 
-Random testing is no exception when it comes to the complexity of understanding and evaluating test results. No random strategy seems to provide graphical representation of the failures and failure-domains. The issue of getting in easy to understand user friendly format has been addressed the present study. The ADFD strategy has been developed with the feature of giving the result output in the visualized graphical form. This feature has been further improved in the ADFD+ strategy which clarify and label individual failures and the failure domains in two-dimensional graph. The identification of failures and failure domains in graphical form helps developers keep in view all the occurrences while fixing the fault.  \\
+Random testing is no exception when it comes to the complexity of understanding and evaluating test results. No random strategy seems to provide graphical representation of the failures and failure-domains. The issue of getting in easy to understand user friendly format has been addressed the present study. The ADFD strategy has been developed with the feature of giving the result output in the visualized graphical form. This feature has been further improved in the ADFD+ strategy which clarify and label individual failures and the failure domains in two-dimensional graph. The identification of failures and failure domains in graphical form helps developers to easily follow the test reports while fixing the faults.  \\
 
 
 %Random testing lacks the capability to 
