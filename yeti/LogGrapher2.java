@@ -1,24 +1,5 @@
 package yeti;
 
-
-/**
- * JFreeChartDemo
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * More than 150 demo applications are included with the JFreeChart
- * Developer Guide. For more information, see:
- *
- * JFreeChart Developer's Guide
- */
 import java.awt.BasicStroke;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -53,39 +34,76 @@ import org.jfree.ui.RefineryUtilities;
 import yeti.GraphDataScanner;
 
 /**
- * @author John B. Matthews
+
+YETI - York Extensible Testing Infrastructure
+
+Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+must display the following acknowledgment:
+This product includes software developed by the University of York.
+4. Neither the name of the University of York nor the
+names of its contributors may be used to endorse or promote products
+derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ **/ 
+
+/**
+ * This class generate the graph in the case of two argument method failure which is displayed in panel3 of the ADFD+ GUI. 
+ * 
+ * @author Mian Asbat Ahmad (mian.ahmad@york.ac.uk)
+ * @date   10 Apr 2014
+ *
  */
 public class LogGrapher2 {
 
-
+	/**
+	 * The variable to stop the loop in the case of failing values.
+	 */
 	public int loopHold;
 	/**
-	 * Construct a new frame
+	 * The constructor specifying the chart area and other settings.
 	 *
-	 * @param title the frame title
+	 * @param title of the chart.
 	 */
 	public LogGrapher2 (String title) {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
-
-
-
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-	// I am trying to increase the size of the chart.
-	//	chartPanel.setPreferredSize(new Dimension(800, 600));
 		chartPanel.setPreferredSize(new Dimension(1200, 800));
 		chartPanel.setVisible(true);
 		ADFDPlus.panel3.add(chartPanel);
 	}
 
-	// This is the original one and the following same name method is the one i do mess.
 
-
+	/**
+	 * This method get the failing and passing values
+	 * Convert them to double type and assign them to two series i.e series1 for failing and series2 for passing.
+	 *  
+	 * @return the dataset containing the graphs data.
+	 */
 	private XYDataset createDataset() {
 
-
 		final XYSeriesCollection dataset = new XYSeriesCollection();
-
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
 		int passValues[] = GraphDataScanner.readPassDataFromFile();	
 
@@ -93,9 +111,7 @@ public class LogGrapher2 {
 		final XYSeries series2 = new XYSeries("Passing input");
 
 		for (int j =0; j < passValues.length; j=j+2){
-
 			series2.add((double)passValues[j], (double)passValues[j+1]);
-
 		}
 
 		loopHold = failValues.length;
@@ -103,7 +119,6 @@ public class LogGrapher2 {
 
 		for (int i =0; i < loopHold; i=i+2 ){
 			series1.add((double)failValues[i],(double)failValues[i+1]);
-
 		}
 
 		dataset.addSeries(series1);
@@ -143,7 +158,7 @@ public class LogGrapher2 {
 		plot.setBackgroundPaint(new Color(0xffffe0));
 		plot.setDomainGridlinesVisible(true);
 		plot.setDomainCrosshairVisible(true);
-	    plot.setRangeCrosshairVisible(true);
+		plot.setRangeCrosshairVisible(true);
 		plot.setDomainGridlinePaint(Color.lightGray);
 		plot.setRangeGridlinePaint(Color.lightGray);
 
@@ -157,8 +172,8 @@ public class LogGrapher2 {
 		// render shapes and lines
 		XYItemRenderer renderer = plot.getRenderer();
 		plot.setRenderer(renderer);
-//		renderer.setBaseShapesVisible(true);
-//		renderer.setBaseShapesFilled(true);
+		//		renderer.setBaseShapesVisible(true);
+		//		renderer.setBaseShapesFilled(true);
 
 		// This line is added by Mian to change the colour of series 3 (2 here) from green to red.
 		renderer.setSeriesPaint(2, Color.red);
@@ -173,9 +188,9 @@ public class LogGrapher2 {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
+		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
 		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
-//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+		//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
 
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);

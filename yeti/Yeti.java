@@ -545,9 +545,8 @@ public class Yeti {
 				continue;
 			}
 			
-			
 
-			// we can use the ADFD Plus
+			// we can use the ADFD Plus strategy
 			if (s0.equals("-ADFDPlus")) {
 				isADFDPlus = true;
 				continue;

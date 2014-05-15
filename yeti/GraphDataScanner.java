@@ -5,23 +5,31 @@ import java.util.*;
 
 
 /**
-* This class reads the two files Pass and Fail line and by line.
+ * This class reads the two files Pass and Fail line by line.
  * From each line it gets the value and assign it to the one of the two arrays.
  * The values from Pass.txt are stored in graphDataIntPass array
  * The values from Fail.txt are stored in graphDataIntFail array 
  * 
- * @author Mian Asbat Ahmad (mianahmad@york.ac.uk)
+ * @author Mian Asbat Ahmad (mian.ahmad@york.ac.uk)
  * @date 10 Apr 2014
  *
  */
 public class GraphDataScanner {
+	
+	/**
+	 * The values from Fail.txt are stored in graphDataIntFail array
+	 */
 	static int [] graphDataIntFail;
+	
+	/**
+	 * The values from Pass.txt are stored in graphDataIntPass array
+	 */
 	static int [] graphDataIntPass;
 
 	/**
-	 * This method reads the failed data from a file.
+	 * This method reads the failing values from the Fail.txt file.
 	 * 
-	 * @return
+	 * @return all the failing values as integer type stored in an int array.
 	 */
 	public static int[] readFailDataFromFile(){
 		// It is for testing purpose only
@@ -53,10 +61,9 @@ public class GraphDataScanner {
 	}
 
 	/**
+	 * This method reads the passing values from the Pass.txt file.
 	 * 
-	 * Read data from file containing the passing material.
-	 * 
-	 * @return an array of passing data.
+	 * @return all the passing values as integer type stored in an int array.
 	 */
 	public static int[] readPassDataFromFile(){
 
@@ -71,12 +78,12 @@ public class GraphDataScanner {
 			e1.printStackTrace();
 		}
 
-		ArrayList<Integer> temp = new ArrayList<Integer>();
+		ArrayList<Integer> pass = new ArrayList<Integer>();
 		//Assuming you know all your data on the file are ints
 		while(scan.hasNext())
-			temp.add(scan.nextInt());
+			pass.add(scan.nextInt());
 
-		return graphDataIntPass = convertIntegers(temp);
+		return graphDataIntPass = convertIntegers(pass);
 
 
 		//for(Integer str : x)
@@ -99,6 +106,5 @@ public class GraphDataScanner {
 		}
 		return ret;
 	}
-
 
 }

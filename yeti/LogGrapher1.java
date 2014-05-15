@@ -1,38 +1,11 @@
 package yeti;
 
-
-/**
- * JFreeChartDemo
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * More than 150 demo applications are included with the JFreeChart
- * Developer Guide. For more information, see:
- *
- * JFreeChart Developer's Guide
- */
 import java.awt.BasicStroke;
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.EventQueue;
 import java.awt.Stroke;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.util.Random;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -42,74 +15,83 @@ import org.jfree.chart.labels.StandardXYItemLabelGenerator;
 import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
-import org.jfree.chart.renderer.xy.DeviationRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
-import org.jfree.data.xy.DefaultXYDataset;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
-import org.jfree.ui.RefineryUtilities;
 import yeti.GraphDataScanner;
 
 /**
- * @author John B. Matthews
+
+YETI - York Extensible Testing Infrastructure
+
+Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+1. Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+3. All advertising materials mentioning features or use of this software
+must display the following acknowledgment:
+This product includes software developed by the University of York.
+4. Neither the name of the University of York nor the
+names of its contributors may be used to endorse or promote products
+derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY
+EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ **/ 
+
+/**
+ * This class generate the graph in the case of one argument method failure which is displayed in panel3 of the ADFD+ GUI. 
+ * 
+ * @author Mian Asbat Ahmad (mian.ahmad@york.ac.uk)
+ * @date   10 Apr 2014
+ *
  */
 public class LogGrapher1 {
 
-
 	/**
-	 * Construct a new frame
+	 * The constructor specifying the chart area and other settings.
 	 *
-	 * @param title the frame title
+	 * @param title of the chart.
 	 */
 	public LogGrapher1 (String title) {
 
-
 		final XYDataset dataset = createDataset();
-		
 		final JFreeChart chart = createChart(dataset);
-		
-		//        final DefaultXYDataset dataset = new DefaultXYDataset();
-		//        dataset.addSeries("Series0", createSeries(0));
-		//        dataset.addSeries("Series1", createSeries(1));
-		//        JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-
 		chartPanel.setPreferredSize(new Dimension(800, 600));
 		ADFDPlus.panel3.add(chartPanel);
 		chartPanel.setVisible(true);
-		//this.add(chartPanel, BorderLayout.CENTER);
-
-		//        JPanel buttonPanel = new JPanel();
-		//        JButton addButton = new JButton("Add Series");
-		//        buttonPanel.add(addButton);
-		//        addButton.addActionListener(new ActionListener() {
-		//            public void actionPerformed(ActionEvent e) {
-		//                int n = dataset.getSeriesCount();
-		//                dataset.addSeries("Series" + n, createSeries(n));
-		//            }
-		//        });
-		//        JButton remButton = new JButton("Remove Series");
-		//        buttonPanel.add(remButton);
-		//        remButton.addActionListener(new ActionListener() {
-		//            public void actionPerformed(ActionEvent e) {
-		//                int n = dataset.getSeriesCount() - 1;
-		//                dataset.removeSeries("Series" + n);
-		//            }
-		//        });
-		//        this.add(buttonPanel, BorderLayout.SOUTH);
 	}
 
+	/**
+	 * This method get the failing and passing values
+	 * Convert them to double type and assign them to two series i.e series1 for failing and series2 for passing.
+	 *  
+	 * @return the dataset containing the graphs data.
+	 */
+	private XYDataset createDataset() {
 
-private XYDataset createDataset() {
-		
-		
+
 		final XYSeriesCollection dataset = new XYSeriesCollection();
-		
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
 
 		final XYSeries series1 = new XYSeries("Failing input");
-
 		for (int i =0; i < failValues.length; i=i+4 ){
 			series1.add((double)failValues[i],(double)failValues[i+1]);
 			series1.add((double)failValues[i+2],(double)failValues[i+3]);
@@ -118,9 +100,7 @@ private XYDataset createDataset() {
 		}
 
 		final XYSeries series2 = new XYSeries("Passing input");
-		
 		int passValues[] = GraphDataScanner.readPassDataFromFile();
-		
 		for (int j =0; j < passValues.length; j=j+4){
 			series2.add((double)passValues[j],(double)passValues[j+1]);
 			series2.add((double)passValues[j+2],(double)passValues[j+3]);
@@ -128,41 +108,23 @@ private XYDataset createDataset() {
 			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
 		}
 
-
 		dataset.addSeries(series1);
 		dataset.addSeries(series2);
-		
-	
-
 
 		return dataset;
 
 	}
 
-	//    /**
-	//     * Create a series
-	//     *
-	//     * @ return the series
-	//     */
-	//    private double[][] createSeries(int mean) {
-	//        double[][] series = new double[2][MAX];
-	//        for (int i = 0; i < MAX; i++) {
-	//            series[0][i] = (double) i;
-	//            //series[1][i] = mean + random.nextGaussian() / 2;
-	//            
-	//        }
-	//        return series;
-	//    }
 
 	/**
-	 * Create a chart.
+	 * This method set various properties of the chart that is to be displayed in the GUI.
 	 *
 	 * @param dataset the dataset
 	 * @return the chart
 	 */
 	private JFreeChart createChart(XYDataset dataset) {
 
-		// create the chart...
+		
 		JFreeChart chart = ChartFactory.createXYLineChart(
 				"Serial Data", // chart title
 				"Domain", // domain axis label
@@ -174,8 +136,8 @@ private XYDataset createDataset() {
 				false // URLs?
 				);
 
-		// set chart background
-		chart.setBackgroundPaint(Color.white);
+		
+		chart.setBackgroundPaint(Color.white); //set the chart background to white.
 
 		// set a few custom plot features
 		XYPlot plot = (XYPlot) chart.getPlot();
@@ -215,17 +177,6 @@ private XYDataset createDataset() {
 		return chart;
 	}
 
-	/** Main method */
-	//    public static void main(String[] args) {
-	//        EventQueue.invokeLater(new Runnable() {
-	//            public void run() {
-	//                LogGraph2 demo = new LogGraph2("JFreeChartDemo");
-	//                demo.pack();
-	//                demo.setLocationRelativeTo(null);
-	//                demo.setVisible(true);
-	//            }
-	//         });
-	//    }
 }
 
 
