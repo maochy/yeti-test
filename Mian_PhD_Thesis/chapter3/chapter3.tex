@@ -87,25 +87,34 @@ YETI is provided with several command line options which a tester can enable or 
 \begin{tabular}{|l|l|} % centered columns (4 columns)
 \hline
 
-Options						&Purpose 										\\ \hline
--java						&To test Java programs	 						\\ \hline
--jml							&To test JML programs							\\ \hline
--dotnet						&To test .NET programs							\\ \hline
--ea							&To check code assertions 						\\ \hline
--nTests						&To specify number of tests						\\ \hline
--time						&To specify test time								\\ \hline
--testModules				&To specify one or more modules to test 			\\ \hline
--rawlogs					&To print real time logs during test 				\\ \hline
--nologs						&To omit real time logs and print end result		\\ \hline
--yetiPath					&To specify path to the test modules				\\ \hline
--gui							&To show test session in GUI						\\ \hline
--DSSR						&To specify Dirt Spot Sweeping Random strategy 	\\ \hline
--ADFD						&To specify Automated Discovery Failure Domain strategy \\ \hline
--random					&To specify Random test strategy					\\ \hline
--randomPlus					&To specify Random plus test strategy				\\ \hline
--nullProbability				&To specify probability of inserting null values		\\ \hline
--randomPlusPeriodic			&To specify Random plus periodic test strategy		\\ \hline
--newInstanceProability		&To specify probability of inserting new objects		\\ \hline
+Options							&Purpose 										\\ \hline
+-java, -Java						&To test Java programs	 						\\ \hline
+-jml	, -JML						&To test JML programs							\\ \hline
+-dotnet, -DOTNET				&To test .NET programs						\\ \hline
+-ea								&To check code assertions 						\\ \hline
+-nTests							&To specify number of tests						\\ \hline
+-time							&To specify test time								\\ \hline
+-initClass						&To use a user defined class to initialize the system	\\ \hline 
+-msCalltimeout					&To set a time out for a method call				\\ \hline
+-testModules					&To specify one or more modules to test 			\\ \hline
+-rawlogs						&To print real time test logs						\\ \hline
+-nologs							&To omit real time logs and print end result only	\\ \hline
+-yetiPath						&To specify path to the test modules				\\ \hline
+-gui								&To show test session in GUI						\\ \hline
+-help, -h						&To print the help about using YETI				\\ \hline
+-DSSR							&To specify Dirt Spot Sweeping Random strategy 	\\ \hline
+-ADFD							&To specify Automated Discovery of Failure Domain strategy \\ \hline
+-ADFDPlus						&To specify Automated Discovery of Failure Domain plus strategy \\ \hline
+-noInstanceCap					&To remove cap on the maximum number of instances of a particular type \\ \hline
+-branchCoverage					&To measure the branch coverage					\\ \hline
+-tracesOutputFile				&To specify the file to store output traces			\\ \hline
+-tracesInputFile					&To specify the file to input traces 					\\ \hline
+-random						&To specify Random test strategy					\\ \hline
+-printNumberOfCallsPerMethod	&To print the number of calls per method			\\ \hline
+-randomPlus						&To specify Random plus test strategy				\\ \hline
+-probabilityToUseNullValue		&To specify probability of inserting null values		\\ \hline
+-randomPlusPeriodic				&To specify Random plus periodic test strategy		\\ \hline
+-newInstanceInjectionProability	&To specify probability of inserting new objects		\\ \hline
 
 \hline %inserts single line
 \end{tabular}

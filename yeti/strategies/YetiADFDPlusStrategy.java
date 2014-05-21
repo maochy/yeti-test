@@ -300,7 +300,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 			String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
 
 			generateProgram(completeProgram);
-
+		
 			argumentTwo = ""+yc.getValue();
 
 			args = args + yc.getValue() + ",";
@@ -457,12 +457,14 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 			PrintStream fos = new PrintStream("C" + (uid - 1)
 					+ ".java");
 			fos.println(program);
-
-
-		} catch (FileNotFoundException e) {
+			
+			} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		
 	}
+	
+
 
 
 	@Override
