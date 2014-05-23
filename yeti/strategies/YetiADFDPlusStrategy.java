@@ -32,7 +32,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-**/
+ **/
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -68,8 +68,8 @@ import yeti.monitoring.YetiUpdatableSlider;
 public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	public static String rangeToPlot = "" + 30;
-	public static int argumentFirst = 0;
-	public static int argumentSecond = 0;
+	public static String argumentFirst = "" + 0;
+	public static String argumentSecond = "" + 0;
 
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
@@ -195,8 +195,8 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	YetiCard[] oldyt = null;
 	private YetiRoutine oldroutine;
 	public static long uid = 0;
-	String argumentTwo = "";
 	public String args = "";
+	public int count = 0;
 
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
@@ -206,109 +206,130 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
-		// I want only one C0 file to generate for any number of errors. Therefore I am commenting the following line and adding the second line below it.		
-		//		if (currentErrors > oldFaults1) {
-		if (currentErrors == 1){
+		// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
+		if (currentErrors == 1 && oldyt.length <= 2) {
 
 			YetiLog.printDebugLog("found bug in the strategy", this);
-			oldFaults1 = currentErrors;
+			//oldFaults1 = currentErrors;
 
 
 			//*****************************************************************************
 
-			//			for (int j1 = 0; j1 < oldyt.length; j1++) {
-			//				YetiCard yc = oldyt[j1];
-			YetiCard yc = oldyt[0];
-
-			//				if (yc.getType().getName().equals("int")) {
-
-			//				if(oldyt.length >= 1){	
-			//				if (j1 == 0){ argumentFirst = (Integer)oldyt[0].getValue();}
-			//				if (j1 == 1){ argumentSecond = (Integer)oldyt[1].getValue();}
-			//				}
-			argumentFirst = (Integer)oldyt[0].getValue();
-			argumentSecond = (Integer)oldyt[1].getValue();
-
-			String call = "";
-
-			YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
-
-			if (jroutine instanceof YetiJavaConstructor) {
-				YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
-				call = "new "
-						+ c.getOriginatingModule().getModuleName()
-						+ "(" + args + "i";
-				for (int k = 0 + 1; k < oldyt.length; k++) {
-					call = call + ","
-							+ oldyt[k].getValue().toString();
-
+			for (int j1 = 0; j1 < oldyt.length; j1++) {
+				
+				if (j1 == 1||j1 == 2){
+					break;
 				}
-				call = call + ")";
+				
+				YetiCard yc = oldyt[j1];
+				String call = "";
+				//*****************************************************************************
 
-			} else {
-
-				//******************************************************************************
-				if (jroutine instanceof YetiJavaMethod) {
-					YetiJavaMethod m = (YetiJavaMethod) jroutine;
-					if (m.isStatic) {
-
-						call = ""
-								+ m.getOriginatingModule()
-								.getModuleName() + "."
-								+ m.getMethod().getName() + "("
-
-										+ "i , j"
-
-										+ ")";
-					}
+				if (yc.getType().getName().equals("int")||yc.getType().getName().equals("byte")||yc.getType().getName().equals("long")||yc.getType().getName().equals("short")) {
 
 
-					//			+ args + "i";
+					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
 
-					//	for (int k = j1 + 1; k < oldyt.length; k++) {
+					//*****************************************************************************		
+					if (jroutine instanceof YetiJavaConstructor) {
+						YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
+						call = "new "
+								+ c.getOriginatingModule().getModuleName()
+								+ "(" + args + "i";
+						argumentFirst = oldyt[j1].getValue().toString();
 
-					//		call = call + "," + oldyt[k].getValue().toString();
+						for (int k = j1 + 1; k < oldyt.length; k++) {
+							call = call + ","
+									+ "j";
 
-					//	}
-					//	call = call + ")";
-					//} 
+							if (oldyt.length == 1 ){
+								argumentSecond	= "" + 0;
 
-
-					//******************************************************************************
-
-					else {
-						call = "variable" + "."
-								+ m.getMethod().getName() + "("
-								+ args + "i";
-						for (int k = 0 + 1; k < oldyt.length; k++) {
-
-							call = call + "," + oldyt[k].getValue().toString();
+							}
+							else{
+								argumentSecond	= oldyt[k].getValue().toString();
+							}
 
 						}
-						call = call + ")";	
+						call = call + ")";
+
+					} else {
+						//******************************************************************************
+
+						if (jroutine instanceof YetiJavaMethod) {
+							YetiJavaMethod m = (YetiJavaMethod) jroutine;
+							if (m.isStatic) {
+
+								call = ""
+										+ m.getOriginatingModule()
+										.getModuleName() + "."
+										+ m.getMethod().getName() + "("
+
+								+ args + "i";
+								argumentFirst = oldyt[j1].getValue().toString();
+
+								for (int k = j1 + 1; k < oldyt.length; k++) {
+
+									call = call + "," + "j";
+
+									if (oldyt.length == 1 ){
+
+										argumentSecond	= "" + 0;
+
+									}
+									else{
+										argumentSecond	= oldyt[k].getValue().toString();
+
+									}
+								}
+								call = call + ")";
+							} 
+
+
+							//******************************************************************************
+							else {
+								call = "variable" + "."
+										+ m.getMethod().getName() + "("
+										+ args + "i";
+								argumentFirst = oldyt[j1].getValue().toString();
+
+
+								for (int k = 0 + 1; k < oldyt.length; k++) {
+
+									call = call + "," + "j";
+
+									if (oldyt.length == 1 ){
+										argumentSecond	= "" + 0;
+
+									}
+									else{
+										argumentSecond	= oldyt[k].getValue().toString();
+
+									}
+								}
+								call = call + ")";	
+							}
+							//*****************************************************************************
+
+						}
+
 					}
+
+
+					String programBegin = programBeginPart();
+					String programEnd = programEndPart();
+					String programEnd2 = programEndPart2();
+
+					String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
+
+					generateProgram(completeProgram);
+
+					//	args = args + yc.getValue() + ",";
+
 
 				}
 
 			}
-
-
-			String programBegin = programBeginPart();
-			String programEnd = programEndPart();
-			String programEnd2 = programEndPart2();
-
-			String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
-
-			generateProgram(completeProgram);
-		
-			argumentTwo = ""+yc.getValue();
-
-			args = args + yc.getValue() + ",";
-
-
-			//}
-
-			//}
 
 
 		}
@@ -322,21 +343,21 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	public String programBeginPart(){
 		String temp = "/** YETI - York Extensible Testing Infrastructure \n"  
-			+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
-			+ "All rights reserved.\n"
-			+ "Redistribution and use in source and binary forms, with or without\n"
-			+ "modification, are permitted provided that the following conditions are met:\n"
-			+ "1. Redistributions of source code must retain the above copyright\n"
-			+ "notice, this list of conditions and the following disclaimer.\n"
-			+ "2. Redistributions in binary form must reproduce the above copyright\n"
-			+ "notice, this list of conditions and the following disclaimer in the\n"
-			+ "documentation and/or other materials provided with the distribution.\n"
-			+ "3. All advertising materials mentioning features or use of this software\n"
-			+ "must display the following acknowledgement:\n"
-			+ "This product includes software developed by the University of York.\n"
-			+ "4. Neither the name of the University of York nor the\n"
-			+ "names of its contributors may be used to endorse or promote products\n"
-			+ "derived from this software without specific prior written permission.\n"
+				+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
+				+ "All rights reserved.\n"
+				+ "Redistribution and use in source and binary forms, with or without\n"
+				+ "modification, are permitted provided that the following conditions are met:\n"
+				+ "1. Redistributions of source code must retain the above copyright\n"
+				+ "notice, this list of conditions and the following disclaimer.\n"
+				+ "2. Redistributions in binary form must reproduce the above copyright\n"
+				+ "notice, this list of conditions and the following disclaimer in the\n"
+				+ "documentation and/or other materials provided with the distribution.\n"
+				+ "3. All advertising materials mentioning features or use of this software\n"
+				+ "must display the following acknowledgement:\n"
+				+ "This product includes software developed by the University of York.\n"
+				+ "4. Neither the name of the University of York nor the\n"
+				+ "names of its contributors may be used to endorse or promote products\n"
+				+ "derived from this software without specific prior written permission.\n"
 
 			+ "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY\n"
 			+ "EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n"
@@ -349,13 +370,14 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
 			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
 			+ "**/\n"
-				+ "import java.io.*;\n"
-				+ "import java.util.*;\n\n" 
-				+ "public class C"
-				+  uid++
-				+ " \n{\n"
-				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
-				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+			+ " // The value of currentErrors is " + currentErrors++ + "\n"
+			+ "import java.io.*;\n"
+			+ "import java.util.*;\n\n" 
+			+ "public class C"
+			+  uid++
+			+ " \n{\n"
+			+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 
 				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
@@ -457,19 +479,19 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 			PrintStream fos = new PrintStream("C" + (uid - 1)
 					+ ".java");
 			fos.println(program);
-			
-			} catch (FileNotFoundException e) {
+
+		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
+
 
 
 
 	@Override
 	public String getName() {
-		return "ADFD+ strategy";
+		return "ADFD++ strategy";
 	}
 
 }
