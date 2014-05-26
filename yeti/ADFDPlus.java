@@ -127,6 +127,11 @@ public class ADFDPlus extends JFrame{
 	 * executed_TextField is used to display the number of files executed by the testing process.
 	 */
 	JTextField 		execute_TextField;
+	
+	/**
+	 * browse_TextField is used to display the file under test.
+	 */
+	JTextField browse_TextField;
 
 	/**
 	 * rangeValue_TextField is a text field which takes the value from the user. This is a radius value used as a reference to search around the found failure.
@@ -461,8 +466,8 @@ public class ADFDPlus extends JFrame{
 		panel1.add(time1_ComboBox, gbc);
 
 		time2_ComboBox = new JComboBox(time2);
-		gbc.gridx = 2;
-		gbc.gridy = 2;
+		gbc.gridx = 1;
+		gbc.gridy = 3;
 		panel1.add(time2_ComboBox, gbc);
 
 		//////////////////////////////////////////////////////////////////
@@ -471,13 +476,13 @@ public class ADFDPlus extends JFrame{
 
 		JLabel gui_Label = new JLabel("GUI:");
 		gbc.gridx = 0;
-		gbc.gridy = 3;
+		gbc.gridy = 4;
 		panel1.add(gui_Label, gbc);
 
 		final JCheckBox gui_CheckBox = new JCheckBox();
 		gui_CheckBox.setSelected(true);
 		gbc.gridx = 1;
-		gbc.gridy = 3;
+		gbc.gridy = 4;
 		panel1.add(gui_CheckBox, gbc);
 
 		gui_CheckBox.addActionListener(new ActionListener() {
@@ -494,12 +499,12 @@ public class ADFDPlus extends JFrame{
 
 		JLabel logs_Label = new JLabel("Logs:");
 		gbc.gridx = 0;
-		gbc.gridy = 4;
+		gbc.gridy = 5;
 		panel1.add(logs_Label, gbc);
 
 		final JCheckBox logs_CheckBox = new JCheckBox();
 		gbc.gridx = 1;
-		gbc.gridy = 4;
+		gbc.gridy = 5;
 		panel1.add(logs_CheckBox, gbc);
 
 		logs_CheckBox.addActionListener(new ActionListener() {
@@ -520,17 +525,17 @@ public class ADFDPlus extends JFrame{
 
 		JLabel browse_Label = new JLabel("Test File:");
 		gbc.gridx = 0;
-		gbc.gridy = 5;
+		gbc.gridy = 6;
 		panel1.add(browse_Label, gbc);
 
 		JButton browse_Button = new JButton("Browse");
 		gbc.gridx = 1;
-		gbc.gridy = 5;
+		gbc.gridy = 6;
 		panel1.add(browse_Button, gbc);
 
-		final JTextField browse_TextField = new JTextField("yeti.test.YetiTest");
-		gbc.gridx = 2;
-		gbc.gridy = 5;
+		browse_TextField = new JTextField("yeti.test.YetiTest");
+		gbc.gridx = 1;
+		gbc.gridy = 7;
 		panel1.add(browse_TextField, gbc);
 
 		browse_Button.addActionListener(new ActionListener() {
@@ -567,7 +572,7 @@ public class ADFDPlus extends JFrame{
 
 		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
-		gbc.gridy = 6;
+		gbc.gridy = 8;
 		gbc.gridwidth = 1;
 		panel1.add(range, gbc);
 
@@ -575,7 +580,7 @@ public class ADFDPlus extends JFrame{
 		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
 		rangeValue_TextField = new JTextField("" + 5);
 		gbc.gridx = 1;
-		gbc.gridy = 6;
+		gbc.gridy = 8;
 		gbc.gridwidth = 1;
 		panel1.add(rangeValue_TextField, gbc);	
 
@@ -714,7 +719,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 16;
+		gbc.gridy = 15;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -744,7 +749,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 16;
+		gbc.gridy = 15;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
@@ -774,7 +779,8 @@ public class ADFDPlus extends JFrame{
 	 */
 
 	public void runTest() {
-
+		
+		fileName = "-testModules=" + browse_TextField.getText();
 		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
 		waitForYetiToFinish = Integer.parseInt(time1_ComboBox.getSelectedItem().toString());
 		if(time2_ComboBox.getSelectedItem().equals("Minutes")){
