@@ -127,7 +127,7 @@ public class ADFDPlus extends JFrame{
 	 * executed_TextField is used to display the number of files executed by the testing process.
 	 */
 	JTextField 		execute_TextField;
-	
+
 	/**
 	 * browse_TextField is used to display the file under test.
 	 */
@@ -779,7 +779,7 @@ public class ADFDPlus extends JFrame{
 	 */
 
 	public void runTest() {
-		
+
 		fileName = "-testModules=" + browse_TextField.getText();
 		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
 		waitForYetiToFinish = Integer.parseInt(time1_ComboBox.getSelectedItem().toString());
@@ -909,7 +909,10 @@ public class ADFDPlus extends JFrame{
 			for (int i = 0; i < filesToCompileArray.length; i++){
 				Process pro1;
 				Thread.sleep(200);
-				pro1 = Runtime.getRuntime().exec("javac -g " + testFilePathInitial + filesToCompileArray[i]);
+				// Trying to compile file, the original is not working from GUI so commented out.
+				String compileLocal = "javac -g " + filesToCompileArray[i];
+				pro1 = Runtime.getRuntime().exec(compileLocal);
+				//		pro1 = Runtime.getRuntime().exec("javac -g " + testFilePathInitial + filesToCompileArray[i]);
 				pro1.waitFor();
 				count = count + 1;
 			}
