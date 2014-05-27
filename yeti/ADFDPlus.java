@@ -864,18 +864,19 @@ public class ADFDPlus extends JFrame{
 		 * method overloading kind of.
 		 */
 
-		if (countCompileFiles == 1){
+//		if (countCompileFiles == 1){
+//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+//
+//		}
+		//if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+//		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
 			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
-		}
-		else if (countCompileFiles == 2){
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-
-		}
-		else {
-			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-
-		}
+//		}
+//		else {
+//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+//
+//		}
 		ADFDPlus.panel3.validate();
 		panel3.add(scrolling1,BorderLayout.SOUTH);
 
@@ -1035,7 +1036,14 @@ public class ADFDPlus extends JFrame{
 		try {
 			int count = 0;
 			// for each file we will execute a session with Daikon
-			for (int i = 0; i < filesToCompileArray.length; i++){
+			
+			// Mian is modifying it so that Daikon is executed only once. 
+			// Because we get the same invariants for each file and 
+			// It works fine when one file is generated, compiled and executed. 
+			// If successful I will leave like it this.s
+		
+//			for (int i = 0; i < filesToCompileArray.length; i++){
+			int i = 0;
 				Thread.sleep(2000);
 				Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
 				p0.waitFor();
@@ -1069,7 +1077,7 @@ public class ADFDPlus extends JFrame{
 				}
 				result= execResult;
 				count++;
-			}
+			//}
 
 			totalFiles = count;
 
@@ -1088,7 +1096,8 @@ public class ADFDPlus extends JFrame{
 	public void progressStop(){
 
 
-		File file = new File(testFilePathInitial + "Pass.txt");
+//		File file = new File(testFilePathInitial + "Pass.txt");
+		File file = new File("Pass.txt");
 		boolean exists = false;
 
 		while (!exists){

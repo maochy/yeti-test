@@ -3,6 +3,8 @@ package yeti;
 import java.io.*;
 import java.util.*;
 
+import javax.swing.JOptionPane;
+
 
 /**
  * This class reads the two files Pass and Fail line by line.
@@ -40,7 +42,11 @@ public class GraphDataScanner {
 		try{
 			//f = new File(ADFDLauncher.testFilePathInitial + "Fail.txt");
 			//testing purpose.
-			f = new File("." , "Fail.txt");
+			// Trying to solve the path issue
+			//f = new File("." , "Fail.txt");
+			//JOptionPane.showMessageDialog(null, f, "the file f", JOptionPane.CANCEL_OPTION);
+			f = new File("Fail.txt");
+
 			scan = new Scanner(f);
 		}
 		catch(Exception e1){
@@ -71,7 +77,10 @@ public class GraphDataScanner {
 		Scanner scan = null;
 		try{
 			//   f = new File(ADFDLauncher.testFilePathInitial + "Pass.txt");
-			f = new File("." , "Pass.txt");
+			// Trying to solve the path issue
+			//f = new File("." , "Pass.txt");
+			f = new File("Pass.txt");
+			
 			scan = new Scanner(f);
 		}
 		catch(Exception e1){
