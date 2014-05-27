@@ -72,6 +72,26 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * 
  * @author Mian Asbat Ahmad (mian.ahmad@york.ac.uk)
  * @date 14 Apr 2014
+ * 
+ * For correct working of ADFDPlus graphical interface, add the following to your classpath according to your directory structure.
+ * export JAVA_HOME=$(/usr/libexec/java_home)
+ * export CLASSPATH=$CLASSPATH:/Users/mian/daikonparent/daikon/daikon.jar
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/jfreechart-1.0.14.jar
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/jcommon-1.0.17.jar
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/jfreechart-1.0.14-experimental.jar
+ * export DAIKONDIR=/Users/mian/daikonparent/daikon
+ * source $DAIKONDIR/scripts/daikon.bashrc
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/javassist.jar
+ * export CLASSPATH=$CLASSPATH:/Users/mian/javaTest
+ * export CLASSPATH=$CLASSPATH:/Users/mian/randoopparent/randoop/bin
+ * export CLASSPATH=$CLASSPATH:/Users/mian/randoopparent/randoop.jar
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test
+ * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/javassist.jar
+ * # Setting PATH for Python 3.4
+ * # The orginal version is saved in .bash_profile.pysave
+ * PATH="/Library/Frameworks/Python.framework/Versions/3.4/bin:${PATH}"
+ * export PATH
  *
  */
 public class ADFDPlus extends JFrame{
@@ -309,7 +329,6 @@ public class ADFDPlus extends JFrame{
 		panel4.add(panel1, BorderLayout.NORTH);
 		this.add(panel4, BorderLayout.WEST);
 		this.add(panel2, BorderLayout.NORTH);
-		//this.add(panel3, BorderLayout.CENTER);
 		this.add(scrolling, BorderLayout.CENTER);
 		this.setVisible(true);
 		//this.setAlwaysOnTop(true);
