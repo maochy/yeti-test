@@ -25,6 +25,7 @@ import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 import yeti.LogGrapher3;
@@ -74,6 +75,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @date 14 Apr 2014
  * 
  * For correct working of ADFDPlus graphical interface, add the following to your classpath according to your directory structure.
+ * 
  * export JAVA_HOME=$(/usr/libexec/java_home)
  * export CLASSPATH=$CLASSPATH:/Users/mian/daikonparent/daikon/daikon.jar
  * export CLASSPATH=$CLASSPATH:/Users/mian/git/yeti-test/lib/jfreechart-1.0.14.jar
@@ -127,7 +129,7 @@ public class ADFDPlus extends JFrame{
 	 * scrolling is a scrollbar added to panel3 to scroll horizontally when multiple graphs are generated.
 	 */
 	private JScrollPane scrolling = new JScrollPane(panel3);
-
+	
 	/**
 	 * scrolling1 is a scrollbar added to panel5 to scroll horizontally when multiple invariants are generated.
 	 */
@@ -257,7 +259,7 @@ public class ADFDPlus extends JFrame{
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
 	 */
-	String[] time1 = {"2", "5", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
+	String[] time1 = {"5", "2", "10", "15", "20", "30", "40", "50", "60", "70", "80", "90", "100" };
 
 	/**
 	 *  time2 contains the options of seconds or minutes which can be selected from time combo box with in the GUI. 
@@ -329,6 +331,7 @@ public class ADFDPlus extends JFrame{
 		panel4.add(panel1, BorderLayout.NORTH);
 		this.add(panel4, BorderLayout.WEST);
 		this.add(panel2, BorderLayout.NORTH);
+		scrolling.setBorder(new EmptyBorder(0, 0, 0, 0));
 		this.add(scrolling, BorderLayout.CENTER);
 		this.setVisible(true);
 		//this.setAlwaysOnTop(true);
@@ -384,7 +387,6 @@ public class ADFDPlus extends JFrame{
 		gbc.insets = new Insets(2, 2, 8, 2);
 		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.fill = GridBagConstraints.BOTH;
-
 		////////// Language Label, ComboBox and ActionListener //////////
 
 		JLabel language_Label = new JLabel("Language:");
@@ -864,19 +866,19 @@ public class ADFDPlus extends JFrame{
 		 * method overloading kind of.
 		 */
 
-//		if (countCompileFiles == 1){
-//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-//
-//		}
+		//		if (countCompileFiles == 1){
+		//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+		//
+		//		}
 		//if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-//		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+		//		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+		LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
-//		}
-//		else {
-//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-//
-//		}
+		//		}
+		//		else {
+		//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+		//
+		//		}
 		ADFDPlus.panel3.validate();
 		panel3.add(scrolling1,BorderLayout.SOUTH);
 
@@ -1036,156 +1038,158 @@ public class ADFDPlus extends JFrame{
 		try {
 			int count = 0;
 			// for each file we will execute a session with Daikon
-			
+
 			// Mian is modifying it so that Daikon is executed only once. 
 			// Because we get the same invariants for each file and 
 			// It works fine when one file is generated, compiled and executed. 
 			// If successful I will leave like it this.s
-		
-//			for (int i = 0; i < filesToCompileArray.length; i++){
+
+			//			for (int i = 0; i < filesToCompileArray.length; i++){
+
+			if (filesToCompileArray.length > 0){
 			int i = 0;
-				Thread.sleep(2000);
-				Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
-				p0.waitFor();
-				File trace = new File("C"+i+".dtrace.gz");
-				while (!trace.exists()){
-					Thread.sleep(100);
+			Thread.sleep(2000);
+			Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
+			p0.waitFor();
+			File trace = new File("C"+i+".dtrace.gz");
+			while (!trace.exists()){
+				Thread.sleep(100);
+			}
+
+
+			if (DEBUG) System.err.println("file C"+i+".dtrace.gz exists and has length "+trace.length());
+			Process p = Runtime.getRuntime().exec("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
+			if (DEBUG) System.err.println("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
+			p.waitFor();  // wait for process to finish then continue.
+			BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			String execResult = "";
+			String tmp;
+			boolean traceOn = false;
+			while ((tmp = bri.readLine())!=null){
+				System.err.println(tmp);
+				if (tmp.contains("failureDomain")&&tmp.contains("ENTER")){
+					traceOn=true;
+					continue;
 				}
-
-
-				if (DEBUG) System.err.println("file C"+i+".dtrace.gz exists and has length "+trace.length());
-				Process p = Runtime.getRuntime().exec("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
-				if (DEBUG) System.err.println("java daikon.Daikon "+daikonOptions+ i+".dtrace.gz");
-				p.waitFor();  // wait for process to finish then continue.
-				BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
-				String execResult = "";
-				String tmp;
-				boolean traceOn = false;
-				while ((tmp = bri.readLine())!=null){
-					System.err.println(tmp);
-					if (tmp.contains("failureDomain")&&tmp.contains("ENTER")){
-						traceOn=true;
+				if (traceOn){
+					if (tmp.contains("===========================================================================")){
+						traceOn=false;
 						continue;
 					}
-					if (traceOn){
-						if (tmp.contains("===========================================================================")){
-							traceOn=false;
-							continue;
-						}
-						execResult=execResult+"\n"+tmp;
-					}
+					execResult=execResult+"\n"+tmp;
 				}
-				result= execResult;
-				count++;
-			//}
-
-			totalFiles = count;
-
-		}
-
-		catch(Exception e1){
-			e1.printStackTrace();
-		}
-		return result;
-	}
-
-
-	/**
-	 * 	Thread 4 to update the status of progress bar when pass and fail files are generated 
-	 */
-	public void progressStop(){
-
-
-//		File file = new File(testFilePathInitial + "Pass.txt");
-		File file = new File("Pass.txt");
-		boolean exists = false;
-
-		while (!exists){
-
-			exists = file.exists();
-
-
-		}
-		try {
-			execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
-			execute_ProgressBar.setIndeterminate(false);
-			execute_TextField.setText(totalFiles + " files");
-
-
-		}
-		catch(Exception e1){
-			e1.printStackTrace();
-		}
-
-	}
-
-
-	/**
-	 * 	Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable 
-	 */
-	@SuppressWarnings("unused")
-	private class Thread1 implements Runnable{
-		public void run(){
-			try{
-				Yeti.YetiRun(command);
-
 			}
-			catch(Exception e){
-				e.printStackTrace();
-			}
+			result= execResult;
+			count++;
 		}
-	}
 
-
-	/**
-	 * Method hides item in case strategy other than ADFD is selected for the current test session.
-	 */
-	public void hideItems(){
-		execute_TextField.setVisible(false);
-		execute_Label.setVisible(false);
-		execute_ProgressBar.setVisible(false);
-		plot1_Button.setVisible(false);
-		compile_Label.setVisible(false);
-		compile_TextField.setVisible(false);
-		generated_Label.setVisible(false);
-		generated_TextField.setVisible(false);
-
+		totalFiles = count;
 
 	}
 
+	catch(Exception e1){
+		e1.printStackTrace();
+	}
+	return result;
+}
 
-	/**
-	 * This method unhide components if ADFD strategy is selected.
-	 */
-	public void unhideItems(){
-		execute_TextField.setVisible(true);
-		execute_Label.setVisible(true);
-		execute_ProgressBar.setVisible(true);
-		plot1_Button.setVisible(true);
-		compile_Label.setVisible(true);
-		compile_TextField.setVisible(true);
-		generated_Label.setVisible(true);
-		generated_TextField.setVisible(true);
+
+/**
+ * 	Thread 4 to update the status of progress bar when pass and fail files are generated 
+ */
+public void progressStop(){
+
+
+	//		File file = new File(testFilePathInitial + "Pass.txt");
+	File file = new File("Pass.txt");
+	boolean exists = false;
+
+	while (!exists){
+
+		exists = file.exists();
 
 
 	}
+	try {
+		execute_ProgressBar.setValue(execute_ProgressBar.getMaximum());
+		execute_ProgressBar.setIndeterminate(false);
+		execute_TextField.setText(totalFiles + " files");
 
 
-	/**
-	 * This method adds ADFD+ logo at the right of the title in GUI.
-	 */
-	public void roseImage(){
+	}
+	catch(Exception e1){
+		e1.printStackTrace();
+	}
+
+}
+
+
+/**
+ * 	Thread 1 to execute YETI for finding faults and generating CX.java files, where X is int variable 
+ */
+@SuppressWarnings("unused")
+private class Thread1 implements Runnable{
+	public void run(){
 		try{
-			duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));
-			duckImageLabel = new JLabel(duckImage);
-			panel2.add(duckImageLabel);
-		}
-		catch (Exception e1){
-			e1.printStackTrace();
+			Yeti.YetiRun(command);
 
 		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}
+
+
+/**
+ * Method hides item in case strategy other than ADFD is selected for the current test session.
+ */
+public void hideItems(){
+	execute_TextField.setVisible(false);
+	execute_Label.setVisible(false);
+	execute_ProgressBar.setVisible(false);
+	plot1_Button.setVisible(false);
+	compile_Label.setVisible(false);
+	compile_TextField.setVisible(false);
+	generated_Label.setVisible(false);
+	generated_TextField.setVisible(false);
+
+
+}
+
+
+/**
+ * This method unhide components if ADFD strategy is selected.
+ */
+public void unhideItems(){
+	execute_TextField.setVisible(true);
+	execute_Label.setVisible(true);
+	execute_ProgressBar.setVisible(true);
+	plot1_Button.setVisible(true);
+	compile_Label.setVisible(true);
+	compile_TextField.setVisible(true);
+	generated_Label.setVisible(true);
+	generated_TextField.setVisible(true);
+
+
+}
+
+
+/**
+ * This method adds ADFD+ logo at the right of the title in GUI.
+ */
+public void roseImage(){
+	try{
+		duckImage = new ImageIcon(getClass().getResource("Rose.jpg"));
+		duckImageLabel = new JLabel(duckImage);
+		panel2.add(duckImageLabel);
+	}
+	catch (Exception e1){
+		e1.printStackTrace();
 
 	}
+
+}
 
 }
 
