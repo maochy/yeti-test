@@ -691,7 +691,7 @@ public class ADFDPlus extends JFrame{
 
 
 					// The runTest method executes YETi 
-
+					progressStart();
 					runTest();
 
 					// This time is used so that count etc dont execute untill yeti is finished 
@@ -915,10 +915,23 @@ public class ADFDPlus extends JFrame{
 			filesToCompileArray = filesToCompile.toArray(new String[filesToCompile.size()]);
 
 			generated_TextField.setText(filesToCompileArray.length + " files") ;
+			
 
 		}
 		catch(Exception e1){
 			e1.printStackTrace();
+		}
+		
+		// The following if statement is added to quit the program in the case when no error is found and 
+		// no files are generated. 
+		
+		if (filesToCompileArray.length == 0){
+			
+			int result = JOptionPane.showConfirmDialog(null,
+			        "No failure found in the SUT and no files are generated to process \nPress the button to exit testing",
+			        "Confirm Quit", JOptionPane.DEFAULT_OPTION);
+			if (result == 0) System.exit(0);
+			
 		}
 	}
 
@@ -955,7 +968,7 @@ public class ADFDPlus extends JFrame{
 	public void executeFiles(){
 		try{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Starting", JOptionPane.CANCEL_OPTION);
-			progressStart();
+	//		progressStart();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 2 Joining", JOptionPane.CANCEL_OPTION);
 			//thread2.join();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 Starting", JOptionPane.CANCEL_OPTION);

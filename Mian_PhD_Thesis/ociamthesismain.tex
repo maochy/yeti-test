@@ -78,7 +78,7 @@ showstringspaces=false}
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
 \degree{Doctor of Philosophy}     %the degree
-\degreedate{May 2014}         %the degree date
+\degreedate{June 2014}         %the degree date
 
 %end the preamble and start the document
 \begin{document}
@@ -95,32 +95,38 @@ showstringspaces=false}
 \maketitle                  % create a title page from the preamble info
 \onehalfspacing
 
-\begin{romanpages}          % start roman page numbering
+% I have commented the following line to start numbering from the first page.
+% The following end tag is also commented. Mian
+%\begin{romanpages}          % start roman page numbering
 
+\clearpage\null\newpage
 \include{abstract/abstract}          % include the abstract
-
 %\doublespacing
 %\begin{spacing}{1.5}
-
+\clearpage\null\newpage
 \tableofcontents            % generate and include a table of contents
+\clearpage\null\newpage
 \listoffigures  				  % generate and include a list of tables
 \listoftables              % generate and include a list of figures
 
 
 
-
+\clearpage\null\newpage
 \include{dedication/dedication}        % include a dedication.tex file
+\clearpage\null\newpage
 \include{acknowlegements/acknowlegements} %include an acknowledgements.tex file
+\clearpage\null\newpage
 \include{glossary1/glossary1}
 \include{declaration/declaration}
-\end{romanpages}            % end roman page numbering
+
+%\end{romanpages}            % end roman page numbering
 
 
 
 %now include the files of latex for each of the chapters etc
 %\onehalfspacing
 %\doublespacing
-
+\clearpage\null\newpage
 \include{chapter1/chapter1}
 \include{chapter2/chapter2}
 \include{chapter3/chapter3}

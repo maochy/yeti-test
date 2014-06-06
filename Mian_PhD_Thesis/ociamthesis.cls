@@ -133,16 +133,43 @@
 % The dedication environment makes sure the dedication gets its
 % own page and is set out in verse format.
 
+%\newenvironment{dedication}
+%{\begin{alwayssingle} \thispagestyle{plain}
+  %\begin{center}
+  %\vspace*{1.5cm}
+  %{\Large }
+  %\end{center}
+  %\vspace{0.5cm}
+  %\begin{verse}\begin{center}}
+%{\end{center}\end{verse}\end{alwayssingle}}
+
+
+
 \newenvironment{dedication}
-{\begin{alwayssingle}
-  \thispagestyle{plain}
-  \begin{center}
-  \vspace*{1.5cm}
-  {\LARGE }
-  \end{center}
-  \vspace{0.5cm}
-  \begin{verse}\begin{center}}
-{\end{center}\end{verse}\end{alwayssingle}}
+{\begin{alwayssingle} \thispagestyle{plain}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Dedication}
+\end{center}
+\vspace{0.5cm}
+\begin{quote}}
+{\end{quote}\end{alwayssingle}}
+
+% The acknowledgementslong environment puts a large, bold, centered 
+% "Acknowledgements" label at the top of the page. The acknowledgement itself 
+% does not appears in a quote environment so you can get more in.
+
+\newenvironment{dedicationlong}
+{\begin{alwayssingle} \thispagestyle{empty}
+\begin{center}
+\vspace*{1.5cm}
+{\Large \bfseries Dedication}
+\end{center}
+\vspace{0.5cm}}
+{\end{alwayssingle}}
+
+
+
 
 
 % ACKNOWLEDGEMENTS
