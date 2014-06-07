@@ -6,14 +6,18 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.Rectangle;
+import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
@@ -205,6 +209,11 @@ public class ADFDPlus extends JFrame{
 	 * fileName contains the module or file name which is to be tested in the current session. Its default value is set to the sample file for testing included with yeti package. 
 	 */	
 	String 		fileName			 = "-testModules=yeti.test.YetiTest"; 
+	
+	/**
+	 * fileUnderTest contains the name of the file under test which is used in the screen capture name. 
+	 */	
+	String 		fileUnderTest			 = ""; 
 
 	/**
 	 * language contains the language of the program which is to be tested in the current session. Its default value is set to Java language. 
@@ -310,6 +319,11 @@ public class ADFDPlus extends JFrame{
 	 * duckImageLabel is used to hold the logo in panel1 in GUI.  
 	 */
 	JLabel				duckImageLabel;
+
+	/**
+	 * Variable to avoid overwriting of screen capture.  
+	 */
+	private int i = 0;
 
 
 	/**
@@ -578,11 +592,13 @@ public class ADFDPlus extends JFrame{
 				int sept = fullPath.lastIndexOf(pathSeperator);
 				fileName = fullPath.substring(sept+1,dot);
 
-
-
 				browse_TextField.setText(fileName);
-
+				
+				// The following statement do not work if there are periods in the path.
+				// This problem is solved by adding a line of command in run method.
 				fileName = "-testModules="+fileName;
+				
+			
 
 			}
 		});
@@ -737,10 +753,46 @@ public class ADFDPlus extends JFrame{
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(emptyLabel1, gbc);
+		
+		
+		// Adding a button to capture a screen of the window to store the results
+		
+		JButton screen_capture_Button = new JButton("Screen Capture at any time");
+		gbc.gridx = 1;
+		gbc.gridy = 15;
+		gbc.gridwidth = 1;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		panel1.add(screen_capture_Button, gbc);
+		
+		screen_capture_Button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e){
+				try {
+					
+					// To get the name of the file under test and use it in screen capture name.
+					fileUnderTest = browse_TextField.getText();
+					
+					Robot robot = new Robot();
+					
+					BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+					ImageIO.write(screenShot, "JPG", new File("" + fileUnderTest + "_screenShot_" + i++ +".jpg"));
+					
+					
+					// The following code will inform the user about the name and capture of the screen shot.
+					JOptionPane.showMessageDialog(null, "Screen capture " + "" + fileUnderTest + "_screenShot_" + i +".jpg" + " taken and stored in the current directory", "Screen Capture", JOptionPane.INFORMATION_MESSAGE);
+					
+				} catch (Exception e1){
+					
+					e1.printStackTrace();
+				}
+			}
+			
+		});
+		
+		
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 15;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -770,7 +822,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 15;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
@@ -926,6 +978,12 @@ public class ADFDPlus extends JFrame{
 		// no files are generated. 
 		
 		if (filesToCompileArray.length == 0){
+			
+			
+			//JOptionPane pane = new JOptionPane();
+			//JDialog dialog = pane.createDialog("Hi there!");
+			//dialog.setAlwaysOnTop(true);
+			//dialog.show();
 			
 			int result = JOptionPane.showConfirmDialog(null,
 			        "No failure found in the SUT and no files are generated to process \nPress the button to exit testing",
