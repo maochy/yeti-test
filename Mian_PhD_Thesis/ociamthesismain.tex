@@ -1,4 +1,4 @@
-\documentclass[12pt]{ociamthesis}  % default square logo 
+\documentclass[11pt]{ociamthesis}  % default square logo 
 %\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
 %\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
 
@@ -53,15 +53,11 @@ showstringspaces=false}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks,
-    citecolor=red,
+    citecolor=blue, % changed from red to blue
     filecolor=yellow,
-    linkcolor=blue,
-    urlcolor=blue
+    linkcolor=black, % changed from blue to black
+    urlcolor=blue 
 }
-
-
-
-
 
 
 %input macros (i.e. write your own macros file called mymacros.tex 
@@ -105,7 +101,6 @@ showstringspaces=false}
 %\begin{spacing}{1.5}
 \clearpage\null\newpage
 \tableofcontents            % generate and include a table of contents
-\clearpage\null\newpage
 \listoffigures  				  % generate and include a list of tables
 \listoftables              % generate and include a list of figures
 
@@ -117,6 +112,7 @@ showstringspaces=false}
 \include{acknowlegements/acknowlegements} %include an acknowledgements.tex file
 \clearpage\null\newpage
 \include{glossary1/glossary1}
+\clearpage\null\newpage
 \include{declaration/declaration}
 
 %\end{romanpages}            % end roman page numbering

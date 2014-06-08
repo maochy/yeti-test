@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  6 JUN 2014 20:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  8 JUN 2014 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -10,8 +10,8 @@ Babel <3.9f> and hyphenation patterns for 78 languages loaded.
 Document Class: ociamthesis 2010/11/22 v2.2 OCIAM thesis class
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -687,21 +687,21 @@ LaTeX Warning: Label `sec:conclusion' multiply defined.
 (./appendix1/appendix1.aux))
 \openout1 = `ociamthesismain.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 80.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
@@ -739,7 +739,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box44
-Package hyperref Info: Link coloring ON on input line 84.
+Package hyperref Info: Link coloring ON on input line 80.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -749,9 +749,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 84.
-LaTeX Info: Redefining \pageref on input line 84.
-LaTeX Info: Redefining \nameref on input line 84.
+LaTeX Info: Redefining \ref on input line 80.
+LaTeX Info: Redefining \pageref on input line 80.
+LaTeX Info: Redefining \nameref on input line 80.
 
 (./ociamthesismain.out) (./ociamthesismain.out)
 \@outlinefile=\write4
@@ -766,7 +766,7 @@ LaTeX Info: Redefining \nameref on input line 84.
 \openout2 = `abstract/abstract.aux'.
 
  (./abstract/abstract.tex
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 
 [3
@@ -777,9 +777,9 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <17.28> not available
 
 ]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 107.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 103.
  (./ociamthesismain.toc
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 1.
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
 
@@ -798,323 +798,262 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [5
 
 ] [6]
-Overfull \hbox (1.41573pt too wide) detected at line 102
- []\OT1/phv/m/n/12 100
+Overfull \hbox (1.29184pt too wide) detected at line 112
+ []\OT1/phv/m/n/10.95 100
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 103
- []\OT1/phv/m/n/12 100
+Overfull \hbox (1.29184pt too wide) detected at line 113
+ []\OT1/phv/m/n/10.95 101
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 104
- []\OT1/phv/m/n/12 101
+Overfull \hbox (1.29184pt too wide) detected at line 114
+ []\OT1/phv/m/n/10.95 102
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 105
- []\OT1/phv/m/n/12 101
+Overfull \hbox (1.29184pt too wide) detected at line 115
+ []\OT1/phv/m/n/10.95 103
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 106
- []\OT1/phv/m/n/12 101
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 107
- []\OT1/phv/m/n/12 102
+Overfull \hbox (1.29184pt too wide) detected at line 117
+ []\OT1/phv/m/n/10.95 104
  []
 
 [7]
-Overfull \hbox (1.41573pt too wide) detected at line 108
- []\OT1/phv/m/n/12 102
+Overfull \hbox (1.29184pt too wide) detected at line 118
+ []\OT1/phv/m/n/10.95 105
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 109
- []\OT1/phv/m/n/12 102
+Overfull \hbox (1.29184pt too wide) detected at line 119
+ []\OT1/phv/m/n/10.95 105
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 110
- []\OT1/phv/m/n/12 103
+Overfull \hbox (1.29184pt too wide) detected at line 120
+ []\OT1/phv/m/n/10.95 106
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 111
- []\OT1/phv/m/n/12 104
+Overfull \hbox (1.29184pt too wide) detected at line 121
+ []\OT1/phv/m/n/10.95 107
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 112
- []\OT1/phv/m/n/12 109
+Overfull \hbox (1.29184pt too wide) detected at line 122
+ []\OT1/phv/m/n/10.95 108
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 113
- []\OT1/phv/m/n/12 110
+Overfull \hbox (1.29184pt too wide) detected at line 123
+ []\OT1/phv/m/n/10.95 108
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 114
- []\OT1/phv/m/n/12 110
+Overfull \hbox (1.29184pt too wide) detected at line 124
+ []\OT1/phv/m/n/10.95 109
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 115
- []\OT1/phv/m/n/12 111
+Overfull \hbox (1.29184pt too wide) detected at line 125
+ []\OT1/phv/m/n/10.95 110
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 117
- []\OT1/phv/m/n/12 112
+Overfull \hbox (1.29184pt too wide) detected at line 126
+ []\OT1/phv/m/n/10.95 110
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 118
- []\OT1/phv/m/n/12 113
+Overfull \hbox (1.29184pt too wide) detected at line 127
+ []\OT1/phv/m/n/10.95 112
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 119
- []\OT1/phv/m/n/12 114
+Overfull \hbox (1.29184pt too wide) detected at line 128
+ []\OT1/phv/m/n/10.95 112
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 120
- []\OT1/phv/m/n/12 115
+Overfull \hbox (1.29184pt too wide) detected at line 129
+ []\OT1/phv/m/n/10.95 113
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 121
- []\OT1/phv/m/n/12 115
+Overfull \hbox (1.29184pt too wide) detected at line 130
+ []\OT1/phv/m/n/10.95 114
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 122
- []\OT1/phv/m/n/12 116
+Overfull \hbox (1.29184pt too wide) detected at line 131
+ []\OT1/phv/m/n/10.95 115
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 123
- []\OT1/phv/m/n/12 117
+Overfull \hbox (1.29184pt too wide) detected at line 132
+ []\OT1/phv/m/n/10.95 115
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 124
- []\OT1/phv/m/n/12 117
+Overfull \hbox (1.29184pt too wide) detected at line 133
+ []\OT1/phv/m/n/10.95 116
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 125
- []\OT1/phv/m/n/12 118
+Overfull \hbox (1.29184pt too wide) detected at line 134
+ []\OT1/phv/m/n/10.95 116
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 126
- []\OT1/phv/m/n/12 119
+Overfull \hbox (1.29184pt too wide) detected at line 136
+ []\OT1/phv/m/n/10.95 120
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 127
- []\OT1/phv/m/n/12 120
+Overfull \hbox (1.29184pt too wide) detected at line 139
+ []\OT1/phv/m/n/10.95 126
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 128
- []\OT1/phv/m/n/12 121
+Overfull \hbox (1.29184pt too wide) detected at line 140
+ []\OT1/phv/m/n/10.95 128
  []
 
-
-Overfull \hbox (1.41573pt too wide) detected at line 129
- []\OT1/phv/m/n/12 121
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 130
- []\OT1/phv/m/n/12 122
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 131
- []\OT1/phv/m/n/12 123
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 132
- []\OT1/phv/m/n/12 123
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 133
- []\OT1/phv/m/n/12 124
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 134
- []\OT1/phv/m/n/12 125
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 136
- []\OT1/phv/m/n/12 130
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 139
- []\OT1/phv/m/n/12 136
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 140
- []\OT1/phv/m/n/12 138
- []
-
-[8])
+)
 \tf@toc=\write5
 \openout5 = `ociamthesismain.toc'.
 
- [9] [10
-
-] (./ociamthesismain.lof [11
+ [8] (./ociamthesismain.lof [9
 
 ]
-Overfull \hbox (1.41573pt too wide) detected at line 41
- []\OT1/phv/m/n/12 100
+Overfull \hbox (1.29184pt too wide) detected at line 45
+ []\OT1/phv/m/n/10.95 100
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 42
- []\OT1/phv/m/n/12 104
+Overfull \hbox (1.29184pt too wide) detected at line 47
+ []\OT1/phv/m/n/10.95 106
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 43
- []\OT1/phv/m/n/12 106
+Overfull \hbox (1.29184pt too wide) detected at line 54
+ []\OT1/phv/m/n/10.95 107
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 44
- []\OT1/phv/m/n/12 107
+Overfull \hbox (1.29184pt too wide) detected at line 55
+ []\OT1/phv/m/n/10.95 110
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 45
- []\OT1/phv/m/n/12 108
+Overfull \hbox (1.29184pt too wide) detected at line 56
+ []\OT1/phv/m/n/10.95 111
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 47
- []\OT1/phv/m/n/12 114
+Overfull \hbox (1.29184pt too wide) detected at line 57
+ []\OT1/phv/m/n/10.95 112
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 54
- []\OT1/phv/m/n/12 116
+Overfull \hbox (1.29184pt too wide) detected at line 58
+ []\OT1/phv/m/n/10.95 113
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 55
- []\OT1/phv/m/n/12 119
+Overfull \hbox (1.29184pt too wide) detected at line 59
+ []\OT1/phv/m/n/10.95 117
  []
 
 
-Overfull \hbox (1.41573pt too wide) detected at line 56
- []\OT1/phv/m/n/12 119
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 57
- []\OT1/phv/m/n/12 120
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 58
- []\OT1/phv/m/n/12 121
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 59
- []\OT1/phv/m/n/12 127
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 63
- []\OT1/phv/m/n/12 128
+Overfull \hbox (1.29184pt too wide) detected at line 63
+ []\OT1/phv/m/n/10.95 118
  []
 
 )
 \tf@lof=\write6
 \openout6 = `ociamthesismain.lof'.
 
- [12] (./ociamthesismain.lot
-Overfull \hbox (1.41573pt too wide) detected at line 11
- []\OT1/phv/m/n/12 105
- []
-
-
-Overfull \hbox (1.41573pt too wide) detected at line 13
- []\OT1/phv/m/n/12 126
+ [10] (./ociamthesismain.lot
+Overfull \hbox (1.29184pt too wide) detected at line 13
+ []\OT1/phv/m/n/10.95 109
  []
 
 )
 \tf@lot=\write7
 \openout7 = `ociamthesismain.lot'.
 
- [13
+ [11
 
-] [14
+] [12
 
 ]
 \openout2 = `dedication/dedication.aux'.
 
- (./dedication/dedication.tex [15
+ (./dedication/dedication.tex [13
 
 
-]) [16
+]) [14
 
 
 ]
 \openout2 = `acknowlegements/acknowlegements.aux'.
 
 
-(./acknowlegements/acknowlegements.tex
-Overfull \hbox (17.36871pt too wide) in paragraph at lines 11--12
-[]\OT1/phv/m/n/12 I ob-tained De-part-men-tal Over-seas Re-search Schol-ar-ship
- which is awarded
- []
-
-[17
+(./acknowlegements/acknowlegements.tex [15
 
 
-]) [18
+]) [16
 
 
 ]
 \openout2 = `glossary1/glossary1.aux'.
 
- (./glossary1/glossary1.tex [19
+ (./glossary1/glossary1.tex
+[17
 
 
-] [20])
+] [18]) [19
+
+
+]
 \openout2 = `declaration/declaration.aux'.
 
  (./declaration/declaration.tex
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 9.
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
-Overfull \hbox (4.67429pt too wide) in paragraph at lines 15--16
-\OT1/phv/m/sl/12 Poster pre-sen-ta-tion in fourth York Doc-toral Sym-po-sium (Y
-DS 2011)\OT1/phv/m/n/12 .
  []
 
-[21
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 9.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsphv.fd
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 9.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
-]) [22
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+[20
+
+
+]) [21
 
 
 ]
@@ -1128,47 +1067,27 @@ LABELS NOT IMPORTED.
  on input line 6.
 
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 29.
-[23
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 7.
+[22
 
 
-] <chapter1/SoftwareTesting1.png, id=929, 734.745pt x 308.15125pt>
+]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <12> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 37.
+ <chapter1/SoftwareTesting1.png, id=925, 734.745pt x 308.15125pt>
 File: chapter1/SoftwareTesting1.png Graphic file (type png)
 
 <use chapter1/SoftwareTesting1.png>
-Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 41.
+Package pdftex.def Info: chapter1/SoftwareTesting1.png used on input line 47.
 (pdftex.def)             Requested size: 435.33444pt x 227.62866pt.
 
-Overfull \hbox (1.71445pt too wide) in paragraph at lines 41--43
+Overfull \hbox (1.71445pt too wide) in paragraph at lines 47--49
  [][] 
  []
 
-[24] [25 <./chapter1/SoftwareTesting1.png>]
-Overfull \hbox (0.2032pt too wide) in paragraph at lines 70--70
-[]\OT1/phv/b/n/14.4 Incompetence of RT to Present Re-sults in Graph-i-cal Form 
-
- []
-
-[26] [27]
-Overfull \hbox (0.1881pt too wide) in paragraph at lines 103--104
-\OT1/phv/m/n/12 Automated Dis-cov-ery of Fail-ure Do-main+ (ADFD+) is an up-gra
-ded ver-sion of ADFD
- []
-
-
-Overfull \hbox (1.50682pt too wide) in paragraph at lines 103--104
-\OT1/phv/m/n/12 tech-nique with re-spect to al-go-rithm and graph-i-cal rep-re-
-sen-ta-tion of failure-domains.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--120
+[23] [24 <./chapter1/SoftwareTesting1.png>] [25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
@@ -1177,13 +1096,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--126
 
  []
 
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 129--132
+
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
 
  []
 
@@ -1193,18 +1112,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--143
  []
 
 
-Overfull \hbox (2.28763pt too wide) in paragraph at lines 151--153
-\OT1/phv/b/n/12 Chapter [][]7[][] \OT1/phv/m/n/12 pro-vides con-clu-sions of th
-e study in-clud-ing con-tri-bu-tions and the lessons
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--153
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
 
  []
 
+[27]
+Overfull \hbox (6.30222pt too wide) in paragraph at lines 157--159
+\OT1/phv/b/n/10.95 Chapter [][]7[][] \OT1/phv/m/n/10.95 pro-vides con-clu-sions
+ of the study in-clud-ing con-tri-bu-tions and the lessons learned. 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
@@ -1213,21 +1132,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-[29] <chapter1/thesisOutline.png, id=982, 2258.4375pt x 2221.29875pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+[28] <chapter1/thesisOutline.png, id=978, 2258.4375pt x 2221.29875pt>
 File: chapter1/thesisOutline.png Graphic file (type png)
 
 <use chapter1/thesisOutline.png>
-Package pdftex.def Info: chapter1/thesisOutline.png used on input line 168.
+Package pdftex.def Info: chapter1/thesisOutline.png used on input line 174.
 (pdftex.def)             Requested size: 455.22897pt x 569.0505pt.
 
-Overfull \hbox (21.60898pt too wide) in paragraph at lines 168--169
+Overfull \hbox (21.60898pt too wide) in paragraph at lines 174--175
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [30 <./chapter1/thesisOutline.png>]
+) [29 <./chapter1/thesisOutline.png>]
 \openout2 = `chapter2/chapter2.aux'.
 
  (./chapter2/chapter2.tex
@@ -1238,74 +1162,75 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 2.
-[31
-
-
-
-] <chapter2/softwareTesting.png, id=1002, 2333.71875pt x 677.53125pt>
+<chapter2/softwareTesting.png, id=990, 2333.71875pt x 677.53125pt>
 File: chapter2/softwareTesting.png Graphic file (type png)
 
 <use chapter2/softwareTesting.png>
 Package pdftex.def Info: chapter2/softwareTesting.png used on input line 11.
 (pdftex.def)             Requested size: 455.23357pt x 142.26508pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 16.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+) [30
 
-LaTeX Warning: Citation `give digkstra reference' on page 32 undefined on input
+
+
+]
+
+LaTeX Warning: Citation `give digkstra reference' on page 31 undefined on input
  line 18.
 
-<chapter2/softwareTestingFlow.png, id=1007, 2085.7925pt x 2821.54124pt>
+<chapter2/softwareTestingFlow.png, id=1002, 2085.7925pt x 2821.54124pt>
 File: chapter2/softwareTestingFlow.png Graphic file (type png)
 
 <use chapter2/softwareTestingFlow.png>
 Package pdftex.def Info: chapter2/softwareTestingFlow.png used on input line 24
 .
 (pdftex.def)             Requested size: 433.62pt x 586.55676pt.
- [32 <./chapter2/softwareTesting.png>]
-[33 <./chapter2/softwareTestingFlow.png>]
-<chapter2/whiteBox.png, id=1022, 530.98375pt x 644.4075pt>
+ [31 <./chapter2/softwareTesting.png>]
+[32 <./chapter2/softwareTestingFlow.png>]
+<chapter2/whiteBox.png, id=1018, 530.98375pt x 644.4075pt>
 File: chapter2/whiteBox.png Graphic file (type png)
 
 <use chapter2/whiteBox.png>
 Package pdftex.def Info: chapter2/whiteBox.png used on input line 78.
 (pdftex.def)             Requested size: 130.08731pt x 157.8763pt.
- [34] [35 <./chapter2/whiteBox.png>]
-<chapter2/blackBox.png, id=1044, 530.98375pt x 626.34pt>
+ [33 <./chapter2/whiteBox.png>]
+<chapter2/blackBox.png, id=1031, 530.98375pt x 626.34pt>
 File: chapter2/blackBox.png Graphic file (type png)
 
 <use chapter2/blackBox.png>
 Package pdftex.def Info: chapter2/blackBox.png used on input line 111.
 (pdftex.def)             Requested size: 130.08731pt x 153.44986pt.
- [36 <./chapter2/blackBox.png>]
-LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <12> not available
+ [34] [35 <./chapter2/blackBox.png>]
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 145.
- [37]
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ˜ in font phvr7t!
 Missing character: There is no â in font phvr7t!
 Missing character: There is no € in font phvr7t!
 Missing character: There is no ™ in font phvr7t!
- [38] [39]
-[40] <chapter2/Generators.png, id=1140, 2399.96625pt x 602.25pt>
+ [36] [37]
+[38] <chapter2/Generators.png, id=1132, 2399.96625pt x 602.25pt>
 File: chapter2/Generators.png Graphic file (type png)
 
 <use chapter2/Generators.png>
 Package pdftex.def Info: chapter2/Generators.png used on input line 248.
 (pdftex.def)             Requested size: 469.47467pt x 147.95229pt.
- [41 <./chapter2/Generators.png>] [42] [43]
-[44] [45]
-<chapter2/randomTestingMechanism.png, id=1206, 2710.125pt x 978.65625pt>
+ [39 <./chapter2/Generators.png>] [40] [41]
+[42] <chapter2/randomTestingMechanism.png, id=1189, 2710.125pt x 978.65625pt>
 File: chapter2/randomTestingMechanism.png Graphic file (type png)
 
 <use chapter2/randomTestingMechanism.png>
 Package pdftex.def Info: chapter2/randomTestingMechanism.png used on input line
  367.
 (pdftex.def)             Requested size: 469.44067pt x 256.07233pt.
- [46 <./chapter2/randomTestingMechanism.png>]
+ [43 <./chapter2/randomTestingMechanism.png>]
 
 LaTeX Warning: Command \textgreater invalid in math mode on input line 388.
 
@@ -1314,7 +1239,7 @@ LaTeX Font Info:    Try loading font information for OML+phv on input line 388.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlphv.fd
 File: omlphv.fd 
 )
-LaTeX Font Info:    Font shape `OML/phv/m/n' in size <12> not available
+LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10.95> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 388.
 
 
@@ -1326,27 +1251,27 @@ LaTeX Warning: Command \textless invalid in math mode on input line 388.
 
 LaTeX Warning: Command \textless invalid in math mode on input line 388.
 
-[47] <chapter2/point.png, id=1248, 103.88812pt x 85.06781pt>
+[44] <chapter2/point.png, id=1234, 103.88812pt x 85.06781pt>
 File: chapter2/point.png Graphic file (type png)
 
 <use chapter2/point.png>
 Package pdftex.def Info: chapter2/point.png used on input line 397.
 (pdftex.def)             Requested size: 102.43422pt x 102.43521pt.
 
-<chapter2/block.png, id=1249, 101.62968pt x 83.5622pt>
+<chapter2/block.png, id=1235, 101.62968pt x 83.5622pt>
 File: chapter2/block.png Graphic file (type png)
 
 <use chapter2/block.png>
 Package pdftex.def Info: chapter2/block.png used on input line 401.
 (pdftex.def)             Requested size: 102.43425pt x 102.43788pt.
- <chapter2/strip.png, id=1250, 103.88812pt x 84.315pt>
+ <chapter2/strip.png, id=1236, 103.88812pt x 84.315pt>
 File: chapter2/strip.png Graphic file (type png)
 
 <use chapter2/strip.png>
 Package pdftex.def Info: chapter2/strip.png used on input line 405.
 (pdftex.def)             Requested size: 102.43422pt x 102.43184pt.
- [48 <./chapter2/point.png> <./chapter2/block.png> <./chapter2/strip.png>]
-<chapter2/randomTestingVariations.png, id=1265, 2348.775pt x 2239.36626pt>
+ [45 <./chapter2/point.png> <./chapter2/block.png> <./chapter2/strip.png>]
+<chapter2/randomTestingVariations.png, id=1252, 2348.775pt x 2239.36626pt>
 File: chapter2/randomTestingVariations.png Graphic file (type png)
 
 <use chapter2/randomTestingVariations.png>
@@ -1354,106 +1279,94 @@ Package pdftex.def Info: chapter2/randomTestingVariations.png used on input lin
 e 426.
 (pdftex.def)             Requested size: 469.45998pt x 512.13898pt.
 
-Overfull \hbox (14.84538pt too wide) in paragraph at lines 433--435
-[]\OT1/pcr/m/n/12 Integer.MIN_VALUE\OT1/phv/m/n/12 , []\OT1/pcr/m/n/12 Integer.
-MIN_VALUE+1\OT1/phv/m/n/12 , []\OT1/pcr/m/n/12 Integer.MIN_VALUE+2\OT1/phv/m/n/
-12 . These
+Overfull \hbox (72.08498pt too wide) in paragraph at lines 433--435
+[]\OT1/pcr/m/n/10.95 Integer.MAX_VALUE-1\OT1/phv/m/n/10.95 , []\OT1/pcr/m/n/10.
+95 Integer.MAX_VALUE-2\OT1/phv/m/n/10.95 ; []\OT1/pcr/m/n/10.95 Integer.MIN_VAL
+UE\OT1/phv/m/n/10.95 , []\OT1/pcr/m/n/10.95 Integer.MIN_VALUE+1\OT1/phv/m/n/10.
+95 ,
  []
 
-[49 <./chapter2/randomTestingVariations.png>] [50]
-<chapter2/mart2.pdf, id=1294, 350.30875pt x 185.69376pt>
+[46 <./chapter2/randomTestingVariations.png>] [47]
+<chapter2/mart2.pdf, id=1280, 350.30875pt x 185.69376pt>
 File: chapter2/mart2.pdf Graphic file (type pdf)
 
 <use chapter2/mart2.pdf>
 Package pdftex.def Info: chapter2/mart2.pdf used on input line 459.
 (pdftex.def)             Requested size: 384.13812pt x 184.94809pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[51] <chapter2/RRT.pdf, id=1303, 370.38374pt x 247.67531pt>
+ [48 <./chapter2/mart2.pdf>]
+<chapter2/RRT.pdf, id=1308, 370.38374pt x 247.67531pt>
 File: chapter2/RRT.pdf Graphic file (type pdf)
-
-<use chapter2/RRT.pdf>
+ <use chapter2/RRT.pdf>
 Package pdftex.def Info: chapter2/RRT.pdf used on input line 473.
 (pdftex.def)             Requested size: 227.62357pt x 184.94348pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[52 <./chapter2/mart2.pdf>] [53 <./chapter2/RRT.pdf>] [54]
-Overfull \hbox (0.46378pt too wide) in paragraph at lines 550--551
-\OT1/phv/m/n/12 JCrasher is an au-to-matic ro-bust-ness test-ing tool de-vel-op
-ed by Csall-ner and Smara-
- []
-
-[55] <chapter2/JCrasher.png, id=1372, 867.24pt x 402.50375pt>
+[49 <./chapter2/RRT.pdf>] [50] [51]
+<chapter2/JCrasher.png, id=1352, 867.24pt x 402.50375pt>
 File: chapter2/JCrasher.png Graphic file (type png)
 
 <use chapter2/JCrasher.png>
 Package pdftex.def Info: chapter2/JCrasher.png used on input line 556.
 (pdftex.def)             Requested size: 426.79071pt x 227.6177pt.
- [56 <./chapter2/JCrasher.png>]
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 570.
 
 
-(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 570.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Overfull \hbox (1.56621pt too wide) in paragraph at lines 572--573
-[]\OT1/phv/m/n/12 Probability of cre-at-ing new ob-jects dur-ing test pro-cess.
- Low prob-a-bil-ity means
+[52]
+Overfull \hbox (3.15941pt too wide) in paragraph at lines 575--576
+[]\OT1/phv/m/n/10.95 The Jartege tech-nique eval-u-ates a class by en-try pre-c
+onditions and in-ter-nal pre-conditions.
  []
 
-[57] <chapter2/eclat_working.png, id=1387, 356.532pt x 235.1184pt>
+[53 <./chapter2/JCrasher.png>]
+<chapter2/eclat_working.png, id=1369, 356.532pt x 235.1184pt>
 File: chapter2/eclat_working.png Graphic file (type png)
 
 <use chapter2/eclat_working.png>
 Package pdftex.def Info: chapter2/eclat_working.png used on input line 587.
 (pdftex.def)             Requested size: 426.82436pt x 298.78357pt.
- [58 <./chapter2/eclat_working.png>]
-<chapter2/autotest.png, id=1401, 292.14229pt x 156.78915pt>
+ [54 <./chapter2/eclat_working.png>]
+Overfull \hbox (8.8424pt too wide) in paragraph at lines 606--607
+\OT1/phv/m/n/10.95 QuickCheck [[]] is a lightweight ran-dom test-ing tool used 
+for test-ing of Haskell pro-grams [[]].
+ []
+
+
+Overfull \hbox (0.49867pt too wide) in paragraph at lines 608--609
+[]\OT1/phv/m/n/10.95 QuickCheck takes as in-puts the func-tion to be tested and
+ prop-er-ties of the pro-gram (Haskell
+ []
+
+<chapter2/autotest.png, id=1383, 292.14229pt x 156.78915pt>
 File: chapter2/autotest.png Graphic file (type png)
 
 <use chapter2/autotest.png>
 Package pdftex.def Info: chapter2/autotest.png used on input line 624.
 (pdftex.def)             Requested size: 398.36028pt x 227.63269pt.
- [59] [60 <./chapter2/autotest.png (PNG copy)>]
-<chapter2/TestEra.png, id=1420, 1950.28625pt x 1204.5pt>
+ [55] [56 <./chapter2/autotest.png (PNG copy)>]
+<chapter2/TestEra.png, id=1404, 1950.28625pt x 1204.5pt>
 File: chapter2/TestEra.png Graphic file (type png)
 
 <use chapter2/TestEra.png>
 Package pdftex.def Info: chapter2/TestEra.png used on input line 643.
 (pdftex.def)             Requested size: 426.77287pt x 304.45088pt.
- [61 <./chapter2/TestEra.png (PNG copy)>] [62]
-<chapter2/DrawingTesting.png, id=1450, 825.83531pt x 519.44063pt>
+ [57 <./chapter2/TestEra.png (PNG copy)>] [58]
+<chapter2/DrawingTesting.png, id=1432, 825.83531pt x 519.44063pt>
 File: chapter2/DrawingTesting.png Graphic file (type png)
 
 <use chapter2/DrawingTesting.png>
 Package pdftex.def Info: chapter2/DrawingTesting.png used on input line 687.
 (pdftex.def)             Requested size: 455.24413pt x 341.42897pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<chapter2/RandomTools1.png, id=1452, 2409.0pt x 1468.48625pt>
+<chapter2/RandomTools1.png, id=1434, 2409.0pt x 1468.48625pt>
 File: chapter2/RandomTools1.png Graphic file (type png)
 
 <use chapter2/RandomTools1.png>
 Package pdftex.def Info: chapter2/RandomTools1.png used on input line 699.
 (pdftex.def)             Requested size: 497.92838pt x 426.79121pt.
- [63]
-Overfull \vbox (182.79016pt too high) has occurred while \output is active []
-
-
-[64 <./chapter2/DrawingTesting.png> <./chapter2/RandomTools1.png>])
+ [59 <./chapter2/DrawingTesting.png>]) [60 <./chapter2/RandomTools1.png>]
 \openout2 = `chapter3/chapter3.aux'.
 
-
-(./chapter3/chapter3.tex
+ (./chapter3/chapter3.tex
 
 Package xr Warning: 
 No file chapter3.aux
@@ -1461,55 +1374,60 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 3.
-<chapter3/yetiOverview.png, id=1466, 419.166pt x 102.3825pt>
+<chapter3/yetiOverview.png, id=1448, 419.166pt x 102.3825pt>
 File: chapter3/yetiOverview.png Graphic file (type png)
 
 <use chapter3/yetiOverview.png>
 Package pdftex.def Info: chapter3/yetiOverview.png used on input line 20.
 (pdftex.def)             Requested size: 426.79533pt x 113.81776pt.
- [65
+ [61
 
 
 
  <./chapter3/yetiOverview.png (PNG copy)>]
-<chapter3/yetiCore.png, id=1475, 473.77pt x 190.7125pt>
+Overfull \hbox (44.09142pt too wide) in paragraph at lines 30--31
+\OT1/phv/m/n/10.95 and test re-port gen-er-a-tion. The core in-fras-truc-ture i
+s split into four pack-ages: yeti, yeti.environments,
+ []
+
+<chapter3/yetiCore.png, id=1458, 473.77pt x 190.7125pt>
 File: chapter3/yetiCore.png Graphic file (type png)
 
 <use chapter3/yetiCore.png>
 Package pdftex.def Info: chapter3/yetiCore.png used on input line 34.
 (pdftex.def)             Requested size: 426.80112pt x 199.1773pt.
- [66 <./chapter3/yetiCore.png>] [67] [68]
-Overfull \hbox (142.99692pt too wide) in paragraph at lines 87--124
+ [62 <./chapter3/yetiCore.png>] [63]
+Overfull \hbox (94.74748pt too wide) in paragraph at lines 87--124
  [][] 
  []
 
-[69]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
-[70] <chapter3/yetiCommandCLI.pdf, id=1524, 831.105pt x 95.35625pt>
+[65] <chapter3/yetiCommandCLI.pdf, id=1502, 831.105pt x 95.35625pt>
 File: chapter3/yetiCommandCLI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandCLI.pdf>
 Package pdftex.def Info: chapter3/yetiCommandCLI.pdf used on input line 132.
 (pdftex.def)             Requested size: 426.7874pt x 56.90572pt.
 
-<chapter3/yetiCommandGUI.pdf, id=1527, 433.62pt x 494.84875pt>
+<chapter3/yetiCommandGUI.pdf, id=1505, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
 Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 142.
 (pdftex.def)             Requested size: 270.31049pt x 327.20525pt.
- [71 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
-<chapter3/yetiReport1.png, id=1552, 607.26875pt x 154.5775pt>
+ [66 <./chapter3/yetiCommandCLI.pdf> <./chapter3/yetiCommandGUI.pdf>]
+<chapter3/yetiReport1.png, id=1530, 607.26875pt x 154.5775pt>
 File: chapter3/yetiReport1.png Graphic file (type png)
 
 <use chapter3/yetiReport1.png>
 Package pdftex.def Info: chapter3/yetiReport1.png used on input line 160.
 (pdftex.def)             Requested size: 426.79947pt x 142.27669pt.
 
-<chapter3/yetiReport2.png, id=1554, 617.30624pt x 153.57375pt>
+<chapter3/yetiReport2.png, id=1532, 617.30624pt x 153.57375pt>
 File: chapter3/yetiReport2.png Graphic file (type png)
 
 <use chapter3/yetiReport2.png>
@@ -1519,24 +1437,17 @@ Package pdftex.def Info: chapter3/yetiReport2.png used on input line 168.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[72 <./chapter3/yetiReport1.png>]
-<chapter3/yetiGUI.png, id=1561, 1440.13031pt x 873.2625pt>
+<chapter3/yetiGUI.png, id=1534, 1440.13031pt x 873.2625pt>
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png>
 Package pdftex.def Info: chapter3/yetiGUI.png used on input line 186.
 (pdftex.def)             Requested size: 682.86041pt x 455.24506pt.
-
-Overfull \hbox (3.04411pt too wide) in paragraph at lines 199--200
-[]\OT1/phv/b/n/12 File menu: \OT1/phv/m/n/12 It pro-vides the op-tion to re-run
- the pre-vi-ously ex-e-cuted scripts. 
- []
-
-[73 <./chapter3/yetiReport2.png>] [74 <./chapter3/yetiGUI.png>]) [75]
+ [67 <./chapter3/yetiReport1.png>] [68 <./chapter3/yetiReport2.png>] [69 <./cha
+pter3/yetiGUI.png>]) [70]
 \openout2 = `chapter4/chapter4.aux'.
 
-
-(./chapter4/chapter4.tex
+ (./chapter4/chapter4.tex
 
 Package xr Warning: 
 No file chapter4.aux
@@ -1544,58 +1455,45 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 4.
-[76
+[71
 
 
 
 ]
-Overfull \hbox (1.6744pt too wide) in paragraph at lines 20--21
-[]\OT1/phv/m/n/12 We im-ple-mented the DSSR strat-egy in York Ex-ten-si-ble Tes
-t-ing In-fras-truc-ture (YETI)
+Overfull \hbox (6.38051pt too wide) in paragraph at lines 20--21
+\OT1/phv/m/n/10.95 classes of 32 dif-fer-ent projects from the Qual-i-tas Cor-p
+us [][]$\OT1/pcr/m/n/10.95 http : / / www . qualitascorpus .
  []
 
-[77] [78] [79] <chapter4/block2.png, id=1656, 271.0125pt x 122.70844pt>
+[72] [73] <chapter4/block2.png, id=1632, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
 Package pdftex.def Info: chapter4/block2.png used on input line 93.
 (pdftex.def)             Requested size: 284.53842pt x 113.81433pt.
-
-<chapter4/flowchart1.png, id=1659, 403.46008pt x 404.31366pt>
+ [74 <./chapter4/block2.png>]
+<chapter4/flowchart1.png, id=1640, 403.46008pt x 404.31366pt>
 File: chapter4/flowchart1.png Graphic file (type png)
 
 <use chapter4/flowchart1.png>
 Package pdftex.def Info: chapter4/flowchart1.png used on input line 106.
 (pdftex.def)             Requested size: 341.4467pt x 398.3346pt.
- [80 <./chapter4/block2.png>] [81 <./chapter4/flowchart1.png>] [82]
-Overfull \hbox (7.48506pt too wide) in paragraph at lines 183--185
-\OT1/phv/m/n/12 strat-egy fur-ther se-lect val-ues ([]\OT1/pcr/m/n/12 0, Intege
-r.MIN_VALUE \OT1/phv/m/n/12 & []\OT1/pcr/m/n/12 Integer.MAX_VALUE\OT1/phv/m/n/1
-2 )
- []
-
-
-Overfull \hbox (44.4443pt too wide) in paragraph at lines 190--191
-\OT1/phv/m/n/12 be-cause int vari-able []\OT1/pcr/m/n/12 result1 \OT1/phv/m/n/1
-2 will not be able to store the square of []\OT1/pcr/m/n/12 Integer.MAX_VALUE\O
-T1/phv/m/n/12 .
- []
-
-<chapter4/random.png, id=1685, 385.44pt x 197.73875pt>
+ [75 <./chapter4/flowchart1.png>] [76] [77]
+<chapter4/random.png, id=1673, 385.44pt x 197.73875pt>
 File: chapter4/random.png Graphic file (type png)
 
 <use chapter4/random.png>
 Package pdftex.def Info: chapter4/random.png used on input line 201.
 (pdftex.def)             Requested size: 426.79071pt x 256.09784pt.
- [83]
-<chapter4/DSSR.png, id=1698, 383.4325pt x 193.72375pt>
+
+<chapter4/DSSR.png, id=1674, 383.4325pt x 193.72375pt>
 File: chapter4/DSSR.png Graphic file (type png)
  <use chapter4/DSSR.png>
 Package pdftex.def Info: chapter4/DSSR.png used on input line 212.
 (pdftex.def)             Requested size: 426.81451pt x 256.07971pt.
 
-[84 <./chapter4/random.png> <./chapter4/DSSR.png>]
-<chapter4/hierarchy.pdf, id=1707, 98.56648pt x 125.337pt>
+[78 <./chapter4/random.png> <./chapter4/DSSR.png>]
+<chapter4/hierarchy.pdf, id=1682, 98.56648pt x 125.337pt>
 File: chapter4/hierarchy.pdf Graphic file (type pdf)
 
 <use chapter4/hierarchy.pdf>
@@ -1605,35 +1503,32 @@ Package pdftex.def Info: chapter4/hierarchy.pdf used on input line 231.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[85] [86 <./chapter4/hierarchy.pdf>] [87] [88]
-<chapter4/DssrImprove.png, id=1746, 986.2446pt x 479.391pt>
+[79] [80 <./chapter4/hierarchy.pdf>]
+<chapter4/DssrImprove.png, id=1711, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
 Package pdftex.def Info: chapter4/DssrImprove.png used on input line 329.
 (pdftex.def)             Requested size: 455.2431pt x 341.43797pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
 Overfull \hbox (93.70477pt too wide) in alignment at lines 425--425
 [][][][][][][][][][][][][][][] 
  []
 
-[89 <./chapter4/DssrImprove.png>] [90]
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+[81] [82] [83] [84 <./chapter4/DssrImprove.png>]
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 458.
-LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10.95> not available
+LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 464.
-
-Overfull \hbox (13.48961pt too wide) in paragraph at lines 456--497
- [][] 
- []
-
-
-LaTeX Warning: Float too large for page by 32.26932pt on input line 497.
-
-[91] [92] [93] [94] [95]) [96]
+ [85] [86] [87] [88]) [89]
 \openout2 = `chapter5/chapter5.aux'.
 
- (./chapter5/chapter5.tex
+
+(./chapter5/chapter5.tex
 
 Package xr Warning: 
 No file chapter5.aux
@@ -1641,18 +1536,18 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 5.
-[97
+[90
 
 
 
-] [98] <chapter5/ADFD_Diagram1.png, id=1864, 589.20125pt x 414.54875pt>
+] [91] <chapter5/ADFD_Diagram1.png, id=1836, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
 Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 100.
 (pdftex.def)             Requested size: 426.79584pt x 284.53346pt.
 
-<chapter5/ADFD_front_end.png, id=1865, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=1837, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
@@ -1663,65 +1558,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
-[99 <./chapter5/ADFD_Diagram1.png>] [100 <./chapter5/ADFD_front_end.png>]
+[92 <./chapter5/ADFD_Diagram1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[101] [102]
-<chapter5/pointDomainOneArgument.png, id=1892, 780.9175pt x 570.13pt>
+[93 <./chapter5/ADFD_front_end.png>]
+Overfull \hbox (4.05533pt too wide) in paragraph at lines 179--180
+\OT1/phv/m/n/10.95 (YETI). YETI is avail-able in open-source at [][]$\OT1/pcr/m
+/n/10.95 http : / / code . google . com / p / yeti-[]test/$[][]\OT1/phv/m/n/10.
+95 .
+ []
+
+[94] <chapter5/pointDomainOneArgument.png, id=1858, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
 Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
  226.
 (pdftex.def)             Requested size: 347.11993pt x 241.84532pt.
- [103] [104 <./chapter5/pointDomainOneArgument.png>] [105] <chapter5/PFDOne.png
-, id=1935, 790.955pt x 575.14874pt>
+ [95]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[96 <./chapter5/pointDomainOneArgument.png>]
+<chapter5/PFDOne.png, id=1895, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
 Package pdftex.def Info: chapter5/PFDOne.png used on input line 324.
 (pdftex.def)             Requested size: 426.79555pt x 213.3897pt.
 
-<chapter5/PFDTwo.png, id=1936, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=1896, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
 Package pdftex.def Info: chapter5/PFDTwo.png used on input line 328.
 (pdftex.def)             Requested size: 426.79773pt x 213.39699pt.
- [106 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>] <chapter5/BFDOne.png, id
-=1949, 794.97pt x 575.14874pt>
+ [97]
+<chapter5/BFDOne.png, id=1908, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
 Package pdftex.def Info: chapter5/BFDOne.png used on input line 361.
 (pdftex.def)             Requested size: 426.80284pt x 213.3897pt.
 
-<chapter5/BFDTwo.png, id=1950, 793.96625pt x 576.1525pt>
+<chapter5/BFDTwo.png, id=1909, 793.96625pt x 576.1525pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
 Package pdftex.def Info: chapter5/BFDTwo.png used on input line 365.
 (pdftex.def)             Requested size: 426.797pt x 213.39287pt.
- [107 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>] <chapter5/SFDOne.png, id
-=1963, 789.95125pt x 573.14125pt>
+ [98 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>]
+<chapter5/SFDOne.png, id=1923, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
 Package pdftex.def Info: chapter5/SFDOne.png used on input line 398.
 (pdftex.def)             Requested size: 426.79634pt x 213.39699pt.
 
-<chapter5/SFDTwo.png, id=1964, 788.9475pt x 578.16pt>
+<chapter5/SFDTwo.png, id=1924, 788.9475pt x 578.16pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
 Package pdftex.def Info: chapter5/SFDTwo.png used on input line 402.
 (pdftex.def)             Requested size: 426.7837pt x 213.39536pt.
- [108 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>] [109] [110]) [111]
+ [99 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>]
+[100 <./chapter5/SFDOne.png> <./chapter5/SFDTwo.png>] [101] [102]) [103]
 \openout2 = `chapter6/chapter6.aux'.
 
- (./chapter6/chapter6.tex
+
+(./chapter6/chapter6.tex
 
 Package xr Warning: 
 No file chapter6.aux
@@ -1729,107 +1636,100 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 6.
-[112
+
+Overfull \hbox (15.19244pt too wide) in paragraph at lines 41--68
+[]\OT1/phv/m/n/10.95 To tar-get fail-ures and eval-u-ate the fail-ure do-mains 
+we de-vel-oped ear-lier ADFD tech-nique [[]].
+ []
+
+[104
 
 
 
-] [113]
+]
 Underfull \hbox (badness 10000) in paragraph at lines 118--121
 
  []
 
-<chapter6/adfdPlusWorkflow.png, id=2015, 906.38625pt x 557.08125pt>
+[105] <chapter6/adfdPlusWorkflow.png, id=1981, 906.38625pt x 557.08125pt>
 File: chapter6/adfdPlusWorkflow.png Graphic file (type png)
 
 <use chapter6/adfdPlusWorkflow.png>
 Package pdftex.def Info: chapter6/adfdPlusWorkflow.png used on input line 126.
 (pdftex.def)             Requested size: 298.7488pt x 227.61426pt.
- [114 <./chapter6/adfdPlusWorkflow.png>]
-<chapter6/exampleError.png, id=2022, 1441.88687pt x 818.55812pt>
+
+<chapter6/exampleError.png, id=1983, 1441.88687pt x 818.55812pt>
 File: chapter6/exampleError.png Graphic file (type png)
 
 <use chapter6/exampleError.png>
 Package pdftex.def Info: chapter6/exampleError.png used on input line 144.
 (pdftex.def)             Requested size: 483.67863pt x 321.52208pt.
+ [106 <./chapter6/adfdPlusWorkflow.png>]
 
-
-LaTeX Warning: Reference `fig:adfdPlusExample' on page 115 undefined on input l
+LaTeX Warning: Reference `fig:adfdPlusExample' on page 107 undefined on input l
 ine 163.
 
-[115] [116 <./chapter6/exampleError.png>]
+[107 <./chapter6/exampleError.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Overfull \hbox (50.0227pt too wide) in paragraph at lines 273--275
-\OT1/phv/m/n/12 ADFD+ Jar file is avail-able at [][]$\OT1/pcr/m/n/12 https : / 
-/ code . google . com / p / yeti-[]test / downloads /
- []
-
-
-Overfull \hbox (15.27486pt too wide) in paragraph at lines 273--275
-\OT1/pcr/m/n/12 list/$[][] \OT1/phv/m/n/12 and Ran-doop at [][]$\OT1/pcr/m/n/12
- https : / / randoop . googlecode . com / files / randoop .
- []
-
-[117] (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+[108] [109] (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
-)
-<chapter6/timetaken.png, id=2073, 389.2944pt x 515.526pt>
+<chapter6/timetaken.png, id=2040, 389.2944pt x 515.526pt>
 File: chapter6/timetaken.png Graphic file (type png)
 
 <use chapter6/timetaken.png>
 Package pdftex.def Info: chapter6/timetaken.png used on input line 295.
 (pdftex.def)             Requested size: 284.533pt x 256.08685pt.
- [118]
-<chapter6/TestCases.png, id=2086, 450.9648pt x 491.436pt>
+
+<chapter6/TestCases.png, id=2041, 450.9648pt x 491.436pt>
 File: chapter6/TestCases.png Graphic file (type png)
 
 <use chapter6/TestCases.png>
 Package pdftex.def Info: chapter6/TestCases.png used on input line 302.
 (pdftex.def)             Requested size: 284.54283pt x 256.08809pt.
- [119 <./chapter6/timetaken.png> <./chapter6/TestCases.png>] <chapter6/timeTake
-nBar.png, id=2094, 346.4142pt x 260.6538pt>
+ [110 <./chapter6/timetaken.png>] [111 <./chapter6/TestCases.png>] <chapter6/ti
+meTakenBar.png, id=2059, 346.4142pt x 260.6538pt>
 File: chapter6/timeTakenBar.png Graphic file (type png)
 
 <use chapter6/timeTakenBar.png>
 Package pdftex.def Info: chapter6/timeTakenBar.png used on input line 313.
 (pdftex.def)             Requested size: 298.75613pt x 298.78304pt.
- [120 <./chapter6/timeTakenBar.png>]
-<chapter6/testCasesBar.png, id=2101, 312.2064pt x 263.0628pt>
+ [112 <./chapter6/timeTakenBar.png>]
+<chapter6/testCasesBar.png, id=2066, 312.2064pt x 263.0628pt>
 File: chapter6/testCasesBar.png Graphic file (type png)
 
 <use chapter6/testCasesBar.png>
 Package pdftex.def Info: chapter6/testCasesBar.png used on input line 329.
 (pdftex.def)             Requested size: 298.76672pt x 298.78683pt.
- [121 <./chapter6/testCasesBar.png>]
+ [113 <./chapter6/testCasesBar.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
-[122] [123]
+[114] [115]
 Underfull \hbox (badness 10000) in paragraph at lines 477--482
 
  []
 
-[124] [125] <chapter6/PFDOne.png, id=2149, 790.955pt x 575.14874pt>
+[116] <chapter6/PFDOne.png, id=2110, 790.955pt x 575.14874pt>
 File: chapter6/PFDOne.png Graphic file (type png)
 
 <use chapter6/PFDOne.png>
 Package pdftex.def Info: chapter6/PFDOne.png used on input line 563.
 (pdftex.def)             Requested size: 284.52634pt x 184.93773pt.
 
-<chapter6/BFDOne.png, id=2150, 794.97pt x 575.14874pt>
+<chapter6/BFDOne.png, id=2111, 794.97pt x 575.14874pt>
 File: chapter6/BFDOne.png Graphic file (type png)
 
 <use chapter6/BFDOne.png>
 Package pdftex.def Info: chapter6/BFDOne.png used on input line 567.
 (pdftex.def)             Requested size: 284.52713pt x 184.93773pt.
 
-<chapter6/SFDOne.png, id=2151, 789.95125pt x 573.14125pt>
+<chapter6/SFDOne.png, id=2112, 789.95125pt x 573.14125pt>
 File: chapter6/SFDOne.png Graphic file (type png)
 
 <use chapter6/SFDOne.png>
@@ -1837,23 +1737,23 @@ Package pdftex.def Info: chapter6/SFDOne.png used on input line 571.
 (pdftex.def)             Requested size: 284.52687pt x 184.93939pt.
 
 
-LaTeX Warning: Float too large for page by 20.13972pt on input line 575.
+LaTeX Warning: Float too large for page by 15.01427pt on input line 575.
 
-<chapter6/PFDTwo.png, id=2152, 1187.43625pt x 772.8875pt>
+<chapter6/PFDTwo.png, id=2113, 1187.43625pt x 772.8875pt>
 File: chapter6/PFDTwo.png Graphic file (type png)
 
 <use chapter6/PFDTwo.png>
 Package pdftex.def Info: chapter6/PFDTwo.png used on input line 585.
 (pdftex.def)             Requested size: 284.51944pt x 184.9425pt.
 
-<chapter6/BFDTwo.png, id=2153, 1192.455pt x 772.8875pt>
+<chapter6/BFDTwo.png, id=2114, 1192.455pt x 772.8875pt>
 File: chapter6/BFDTwo.png Graphic file (type png)
 
 <use chapter6/BFDTwo.png>
 Package pdftex.def Info: chapter6/BFDTwo.png used on input line 589.
 (pdftex.def)             Requested size: 284.52107pt x 184.9425pt.
 
-<chapter6/SFDTwo.png, id=2154, 1192.455pt x 772.8875pt>
+<chapter6/SFDTwo.png, id=2115, 1192.455pt x 772.8875pt>
 File: chapter6/SFDTwo.png Graphic file (type png)
 
 <use chapter6/SFDTwo.png>
@@ -1861,14 +1761,14 @@ Package pdftex.def Info: chapter6/SFDTwo.png used on input line 593.
 (pdftex.def)             Requested size: 284.52107pt x 184.9425pt.
 
 
-LaTeX Warning: Float too large for page by 20.15239pt on input line 597.
+LaTeX Warning: Float too large for page by 15.02693pt on input line 597.
 
-) [126] [127 <./chapter6/PFDOne.png> <./chapter6/BFDOne.png> <./chapter6/SFDOne
-.png>] [128 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.
-png>]
+) [117 <./chapter6/PFDOne.png> <./chapter6/BFDOne.png> <./chapter6/SFDOne.png>]
+[118 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.png>]
 \openout2 = `chapter7/chapter7.aux'.
 
- (./chapter7/chapter7.tex
+
+(./chapter7/chapter7.tex
 
 Package xr Warning: 
 No file chapter7.aux
@@ -1876,7 +1776,7 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 7.
-[129
+[119
 
 
 
@@ -1885,7 +1785,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[130]
+[120]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -1905,12 +1805,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--102
 
  []
 
-[131]
+
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-
+[121]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
@@ -1920,7 +1820,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-) [132]
+) [122]
 \openout2 = `chapter8/chapter8.aux'.
 
  (./chapter8/chapter8.tex
@@ -1946,7 +1846,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[133
+[123
 
 
 
@@ -1966,22 +1866,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--38
  []
 
 
-Overfull \hbox (8.61205pt too wide) in paragraph at lines 45--46
-[]\OT1/phv/b/n/12 Enhancing the plot-ting abil-ity of ADFD+ strat-egy to more t
-han two-dimensional
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[134]
+
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-
+[124]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
@@ -1991,39 +1885,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-) [135]
+) [125]
 \openout2 = `appendix1/appendix1.aux'.
 
  (./appendix1/appendix1.tex
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 15.
-[136
+[126
 
 
 
-] [137] [138] [139]) [140] (./ociamthesismain.bbl
+] [127] [128]) [129] (./ociamthesismain.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 7.
- [141
+ [130
 
 
 ]
 Missing character: There is no Õ in font phvr7t!
- [142]
+ [131]
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ” in font phvro7t!
- [143]
-[144]
+ [132]
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ” in font phvro7t!
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ™ in font phvro7t!
+ [133]
 Missing character: There is no Ñ in font phvro7t!
- [145]
+
+[134]
 Missing character: There is no Õ in font phvr7t!
 )
 
@@ -2034,9 +1929,9 @@ the glossaries will not be updated.
 Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-[146]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+[135]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (./ociamthesismain.aux (./abstract/abstract.aux)
 (./dedication/dedication.aux) (./acknowlegements/acknowlegements.aux)
 (./glossary1/glossary1.aux) (./declaration/declaration.aux)
@@ -2044,8 +1939,8 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
 (./chapter4/chapter4.aux) (./chapter5/chapter5.aux) (./chapter6/chapter6.aux)
 (./chapter7/chapter7.aux) (./chapter8/chapter8.aux) (./appendix1/appendix1.aux)
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `ociamthesismain.out' has not changed.
 (rerunfilecheck)             Checksum: 13E7A37259912CF6E9D029F313DD236C;9358.
 
@@ -2057,32 +1952,31 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15803 strings out of 493315
- 239527 string characters out of 6137904
- 465469 words of memory out of 5000000
- 17918 multiletter control sequences out of 15000+600000
- 37804 words of font info for 83 fonts, out of 8000000 for 9000
+ 15791 strings out of 493315
+ 239460 string characters out of 6137904
+ 473025 words of memory out of 5000000
+ 17921 multiletter control sequences out of 15000+600000
+ 39658 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 57i,12n,100p,2343b,1658s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,12n,100p,2343b,1670s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{lstnumber.-18.16} has been referenced but does no
 t exist, replaced by a fixed one
 
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2
-013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2013
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/
-texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-di
-st/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts
-/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/hel
-vetic/uhvro8a.pfb>
-Output written on ociamthesismain.pdf (146 pages, 3127541 bytes).
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
+3/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-d
+ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/font
+s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
+/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/he
+lvetic/uhvro8a.pfb>
+Output written on ociamthesismain.pdf (135 pages, 3103405 bytes).
 PDF statistics:
- 2674 PDF objects out of 2984 (max. 8388607)
- 2372 compressed objects within 24 object streams
- 853 named destinations out of 1000 (max. 500000)
+ 2619 PDF objects out of 2984 (max. 8388607)
+ 2329 compressed objects within 24 object streams
+ 838 named destinations out of 1000 (max. 500000)
  1319 words of extra memory for PDF output out of 10000 (max. 10000000)
 

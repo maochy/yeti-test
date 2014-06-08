@@ -347,6 +347,7 @@ public class ADFDPlus extends JFrame{
 		this.add(panel2, BorderLayout.NORTH);
 		scrolling.setBorder(new EmptyBorder(0, 0, 0, 0));
 		this.add(scrolling, BorderLayout.CENTER);
+		//this.getRootPane().setDefaultButton(plot1_Button);
 		this.setVisible(true);
 		//this.setAlwaysOnTop(true);
 		//this.pack();
@@ -704,7 +705,6 @@ public class ADFDPlus extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 
 				try{
-
 
 					// The runTest method executes YETi 
 					progressStart();
