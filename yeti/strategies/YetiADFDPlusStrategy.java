@@ -78,6 +78,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	public YetiADFDPlusStrategy(YetiTestManager ytm) {
 		super(ytm);
+		
 
 	}
 
@@ -213,11 +214,6 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	//It is used to hold the arguments.
 	public String args = "";
 
-	//public int count = 0;
-
-	// It tries to restrict the generation of C0 program only once.
-	public static boolean runOnce = true;
-
 
 
 
@@ -236,8 +232,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 
 		// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
-		if (currentErrors == 1 && oldyt.length <= 2 && runOnce == true) {
-			runOnce = false;
+		if (currentErrors == 1 && oldyt.length <= 2) {
 			YetiLog.printDebugLog("found bug in the strategy", this);
 			int j1 = 0;
 			YetiCard yc = oldyt[j1];
@@ -269,7 +264,9 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 					if (oldyt.length == 1 ){
 					//	argumentSecond	= "" + 0;
 						call = call + ")";
-					}	else{
+					}	
+					
+					if (oldyt.length == 2){
 						argumentSecond	= oldyt[++j1].getValue().toString();
 						call = call + ", j )";
 						plotOneDimOrTwoDim += 1;
@@ -295,7 +292,11 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 						//		argumentSecond	= "" + 0;
 								call = call + ")";
 
-							}	else{
+							}
+							
+							if (oldyt.length == 2){
+								//JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
+
 								argumentSecond	= oldyt[++j1].getValue().toString();
 								call = call + ", j )";
 								plotOneDimOrTwoDim += 1;
@@ -314,7 +315,11 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 							//	argumentSecond	= "" + 0;
 								call = call + ")";
 
-							}	else{
+							}	
+							
+							if (oldyt.length == 2){
+								//JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
+
 								argumentSecond	= oldyt[++j1].getValue().toString();
 								call = call + ", j )";
 								plotOneDimOrTwoDim += 1;
