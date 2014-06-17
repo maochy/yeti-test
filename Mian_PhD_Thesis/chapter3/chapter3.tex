@@ -75,6 +75,19 @@ The language-specific binding facilitates modelling of programming languages. It
 \subsection{Construction of Test Cases} \label{sec:constructionOfTestCases}
 YETI construct test cases by creating objects of the classes under test and randomly calls methods with random inputs according to the parameter's-space. YETI splits input values into two types i.e. primitive data types and user defined classes. For primitive data types as methods parameters, YETI in random strategy calls $Math.random()$ method to generate arithmetic values are converted to the required type using Java cast operation. In the case of user-defined classes as a parameter YETI calls constructor or method to generate object of the class at run time. The constructor may possibly require another object, then YETI recursively calls the constructor or method of that object. This process is continued till an object with empty constructor or a constructor with only primitive types or the set level of recursion is reached.
 
+\subsection{Call sequence of YETI}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=15cm, height=10cm]{chapter3/sequenceDiagram.png}
+	\caption{Call sequence of YETI with Java binding}
+	\label{fig:yetiCore}
+\end{figure}
+
+
+
+
+
 \subsection{Command-line Options}
 YETI is provided with several command line options which a tester can enable or disable according to the test requirement. These options are case insensitive and can be provided in any order as input to YETI from command line interface. As an example, a tester can use command line option $-nologs$ to bypass real time logging and save processing power by reducing overhead. Table~\ref{table:cliOptions} includes some of the common command line options available in YETI.
 
@@ -83,6 +96,8 @@ YETI is provided with several command line options which a tester can enable or 
 \caption{YETI command line options} % title of Table
 \bigskip
 \centering
+\hspace{-0.8cm}
+\noindent\makebox[\textwidth]{
 {\renewcommand{\arraystretch}{1.1}
 \begin{tabular}{|l|l|} % centered columns (4 columns)
 \hline
@@ -105,7 +120,7 @@ Options							&Purpose 										\\ \hline
 -DSSR							&To specify Dirt Spot Sweeping Random strategy 	\\ \hline
 -ADFD							&To specify Automated Discovery of Failure Domain strategy \\ \hline
 -ADFDPlus						&To specify Automated Discovery of Failure Domain plus strategy \\ \hline
--noInstanceCap					&To remove cap on the maximum number of instances of a particular type \\ \hline
+-noInstanceCap					&To remove cap on the maximum number of instances of specific type \\ \hline
 -branchCoverage					&To measure the branch coverage					\\ \hline
 -tracesOutputFile				&To specify the file to store output traces			\\ \hline
 -tracesInputFile					&To specify the file to input traces 					\\ \hline
@@ -118,7 +133,7 @@ Options							&Purpose 										\\ \hline
 
 \hline %inserts single line
 \end{tabular}
-}
+}}
 \bigskip
 \label{table:cliOptions} % is used to refer this table in the text
 \end{table}

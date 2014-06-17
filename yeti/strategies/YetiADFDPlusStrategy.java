@@ -67,9 +67,11 @@ import yeti.monitoring.YetiUpdatableSlider;
 
 public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
-	public static String rangeToPlot = "" + 30;
+	public static int  rangeToPlot = 5;
 	public static String argumentFirst = "" + 0;
 	public static String argumentSecond = "" + 0;
+	// ADFDPlus class drawGraph() will decide on the value of this variable to plot one dimensional chart or two dimensional chart.
+	public static int plotOneDimOrTwoDim = 1;
 
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
@@ -191,148 +193,144 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	}
 
-	long oldFaults1 = 0;
+
+
+
+
+	//long oldFaults1 = 0;
+	
+
+
+	//It is used to get the values of the arguments.
 	YetiCard[] oldyt = null;
+
+	//It is used to get the name of the routine generating a failure.
 	private YetiRoutine oldroutine;
+
+	// It is used to make the names of generated files unique.
 	public static long uid = 0;
+
+	//It is used to hold the arguments.
 	public String args = "";
-	public int count = 0;
+
+	//public int count = 0;
+
+	// It tries to restrict the generation of C0 program only once.
+	public static boolean runOnce = true;
 
 
-	public YetiCard[] getAllCards(YetiRoutine routine)
-			throws ImpossibleToMakeConstructorException {
 
+
+	/*
+	 * (non-Javadoc)
+	 * @see yeti.strategies.YetiRandomStrategy#getAllCards(yeti.YetiRoutine)
+	 */
+	public YetiCard[] getAllCards(YetiRoutine routine) throws ImpossibleToMakeConstructorException {
+
+
+
+		// It assigns the number of unique errors value to current errors. 
 		long currentErrors = YetiLogProcessor.numberOfNewErrors;
-
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
+
+
 		// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
-		if (currentErrors == 1 && oldyt.length <= 2) {
-
+		if (currentErrors == 1 && oldyt.length <= 2 && runOnce == true) {
+			runOnce = false;
 			YetiLog.printDebugLog("found bug in the strategy", this);
-			//oldFaults1 = currentErrors;
+			int j1 = 0;
+			YetiCard yc = oldyt[j1];
+			String call = "";
 
 
-			//*****************************************************************************
-
-			for (int j1 = 0; j1 < oldyt.length; j1++) {
-				
-				if (j1 == 1||j1 == 2){
-					break;
-				}
-				
-				YetiCard yc = oldyt[j1];
-				String call = "";
-				//*****************************************************************************
-
-				if (yc.getType().getName().equals("int")||yc.getType().getName().equals("byte")||yc.getType().getName().equals("long")||yc.getType().getName().equals("short")) {
+			// If statement to check the type of the first argument of method failing the test.
+			if (yc.getType().getName().equals("int")||yc.getType().getName().equals("byte")||yc.getType().getName().equals("long")||yc.getType().getName().equals("short")) {
 
 
-					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
+				YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
 
-					//*****************************************************************************		
-					if (jroutine instanceof YetiJavaConstructor) {
-						YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
-						call = "new "
-								+ c.getOriginatingModule().getModuleName()
-								+ "(" + args + "i";
-						argumentFirst = oldyt[j1].getValue().toString();
 
-						for (int k = j1 + 1; k < oldyt.length; k++) {
-							call = call + ","
-									+ "j";
+				// I am trying the simplified version here.
+				// So it will treat one dimensional program as two dimensional by making its second argument 0 in the case of one dimensional program.
+				// Following is the case when constructor is faulty and may contain one or two arguments.
 
-							if (oldyt.length == 1 ){
-								argumentSecond	= "" + 0;
+				if (jroutine instanceof YetiJavaConstructor) {
 
-							}
-							else{
-								argumentSecond	= oldyt[k].getValue().toString();
-							}
+					YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
 
-						}
+					// Call is used in when generating the C0 program.
+					call = "new "   + c.getOriginatingModule().getModuleName() + "( i ";
+
+					// ArgumentFirst is the first argument used in C0 program.
+					argumentFirst = oldyt[j1].getValue().toString();
+
+					// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
+					if (oldyt.length == 1 ){
+					//	argumentSecond	= "" + 0;
 						call = call + ")";
-
-					} else {
-						//******************************************************************************
-
-						if (jroutine instanceof YetiJavaMethod) {
-							YetiJavaMethod m = (YetiJavaMethod) jroutine;
-							if (m.isStatic) {
-
-								call = ""
-										+ m.getOriginatingModule()
-										.getModuleName() + "."
-										+ m.getMethod().getName() + "("
-
-								+ args + "i";
-								argumentFirst = oldyt[j1].getValue().toString();
-
-								for (int k = j1 + 1; k < oldyt.length; k++) {
-
-									call = call + "," + "j";
-
-									if (oldyt.length == 1 ){
-
-										argumentSecond	= "" + 0;
-
-									}
-									else{
-										argumentSecond	= oldyt[k].getValue().toString();
-
-									}
-								}
-								call = call + ")";
-							} 
-
-
-							//******************************************************************************
-							else {
-								call = "variable" + "."
-										+ m.getMethod().getName() + "("
-										+ args + "i";
-								argumentFirst = oldyt[j1].getValue().toString();
-
-
-								for (int k = 0 + 1; k < oldyt.length; k++) {
-
-									call = call + "," + "j";
-
-									if (oldyt.length == 1 ){
-										argumentSecond	= "" + 0;
-
-									}
-									else{
-										argumentSecond	= oldyt[k].getValue().toString();
-
-									}
-								}
-								call = call + ")";	
-							}
-							//*****************************************************************************
-
-						}
-
+					}	else{
+						argumentSecond	= oldyt[++j1].getValue().toString();
+						call = call + ", j )";
+						plotOneDimOrTwoDim += 1;
 					}
 
+				} 
+
+				else {
+
+
+					if (jroutine instanceof YetiJavaMethod) {
+						YetiJavaMethod m = (YetiJavaMethod) jroutine;
+						if (m.isStatic) {
+
+							call = "" + m.getOriginatingModule().getModuleName() + "." + m.getMethod().getName() + "( i "; 
+
+							// ArgumentFirst is the first argument used in C0 program.
+							argumentFirst = oldyt[j1].getValue().toString();
+
+
+							// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
+							if (oldyt.length == 1 ){
+						//		argumentSecond	= "" + 0;
+								call = call + ")";
+
+							}	else{
+								argumentSecond	= oldyt[++j1].getValue().toString();
+								call = call + ", j )";
+								plotOneDimOrTwoDim += 1;
+							}
+						}
+
+
+						else {
+							call = "variable" + "." + m.getMethod().getName() + "( i ";
+
+							// ArgumentFirst is the first argument used in C0 program.
+							argumentFirst = oldyt[j1].getValue().toString();
+
+							// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
+							if (oldyt.length == 1 ){
+							//	argumentSecond	= "" + 0;
+								call = call + ")";
+
+							}	else{
+								argumentSecond	= oldyt[++j1].getValue().toString();
+								call = call + ", j )";
+								plotOneDimOrTwoDim += 1;
+							}
+						}
+					}
 
 					String programBegin = programBeginPart();
 					String programEnd = programEndPart();
 					String programEnd2 = programEndPart2();
-
 					String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
-
 					generateProgram(completeProgram);
-
-					//	args = args + yc.getValue() + ",";
-
-
 				}
-
 			}
-
-
 		}
+
 
 		oldyt = super.getAllCards(routine);
 		oldroutine = routine;
@@ -455,8 +453,6 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 		return temp3;
 	}
 
-
-
 	public String programEndPart2(){
 		String temp4 = "; \n"
 				+ "     pass.add(i); \n"
@@ -473,7 +469,6 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 		return temp4;
 	}
 
-
 	public void generateProgram(String program){
 		try {
 			PrintStream fos = new PrintStream("C" + (uid - 1)
@@ -485,9 +480,6 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 		}
 
 	}
-
-
-
 
 	@Override
 	public String getName() {

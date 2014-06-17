@@ -95,7 +95,7 @@ public class LogGrapher2 {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-		chartPanel.setPreferredSize(new Dimension(900, 650));
+		chartPanel.setPreferredSize(new Dimension(800, 600));
 		chartPanel.setVisible(true);
 		ADFDPlus.panel3.add(chartPanel);
 	}
@@ -109,8 +109,11 @@ public class LogGrapher2 {
 	 */
 	private XYDataset createDataset() {
 		//int a = 1000;
+		
+		
 		final XYSeriesCollection dataset = new XYSeriesCollection();
 		//JOptionPane.showMessageDialog(null, a, "the file f", JOptionPane.CANCEL_OPTION);
+		
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
 		int passValues[] = GraphDataScanner.readPassDataFromFile();	
 
