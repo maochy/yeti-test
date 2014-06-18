@@ -78,7 +78,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	public YetiADFDPlusStrategy(YetiTestManager ytm) {
 		super(ytm);
-		
+
 
 	}
 
@@ -199,7 +199,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 
 	//long oldFaults1 = 0;
-	
+
 
 
 	//It is used to get the values of the arguments.
@@ -262,10 +262,10 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 					// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
 					if (oldyt.length == 1 ){
-					//	argumentSecond	= "" + 0;
+						//	argumentSecond	= "" + 0;
 						call = call + ")";
 					}	
-					
+
 					if (oldyt.length == 2){
 						argumentSecond	= oldyt[++j1].getValue().toString();
 						call = call + ", j )";
@@ -289,11 +289,11 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 							// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
 							if (oldyt.length == 1 ){
-						//		argumentSecond	= "" + 0;
+								//		argumentSecond	= "" + 0;
 								call = call + ")";
 
 							}
-							
+
 							if (oldyt.length == 2){
 								//JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 
@@ -312,11 +312,11 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 							// If condition is used in the case is faulty constructor is one argument. So the second argument is made 0.
 							if (oldyt.length == 1 ){
-							//	argumentSecond	= "" + 0;
+								//	argumentSecond	= "" + 0;
 								call = call + ")";
 
 							}	
-							
+
 							if (oldyt.length == 2){
 								//JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 
@@ -362,30 +362,49 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ "names of its contributors may be used to endorse or promote products\n"
 				+ "derived from this software without specific prior written permission.\n"
 
-			+ "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY\n"
-			+ "EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n"
-			+ "WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n"
-			+ "DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY\n"
-			+ "DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n"
-			+ "(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n"
-			+ "LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\n"
-			+ "ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
-			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
-			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
-			+ "**/\n"
-			+ " // The value of currentErrors is " + currentErrors++ + "\n"
-			+ "import java.io.*;\n"
-			+ "import java.util.*;\n\n" 
-			+ "public class C"
-			+  uid++
-			+ " \n{\n"
-			+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
-			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+		    	+ "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY\n"
+		    	+ "EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n"
+		    	+ "WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n"
+		    	+ "DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY\n"
+		    	+ "DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n"
+		    	+ "(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n"
+		    	+ "LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\n"
+		    	+ "ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
+		    	+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
+		    	+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+		    	+ "**/\n"
+		    	+ " // The value of currentErrors is " + currentErrors++ + "\n"
+		    	+ "import java.io.*;\n"
+		    	+ "import java.util.*;\n\n" 
+		    	+ "public class C"
+		    	+  uid++
+		    	+ " \n{\n"
+		    	+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+		    	+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 
 				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
-				+ " public static int xValue = " + argumentFirst  +";\n" 
-				+ " public static int yValue = " + argumentSecond +";\n\n"
+				+ " public static int xValue = " + argumentFirst  +";\n" ;
+
+		if (oldyt.length == 1 ){
+
+			temp = temp	+ " public static int starterX = xValue - range;\n" 
+					+ " public static int stopperX = xValue + range;\n"
+
+				+ " public static void main(String []argv){\n"
+				+ "   checkFirstAndLastValue(starterX);\n"
+				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
+				+ "       checkFirstAndLastValue(i);\n"
+				+ "     }\n"
+				+ "   checkFirstAndLastValue(stopperX);\n" 
+				+ "   printRangeFail();\n" 
+				+ "   printRangePass();\n" 
+				+ " }\n";
+		}
+
+		if (oldyt.length == 2 ){
+
+			temp = temp	+ " public static int yValue = " + argumentSecond +";\n\n"
 
 				+ " public static int starterX = xValue - range;\n" 
 				+ " public static int stopperX = xValue + range;\n"
@@ -397,12 +416,13 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
 				+ "     for (int j = starterY + 1; j < stopperY; j++) {\n"
 				+ "       checkFirstAndLastValue(i,j);\n"
-				+ "     }\n"
 				+ "   }\n"
 				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
 				+ "   printRangeFail();\n" 
-				+ "   printRangePass();\n" 
+				+ "   printRangePass();\n"
+				+ "   }\n"
 				+ " }\n";
+		}
 
 		return temp;
 	}
@@ -452,14 +472,34 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
-				+" } \n"
-				+" public static void checkFirstAndLastValue(int i, int j) { \n"
-				+"   try { \n";
+				+" } \n";
+
+		if (oldyt.length == 1 ){
+			temp3 = temp3	+" public static void checkFirstAndLastValue(int i) { \n";
+		}
+		if (oldyt.length == 2 ){
+			temp3 = temp3 +" public static void checkFirstAndLastValue(int i, int j) { \n";
+		}
+		temp3 = temp3 +"   try { \n";
 		return temp3;
 	}
 
 	public String programEndPart2(){
-		String temp4 = "; \n"
+		String temp4 = "";
+		if (oldyt.length == 1 ){
+		temp4 = temp4 + "; \n"
+					+ "     pass.add(i); \n"
+					+ "   } catch (Throwable t) { \n"
+					+ "    fail.add(i); \n "
+					+ "    failureDomain(i);\n"
+					+ "   } \n } "
+					+ " public static void failureDomain(int i){}\n"
+					+ "\n}"
+					;
+		}
+		
+		if (oldyt.length == 2 ){
+		temp4 = temp4 + "; \n"
 				+ "     pass.add(i); \n"
 				+ "     pass.add(j); \n"
 				+ "   } catch (Throwable t) { \n"
@@ -470,7 +510,8 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " public static void failureDomain(int i, int j){}\n"
 				+ "\n}"
 				;
-
+		}
+		
 		return temp4;
 	}
 
