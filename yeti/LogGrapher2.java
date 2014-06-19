@@ -95,7 +95,7 @@ public class LogGrapher2 {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-		chartPanel.setPreferredSize(new Dimension(800, 600));
+		chartPanel.setPreferredSize(new Dimension(900, 700));
 		chartPanel.setVisible(true);
 		ADFDPlus.panel3.add(chartPanel);
 	}

@@ -127,7 +127,7 @@ public class ADFDPlus extends JFrame{
 	 * panel5 is the right panel in the GUI which contains the invariants for a SUT generated at the end of execution.
 	 */
 	private JTextArea panel5 = new JTextArea();
-
+	
 	/**
 	 * scrolling is a scrollbar added to panel3 to scroll horizontally when multiple graphs are generated.
 	 */
@@ -1054,8 +1054,10 @@ public class ADFDPlus extends JFrame{
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
 			String result = executeDaikon();
-
-			panel5.setText("Candidate invariant:"+result);
+			//To display the generated invariants in GUI, panel 5
+			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
+							+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
+			
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);

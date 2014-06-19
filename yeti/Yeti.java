@@ -1173,7 +1173,7 @@ public class Yeti {
 		try {
 			Yeti.engine = null;
 			Yeti.hasBranchCoverage = false;
-			Yeti.isDistributed = false; // @YetiCloud
+			Yeti.isDistributed = false; // @Y0etiCloud
 			Yeti.makeMethodsVisible = false;
 			Yeti.st = 0;
 			Yeti.strategy.reset();
