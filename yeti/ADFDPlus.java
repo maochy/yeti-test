@@ -922,37 +922,39 @@ public class ADFDPlus extends JFrame{
 		//		if (countCompileFiles == 1){
 		//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 		//
-		//		}
-		//		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-		//		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-		//		LogGrapher2 demo = new LogGrapher2("Failure Domains");
+//	}
 
-		//		}
-		//		else {
-		//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-		//
-		//		}
+	//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
 
-
-		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
-			LogGrapher1 demo = new LogGrapher1("Failure Domains");
-		}
-		else 
-		{
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-		}
-
-
-
-
-
-
-		ADFDPlus.panel3.validate();
-		panel3.add(scrolling1,BorderLayout.SOUTH);
-
-
+	if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+		LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
 	}
+	//		else {
+	//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+	//
+	//		}
+
+
+	//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
+	//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
+	//		}
+	//		else 
+	//		{
+	//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+	//		}
+	//
+
+
+
+
+
+	ADFDPlus.panel3.validate();
+	panel3.add(scrolling1,BorderLayout.SOUTH);
+
+	}
+
+
 
 
 	/**
@@ -1122,22 +1124,11 @@ public class ADFDPlus extends JFrame{
 				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-1000 "+// TODO
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
-				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
+				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
 
-
-		// The following if statement is added to exclude the second arguments from displaying if the method under test is one argument.
-
-		//****************************************************
-		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 2)
-		{
-			daikonOptions = daikonOptions + "|^j$";
-		}
-
-		// This is appended to the end of the daikon command.
-		daikonOptions = daikonOptions + " C";
-
-		//****************************************************
-
+		
+		
+		
 		try {
 			int count = 0;
 			// for each file we will execute a session with Daikon

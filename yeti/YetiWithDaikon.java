@@ -250,23 +250,8 @@ public class YetiWithDaikon{
 				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-1000 "+// TODO
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
-				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
+				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
 
-
-				// The following if statement is added to exclude the second arguments from displaying if the method under test is one argument.
-
-				//****************************************************
-				if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 2)
-				{
-					JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.plotOneDimOrTwoDim, "Value of plotOneDimOrTwoDim", JOptionPane.CANCEL_OPTION);
-
-					daikonOptions = daikonOptions + "|^j$";
-				}
-
-				// This is appended to the end of the daikon command.
-				daikonOptions = daikonOptions + " C";
-
-				//****************************************************
 		try {
 			int count = 0;
 			// for each file we will execute a session with Daikon
@@ -323,8 +308,8 @@ public class YetiWithDaikon{
 	 * // Main method of the class. It calls the constructor of the class to draw the ADFD+ GUI.
 	 */
 	public static void main(String[] args){
-	//	deleteOldTestFiles();
-		JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.plotOneDimOrTwoDim, "Value of plotOneDimOrTwoDim", JOptionPane.CANCEL_OPTION);
+		deleteOldTestFiles();
+		//JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.plotOneDimOrTwoDim, "Value of plotOneDimOrTwoDim", JOptionPane.CANCEL_OPTION);
 
 		try{
 			Yeti.YetiRun(args);
