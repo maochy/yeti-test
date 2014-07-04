@@ -374,6 +374,17 @@ public class ADFDPlus extends JFrame{
 
 		}
 	}
+	
+	
+	
+	/**
+	 *  Method to reset the static variables.
+	 *  
+	 */
+	public void resetStaticVariables(){
+		
+	}
+	
 
 
 	/**
@@ -1126,8 +1137,13 @@ public class ADFDPlus extends JFrame{
 				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-1000 "+// TODO
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
-				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
-
+				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
+		
+		if(YetiADFDPlusStrategy.twoDimProgram == 2){
+			daikonOptions = daikonOptions + "|^j$";
+		}
+		
+		daikonOptions = daikonOptions + " C";
 		
 		
 		

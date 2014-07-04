@@ -70,6 +70,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 	public static int rangeToPlot = 5;
 	public static String argumentFirst = "" + 0;
 	public static String argumentSecond = "" + 0;
+	public static int twoDimProgram = 0;
 
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
@@ -210,11 +211,16 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 		if(currentErrors > oldFaults1){
 
-			oldFaults1 = currentErrors;
+		oldFaults1 = currentErrors;
 
 
 			// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
 //			if (currentErrors == 1 && oldyt.length <= 2) {
+			if(oldyt.length == 2)
+			{
+				twoDimProgram = 2;
+			}
+			
 			
 			if (oldyt.length <= 2) {
 
@@ -342,8 +348,8 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 
 			}
-		}
-
+		
+	}
 		oldyt = super.getAllCards(routine);
 		oldroutine = routine;
 		return oldyt;
