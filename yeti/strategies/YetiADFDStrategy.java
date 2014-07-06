@@ -32,7 +32,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-**/
+ **/
 
 import java.awt.Component;
 import java.awt.Dimension;
@@ -67,9 +67,11 @@ import yeti.monitoring.YetiUpdatableSlider;
 
 public class YetiADFDStrategy extends YetiRandomStrategy {
 
-	public static String lowerLimit = "" + Integer.MIN_VALUE;
-	public static String upperLimit = "" + Integer.MAX_VALUE;
-	
+	public static int rangeToPlot = 5;
+	public static String argumentFirst = "" + 0;
+	public static String argumentSecond = "" + 0;
+	public static int twoDimProgram = 0;
+
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
@@ -129,7 +131,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		// we generate a panel to contain both the label and the slider
 		JPanel p = new JPanel();
 		p.setLayout(new BoxLayout(p, BoxLayout.Y_AXIS));
-		
+
 		//because we dont need interesting values here.
 		//JLabel txt = new JLabel("% interesting values: ");
 		//p.add(txt);
@@ -175,7 +177,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		YetiGUI.allComponents.add(useInterestingValuesSlider);
 		useInterestingValuesSlider.setMaximumSize(new Dimension(130, 50));
 		useInterestingValuesSlider.setAlignmentX(0);
-		
+
 		// Not required in ADFD i think.
 		//p.add(useInterestingValuesSlider);
 
@@ -194,9 +196,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 	YetiCard[] oldyt = null;
 	private YetiRoutine oldroutine;
 	public static long uid = 0;
-	String argumentTwo = "";
 	public String args = "";
-	
+	public int count = 0;
+
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
 			throws ImpossibleToMakeConstructorException {
@@ -205,225 +207,278 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 		YetiLog.printDebugLog("nErrors " + currentErrors, this);
 
-		if (currentErrors > oldFaults1) {
+		//Trying to perform the process for any error found by YETI and caused by 2 arguments program.
 
-			YetiLog.printDebugLog("found bug in the strategy", this);
-			oldFaults1 = currentErrors;
+		if(currentErrors > oldFaults1){
 
-			for (int j1 = 0; j1 < oldyt.length; j1++) {
-				YetiCard yc = oldyt[j1];
-
-				if (yc.getType().getName().equals("int")) {
+		oldFaults1 = currentErrors;
 
 
+			// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
+//			if (currentErrors == 1 && oldyt.length <= 2) {
+			if(oldyt.length == 2)
+			{
+				twoDimProgram = 2;
+			}
+			
+			
+			if (oldyt.length <= 2) {
+
+				YetiLog.printDebugLog("found bug in the strategy", this);
+				//oldFaults1 = currentErrors;
+
+
+				//*****************************************************************************
+
+				for (int j1 = 0; j1 < oldyt.length; j1++) {
+
+					if (j1 == 1||j1 == 2){
+						break;
+					}
+
+					YetiCard yc = oldyt[j1];
 					String call = "";
+					//*****************************************************************************
 
-					YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
-					if (jroutine instanceof YetiJavaConstructor) {
-						YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
-						call = "new "
-								+ c.getOriginatingModule().getModuleName()
-								+ "(" + args + "i";
-						for (int k = j1 + 1; k < oldyt.length; k++) {
-							call = call + ","
-									+ oldyt[k].getValue().toString();
-
-						}
-						call = call + ")";
-
-					} else {
+					if (yc.getType().getName().equals("int")||yc.getType().getName().equals("byte")||yc.getType().getName().equals("long")||yc.getType().getName().equals("short")) {
 
 
-						if (jroutine instanceof YetiJavaMethod) {
-							YetiJavaMethod m = (YetiJavaMethod) jroutine;
-							if (m.isStatic) {
-								call = ""
-										+ m.getOriginatingModule()
-										.getModuleName() + "."
-										+ m.getMethod().getName() + "("
+						YetiJavaRoutine jroutine = (YetiJavaRoutine) oldroutine;
 
-										+ args + "i";
+						//*****************************************************************************		
+						if (jroutine instanceof YetiJavaConstructor) {
+							YetiJavaConstructor c = (YetiJavaConstructor) jroutine;
+							call = "new "
+									+ c.getOriginatingModule().getModuleName()
+									+ "(" + args + "i";
+							argumentFirst = oldyt[j1].getValue().toString();
 
-								for (int k = j1 + 1; k < oldyt.length; k++) {
+							for (int k = j1 + 1; k < oldyt.length; k++) {
+								call = call + ","
+										+ "j";
 
-									call = call + "," + oldyt[k].getValue().toString();
+								if (oldyt.length == 1 ){
+									argumentSecond	= "" + 0;
 
 								}
-								call = call + ")";
-							} else {
-								call = "variable" + "."
-										+ m.getMethod().getName() + "("
-										+ args + "i";
-								for (int k = j1 + 1; k < oldyt.length; k++) {
-
-									call = call + "," + oldyt[k].getValue().toString();
-
+								else{
+									argumentSecond	= oldyt[k].getValue().toString();
 								}
-								call = call + ")";	
+
+							}
+							call = call + ")";
+
+						} else {
+							//******************************************************************************
+
+							if (jroutine instanceof YetiJavaMethod) {
+								YetiJavaMethod m = (YetiJavaMethod) jroutine;
+								if (m.isStatic) {
+
+									call = ""
+											+ m.getOriginatingModule()
+											.getModuleName() + "."
+											+ m.getMethod().getName() + "("
+
+								+ args + "i";
+									argumentFirst = oldyt[j1].getValue().toString();
+
+									for (int k = j1 + 1; k < oldyt.length; k++) {
+
+										call = call + "," + "j";
+
+										if (oldyt.length == 1 ){
+
+											argumentSecond	= "" + 0;
+
+										}
+										else{
+											argumentSecond	= oldyt[k].getValue().toString();
+
+										}
+									}
+									call = call + ")";
+								} 
+
+
+								//******************************************************************************
+								else {
+									call = "variable" + "."
+											+ m.getMethod().getName() + "("
+											+ args + "i";
+									argumentFirst = oldyt[j1].getValue().toString();
+
+
+									for (int k = 0 + 1; k < oldyt.length; k++) {
+
+										call = call + "," + "j";
+
+										if (oldyt.length == 1 ){
+											argumentSecond	= "" + 0;
+
+										}
+										else{
+											argumentSecond	= oldyt[k].getValue().toString();
+
+										}
+									}
+									call = call + ")";	
+								}
+								//*****************************************************************************
+
 							}
 
 						}
+
+
+						String programBegin = programBeginPart();
+						String programEnd = programEndPart();
+						String programEnd2 = programEndPart2();
+
+						String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
+
+						generateProgram(completeProgram);
+
+						//	args = args + yc.getValue() + ",";
+
+
 					}
-
-
-					String programBegin = programBeginPart();
-					String programMiddle = programMiddlePart();
-					String programEnd = programEndPart();
-					String programEnd2 = programEndPart2();
-
-					String generatedProgram = programBegin + call + programMiddle  + programEnd  + "   " + call + ";" + programEnd2;
-
-					generateProgram(generatedProgram);
-
-					argumentTwo = ""+yc.getValue();
-					args = args + yc.getValue() + ",";
-
 
 				}
 
+
 			}
-
-
-		}
-
+		
+	}
 		oldyt = super.getAllCards(routine);
 		oldroutine = routine;
 		return oldyt;
 	}
-
+	
+	
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
 
 	public String programBeginPart(){
-		String temp = "import java.io.*;\n"
-				+ "import java.util.*;\n\n" 
-				+ "public class C"
-				+  uid++
-				+ " \n{\n" 
-				+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
-				+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n"
-				+ " public static boolean startedByFailing = false;\n"
-				+ " public static boolean isCurrentlyFailing = false;\n"
+		
+		String temp = "/** YETI - York Extensible Testing Infrastructure \n"  
+				+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
+				+ "All rights reserved.\n"
+				+ "Redistribution and use in source and binary forms, with or without\n"
+				+ "modification, are permitted provided that the following conditions are met:\n"
+				+ "1. Redistributions of source code must retain the above copyright\n"
+				+ "notice, this list of conditions and the following disclaimer.\n"
+				+ "2. Redistributions in binary form must reproduce the above copyright\n"
+				+ "notice, this list of conditions and the following disclaimer in the\n"
+				+ "documentation and/or other materials provided with the distribution.\n"
+				+ "3. All advertising materials mentioning features or use of this software\n"
+				+ "must display the following acknowledgement:\n"
+				+ "This product includes software developed by the University of York.\n"
+				+ "4. Neither the name of the University of York nor the\n"
+				+ "names of its contributors may be used to endorse or promote products\n"
+				+ "derived from this software without specific prior written permission.\n"
 
-				//+ " public static int start = Integer.MIN_VALUE;\n"
-				//+ " public static int stop = Integer.MAX_VALUE;\n\n"
-				// reduce to 80 because the other one take a lot of time to process. In final version the value will be changed to max.
-				+ " public static int start = " + lowerLimit + "\n;"
-				+ " public static int stop = "+ upperLimit +";\n\n"
+			+ "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDER ''AS IS'' AND ANY\n"
+			+ "EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED\n"
+			+ "WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\n"
+			+ "DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY\n"
+			+ "DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES\n"
+			+ "(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;\n"
+			+ "LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND\n"
+			+ "ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT\n"
+			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
+			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
+			+ "**/\n"
+			+ " // The value of currentErrors is " + currentErrors++ + "\n"
+			+ "import java.io.*;\n"
+			+ "import java.util.*;\n\n" 
+			+ "public class C"
+			+  uid++
+			+ " \n{\n"
+			+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+
+				+ " public static int range = "+ rangeToPlot + ";\n\n"
+
+				+ " public static int xValue = " + argumentFirst  +";\n" 
+				+ " public static int yValue = " + argumentSecond +";\n\n"
+
+				+ " public static int starterX = xValue - range;\n" 
+				+ " public static int stopperX = xValue + range;\n"
+				+ " public static int starterY = yValue - range;\n"
+				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
+				
+				// This is commented because it create an extra outer point on the graph.
+//				+ "   checkFirstAndLastValue(starterX, starterY);\n"
+				
+				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
+				+ "       checkFirstAndLastValue(i , yValue);\n"
+				+ "   }\n";	
+	
+				if (oldyt.length == 2){
+				temp = temp + "   for (int j = starterY + 1; j < stopperY; j++) {\n"
+				+ "       checkFirstAndLastValue(xValue , j);\n"
+				+ "   }\n";
+				}
+				// This is commented because it create an extra outer point on the graph.	
+//				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
+				
+				temp = temp + "   printRangeFail();\n" 
+				+ "   printRangePass();\n" 
+				+ " }\n";
 
-				+ "  checkStartAndStopValue(start);\n"
-
-				+ "  for (int i=start+1;i<stop;i++){\n   try{\n";
 		return temp;
+
 	}
-
-	//%%%%%%%%%%%%%%%%%%%%%%%%%   MIDDLE PART %%%%%%%%%%%%%%%%%%%%//
-
-
-	public String programMiddlePart(){
-		String temp1 = 
-				";\n "
-						+ "  if (isCurrentlyFailing) \n"
-						+ "  {\n"
-						+ "fail.add(i-1);\n";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp1 = temp1 + "fail.add(0);\n"; 
-		}
-		else {
-			temp1 = temp1 +"fail.add("+argumentTwo+");\n";
-		}
-
-		temp1	=	temp1 + "pass.add(i);\n";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp1 = temp1 + "pass.add(0);\n";
-		}
-		else {
-			temp1 = temp1 + "pass.add("+argumentTwo+");\n";
-		}
-
-		temp1	=	temp1 
-				+ "  isCurrentlyFailing=false; \n"
-				+ "  } \n } \n"
-				+ "  catch(Throwable t) { \n"
-				+ "  if (!isCurrentlyFailing) \n"
-				+ "  {\n"
-				+ "pass.add(i-1);\n";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp1 = temp1 + "pass.add(0);\n";
-		}
-		else {
-			temp1 = temp1 + "pass.add("+argumentTwo+");\n";
-		}
-
-		temp1	=	temp1 + "fail.add(i);\n";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp1 = temp1 + "fail.add(0);\n";
-		}
-		else {
-			temp1 = temp1 + "fail.add("+argumentTwo+");\n";
-		}
-
-		temp1	=	temp1 
-				+ "isCurrentlyFailing = true;\n"
-				+ " }  \n } \n } \n"
-				+ " checkStartAndStopValue(stop); \n"
-				+ "  printRangeFail(); \n"
-				+ "  printRangePass();  \n"
-				+ "  }\n";
-
-
-		return temp1;
-	}
-
-
 
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
 
 	public String programEndPart(){
-		String temp3 = "\n public static void printRangeFail() { \n"
+		String temp3 = "\n // It prints the range of fail values \n"
+				+ "public static void printRangeFail() { \n"
 				+"   try { \n"
-				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
-				+"   File fw = new File(\"Fail.txt\"); \n"
-				+"   if (fw.exists() == false) { \n"
-				+" 	 fw.createNewFile(); \n"	
-				+"   }\n"
-				+"	 PrintWriter pw = new PrintWriter(new FileWriter (fw, true));"
-				+"   for (Integer i1 : fail) { \n"
-				+"      pw.append(i1+\"\\n\"); \n"
+				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
+				+"     File fw = new File(\"Fail.txt\"); \n"
+				+"     if (fw.exists() == false) { \n"
+				+" 	     fw.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw = new PrintWriter(new FileWriter (fw, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i1 : fail) { \n"
+				+"        pw.append(i1+\"\\n\"); \n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\"\\n\");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw.close(); \n"
+				+"   } catch(Exception e) { \n"
+				+"     System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
-				+"   pw.close(); \n"
+				+" } \n"
+				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
+				+ "// It prints the range of pass values \n"
+				+" public static void printRangePass() { \n"
+				+"   try { \n"
+				+"     File fw1 = new File(\"Pass.txt\"); \n"
+				+"     if (fw1.exists() == false) { \n"
+				+" 	     fw1.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i2 : pass) { \n"
+				+"        pw1.append(i2+\"\\n\");\n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\" \");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw1.close(); \n"
 				+"   } \n"
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
 				+"   } \n"
 				+" } \n"
-				//+"   FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
-				+"  public static void printRangePass() { \n"
-				+"   try { \n"
-				+"   File fw1 = new File(\"Pass.txt\"); \n"
-				+"   if (fw1.exists() == false) { \n"
-				+" 	 fw1.createNewFile(); \n"	
-				+"   }\n"
-				+"	 PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));"
-				+"   for (Integer i2 : pass) { \n"
-				+"      pw1.append(i2+\"\\n\");\n"
-				+"   } \n"
-				+"   pw1.close(); \n"
-				+"   } \n"
-				+"   catch(Exception e) { \n"
-				+"   System.err.println(\" Error : e.getMessage() \"); \n"
-				+"   } \n"
-				+" } \n"
-				+"   public static void checkStartAndStopValue(int i) { \n"
+				+" public static void checkFirstAndLastValue(int i, int j) { \n"
 				+"   try { \n";
 		return temp3;
 	}
@@ -431,33 +486,17 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 
 	public String programEndPart2(){
-		String temp4 = "\n pass.add(i); \n";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp4 = temp4 + "pass.add(0);\n";
-		}
-		else {
-			temp4 = temp4 + " pass.add(" + argumentTwo + ");\n";
-		}
-
-		temp4	=	temp4
-				+  "  } \n"
-				+  "  catch (Throwable t) { \n"
-				+  "  startedByFailing = true; \n"
-				+  "  isCurrentlyFailing = true; \n"
-				+  "  fail.add(i); \n ";
-		// this statement will add second argument to the arraylist to be used for x y graphs.
-		// its sequence is x then 0 in case of empty and value of y if not empty
-		if (argumentTwo.equals("")){
-			temp4 = temp4 + "fail.add(0);\n";
-		}
-		else {
-			temp4 = temp4 + " fail.add(" + argumentTwo + ");\n";
-		}
-
-		temp4	=	temp4
-				+ " } \n } \n}";
+		String temp4 = "; \n"
+				+ "     pass.add(i); \n"
+				+ "     pass.add(j); \n"
+				+ "   } catch (Throwable t) { \n"
+				+ "    fail.add(i); \n "
+				+ "    fail.add(j); \n"
+				+ "    failureDomain(i,j);\n"
+				+ "   } \n } "
+				+ " public static void failureDomain(int i, int j){}\n"
+				+ "\n}"
+				;
 
 		return temp4;
 	}
@@ -469,16 +508,18 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 					+ ".java");
 			fos.println(program);
 
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+
 	}
+
+
 
 
 	@Override
 	public String getName() {
-		return "ADFD strategy";
+		return "ADFD++ strategy";
 	}
 
 }

@@ -97,7 +97,7 @@ public class LogGrapher1 {
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 		chartPanel.setPreferredSize(new Dimension(800, 600));
 		chartPanel.setVisible(true);
-		ADFDPlus.panel3.add(chartPanel);
+		ADFDLauncher.panel3.add(chartPanel);
 	}
 
 

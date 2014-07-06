@@ -97,7 +97,7 @@ public class LogGrapher2 {
 		ChartPanel chartPanel = new ChartPanel(chart, false);
 		chartPanel.setPreferredSize(new Dimension(900, 700));
 		chartPanel.setVisible(true);
-		ADFDPlus.panel3.add(chartPanel);
+		ADFDLauncher.panel3.add(chartPanel);
 	}
 
 
@@ -109,11 +109,11 @@ public class LogGrapher2 {
 	 */
 	private XYDataset createDataset() {
 		//int a = 1000;
-		
-		
+
+
 		final XYSeriesCollection dataset = new XYSeriesCollection();
 		//JOptionPane.showMessageDialog(null, a, "the file f", JOptionPane.CANCEL_OPTION);
-		
+
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
 		int passValues[] = GraphDataScanner.readPassDataFromFile();	
 
@@ -198,12 +198,18 @@ public class LogGrapher2 {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
-		//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.	
+		if (ADFDLauncher.labeledChart == true){
+			XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+			renderer.setBaseItemLabelGenerator(generator);
+			renderer.setBaseItemLabelsVisible(true);
+		}
+		else {
+			XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+			renderer.setBaseItemLabelGenerator(generator);
+			renderer.setBaseItemLabelsVisible(true);
+		}
 
-		renderer.setBaseItemLabelGenerator(generator);
-		renderer.setBaseItemLabelsVisible(true);
 
 		return chart;
 	}

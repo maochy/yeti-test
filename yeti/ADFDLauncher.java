@@ -35,6 +35,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 import yeti.strategies.YetiADFDPlusStrategy;
+import yeti.strategies.YetiADFDStrategy;
 
 /**
 
@@ -99,9 +100,14 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * export PATH
  *
  */
-public class ADFDPlus extends JFrame{
+public class ADFDLauncher extends JFrame{
 
 	private static final boolean DEBUG = false;
+	
+	/**
+	 * If the labeled Chart checkbox is selected then chart will be generated with labels.
+	 */
+	public static boolean labeledChart = false;
 
 	/**
 	 * panel1 is the left panel in the GUI which contains all the controls including Labels, textfields, buttons etc.
@@ -328,7 +334,7 @@ public class ADFDPlus extends JFrame{
 	/**
 	 * Constructor of the class to create frame and draw components on the frame. 
 	 */
-	public ADFDPlus(){
+	public ADFDLauncher(){
 		// A method is added to automatically delete the unwanted files before the next run.
 		deleteOldTestFiles();
 		this.setTitle("Yeti Launcher");
@@ -393,7 +399,7 @@ public class ADFDPlus extends JFrame{
 	 */
 	public static void main(String[] args){
 
-		new ADFDPlus();
+		new ADFDLauncher();
 
 	}
 
@@ -483,7 +489,7 @@ public class ADFDPlus extends JFrame{
 					hideItems();
 				} else if (strategy_ComboBox.getSelectedItem().equals("ADFD")){
 					strategy = "-ADFD";
-					hideItems();
+					unhideItems();
 				}
 				else
 				{
@@ -520,7 +526,7 @@ public class ADFDPlus extends JFrame{
 		/////////// GUI Label, check box and ActionListener //////////////
 		//////////////////////////////////////////////////////////////////
 
-		JLabel gui_Label = new JLabel("GUI:");
+		JLabel gui_Label = new JLabel("Test GUI:");
 		gbc.gridx = 0;
 		gbc.gridy = 4;
 		panel1.add(gui_Label, gbc);
@@ -543,7 +549,7 @@ public class ADFDPlus extends JFrame{
 		/////////// Logs Label, check box and ActionListener /////////////
 		//////////////////////////////////////////////////////////////////
 
-		JLabel logs_Label = new JLabel("Logs:");
+		JLabel logs_Label = new JLabel("Test logs:");
 		gbc.gridx = 0;
 		gbc.gridy = 5;
 		panel1.add(logs_Label, gbc);
@@ -565,23 +571,51 @@ public class ADFDPlus extends JFrame{
 
 		});
 
+		
+		//////////////////////////////////////////////////////////////////
+		/////////// Logs Label, check box and ActionListener /////////////
+		//////////////////////////////////////////////////////////////////
+
+		JLabel chart_Label = new JLabel("Labeled Chart:");
+		gbc.gridx = 0;
+		gbc.gridy = 6;
+		panel1.add(chart_Label, gbc);
+
+		final JCheckBox chart_label_CheckBox = new JCheckBox();
+		chart_label_CheckBox.setSelected(true);
+		gbc.gridx = 1;
+		gbc.gridy = 6;
+		panel1.add(chart_label_CheckBox, gbc);
+
+		logs_CheckBox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (chart_label_CheckBox.isSelected()){
+					labeledChart = true;
+				}
+				else {
+					labeledChart = false;				}
+			} 
+
+		});
+		
+		
 		//////////////////////////////////////////////////////////////////
 		/////////// Browse Label, Button, TextField and ActionListener ///
 		//////////////////////////////////////////////////////////////////
 
 		JLabel browse_Label = new JLabel("Test File:");
 		gbc.gridx = 0;
-		gbc.gridy = 6;
+		gbc.gridy = 7;
 		panel1.add(browse_Label, gbc);
 
 		JButton browse_Button = new JButton("Browse");
 		gbc.gridx = 1;
-		gbc.gridy = 6;
+		gbc.gridy = 7;
 		panel1.add(browse_Button, gbc);
 
 		browse_TextField = new JTextField("yeti.test.YetiTest");
 		gbc.gridx = 1;
-		gbc.gridy = 7;
+		gbc.gridy = 8;
 		panel1.add(browse_TextField, gbc);
 
 		browse_Button.addActionListener(new ActionListener() {
@@ -620,7 +654,7 @@ public class ADFDPlus extends JFrame{
 
 		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
-		gbc.gridy = 8;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(range, gbc);
 
@@ -628,7 +662,7 @@ public class ADFDPlus extends JFrame{
 		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
 		rangeValue_TextField = new JTextField("" + 5);
 		gbc.gridx = 1;
-		gbc.gridy = 8;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(rangeValue_TextField, gbc);	
 
@@ -640,13 +674,13 @@ public class ADFDPlus extends JFrame{
 
 		generated_Label = new JLabel("Count Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 9;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(generated_Label, gbc);
 
 		generated_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 9;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
@@ -659,12 +693,12 @@ public class ADFDPlus extends JFrame{
 
 		compile_Label = new JLabel("Compile Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 10;
+		gbc.gridy = 11;
 		panel1.add(compile_Label, gbc);
 
 		compile_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 10;
+		gbc.gridy = 11;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
@@ -681,18 +715,18 @@ public class ADFDPlus extends JFrame{
 
 		execute_Label = new JLabel("Execute Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 11;
+		gbc.gridy = 12;
 		panel1.add(execute_Label, gbc);
 
 		execute_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 11;
+		gbc.gridy = 12;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
 		execute_ProgressBar = new JProgressBar(0,100);
 		gbc.gridx = 1;
-		gbc.gridy = 12;
+		gbc.gridy = 13;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(execute_ProgressBar, gbc);
@@ -706,7 +740,7 @@ public class ADFDPlus extends JFrame{
 
 		plot1_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
-		gbc.gridy = 13;
+		gbc.gridy = 14;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot1_Button, gbc);
@@ -759,7 +793,7 @@ public class ADFDPlus extends JFrame{
 
 		JLabel emptyLabel1 = new JLabel("");
 		gbc.gridx = 0;
-		gbc.gridy = 14;
+		gbc.gridy = 15;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(emptyLabel1, gbc);
@@ -769,7 +803,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton screen_capture_Button = new JButton("Screen Capture at any time");
 		gbc.gridx = 1;
-		gbc.gridy = 15;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(screen_capture_Button, gbc);
@@ -802,7 +836,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 16;
+		gbc.gridy = 17;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -832,7 +866,7 @@ public class ADFDPlus extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 16;
+		gbc.gridy = 17;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
@@ -895,6 +929,7 @@ public class ADFDPlus extends JFrame{
 		//		YetiADFDPlusStrategy.lowerLimit = rangeValue_TextField.getText();
 		//		YetiADFDPlusStrategy.upperLimit = maxValue_TextField.getText();
 		int temp = Integer.parseInt(rangeValue_TextField.getText());
+		YetiADFDStrategy.rangeToPlot +=  temp;
 		YetiADFDPlusStrategy.rangeToPlot +=  temp;
 		//			JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 		command = list.toArray(new String[list.size()]);
@@ -960,7 +995,7 @@ public class ADFDPlus extends JFrame{
 
 
 
-	ADFDPlus.panel3.validate();
+	ADFDLauncher.panel3.validate();
 	panel3.add(scrolling1,BorderLayout.SOUTH);
 
 	}
@@ -1139,7 +1174,8 @@ public class ADFDPlus extends JFrame{
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
 				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
 		
-		if(YetiADFDPlusStrategy.twoDimProgram == 2){
+		// I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
+		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2){
 			daikonOptions = daikonOptions + "|^j$";
 		}
 		

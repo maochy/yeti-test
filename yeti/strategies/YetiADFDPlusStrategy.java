@@ -406,13 +406,13 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
-				+ "   checkFirstAndLastValue(starterX, starterY);\n"
+//				+ "   checkFirstAndLastValue(starterX, starterY);\n"
 				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
 				+ "     for (int j = starterY + 1; j < stopperY; j++) {\n"
 				+ "       checkFirstAndLastValue(i,j);\n"
 				+ "     }\n"
 				+ "   }\n"
-				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
+//				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
 				+ "   printRangeFail();\n" 
 				+ "   printRangePass();\n" 
 				+ " }\n";
