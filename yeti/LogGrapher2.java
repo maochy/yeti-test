@@ -197,21 +197,27 @@ public class LogGrapher2 {
 		// label the points
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
+		
+		
+//		
+//		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.	
+//		if (ADFDLauncher.labeledChart == true){
+//			JOptionPane.showMessageDialog(null, ADFDLauncher.labeledChart, "true = ADFDLauncher.labeledChart", JOptionPane.CANCEL_OPTION);
+//			generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		}
+//		else{
+//			JOptionPane.showMessageDialog(null, ADFDLauncher.labeledChart, "false = ADFDLauncher.labeledChart", JOptionPane.CANCEL_OPTION);
+//			generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+//
+//		}
 
-		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.	
-		if (ADFDLauncher.labeledChart == true){
-			XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
-			renderer.setBaseItemLabelGenerator(generator);
-			renderer.setBaseItemLabelsVisible(true);
-		}
-		else {
-			XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
-			renderer.setBaseItemLabelGenerator(generator);
-			renderer.setBaseItemLabelsVisible(true);
-		}
-
-
+//		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
+		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+		renderer.setBaseItemLabelGenerator(generator);
+		renderer.setBaseItemLabelsVisible(true);
 		return chart;
+
 	}
 
 }

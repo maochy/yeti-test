@@ -105,11 +105,6 @@ public class ADFDLauncher extends JFrame{
 	private static final boolean DEBUG = false;
 	
 	/**
-	 * If the labeled Chart checkbox is selected then chart will be generated with labels.
-	 */
-	public static boolean labeledChart = false;
-
-	/**
 	 * panel1 is the left panel in the GUI which contains all the controls including Labels, textfields, buttons etc.
 	 */
 	private JPanel panel1 = new JPanel();
@@ -199,6 +194,12 @@ public class ADFDLauncher extends JFrame{
 	 * time2_ComboBox displays the options of minutes or seconds from which user can select for the current test session. 
 	 */
 	JComboBox		time2_ComboBox;
+	
+	
+	/**
+	 * chart_label_CheckBox displays the options labeled chart or without labeled. 
+	 */
+	JCheckBox 		chart_label_CheckBox;
 
 	/**
 	 * testFilePathInitial contains the path to the directory from which the .jar is executed. 
@@ -573,49 +574,22 @@ public class ADFDLauncher extends JFrame{
 
 		
 		//////////////////////////////////////////////////////////////////
-		/////////// Logs Label, check box and ActionListener /////////////
-		//////////////////////////////////////////////////////////////////
-
-		JLabel chart_Label = new JLabel("Labeled Chart:");
-		gbc.gridx = 0;
-		gbc.gridy = 6;
-		panel1.add(chart_Label, gbc);
-
-		final JCheckBox chart_label_CheckBox = new JCheckBox();
-		chart_label_CheckBox.setSelected(true);
-		gbc.gridx = 1;
-		gbc.gridy = 6;
-		panel1.add(chart_label_CheckBox, gbc);
-
-		logs_CheckBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (chart_label_CheckBox.isSelected()){
-					labeledChart = true;
-				}
-				else {
-					labeledChart = false;				}
-			} 
-
-		});
-		
-		
-		//////////////////////////////////////////////////////////////////
 		/////////// Browse Label, Button, TextField and ActionListener ///
 		//////////////////////////////////////////////////////////////////
 
 		JLabel browse_Label = new JLabel("Test File:");
 		gbc.gridx = 0;
-		gbc.gridy = 7;
+		gbc.gridy = 6;
 		panel1.add(browse_Label, gbc);
 
 		JButton browse_Button = new JButton("Browse");
 		gbc.gridx = 1;
-		gbc.gridy = 7;
+		gbc.gridy = 6;
 		panel1.add(browse_Button, gbc);
 
 		browse_TextField = new JTextField("yeti.test.YetiTest");
 		gbc.gridx = 1;
-		gbc.gridy = 8;
+		gbc.gridy = 7;
 		panel1.add(browse_TextField, gbc);
 
 		browse_Button.addActionListener(new ActionListener() {
@@ -654,7 +628,7 @@ public class ADFDLauncher extends JFrame{
 
 		JLabel range = new JLabel("Domain Range:");
 		gbc.gridx = 0;
-		gbc.gridy = 9;
+		gbc.gridy = 8;
 		gbc.gridwidth = 1;
 		panel1.add(range, gbc);
 
@@ -662,7 +636,7 @@ public class ADFDLauncher extends JFrame{
 		//		minValue_TextField = new JTextField("" + Integer.MIN_VALUE);
 		rangeValue_TextField = new JTextField("" + 5);
 		gbc.gridx = 1;
-		gbc.gridy = 9;
+		gbc.gridy = 8;
 		gbc.gridwidth = 1;
 		panel1.add(rangeValue_TextField, gbc);	
 
@@ -674,13 +648,13 @@ public class ADFDLauncher extends JFrame{
 
 		generated_Label = new JLabel("Count Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 10;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(generated_Label, gbc);
 
 		generated_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 10;
+		gbc.gridy = 9;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
@@ -693,12 +667,12 @@ public class ADFDLauncher extends JFrame{
 
 		compile_Label = new JLabel("Compile Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 11;
+		gbc.gridy = 10;
 		panel1.add(compile_Label, gbc);
 
 		compile_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 11;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
@@ -715,18 +689,18 @@ public class ADFDLauncher extends JFrame{
 
 		execute_Label = new JLabel("Execute Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 12;
+		gbc.gridy = 11;
 		panel1.add(execute_Label, gbc);
 
 		execute_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 12;
+		gbc.gridy = 11;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
 		execute_ProgressBar = new JProgressBar(0,100);
 		gbc.gridx = 1;
-		gbc.gridy = 13;
+		gbc.gridy = 12;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(execute_ProgressBar, gbc);
@@ -740,7 +714,7 @@ public class ADFDLauncher extends JFrame{
 
 		plot1_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
-		gbc.gridy = 14;
+		gbc.gridy = 13;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot1_Button, gbc);
@@ -793,7 +767,7 @@ public class ADFDLauncher extends JFrame{
 
 		JLabel emptyLabel1 = new JLabel("");
 		gbc.gridx = 0;
-		gbc.gridy = 15;
+		gbc.gridy = 14;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(emptyLabel1, gbc);
@@ -803,7 +777,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton screen_capture_Button = new JButton("Screen Capture at any time");
 		gbc.gridx = 1;
-		gbc.gridy = 16;
+		gbc.gridy = 15;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(screen_capture_Button, gbc);
@@ -836,7 +810,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 17;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -866,7 +840,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 17;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
@@ -896,6 +870,7 @@ public class ADFDLauncher extends JFrame{
 	 */
 
 	public void runTest() {
+	 
 
 		fileName = "-testModules=" + browse_TextField.getText();
 		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
