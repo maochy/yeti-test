@@ -211,17 +211,17 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 		if(currentErrors > oldFaults1){
 
-		oldFaults1 = currentErrors;
+			oldFaults1 = currentErrors;
 
 
 			// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
-//			if (currentErrors == 1 && oldyt.length <= 2) {
+			//			if (currentErrors == 1 && oldyt.length <= 2) {
 			if(oldyt.length == 2)
 			{
 				twoDimProgram = 2;
 			}
-			
-			
+
+
 			if (oldyt.length <= 2) {
 
 				YetiLog.printDebugLog("found bug in the strategy", this);
@@ -348,18 +348,18 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 
 			}
-		
-	}
+
+		}
 		oldyt = super.getAllCards(routine);
 		oldroutine = routine;
 		return oldyt;
 	}
-	
-	
+
+
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
 
 	public String programBeginPart(){
-		
+
 		String temp = "/** YETI - York Extensible Testing Infrastructure \n"  
 				+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
 				+ "All rights reserved.\n"
@@ -388,7 +388,6 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
 			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
 			+ "**/\n"
-			+ " // The value of currentErrors is " + currentErrors++ + "\n"
 			+ "import java.io.*;\n"
 			+ "import java.util.*;\n\n" 
 			+ "public class C"
@@ -402,29 +401,61 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
-				+ " public static int starterX = xValue - range;\n" 
-				+ " public static int stopperX = xValue + range;\n"
-				+ " public static int starterY = yValue - range;\n"
+				+ " public static int starterX = xValue - (range/2);\n" 
+				+ " public static int stopperX = 0;\n"
+				+ " public static int starterY = yValue - (range/2);\n"
 				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
 				
-				// This is commented because it create an extra outer point on the graph.
-//				+ "   checkFirstAndLastValue(starterX, starterY);\n"
-				
-				+ "   for (int i=starterX + 1; i < stopperX; i++) {\n"
-				+ "       checkFirstAndLastValue(i , yValue);\n"
-				+ "   }\n";	
-	
-				if (oldyt.length == 2){
-				temp = temp + "   for (int j = starterY + 1; j < stopperY; j++) {\n"
-				+ "       checkFirstAndLastValue(xValue , j);\n"
-				+ "   }\n";
-				}
-				// This is commented because it create an extra outer point on the graph.	
-//				+ "   checkFirstAndLastValue(stopperX, stopperY);\n" 
-				
-				temp = temp + "   printRangeFail();\n" 
+				+ "   int rangeLocalx = 1; \n"
+				+ "   int i = starterX; \n"
+				+ "   boolean localFlagX = false;\n"
+				+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
+				+ "   System.out.println(\"The value of i is \" + i); \n"
+				+ "   checkFirstAndLastValue(i , yValue);\n"
+				+ "   if ((i == 2147483647) && (rangeLocalx < range)){\n"
+				+ "   localFlagX = true; \n"
+				+ "   break; }\n"
+				+ "   rangeLocalx++; \n"
+				+ "   i++; \n"
+				+ "   }\n"
+				+ "   if (localFlagX) { \n"
+				+ "   while(rangeLocalx <= range) {\n"
+				+ "   i = 2147483647 - rangeLocalx; \n"
+				+ "   System.out.println(\"The value of i is \" + i); \n"
+				+ "	  checkFirstAndLastValue(i , yValue);\n"
+				+ "   rangeLocalx++;\n"
+				+ "   }\n"
+				+ "}\n";
+						
+
+		if (oldyt.length == 2){
+			temp = temp + "   int rangeLocaly = 1; \n"
+					+ "   int j = starterY; \n"
+					+ "   boolean localFlagY = false;\n"
+					+ "   while((j <= 2147483647) && (rangeLocaly <= range)) { \n"
+					+ "   System.out.println(\"The value of j is \" + j); \n"
+					+ "   checkFirstAndLastValue(xValue , j);\n"
+					+ "   if ((j == 2147483647) && (rangeLocaly < range)){\n"
+					+ "   localFlagY = true; \n"
+					+ "   break; }\n"
+					+ "   rangeLocaly++; \n"
+					+ "   j++; \n"
+					+ "   }\n"
+					+ "   if (localFlagY) { \n"
+					+ "   while(rangeLocaly <= range) {\n"
+					+ "   j = 2147483647 - rangeLocaly; \n"
+					+ "   System.out.println(\"The value of j is \" + j); \n"
+					+ "	  checkFirstAndLastValue(xValue , j);\n"
+					+ "   rangeLocaly++;\n"
+					+ "   }\n"
+					+ "}\n";
+			
+		}
+
+
+		temp = temp		+ "   printRangeFail();\n" 
 				+ "   printRangePass();\n" 
 				+ " }\n";
 

@@ -103,7 +103,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 public class ADFDLauncher extends JFrame{
 
 	private static final boolean DEBUG = false;
-	
+
 	/**
 	 * panel1 is the left panel in the GUI which contains all the controls including Labels, textfields, buttons etc.
 	 */
@@ -128,7 +128,7 @@ public class ADFDLauncher extends JFrame{
 	 * panel5 is the right panel in the GUI which contains the invariants for a SUT generated at the end of execution.
 	 */
 	private JTextArea panel5 = new JTextArea();
-	
+
 	/**
 	 * scrolling is a scrollbar added to panel3 to scroll horizontally when multiple graphs are generated.
 	 */
@@ -165,6 +165,7 @@ public class ADFDLauncher extends JFrame{
 	JTextField		rangeValue_TextField;
 	//	JTextField		maxValue_TextField;
 
+
 	/**
 	 * plot1_Button which is labeled as Draw Fault Domain starts the testing process.
 	 */
@@ -194,8 +195,8 @@ public class ADFDLauncher extends JFrame{
 	 * time2_ComboBox displays the options of minutes or seconds from which user can select for the current test session. 
 	 */
 	JComboBox		time2_ComboBox;
-	
-	
+
+
 	/**
 	 * chart_label_CheckBox displays the options labeled chart or without labeled. 
 	 */
@@ -381,17 +382,17 @@ public class ADFDLauncher extends JFrame{
 
 		}
 	}
-	
-	
-	
+
+
+
 	/**
 	 *  Method to reset the static variables.
 	 *  
 	 */
 	public void resetStaticVariables(){
-		
+
 	}
-	
+
 
 
 	/**
@@ -572,7 +573,7 @@ public class ADFDLauncher extends JFrame{
 
 		});
 
-		
+
 		//////////////////////////////////////////////////////////////////
 		/////////// Browse Label, Button, TextField and ActionListener ///
 		//////////////////////////////////////////////////////////////////
@@ -642,19 +643,25 @@ public class ADFDLauncher extends JFrame{
 
 
 
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+		//////////////////////////////////////////////////////////////////
+
+
+
 		/////////////////////////////////////////////////////////////////////////////////////
 		////// Button, TextField and action listener for the number of generated Files //////
 		/////////////////////////////////////////////////////////////////////////////////////
 
 		generated_Label = new JLabel("Count Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 9;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(generated_Label, gbc);
 
 		generated_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 9;
+		gbc.gridy = 10;
 		gbc.gridwidth = 1;
 		panel1.add(generated_TextField, gbc);
 
@@ -667,12 +674,12 @@ public class ADFDLauncher extends JFrame{
 
 		compile_Label = new JLabel("Compile Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 10;
+		gbc.gridy = 11;
 		panel1.add(compile_Label, gbc);
 
 		compile_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 10;
+		gbc.gridy = 11;
 		gbc.gridwidth = 1;
 		panel1.add(compile_TextField, gbc);
 
@@ -689,18 +696,18 @@ public class ADFDLauncher extends JFrame{
 
 		execute_Label = new JLabel("Execute Files:");
 		gbc.gridx = 0;
-		gbc.gridy = 11;
+		gbc.gridy = 12;
 		panel1.add(execute_Label, gbc);
 
 		execute_TextField = new JTextField("");
 		gbc.gridx = 1;
-		gbc.gridy = 11;
+		gbc.gridy = 12;
 		gbc.gridwidth = 1;
 		panel1.add(execute_TextField, gbc);
 
 		execute_ProgressBar = new JProgressBar(0,100);
 		gbc.gridx = 1;
-		gbc.gridy = 12;
+		gbc.gridy = 13;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(execute_ProgressBar, gbc);
@@ -714,7 +721,7 @@ public class ADFDLauncher extends JFrame{
 
 		plot1_Button = new JButton("Draw Fault Domain");
 		gbc.gridx = 1;
-		gbc.gridy = 13;
+		gbc.gridy = 14;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(plot1_Button, gbc);
@@ -767,7 +774,7 @@ public class ADFDLauncher extends JFrame{
 
 		JLabel emptyLabel1 = new JLabel("");
 		gbc.gridx = 0;
-		gbc.gridy = 14;
+		gbc.gridy = 15;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(emptyLabel1, gbc);
@@ -777,7 +784,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton screen_capture_Button = new JButton("Screen Capture at any time");
 		gbc.gridx = 1;
-		gbc.gridy = 15;
+		gbc.gridy = 16;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(screen_capture_Button, gbc);
@@ -810,7 +817,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton help_Button = new JButton("Help");
 		gbc.gridx = 0;
-		gbc.gridy = 16;
+		gbc.gridy = 17;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(help_Button, gbc);
@@ -840,7 +847,7 @@ public class ADFDLauncher extends JFrame{
 
 		JButton exit_Button = new JButton("Exit");
 		gbc.gridx = 1;
-		gbc.gridy = 16;
+		gbc.gridy = 17;
 		gbc.gridwidth = 1;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel1.add(exit_Button, gbc);
@@ -870,7 +877,7 @@ public class ADFDLauncher extends JFrame{
 	 */
 
 	public void runTest() {
-	 
+
 
 		fileName = "-testModules=" + browse_TextField.getText();
 		time = "-time=" + time1_ComboBox.getSelectedItem().toString();
@@ -943,35 +950,35 @@ public class ADFDLauncher extends JFrame{
 		//		if (countCompileFiles == 1){
 		//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 		//
-//	}
+		//	}
 
-	//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+		//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
 
-	if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-		LogGrapher2 demo = new LogGrapher2("Failure Domains");
+		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
-	}
-	//		else {
-	//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-	//
-	//		}
-
-
-	//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
-	//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
-	//		}
-	//		else 
-	//		{
-	//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
-	//		}
-	//
+		}
+		//		else {
+		//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
+		//
+		//		}
 
 
+		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
+		//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
+		//		}
+		//		else 
+		//		{
+		//			LogGrapher2 demo = new LogGrapher2("Failure Domains");
+		//		}
+		//
 
 
 
-	ADFDLauncher.panel3.validate();
-	panel3.add(scrolling1,BorderLayout.SOUTH);
+
+
+		ADFDLauncher.panel3.validate();
+		panel3.add(scrolling1,BorderLayout.SOUTH);
 
 	}
 
@@ -1077,8 +1084,8 @@ public class ADFDLauncher extends JFrame{
 			String result = executeDaikon();
 			//To display the generated invariants in GUI, panel 5
 			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
-							+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
-			
+					+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
+
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
@@ -1141,23 +1148,27 @@ public class ADFDLauncher extends JFrame{
 	 */
 	public String executeDaikon(){
 		String result = ""; 
-		String daikonOptions = "--config_option daikon.inv.unary.scalar.LowerBound.minimal_interesting=-1000 "+// TODO Adapt to boundaries set up for the failure
-				"--config_option daikon.inv.unary.scalar.LowerBound.maximal_interesting=2000 "+ // TODO
-				"--config_option daikon.inv.unary.scalar.UpperBound.maximal_interesting=2000 "+// TODO
-				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-1000 "+// TODO
+		String daikonOptions = "--config_option daikon.inv.unary.scalar.LowerBound.minimal_interesting=-10000 "+// TODO Adapt to boundaries set up for the failure
+				//		String daikonOptions = "--config_option daikon.inv.unary.scalar.LowerBound.minimal_interesting=Integer.MIN_VALUE "+// TODO Adapt to boundaries set up for the failure
+				"--config_option daikon.inv.unary.scalar.LowerBound.maximal_interesting=20000 "+ // TODO
+				"--config_option daikon.inv.unary.scalar.UpperBound.maximal_interesting=20000 "+// TODO
+				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=-10000 "+// TODO
+				//				"--config_option daikon.inv.unary.scalar.LowerBound.maximal_interesting=Integer.MAX_VALUE "+ // TODO
+				//				"--config_option daikon.inv.unary.scalar.UpperBound.maximal_interesting=Integer.MAX_VALUE "+// TODO
+				//				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=Integer.MIN_VALUE "+// TODO
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
 				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
-		
+
 		// I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
 		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2){
 			daikonOptions = daikonOptions + "|^j$";
 		}
-		
+
 		daikonOptions = daikonOptions + " C";
-		
-		
-		
+
+
+
 		try {
 			int count = 0;
 			// for each file we will execute a session with Daikon
