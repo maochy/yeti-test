@@ -1,12 +1,25 @@
 package yeti;
 
-
 import java.awt.BasicStroke;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+
+import org.jfree.chart.renderer.xy.XYItemRenderer;
+
+import java.awt.EventQueue;
 import java.awt.Stroke;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Random;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -16,10 +29,14 @@ import org.jfree.chart.labels.StandardXYItemLabelGenerator;
 import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.DeviationRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.RefineryUtilities;
+
 import yeti.GraphDataScanner;
 
 /**
@@ -63,23 +80,26 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @date   10 Apr 2014
  *
  */
-public class LogGrapher3 {
+public class ADFDAndADFDPlusGraphGenerator {
 
-
+	/**
+	 * The variable to stop the loop in the case of failing values.
+	 */
+	public int loopHold;
 	/**
 	 * The constructor specifying the chart area and other settings.
 	 *
 	 * @param title of the chart.
 	 */
-	public LogGrapher3 (String title) {
+	public ADFDAndADFDPlusGraphGenerator (String title) {
 		final XYDataset dataset = createDataset();
 		final JFreeChart chart = createChart(dataset);
 		ChartPanel chartPanel = new ChartPanel(chart, false);
-		chartPanel.setPreferredSize(new Dimension(800, 600));
-		//ADFDLauncher.panel3.add(chartPanel);
-		ADFDLauncher.panel3.add(chartPanel);
+		chartPanel.setPreferredSize(new Dimension(900, 700));
 		chartPanel.setVisible(true);
+		ADFDLauncher.panel3.add(chartPanel);
 	}
+
 
 	/**
 	 * This method get the failing and passing values
@@ -88,25 +108,27 @@ public class LogGrapher3 {
 	 * @return the dataset containing the graphs data.
 	 */
 	private XYDataset createDataset() {
+		//int a = 1000;
 
 
 		final XYSeriesCollection dataset = new XYSeriesCollection();
+		//JOptionPane.showMessageDialog(null, a, "the file f", JOptionPane.CANCEL_OPTION);
+
 		int failValues[] = GraphDataScanner.readFailDataFromFile();
+		int passValues[] = GraphDataScanner.readPassDataFromFile();	
+
 		final XYSeries series1 = new XYSeries("Failing input");
-		for (int i =0; i < failValues.length; i=i+2 ){
-			series1.add((double)failValues[i],0);
-			series1.add((double)failValues[i+1],0);
-			series1.add((double)failValues[i+1],null);
-			System.out.println("added fail: "+failValues[i]+"->"+failValues[i+1]);
+		final XYSeries series2 = new XYSeries("Passing input");
+
+		for (int j =0; j < passValues.length; j=j+2){
+			series2.add((double)passValues[j], (double)passValues[j+1]);
 		}
 
-		final XYSeries series2 = new XYSeries("Passing input");
-		int passValues[] = GraphDataScanner.readPassDataFromFile();
-		for (int j =0; j < passValues.length; j=j+2){
-			series2.add((double)passValues[j],0);
-			series2.add((double)passValues[j+1],0);
-			series2.add((double)passValues[j+1],null);
-			System.out.println("added pass: "+passValues[j]+"->"+passValues[j+1]);
+		loopHold = failValues.length;
+		loopHold = loopHold - 1;
+
+		for (int i =0; i < loopHold; i=i+2 ){
+			series1.add((double)failValues[i],(double)failValues[i+1]);
 		}
 
 		dataset.addSeries(series1);
@@ -117,8 +139,9 @@ public class LogGrapher3 {
 	}
 
 
+
 	/**
-	 * This method set various properties of the chart that is to be displayed in the GUI.
+	 * Create a chart.
 	 *
 	 * @param dataset the dataset
 	 * @return the chart
@@ -126,10 +149,10 @@ public class LogGrapher3 {
 	private JFreeChart createChart(XYDataset dataset) {
 
 		// create the chart...
-		JFreeChart chart = ChartFactory.createXYLineChart(
-				"Serial Data", // chart title
-				"Domain", // domain axis label
-				"Range", // range axis label
+		JFreeChart chart = ChartFactory.createScatterPlot(
+				"Pass and Fail Values for the SUT", // chart title
+				"X", // domain axis label
+				"Y", // range axis label
 				dataset,  // initial series
 				PlotOrientation.VERTICAL, // orientation
 				true, // include legend
@@ -144,6 +167,8 @@ public class LogGrapher3 {
 		XYPlot plot = (XYPlot) chart.getPlot();
 		plot.setBackgroundPaint(new Color(0xffffe0));
 		plot.setDomainGridlinesVisible(true);
+		plot.setDomainCrosshairVisible(true);
+		plot.setRangeCrosshairVisible(true);
 		plot.setDomainGridlinePaint(Color.lightGray);
 		plot.setRangeGridlinePaint(Color.lightGray);
 
@@ -155,10 +180,14 @@ public class LogGrapher3 {
 		range.setStandardTickUnits(ticks);
 
 		// render shapes and lines
-		XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer(true, true);
+		XYItemRenderer renderer = plot.getRenderer();
 		plot.setRenderer(renderer);
-		renderer.setBaseShapesVisible(true);
-		renderer.setBaseShapesFilled(true);
+		//		renderer.setBaseShapesVisible(true);
+		//		renderer.setBaseShapesFilled(true);
+
+		// This line is added by Mian to change the colour of series 3 (2 here) from green to red.
+		renderer.setSeriesPaint(2, Color.red);
+
 
 		// set the renderer's stroke
 		Stroke stroke = new BasicStroke(
@@ -168,14 +197,30 @@ public class LogGrapher3 {
 		// label the points
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
+		
+		
+//		
+//		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.	
+//		if (ADFDLauncher.labeledChart == true){
+//			JOptionPane.showMessageDialog(null, ADFDLauncher.labeledChart, "true = ADFDLauncher.labeledChart", JOptionPane.CANCEL_OPTION);
+//			generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		}
+//		else{
+//			JOptionPane.showMessageDialog(null, ADFDLauncher.labeledChart, "false = ADFDLauncher.labeledChart", JOptionPane.CANCEL_OPTION);
+//			generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
+//
+//		}
 
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		// Comment the immidiate first below line and uncomment the following second line if you need labelless chart and vice versa.		
+//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "({1}, {2})", new DecimalFormat("0"),  new DecimalFormat("0") );
+		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "", new DecimalFormat("0"),  new DecimalFormat("0") );
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
-
 		return chart;
+
 	}
 
 }
+
+
+

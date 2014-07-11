@@ -33,7 +33,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
-
+import yeti.strategies.YetiADFDLongStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiADFDStrategy;
 
@@ -230,7 +230,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * strategy contains the strategy which is to be used in the current session. Its default value is set to the ADFD+ strategy. 
 	 */
-	String 		strategy 			 = "-ADFDPlus";
+	String 		strategy 			 = "-ADFDLong";
 
 	/**
 	 * gui contains the option to enable or disable the GUI of the yeti test session. To enable it, change its value to -gui 
@@ -270,7 +270,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 *  strategies contains all the strategies which are supported by YETI. One of them can be selected from strategies combo box within the GUI. 
 	 */
-	String[] strategies = {"ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDLong", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
@@ -491,6 +491,9 @@ public class ADFDLauncher extends JFrame{
 					hideItems();
 				} else if (strategy_ComboBox.getSelectedItem().equals("ADFD")){
 					strategy = "-ADFD";
+					unhideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDLong")){
+					strategy = "-ADFDLong";
 					unhideItems();
 				}
 				else
@@ -895,7 +898,7 @@ public class ADFDLauncher extends JFrame{
 		//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
-		//	JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
+		JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
@@ -913,6 +916,7 @@ public class ADFDLauncher extends JFrame{
 		int temp = Integer.parseInt(rangeValue_TextField.getText());
 		YetiADFDStrategy.rangeToPlot +=  temp;
 		YetiADFDPlusStrategy.rangeToPlot +=  temp;
+		YetiADFDLongStrategy.rangeToPlot +=  temp;
 		//			JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 		command = list.toArray(new String[list.size()]);
 
@@ -953,9 +957,9 @@ public class ADFDLauncher extends JFrame{
 		//	}
 
 		//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
+		if((strategy.equalsIgnoreCase("-ADFD"))||(strategy.equalsIgnoreCase("-ADFDPlus"))){
+			ADFDAndADFDPlusGraphGenerator demo = new ADFDAndADFDPlusGraphGenerator("Failure Domains");
 
-		if ((countCompileFiles == 1)||(countCompileFiles == 2)){
-			LogGrapher2 demo = new LogGrapher2("Failure Domains");
 
 		}
 		//		else {
@@ -963,6 +967,15 @@ public class ADFDLauncher extends JFrame{
 		//
 		//		}
 
+		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 1)){
+				ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
+
+			}
+	
+	if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
+		ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
+
+	}
 
 		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
 		//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
