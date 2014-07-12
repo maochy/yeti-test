@@ -65,17 +65,17 @@ import yeti.environments.java.YetiJavaRoutine;
 import yeti.monitoring.YetiGUI;
 import yeti.monitoring.YetiUpdatableSlider;
 
-public class YetiADFDStrategy extends YetiRandomStrategy {
+public class YetiADFDLongStrategy extends YetiRandomStrategy {
 
 	public static int rangeToPlot = 5;
 	public static String argumentFirst = "" + 0;
 	public static String argumentSecond = "" + 0;
-	public static int twoDimProgram = 0;
+	public static int programDim = 0;
 
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
-	public YetiADFDStrategy(YetiTestManager ytm) {
+	public YetiADFDLongStrategy(YetiTestManager ytm) {
 		super(ytm);
 
 	}
@@ -216,11 +216,12 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 			// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
 			//			if (currentErrors == 1 && oldyt.length <= 2) {
-			if(oldyt.length == 2)
+			if(oldyt.length == 1)
 			{
-				twoDimProgram = 2;
+				programDim = 1;
+			} else {
+				programDim = 2;
 			}
-
 
 			if (oldyt.length <= 2) {
 
@@ -334,8 +335,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 						String programBegin = programBeginPart();
 						String programEnd = programEndPart();
 						String programEnd2 = programEndPart2();
+						String programEnd3 = programEndPart3();
 
-						String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2;
+						String completeProgram = programBegin + programEnd  + "   " + call  + programEnd2 + "  "+ call + programEnd3;
 
 						generateProgram(completeProgram);
 
@@ -355,11 +357,9 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 		return oldyt;
 	}
 
-
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
 
 	public String programBeginPart(){
-
 		String temp = "/** YETI - York Extensible Testing Infrastructure \n"  
 				+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
 				+ "All rights reserved.\n"
@@ -388,79 +388,63 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
 			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
 			+ "**/\n"
+			+ " // The value of currentErrors is " + currentErrors++ + "\n"
 			+ "import java.io.*;\n"
 			+ "import java.util.*;\n\n" 
 			+ "public class C"
 			+  uid++
 			+ " \n{\n"
-			+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
-			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
+			+ " public static ArrayList<Integer> passX = new ArrayList<Integer>();\n"
+			+ " public static ArrayList<Integer> failX = new ArrayList<Integer>();\n\n"
+			+ " public static ArrayList<Integer> passY = new ArrayList<Integer>();\n"
+			+ " public static ArrayList<Integer> failY = new ArrayList<Integer>();\n\n"
 
-				+ " public static int range = "+ rangeToPlot + ";\n\n"
+			+ " public static boolean startedByFailing = false;\n"
+			+ " public static boolean isCurrentlyFailing = false;\n"
+			+ " public static boolean xAxis = false;\n"
+			+ " public static boolean yAxis = false;\n"
+
+//				+ " public static int range = "+ rangeToPlot + ";\n\n"
+
+				+ " public static int start = " + -100 +";\n" 
+				+ " public static int stop  = " + 100 +";\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
-				+ " public static int starterX = xValue - (range/2);\n" 
-				+ " public static int stopperX = 0;\n"
-				+ " public static int starterY = yValue - (range/2);\n"
-				+ " public static int stopperY = yValue + range;\n\n"
+				//				+ " public static int starterX = xValue - range;\n" 
+				//				+ " public static int stopperX = xValue + range;\n"
+				//				+ " public static int starterY = yValue - range;\n"
+				//				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
-				
-				+ "   int rangeLocalx = 1; \n"
-				+ "   int i = starterX; \n"
-				+ "   boolean localFlagX = false;\n"
-				+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
-				+ "   System.out.println(\"The value of i is \" + i); \n"
-				+ "   checkFirstAndLastValue(i , yValue);\n"
-				+ "   if ((i == 2147483647) && (rangeLocalx < range)){\n"
-				+ "   localFlagX = true; \n"
-				+ "   break; }\n"
-				+ "   rangeLocalx++; \n"
-				+ "   i++; \n"
-				+ "   }\n"
-				+ "   if (localFlagX) { \n"
-				+ "   while(rangeLocalx <= range) {\n"
-				+ "   i = 2147483647 - rangeLocalx; \n"
-				+ "   System.out.println(\"The value of i is \" + i); \n"
-				+ "	  checkFirstAndLastValue(i , yValue);\n"
-				+ "   rangeLocalx++;\n"
-				+ "   }\n"
-				+ "}\n";
-						
+				+ "		xAxis = true;\n"
+				+ "		yAxis = false;\n"
+				+ "		int start1 = start;\n"
+				+ "		int stop1  = stop; \n"
+				+ "		checkFirstAndLastValue(start1 , yValue);\n"
+				+ "		for(int i = start1 + 1; i < stop1; i++) { \n"
+				+ "			checkMiddleValues(i , yValue);\n"
+				+ "		}\n"
+				+ "		checkFirstAndLastValue(stop1 , yValue);\n\n";
 
 		if (oldyt.length == 2){
-			temp = temp + "   int rangeLocaly = 1; \n"
-					+ "   int j = starterY; \n"
-					+ "   boolean localFlagY = false;\n"
-					+ "   while((j <= 2147483647) && (rangeLocaly <= range)) { \n"
-					+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "   checkFirstAndLastValue(xValue , j);\n"
-					+ "   if ((j == 2147483647) && (rangeLocaly < range)){\n"
-					+ "   localFlagY = true; \n"
-					+ "   break; }\n"
-					+ "   rangeLocaly++; \n"
-					+ "   j++; \n"
-					+ "   }\n"
-					+ "   if (localFlagY) { \n"
-					+ "   while(rangeLocaly <= range) {\n"
-					+ "   j = 2147483647 - rangeLocaly; \n"
-					+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "	  checkFirstAndLastValue(xValue , j);\n"
-					+ "   rangeLocaly++;\n"
-					+ "   }\n"
-					+ "}\n";
-			
+			temp = temp + " xAxis = false;\n"
+					+ "		yAxis = true;"
+					+ "		int start2 = start;\n"
+					+ "		int stop2  = stop; \n"
+					+ "		checkFirstAndLastValue(xValue , start2);\n"
+					+ "		for(int j = start2 + 1; j < stop2; j++) { \n"
+					+ "			checkMiddleValues(xValue , j);\n"
+					+ "		}\n"
+					+ "		checkFirstAndLastValue(xValue, stop2);\n\n"
+					+ "		yAxis = false;\n ";
 		}
-
-
-		temp = temp		+ "   printRangeFail();\n" 
-				+ "   printRangePass();\n" 
+		temp = temp + "	printRangeFail();\n" 
+				+ "   	printRangePass();\n" 
 				+ " }\n";
 
 		return temp;
-
 	}
 
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
@@ -470,40 +454,67 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 				+ "public static void printRangeFail() { \n"
 				+"   try { \n"
 				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
-				+"     File fw = new File(\"Fail.txt\"); \n"
-				+"     if (fw.exists() == false) { \n"
-				+" 	     fw.createNewFile(); \n"	
-				+"     }\n"
-				+"	   PrintWriter pw = new PrintWriter(new FileWriter (fw, true));\n"
-				//+"     int count = 1;\n"
-				+"     for (Integer i1 : fail) { \n"
-				+"        pw.append(i1+\"\\n\"); \n"
-				//+"        if (count%2 == 0)\n"
-				//+"        	pw1.append(\"\\n\");\n"
-				//+"        count++; \n"
-				+"     } \n"
-				+"     pw.close(); \n"
-				+"   } catch(Exception e) { \n"
-				+"     System.err.println(\" Error : e.getMessage() \"); \n"
-				+"   } \n"
-				+" } \n"
-				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
-				+ "// It prints the range of pass values \n"
-				+" public static void printRangePass() { \n"
-				+"   try { \n"
-				+"     File fw1 = new File(\"Pass.txt\"); \n"
+				+"		File fw1 = new File(\"FailX.txt\"); \n"
 				+"     if (fw1.exists() == false) { \n"
 				+" 	     fw1.createNewFile(); \n"	
 				+"     }\n"
 				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
 				//+"     int count = 1;\n"
-				+"     for (Integer i2 : pass) { \n"
+				+"     for (Integer i1 : failX) { \n"
+				+"        pw1.append(i1+\"\\n\"); \n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\"\\n\");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw1.close(); \n"
+				+"		File fw2 = new File(\"FailY.txt\"); \n"
+				+"     if (fw2.exists() == false) { \n"
+				+" 	     fw2.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw2 = new PrintWriter(new FileWriter (fw2, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i1 : failY) { \n"
+				+"        pw2.append(i1+\"\\n\"); \n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\"\\n\");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw2.close(); \n"
+				+"   }\n"
+				+ "catch(Exception e) { \n"
+				+"     System.err.println(\" Error : e.getMessage() \"); \n"
+				+"   } \n"
+				+ "	} \n"
+				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Pass.txt\" , true); \n"
+				+ "// It prints the range of pass values \n"
+				+" public static void printRangePass() { \n"
+				+"   try { \n"
+				+"     File fw1 = new File(\"PassX.txt\"); \n"
+				+"     if (fw1.exists() == false) { \n"
+				+" 	     fw1.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i2 : passX) { \n"
 				+"        pw1.append(i2+\"\\n\");\n"
 				//+"        if (count%2 == 0)\n"
 				//+"        	pw1.append(\" \");\n"
 				//+"        count++; \n"
 				+"     } \n"
 				+"     pw1.close(); \n"
+				+"     File fw2 = new File(\"PassY.txt\"); \n"
+				+"     if (fw2.exists() == false) { \n"
+				+" 	     fw2.createNewFile(); \n"	
+				+"     }\n"
+				+"	   PrintWriter pw2 = new PrintWriter(new FileWriter (fw2, true));\n"
+				//+"     int count = 1;\n"
+				+"     for (Integer i2 : passY) { \n"
+				+"        pw2.append(i2+\"\\n\");\n"
+				//+"        if (count%2 == 0)\n"
+				//+"        	pw1.append(\" \");\n"
+				//+"        count++; \n"
+				+"     } \n"
+				+"     pw2.close(); \n"
 				+"   } \n"
 				+"   catch(Exception e) { \n"
 				+"   System.err.println(\" Error : e.getMessage() \"); \n"
@@ -518,18 +529,74 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	public String programEndPart2(){
 		String temp4 = "; \n"
-				+ "     pass.add(i); \n"
-				+ "     pass.add(j); \n"
+				+ "		if(xAxis) {\n"
+				+ "     passX.add(i); \n"
+				+ "     passX.add(j); \n"
+				+ "		}\n"
+				+ "		if(yAxis) {\n"
+				+ "     passY.add(i); \n"
+				+ "     passY.add(j); \n"
+				+ "		}\n"
 				+ "   } catch (Throwable t) { \n"
-				+ "    fail.add(i); \n "
-				+ "    fail.add(j); \n"
+				+ "		startedByFailing = true; \n"
+				+ "		isCurrentlyFailing = true; \n"
+				+ "		if(xAxis) {\n"
+				+ "    failX.add(i); \n "
+				+ "    failX.add(j); \n"
+				+ "		}\n"
+				+ "		if(yAxis) {\n"
+				+ "    failY.add(i); \n "
+				+ "    failY.add(j); \n"
+				+ "		}\n"
 				+ "    failureDomain(i,j);\n"
 				+ "   } \n } "
-				+ " public static void failureDomain(int i, int j){}\n"
-				+ "\n}"
-				;
-
+				+ " public static void failureDomain(int i, int j){}\n\n"
+				+ "		public static void checkMiddleValues(int i, int j) { \n"
+				+ "		try { \n";
 		return temp4;
+
+	}
+
+	public String programEndPart3(){
+		String temp5 = ";\n 	if (isCurrentlyFailing) { \n"
+				+ "			if (xAxis) { \n"
+				+ "			failX.add(i - 1); \n"
+				+ "			failX.add(j); \n"
+				+ "			passX.add(i); \n"
+				+ "			passX.add(j); \n"
+				+ "			isCurrentlyFailing = false; \n"
+				+ "			}\n"
+				+ "			if (yAxis) { \n"
+				+ "			failY.add(i); \n"
+				+ "			failY.add(j - 1); \n"
+				+ "			passY.add(i); \n"
+				+ "			passY.add(j); \n"
+				+ "			isCurrentlyFailing = false; \n"
+				+ "			}\n"
+				+ "			}\n"
+				+ "		}\n"
+				+ "		catch(Throwable t) { \n"
+				+ "			if (!isCurrentlyFailing) \n"
+				+ "			{\n"
+				+ "			if(xAxis) {\n"
+				+ "			passX.add(i - 1);\n"
+				+ "			passX.add(j); \n"
+				+ "			failX.add(i); \n"
+				+ "			failX.add(j); \n"
+				+ "			isCurrentlyFailing = true;\n"
+				+ "			}\n"
+				+ "			if(yAxis) {\n"
+				+ "			passY.add(i);\n"
+				+ "			passY.add(j - 1); \n"
+				+ "			failY.add(i); \n"
+				+ "			failY.add(j); \n"
+				+ "			isCurrentlyFailing = true;\n"
+				+ "			}\n"
+				+ "			}\n"
+				+ "		}\n"
+				+ "	}\n"
+				+ "}\n";
+		return temp5;
 	}
 
 
@@ -550,7 +617,7 @@ public class YetiADFDStrategy extends YetiRandomStrategy {
 
 	@Override
 	public String getName() {
-		return "ADFD strategy";
+		return "ADFD++ strategy";
 	}
 
 }

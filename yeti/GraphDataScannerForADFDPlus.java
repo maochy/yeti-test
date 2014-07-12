@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  * @date 10 Apr 2014
  *
  */
-public class GraphDataScanner {
+public class GraphDataScannerForADFDPlus {
 	
 	/**
 	 * The values from Fail.txt are stored in graphDataIntFail array

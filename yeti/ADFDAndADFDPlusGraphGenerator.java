@@ -37,7 +37,7 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RefineryUtilities;
 
-import yeti.GraphDataScanner;
+import yeti.GraphDataScannerForADFDPlus;
 
 /**
 
@@ -114,8 +114,8 @@ public class ADFDAndADFDPlusGraphGenerator {
 		final XYSeriesCollection dataset = new XYSeriesCollection();
 		//JOptionPane.showMessageDialog(null, a, "the file f", JOptionPane.CANCEL_OPTION);
 
-		int failValues[] = GraphDataScanner.readFailDataFromFile();
-		int passValues[] = GraphDataScanner.readPassDataFromFile();	
+		int failValues[] = GraphDataScannerForADFDPlus.readFailDataFromFile();
+		int passValues[] = GraphDataScannerForADFDPlus.readPassDataFromFile();	
 
 		final XYSeries series1 = new XYSeries("Failing input");
 		final XYSeries series2 = new XYSeries("Passing input");

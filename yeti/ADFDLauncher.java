@@ -898,7 +898,7 @@ public class ADFDLauncher extends JFrame{
 		//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
-		JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
+//		JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
@@ -916,7 +916,7 @@ public class ADFDLauncher extends JFrame{
 		int temp = Integer.parseInt(rangeValue_TextField.getText());
 		YetiADFDStrategy.rangeToPlot +=  temp;
 		YetiADFDPlusStrategy.rangeToPlot +=  temp;
-		YetiADFDLongStrategy.rangeToPlot +=  temp;
+		//		YetiADFDLongStrategy.rangeToPlot +=  temp;
 		//			JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 		command = list.toArray(new String[list.size()]);
 
@@ -939,6 +939,9 @@ public class ADFDLauncher extends JFrame{
 	 */
 
 	public void drawGraph(){
+		
+//		JOptionPane.showMessageDialog(null, language, " Graph is executed.", JOptionPane.PLAIN_MESSAGE);
+
 
 
 		//JOptionPane.showMessageDialog(null,  " Graph is");
@@ -958,6 +961,8 @@ public class ADFDLauncher extends JFrame{
 
 		//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
 		if((strategy.equalsIgnoreCase("-ADFD"))||(strategy.equalsIgnoreCase("-ADFDPlus"))){
+				JOptionPane.showMessageDialog(null, language, " Graph is 1 and 2 dim ADFD/ADFD+", JOptionPane.PLAIN_MESSAGE);
+
 			ADFDAndADFDPlusGraphGenerator demo = new ADFDAndADFDPlusGraphGenerator("Failure Domains");
 
 
@@ -966,16 +971,19 @@ public class ADFDLauncher extends JFrame{
 		//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
 		//
 		//		}
+		
 
 		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 1)){
-				ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
+//				JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+			ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
 
-			}
-	
-	if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
-		ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
+		}
 
-	}
+		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+			ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
+
+		}
 
 		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
 		//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
@@ -1094,11 +1102,19 @@ public class ADFDLauncher extends JFrame{
 			executeJavaFiles();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
+		
+		//temporary disabling daikon.
 			String result = executeDaikon();
+		
 			//To display the generated invariants in GUI, panel 5
+			
+			
+			//temporary disabling the following two lines.
 			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
-					+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
+				+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
 
+			
+			
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);
@@ -1248,7 +1264,7 @@ public class ADFDLauncher extends JFrame{
 
 
 		//		File file = new File(testFilePathInitial + "Pass.txt");
-		File file = new File("Pass.txt");
+		File file = new File("PassX.txt");
 		boolean exists = false;
 
 		while (!exists){
