@@ -81,6 +81,7 @@ import yeti.stats.YetiMichaelisMentenEquation;
 import yeti.strategies.YetiDSSRStrategy;
 import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiADFDLongStrategy;
+import yeti.strategies.YetiADFDWideStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiRandomPlusDecreasing;
 import yeti.strategies.YetiRandomPlusPeriodicProbabilitiesStrategy;
@@ -310,6 +311,7 @@ public class Yeti {
 		boolean isDSSR = false;
 		boolean isADFD = false;
 		boolean isADFDLong = false;
+		boolean isADFDWide = false;
 		boolean isADFDPlus = false;
 		boolean isEvolutionary = false;
 		boolean isRunningFromChromosome = false;
@@ -550,6 +552,12 @@ public class Yeti {
 			// we can use the ADFDLong strategy
 			if (s0.equals("-ADFDLong")) {
 				isADFDLong = true;
+				continue;
+			}
+			
+			// we can use the ADFDWide strategy
+			if (s0.equals("-ADFDWide")) {
+				isADFDWide = true;
 				continue;
 			}
 			
@@ -849,6 +857,9 @@ public class Yeti {
 		}
 		if (isADFDLong) {
 			strategy = new YetiADFDLongStrategy(testManager);
+		}
+		if (isADFDWide) {
+			strategy = new YetiADFDWideStrategy(testManager);
 		}
 		if (isADFDPlus) {
 			strategy = new YetiADFDPlusStrategy(testManager);

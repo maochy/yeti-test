@@ -2,11 +2,19 @@ package yeti;
 
 
 import java.awt.BasicStroke;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.Stroke;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.util.Random;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -16,12 +24,17 @@ import org.jfree.chart.labels.StandardXYItemLabelGenerator;
 import org.jfree.chart.labels.XYItemLabelGenerator;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.xy.DeviationRenderer;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
+import org.jfree.data.xy.DefaultXYDataset;
 import org.jfree.data.xy.XYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.RefineryUtilities;
+import yeti.GraphDataScannerForADFDPlus;
 
-public class ADFDLongGraphGeneratorFor2Arg {
+
+public class ADFDLongGraphGenerator {
 
 
 	/**
@@ -29,7 +42,7 @@ public class ADFDLongGraphGeneratorFor2Arg {
 	 *
 	 * @param title the frame title
 	 */
-	public ADFDLongGraphGeneratorFor2Arg (String title) {
+	public ADFDLongGraphGenerator (String title) {
 
 
 		final XYDataset dataset = createDataset();
@@ -58,14 +71,16 @@ public class ADFDLongGraphGeneratorFor2Arg {
 			series1.add((double)failValuesX[i],(double)failValuesX[i+1]);
 			series1.add((double)failValuesX[i+2],(double)failValuesX[i+3]);
 			series1.add((double)failValuesX[i+2],null);
-			System.out.println("added fail: "+failValuesX[i]+"->"+failValuesX[i+1]);
+			series1.add((double)failValuesX[i+3],null);	
+			//				System.out.println("added fail: "+failValuesX[i]+"->"+failValuesX[i+1]);
 		}
 
 		for (int i =0; i < failValuesY.length; i=i+4 ){
 			series1.add((double)failValuesY[i],(double)failValuesY[i+1]);
 			series1.add((double)failValuesY[i+2],(double)failValuesY[i+3]);
 			series1.add((double)failValuesY[i+2],null);
-			System.out.println("added fail: "+failValuesY[i]+"->"+failValuesY[i+1]);
+			series1.add((double)failValuesY[i+3],null);
+			//				System.out.println("added fail: "+failValuesY[i]+"->"+failValuesY[i+1]);
 		}
 
 		final XYSeries series2 = new XYSeries("Passing input");
@@ -77,14 +92,16 @@ public class ADFDLongGraphGeneratorFor2Arg {
 			series2.add((double)passValuesX[j],(double)passValuesX[j+1]);
 			series2.add((double)passValuesX[j+2],(double)passValuesX[j+3]);
 			series2.add((double)passValuesX[j+2],null);
-			System.out.println("added pass: "+passValuesY[j]+"->"+passValuesY[j+1]);
+//			series2.add((double)passValuesX[j+3],null);
+			//				System.out.println("added pass: "+passValuesY[j]+"->"+passValuesY[j+1]);
 		}
 
 		for (int j =0; j < passValuesY.length; j=j+4){
 			series2.add((double)passValuesY[j],(double)passValuesY[j+1]);
 			series2.add((double)passValuesY[j+2],(double)passValuesY[j+3]);
 			series2.add((double)passValuesY[j+2],null);
-			System.out.println("added pass: "+passValuesY[j]+"->"+passValuesY[j+1]);
+//			series2.add((double)passValuesY[j+3],null);
+			//				System.out.println("added pass: "+passValuesY[j]+"->"+passValuesY[j+1]);
 		}
 
 
@@ -110,7 +127,7 @@ public class ADFDLongGraphGeneratorFor2Arg {
 
 		// create the chart...
 		JFreeChart chart = ChartFactory.createXYLineChart(
-				"Failure Domain", // chart title
+				"Serial Data", // chart title
 				"Domain", // domain axis label
 				"Range", // range axis label
 				dataset,  // initial series
@@ -152,9 +169,9 @@ public class ADFDLongGraphGeneratorFor2Arg {
 		NumberFormat format = NumberFormat.getNumberInstance();
 		format.setMaximumFractionDigits(2);
 
-		//      XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
-		//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}", new DecimalFormat("0"),  new DecimalFormat("0") );
+		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
+		        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}", new DecimalFormat("0"),  new DecimalFormat("0") );
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
 

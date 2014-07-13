@@ -230,7 +230,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * strategy contains the strategy which is to be used in the current session. Its default value is set to the ADFD+ strategy. 
 	 */
-	String 		strategy 			 = "-ADFDLong";
+	String 		strategy 			 = "-ADFDWide";
 
 	/**
 	 * gui contains the option to enable or disable the GUI of the yeti test session. To enable it, change its value to -gui 
@@ -270,7 +270,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 *  strategies contains all the strategies which are supported by YETI. One of them can be selected from strategies combo box within the GUI. 
 	 */
-	String[] strategies = {"ADFDLong", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDWide", "ADFDLong", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
@@ -494,6 +494,9 @@ public class ADFDLauncher extends JFrame{
 					unhideItems();
 				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDLong")){
 					strategy = "-ADFDLong";
+					unhideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDWide")){
+					strategy = "-ADFDWide";
 					unhideItems();
 				}
 				else
@@ -898,7 +901,7 @@ public class ADFDLauncher extends JFrame{
 		//	JOptionPane.showMessageDialog(null, language, " language is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, time, " time is ", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, logs, " logs is ", JOptionPane.PLAIN_MESSAGE);
-//		JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
+		//		JOptionPane.showMessageDialog(null, strategy, " strategy is ",JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, fileName, "fileName is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathFinal, "testFilePath is", JOptionPane.PLAIN_MESSAGE);
 		//	JOptionPane.showMessageDialog(null, testFilePathInitial, "testFilePathInitial value is", JOptionPane.PLAIN_MESSAGE);			
@@ -939,8 +942,8 @@ public class ADFDLauncher extends JFrame{
 	 */
 
 	public void drawGraph(){
-		
-//		JOptionPane.showMessageDialog(null, language, " Graph is executed.", JOptionPane.PLAIN_MESSAGE);
+
+		//		JOptionPane.showMessageDialog(null, language, " drawGraph method is executed.", JOptionPane.PLAIN_MESSAGE);
 
 
 
@@ -961,29 +964,24 @@ public class ADFDLauncher extends JFrame{
 
 		//				if ((countCompileFiles == 1)||(countCompileFiles == 2)){
 		if((strategy.equalsIgnoreCase("-ADFD"))||(strategy.equalsIgnoreCase("-ADFDPlus"))){
-				JOptionPane.showMessageDialog(null, language, " Graph is 1 and 2 dim ADFD/ADFD+", JOptionPane.PLAIN_MESSAGE);
-
+			//				JOptionPane.showMessageDialog(null, language, " Graph is 1 and 2 dim ADFD/ADFD+", JOptionPane.PLAIN_MESSAGE);
 			ADFDAndADFDPlusGraphGenerator demo = new ADFDAndADFDPlusGraphGenerator("Failure Domains");
 
 
 		}
-		//		else {
-		//			LogGrapher3 demo = new LogGrapher3("Failure Domains");
-		//
-		//		}
-		
 
-		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 1)){
-//				JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
-			ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
+		if(strategy.equalsIgnoreCase("-ADFDLong")){
+			//				JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+			ADFDLongGraphGenerator demo = new ADFDLongGraphGenerator("Failure Domains");
 
 		}
 
-		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
-//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
-			ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
+		if(strategy.equalsIgnoreCase("-ADFDWide")){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
+			ADFDWideGraphGenerator demo = new ADFDWideGraphGenerator("Failure Domains");
 
 		}
+
 
 		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
 		//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
@@ -1102,19 +1100,19 @@ public class ADFDLauncher extends JFrame{
 			executeJavaFiles();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 3 joining", JOptionPane.CANCEL_OPTION);
 			//thread3.join();
-		
-		//temporary disabling daikon.
+
+			//temporary disabling daikon.
 			String result = executeDaikon();
-		
+
 			//To display the generated invariants in GUI, panel 5
-			
-			
+
+
 			//temporary disabling the following two lines.
 			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
-				+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
+					+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
 
-			
-			
+
+
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 Starting", JOptionPane.CANCEL_OPTION);
 			progressStop();
 			//JOptionPane.showMessageDialog(null, testFilePathInitial, "Thread 4 joining", JOptionPane.CANCEL_OPTION);

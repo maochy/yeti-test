@@ -34,7 +34,7 @@ import org.jfree.ui.RefineryUtilities;
 import yeti.GraphDataScannerForADFDPlus;
 
 
-public class ADFDLongGraphGeneratorFor1Arg {
+public class ADFDWideGraphGenerator {
 
 
 	/**
@@ -42,7 +42,7 @@ public class ADFDLongGraphGeneratorFor1Arg {
 	 *
 	 * @param title the frame title
 	 */
-	public ADFDLongGraphGeneratorFor1Arg (String title) {
+	public ADFDWideGraphGenerator (String title) {
 
 
 		final XYDataset dataset = createDataset();
@@ -170,8 +170,8 @@ public class ADFDLongGraphGeneratorFor1Arg {
 		format.setMaximumFractionDigits(2);
 
 		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( StandardXYItemLabelGenerator.DEFAULT_ITEM_LABEL_FORMAT, format, format);
-		//        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}; {2}", new DecimalFormat("0.0"),  new DecimalFormat("0.0") );
-		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}", new DecimalFormat("0"),  new DecimalFormat("0") );
+		        XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}, {2}", new DecimalFormat("0"),  new DecimalFormat("0") );
+//		XYItemLabelGenerator generator = new StandardXYItemLabelGenerator( "{1}", new DecimalFormat("0"),  new DecimalFormat("0") );
 		renderer.setBaseItemLabelGenerator(generator);
 		renderer.setBaseItemLabelsVisible(true);
 
