@@ -412,43 +412,45 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
-				+ " public static int startValue = xValue - 7; \n" 
-				+ " public static int stopValue  = xValue + 7; \n"
+				+ " public static int startValueX = xValue - 7; \n" 
+				+ " public static int stopValueX  = xValue + 7; \n"
+				+ " public static int startValueY = yValue - 7; \n" 
+				+ " public static int stopValueY  = yValue + 7; \n"
 
 
 				+ " public static void main(String []argv){\n"
-				+ "		int initialValue1 = startValue; \n"
-				+ "		int finalValue1  = stopValue; \n"
+				+ "		int initialValueX = startValueX; \n"
+				+ "		int finalValueX  = stopValueX; \n"
 				+ "		xAxis = true;\n"
 				+ "		yAxis = false;\n"
 				+ "		int start1 = start;\n"
 				+ "		int stop1  = stop; \n"
-				+ "		while (initialValue1 <= finalValue1) { \n"
-				+ "		checkFirstAndLastValue(start1 , initialValue1);\n"
+				+ "		while (initialValueX <= finalValueX) { \n"
+				+ "		checkFirstAndLastValue(start1 , initialValueX);\n"
 				+ "		for(int i = start1 + 1; i < stop1; i++) { \n"
-				+ "			checkMiddleValues(i , initialValue1);\n"
+				+ "			checkMiddleValues(i , initialValueX);\n"
 				+ "		}\n"
-				+ "		checkFirstAndLastValue(stop1 , initialValue1);\n\n"
-				+ "		initialValue1++; \n"
+				+ "		checkFirstAndLastValue(stop1 , initialValueX);\n\n"
+				+ "		initialValueX++; \n"
 				+ "		} \n";
 
-		if (oldyt.length == 2){
+//		if (oldyt.length == 2){
 			temp = temp + " xAxis = false;\n"
 					+ "		yAxis = true;"
-					+ "		int initialValue2 = startValue; \n"
-					+ "		int finalValue2  = stopValue; \n"
+					+ "		int initialValueY = startValueY; \n"
+					+ "		int finalValueY  = stopValueY; \n"
 					+ "		int start2 = start;\n"
 					+ "		int stop2  = stop; \n"
-					+ "		while (initialValue2 <= finalValue2) { \n"
-					+ "		checkFirstAndLastValue(initialValue2 , start2);\n"
+					+ "		while (initialValueY <= finalValueY) { \n"
+					+ "		checkFirstAndLastValue(initialValueY , start2);\n"
 					+ "		for(int j = start2 + 1; j < stop2; j++) { \n"
-					+ "			checkMiddleValues(initialValue2 , j);\n"
+					+ "			checkMiddleValues(initialValueY , j);\n"
 					+ "		}\n"
-					+ "		checkFirstAndLastValue(initialValue2, stop2);\n\n"
-					+ "		initialValue2++;\n"
+					+ "		checkFirstAndLastValue(initialValueY, stop2);\n\n"
+					+ "		initialValueY++;\n"
 					+ "		}\n"
 					+ "		yAxis = false;\n ";
-		}
+//		}
 		temp = temp + "	printRangeFail();\n" 
 				+ "   	printRangePass();\n" 
 				+ " }\n";

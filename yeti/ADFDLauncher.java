@@ -33,9 +33,11 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
+
 import yeti.strategies.YetiADFDLongStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiADFDStrategy;
+import yeti.strategies.YetiADFDWideStrategy;
 
 /**
 
@@ -215,7 +217,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * fileName contains the module or file name which is to be tested in the current session. Its default value is set to the sample file for testing included with yeti package. 
 	 */	
-	String 		fileName			 = "-testModules=yeti.test.YetiTest"; 
+	String 		fileName			 =   "-testModules=OneDimensionalPointFailureDomain1"; //"-testModules=yeti.test.YetiTest"; 
 
 	/**
 	 * fileUnderTest contains the name of the file under test which is used in the screen capture name. 
@@ -976,9 +978,15 @@ public class ADFDLauncher extends JFrame{
 
 		}
 
-		if(strategy.equalsIgnoreCase("-ADFDWide")){
-//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
-			ADFDWideGraphGenerator demo = new ADFDWideGraphGenerator("Failure Domains");
+		if((strategy.equalsIgnoreCase("-ADFDWide"))&&(YetiADFDWideStrategy.programDim == 1)){
+			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
+			ADFDWideGraphGeneratorFor1Arg demo = new ADFDWideGraphGeneratorFor1Arg("Failure Domains");
+
+		}
+		
+		if((strategy.equalsIgnoreCase("-ADFDWide"))&&(YetiADFDWideStrategy.programDim == 2)){
+			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
+			ADFDWideGraphGeneratorFor2Arg demo = new ADFDWideGraphGeneratorFor2Arg("Failure Domains");
 
 		}
 
