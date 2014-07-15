@@ -232,7 +232,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * strategy contains the strategy which is to be used in the current session. Its default value is set to the ADFD+ strategy. 
 	 */
-	String 		strategy 			 = "-ADFDWide";
+	String 		strategy 			 = "-ADFDLong";
 
 	/**
 	 * gui contains the option to enable or disable the GUI of the yeti test session. To enable it, change its value to -gui 
@@ -272,7 +272,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 *  strategies contains all the strategies which are supported by YETI. One of them can be selected from strategies combo box within the GUI. 
 	 */
-	String[] strategies = {"ADFDWide", "ADFDLong", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDLong", "ADFDWide", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
@@ -377,7 +377,7 @@ public class ADFDLauncher extends JFrame{
 		File[] files = directory.listFiles();
 		for (File f : files)
 		{
-			if ((f.getName().startsWith("C") || f.getName().startsWith("Pass") || f.getName().startsWith("Fail") ))
+			if ((f.getName().startsWith("C") || f.getName().startsWith("PassX") || f.getName().startsWith("FailX") || f.getName().startsWith("PassY") || f.getName().startsWith("FailY")))
 			{
 				f.delete();
 			}
@@ -972,20 +972,26 @@ public class ADFDLauncher extends JFrame{
 
 		}
 
-		if(strategy.equalsIgnoreCase("-ADFDLong")){
-			//				JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
-			ADFDLongGraphGenerator demo = new ADFDLongGraphGenerator("Failure Domains");
+		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 1)){
+			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+			ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
+
+		}
+		
+		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
+			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+			ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
 
 		}
 
 		if((strategy.equalsIgnoreCase("-ADFDWide"))&&(YetiADFDWideStrategy.programDim == 1)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
 			ADFDWideGraphGeneratorFor1Arg demo = new ADFDWideGraphGeneratorFor1Arg("Failure Domains");
 
 		}
 		
 		if((strategy.equalsIgnoreCase("-ADFDWide"))&&(YetiADFDWideStrategy.programDim == 2)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDWide", JOptionPane.PLAIN_MESSAGE);
 			ADFDWideGraphGeneratorFor2Arg demo = new ADFDWideGraphGeneratorFor2Arg("Failure Domains");
 
 		}
@@ -1196,7 +1202,7 @@ public class ADFDLauncher extends JFrame{
 				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
 
 		// I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
-		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2){
+		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2){
 			daikonOptions = daikonOptions + "|^j$";
 		}
 
