@@ -217,7 +217,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * fileName contains the module or file name which is to be tested in the current session. Its default value is set to the sample file for testing included with yeti package. 
 	 */	
-	String 		fileName			 =   "-testModules=OneDimensionalPointFailureDomain1"; //"-testModules=yeti.test.YetiTest"; 
+	String 		fileName			 =   "-testModules=yeti.test.YetiTest"; 
 
 	/**
 	 * fileUnderTest contains the name of the file under test which is used in the screen capture name. 
@@ -1203,7 +1203,7 @@ public class ADFDLauncher extends JFrame{
 //				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
 
 //		 I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
-		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2){
+		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2 || YetiADFDWideStrategy.programDim == 2){
 			daikonOptions = daikonOptions + "|^j$";
 		}
 

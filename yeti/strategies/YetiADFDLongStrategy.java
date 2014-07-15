@@ -406,8 +406,8 @@ public class YetiADFDLongStrategy extends YetiRandomStrategy {
 
 //				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
-				+ " public static int start = " + -100 +";\n" 
-				+ " public static int stop  = " + 100 +";\n\n"
+				+ " public static int start = " + Integer.MIN_VALUE +";\n" 
+				+ " public static int stop  = " + Integer.MAX_VALUE +";\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
@@ -575,6 +575,8 @@ public class YetiADFDLongStrategy extends YetiRandomStrategy {
 				+ "			}\n"
 				+ "		}\n"
 				+ "		catch(Throwable t) { \n"
+				// added to see if daikon start working. Yes it worked.
+				+ "    failureDomain(i,j);\n"
 				+ "			if (!isCurrentlyFailing) \n"
 				+ "			{\n"
 				+ "			if(xAxis) {\n"

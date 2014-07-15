@@ -434,23 +434,23 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "		initialValueX++; \n"
 				+ "		} \n";
 
-//		if (oldyt.length == 2){
-			temp = temp + " xAxis = false;\n"
-					+ "		yAxis = true;"
-					+ "		int initialValueY = startValueY; \n"
-					+ "		int finalValueY  = stopValueY; \n"
-					+ "		int start2 = start;\n"
-					+ "		int stop2  = stop; \n"
-					+ "		while (initialValueY <= finalValueY) { \n"
-					+ "		checkFirstAndLastValue(initialValueY , start2);\n"
-					+ "		for(int j = start2 + 1; j < stop2; j++) { \n"
-					+ "			checkMiddleValues(initialValueY , j);\n"
-					+ "		}\n"
-					+ "		checkFirstAndLastValue(initialValueY, stop2);\n\n"
-					+ "		initialValueY++;\n"
-					+ "		}\n"
-					+ "		yAxis = false;\n ";
-//		}
+		//		if (oldyt.length == 2){
+		temp = temp + " xAxis = false;\n"
+				+ "		yAxis = true;"
+				+ "		int initialValueY = startValueY; \n"
+				+ "		int finalValueY  = stopValueY; \n"
+				+ "		int start2 = start;\n"
+				+ "		int stop2  = stop; \n"
+				+ "		while (initialValueY <= finalValueY) { \n"
+				+ "		checkFirstAndLastValue(initialValueY , start2);\n"
+				+ "		for(int j = start2 + 1; j < stop2; j++) { \n"
+				+ "			checkMiddleValues(initialValueY , j);\n"
+				+ "		}\n"
+				+ "		checkFirstAndLastValue(initialValueY, stop2);\n\n"
+				+ "		initialValueY++;\n"
+				+ "		}\n"
+				+ "		yAxis = false;\n ";
+		//		}
 		temp = temp + "	printRangeFail();\n" 
 				+ "   	printRangePass();\n" 
 				+ " }\n";
@@ -587,6 +587,8 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "			}\n"
 				+ "		}\n"
 				+ "		catch(Throwable t) { \n"
+				// added to see if daikon start working. Yes it worked.
+				+ "    failureDomain(i,j);\n"
 				+ "			if (!isCurrentlyFailing) \n"
 				+ "			{\n"
 				+ "			if(xAxis) {\n"
