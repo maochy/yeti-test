@@ -394,8 +394,8 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 			+ "public class C"
 			+  uid++
 			+ " \n{\n"
-			+ " public static ArrayList<Integer> passX = new ArrayList<Integer>();\n"
-			+ " public static ArrayList<Integer> failX = new ArrayList<Integer>();\n\n"
+			+ " public static ArrayList<Integer> pass = new ArrayList<Integer>();\n"
+			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 			+ " public static ArrayList<Integer> passY = new ArrayList<Integer>();\n"
 			+ " public static ArrayList<Integer> failY = new ArrayList<Integer>();\n\n"
 
@@ -465,13 +465,13 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "public static void printRangeFail() { \n"
 				+"   try { \n"
 				//+"     FileWriter fw = new FileWriter(\"/Users/mian/inclaspath/Fail.txt\" , true); \n"
-				+"		File fw1 = new File(\"FailX.txt\"); \n"
+				+"		File fw1 = new File(\"Fail.txt\"); \n"
 				+"     if (fw1.exists() == false) { \n"
 				+" 	     fw1.createNewFile(); \n"	
 				+"     }\n"
 				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
 				//+"     int count = 1;\n"
-				+"     for (Integer i1 : failX) { \n"
+				+"     for (Integer i1 : fail) { \n"
 				+"        pw1.append(i1+\"\\n\"); \n"
 				//+"        if (count%2 == 0)\n"
 				//+"        	pw1.append(\"\\n\");\n"
@@ -500,13 +500,13 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "// It prints the range of pass values \n"
 				+" public static void printRangePass() { \n"
 				+"   try { \n"
-				+"     File fw1 = new File(\"PassX.txt\"); \n"
+				+"     File fw1 = new File(\"Pass.txt\"); \n"
 				+"     if (fw1.exists() == false) { \n"
 				+" 	     fw1.createNewFile(); \n"	
 				+"     }\n"
 				+"	   PrintWriter pw1 = new PrintWriter(new FileWriter (fw1, true));\n"
 				//+"     int count = 1;\n"
-				+"     for (Integer i2 : passX) { \n"
+				+"     for (Integer i2 : pass) { \n"
 				+"        pw1.append(i2+\"\\n\");\n"
 				//+"        if (count%2 == 0)\n"
 				//+"        	pw1.append(\" \");\n"
@@ -541,8 +541,8 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 	public String programEndPart2(){
 		String temp4 = "; \n"
 				+ "		if(xAxis) {\n"
-				+ "     passX.add(i); \n"
-				+ "     passX.add(j); \n"
+				+ "     pass.add(i); \n"
+				+ "     pass.add(j); \n"
 				+ "		}\n"
 				+ "		if(yAxis) {\n"
 				+ "     passY.add(i); \n"
@@ -552,8 +552,8 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "		startedByFailing = true; \n"
 				+ "		isCurrentlyFailing = true; \n"
 				+ "		if(xAxis) {\n"
-				+ "    failX.add(i); \n "
-				+ "    failX.add(j); \n"
+				+ "    fail.add(i); \n "
+				+ "    fail.add(j); \n"
 				+ "		}\n"
 				+ "		if(yAxis) {\n"
 				+ "    failY.add(i); \n "
@@ -571,10 +571,10 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 	public String programEndPart3(){
 		String temp5 = ";\n 	if (isCurrentlyFailing) { \n"
 				+ "			if (xAxis) { \n"
-				+ "			failX.add(i - 1); \n"
-				+ "			failX.add(j); \n"
-				+ "			passX.add(i); \n"
-				+ "			passX.add(j); \n"
+				+ "			fail.add(i - 1); \n"
+				+ "			fail.add(j); \n"
+				+ "			pass.add(i); \n"
+				+ "			pass.add(j); \n"
 				+ "			isCurrentlyFailing = false; \n"
 				+ "			}\n"
 				+ "			if (yAxis) { \n"
@@ -590,10 +590,10 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 				+ "			if (!isCurrentlyFailing) \n"
 				+ "			{\n"
 				+ "			if(xAxis) {\n"
-				+ "			passX.add(i - 1);\n"
-				+ "			passX.add(j); \n"
-				+ "			failX.add(i); \n"
-				+ "			failX.add(j); \n"
+				+ "			pass.add(i - 1);\n"
+				+ "			pass.add(j); \n"
+				+ "			fail.add(i); \n"
+				+ "			fail.add(j); \n"
 				+ "			isCurrentlyFailing = true;\n"
 				+ "			}\n"
 				+ "			if(yAxis) {\n"
@@ -628,7 +628,7 @@ public class YetiADFDWideStrategy extends YetiRandomStrategy {
 
 	@Override
 	public String getName() {
-		return "ADFD++ strategy";
+		return "ADFDWide strategy";
 	}
 
 }

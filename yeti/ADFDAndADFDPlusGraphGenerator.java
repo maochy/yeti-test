@@ -121,6 +121,7 @@ public class ADFDAndADFDPlusGraphGenerator {
 		final XYSeries series2 = new XYSeries("Passing input");
 
 		for (int j =0; j < passValues.length; j=j+2){
+			System.out.println("first add pass X " + passValues[j] + ", " + passValues[j+1]);
 			series2.add((double)passValues[j], (double)passValues[j+1]);
 		}
 
@@ -128,6 +129,7 @@ public class ADFDAndADFDPlusGraphGenerator {
 		loopHold = loopHold - 1;
 
 		for (int i =0; i < loopHold; i=i+2 ){
+			System.out.println("first add fail X " + failValues[i] + ", " + failValues[i+1]);
 			series1.add((double)failValues[i],(double)failValues[i+1]);
 		}
 

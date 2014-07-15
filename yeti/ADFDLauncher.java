@@ -377,7 +377,7 @@ public class ADFDLauncher extends JFrame{
 		File[] files = directory.listFiles();
 		for (File f : files)
 		{
-			if ((f.getName().startsWith("C") || f.getName().startsWith("PassX") || f.getName().startsWith("FailX") || f.getName().startsWith("PassY") || f.getName().startsWith("FailY")))
+			if ((f.getName().startsWith("C") || f.getName().startsWith("Pass") || f.getName().startsWith("Fail") || f.getName().startsWith("PassY") || f.getName().startsWith("FailY")))
 			{
 				f.delete();
 			}
@@ -973,13 +973,13 @@ public class ADFDLauncher extends JFrame{
 		}
 
 		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 1)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
 			ADFDLongGraphGeneratorFor1Arg demo = new ADFDLongGraphGeneratorFor1Arg("Failure Domains");
 
 		}
 		
 		if((strategy.equalsIgnoreCase("-ADFDLong"))&&(YetiADFDLongStrategy.programDim == 2)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDLong", JOptionPane.PLAIN_MESSAGE);
 			ADFDLongGraphGeneratorFor2Arg demo = new ADFDLongGraphGeneratorFor2Arg("Failure Domains");
 
 		}
@@ -1200,8 +1200,9 @@ public class ADFDLauncher extends JFrame{
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
 				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
+//				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
 
-		// I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
+//		 I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
 		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2){
 			daikonOptions = daikonOptions + "|^j$";
 		}
@@ -1223,7 +1224,7 @@ public class ADFDLauncher extends JFrame{
 
 			if (filesToCompileArray.length > 0){
 				int i = 0;
-				Thread.sleep(2000);
+				Thread.sleep(4000);
 				Process p0 = Runtime.getRuntime().exec("java daikon.Chicory --ppt-select-pattern=failureDomain C"+ i);
 				p0.waitFor();
 				File trace = new File("C"+i+".dtrace.gz");
@@ -1276,7 +1277,7 @@ public class ADFDLauncher extends JFrame{
 
 
 		//		File file = new File(testFilePathInitial + "Pass.txt");
-		File file = new File("PassX.txt");
+		File file = new File("Pass.txt");
 		boolean exists = false;
 
 		while (!exists){

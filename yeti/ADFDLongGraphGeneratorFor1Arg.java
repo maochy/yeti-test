@@ -49,9 +49,13 @@ public class ADFDLongGraphGeneratorFor1Arg {
 		final XYSeries series1 = new XYSeries("Failing input X");
 
 		for (int i =0; i < failValuesX.length; i=i+4 ){
+			System.out.println("first add fail X " + failValuesX[i] + ", " + failValuesX[i+1]);
 			series1.add((double)failValuesX[i],(double)failValuesX[i+1]);
+			System.out.println("Second add fail X " + failValuesX[i+2] + ", " + failValuesX[i+3]);
 			series1.add((double)failValuesX[i+2],(double)failValuesX[i+3]);
+			System.out.println("Second add fail X " + failValuesX[i+3] + ", null");
 			series1.add((double)failValuesX[i+3],null);
+			System.out.println("Second add fail X " + failValuesX[i+2] + ", null");
 			series1.add((double)failValuesX[i+2],null);
 		}
 
@@ -59,9 +63,13 @@ public class ADFDLongGraphGeneratorFor1Arg {
 		final XYSeries series2 = new XYSeries("Passing input X");
 
 		for (int j =0; j < passValuesX.length; j=j+4){
+			System.out.println("first add pass X " + passValuesX[j] + ", " + passValuesX[j+1]);
 			series2.add((double)passValuesX[j],(double)passValuesX[j+1]);
+			System.out.println("Second add pass X " + passValuesX[j+2] + ", " + passValuesX[j+3]);
 			series2.add((double)passValuesX[j+2],(double)passValuesX[j+3]);
+			System.out.println("Second add pass X " + passValuesX[j+3] + ", null");
 			series2.add((double)passValuesX[j+3],null);
+			System.out.println("Second add pass X " + passValuesX[j+2] + ", null");
 			series2.add((double)passValuesX[j+2],null);
 		}
 

@@ -509,7 +509,7 @@ public class YetiADFDPlusStrategy extends YetiRandomStrategy {
 
 	@Override
 	public String getName() {
-		return "ADFD++ strategy";
+		return "ADFD+ strategy";
 	}
 
 }

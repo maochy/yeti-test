@@ -19,14 +19,14 @@ import javax.swing.JOptionPane;
 public class GraphDataScannerForADFD {
 	
 	/**
-	 * The values from FailX.txt are stored in graphDataIntFailX array
+	 * The values from Fail.txt are stored in graphDataIntFailX array
 	 */
-	static int [] graphDataIntFailX;
+	static int [] graphDataIntFail;
 	
 	/**
-	 * The values from Pass.txt are stored in graphDataIntPassX array
+	 * The values from Pass.txt are stored in graphDataIntPass array
 	 */
-	static int [] graphDataIntPassX;
+	static int [] graphDataIntPass;
 	
 	/**
 	 * The values from FailY.txt are stored in graphDataIntFailY array
@@ -48,20 +48,20 @@ public class GraphDataScannerForADFD {
 		File f = null;
 		Scanner scan = null;
 		try{
-			f = new File("FailX.txt");
+			f = new File("Fail.txt");
 			scan = new Scanner(f);
 		}
 		catch(Exception e1){
 			e1.printStackTrace();
 		}
 
-		ArrayList<Integer> failx = new ArrayList<Integer>();
+		ArrayList<Integer> fail = new ArrayList<Integer>();
 		while(scan.hasNext())
-			failx.add(scan.nextInt());
+			fail.add(scan.nextInt());
 		
 
 
-		return graphDataIntFailX = convertIntegers(failx);
+		return graphDataIntFail = convertIntegers(fail);
 
 
 
@@ -104,7 +104,7 @@ public class GraphDataScannerForADFD {
 		Scanner scan1 = null;
 		try{
 
-			f1 = new File("PassX.txt");
+			f1 = new File("Pass.txt");
 			
 			scan1 = new Scanner(f1);
 		}
@@ -112,12 +112,12 @@ public class GraphDataScannerForADFD {
 			e1.printStackTrace();
 		}
 
-		ArrayList<Integer> passx = new ArrayList<Integer>();
+		ArrayList<Integer> pass = new ArrayList<Integer>();
 		while(scan1.hasNext())
-			passx.add(scan1.nextInt());
+			pass.add(scan1.nextInt());
 		
 
-		return graphDataIntPassX = convertIntegers(passx);
+		return graphDataIntPass = convertIntegers(pass);
 
 	}
 	
