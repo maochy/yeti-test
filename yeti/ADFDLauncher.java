@@ -34,6 +34,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
+import yeti.strategies.YetiADFDAroundStrategy;
 import yeti.strategies.YetiADFDLongStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiADFDStrategy;
@@ -232,7 +233,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 * strategy contains the strategy which is to be used in the current session. Its default value is set to the ADFD+ strategy. 
 	 */
-	String 		strategy 			 = "-ADFDLong";
+	String 		strategy 			 = "-ADFDAround";
 
 	/**
 	 * gui contains the option to enable or disable the GUI of the yeti test session. To enable it, change its value to -gui 
@@ -272,7 +273,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 *  strategies contains all the strategies which are supported by YETI. One of them can be selected from strategies combo box within the GUI. 
 	 */
-	String[] strategies = {"ADFDLong", "ADFDWide", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDAround", "ADFDLong", "ADFDWide", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
@@ -500,7 +501,11 @@ public class ADFDLauncher extends JFrame{
 				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDWide")){
 					strategy = "-ADFDWide";
 					unhideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDAround")){
+					strategy = "-ADFDAround";
+					unhideItems();
 				}
+				
 				else
 				{
 					strategy = "-ADFDPlus";
@@ -921,6 +926,7 @@ public class ADFDLauncher extends JFrame{
 		int temp = Integer.parseInt(rangeValue_TextField.getText());
 		YetiADFDStrategy.rangeToPlot +=  temp;
 		YetiADFDPlusStrategy.rangeToPlot +=  temp;
+		YetiADFDAroundStrategy.rangeToPlot +=  temp;
 		//		YetiADFDLongStrategy.rangeToPlot +=  temp;
 		//			JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 		command = list.toArray(new String[list.size()]);
@@ -945,7 +951,7 @@ public class ADFDLauncher extends JFrame{
 
 	public void drawGraph(){
 
-		//		JOptionPane.showMessageDialog(null, language, " drawGraph method is executed.", JOptionPane.PLAIN_MESSAGE);
+//				JOptionPane.showMessageDialog(null, language, " drawGraph method is executed.", JOptionPane.PLAIN_MESSAGE);
 
 
 
@@ -996,6 +1002,19 @@ public class ADFDLauncher extends JFrame{
 
 		}
 
+		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 1)){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+			ADFDAroundGraphGeneratorFor1Arg demo = new ADFDAroundGraphGeneratorFor1Arg("Failure Domains");
+
+		}
+		
+		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 2)){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+			ADFDAroundGraphGeneratorFor2Arg demo = new ADFDAroundGraphGeneratorFor2Arg("Failure Domains");
+
+		}
+		
+		
 
 		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){
 		//			LogGrapher1 demo = new LogGrapher1("Failure Domains");
