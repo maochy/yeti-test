@@ -219,12 +219,12 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 			if (oldyt.length == 1){
 				programDim = 1;
 			}
-			
+
 			if(oldyt.length == 2)
 			{
 				programDim = 2;
 			}
-			
+
 
 
 			if (oldyt.length <= 2) {
@@ -401,11 +401,11 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 			+ " public static ArrayList<Integer> fail = new ArrayList<Integer>();\n\n"
 			+ " public static ArrayList<Integer> passY = new ArrayList<Integer>();\n"
 			+ " public static ArrayList<Integer> failY = new ArrayList<Integer>();\n\n"
-			
+
 			+ " public static boolean startedByFailing = false;\n"
 			+ " public static boolean isCurrentlyFailing = false;\n"
-			
-			
+
+
 			+ " public static boolean xAxis = false;\n"
 			+ " public static boolean yAxis = false;\n"
 
@@ -415,9 +415,9 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
 				+ " public static int starterX = xValue - (range/2);\n" 
-				+ " public static int stopperX = xValue + range;\n"
+				+ " public static int stopperX = xValue + (range/2);\n"
 				+ " public static int starterY = yValue - (range/2);\n"
-				+ " public static int stopperY = yValue + range;\n\n"
+				+ " public static int stopperY = yValue + (range/2);\n\n"
 
 
 
@@ -428,47 +428,41 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "		int start1 = starterX;\n"
 				+ "		int stop1  = stopperX; \n"
 				+ "		checkFirstAndLastValue(start1 , yValue);\n"
-
-
-+ "   int rangeLocalx = 1; \n"
-+ "   int i = starterX; \n"
-+ "   boolean localFlagX = false;\n"
-+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
-+ "   System.out.println(\"The value of i is \" + i); \n"
-+ "   checkMiddleValues(i , yValue);\n"
-+ "   if ((i == 2147483647) && (rangeLocalx < range)){\n"
-+ "   localFlagX = true; \n"
-+ "   break; }\n"
-+ "   rangeLocalx++; \n"
-+ "   i++; \n"
-+ "   }\n"
-+ "   if (localFlagX) { \n"
-+ "   while(rangeLocalx <= range) {\n"
-+ "   i = 2147483647 - rangeLocalx; \n"
-+ "   System.out.println(\"The value of i is \" + i); \n"
-+ "	  checkFirstAndLastValue(i , yValue);\n"
-+ "   rangeLocalx++;\n"
-+ "   }\n"
-+ "}\n"
-
-//				+ "		for(int i = start1 + 1; i < stop1; i++) { \n"
-//				+ "			checkMiddleValues(i , yValue);\n"
-//				+ "		}\n"
-+ "		checkFirstAndLastValue(stop1 , yValue);\n\n";
+				+ "   int rangeLocalx = 1; \n"
+				+ "   int i = start1 + 1; \n"
+				+ "   boolean localFlagX = false;\n"
+				+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
+				//+ "   System.out.println(\"The value of i is \" + i); \n"
+				+ "   checkMiddleValues(i , yValue);\n"
+				+ "   if ((i == 2147483647) && (rangeLocalx < range)){\n"
+				+ "   localFlagX = true; \n"
+				+ "   break; }\n"
+				+ "   rangeLocalx++; \n"
+				+ "   i++; \n"
+				+ "   }\n"
+				+ "   if (localFlagX) { \n"
+				+ "   while(rangeLocalx <= range) {\n"
+				+ "   i = 2147483647 - rangeLocalx; \n"
+				//+ "   System.out.println(\"The value of i is \" + i); \n"
+				+ "	  checkMiddleValues(i , yValue);\n"
+				+ "   rangeLocalx++;\n"
+				+ "   }\n"
+				+ "}\n"
+				+ "		checkFirstAndLastValue(stop1 , yValue);\n\n";
 
 		if (oldyt.length == 2){
 			temp = temp + " xAxis = false;\n"
 					+ "		yAxis = true;"
 					+ "		int start2 = starterY;\n"
-					+ "		int stop2  = stopperY; \n"
+					+ "		int stop2  = stopperY; \n" 
 					+ "		checkFirstAndLastValue(xValue , start2);\n"
 
 					+ "   int rangeLocaly = 1; \n"
-					+ "   int j = starterY; \n"
+					+ "   int j = start2 + 1; \n"
 					+ "   boolean localFlagY = false;\n"
 					+ "   while((j <= 2147483647) && (rangeLocaly <= range)) { \n"
-					+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "   checkFirstAndLastValue(xValue , j);\n"
+					//	+ "   System.out.println(\"The value of j is \" + j); \n"
+					+ "   checkMiddleValues(xValue , j);\n"
 					+ "   if ((j == 2147483647) && (rangeLocaly < range)){\n"
 					+ "   localFlagY = true; \n"
 					+ "   break; }\n"
@@ -478,19 +472,14 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 					+ "   if (localFlagY) { \n"
 					+ "   while(rangeLocaly <= range) {\n"
 					+ "   j = 2147483647 - rangeLocaly; \n"
-					+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "	  checkFirstAndLastValue(xValue , j);\n"
+					//	+ "   System.out.println(\"The value of j is \" + j); \n"
+					+ "	  checkMiddleValues(xValue , j);\n"
 					+ "   rangeLocaly++;\n"
 					+ "   }\n"
 					+ "}\n"
 
-
-
-			//					+ "		for(int j = start2 + 1; j < stop2; j++) { \n"
-			//					+ "			checkMiddleValues(xValue , j);\n"
-			//					+ "		}\n"
-			+ "		checkFirstAndLastValue(xValue, stop2);\n\n"
-			+ "		yAxis = false;\n ";
+					+ "	checkFirstAndLastValue(xValue, stop2);\n\n"
+					+ "	yAxis = false;\n ";
 		}
 		temp = temp + "	printRangeFail();\n" 
 				+ "   	printRangePass();\n" 
