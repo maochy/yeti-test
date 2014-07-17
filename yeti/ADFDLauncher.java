@@ -1223,15 +1223,15 @@ public class ADFDLauncher extends JFrame{
 				//				"--config_option daikon.inv.unary.scalar.UpperBound.minimal_interesting=Integer.MIN_VALUE "+// TODO
 				"--config_option daikon.PptRelation.enable_object_user=true "+
 				"--config_option daikon.PptSliceEquality.set_per_var=true "+
-				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
-//				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
+//				"--conf_limit 0 --var-select-pattern=^i$";// TODO Make more generic
+				"--conf_limit 0 --var-select-pattern=^i$|^j$ C";// TODO Make more generic
 
 //		 I am disabling if statement so that invariants are generated for two arguments even if one argument program is under test.
-		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2 || YetiADFDWideStrategy.programDim == 2){
-			daikonOptions = daikonOptions + "|^j$";
-		}
+//		if(YetiADFDPlusStrategy.twoDimProgram == 2 || YetiADFDStrategy.twoDimProgram == 2 || YetiADFDLongStrategy.programDim == 2 || YetiADFDWideStrategy.programDim == 2){
+//			daikonOptions = daikonOptions + "|^j$";
+//		}
 
-		daikonOptions = daikonOptions + " C";
+//		daikonOptions = daikonOptions + " C";
 
 
 
