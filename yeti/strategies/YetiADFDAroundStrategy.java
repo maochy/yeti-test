@@ -198,6 +198,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 	public static long uid = 0;
 	public String args = "";
 	public int count = 0;
+	public static boolean executeOnceOnly = true;
 
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
@@ -209,8 +210,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 		//Trying to perform the process for any error found by YETI and caused by 2 arguments program.
 
-		if(currentErrors > oldFaults1){
-
+		if((currentErrors > oldFaults1)&&(executeOnceOnly)){
 			oldFaults1 = currentErrors;
 
 
@@ -218,11 +218,13 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 			//			if (currentErrors == 1 && oldyt.length <= 2) {
 			if (oldyt.length == 1){
 				programDim = 1;
+				executeOnceOnly = false;
 			}
 
 			if(oldyt.length == 2)
 			{
 				programDim = 2;
+				executeOnceOnly = false;
 			}
 
 

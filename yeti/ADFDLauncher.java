@@ -1138,11 +1138,16 @@ public class ADFDLauncher extends JFrame{
 			String result = executeDaikon();
 
 			//To display the generated invariants in GUI, panel 5
+			String tempLog = "";
+			if(YetiADFDAroundStrategy.executeOnceOnly){
+				tempLog = "" + YetiLog.proc.processLogs();
+			}
+			
 
 
 			//temporary disabling the following two lines.
 			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
-					+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
+					+ "\n\n=============Test Case=============\n\n" + tempLog);
 
 
 

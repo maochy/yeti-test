@@ -47,14 +47,20 @@ public class ADFDAroundGraphGeneratorFor1Arg {
 		int passValuesX[] = GraphDataScannerForADFD.readPassDataFromFileX();
 
 		final XYSeries series1 = new XYSeries("Failing input X");
-
+		System.out.println("The length of failValues[] is "+ failValuesX.length);
 		for (int i =0; i < failValuesX.length; i=i+4 ){
+			
 			System.out.println("first add fail X " + failValuesX[i] + ", " + failValuesX[i+1]);
 			series1.add((double)failValuesX[i],(double)failValuesX[i+1]);
+			
 			System.out.println("Second add fail X " + failValuesX[i+2] + ", " + failValuesX[i+3]);
 			series1.add((double)failValuesX[i+2],(double)failValuesX[i+3]);
+			
+			
 			System.out.println("Second add fail X " + failValuesX[i+3] + ", null");
 			series1.add((double)failValuesX[i+3],null);
+			
+			
 			System.out.println("Second add fail X " + failValuesX[i+2] + ", null");
 			series1.add((double)failValuesX[i+2],null);
 		}
