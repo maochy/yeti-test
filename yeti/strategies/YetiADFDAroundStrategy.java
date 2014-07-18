@@ -438,19 +438,26 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "   int rangeLocalx = 1; \n"
 				+ "   int i = start1 + 1; \n"
 				+ "   boolean localFlagX = false;\n"
+				
+				
+				
 				+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
 				//+ "   System.out.println(\"The value of i is \" + i); \n"
 				+ "   checkMiddleValues(i , yValue);\n"
-				+ "   if ((i == 2147483647) && (rangeLocalx < range)){\n"
+				
+				
+				+ "   if ((i == 2147483647 || i == -2147483648) && (rangeLocalx < range)){\n"
 				+ "   localFlagX = true; \n"
 				+ "	  checkFirstAndLastValue(i , yValue);\n"
 				+ "   break; }\n"
 				+ "   rangeLocalx++; \n"
 				+ "   i++; \n"
 				+ "   }\n"
+				
+				
+				
 				+ "   if (localFlagX) { \n"
 				+ "   while(rangeLocalx <= range) {\n"
-//				+ "   i = 2147483647 - rangeLocalx; \n"
 				+ "   i = -2147483648; \n"
 				+ "	  checkFirstAndLastValue(i , yValue);\n"
 				//+ "   System.out.println(\"The value of i is \" + i); \n"
@@ -466,21 +473,27 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 					+ "		int start2 = starterY;\n"
 					+ "		int stop2  = stopperY; \n" 
 					+ "		checkFirstAndLastValue(xValue , start2);\n"
-
 					+ "   int rangeLocaly = 1; \n"
 					+ "   int j = start2 + 1; \n"
 					+ "   boolean localFlagY = false;\n"
+					
+					
+					
 					+ "   while((j <= 2147483647) && (rangeLocaly <= range)) { \n"
 					//	+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "   checkFirstAndLastValue(xValue , j);\n"
-					+ "   if ((j == 2147483647) && (rangeLocaly < range)){\n"
+					+ "   checkMiddleValues(xValue , j);\n"
+					
+					
+					+ "   if ((j == 2147483647 || i == -2147483648) && (rangeLocaly < range)){\n"
 					+ "   localFlagY = true; \n"
-					+ "	"
-					+ "	  checkMiddleValues(xValue , j);\n"
+					+ "	  checkFirstAndLastValue(xValue , j);\n"
 					+ "   break; }\n"
 					+ "   rangeLocaly++; \n"
 					+ "   j++; \n"
 					+ "   }\n"
+					
+					
+					
 					+ "   if (localFlagY) { \n"
 					+ "   while(rangeLocaly <= range) {\n"
 					+ "   j = -2147483648; \n"
