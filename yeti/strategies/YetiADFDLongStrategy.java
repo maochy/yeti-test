@@ -412,10 +412,6 @@ public class YetiADFDLongStrategy extends YetiRandomStrategy {
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
-				//				+ " public static int starterX = xValue - range;\n" 
-				//				+ " public static int stopperX = xValue + range;\n"
-				//				+ " public static int starterY = yValue - range;\n"
-				//				+ " public static int stopperY = yValue + range;\n\n"
 
 				+ " public static void main(String []argv){\n"
 				+ "		xAxis = true;\n"
