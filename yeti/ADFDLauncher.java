@@ -761,6 +761,7 @@ public class ADFDLauncher extends JFrame{
 									countFiles();
 									compileFiles();
 									executeFiles();
+									
 									drawGraph();
 									panel3.revalidate();
 
@@ -1003,13 +1004,13 @@ public class ADFDLauncher extends JFrame{
 		}
 
 		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 1)){
-//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
 			ADFDAroundGraphGeneratorFor1Arg demo = new ADFDAroundGraphGeneratorFor1Arg("Failure Domains");
 
 		}
 		
 		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 2)){
-//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
 			ADFDAroundGraphGeneratorFor2Arg demo = new ADFDAroundGraphGeneratorFor2Arg("Failure Domains");
 
 		}
@@ -1138,16 +1139,17 @@ public class ADFDLauncher extends JFrame{
 			String result = executeDaikon();
 
 			//To display the generated invariants in GUI, panel 5
-			String tempLog = "";
-			if(YetiADFDAroundStrategy.executeOnceOnly){
-				tempLog = "" + YetiLog.proc.processLogs();
-			}
+//			String tempLog = "";
+//			if(YetiADFDAroundStrategy.executeOnceOnly){
+//				tempLog = "" + YetiLog.proc.processLogs();
+//			}
 			
 
 
 			//temporary disabling the following two lines.
 			panel5.setText("=============Test LOGS=============\n\n Candidate invariant:"+result 
-					+ "\n\n=============Test Case=============\n\n" + tempLog);
+//					+ "\n\n=============Test Case=============\n\n" + tempLog);
+			+ "\n\n=============Test Case=============\n\n" + YetiLog.proc.processLogs());
 
 
 

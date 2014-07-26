@@ -198,7 +198,6 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 	public static long uid = 0;
 	public String args = "";
 	public int count = 0;
-	public static boolean executeOnceOnly = true;
 
 
 	public YetiCard[] getAllCards(YetiRoutine routine)
@@ -210,23 +209,23 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 		//Trying to perform the process for any error found by YETI and caused by 2 arguments program.
 
-		if((currentErrors > oldFaults1)&&(executeOnceOnly)){
+		if(currentErrors > oldFaults1){
+
 			oldFaults1 = currentErrors;
 
 
+			if(oldyt.length == 1)
+			{
+				programDim = 1;
+			}
+			
+			
 			// The second condition in the if statement is added to restrict the program to only 1 and 2 arguments programs.
 			//			if (currentErrors == 1 && oldyt.length <= 2) {
-			if (oldyt.length == 1){
-				programDim = 1;
-				executeOnceOnly = false;
-			}
-
 			if(oldyt.length == 2)
 			{
 				programDim = 2;
-				executeOnceOnly = false;
 			}
-
 
 
 			if (oldyt.length <= 2) {
@@ -347,6 +346,8 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 						generateProgram(completeProgram);
 
+						//	args = args + yc.getValue() + ",";
+
 
 					}
 
@@ -361,11 +362,9 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 		return oldyt;
 	}
 
-
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%   BEGIN PART %%%%%%%%%%%%%%%%%%%%//
 
 	public String programBeginPart(){
-
 		String temp = "/** YETI - York Extensible Testing Infrastructure \n"  
 				+ "Copyright (c) 2009-2010, Manuel Oriol <manuel.oriol@gmail.com> - University of York \n"
 				+ "All rights reserved.\n"
@@ -394,6 +393,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 			+ "(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n"
 			+ "SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n"
 			+ "**/\n"
+			+ " // The value of currentErrors is " + currentErrors++ + "\n"
 			+ "import java.io.*;\n"
 			+ "import java.util.*;\n\n" 
 			+ "public class C"
@@ -404,114 +404,60 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 			+ " public static ArrayList<Integer> passY = new ArrayList<Integer>();\n"
 			+ " public static ArrayList<Integer> failY = new ArrayList<Integer>();\n\n"
 
-			+ " public static boolean startedByFailing = false;\n"
-			+ " public static boolean isCurrentlyFailing = false;\n"
-
-
-			+ " public static boolean xAxis = false;\n"
-			+ " public static boolean yAxis = false;\n"
-
 				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
 				+ " public static int xValue = " + argumentFirst  +";\n" 
 				+ " public static int yValue = " + argumentSecond +";\n\n"
 
-				+ " public static int starterX = xValue - (range/2);\n" 
-				+ " public static int stopperX = xValue + (range/2);\n"
-				+ " public static int starterY = yValue - (range/2);\n"
-				+ " public static int stopperY = yValue + (range/2);\n\n"
-				
-//				+ " public static int starterX = xValue - range;\n" 
-//				+ " public static int stopperX = xValue + range;\n"
-//				+ " public static int starterY = yValue - range;\n"
-//				+ " public static int stopperY = yValue + range;\n\n"
+				+ " public static int starterX = xValue;\n" 
+				+ " public static int stopperX = xValue;\n"
+				+ " public static int starterY = yValue;\n"
+				+ " public static int stopperY = yValue;\n\n"
+
+				+ " public static boolean startedByFailing = false;\n"
+				+ " public static boolean isCurrentlyFailing = false;\n"
 
 
+				+ " public static boolean xAxis = false;\n"
+				+ " public static boolean yAxis = false;\n"
 
 
 				+ " public static void main(String []argv){\n"
 				+ "		xAxis = true;\n"
 				+ "		yAxis = false;\n"
+
+				+ "		starterX = decrement(starterX); \n"
+				+ "		stopperX = increment(stopperX); \n"
 				+ "		int start1 = starterX;\n"
 				+ "		int stop1  = stopperX; \n"
 				+ "		checkFirstAndLastValue(start1 , yValue);\n"
-				+ "   int rangeLocalx = 1; \n"
-				+ "   int i = start1 + 1; \n"
-				+ "   boolean localFlagX = false;\n"
-				
-				
-				
-				+ "   while((i <= 2147483647) && (rangeLocalx <= range)) { \n"
-				//+ "   System.out.println(\"The value of i is \" + i); \n"
-				+ "   checkMiddleValues(i , yValue);\n"
-				
-				
-				+ "   if ((i == 2147483647 || i == -2147483648) && (rangeLocalx < range)){\n"
-				+ "   localFlagX = true; \n"
-				+ "	  checkFirstAndLastValue(i , yValue);\n"
-				+ "   break; }\n"
-				+ "   rangeLocalx++; \n"
-				+ "   i++; \n"
-				+ "   }\n"
-				
-				
-				
-				+ "   if (localFlagX) { \n"
-				+ "   while(rangeLocalx <= range) {\n"
-				+ "   i = -2147483648; \n"
-				+ "	  checkFirstAndLastValue(i , yValue);\n"
-				//+ "   System.out.println(\"The value of i is \" + i); \n"
-				+ "	  checkMiddleValues(i , yValue);\n"
-				+ "   rangeLocalx++;\n"
-				+ "   }\n"
-				+ "}\n"
+				+ "		for (int i = start1 + 1; i < stop1; i++) {\n"
+				+ "			checkMiddleValues(i , yValue); \n"
+				+ "		}"
+
 				+ "		checkFirstAndLastValue(stop1 , yValue);\n\n";
 
 		if (oldyt.length == 2){
 			temp = temp + " xAxis = false;\n"
 					+ "		yAxis = true;"
+					+ "		starterY = decrement(starterY); \n"
+					+ "		stopperY = increment(stopperY); \n"
 					+ "		int start2 = starterY;\n"
 					+ "		int stop2  = stopperY; \n" 
 					+ "		checkFirstAndLastValue(xValue , start2);\n"
-					+ "   int rangeLocaly = 1; \n"
-					+ "   int j = start2 + 1; \n"
-					+ "   boolean localFlagY = false;\n"
-					
-					
-					
-					+ "   while((j <= 2147483647) && (rangeLocaly <= range)) { \n"
-					//	+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "   checkMiddleValues(xValue , j);\n"
-					
-					
-					+ "   if ((j == 2147483647 || i == -2147483648) && (rangeLocaly < range)){\n"
-					+ "   localFlagY = true; \n"
-					+ "	  checkFirstAndLastValue(xValue , j);\n"
-					+ "   break; }\n"
-					+ "   rangeLocaly++; \n"
-					+ "   j++; \n"
-					+ "   }\n"
-					
-					
-					
-					+ "   if (localFlagY) { \n"
-					+ "   while(rangeLocaly <= range) {\n"
-					+ "   j = -2147483648; \n"
-					+ "   checkFirstAndLastValue(xValue , j);\n"
-					//	+ "   System.out.println(\"The value of j is \" + j); \n"
-					+ "	  checkMiddleValues(xValue , j);\n"
-					+ "   rangeLocaly++;\n"
-					+ "   }\n"
-					+ "}\n"
+					+ "		for (int i = start2 + 1; i < stop2; i++) {\n"
+					+ "			checkMiddleValues(xValue , i); \n"
+					+ "		}"
 
-					+ "	checkFirstAndLastValue(xValue, stop2);\n\n"
-					+ "	yAxis = false;\n ";
+					+ "		checkFirstAndLastValue(xValue, stop2);\n\n"
+					+ "		yAxis = false;\n ";
 		}
-		temp = temp + "	printRangeFail();\n" 
-				+ "   	printRangePass();\n" 
+		temp = temp + "		printRangeFail();\n" 
+				+ "   		printRangePass();\n" 
 				+ " }\n";
 
 		return temp;
+
 	}
 
 	//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   END PART %%%%%%%%%%%%%%%%%%%%//
@@ -594,6 +540,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 
 
+
 	public String programEndPart2(){
 		String temp4 = "; \n"
 				+ "		if(xAxis) {\n"
@@ -664,6 +611,34 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "		}\n"
 				+ "	}\n"
 				+ " public static void failureDomain(int i, int j){}\n\n"
+
+				+ " public static int increment(int add){ \n"
+				+ "	int localRange = range; \n"
+				+ " int count = 1; \n"
+				+ "	while (count <= localRange) { \n"
+				+ "	add++; \n"
+				+ "	count++; \n"
+				+ "	if (add == 2147483647){ \n"
+				+ "	break; \n"
+				+ "	} \n"
+				+ " } \n"
+				+ "	return add;\n"
+				+ "}\n"
+
+				+ " public static int decrement(int sub){\n"
+				+ "	int localRange = range; \n"
+				+ "	int count = 1; \n"
+				+ "	while (count <= localRange) { \n"
+				+ "	sub--; \n"
+				+ "	count++; \n"
+				+ " if (sub == -2147483648){ \n"
+				+ " break; \n"
+				+ "	} \n"
+				+ "	} \n"
+				+ "	return sub; \n"
+				+ "}"
+
+
 				+ "}\n";
 		return temp5;
 	}
