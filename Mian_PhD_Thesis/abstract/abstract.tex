@@ -1,7 +1,11 @@
 \begin{abstract}
 
-Software testing is the process of evaluating the quality of a software or its component.The thesis presents new techniques for improving the effectiveness of automated random testing, evaluates the efficiency of these techniques and proposes directions for future work.
+%Software testing is the process of evaluating the quality of a software or its component.The thesis presents new techniques for improving the effectiveness of automated random testing, evaluates the efficiency of these techniques and proposes directions for future work.
 %, is a well used approach for detecting software failures. Testing involves generation and execution of test inputs and evaluation of results for correctness either manually or by automatic means. Automated software testing save time and human effort involved in manual testing. There are two major challenges in software testing: the generation of appropriate test inputs and evaluation of the test results. This thesis addresses both issues.
+
+Exhaustive testing is not feasible in most cases and a test strategy is often used to select a small subset of the inputs for testing the software. Selection of adequate test strategy is crucial for better test performance because the chances of finding failures increases if the selected subset of data effectively represents the whole input domain. 
+
+In this thesis, we presents new techniques for improving the effectiveness of automated random testing, evaluates the efficiency of these techniques and proposes directions for future work.
 
 The first technique, Dirt Spot Sweeping Random (DSSR) strategy is developed on the assumption that unique failures reside in contiguous block and strips. It starts by testing the code at random. When a failure is identified, the DSSR strategy selects the neighbouring input values for the subsequent tests. The selected values sweep around the identified failure leading to the discovery of new failures in the vicinity. This results in quick and efficient identification of new failures in SUT.
 

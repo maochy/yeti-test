@@ -117,7 +117,7 @@ public class ADFDWideGraphGeneratorFor2Arg {
 
 		// create the chart...
 		JFreeChart chart = ChartFactory.createXYLineChart(
-				"Serial Data", // chart title
+				"Two Dimensional Program Graph", // chart title
 				"Domain", // domain axis label
 				"Range", // range axis label
 				dataset,  // initial series
