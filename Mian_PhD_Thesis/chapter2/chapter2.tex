@@ -82,7 +82,7 @@ Based on the perspective taken, software testing is divided into white-box and b
 %  \caption{White-box testing}
 % \vspace{-18pt}
 %\end{wrapfigure}
-In white-box testing also known as structural testing, the testers should know about the complete structure of the software in order to make necessary modifications, if so required. Test cases are derived from the code structure and test passes if the results are correct and the proper code is followed during test execution~\cite{ostrand2002white}. Some commonly used white-box testing techniques are as follows:
+White-box testing also known as structural testing is a technique that takes into consideration the structure of the software. The testers should know about the complete structure of the software in order to make necessary modifications, if so required. Test cases are derived from the code structure and test passes if the results are correct  and the proper code is followed during test execution~\cite{ostrand2002white}. A simplified version of white-box testing is shown in Figure~\ref{fig:blackBox}. 
 
 \begin{figure}[h]
 \begin{center}
@@ -92,18 +92,18 @@ In white-box testing also known as structural testing, the testers should know a
 \end{center}  
 \end{figure}
 
+Some commonly used white-box testing techniques are as follows:
 
 \subsubsection{Data Flow Analysis}
-Data Flow Analysis (DFA) is a technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG), graphically representing all possible states of a program, is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG. 
+Data Flow Analysis (DFA) is a technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG) representing all possible states of a program is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG on the basis of data flow. 
 
-The data flow analysis observes the program execution as data-flow from input to output.
-The data may transform into several intermediary steps before reaching the final state. The process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables or change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
+The data flow analysis observes the program execution as data flow from input to output. The data may transform into several intermediary steps before reaching the final state. The transformation process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables and change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
 
 \subsubsection{Control Flow Analysis}
-Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function calls are executed. In this technique a CFG, similar to the one required in DFA, is drawn to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control. Taking the example of following a specific path between two or more available choices at a particular state, efforts are made to ensure that the set of selected test cases execute all the possible control choices at least once. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
+Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function-calls are executed. Like DFA, this technique also involves drawing of CFG to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control flow. For example, the CFA ensures that the selected test cases execute all possible control choices at least once when two or more control choices are available to reach a particular state in the given SUT. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
 \subsubsection{Code-based Fault Injection Testing}
-It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the given instructions. \cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
+It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the given instructions~\cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
 
 \subsection{Black-box Testing}
 %\begin{wrapfigure}{r}{0.36\textwidth}
@@ -117,7 +117,8 @@ It is a testing technique in which new instructions are added to the code of the
 %  \label{fig:blackBox}
 %  \vspace{-18pt}
 % \end{wrapfigure}
-In black-box testing also known as functional testing, the testers do not need to know about the internal code structure of the SUT. Test cases are derived from the software specifications and test passes if the result is according to expected output irrespective of the internal code followed during test execution~\cite{beizer1995black}. Some commonly used black-box testing techniques are as follows.
+Black-box testing also known as functional testing is a technique that takes into consideration the function of the software. The testers may not know about the structure of the software. Test cases are derived from the software specifications and test passes if the result is according to expected output irrespective of the internal code followed during test execution~\cite{beizer1995black}. A simplified version of black-box testing is shown in Figure~\ref{fig:blackBox}.
+
 \begin{figure}[h]
 \begin{center}
 	\includegraphics[width=5cm, height=5.5cm ]{chapter2/blackBox.png}
@@ -126,21 +127,20 @@ In black-box testing also known as functional testing, the testers do not need t
 \end{center}  
 \end{figure}
 
-
+Some commonly used black-box testing techniques are as follows.
 
 \subsubsection{Use-case Based Testing}
 % check if it is use case-based testing or use case testing.
-It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description and flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the information required for test case, therefore, it can be easily transformed into a test case~\cite{armour2000advanced}. Use-case testing is beneficial in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
+It is a testing technique which utilizes use-cases of the system to generate test cases. Use-case defines functional requirement at a particular point in the system from actor's perspective. It consists of a sequence of actions to represent a particular behaviour of the system. A use-case format includes brief description, flow of events, pre-conditions, post-conditions, extension points, context and activity diagrams. The use-case contains all the relevant information required for test case, therefore, it can be easily transformed into a test case~\cite{armour2000advanced}. Use-case testing is effective in terms of cheap generation of test cases, avoidance of test duplication, increased test coverage, easier regression testing and early identification of missing requirements.  
 
 % steps taken from presentation of Raional User Conference 2003. Check it for viva.
 \subsubsection{Partition Testing}
-It is a testing technique in which the input domain of a given SUT is divided into equal sub-domains for testing each sub-domain individually. The division is based on software specifications, code structure and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly proportional to the quality of sub-domain~\cite{weyuker1991analyzing}. Division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing, called proportional partition testing~\cite{chan1996proportional} is devised. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Experiments performed by Ntafos~\cite{ntafos1998random} have provided evidence for better performance of proportional partition testing.
+It is a testing technique in which the input domain of a given SUT is divided into equal sub-domains for testing each sub-domain individually. The division is based on software specifications, code structure and the process involved in software development~\cite{hamlet1990partition}. The performance of partition testing is directly proportional to the quality of sub-domain~\cite{weyuker1991analyzing}. Division of input domain into equal partitions is often difficult. To overcome the problem, a new version of partition testing called proportional partition testing is devised~\cite{chan1996proportional}. In this version, the sub-domains vary in size and the number of test cases selected from each partition is directly proportional to the size of the partition. Ntafos~\cite{ntafos1998random} have provided experimental evidence in support of better performance of proportional partition testing than partition testing.
 
 
 \subsubsection{Boundary Value Analysis}
-Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards~\cite{radatz1990ieee}, boundary values contain minimum, maximum, internal and external values specified for a system. 
-
-BVA and partition testing may be used in combination by choosing test values from the whole input domain and also from the borders of each sub-domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA compared to partition testing. However, they have indicated that better performance of BVA is based on accurate identification of partition and selection of boundary values. The following code illustrates the ability of BVA to find a bug. 
+Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards~\cite{radatz1990ieee}, boundary values contain minimum, maximum, internal and external values specified for a system.
+The following code illustrates the ability of BVA to find a bug. 
 
 \begin{lstlisting}
  public void test (int arg) {
@@ -152,10 +152,13 @@ BVA and partition testing may be used in combination by choosing test values fro
 
 On passing interesting value \verb+MAX_INT+ as argument to the \verb+test+ method, the code in the method increment it by 1 making it a negative value and thus an error is generated when the SUT tries to set the array size to a negative value.
 
-\subsubsection{Formal Specification Testing}
-It is a testing technique based on mathematical model which provides the opportunity to handle the specifications mechanically. This feature facilitates the isolation, transformation, assembly and repackaging of the information available in the specifications for use as test cases~\cite{donat1997automating}.
+BVA and partition testing may be used in combination by choosing test values from the whole input domain and also from the borders of each sub-domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA in combination with partition testing as compared to each individually. They have attributed better performance to accurate identification of partition and selection of boundary values. 
 
-The formal specification testing is more productive because of the creation of test cases independent from the code of the SUT~\cite{gaudel2010software}. The extra effort of generating test oracle is avoided because of using the available specification model for verifying the test results~\cite{bertolino2007software}.
+
+\subsubsection{Formal Specification Testing}
+It is a testing technique based on mathematical model which provides the opportunity to handle the specifications mathematically. This feature facilitates isolation, transformation, assembly and repackaging of the information available in the specifications for use as test cases~\cite{donat1997automating}.
+
+The formal specification testing is more productive because of the creation of test cases independent from the code of the SUT~\cite{gaudel2010software}. The effort of generating test oracle is avoided by using available specification model for verifying the test results~\cite{bertolino2007software}.
   
 
 %\section{Common Techniques of Software Testing}
