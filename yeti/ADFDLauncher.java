@@ -1004,13 +1004,13 @@ public class ADFDLauncher extends JFrame{
 		}
 
 		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 1)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
 			ADFDAroundGraphGeneratorFor1Arg demo = new ADFDAroundGraphGeneratorFor1Arg("Failure Domains");
 
 		}
 		
 		if((strategy.equalsIgnoreCase("-ADFDAround"))&&(YetiADFDAroundStrategy.programDim == 2)){
-			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDAround", JOptionPane.PLAIN_MESSAGE);
 			ADFDAroundGraphGeneratorFor2Arg demo = new ADFDAroundGraphGeneratorFor2Arg("Failure Domains");
 
 		}

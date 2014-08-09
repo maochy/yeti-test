@@ -576,7 +576,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			fail.add(i - 1); \n"
 				+ "			fail.add(j); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i - 1,j);\n"
+				+ "    failureDomain(i - 1,j);\n"
 				+ "			pass.add(i); \n"
 				+ "			pass.add(j); \n"
 				+ "			isCurrentlyFailing = false; \n"
@@ -585,7 +585,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			failY.add(i); \n"
 				+ "			failY.add(j - 1); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i,j-1);\n"
+				+ "    failureDomain(i,j-1);\n"
 				+ "			passY.add(i); \n"
 				+ "			passY.add(j); \n"
 				+ "			isCurrentlyFailing = false; \n"
@@ -594,7 +594,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "		}\n"
 				+ "		catch(Throwable t) { \n"
 				// added to see if daikon start working. Yes it worked.
-//				+ "    failureDomain(i,j);\n"
+				+ "    failureDomain(i,j);\n"
 				+ "			if (!isCurrentlyFailing) \n"
 				+ "			{\n"
 				+ "			if(xAxis) {\n"
@@ -603,7 +603,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			fail.add(i); \n"
 				+ "			fail.add(j); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i,j);\n"
+				+ "    failureDomain(i,j);\n"
 				+ "			isCurrentlyFailing = true;\n"
 				+ "			}\n"
 				+ "			if(yAxis) {\n"
@@ -612,7 +612,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			failY.add(i); \n"
 				+ "			failY.add(j); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i,j);\n"
+				+ "    failureDomain(i,j);\n"
 				+ "			isCurrentlyFailing = true;\n"
 				+ "			}\n"
 				+ "			}\n"
