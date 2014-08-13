@@ -27,6 +27,7 @@
 \usepackage[normalem]{ulem}
 \usepackage{rotating}
 \usepackage{caption}
+\usepackage{titlesec}
 \usepackage{setspace}
 \usepackage{lscape}
 \usepackage{ctable}
@@ -76,6 +77,20 @@ showstringspaces=false}
 \degreedate{June 2014}         %the degree date
 
 %end the preamble and start the document
+
+%\titleformat*{\section}{\LARGE\bfseries}
+%\titleformat*{\subsection}{\Large\bfseries}
+%\titleformat*{\subsubsection}{\large\bfseries}
+%\titleformat*{\paragraph}{\large\bfseries}
+%\titleformat*{\subparagraph}{\large\bfseries}
+
+\titleformat{\section}
+  {\normalfont\fontfamily{phv}\fontsize{14}{17}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesubsubsection}{1em}{}
+
 \begin{document}
 
 %this baselineskip gives sufficient line spacing for an examiner to easily

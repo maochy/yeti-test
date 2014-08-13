@@ -78,6 +78,7 @@ import yeti.environments.pharo.YetiPharoTestManager;
 import yeti.monitoring.YetiGUI;
 import yeti.stats.YetiDataSet;
 import yeti.stats.YetiMichaelisMentenEquation;
+import yeti.strategies.YetiADFDBoundaryStrategy;
 import yeti.strategies.YetiDSSRStrategy;
 import yeti.strategies.YetiADFDStrategy;
 import yeti.strategies.YetiADFDLongStrategy;
@@ -314,6 +315,7 @@ public class Yeti {
 		boolean isADFDLong = false;
 		boolean isADFDWide = false;
 		boolean isADFDAround = false;
+		boolean isADFDBoundary = false;
 		boolean isADFDPlus = false;
 		boolean isEvolutionary = false;
 		boolean isRunningFromChromosome = false;
@@ -366,7 +368,7 @@ public class Yeti {
 				isCoFoJa = true; // @YetiCoFoJaBinding
 				continue; // @YetiCoFoJaBinding
 			} // @YetiCoFoJaBinding
-				// if .NET //@YetiDotNETBinding
+			// if .NET //@YetiDotNETBinding
 			if (s0.toLowerCase().equals("-dotnet")) { // @YetiDotNETBinding
 				isDotNet = true; // @YetiDotNETBinding
 				continue; // @YetiDotNETBinding
@@ -550,25 +552,31 @@ public class Yeti {
 				isADFD = true;
 				continue;
 			}
-			
+
 			// we can use the ADFDLong strategy
 			if (s0.equals("-ADFDLong")) {
 				isADFDLong = true;
 				continue;
 			}
-			
+
 			// we can use the ADFDWide strategy
 			if (s0.equals("-ADFDWide")) {
 				isADFDWide = true;
 				continue;
 			}
-			
+
 			// we can use the ADFDAround strategy
-						if (s0.equals("-ADFDAround")) {
-							isADFDAround = true;
-							continue;
-						}
-			
+			if (s0.equals("-ADFDAround")) {
+				isADFDAround = true;
+				continue;
+			}
+
+			// we can use the ADFDBoundary strategy
+			if (s0.equals("-ADFDBoundary")) {
+				isADFDBoundary = true;
+				continue;
+			}
+
 
 			// we can use the ADFD Plus strategy
 			if (s0.equals("-ADFDPlus")) {
@@ -613,8 +621,8 @@ public class Yeti {
 							.newInstance();
 				} catch (Exception e) {
 					System.err
-							.print("Problem while loading user initializer class "
-									+ s0.substring(11));
+					.print("Problem while loading user initializer class "
+							+ s0.substring(11));
 					e.printStackTrace();
 					return;
 				}
@@ -713,38 +721,38 @@ public class Yeti {
 		// test of options to set up the YetiProperties for .NET assemblies
 		// //@YetiDotNETBinding
 		if (isDotNet) { // @YetiDotNETBinding
-						// @YetiDotNETBinding
+			// @YetiDotNETBinding
 			System.out.println("****************************************"); // @YetiDotNETBinding
 			System.out.println("STARTING CsharpReflexiveLayer.exe "); // @YetiDotNETBinding
 			System.out.println("****************************************"); // @YetiDotNETBinding
-																			// @YetiDotNETBinding
+			// @YetiDotNETBinding
 			th = new Thread(new Runnable() // @YetiDotNETBinding
-					{ // @YetiDotNETBinding
+			{ // @YetiDotNETBinding
+				// @YetiDotNETBinding
+				public void run() { // @YetiDotNETBinding
+					Runtime run = Runtime.getRuntime(); // @YetiDotNETBinding
+					String command = yetiPath
+							+ "CsharpReflexiveLayer.exe"; // @YetiDotNETBinding
+					try { // @YetiDotNETBinding
+						Process p = run.exec(command); // @YetiDotNETBinding
+						InputStream in = p.getInputStream(); // @YetiDotNETBinding
 						// @YetiDotNETBinding
-						public void run() { // @YetiDotNETBinding
-							Runtime run = Runtime.getRuntime(); // @YetiDotNETBinding
-							String command = yetiPath
-									+ "CsharpReflexiveLayer.exe"; // @YetiDotNETBinding
-							try { // @YetiDotNETBinding
-								Process p = run.exec(command); // @YetiDotNETBinding
-								InputStream in = p.getInputStream(); // @YetiDotNETBinding
-																		// @YetiDotNETBinding
-								// @YetiDotNETBinding
-								int c; // @YetiDotNETBinding
-								while ((c = in.read()) != -1) { // @YetiDotNETBinding
-									// System.out.print((char) c);
-									// //@YetiDotNETBinding
-								} // @YetiDotNETBinding
-									// @YetiDotNETBinding
-							} catch (IOException e) { // @YetiDotNETBinding
-								YetiCsharpInitializer.initflag = true; // @YetiDotNETBinding
-							} // @YetiDotNETBinding
+						// @YetiDotNETBinding
+						int c; // @YetiDotNETBinding
+						while ((c = in.read()) != -1) { // @YetiDotNETBinding
+							// System.out.print((char) c);
+							// //@YetiDotNETBinding
 						} // @YetiDotNETBinding
-					}); // @YetiDotNETBinding
 						// @YetiDotNETBinding
+					} catch (IOException e) { // @YetiDotNETBinding
+						YetiCsharpInitializer.initflag = true; // @YetiDotNETBinding
+					} // @YetiDotNETBinding
+				} // @YetiDotNETBinding
+			}); // @YetiDotNETBinding
+			// @YetiDotNETBinding
 			th.start(); // @YetiDotNETBinding
-						// @YetiDotNETBinding
-						// @YetiDotNETBinding
+			// @YetiDotNETBinding
+			// @YetiDotNETBinding
 			YetiInitializer initializer = new YetiCsharpInitializer(); // @YetiDotNETBinding
 			YetiTestManager testManager = new YetiCsharpTestManager(); // @YetiDotNETBinding
 			logProcessor = new YetiCsharpLogProcessor(); // @YetiDotNETBinding
@@ -786,7 +794,7 @@ public class Yeti {
 			}
 			YetiTestManager testManager = new YetiPharoTestManager(initializer);
 			logProcessor = null; // new
-									// YetiJavaLogProcessor(initialListOfErrors);
+			// YetiJavaLogProcessor(initialListOfErrors);
 			pl = new YetiJavaProperties(initializer, testManager, logProcessor);
 		}
 
@@ -816,7 +824,7 @@ public class Yeti {
 			e.printStackTrace();
 		} catch (NullPointerException e) {
 			System.out
-					.println("Please pick a language: -java -cofoja -kermeta -dotNet -cl...");
+			.println("Please pick a language: -java -cofoja -kermeta -dotNet -cl...");
 
 		}
 
@@ -827,8 +835,8 @@ public class Yeti {
 			} catch (YetiInitializationException e1) {
 				// if there is an issue with the custom initialization
 				System.err
-						.print("Problem while executing user initializer class "
-								+ secondaryInitializer.getClass().getName());
+				.print("Problem while executing user initializer class "
+						+ secondaryInitializer.getClass().getName());
 				e1.printStackTrace();
 				return;
 
@@ -869,11 +877,15 @@ public class Yeti {
 		if (isADFDWide) {
 			strategy = new YetiADFDWideStrategy(testManager);
 		}
-		
+
 		if (isADFDAround) {
 			strategy = new YetiADFDAroundStrategy(testManager);
 		}
-		
+
+		if (isADFDBoundary) {
+			strategy = new YetiADFDBoundaryStrategy(testManager);
+		}
+
 		if (isADFDPlus) {
 			strategy = new YetiADFDPlusStrategy(testManager);
 		}
@@ -885,10 +897,10 @@ public class Yeti {
 				try { // @YetiGeneticAlgorithmsStrategy
 					optimizer.createGAConfiguration(); // @YetiGeneticAlgorithmsStrategy
 					IChromosome loadedChromosome = // @YetiGeneticAlgorithmsStrategy
-					YetiStrategyPersistenceManager.loadChromosome( // @YetiGeneticAlgorithmsStrategy
-							optimizer.gaConfiguration, chromosomePath); // @YetiGeneticAlgorithmsStrategy
+							YetiStrategyPersistenceManager.loadChromosome( // @YetiGeneticAlgorithmsStrategy
+									optimizer.gaConfiguration, chromosomePath); // @YetiGeneticAlgorithmsStrategy
 					YetiChromosomeInterpreter chromosomeInterpreter = // @YetiGeneticAlgorithmsStrategy
-					new YetiChromosomeInterpreter(loadedChromosome); // @YetiGeneticAlgorithmsStrategy
+							new YetiChromosomeInterpreter(loadedChromosome); // @YetiGeneticAlgorithmsStrategy
 					strategy = new YetiEvolutionaryStrategy(testManager, // @YetiGeneticAlgorithmsStrategy
 							chromosomeInterpreter); // @YetiGeneticAlgorithmsStrategy
 				} catch (Exception e) { // @YetiGeneticAlgorithmsStrategy
@@ -896,7 +908,7 @@ public class Yeti {
 				} // @YetiGeneticAlgorithmsStrategy
 			} else { // @YetiGeneticAlgorithmsStrategy
 				YetiChromosomeInterpreter chromosomeInterpreter = // @YetiGeneticAlgorithmsStrategy
-				new YetiChromosomeInterpreter(chromosome); // @YetiGeneticAlgorithmsStrategy
+						new YetiChromosomeInterpreter(chromosome); // @YetiGeneticAlgorithmsStrategy
 				strategy = new YetiEvolutionaryStrategy(testManager,
 						chromosomeInterpreter); // @YetiGeneticAlgorithmsStrategy
 			} // @YetiGeneticAlgorithmsStrategy
@@ -928,7 +940,7 @@ public class Yeti {
 				boolean ignoreCriteria = false;
 				if (moduleToTest.equals("*"))
 					ignoreCriteria = true; // include all the classes, ignore
-											// all criteria
+				// all criteria
 
 				// parse the name of parent package
 				String parentPackage = moduleToTest.replace(".*", "");
@@ -947,7 +959,7 @@ public class Yeti {
 					}
 				}
 			} else // a single test module with no sub-packages to be included
-					// (no asteriks)
+				// (no asteriks)
 			{
 				// add the module in the collection array of test modules
 				addTestModuleInArray(moduleToTest, modules);
@@ -957,7 +969,7 @@ public class Yeti {
 		// in case no test modules were successfully loaded
 		if (modules.size() == 0) {
 			System.err
-					.println("Testing halted: No test modules were successfully loaded");
+			.println("Testing halted: No test modules were successfully loaded");
 			printHelp();
 			return;
 
@@ -965,7 +977,7 @@ public class Yeti {
 
 		// we combine all the modules in single structure
 		mod = YetiModule.combineModules(modules.toArray(new YetiModule[modules
-				.size()]));
+		                                                               .size()]));
 
 		// in case no test modules were successfully loaded
 		if (mod.routinesInModule.size() == 0) {
@@ -1008,7 +1020,7 @@ public class Yeti {
 			engine.testModuleForNSeconds(mod, timeOutSec);
 		else {
 			System.out
-					.println("Specify a time or a number of tests to perform");
+			.println("Specify a time or a number of tests to perform");
 			printHelp();
 			return;
 		}
@@ -1051,7 +1063,7 @@ public class Yeti {
 			} catch (Exception e) {
 				// in case it did not work
 				System.out
-						.println("/** Problem with saving test cases. Printing them on command-line instead. **/");
+				.println("/** Problem with saving test cases. Printing them on command-line instead. **/");
 				e.printStackTrace();
 				System.out.println(fileContent);
 			}
@@ -1071,7 +1083,7 @@ public class Yeti {
 		// we create the report
 		report = new YetiReport(modulesString, YetiLog.numberOfCalls,
 				endTestingTime - startTestingTime, Yeti.pl.getLogProcessor()
-						.getNumberOfUniqueFaults());
+				.getNumberOfUniqueFaults());
 
 		if (!isProcessed) {
 
@@ -1094,15 +1106,15 @@ public class Yeti {
 		if (Yeti.hasBranchCoverage) {
 			try {
 				System.out
-						.println("/** "
-								+ Yeti.testModule.getCoverageKind()
-								+ ": "
-								+ Yeti.testModule.getNumberOfCoveredBranches()
-								+ "/"
-								+ Yeti.testModule.getNumberOfBranches()
-								+ "("
-								+ ((float) ((int) (100 * Yeti.testModule
-										.getCoverage()))) / 100 + "%) **/");
+				.println("/** "
+						+ Yeti.testModule.getCoverageKind()
+						+ ": "
+						+ Yeti.testModule.getNumberOfCoveredBranches()
+						+ "/"
+						+ Yeti.testModule.getNumberOfBranches()
+						+ "("
+						+ ((float) ((int) (100 * Yeti.testModule
+								.getCoverage()))) / 100 + "%) **/");
 				report.setBranchCoverage(Yeti.testModule.getCoverage());
 			} catch (YetiNoCoverageException e) {
 				// this should not happen... We should have quit already
@@ -1242,83 +1254,83 @@ public class Yeti {
 	 */
 	public static void printHelp() {
 		System.out
-				.println("Yeti Usage:\n java yeti.Yeti [-java|-Java] [[-time=Xs|-time=Xmn]|[-nTests=X]][-testModules=M1:M2:...:Mn][-help|-h][-rawlogs]");
+		.println("Yeti Usage:\n java yeti.Yeti [-java|-Java] [[-time=Xs|-time=Xmn]|[-nTests=X]][-testModules=M1:M2:...:Mn][-help|-h][-rawlogs]");
 		System.out.println("\t-help, -h: prints the help out.");
 		System.out.println("\t-java, -Java : for calling it on Java.");
 		System.out
-				.println("\t-jml, -JML : for calling it on JML annotated code."); // @YetiJMLBinding
+		.println("\t-jml, -JML : for calling it on JML annotated code."); // @YetiJMLBinding
 		System.out
-				.println("\t-cofoja, -CoFoJa : for calling it on Java programs annotated with CoFoJa.  Note that if you do not want to pre-process the classes statically, you should call Yeti using the option -javaagent:cofoja.jar (or any other path to a CoFoJa jar)."); // @YetiCoFoJaBinding
+		.println("\t-cofoja, -CoFoJa : for calling it on Java programs annotated with CoFoJa.  Note that if you do not want to pre-process the classes statically, you should call Yeti using the option -javaagent:cofoja.jar (or any other path to a CoFoJa jar)."); // @YetiCoFoJaBinding
 		System.out
-				.println("\t-dotnet, -DOTNET : for calling it on .NET assemblies developed with Code-Contracts."); // @YetiDotNETBinding
+		.println("\t-dotnet, -DOTNET : for calling it on .NET assemblies developed with Code-Contracts."); // @YetiDotNETBinding
 		System.out
-				.println("\t-kermeta, -Kermeta : for calling it on Kermeta code."); // @YetiKermetaBinding
+		.println("\t-kermeta, -Kermeta : for calling it on Kermeta code."); // @YetiKermetaBinding
 		System.out
-				.println("\t-time=Xs, -time=Xmn, -time=Xmin : for calling Yeti for a given amount of time (X can be minutes or seconds, e.g. 2mn or 3s ).");
+		.println("\t-time=Xs, -time=Xmn, -time=Xmin : for calling Yeti for a given amount of time (X can be minutes or seconds, e.g. 2mn or 3s ).");
 		System.out
-				.println("\t-nTests=X : for calling Yeti to attempt X method calls.");
+		.println("\t-nTests=X : for calling Yeti to attempt X method calls.");
 		System.out
-				.println("\t-testModules=M1:M2:...:Mn : for testing one or several modules. Sub-packages of a system can also be specified with asteriks e.g. yeti.test.* will include all the classes in yeti.test + all the classes belonging to the sub-packages of yeti.test .");
+		.println("\t-testModules=M1:M2:...:Mn : for testing one or several modules. Sub-packages of a system can also be specified with asteriks e.g. yeti.test.* will include all the classes in yeti.test + all the classes belonging to the sub-packages of yeti.test .");
 		System.out
-				.println("\t\tNote: Kermeta requires a different format for testModules: -testModules=M1,M2,...,Mn"); // @YetiKermetaBinding
+		.println("\t\tNote: Kermeta requires a different format for testModules: -testModules=M1,M2,...,Mn"); // @YetiKermetaBinding
 		System.out
-				.println("\t-initClass=X : this will use a user class to initialize the system this class will be a subclass of yeti.environments.YetiInitializer .");
+		.println("\t-initClass=X : this will use a user class to initialize the system this class will be a subclass of yeti.environments.YetiInitializer .");
 		System.out
-				.println("\t-outputUnitTestFile=X : this option stores the generated test cases in a file. THis is binding-specific for Java: X=tests/test0.T.java will store a file T.java from package test0 into the directory tests.");
+		.println("\t-outputUnitTestFile=X : this option stores the generated test cases in a file. THis is binding-specific for Java: X=tests/test0.T.java will store a file T.java from package test0 into the directory tests.");
 		System.out
-				.println("\t-rawlogs: prints the logs directly instead of processing them at the end.");
+		.println("\t-rawlogs: prints the logs directly instead of processing them at the end.");
 		System.out
-				.println("\t-nologs : does not print logs, only the final result.");
+		.println("\t-nologs : does not print logs, only the final result.");
 		System.out
-				.println("\t-msCalltimeout=X : sets the timeout (in milliseconds) for a method call to X.Note that too low values may result in blocking Yeti (use at least 30ms for good performances).");
+		.println("\t-msCalltimeout=X : sets the timeout (in milliseconds) for a method call to X.Note that too low values may result in blocking Yeti (use at least 30ms for good performances).");
 		System.out
-				.println("\t-yetiPath=X : stores the path that contains the code to test (e.g. for Java the classpath to consider)");
+		.println("\t-yetiPath=X : stores the path that contains the code to test (e.g. for Java the classpath to consider)");
 		System.out
-				.println("\t-newInstanceInjectionProbability=X : probability to inject new instances at each call (if relevant). Value between 0 and 100, default is 25.");
+		.println("\t-newInstanceInjectionProbability=X : probability to inject new instances at each call (if relevant). Value between 0 and 100, default is 25.");
 		System.out
-				.println("\t-probabilityToUseNullValue=X : probability to use a null instance at each variable (if relevant). Value between 0 and 100, default is 1.");
+		.println("\t-probabilityToUseNullValue=X : probability to use a null instance at each variable (if relevant). Value between 0 and 100, default is 1.");
 		System.out.println("\t-random : uses the pure random strategy.");
 		System.out
-				.println("\t-randomPlus : uses the random+ strategy that injects interesting values every now and then (this is the default strategy).");
+		.println("\t-randomPlus : uses the random+ strategy that injects interesting values every now and then (this is the default strategy).");
 		System.out
-				.println("\t-randomPlusPeriodic : uses the random+ strategy and periodically change the values of the standard probalilities (null values, new instances, interesting values).");
+		.println("\t-randomPlusPeriodic : uses the random+ strategy and periodically change the values of the standard probalilities (null values, new instances, interesting values).");
 		System.out
-				.println("\t-randomPlusDecreasing : uses the random+ strategy and decreases the values of the standard probalilities (null values, new instances, interesting values).<br>");
+		.println("\t-randomPlusDecreasing : uses the random+ strategy and decreases the values of the standard probalilities (null values, new instances, interesting values).<br>");
 		System.out
-				.println("\t-evolutionary : uses GA to evolve a testing strategy."); // @YetiGeneticAlgorithmsStrategy
+		.println("\t-evolutionary : uses GA to evolve a testing strategy."); // @YetiGeneticAlgorithmsStrategy
 		System.out
-				.println("\t-chromosome : execute Yeti using a strategy chromosome."); // @YetiGeneticAlgorithmsStrategy
+		.println("\t-chromosome : execute Yeti using a strategy chromosome."); // @YetiGeneticAlgorithmsStrategy
 		System.out
-				.println("\t-DSSR : initially uses random+ strategy and based on the results of random+ it uses Dirt Spot Sweeping Random strategy.");
+		.println("\t-DSSR : initially uses random+ strategy and based on the results of random+ it uses Dirt Spot Sweeping Random strategy.");
 		System.out
-				.println("\t-gui : shows the standard graphical user interface for monitoring yeti.");
+		.println("\t-gui : shows the standard graphical user interface for monitoring yeti.");
 		System.out
-				.println("\t-noInstancesCap : removes the cap on the maximum of instances for a given type. Default is there is and the max is 1000.");
+		.println("\t-noInstancesCap : removes the cap on the maximum of instances for a given type. Default is there is and the max is 1000.");
 		System.out
-				.println("\t-instancesCap=X : sets the cap on the number of instances for any given type. Defaults is 1000.");
+		.println("\t-instancesCap=X : sets the cap on the number of instances for any given type. Defaults is 1000.");
 		System.out
-				.println("\t-tracesOutputFile=X : the file where to output traces on disk.");
+		.println("\t-tracesOutputFile=X : the file where to output traces on disk.");
 		System.out
-				.println("\t-tracesInputFiles=X : the files where to input traces from disk (file names separated by ':').");
+		.println("\t-tracesInputFiles=X : the files where to input traces from disk (file names separated by ':').");
 		System.out
-				.println("\t\tNote that if a file whose name finishes by \".class\" then the file is loaded and traces are taken from the failures it produces on methods annotated using yeti.annotations.YetiTrace");
+		.println("\t\tNote that if a file whose name finishes by \".class\" then the file is loaded and traces are taken from the failures it produces on methods annotated using yeti.annotations.YetiTrace");
 		System.out
-				.println("\t\tFor an example of such file check the class yeti.test.TGenString which can be loaded on the command-line using -tracesInputFiles=yeti.test.TGenString.class");
+		.println("\t\tFor an example of such file check the class yeti.test.TGenString which can be loaded on the command-line using -tracesInputFiles=yeti.test.TGenString.class");
 
 		System.out
-				.println("\t-printNumberOfCallsPerMethod : prints the number of calls per method.");
+		.println("\t-printNumberOfCallsPerMethod : prints the number of calls per method.");
 		System.out
-				.println("\t-branchCoverage : shows the branch coverage if available (in Java, this implies instrumenting the bytecode).");
+		.println("\t-branchCoverage : shows the branch coverage if available (in Java, this implies instrumenting the bytecode).");
 		System.out
-				.println("\t-makeMethodsVisible: converts all the protected and private methods into public for testing.");
+		.println("\t-makeMethodsVisible: converts all the protected and private methods into public for testing.");
 		System.out
-				.println("\t-approximate : approximates the number of unique failures per number of tests.");
+		.println("\t-approximate : approximates the number of unique failures per number of tests.");
 		System.out
-				.println("\t-compactReport=X : adds a line in file X containing the information about the testing session.");
+		.println("\t-compactReport=X : adds a line in file X containing the information about the testing session.");
 		System.out
-				.println("\t-accurateMinimization : makes the test case minimization more accurate, by adding previous static method calls when used to compute a result.");
+		.println("\t-accurateMinimization : makes the test case minimization more accurate, by adding previous static method calls when used to compute a result.");
 		System.out
-				.println("\t-javaBased:doNotIngoreIllegalArgumentExceptions : this makes sure that we do not treat IllegalArgumentExceptions as precondition violations (we ignore them).");
+		.println("\t-javaBased:doNotIngoreIllegalArgumentExceptions : this makes sure that we do not treat IllegalArgumentExceptions as precondition violations (we ignore them).");
 
 	}
 

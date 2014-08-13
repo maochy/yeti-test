@@ -65,7 +65,7 @@ import yeti.environments.java.YetiJavaRoutine;
 import yeti.monitoring.YetiGUI;
 import yeti.monitoring.YetiUpdatableSlider;
 
-public class YetiADFDAroundStrategy extends YetiRandomStrategy {
+public class YetiADFDBoundaryStrategy extends YetiRandomStrategy {
 
 	public static int rangeToPlot = 5;
 	public static String argumentFirst = "" + 0;
@@ -75,7 +75,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 	// public static double INTERESTING_VALUE_INJECTION_PROBABILITY = 0.50;
 	long currentErrors = YetiLogProcessor.numberOfNewErrors;
 
-	public YetiADFDAroundStrategy(YetiTestManager ytm) {
+	public YetiADFDBoundaryStrategy(YetiTestManager ytm) {
 		super(ytm);
 
 	}
@@ -409,11 +409,6 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 //				+ " public static int xValue = " + argumentFirst  +";\n" 
 //				+ " public static int yValue = " + argumentSecond +";\n\n"
 				
-//				For boundary values of x = 0, y = 0
-//				+ " public static int xValue = " + 0  +";\n" 
-//				+ " public static int yValue = " + 0 +";\n\n"
-				
-//				For boundary values of x = Integer.Max_Int - 5000 and y = Integer.Max_Int - 5000
 				+ " public static int xValue = " + 0  +";\n" 
 				+ " public static int yValue = " + 0 +";\n\n"
 
@@ -426,27 +421,11 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 //				+ " public static int stopperX = 2147483647;\n"
 //				+ " public static int starterY = -2147483648;\n"
 //				+ " public static int stopperY = 2147483647;\n\n"
-//				
 				
-//				 This was done for ADFDBoundary2000
-//				+ " public static int starterX = -1000;\n" 
-//				+ " public static int stopperX = 1000;\n"
-//				+ " public static int starterY = -1000;\n"
-//				+ " public static int stopperY = 1000;\n\n"
-				
-//				 This was done for ADFDBoundary10000
-//				+ " public static int starterX = -10000;\n" 
-//				+ " public static int stopperX = 10000;\n"
-//				+ " public static int starterY = -10000;\n"
-//				+ " public static int stopperY = 10000;\n\n"
-				
-//				This was done for ADFDBoundary10000 from back
-				+ " public static int starterX = -1000;\n" //10lac
-				+ " public static int stopperX = 1000;\n" //10+
-				+ " public static int starterY = 2147481647;\n"
-				+ " public static int stopperY = 2147483647;\n\n"
-				
-				
+				+ " public static int starterX = -1000;\n" 
+				+ " public static int stopperX = 1000;\n"
+				+ " public static int starterY = -1000;\n"
+				+ " public static int stopperY = 1000;\n\n"
 
 				+ " public static boolean startedByFailing = false;\n"
 				+ " public static boolean isCurrentlyFailing = false;\n"

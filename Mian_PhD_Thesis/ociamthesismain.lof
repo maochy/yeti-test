@@ -4,8 +4,8 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces A simplified version of software testing process\relax }}{31}{figure.caption.6}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Software testing from various view points\relax }}{32}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces White-box testing\relax }}{34}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Black-box testing\relax }}{35}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces White-box testing\relax }}{35}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Black-box testing\relax }}{37}{figure.caption.9}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Types of test data generator\relax }}{40}{figure.caption.10}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Working mechanism of random testing\relax }}{44}{figure.caption.11}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Failure domains across input domain\nobreakspace {}\cite {chan1996proportional}\relax }}{46}{figure.caption.12}
@@ -15,7 +15,7 @@
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block domain}}}{49}{figure.caption.14}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip domain}}}{49}{figure.caption.14}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Input domain showing exclusion zones around selected test cases\relax }}{50}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic\nobreakspace {}\cite {csallner2004jcrasher}\relax }}{54}{figure.caption.16}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic\nobreakspace {}\cite {csallner2004jcrasher}\relax }}{53}{figure.caption.16}
 \contentsline {figure}{\numberline {2.12}{\ignorespaces The input selection technique. Implicit in the diagram is the program under test. Rectangles with rounded corners represent steps in the technique, and rectangles with square corners represent artifacts\nobreakspace {}\cite {pacheco2005eclat}\relax }}{55}{figure.caption.17}
 \contentsline {figure}{\numberline {2.13}{\ignorespaces AutoTest architecture\nobreakspace {}\cite {leitner2007reconciling}\relax }}{57}{figure.caption.18}
 \contentsline {figure}{\numberline {2.14}{\ignorespaces TestEra framework\nobreakspace {}\cite {marinov2001testera}\relax }}{58}{figure.caption.19}

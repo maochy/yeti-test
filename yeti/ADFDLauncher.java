@@ -35,6 +35,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 
 import yeti.strategies.YetiADFDAroundStrategy;
+import yeti.strategies.YetiADFDBoundaryStrategy;
 import yeti.strategies.YetiADFDLongStrategy;
 import yeti.strategies.YetiADFDPlusStrategy;
 import yeti.strategies.YetiADFDStrategy;
@@ -273,7 +274,7 @@ public class ADFDLauncher extends JFrame{
 	/**
 	 *  strategies contains all the strategies which are supported by YETI. One of them can be selected from strategies combo box within the GUI. 
 	 */
-	String[] strategies = {"ADFDAround", "ADFDLong", "ADFDWide", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
+	String[] strategies = {"ADFDAround", "ADFDBoundary", "ADFDLong", "ADFDWide", "ADFDPlus", "ADFD", "DSSR", "Random", "Chromosome", "Evolutionary", "Random Plus", "Random Plus Periodic", "Random Plus Decreasing" };
 
 	/**
 	 *  time1 contains some specific values which can be selected from time combo box with in the GUI. 
@@ -503,6 +504,9 @@ public class ADFDLauncher extends JFrame{
 					unhideItems();
 				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDAround")){
 					strategy = "-ADFDAround";
+					unhideItems();
+				} else if (strategy_ComboBox.getSelectedItem().equals("ADFDBoundary")){
+					strategy = "-ADFDBoundary";
 					unhideItems();
 				}
 				
@@ -928,6 +932,7 @@ public class ADFDLauncher extends JFrame{
 		YetiADFDStrategy.rangeToPlot +=  temp;
 		YetiADFDPlusStrategy.rangeToPlot +=  temp;
 		YetiADFDAroundStrategy.rangeToPlot +=  temp;
+		YetiADFDBoundaryStrategy.rangeToPlot +=  temp;
 		//		YetiADFDLongStrategy.rangeToPlot +=  temp;
 		//			JOptionPane.showMessageDialog(null, YetiADFDPlusStrategy.rangeToPlot, " The value for range to plot is ", JOptionPane.PLAIN_MESSAGE);
 		command = list.toArray(new String[list.size()]);
@@ -1015,6 +1020,17 @@ public class ADFDLauncher extends JFrame{
 
 		}
 		
+		if((strategy.equalsIgnoreCase("-ADFDBoundary"))&&(YetiADFDBoundaryStrategy.programDim == 1)){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 1 dim ADFDBoundary", JOptionPane.PLAIN_MESSAGE);
+			ADFDBoundaryGraphGeneratorFor1Arg demo = new ADFDBoundaryGraphGeneratorFor1Arg("Failure Domains");
+
+		}
+		
+		if((strategy.equalsIgnoreCase("-ADFDBoundary"))&&(YetiADFDBoundaryStrategy.programDim == 2)){
+//			JOptionPane.showMessageDialog(null, language, " Graph is 2 dim ADFDBoundary", JOptionPane.PLAIN_MESSAGE);
+			ADFDBoundaryGraphGeneratorFor2Arg demo = new ADFDBoundaryGraphGeneratorFor2Arg("Failure Domains");
+
+		}
 		
 
 		//		if (YetiADFDPlusStrategy.plotOneDimOrTwoDim == 1){

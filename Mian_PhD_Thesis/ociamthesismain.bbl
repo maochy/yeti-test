@@ -105,12 +105,8 @@ Lee~J. White.
 
 \bibitem{garfinkel2005history}
 Simson Garfinkel.
-\newblock HistoryÕs worst software bugs.
+\newblock Historyï¿½s worst software bugs.
 \newblock {\em Wired News, Nov}, 2005.
-
-\bibitem{toweysoftware}
-Dave Towey.
-\newblock Software quality assurance.
 
 \bibitem{american1984}
 NY. American National Standards Institute. New~York, Institute of~Electrical,
@@ -123,6 +119,33 @@ NY. American National Standards Institute. New~York, Institute of~Electrical,
 Robert~T Futrell, Linda~I Shafer, and Donald~F Shafer.
 \newblock {\em Quality software project management}.
 \newblock Prentice Hall PTR, 2001.
+
+\bibitem{ahmed2010software}
+Ashfaque Ahmed.
+\newblock {\em Software testing as a service}.
+\newblock CRC Press, 2010.
+
+\bibitem{baresi2001test}
+Luciano Baresi and Michal Young.
+\newblock Test oracles.
+\newblock {\em Techn. Report CISTR-01}, 2:9, 2001.
+
+\bibitem{gaudel2010software}
+Marie-Claude Gaudel.
+\newblock Software testing based on formal specification.
+\newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
+  Springer, 2010.
+
+\bibitem{weyuker1982testing}
+Elaine~J Weyuker.
+\newblock On testing non-testable programs.
+\newblock {\em The Computer Journal}, 25(4):465--470, 1982.
+
+\bibitem{meyer2009programs}
+Bertrand Meyer, Arno Fiva, Ilinca Ciupa, Andreas Leitner, Yi~Wei, and Emmanuel
+  Stapf.
+\newblock Programs that test themselves.
+\newblock {\em Computer}, 42(9):46--55, 2009.
 
 \bibitem{chilenski1994applicability}
 John~Joseph Chilenski and Steven~P Miller.
@@ -210,38 +233,11 @@ Michael~R Donat.
 \newblock In {\em TAPSOFT'97: Theory and Practice of Software Development},
   pages 833--847. Springer, 1997.
 
-\bibitem{gaudel2010software}
-Marie-Claude Gaudel.
-\newblock Software testing based on formal specification.
-\newblock In {\em Testing Techniques in Software Engineering}, pages 215--242.
-  Springer, 2010.
-
 \bibitem{bertolino2007software}
 Antonia Bertolino.
 \newblock Software testing research: Achievements, challenges, dreams.
 \newblock In {\em Future of Software Engineering, 2007. FOSE'07}, pages
   85--103. IEEE, 2007.
-
-\bibitem{ahmed2010software}
-Ashfaque Ahmed.
-\newblock {\em Software testing as a service}.
-\newblock CRC Press, 2010.
-
-\bibitem{baresi2001test}
-Luciano Baresi and Michal Young.
-\newblock Test oracles.
-\newblock {\em Techn. Report CISTR-01}, 2:9, 2001.
-
-\bibitem{weyuker1982testing}
-Elaine~J Weyuker.
-\newblock On testing non-testable programs.
-\newblock {\em The Computer Journal}, 25(4):465--470, 1982.
-
-\bibitem{meyer2009programs}
-Bertrand Meyer, Arno Fiva, Ilinca Ciupa, Andreas Leitner, Yi~Wei, and Emmanuel
-  Stapf.
-\newblock Programs that test themselves.
-\newblock {\em Computer}, 42(9):46--55, 2009.
 
 \bibitem{fairley1978tutorial}
 Richard~E Fairley.
@@ -304,8 +300,8 @@ David~L. Bird and Carlos~Urias Munoz.
 \bibitem{chan2003normalized}
 Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Normalized restricted random testing.
-\newblock In {\em Reliable Software Technologiesâ€”Ada-Europe 2003}, pages
-  368--381. Springer, 2003.
+\newblock In {\em Reliable Software Technologiesï¿½ï¿½ï¿½Ada-Europe 2003},
+  pages 368--381. Springer, 2003.
 
 \bibitem{hamlet1994random}
 Richard Hamlet.
@@ -383,12 +379,6 @@ Tsong~Yueh Chen, Hing Leung, and IK~Mak.
 \newblock Adaptive random testing.
 \newblock In {\em Advances in Computer Science-ASIAN 2004. Higher-Level
   Decision Making}, pages 320--329. Springer, 2005.
-
-\bibitem{chen2009enhanced}
-Tsong~Yueh Chen, De~Hao Huang, F-C Kuo, Robert~G Merkel, and Johannes Mayer.
-\newblock Enhanced lattice-based adaptive random testing.
-\newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
-  pages 422--429. ACM, 2009.
 
 \bibitem{chen2004mirror}
 Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
@@ -481,8 +471,8 @@ Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
 Juei Chang and Debra~J Richardson.
 \newblock Structural specification-based testing: Automated support and
   experimental evaluation.
-\newblock In {\em Software Engineeringâ€”ESEC/FSEâ€™99}, pages 285--302.
-  Springer, 1999.
+\newblock In {\em Software Engineeringï¿½ï¿½ï¿½ESEC/FSEï¿½ï¿½ï¿½99}, pages
+  285--302. Springer, 1999.
 
 \bibitem{khurshid2001checking}
 Sarfraz Khurshid and Darko Marinov.
@@ -583,7 +573,8 @@ Ilinca Ciupa, Alexander Pretschner, Andreas Leitner, Manuel Oriol, and Bertrand
 \bibitem{chan2006restricted}
 Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Restricted random testing.
-\newblock In {\em Software QualityÑECSQ 2002}, pages 321--330. Springer, 2006.
+\newblock In {\em Software Qualityï¿½ECSQ 2002}, pages 321--330. Springer,
+  2006.
 
 \bibitem{chen2004adaptive}
 Tsong~Yueh Chen, Robert~G Merkel, G~Eddy, and PK~Wong.
@@ -650,7 +641,8 @@ Johannes Mayer.
 
 \bibitem{gilbert2008jfreechart}
 D~Gilbert.
-\newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloperÕs guide.
+\newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloperï¿½s
+  guide.
 \newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
 
 \bibitem{podgurski2003automated}
