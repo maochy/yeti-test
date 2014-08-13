@@ -4,9 +4,10 @@
 The famous quote of Paul Ehrlich, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. In spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may lead to a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster (1996) costing \$500 million and many more were caused by minor errors in the software \cite{garfinkel2005history}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software faults while one-third of it can be eliminated by improving the testing infrastructure~\cite{tassey2002economic}. A software has to satisfy rigorous stages of testing to achieve high quality. The more complex the software the higher the requirements for software testing because of the consequent larger damage involved if a fault remains in the software.
 
 \section{Software Testing}
-According to the ANSI/IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTestingParts_2}. 
+According to the ANSI/IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
 
-The testing process, being an integral part of Software Development Life Cycle (SDLC), starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. In addition, it includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
+In traditional testing, when a fault is found by the testers, the software is returned to the developers for rectification and the updated version is given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies a fault in the software~\cite{myers2011art} while fault denotes error made by programmers during software development~\cite{american1984}. The faulty code on execution can lead to software failures. A software that passes all tests without giving any error is not guaranteed to be error free. However, the testing process increases confidence of users and reliability of the tested product~\cite{dahl1972structured}. 
+
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -17,16 +18,7 @@ The testing process, being an integral part of Software Development Life Cycle (
 \end{figure}
 \bigskip
 
-In traditional testing, when a fault is found by the testers, the software is returned to the developers for rectification and the updated version is given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies a fault in the software~\cite{myers2011art} while fault denotes error made by programmers during software development~\cite{american1984}. The faulty code on execution can lead to software failures. A software that passes all tests without giving any error is not guaranteed to be error free. However, the testing process increases confidence of users and reliability of the tested product~\cite{dahl1972structured}. Figure~\ref{fig:softwareTestingFlow_2} presents software testing from various view points.
-
-
-\begin{figure}[H]
-	\centering
-	%\centerline{\includegraphics[width=16cm, height=16cm]{chapter2/softwareTestingFlow.png}}
-	\centerline{\includegraphics[width=\textwidth]{chapter2/softwareTestingFlow.png}}
-	\caption{Software testing from various view points}
-	\label{fig:softwareTestingFlow_2}
-\end{figure}
+The process of software testing in its simplest form is shown in Figure~\ref{fig:softwareTestingParts_2}. In the process, test input data selected from the input domain is used to form test cases. The test cases are executed against the SUT and the output obtained is declared as pass or fail on the criteria defined in the test oracle. The input domain, test case and test oracle are briefly described below.
 
 \subsection{Input Domain} 
 The input domain comprises all possible inputs for a software, including all global variables, method arguments and externally assigned variables. For a given program P with input vector $ P =\{x1, x2, . . . , xn\}$, having $\{D1, D2, . . . , Dn\}$ as the domain of each input so that $x1 \in D1, x2 \in D2$ and so on, the domain D of a function is the cross product of the domains of each input: $D = D1 \times D2 \times . . . \times Dn$.
@@ -42,7 +34,8 @@ The input domain comprises all possible inputs for a software, including all glo
 %  \label{fig:testCase}
 %  \vspace{-10pt}
 %\end{wrapfigure}
-Test case is an artifact which delineates the input, action and expected output corresponding to the input~\cite{ahmed2010software}. The test case is declared pass if the output obtained after executing the test case comply with the expected output meaning thereby that the functionality is working correctly. Alternatively the test case is declared fail if the output obtained after executing the test case does not comply with the expected output meaning thereby that the functionality is working incorrectly. Interesting the test case which fails is considered successful from software testing point of view. A test suite comprising a series of test cases is required commonly executed to establish the desired level of quality.
+Test case is an artifact which delineates the input, action and expected output corresponding to the input~\cite{ahmed2010software}. The test case is declared pass if the output obtained after executing the test case comply with the expected output meaning thereby that the functionality is working correctly. Alternatively the test case is declared fail if the output obtained after executing the test case does not comply with the expected output meaning thereby that the functionality is working incorrectly. %Interesting the test case which fails is considered successful from software testing point of view. 
+A test suite comprising a series of test cases is required commonly executed to establish the desired level of quality.
 
 
 \subsection{Test Oracle}
@@ -68,6 +61,16 @@ Some common artefacts used as oracles are as follows:
 \item Manual analysis by human experts to verify the test results. %\cite{jalote1997integrated}. 
 \end{enumerate}
 
+\section{Software testing view points}
+Software testing from various view points is presented in Figure~\ref{fig:softwareTestingFlow_2} and each one is described in the following sections.
+
+\begin{figure}[H]
+	\centering
+	\centerline{\includegraphics[width=16cm, height=19cm]{chapter2/softwareTestingFlow.png}}
+	%\centerline{\includegraphics[width=\textwidth]{chapter2/softwareTestingFlow.png}}
+	\caption{Software testing from various view points}
+	\label{fig:softwareTestingFlow_2}
+\end{figure}
 
 %\begin{table}[ht]
 %%\scriptsize
@@ -142,7 +145,7 @@ Data Flow Analysis (DFA) is a technique which focuses on the input values by obs
 The data flow analysis observes the program execution as data flow from input to output. The data may transform into several intermediary steps before reaching the final state. The transformation process is prone to several errors e.g. references made to non existing variables, values assigned to undeclared variables and change of variables in undesired manner. Ordered use of data is crucial to ensure that the aforementioned errors do not occur~\cite{fosdick1976data}.
 
 \subsubsection{Control Flow Analysis}
-Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function-calls are executed. Like DFA, this technique also involves drawing of CFG to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control flow. For example, the CFA ensures that the selected test cases execute all possible control choices at least once when two or more control choices are available to reach a particular state in the given SUT. Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
+Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function-calls are executed. Like DFA, this technique also involves drawing of CFG to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control flow. For example, the CFA ensures that the selected test cases execute all possible control choices at least once when two or more control choices are available to reach a particular state in the given SUT. %Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
 \subsubsection{Code-based Fault Injection Testing}
 It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the given instructions~\cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
@@ -184,7 +187,7 @@ It is a testing technique in which the input domain of a given SUT is divided in
 
 \subsubsection{Boundary Value Analysis}
 Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards~\cite{radatz1990ieee}, boundary values contain minimum, maximum, internal and external values specified for a system.
-The following code illustrates the ability of BVA to find a bug. 
+The following code illustrates the ability of BVA to find a failure. 
 \bigskip
 \bigskip
 \begin{lstlisting}
@@ -195,7 +198,7 @@ The following code illustrates the ability of BVA to find a bug.
  }
 \end{lstlisting}
 \bigskip
-On passing interesting value \verb+MAX_INT+ as argument to the \verb+test+ method, the code in the method increment it by 1 making it a negative value and thus an error is generated when the SUT tries to set the array size to a negative value.
+On passing interesting value \verb+MAX_INT+ as argument to the \verb+test+ method, the code in the method increment it by 1 making it a negative value and thus an failure is generated when the SUT tries to set the array size to a negative value.
 
 BVA and partition testing may be used in combination by choosing test values from the whole input domain and also from the borders of each sub-domain. Reid et al. \cite{reid1997empirical} have provided evidence in support of better performance of BVA in combination with partition testing as compared to each individually. They have attributed better performance to accurate identification of partition and selection of boundary values. 
 
@@ -253,11 +256,11 @@ Automated software testing may involve higher initial cost but brings the key be
 Test data generation in software testing is the process of identifying and selecting input data which satisfies the given criterion. A test data generator is used to assist testers in the generation of data while the selection criterion defines the properties of test cases to be generated based on the test plan and perspective taken~\cite{korel1990automated}. Various artefacts of the SUT can be considered to generate test data like requirements, model, code etc. The choice of artefacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
 A typical test data generator consists of three parts: Program analyser, Strategy handler and Generator~\cite{edvardsson1999survey}. Program analyser performs initial assessment of software prior to testing and may alter the code if so required. For example, it performs code instrumentation or construction of CFG to measure the code coverage during testing. Strategy handler defines the test case selection criteria. This may include the formalisation of test coverage criterion, the selection of paths and normalisation of constraints. It may also get input from program analyser or user before or during test execution.
-\bigskip
+
 \bigskip
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16.5cm, height=5.2cm ]{chapter2/Generators.png}}
+	\centerline{\includegraphics[width=16.5cm, height=7.2cm ]{chapter2/Generators.png}}
 	\bigskip
 	\caption{Types of test data generator}
 	\label{testDataGenerators_2}
@@ -288,7 +291,7 @@ The assertion-oriented approach adds assertions to the program code with the goa
 
 \subsection{Intelligent Test Data Generator}
 \label{sec:intelligent_2}
-Intelligent test data generator is used to overcome the problems like generation of meaningless data, duplicated data and complex data associated with traditional data generators . The approach increases user confidence in the generated test data and the testing process~\cite{ramamoorthy1975testing}. It helps in finding the appropriate test data by performing sophisticated analysis to anticipate different situations that may arise at any point in the SUT such as genetic algorithm. The approach produces test data which satisfy the SUT requirements but consumes more time and resources.
+Intelligent test data generator is used to overcome the problems like generation of meaningless data, duplicated data and complex data associated with traditional data generators. The approach increases user confidence in the generated test data and the testing process~\cite{ramamoorthy1975testing}. It helps in finding the appropriate test data by performing sophisticated analysis to anticipate different situations that may arise at any point in the SUT such as genetic algorithm. The approach produces test data which satisfy the SUT requirements but consumes more time and resources.
 
 \subsubsection{Genetic Algorithm}
 The genetic algorithm is a heuristic that mimics the evolution of natural species for searching optimal solution of a problem. It is guided by control dependencies in the program to search for data which satisfy test requirements. The algorithm evaluates the existing test data, and guides the direction of search by using the program control-dependence graph~\cite{pargas1999test}. The approach emphasises on the execution of a given statement, branch, path and condition in the given SUT. The benefit of the genetic approach is quick generation of test cases with proper focus and direction. The new test cases are generated by applying simple operations on the appropriate existing test cases having good potential of satisfying the test requirements. The success of the approach depends heavily on the way in which the existing test data are measured~\cite{pargas1999test}.
@@ -379,7 +382,7 @@ Random testing is a dynamic black-box testing technique in which the software is
 
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16.5cm, height=9cm ]{chapter2/randomTestingMechanism.png}}
+	\centerline{\includegraphics[width=16.5cm, height=14cm ]{chapter2/randomTestingMechanism.png}}
 	\bigskip
 	\caption{Working mechanism of random testing}
 	\label{fig:workingmechanism}
@@ -532,7 +535,7 @@ The Adaptive random testing for object oriented (Artoo) testing is based on obje
 
 In the Artoo testing, two sets are taken, the candidate-set containing the objects ready to be run by the system and the used-set which is initially empty. The first object is selected randomly from the candidate-set which is moved to used-set after execution. The second object selected from the candidate-set for execution is the one with the largest distance from the last executed object in the used-set. The process continues till the fault is found or the objects in the candidate-set are finished~\cite{ciupa2006object}.
 
-The Artoo testing, implemented in AutoTest~\cite{ciupa2008artoo}, was evaluated in comparison with Directed Random (D-RAN) testing \cite{godefroid2005dart} by selecting classes from EiffelBase library \cite{meyer1987eiffel}. The experimental results indicated that some bugs found by the Artoo were not identified by the D-RAN strategy. Moreover the Artoo found first bug with small number of test cases than the D-RAN testing. However, more computation was required to select a test case in the Artoo strategy and the process required more time and cost to generate test cases as compared to D-RAN testing.
+The Artoo testing, implemented in AutoTest~\cite{ciupa2008artoo}, was evaluated in comparison with Directed Random (D-RAN) testing \cite{godefroid2005dart} by selecting classes from EiffelBase library \cite{meyer1987eiffel}. The experimental results indicated that some faults found by the Artoo were not identified by the D-RAN strategy. Moreover the Artoo found first fault with small number of test cases than the D-RAN testing. However, more computation was required to select a test case in the Artoo strategy and the process required more time and cost to generate test cases as compared to D-RAN testing.
 
 % the same team implemented that model and performed several experiments to evaluate the proposed model. Adaptive Random Testing for Object Oriented (ARTOO) is a testing strategy, based on object distance, implemented in AutoTest \cite{16 search it Mendeley}.
 %ARTOO was implemented as a plug-in strategy in AutoTest. It only deals with creating and selecting inputs and all other functionality of the AutoTest was the same. Since ARTOO is based on object distance therefore the method for test input selection is to pick that object from the candidate set (A pool of objects that is a potential candidate to be executed by the system) that has the highest average distance in comparison to the objects already executed. In the experiments classes from EiffelBase library \cite{17 search it mendeley} were used. To evaluate ARTOO the same tests were also applied to directed random strategy (RAND). The outcome of the experiments showed that ARTOO finds the first bug with fewer test cases than RAND. The computation to select test case in ARTOO is more than RAND and therefore ARTOO takes more time to generate a test input. The experiments also found few of the bug found by ARTOO were not pointed out by RAND furthermore ARTOO is less sensitive to the variation of seed value than RAND

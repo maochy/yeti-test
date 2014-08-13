@@ -14,55 +14,56 @@
 \contentsline {section}{\numberline {1.5}Structure of the Thesis}{27}{section.1.5}
 \contentsline {chapter}{\numberline {2}Literature Review}{30}{chapter.2}
 \contentsline {section}{\numberline {2.1}Software Testing}{30}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Input Domain}{33}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Test Case}{33}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Test Oracle}{33}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Software Testing Levels}{34}{section.2.2}
-\contentsline {section}{\numberline {2.3}Software Testing Purpose}{34}{section.2.3}
-\contentsline {section}{\numberline {2.4}Software Testing Perspective}{35}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}White-box Testing}{35}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Data Flow Analysis}{35}{subsubsection.2.4.1.1}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Control Flow Analysis}{36}{subsubsection.2.4.1.2}
-\contentsline {subsubsection}{\numberline {2.4.1.3}Code-based Fault Injection Testing}{36}{subsubsection.2.4.1.3}
-\contentsline {subsection}{\numberline {2.4.2}Black-box Testing}{36}{subsection.2.4.2}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Use-case Based Testing}{37}{subsubsection.2.4.2.1}
-\contentsline {subsubsection}{\numberline {2.4.2.2}Partition Testing}{37}{subsubsection.2.4.2.2}
-\contentsline {subsubsection}{\numberline {2.4.2.3}Boundary Value Analysis}{38}{subsubsection.2.4.2.3}
-\contentsline {subsubsection}{\numberline {2.4.2.4}Formal Specification Testing}{38}{subsubsection.2.4.2.4}
-\contentsline {section}{\numberline {2.5}Software Testing Types}{38}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Manual Software Testing}{39}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Automated Software Testing}{39}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Test Data Generation}{39}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Path-wise Test Data Generator}{40}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Goal-oriented Test Data Generator}{41}{subsection.2.6.2}
-\contentsline {subsubsection}{\numberline {2.6.2.1}Chaining Approach}{41}{subsubsection.2.6.2.1}
-\contentsline {subsubsection}{\numberline {2.6.2.2}Assertion-oriented Approach}{41}{subsubsection.2.6.2.2}
-\contentsline {subsection}{\numberline {2.6.3}Intelligent Test Data Generator}{42}{subsection.2.6.3}
-\contentsline {subsubsection}{\numberline {2.6.3.1}Genetic Algorithm}{42}{subsubsection.2.6.3.1}
-\contentsline {subsection}{\numberline {2.6.4}Search-based Test Data Generator}{42}{subsection.2.6.4}
-\contentsline {subsection}{\numberline {2.6.5}Random Test Data Generator}{43}{subsection.2.6.5}
-\contentsline {section}{\numberline {2.7}Random Testing}{44}{section.2.7}
-\contentsline {section}{\numberline {2.8}Pass and Failure-domain}{45}{section.2.8}
-\contentsline {section}{\numberline {2.9}Versions of Random testing}{47}{section.2.9}
-\contentsline {subsection}{\numberline {2.9.1}Random+ Testing}{48}{subsection.2.9.1}
-\contentsline {subsection}{\numberline {2.9.2}Adaptive Random Testing}{48}{subsection.2.9.2}
-\contentsline {subsection}{\numberline {2.9.3}Mirror Adaptive Random Testing}{49}{subsection.2.9.3}
-\contentsline {subsection}{\numberline {2.9.4}Restricted Random Testing}{50}{subsection.2.9.4}
-\contentsline {subsection}{\numberline {2.9.5}Directed Automated Random Testing}{51}{subsection.2.9.5}
-\contentsline {subsection}{\numberline {2.9.6}Quasi Random Testing}{51}{subsection.2.9.6}
-\contentsline {subsection}{\numberline {2.9.7}Feedback-directed Random Testing}{52}{subsection.2.9.7}
-\contentsline {subsection}{\numberline {2.9.8}The Artoo Testing}{52}{subsection.2.9.8}
-\contentsline {section}{\numberline {2.10}Automatic Random Testing Tools}{52}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}JCrasher}{53}{subsection.2.10.1}
-\contentsline {subsection}{\numberline {2.10.2}Jartege}{54}{subsection.2.10.2}
-\contentsline {subsection}{\numberline {2.10.3}Eclat}{54}{subsection.2.10.3}
-\contentsline {subsection}{\numberline {2.10.4}Randoop}{56}{subsection.2.10.4}
-\contentsline {subsection}{\numberline {2.10.5}QuickCheck}{56}{subsection.2.10.5}
-\contentsline {subsection}{\numberline {2.10.6}AutoTest}{56}{subsection.2.10.6}
-\contentsline {subsection}{\numberline {2.10.7}TestEra}{58}{subsection.2.10.7}
-\contentsline {subsection}{\numberline {2.10.8}Korat}{59}{subsection.2.10.8}
-\contentsline {subsection}{\numberline {2.10.9}Yeti}{59}{subsection.2.10.9}
-\contentsline {section}{\numberline {2.11}Summary}{59}{section.2.11}
+\contentsline {subsection}{\numberline {2.1.1}Input Domain}{31}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Test Case}{32}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Test Oracle}{32}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Software testing view points}{33}{section.2.2}
+\contentsline {section}{\numberline {2.3}Software Testing Levels}{34}{section.2.3}
+\contentsline {section}{\numberline {2.4}Software Testing Purpose}{34}{section.2.4}
+\contentsline {section}{\numberline {2.5}Software Testing Perspective}{34}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}White-box Testing}{34}{subsection.2.5.1}
+\contentsline {subsubsection}{\numberline {2.5.1.1}Data Flow Analysis}{35}{subsubsection.2.5.1.1}
+\contentsline {subsubsection}{\numberline {2.5.1.2}Control Flow Analysis}{35}{subsubsection.2.5.1.2}
+\contentsline {subsubsection}{\numberline {2.5.1.3}Code-based Fault Injection Testing}{36}{subsubsection.2.5.1.3}
+\contentsline {subsection}{\numberline {2.5.2}Black-box Testing}{36}{subsection.2.5.2}
+\contentsline {subsubsection}{\numberline {2.5.2.1}Use-case Based Testing}{37}{subsubsection.2.5.2.1}
+\contentsline {subsubsection}{\numberline {2.5.2.2}Partition Testing}{37}{subsubsection.2.5.2.2}
+\contentsline {subsubsection}{\numberline {2.5.2.3}Boundary Value Analysis}{37}{subsubsection.2.5.2.3}
+\contentsline {subsubsection}{\numberline {2.5.2.4}Formal Specification Testing}{38}{subsubsection.2.5.2.4}
+\contentsline {section}{\numberline {2.6}Software Testing Types}{38}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Manual Software Testing}{38}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Automated Software Testing}{39}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Test Data Generation}{39}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Path-wise Test Data Generator}{40}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Goal-oriented Test Data Generator}{40}{subsection.2.7.2}
+\contentsline {subsubsection}{\numberline {2.7.2.1}Chaining Approach}{41}{subsubsection.2.7.2.1}
+\contentsline {subsubsection}{\numberline {2.7.2.2}Assertion-oriented Approach}{41}{subsubsection.2.7.2.2}
+\contentsline {subsection}{\numberline {2.7.3}Intelligent Test Data Generator}{41}{subsection.2.7.3}
+\contentsline {subsubsection}{\numberline {2.7.3.1}Genetic Algorithm}{42}{subsubsection.2.7.3.1}
+\contentsline {subsection}{\numberline {2.7.4}Search-based Test Data Generator}{42}{subsection.2.7.4}
+\contentsline {subsection}{\numberline {2.7.5}Random Test Data Generator}{43}{subsection.2.7.5}
+\contentsline {section}{\numberline {2.8}Random Testing}{43}{section.2.8}
+\contentsline {section}{\numberline {2.9}Pass and Failure-domain}{45}{section.2.9}
+\contentsline {section}{\numberline {2.10}Versions of Random testing}{47}{section.2.10}
+\contentsline {subsection}{\numberline {2.10.1}Random+ Testing}{48}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.2}Adaptive Random Testing}{48}{subsection.2.10.2}
+\contentsline {subsection}{\numberline {2.10.3}Mirror Adaptive Random Testing}{49}{subsection.2.10.3}
+\contentsline {subsection}{\numberline {2.10.4}Restricted Random Testing}{50}{subsection.2.10.4}
+\contentsline {subsection}{\numberline {2.10.5}Directed Automated Random Testing}{51}{subsection.2.10.5}
+\contentsline {subsection}{\numberline {2.10.6}Quasi Random Testing}{51}{subsection.2.10.6}
+\contentsline {subsection}{\numberline {2.10.7}Feedback-directed Random Testing}{52}{subsection.2.10.7}
+\contentsline {subsection}{\numberline {2.10.8}The Artoo Testing}{52}{subsection.2.10.8}
+\contentsline {section}{\numberline {2.11}Automatic Random Testing Tools}{52}{section.2.11}
+\contentsline {subsection}{\numberline {2.11.1}JCrasher}{53}{subsection.2.11.1}
+\contentsline {subsection}{\numberline {2.11.2}Jartege}{54}{subsection.2.11.2}
+\contentsline {subsection}{\numberline {2.11.3}Eclat}{54}{subsection.2.11.3}
+\contentsline {subsection}{\numberline {2.11.4}Randoop}{56}{subsection.2.11.4}
+\contentsline {subsection}{\numberline {2.11.5}QuickCheck}{56}{subsection.2.11.5}
+\contentsline {subsection}{\numberline {2.11.6}AutoTest}{56}{subsection.2.11.6}
+\contentsline {subsection}{\numberline {2.11.7}TestEra}{58}{subsection.2.11.7}
+\contentsline {subsection}{\numberline {2.11.8}Korat}{59}{subsection.2.11.8}
+\contentsline {subsection}{\numberline {2.11.9}Yeti}{59}{subsection.2.11.9}
+\contentsline {section}{\numberline {2.12}Summary}{59}{section.2.12}
 \contentsline {chapter}{\numberline {3}York Extensible Testing Infrastructure}{62}{chapter.3}
 \contentsline {section}{\numberline {3.1}Overview}{62}{section.3.1}
 \contentsline {section}{\numberline {3.2}Design}{63}{section.3.2}
