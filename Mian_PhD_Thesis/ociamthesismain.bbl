@@ -105,7 +105,7 @@ Lee~J. White.
 
 \bibitem{garfinkel2005history}
 Simson Garfinkel.
-\newblock History�s worst software bugs.
+\newblock History's worst software bugs.
 \newblock {\em Wired News, Nov}, 2005.
 
 \bibitem{american1984}
@@ -174,12 +174,6 @@ Lori~A Clarke, Andy Podgurski, Debra~J. Richardson, and Steven~J. Zeil.
 Lloyd~D Fosdick and Leon~J Osterweil.
 \newblock Data flow analysis in software reliability.
 \newblock {\em ACM Computing Surveys (CSUR)}, 8(3):305--330, 1976.
-
-\bibitem{vilkomir2003tolerance}
-Sergiy~A Vilkomir, Kalpesh Kapoor, and Jonathan~P Bowen.
-\newblock Tolerance of control-flow testing criteria.
-\newblock In {\em Computer Software and Applications Conference, 2003. COMPSAC
-  2003. Proceedings. 27th Annual International}, pages 182--187. IEEE, 2003.
 
 \bibitem{voas1997software}
 Jeffrey~M Voas and Gary McGraw.
@@ -250,10 +244,39 @@ Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
 \newblock In {\em Software Reliability Engineering, 2008. ISSRE 2008. 19th
   International Symposium on}, pages 157--166. IEEE, 2008.
 
+\bibitem{leitner2009effectiveness}
+Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
+  Oriol.
+\newblock On the effectiveness of test extraction without overhead.
+\newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
+  International Conference on}, pages 416--425. IEEE, 2009.
+
 \bibitem{tretmans2000automatic}
 Jan Tretmans and Axel Belinfante.
 \newblock Automatic testing with formal methods.
 \newblock 2000.
+
+\bibitem{ecma2005367}
+ECMA ECMA.
+\newblock 367: Eiffel analysis, design and programming language.
+\newblock {\em ECMA (European Association for Standardizing Information and
+  Communication Systems), pub-ECMA: adr}, 2005.
+
+\bibitem{leavensjml}
+GT~Leavens, E~Poll, C~Clifton, Y~Cheon, C~Ruby, D~Cok, and J~Kiniry.
+\newblock Jml reference manual (draft), 2005.
+
+\bibitem{kramer1998icontract}
+Reto Kramer.
+\newblock icontract-the java tm design by contract tm tool.
+\newblock In {\em Technology of Object-Oriented Languages, 1998. TOOLS 26.
+  Proceedings}, pages 295--307. IEEE, 1998.
+
+\bibitem{richters1998formalizing}
+Mark Richters and Martin Gogolla.
+\newblock On formalizing the uml object constraint language ocl.
+\newblock In {\em Conceptual Modeling--ER’98}, pages 449--464. Springer,
+  1998.
 
 \bibitem{huang2003automated}
 Zhenyu Huang.
@@ -529,13 +552,6 @@ Manuel Oriol.
   found.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
-
-\bibitem{leitner2009effectiveness}
-Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
-  Oriol.
-\newblock On the effectiveness of test extraction without overhead.
-\newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
-  International Conference on}, pages 416--425. IEEE, 2009.
 
 \bibitem{tempero2010empirical}
 Ewan Tempero, Steve Counsell, and James Noble.

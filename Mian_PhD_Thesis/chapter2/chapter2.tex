@@ -238,17 +238,25 @@ The formal specification testing is more productive because of the creation of t
 
 
 \section{Software Testing Types}
-There are two forms of software testing: static and dynamic. \\*
-Static testing involves analysis of test cases statically for checking errors without executing the test cases. Static analysis is applicable to evaluate the quality of software code and supporting documents including requirements, design, user manual, technical notes and marketing information. Reviews, walkthroughs and inspections are most commonly used techniques for static testing.\\*
+There are two types of software testing: static and dynamic.
+
+Static testing involves analysis of test cases statically for checking errors without executing the test cases. Static analysis is applicable to evaluate the quality of software code and supporting documents including requirements, design, user manual, technical notes and marketing information. Reviews, walkthroughs and inspections are most commonly used techniques for static testing.
+
 Dynamic testing involves execution of test cases against SUT. The results obtained are analysed against expected output to find any error in the software. Unit testing, integration testing, system testing and acceptance testing are most commonly used methods for dynamic testing~\cite{fairley1978tutorial}.
 
 %Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
 
 \subsection{Manual Software Testing}
-Manual testing is the technique in which the tester writes the code manually to create test cases and test oracles for finding faults in software~\cite{ciupa2008finding}. It may be effective at smaller scale but is generally laborious, time consuming and error-prone, when the software testing is at a larger scale~\cite{tretmans2000automatic}. In manual testing, testers should have appropriate skills, experience and knowledge of the SUT for evaluation from different perspectives.
+Manual testing is the technique in which the tester writes the code by hand to create test cases and test oracles for finding faults in software~\cite{ciupa2008finding}. Its advantage is that the test cases are usually generated to target those parts of the SUT which are assumed to be more error-prone. It is highly useful to capture special cases for which automated testing might not guess. Manual unit testing is particularly popular because of the availability of xUnit family of tools, e.g. jUnit for Java, sUnit for Smalltalk and pyUnit for Python. According to a recent survey, 79\% of the Microsoft developers write unit tests for software testing~\cite{leitner2009effectiveness}. The tools automate the execution process of the hand written test cases providing significant practical benefits.  
+
+The limitations of manual testing are that the testers should have appropriate skills, experience and knowledge of the SUT for its evaluation from different perspectives.Manual testing may be effective at smaller scale of software testing but at a larger scale it is generally laborious, time consuming and error-prone~\cite{tretmans2000automatic}. Manual testing usually produce low coverage because sheer numbers of test cases are required for high coverage.
+
+
  
 \subsection{Automated Software Testing}
 Automated software testing refers to the technique in which an automated tool is used to perform the testing process automatically~\cite{leitner2007reconciling}. There are some tools available for automating a part of testing process like generation of test cases or execution of test cases or evaluation of results while other tools are available for automating the whole testing process. 
+
+A fully automated testing system is capable to test software without any user intervention. This is usually achieved by utilizing the contracts (preconditions, postconditions and invariants) embedded in the program code. Preconditions are used to filter out invalid inputs and postconditions are used as oracle~\cite{leitner2007reconciling}. Eiffel~\cite{ecma2005367} and Spec\#~{barnett2005spec} languages have built-in contracts whereas Java can use add-ons like JML~\cite{leavensjml}, iContract~\cite{kramer1998icontract} or OCL~\cite{richters1998formalizing} to enable it. 
 %Increase in functionality, higher productivity and lower cost of production without compromising quality are the desirable features in favour of automating the process of software testing. 
 Automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation. Automated testing is particularly effective when the nature of job is repetitive and it is performed on routine basis like unit testing and regression testing where the tests are re-executed after each modification~\cite{huang2003automated}. The use of automated software testing makes it possible to test large volumes of code, which may be impossible otherwise~\cite{ramamoorthy1975testing}.
 
@@ -395,8 +403,7 @@ Generating test data by random generator is economical and requires less intelle
 
 \section{Pass and Failure-domain} \label{sec:failuredomains_2}
 \label{sec:genuineandfailuredomain}
-
-Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes in the whole input domain. They divided these into point, block and strip failure-domains as described below.
+The sequence of test data across the input domain for which the software behaves correctly is called pass-domain and for which the software behave incorrectly is called failure-domain. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes in the whole input domain. They divided these into point, block and strip failure-domains as described below.
 
 \begin{enumerate}
 \item Point domain: In the point failure-domain, input inducing failures are scattered across the input domain in the form of stand-alone points. Example of point failure-domain is the failure caused by the statement: $total = num1/num2;$ where $num1$, $num2$ and $total$ are variables of type integer.
@@ -507,13 +514,8 @@ They further found that RRT is up to 55\% more effective than RT in terms of F-m
 
 
 \subsection{Directed Automated Random Testing}
-Godefroid et al.~\cite{godefroid2005dart} proposed Directed Automated Random Testing (DART). %Its main purpose was to overcome the cost and difficulty of manual testing while keeping its quality intact. It automate the whole testing process including generation of unit tests, test drivers/harness and assertions for functional correctness. 
-The following main features of DART are reported in the literature:
-\begin{enumerate}
-\item Automated Interface Extraction: DART automatically identifies external interfaces of a given SUT. These interfaces include external variables, external methods and the user-specified main method responsible for program execution.
-\item Automatic Test Driver: DART automatically generates test drivers for running the test cases. All the test cases are randomly generated according to the underlying environment.
-\item Dynamic Analysis of execution: DART instruments the given SUT at the start of the process in order to track its behaviour dynamically at run time. The results obtained are analysed in real time to systematically direct the test case execution along alternative path for maximum code coverage.
-\end{enumerate}
+Godefroid et al.~\cite{godefroid2005dart} proposed Directed Automated Random Testing (DART). %Its main purpose was to overcome the cost and difficulty of manual testing while keeping its quality intact. It automate the whole testing process including generation of unit tests, test drivers/harness and assertions for functional correctness.
+In DART process, the given SUT is instrumented to track the dynamic behaviour of the SUT at run time. It also identifies external interfaces of a given SUT. These interfaces include external variables, external methods and the user-specified main method responsible for program execution. After that it automatically generates test drivers for running the randomly generated test cases. Finally the results obtained are analysed in real time to systematically direct the test case execution along alternative path for maximum code coverage. 
 
 The DART algorithm is implemented in the tool which is completely automatic and accepts the test program as input. After the external interfaces are extracted it uses the pre-conditions and post-conditions of the program under test to validate the test inputs. For languages that do not support contracts inside the code (like C), public methods or interfaces are used to mimic the scenario. DART attempts to cover different paths of the program code to trigger errors. Its oracle consists of checking for crashes, failed assertions and non-termination.
 
@@ -528,6 +530,10 @@ To achieve even spreading of test cases, QRT uses a class with a formula that fo
 
 \subsection{Feedback-directed Random Testing}
 Feedback-directed Random Testing (FDRT) is a technique that generates unit test suite at random for object-oriented programs~\cite{pacheco2007randoop}. As the name implies, FDRT uses the feedback received from the execution of first batch of randomly selected unit test suite to generate next batch of directed unit test suite. In this way redundant  and wrong unit tests are eliminated incrementally from the test suite with the help of filtration and application of contracts. For example a unit test that produces $IllegalArgumentException$ on execution is discarded because the arguments used in the unit test are not according to the required type. 
+
+Pacheco et al. performed a case study in which a team of testers applied FDRT to a critical component of .NET architecture. Results showed that the faults discovered by FDRT in 15 hours of manual processing and 150 hours of CPU processing are more than a test engineer finds in one year by manual and other automated techniques. As a result FDRT has been added to the tool list used at Microsoft for the betterment of software~\cite{qualitypacheco2008finding}. 
+
+
 
 %\subsection{Adaptive Random Testing for Object-Oriented}
 \subsection{The Artoo Testing}
@@ -570,7 +576,8 @@ The Artoo testing, implemented in AutoTest~\cite{ciupa2008artoo}, was evaluated 
 
 %\section{Automated Random Testing Tools}
 \section{Automatic Random Testing Tools}
-A number of academic and commercial automatic random testing tools reported in the literature are briefly described in the following section.
+A number of automatic random testing tools used in research and reported in the literature are briefly described in the following section.
+% it is written in Randoop: feedback directed random testing that jcrasher, eclat and jartege are academic tools.
 
 
 \subsection{JCrasher}
