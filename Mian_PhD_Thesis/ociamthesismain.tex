@@ -78,16 +78,17 @@ showstringspaces=false}
 
 %end the preamble and start the document
 
-%\titleformat*{\section}{\LARGE\bfseries}
-%\titleformat*{\subsection}{\Large\bfseries}
-%\titleformat*{\subsubsection}{\large\bfseries}
-%\titleformat*{\paragraph}{\large\bfseries}
-%\titleformat*{\subparagraph}{\large\bfseries}
-
+% To control chapter format
+\titleformat{\chapter}[display]
+  {\normalfont\sffamily\huge\bfseries}
+  {\chaptertitlename\ \thechapter}{18pt}{\Huge}
+% To control section format
 \titleformat{\section}
   {\normalfont\fontfamily{phv}\fontsize{14}{17}\bfseries}{\thesection}{1em}{}
+% To control subsection format
 \titleformat{\subsection}
   {\normalfont\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesubsection}{1em}{}
+% To control subsubsection format
 \titleformat{\subsubsection}
   {\normalfont\fontfamily{phv}\fontsize{12}{15}\bfseries}{\thesubsubsection}{1em}{}
 

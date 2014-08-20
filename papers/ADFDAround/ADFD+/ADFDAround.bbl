@@ -26,6 +26,20 @@ F.~Chan, T.~Y. Chen, I.~Mak, and Y.-T. Yu, ``Proportional sampling strategy:
   guidelines for software testing practitioners,'' \emph{Information and
   Software Technology}, vol.~38, no.~12, pp. 775--782, 1996.
 
+\bibitem{Chen2008}
+T.~Y. Chen, ``Adaptive random testing,'' \emph{Eighth International Conference
+  on Qualify Software}, vol.~0, p. 443, 2008.
+
+\bibitem{Beizer1990}
+B.~Beizer, \emph{Software testing techniques (2nd ed.)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax New York, NY, USA: Van Nostrand Reinhold Co., 1990.
+
+\bibitem{pacheco2008finding}
+C.~Pacheco, S.~K. Lahiri, and T.~Ball, ``Finding errors in. net with
+  feedback-directed random testing,'' in \emph{Proceedings of the 2008
+  international symposium on Software testing and analysis}.\hskip 1em plus
+  0.5em minus 0.4em\relax ACM, 2008, pp. 87--96.
+
 \bibitem{ahmad2013adfd}
 M.~A. Ahmad and M.~Oriol, ``Automated discovery of failure domain,''
   \emph{Lecture Notes on Software Engineering}, vol.~02, no.~4, pp. 331--336,
@@ -34,6 +48,22 @@ M.~A. Ahmad and M.~Oriol, ``Automated discovery of failure domain,''
 \bibitem{ahmad2014adfd2}
 ------, ``Automated discovery of failure domain,'' \emph{Lecture Notes on
   Software Engineering}, vol.~03, no.~1, pp. 289--294, 2013.
+
+\bibitem{Oriol2011yeti}
+\BIBentryALTinterwordspacing
+M.~Oriol. (2011) York extensible testing infrastructure. Department of Computer
+  Science, The University of York. [Online]. Available:
+  \url{http://www.yetitest.org/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{ernst2007daikon}
+M.~D. Ernst, J.~H. Perkins, P.~J. Guo, S.~McCamant, C.~Pacheco, M.~S. Tschantz,
+  and C.~Xiao, ``The daikon system for dynamic detection of likely
+  invariants,'' \emph{Science of Computer Programming}, vol.~69, no.~1, pp.
+  35--45, 2007.
+
+\bibitem{gilbert2008jfreechart}
+D.~Gilbert, ``The jfreechart class library version 1.0. 9,'' 2008.
 
 \bibitem{Leitner2007}
 \BIBentryALTinterwordspacing
@@ -45,38 +75,10 @@ A.~Leitner, I.~Ciupa, B.~Meyer, and M.~Howard, ``Reconciling manual and
   \url{http://dx.doi.org/10.1109/HICSS.2007.462}
 \BIBentrySTDinterwordspacing
 
-\bibitem{pacheco2007randoop}
-C.~Pacheco and M.~D. Ernst, ``Randoop: feedback-directed random testing for
-  java,'' in \emph{Companion to the 22nd ACM SIGPLAN conference on
-  Object-oriented programming systems and applications companion}.\hskip 1em
-  plus 0.5em minus 0.4em\relax ACM, 2007, pp. 815--816.
-
-\bibitem{oriat2005jartege}
-C.~Oriat, ``Jartege: a tool for random generation of unit tests for java
-  classes,'' in \emph{Quality of Software Architectures and Software
-  Quality}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2005, pp.
-  242--256.
-
-\bibitem{pacheco2005eclat}
-C.~Pacheco and M.~D. Ernst, \emph{Eclat: Automatic generation and
-  classification of test inputs}.\hskip 1em plus 0.5em minus 0.4em\relax
-  Springer, 2005.
-
-\bibitem{xie2005symstra}
-T.~Xie, D.~Marinov, W.~Schulte, and D.~Notkin, ``Symstra: A framework for
-  generating object-oriented unit tests using symbolic execution,'' in
-  \emph{Tools and Algorithms for the Construction and Analysis of
-  Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2005, pp.
-  365--381.
-
 \bibitem{Oriol2012}
 M.~Oriol, ``Random testing: Evaluation of a law describing the number of faults
   found,'' in \emph{Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, april 2012, pp. 201 --210.
-
-\bibitem{Chen2008}
-T.~Y. Chen, ``Adaptive random testing,'' \emph{Eighth International Conference
-  on Qualify Software}, vol.~0, p. 443, 2008.
 
 \bibitem{Pacheco2007a}
 \BIBentryALTinterwordspacing

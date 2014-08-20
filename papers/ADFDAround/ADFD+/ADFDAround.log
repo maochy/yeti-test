@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  19 AUG 2014 16:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  20 AUG 2014 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,22 +302,13 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
 (./ADFDAround.aux
 
-LaTeX Warning: Label `fig:PFDOne' multiply defined.
+LaTeX Warning: Label `table:failureDomains6' multiply defined.
 
 
-LaTeX Warning: Label `sub@fig:PFDOne' multiply defined.
+LaTeX Warning: Label `table:failureDomains6' multiply defined.
 
 
-LaTeX Warning: Label `fig:BFDOne' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:BFDOne' multiply defined.
-
-
-LaTeX Warning: Label `fig:SFDOne' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:SFDOne' multiply defined.
+LaTeX Warning: Label `table:failureDomains6' multiply defined.
 
 )
 \openout1 = `ADFDAround.aux'.
@@ -400,77 +391,75 @@ e
 <point.png, id=1, 103.88812pt x 85.06781pt>
 File: point.png Graphic file (type png)
  <use point.png>
-Package pdftex.def Info: point.png used on input line 117.
+Package pdftex.def Info: point.png used on input line 130.
 (pdftex.def)             Requested size: 71.13438pt x 56.90556pt.
 
 <block.png, id=3, 101.62968pt x 83.5622pt>
 File: block.png Graphic file (type png)
  <use block.png>
-Package pdftex.def Info: block.png used on input line 121.
+Package pdftex.def Info: block.png used on input line 134.
 (pdftex.def)             Requested size: 71.13408pt x 56.90695pt.
 
 <strip.png, id=4, 103.88812pt x 84.315pt>
 File: strip.png Graphic file (type png)
  <use strip.png>
-Package pdftex.def Info: strip.png used on input line 125.
+Package pdftex.def Info: strip.png used on input line 138.
 (pdftex.def)             Requested size: 71.13438pt x 56.9063pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-[]\OT1/ptm/m/n/10 We de-vel-oped two tech-niques (ADFD) [[]] and
+Underfull \hbox (badness 3872) in paragraph at lines 148--149
+[]\OT1/ptm/m/n/10 We have de-vel-oped two fully au-to-mated tech-niques
  []
 
 
-Underfull \hbox (badness 2111) in paragraph at lines 133--134
-\OT1/ptm/m/n/10 (ADFD+) [[]], which ef-fec-tively find fail-ures and their
- []
+Underfull \vbox (badness 1895) has occurred while \output is active []
 
-[1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+ [1{/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./point.png> <./block.png> <./strip.png>]
 
 LaTeX Warning: Reference `fig:adfdPlusExample' on page 2 undefined on input lin
-e 235.
+e 252.
 
 
-Underfull \hbox (badness 1783) in paragraph at lines 234--237
+Underfull \hbox (badness 1783) in paragraph at lines 251--254
 []\OT1/ptm/m/n/10 ADFD+ is a fully au-to-matic tech-nique re-quir-ing the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--237
+Underfull \hbox (badness 10000) in paragraph at lines 251--254
 
  []
 
-<adfdPlusWorkflow.png, id=17, 906.38625pt x 557.08125pt>
+<adfdPlusWorkflow.png, id=16, 906.38625pt x 557.08125pt>
 File: adfdPlusWorkflow.png Graphic file (type png)
 
 <use adfdPlusWorkflow.png>
-Package pdftex.def Info: adfdPlusWorkflow.png used on input line 242.
+Package pdftex.def Info: adfdPlusWorkflow.png used on input line 259.
 (pdftex.def)             Requested size: 241.83702pt x 199.16353pt.
 
-Underfull \hbox (badness 1496) in paragraph at lines 266--267
+Underfull \hbox (badness 1496) in paragraph at lines 283--284
 \OT1/ptm/m/n/10 der test. It is ev-i-dent from the pro-gram code that an
  []
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 268.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 285.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 269.
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 286.
 
-Overfull \hbox (6.00262pt too wide) in paragraph at lines 272--273
+Overfull \hbox (6.00262pt too wide) in paragraph at lines 289--290
 [][][][][][][][][][][][][][][][] 
  []
 
 
 LaTeX Warning: Reference `fig:adfdPlusExample' on page 2 undefined on input lin
-e 279.
+e 296.
 
 
-Overfull \hbox (12.72215pt too wide) in paragraph at lines 279--280
+Overfull \hbox (12.72215pt too wide) in paragraph at lines 296--297
 \OT1/cmr/m/n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 ; \OT1/
 cmr/m/n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3)\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 (5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10
@@ -483,127 +472,81 @@ t/10 ; \OT1/cmr/m/n/10 4)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 (8\OML/cmm/m/it/10
 /m/n/10 4)$\OT1/ptm/m/n/10 . 
  []
 
-
-LaTeX Warning: Reference `' on page 2 undefined on input line 305.
-
 [2 <./adfdPlusWorkflow.png>]
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 322.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 397.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
 )
-(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2004/09/05 1.3 listings language file
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 397.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 399.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
 )
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 399.
 
-LaTeX Warning: Reference `fig:testtime' on page 3 undefined on input line 378.
+Overfull \hbox (54.75536pt too wide) in paragraph at lines 392--569
+ [][] 
+ []
 
 
-LaTeX Warning: Reference `fig:testcases' on page 3 undefined on input line 386.
+LaTeX Warning: Float too large for page by 258.64392pt on input line 569.
+
+
+Overfull \hbox (378.5178pt too wide) in paragraph at lines 580--594
+ [][] 
+ []
+
+
+Overfull \hbox (475.71051pt too wide) in paragraph at lines 603--616
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:testtime' on page 3 undefined on input line 653.
+
+
+LaTeX Warning: Reference `fig:testcases' on page 3 undefined on input line 661.
 
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 386--387
+Underfull \hbox (badness 1931) in paragraph at lines 661--662
 \OT1/ptm/m/n/10 and Ran-doop. The $\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@ \OML
 /cmm/m/it/10 axis$ \OT1/ptm/m/n/10 rep-re-sents one and two-
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+LaTeX Warning: Reference `fig:failureDomainsOneDimension' on page 4 undefined o
+n input line 664.
+
+
+LaTeX Warning: Reference `fig:failureDomainsTwoDimension' on page 4 undefined o
+n input line 664.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 774--775
 
  []
 
 [4]
-Underfull \hbox (badness 1406) in paragraph at lines 543--548
+Underfull \hbox (badness 1406) in paragraph at lines 818--823
 []\OT1/ptm/m/n/10 The ADFD+ strat-egy is ca-pa-ble of test-ing nu-mer-i-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--548
+Underfull \hbox (badness 10000) in paragraph at lines 818--823
 
  []
 
-(./ADFDAround.bbl) [5] <mian.jpg, id=38, 50.3481pt x 65.043pt>
-File: mian.jpg Graphic file (type jpg)
- <use mian.jpg>
-Package pdftex.def Info: mian.jpg used on input line 606.
-(pdftex.def)             Requested size: 67.08252pt x 86.66885pt.
-
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 606--608
- [] 
- []
-
-<manuel.jpg, id=39, 100.12407pt x 126.4725pt>
-File: manuel.jpg Graphic file (type jpg)
- <use manuel.jpg>
-Package pdftex.def Info: manuel.jpg used on input line 610.
-(pdftex.def)             Requested size: 67.08252pt x 84.73999pt.
-
-Overfull \hbox (5.16504pt too wide) in paragraph at lines 610--611
- [][] 
- []
-
-
-Underfull \hbox (badness 1394) in paragraph at lines 614--615
-\OT1/ptm/m/n/10 new au-to-mated ran-dom soft-ware test-ing
- []
-
-<PFDOne.png, id=40, 790.955pt x 575.14874pt>
-File: PFDOne.png Graphic file (type png)
- <use PFDOne.png>
-Package pdftex.def Info: PFDOne.png used on input line 662.
-(pdftex.def)             Requested size: 227.62108pt x 170.71176pt.
-
-<BFDOne.png, id=41, 794.97pt x 575.14874pt>
-File: BFDOne.png Graphic file (type png)
- <use BFDOne.png>
-Package pdftex.def Info: BFDOne.png used on input line 666.
-(pdftex.def)             Requested size: 227.62413pt x 170.71176pt.
-
-<SFDOne.png, id=42, 789.95125pt x 573.14125pt>
-File: SFDOne.png Graphic file (type png)
- <use SFDOne.png>
-Package pdftex.def Info: SFDOne.png used on input line 670.
-(pdftex.def)             Requested size: 227.62149pt x 170.71933pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 662--671
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 662--671
-[]
- []
-
-<PFDTwo.png, id=43, 1187.43625pt x 772.8875pt>
-File: PFDTwo.png Graphic file (type png)
- <use PFDTwo.png>
-Package pdftex.def Info: PFDTwo.png used on input line 684.
-(pdftex.def)             Requested size: 227.60829pt x 170.708pt.
-
-<BFDTwo.png, id=44, 1192.455pt x 772.8875pt>
-File: BFDTwo.png Graphic file (type png)
- <use BFDTwo.png>
-Package pdftex.def Info: BFDTwo.png used on input line 688.
-(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
-
-<SFDTwo.png, id=45, 1192.455pt x 772.8875pt>
-File: SFDTwo.png Graphic file (type png)
- <use SFDTwo.png>
-Package pdftex.def Info: SFDTwo.png used on input line 692.
-(pdftex.def)             Requested size: 227.62413pt x 170.708pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 684--693
-[][]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 684--693
-[]
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./mian.jpg> <./manuel.jpg> <./PFDOne.png> <./BFDOne.png> <./SFDOne.png>]
+(./ADFDAround.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -615,9 +558,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7
-
- <./PFDTwo.png> <./BFDTwo.png> <./SFDTwo.png>] (./ADFDAround.aux)
+[5] [6] [7] (./ADFDAround.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -626,29 +567,30 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5125 strings out of 493315
- 74814 string characters out of 6137904
- 264851 words of memory out of 5000000
- 8470 multiletter control sequences out of 15000+600000
+ 5029 strings out of 493315
+ 73745 string characters out of 6137904
+ 300369 words of memory out of 5000000
+ 8381 multiletter control sequences out of 15000+600000
  41809 words of font info for 81 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,47p,1112b,971s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,40p,1112b,1317s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
-13/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf
--dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fo
-nts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
-/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.p
-fb>
-Output written on ADFDAround.pdf (7 pages, 391553 bytes).
+xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
+ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+13/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2013/t
+exmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/texmf-dis
+t/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utm
+r8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ADFDAround.pdf (7 pages, 225881 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

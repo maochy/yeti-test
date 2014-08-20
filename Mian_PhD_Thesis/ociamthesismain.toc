@@ -59,85 +59,85 @@
 \contentsline {subsection}{\numberline {2.11.3}Eclat}{54}{subsection.2.11.3}
 \contentsline {subsection}{\numberline {2.11.4}Randoop}{56}{subsection.2.11.4}
 \contentsline {subsection}{\numberline {2.11.5}QuickCheck}{56}{subsection.2.11.5}
-\contentsline {subsection}{\numberline {2.11.6}AutoTest}{56}{subsection.2.11.6}
+\contentsline {subsection}{\numberline {2.11.6}AutoTest}{57}{subsection.2.11.6}
 \contentsline {subsection}{\numberline {2.11.7}TestEra}{58}{subsection.2.11.7}
 \contentsline {subsection}{\numberline {2.11.8}Korat}{59}{subsection.2.11.8}
-\contentsline {subsection}{\numberline {2.11.9}Yeti}{59}{subsection.2.11.9}
-\contentsline {section}{\numberline {2.12}Summary}{59}{section.2.12}
-\contentsline {chapter}{\numberline {3}York Extensible Testing Infrastructure}{62}{chapter.3}
-\contentsline {section}{\numberline {3.1}Overview}{62}{section.3.1}
-\contentsline {section}{\numberline {3.2}Design}{63}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Core Infrastructure}{63}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Strategy}{64}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Language-specific Binding}{64}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Construction of Test Cases}{65}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Call sequence of YETI}{65}{subsection.3.2.5}
-\contentsline {subsection}{\numberline {3.2.6}Command-line Options}{65}{subsection.3.2.6}
-\contentsline {subsection}{\numberline {3.2.7}Execution}{67}{subsection.3.2.7}
-\contentsline {subsection}{\numberline {3.2.8}Test Oracle}{68}{subsection.3.2.8}
-\contentsline {subsection}{\numberline {3.2.9}Report}{69}{subsection.3.2.9}
-\contentsline {subsection}{\numberline {3.2.10}Graphical User Interface}{70}{subsection.3.2.10}
-\contentsline {section}{\numberline {3.3}Summary}{72}{section.3.3}
-\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{73}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{73}{section.4.1}
-\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{74}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Random Strategy}{74}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Random+ Strategy}{75}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping}{76}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Working of DSSR Strategy}{77}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR Strategy by Example}{78}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Implementation of DSSR Strategy}{81}{section.4.3}
-\contentsline {section}{\numberline {4.4}Evaluation}{81}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Research Questions}{81}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experiments}{82}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Performance Measurement Criteria}{84}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}Results}{84}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Absolute best in R, R+ \& DSSR strategies}{86}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Classes for which any of the three strategies perform better}{87}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}The best default strategy in R, R+ \& DSSR}{87}{subsection.4.5.3}
-\contentsline {section}{\numberline {4.6}Discussion}{87}{section.4.6}
-\contentsline {section}{\numberline {4.7}Related Work}{90}{section.4.7}
-\contentsline {section}{\numberline {4.8}Summary}{91}{section.4.8}
-\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{92}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{92}{section.5.1}
-\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{93}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}GUI front-end for Providing Input:}{94}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Automated Finding of Failure:}{94}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Automated Generation of Modules:}{95}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules:}{95}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph:}{96}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Implementation}{96}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{96}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{97}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Example}{97}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Experimental Results}{98}{section.5.4}
-\contentsline {section}{\numberline {5.5}Discussion}{102}{section.5.5}
-\contentsline {section}{\numberline {5.6}Threats to Validity}{103}{section.5.6}
-\contentsline {section}{\numberline {5.7}Related Works}{104}{section.5.7}
-\contentsline {section}{\numberline {5.8}Summary}{104}{section.5.8}
-\contentsline {chapter}{\numberline {6}Automated Discovery of Failure Domain Plus}{106}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{106}{section.6.1}
-\contentsline {section}{\numberline {6.2}Automated Discovery of Failure Domain+}{107}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Workflow of ADFD+}{107}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Implementation of ADFD+}{108}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Example to illustrate working of ADFD+}{109}{subsection.6.2.3}
-\contentsline {section}{\numberline {6.3}Evaluation}{110}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Research questions}{110}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Randoop}{110}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Experimental setup}{112}{subsection.6.3.3}
-\contentsline {section}{\numberline {6.4}Experimental results}{112}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Efficiency}{114}{subsection.6.4.1}
-\contentsline {subsection}{\numberline {6.4.2}Effectiveness}{114}{subsection.6.4.2}
-\contentsline {subsection}{\numberline {6.4.3}Failure Domains}{115}{subsection.6.4.3}
-\contentsline {section}{\numberline {6.5}Discussion}{116}{section.6.5}
-\contentsline {section}{\numberline {6.6}Threats to validity}{117}{section.6.6}
-\contentsline {section}{\numberline {6.7}Related Work}{117}{section.6.7}
-\contentsline {section}{\numberline {6.8}Conclusion}{118}{section.6.8}
-\contentsline {section}{\numberline {6.9}Future Work}{118}{section.6.9}
-\contentsline {chapter}{\numberline {7}Conclusions}{122}{chapter.7}
-\contentsline {section}{\numberline {7.1}Lessons Learned}{123}{section.7.1}
-\contentsline {chapter}{\numberline {8}Future Work}{126}{chapter.8}
-\contentsline {chapter}{\numberline {A} }{129}{appendix.A}
-\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{129}{section.A.1}
-\contentsline {section}{\numberline {A.2}Error-seeded code to evaluate the performance of ADFD and ADFD+}{131}{section.A.2}
-\contentsline {chapter}{Bibliography}{133}{lstnumber.-18.16}
+\contentsline {subsection}{\numberline {2.11.9}YETI}{59}{subsection.2.11.9}
+\contentsline {section}{\numberline {2.12}Summary}{60}{section.2.12}
+\contentsline {chapter}{\numberline {3}York Extensible Testing Infrastructure}{63}{chapter.3}
+\contentsline {section}{\numberline {3.1}Overview}{63}{section.3.1}
+\contentsline {section}{\numberline {3.2}Design}{64}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Core Infrastructure}{64}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Strategy}{65}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Language-specific Binding}{65}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Construction of Test Cases}{66}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Call sequence of YETI}{66}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Command-line Options}{66}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Execution}{68}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Test Oracle}{69}{subsection.3.2.8}
+\contentsline {subsection}{\numberline {3.2.9}Report}{70}{subsection.3.2.9}
+\contentsline {subsection}{\numberline {3.2.10}Graphical User Interface}{71}{subsection.3.2.10}
+\contentsline {section}{\numberline {3.3}Summary}{73}{section.3.3}
+\contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{74}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{74}{section.4.1}
+\contentsline {section}{\numberline {4.2}Dirt Spot Sweeping Random Strategy}{75}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Random Strategy}{75}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Random+ Strategy}{76}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Dirt Spot Sweeping}{77}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Working of DSSR Strategy}{78}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Explanation of DSSR Strategy by Example}{79}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Implementation of DSSR Strategy}{82}{section.4.3}
+\contentsline {section}{\numberline {4.4}Evaluation}{82}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Research Questions}{82}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Experiments}{83}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}Performance Measurement Criteria}{85}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}Results}{85}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Absolute best in R, R+ \& DSSR strategies}{87}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Classes for which any of the three strategies perform better}{88}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}The best default strategy in R, R+ \& DSSR}{88}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Discussion}{88}{section.4.6}
+\contentsline {section}{\numberline {4.7}Related Work}{91}{section.4.7}
+\contentsline {section}{\numberline {4.8}Summary}{92}{section.4.8}
+\contentsline {chapter}{\numberline {5}Automated Discovery of Failure Domain}{93}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{93}{section.5.1}
+\contentsline {section}{\numberline {5.2}Automated Discovery of Failure Domain}{94}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}GUI front-end for Providing Input:}{95}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Automated Finding of Failure:}{95}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Automated Generation of Modules:}{96}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Automated Compilation and Execution of Modules:}{96}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Automated Generation of Graph:}{97}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Implementation}{97}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}York Extensible Testing Infrastructure}{97}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}ADFD strategy in YETI}{98}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Example}{98}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Experimental Results}{99}{section.5.4}
+\contentsline {section}{\numberline {5.5}Discussion}{103}{section.5.5}
+\contentsline {section}{\numberline {5.6}Threats to Validity}{104}{section.5.6}
+\contentsline {section}{\numberline {5.7}Related Works}{105}{section.5.7}
+\contentsline {section}{\numberline {5.8}Summary}{105}{section.5.8}
+\contentsline {chapter}{\numberline {6}Automated Discovery of Failure Domain Plus}{107}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{107}{section.6.1}
+\contentsline {section}{\numberline {6.2}Automated Discovery of Failure Domain+}{108}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Workflow of ADFD+}{108}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Implementation of ADFD+}{109}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Example to illustrate working of ADFD+}{110}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.3}Evaluation}{111}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Research questions}{111}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Randoop}{111}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Experimental setup}{113}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Experimental results}{113}{section.6.4}
+\contentsline {subsection}{\numberline {6.4.1}Efficiency}{115}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.2}Effectiveness}{115}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.3}Failure Domains}{116}{subsection.6.4.3}
+\contentsline {section}{\numberline {6.5}Discussion}{117}{section.6.5}
+\contentsline {section}{\numberline {6.6}Threats to validity}{118}{section.6.6}
+\contentsline {section}{\numberline {6.7}Related Work}{118}{section.6.7}
+\contentsline {section}{\numberline {6.8}Conclusion}{119}{section.6.8}
+\contentsline {section}{\numberline {6.9}Future Work}{119}{section.6.9}
+\contentsline {chapter}{\numberline {7}Conclusions}{123}{chapter.7}
+\contentsline {section}{\numberline {7.1}Lessons Learned}{124}{section.7.1}
+\contentsline {chapter}{\numberline {8}Future Work}{127}{chapter.8}
+\contentsline {chapter}{\numberline {A} }{130}{appendix.A}
+\contentsline {section}{\numberline {A.1}Sample code to identify failure domains}{130}{section.A.1}
+\contentsline {section}{\numberline {A.2}Error-seeded code to evaluate the performance of ADFD and ADFD+}{132}{section.A.2}
+\contentsline {chapter}{Bibliography}{135}{lstnumber.-19.16}

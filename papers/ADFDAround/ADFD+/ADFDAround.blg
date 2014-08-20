@@ -11,46 +11,48 @@ Database file #1: sigproc.bib
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in gilbert2008jfreechart
 
 Done.
-You've used 16 entries,
+You've used 17 entries,
             4039 wiz_defined-function locations,
-            919 strings with 10308 characters,
-and the built_in function-call counts, 14023 in all, are:
-= -- 1122
-> -- 303
-< -- 134
-+ -- 171
-- -- 45
-* -- 676
-:= -- 2003
-add.period$ -- 40
-call.type$ -- 16
-change.case$ -- 15
-chr.to.int$ -- 330
-cite$ -- 16
-duplicate$ -- 975
-empty$ -- 1179
-format.name$ -- 58
-if$ -- 3281
+            931 strings with 10497 characters,
+and the built_in function-call counts, 13811 in all, are:
+= -- 1112
+> -- 306
+< -- 123
++ -- 169
+- -- 49
+* -- 663
+:= -- 2032
+add.period$ -- 41
+call.type$ -- 17
+change.case$ -- 16
+chr.to.int$ -- 294
+cite$ -- 18
+duplicate$ -- 974
+empty$ -- 1146
+format.name$ -- 61
+if$ -- 3206
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 156
-newline$ -- 75
-num.names$ -- 16
-pop$ -- 370
+int.to.str$ -- 17
+missing$ -- 165
+newline$ -- 80
+num.names$ -- 17
+pop$ -- 386
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1090
+skip$ -- 1068
 stack$ -- 0
-substring$ -- 796
-swap$ -- 821
-text.length$ -- 24
+substring$ -- 712
+swap$ -- 808
+text.length$ -- 25
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 16
-warning$ -- 0
-while$ -- 72
-width$ -- 18
-write$ -- 181
+type$ -- 17
+warning$ -- 1
+while$ -- 69
+width$ -- 19
+write$ -- 192
+(There was 1 warning)

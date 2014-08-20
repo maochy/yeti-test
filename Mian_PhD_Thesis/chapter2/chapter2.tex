@@ -531,7 +531,7 @@ To achieve even spreading of test cases, QRT uses a class with a formula that fo
 \subsection{Feedback-directed Random Testing}
 Feedback-directed Random Testing (FDRT) is a technique that generates unit test suite at random for object-oriented programs~\cite{pacheco2007randoop}. As the name implies, FDRT uses the feedback received from the execution of first batch of randomly selected unit test suite to generate next batch of directed unit test suite. In this way redundant  and wrong unit tests are eliminated incrementally from the test suite with the help of filtration and application of contracts. For example a unit test that produces $IllegalArgumentException$ on execution is discarded because the arguments used in the unit test are not according to the required type. 
 
-Pacheco et al. performed a case study in which a team of testers applied FDRT to a critical component of .NET architecture. Results showed that the faults discovered by FDRT in 15 hours of manual processing and 150 hours of CPU processing are more than a test engineer finds in one year by manual and other automated techniques. As a result FDRT has been added to the tool list used at Microsoft for the betterment of software~\cite{qualitypacheco2008finding}. 
+Pacheco et al. performed a case study in which a team of testers applied FDRT to a critical component of .NET architecture. Results showed that the faults discovered by FDRT in 15 hours of manual processing and 150 hours of CPU processing are more than a test engineer finds in one year by manual and other automated techniques. As a result FDRT has been added to the tool list used at Microsoft for the betterment of software~\cite{pacheco2008finding}. 
 
 
 
@@ -588,7 +588,7 @@ The working mechanism of JCrasher is illustrated by testing a $.java$ program as
 \bigskip
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=8cm]{chapter2/JCrasher.png}
+	\includegraphics[width=15cm, height=7.3cm]{chapter2/JCrasher.png}
 	\bigskip
 	\caption{How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic~\cite{csallner2004jcrasher}}
 	\label{fig:JCrasher}
@@ -636,7 +636,17 @@ Csallner and Smaragdakis~\cite{csallner2004jcrasher} compared Eclat with JCrashe
 
 
 \subsection{Randoop}
-Random tester for object oriented programs (Randoop) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes, contracts, filters and time limit as input and gives a suite of JUnit for Java and NUnit for .Net program as output. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test.  Arguments for these methods are selected from the predefined pool in case of primitive type and as sequence of null values in case of reference type. Randoop maintains two sets called $ErrorSeqs$ and $NonErrorSeqs$ to record the feedback. It extends $ErrorSeqs$ set in case of contract or filter violation and $NonErrorSeqs$ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, $ErrorSeqs$ and $NonErrorSeqs$ are produced as JUnit or NUnit test suite. In terms of coverage and number of faults discovered, Randoop using FDRT technique was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that Randoop achieved more branch coverage and better fault detection than JCrasher. 
+Random tester for object oriented programs (Randoop) is the tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes, contracts, filters and time limit as input and gives a suite of JUnit for Java and NUnit for .Net program as output. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test.  Arguments for these methods are selected from the predefined pool in case of primitive type and as sequence of null values in case of reference type. Randoop maintains two sets called $ErrorSeqs$ and $NonErrorSeqs$ to record the feedback. It extends $ErrorSeqs$ set in case of contract or filter violation and $NonErrorSeqs$ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, $ErrorSeqs$ and $NonErrorSeqs$ are produced as JUnit or NUnit test suite. The following command runs Randoop to test OneDimPointFailDomain for 100 seconds in CLI mode. Values is a text file containing interesting values which is maintained manually by the tester.
+\bigskip
+
+\begin{lstlisting}[language=bash]
+$ java randoop.main.Main gentests   \
+ --testclass=OneDimPointFailDomain   \
+ --testclass=Values --timelimit=100
+\end{lstlisting}
+\bigskip
+
+In terms of coverage and number of faults discovered, Randoop using FDRT technique was compared with JCrasher and JavaPathFinder and 14 libraries of both Java and .Net were evaluated~\cite{visser2004test}. The results showed that Randoop achieved more branch coverage and better fault detection than JCrasher. 
 
 \subsection{QuickCheck}
 QuickCheck~\cite{claessen2011quickcheck} is a lightweight random testing tool used for testing of Haskell programs~\cite{hudak2007history}. Haskell is a functional programming language where programs are evaluated by using expressions rather than statements. Most of the functions in Haskell are pure except the IO functions, therefore QuickCheck mainly focuses on testing pure functions. QuickCheck is designed to have a simple domain-specific language of testable specifications embedded in Haskell. This language is used to define expected properties of the functions under test. %- for example, reversing a list with single element must result in the same list.\\ %(author check the definition of pure functions)\\
@@ -703,7 +713,7 @@ Korat uses \verb+repOK()+ and \verb+checkRep()+ methods. The \verb+repOK()+ is u
 
 %As the test start, it uses methods pre-condition to generate all non-isomorphic test cases up to a given size. It then executes each of the test case and compare the obtained results to the methods post-condition, which serves as an oracle to evaluate the correctness of each test case. 
 
-\subsection{Yeti}
+\subsection{YETI}
 York Extensible Testing Infrastructure (YETI) is an open-source automated random testing tool. YETI, coded in Java, is capable of testing systems developed in procedural, functional and object-oriented languages. Its language agnostic meta-model enables it to test programs written in multiple languages including Java, C\#, JML and .NET. The core features of YETI include easy extensibility for future growth, capability to test programs using multiple strategies, high speed tests execution, real time logging, GUI support and auto generation of test report at the end of test session. Detailed information about YETI is presented in Chapter \ref{chap:yeti_3}.
 
 

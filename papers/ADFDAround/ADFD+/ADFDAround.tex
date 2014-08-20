@@ -68,9 +68,20 @@ showstringspaces=false}
 %This paper verifies the accuracy of invariants generated automatically by Daikon and suggests how to improve their quality. To achieve this, it uses a newly developed Automated Discovery of Failure Domain+ (ADFD+) technique. ADFD+ is a testing frame-work which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is presented graphically on a two-dimension chart.
 
 
-The achievement of up-to 50\% better results by Adaptive Random Testing verses Random Testing ensures that the pass and fail domain across the input domain are highly useful and needs due consideration in selection of test inputs. The Automated Discovery of Failure Domain (ADFD) and its successor Automated Discovery of Failure Domain+ (ADFD+) strategy, automatically finds failures and their domains in a specified range and provides visualisation of the available pass and fail domain. They can precisely detect the failure-domain of the identified failure in an effective way. Performing exhaustive testing in a limited region around the failure is the key to the success of ADFD and ADFD+.
+The achievement of up-to 50\% better results by Adaptive Random Testing verses Random Testing ensures that the pass and fail domains across the input domain are highly useful and need due consideration in selection of test inputs. The Automated Discovery of Failure Domain (ADFD) and its successor Automated Discovery of Failure Domain+ (ADFD+) techniques, automatically find failures and their domains in a specified range and provides their visualisation. They can precisely detect the failure-domain of the identified failure in an effective way. Performing exhaustive testing in a limited region around the failure is the key to the success of ADFD and ADFD+ techniques.
 
-In this study we analyse whether automated testing (ADFD and ADFD+) can replace Manual testing, whether the nature, location and size of failure-domain has an impact on the effectiveness of automated and manual testing, whether the number of failures and the underlying failure-domain types (point, block and strip) has an impact on the automated and manual testing. 
+We performed an extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. Furthermore the impact of nature, location, size, type and complexity of failure-domains on the testing techniques were also studied. The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners.
+
+
+%The results reveal that each is good at uncovering different type of failure-domains and each brings distinct contributions.
+
+
+%The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners. The results reveal that each is good at uncovering different type of failure-domains and each brings distinct contributions.
+
+
+
+
+%, whether the number of failures and the underlying failure-domain types (point, block and strip) has an impact on the automated and manual testing. 
 
 
 
@@ -95,7 +106,7 @@ In this study we analyse whether automated testing (ADFD and ADFD+) can replace 
 %\terms{Comparison, Verification, }
 %\terms{software testing, automated random testing, ADFD}
 \begin{IEEEkeywords}
-software testing, automated random testing, manual testing, ADFD.
+software testing, automated random testing, manual testing, ADFD, Daikon.
 \end{IEEEkeywords}
 %}
 
@@ -107,7 +118,9 @@ software testing, automated random testing, manual testing, ADFD.
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}\label{sec:intro}
+
 The input-domain of a given SUT can be divided into two sub-domains. The pass-domain, containing the values, for which the software behaves correctly and the failure-domain for which the software behaves incorrectly. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes in the input domain. They divided these into point, block and strip failure-domains as shown in Figure~\ref{fig:patterns2}.
+
 \smallskip
 \begin{figure} [H]
 \centering
@@ -130,15 +143,19 @@ The input-domain of a given SUT can be divided into two sub-domains. The pass-do
 
 Adaptive Random Testing (ART) exploited the existence of the failure-domains and resultantly achieved up to 50\% better performance than random testing~\cite{Chen2008}. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure-domains. This insight motivated us to increase our understanding of failure-domains in production software.
 
-We developed two techniques (ADFD)~\cite{ahmad2013adfd} and (ADFD+)~\cite{ahmad2014adfd2}, which effectively find failures and their domains in a specified range and provides visualisation of the pass and fail domain as either point, block or strip failure-domain. This is achieved in two steps: first, random testing is used to find the failure and secondly, exhaustive testing in a limited region around the detected failure is done to identify the failure domain. The ADFD strategy searches in one-dimensional and covers longer range than ADFD+ which is more effective in multi-dimensional and covers shorter range.
+Software testing cost is approximately half of the development cost. Testing software is expensive and it becomes tedious, laborious and error-prone if performed manually~\cite{Beizer1990}. Automated testing is an alternative approach to manual testing. The case study reveals that the 150 hours of automated testing found more faults in complex .NET code than a test engineer finds in one year by manual testing~\cite{pacheco2008finding}. 
+
+We have developed two fully automated techniques ADFD~\cite{ahmad2013adfd} and ADFD+~\cite{ahmad2014adfd2}, which effectively find failures and their domains in a specified range and provides visualisation of the pass and fail domain as either point, block or strip failure-domain. This is achieved in two steps: first, random testing is used to find the failure and secondly, exhaustive testing in a limited region around the detected failure is done to identify the failure domain. The ADFD strategy searches in one-dimensional and covers longer range than ADFD+ which is more effective in multi-dimensional and covers shorter range.
+
+Both ADFD and ADFD+ techniques are formed by the combination of three separate tools i.e. YETI, Daikon and JFreeChart. York Extensible Testing Infrastructure~\cite{Oriol2011yeti} is used to test the program automatically using random strategy (ADFD and ADFD+). Daikon~\cite{ernst2007daikon} observes the all the test execution and automatically generate invariants to show the failure-domains. Finally, JFreeChart~\cite{gilbert2008jfreechart} generates the graph from the test output to show the pass and failure-domains. 
 
 Software testing can be performed either automatically or manually. Both the techniques have their own advantages and limitations. The main advantage of automated testing is execution of large number of tests in little time, whereas manual testing utilizes the tester experience to concentrate on error-prone part of the SUT and generate target oriented test cases~\cite{Leitner2007}. 
 
 
+
+
+
 The analysis of failures and failure-domains discovered in 57 classes from 25 open source Java projects of Qualitas Corpus through three different techniques---ADFD, ADFD+ and Manual testing---reveals that each is good at uncovering different type of failure-domains and each brings distinct contributions.
-
-
-
 
 
 
@@ -357,18 +374,276 @@ Failure-domain can reside in the form of point, block or strip shape in the inpu
 All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. %The machine took approximately 100 hours to process the experiments.
 The ADFD+ Jar file is available at \url{https://code.google.com/p/yeti-test/downloads/list/} and Randoop at \url{https://randoop.googlecode.com/files/randoop.1.3.3.zip}.
 
-The following two commands were used to run the ADFD+ and Randoop respectively. Both tools were executed with default settings, however, Randoop was provided with a seed value as well.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
-\begin{lstlisting}[language=bash]
-$ java -jar adfd_yeti.jar -------------(1)
+%The following two commands were used to run the ADFD+ and Randoop respectively. Both tools were executed with default settings, however, Randoop was provided with a seed value as well.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
+%\begin{lstlisting}[language=bash]
+%$ java -jar adfd_yeti.jar -------------(1)
 
-$ java randoop.main.Main gentests \
---testclass=OneDimPointFailDomain \
---testclass=Values --timelimit=100 ----(2)
-\end{lstlisting}
-
-
+%$ java randoop.main.Main gentests \
+%--testclass=OneDimPointFailDomain \
+%--testclass=Values --timelimit=100 ----(2)
+%\end{lstlisting}
 
 
+
+\begin{table*}[h]
+\caption{Table depicting results of ADFD and ADFD+}
+\centering
+{\renewcommand{\arraystretch}{1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+
+S\# & 	Project 			& Class						& Method 					& ADFD       								& ADFD+     								& Manual				\\
+\hline
+1	& 	ant 				&LeadPipeInputStream 		& LeadPipeInputStream(i)		& I \textgreater= 2147483140			& I 							& I \textgreater~698000000			\\ 
+	&                                &                                             &                                             & I \textless= 2147483647  						&										&						\\
+2	&	antlr			& BitSet				  		& BitSet.of(i,j)				& I \textless= -1, i \textgreater= -18,						& I one of \{-513, -1\}						& I \textless= -1				\\ 
+	&                                &                                             &                                             & j \textless= 7, j \textgreater= -12  						& J one of \{-503, 507\}					& J != 0					\\
+3	&	artofillusion		& ToolPallete			  		& ToolPalette(i,j)				& I \textless= -1, I \textgreater= -18						& I one of \{ -515, -1\}						& I \textless= -1, 				\\ 
+	&                                &                                             &                                             & 				  						& J one of \{-509, 501\}					& J any value			   	\\
+
+	&					& IntMap			  		& idMap(i)					& I != 0									& I one of \{-1, -512\} 						& I \textless= -1				\\ 
+	&                                &                                             &                                             & I \textless= -1, I \textgreater= -18  						& 										&  			   			\\
+4	&	cayenne			& ExpressionFactory	  		& expressionOfType(i)		&  I \textless= 13, I \textgreater= -7						& I one of \{-497, 513\}					&  I \textgreater= -2147483648 	\\ 
+	&                                &                                             &                                             & 				  						& 										&  I \textless= 2147483647		\\
+5	&	collections		& ArrayStack					& ArrayStack(i)				& I \textgreater= 2147483636						& I one of \{2147483142, 2147483647\}		& I \textgreater~698000000 		\\ 
+	&                                &                                             &                                             & I \textless= 2147483647 						& 										&  			   			\\
+	&					& BinaryHeap				& BinaryHeap(i)				&  I \textless= -2147483637					& I one of \{-2147483648, -2147483142\}	&  I \textless= 0				 \\
+	&                                &                                             &                                             &  I \textgreater= -2147483648					& 										&  			   			\\
+	&					& BondedFifoBuffer			& BoundedFifoBuffer(i)		& I \textless= -2147483639 					& I one of \{-505, 0\} 						& I \textless= 0 				\\
+	&                                &                                             &                                             & I \textgreater= -2147483648						& 										&  			   			\\
+	&					& FastArrayList				& FastArrayList(i)				& I \textless= -2147483641 					& I one of \{-2147483644, -2147483139\}	& I \textless= -1			\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648						& 										&  			   		\\	
+	&					& StaticBucketMap			& StaticBucketMap(i)			& I \textgreater= 2147483635						& I one of \{2147483140, 2147483647\} 	& I \textgreater~698000000		\\ 
+	&                                &                                             &                                             & I \textless= 2147483647						& 										&  			   		\\	
+	&					& PriorityBuffer				& PriorityBuffer(i)				& I != 0 									& I one of \{-2147483647, -2147483142\}	& I \textless= 0				\\ 
+	&                                &                                             &                                             & I \textless= -1, I \textgreater= -14						& 										&  			   		\\
+6	&	colt				& GenericPermuting			& permutation(i,j)			&  I \textless= 0, I \textgreater= -18						& I one of \{ -498, 0\}						& I \textless= 0, I \textgreater= 2		\\ 
+	&                                &                                             &                                             & 										& I one of \{2, 512\}						& j != 0			   	\\
+	&					& LongArrayList				& LongArrayList(i)			&  I \textless= -2147483640					& I one of \{-510, -1\}						& I \textless= -1			\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648						& 										&  			   		\\
+	&					& OpenIntDoubleHashMap	& OpenIntDoubleHashMap(i)	& I \textless= -1 						& I one of \{-514, -1\}    					& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -17						& 										&  			   		\\	
+	&	drjava			& ByteVector					& ByteVector(i)				& I \textless= -2147483639				& I one of \{-2147483648, -2147483141\}	& I \textless= -1			\\ 	
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 										&  			   		\\	
+	&	emma			& ElementFactory				& newConstantCollection(i)	& I \textgreater= 2147483636				& I one of \{2147483141, 2147483647\}       & I \textgreater~698000000		\\ 
+	&                                &                                             &                                             & I \textless= 2147483647				& 										&  			   		\\	
+	&					& IntIntMap					& IntIntMap(i)				& I \textless= -2147483638				& I one of \{-2147483644, -2147483139\}	& I \textless= -1			\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 										&  			   		\\	
+	&					& ObjectIntMap				& ObjectIntMap(i)				&  I \textgreater= 2147483640				& I one of \{2147483591, 2147483647\}    &     I \textgreater~698000000	\\ 
+	&                                &                                             &                                             &  I \textless= 2147483647				& 										&  			   		\\	
+	&					& IntObjectMap				& IntObjectMap(i)				& I \textless= -1				&     I \textless= -1                            &  I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -17				& 	I \textgreater= -518				&  			   		\\	
+7	&	heritrix			& ArchiveUtils				& padTo(i,j)					& I \textgreater= 2147483641 			& I one of \{-497, 513\}							& I any value\\ 
+	&                                &                                             &                                             & I \textless= 2147483647			& j one of \{2147483591, 2147483647\}				& J \textgreater~698000000 			   		\\	
+	&					& BloomFilter32bit 			& BloomFilter32bit(i,j)			&  I \textless= -1				&	I one of \{-515, -1\}			& I \textless -1 \\ 
+	&                                &                                             &                                             & I \textgreater= -18				& 	J may be any value			& J \textless -1 			   		\\	
+8	&	hsqld			& IntKeyLongValueHashMap	& IntKeyLongValueHashMap(i)	&  I \textgreater= 2147483635				& I one of \{2147483590, 2147483647\}				& I \textgreater~698000000\\ 
+	&                                &                                             &                                             &  I \textless= 2147483647				& 	I \textgreater= -518									&  			   		\\	
+
+
+
+
+	&					& ObjectCacheHashMap		& ObjectCacheHashMap(i)		&  I \textless= -2147483641		& 		I one of \{-512, 0\}						& I \textless= 0\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 					&  			   		\\	
+
+
+
+
+9	&	htmlunit			& ObjToIntMap				& ObjToIntMap(i)				&  I \textless= -2147483636		& 	I one of \{-2147483646, -2147483137\}							& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 					&  			   		\\	
+
+
+
+10	&	itext			& PRTokeniser				& isDelimiterWhitespace(i)		&  I \textless= -2		& 		I one of \{-509, -2\}						& I \textless= -2 \\ 
+	&                                &                                             &                                             & I \textgreater= -18				& I one of \{256, 501\} 					&  	I \textgreater= 256		   		\\	
+
+
+
+	&					& PdfAction					& PdfAction(i)				& I \textless= -2147483640 		& 	I one of \{-514, 0\}							& I \textless= 0 \\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 	I one of \{6, 496\}				&  	I \textgreater= 6		   		\\		
+	
+	
+	&					& PdfLiteral					& PdfLiteral(i)				&  I \textless= -1		& 		I one of \{-511, -1\}						& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -14				& 					&  			   		\\		
+	
+	
+11	&	jung			& PhysicalEnvironment		& PhysicalEnvironment(i)		&  I \textless= -1		& 	I one of \{-2147483646, -2147483137\}							& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -11			& 					&  			   		\\	
+	
+	
+
+12	&	jedit			& IntegerArray				& IntegerArray(i)				&  I \textgreater= 2147483636		& 	I one of \{2147483587, 2147483647\}							&I \textgreater~698000000\\ 
+	&                                &                                             &                                             & I \textless= 2147483647				& 					&  			   		\\	
+
+
+13	&	jgraph			& AttributeMap				& AttributeMap(i)				&  I \textless= -2147483639		& 	I one of \{-514, 0\}							& I \textless= 0\\ 
+	&                                &                                             &                                             & I \textgreater= -2147483648				& 					&  			   		\\	
+
+
+14	&	jruby			& ByteList					& ByteList(i)					& I \textless= -1 		& 		I one of \{-513, -1\} 						& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -14				& 					&  			   		\\	
+	
+		
+&					& WeakIdentityHashMap		& WeakIdentityHashMap(i)		&  	I \textgreater= 2147483636		& 	I one of \{2147483140, 2147483647\}						& I \textgreater 698000000\\ 
+	&                                &                                             &                                             & I \textless= 2147483647				& 					&  			   		\\	
+
+15	&	megamek		& AmmoType				& getMunitionsFor(i)			&  I \textless= -1			& 	I one of \{-514, -1\}						& I \textless= -1 \\ 			
+	&                                &                                             &                                             & I \textgreater= -17				& I one of \{93, 496\}					&  	I \textgreater= 93		   		\\	
+
+16	&	poi				& IntList						& IntList(i,j)					&  	I \textless= -1		& 	I one of \{-1, -509\}						& I \textless= -1\\ 		
+	&                                &                                             &                                             & 	I \textgreater= -15			& j one of {0}					&  	 j = 0		   		\\	
+
+17	&	sunflow			& QMC						& halton(i,j)					&  I \textless= -1, I \textgreater= -12			& 	I \textless= -1, I \textgreater= -508						& I \textless= -1\\ 
+	&                                &                                             &                                             & J \textless= -1, J \textgreater= -15				& j \textless= 499, j \textgreater= -511					&  j any value			   		\\	
+
+
+
+
+&					& BenchmarkFramework		& BenchmarkFramework(i,j)	&  	I != 0			& 	I one of \{-501, -1\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textless= -1, I \textgreater= -13				& 					&  			   		\\	
+
+
+
+
+
+	
+	&					& IntArray					& IntArray(i)					&  	I \textless= -1				& I one of \{-2147483650, -2147483141\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -16			& 					&  			   		\\	
+
+	
+
+18	&	trove			& TDoubleStack				& TDoubleStack(i)			&  	I \textless= -1			&	I one of \{-511, -1\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -13			& 					&  			   		\\	
+
+
+	&					& TIntStack					& TIntStack(i)				&  	I \textless= -1			&	I one of \{-2147483648, -2147483144\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -12			& 					&  			   		\\	
+
+
+	&					& TLongArrayList				& TLongArrayList(i)			&  	I \textless= -1			&	I one of \{-2147483648, -2147483141\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -16			& 					&  			   		\\	
+
+
+19	&	weka			& AlgVector					& AlgVector(i)				&  	I \textless= -1			&	I one of \{-511, -1\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -15			& 					&  			   		\\	
+
+
+	&					& BinarySparseInstance		& BinarySparseInstance(i)		& I \textless= -1				&	I one of \{-506, -1\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -15				& 					&  			   		\\	
+
+
+20	&	xerces			& SoftReferenceSymbolTable	& SoftReferenceSymbolTable(i)&  I \textgreater= 2147483635				&	I one of \{2147483140, 2147483647\}					& I \textgreater~698000000\\ 
+	&                                &                                             &                                             & I \textless= 2147483647				& 					&  			   		\\	
+
+
+
+	&					& SymbolHash				& SymbolHash(i)				&  I \textless= -1				&	I one of \{-2147483648, -2147483592\}					& I \textless= -1\\ 
+	&                                &                                             &                                             & I \textgreater= -16				& 					&  			   		\\	
+
+
+
+	&					& SynchronizedSymbolTable	& SynchronizedSymbolTable(i) &  		I \textless= -2147483140			&	I one of \{-2147483648, -2147483592\}				& I \textless= -1\\ 
+		&                                &                                             &                                             & 	I \textgreater= -2147483648			& 					&  			   		\\	
+
+
+	&					& XMLChar					& isSpace(i)					&  	I != 0			&		I one of \{-510, -1\}				& I \textless= -1\\
+	&                                &                                             &                                             & 	I \textless= -1, I \textgreater= -12			& 					&  			   		\\	
+
+
+ 
+	&					& XMLGrammarPoolImpl		& XMLGrammarPoolImpl(i)		&  	I != 0				&	I one of \{-2147483648, -2147483137\}				& I \textless= -1\\ 
+		&                                &                                             &                                             & I \textless= -1, I \textgreater= -13				& 					&  			   		\\	
+	
+	&					& XML11Char				& isXML11NCNameStart(i)		&  	I \textless= -1			&		I one of \{ -512, -1\}				& I \textless= -1\\ 
+	&                                &                                             &                                             & 	I \textgreater= -16			& 					&  			   		\\	
+
+
+	&					& AttributeList				& AttributeList(i)				&  I \textgreater= 2147483635				&	I one of \{2147483590, 2147483647\}					& I \textgreater~698000000\\ 
+	&                                &                                             &                                             & I \textless= 2147483647				& 					&  			   		\\	
+
+\hline
+\end{tabular}
+}
+\bigskip
+\label{table:failureDomains6}
+\end{table*}
+
+
+
+
+
+
+\begin{table*}[h]
+\caption{Table depicting results of ADFD and ADFD+}
+\centering
+{\renewcommand{\arraystretch}{1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+
+S\# & 	Project 			& Class						& Method 					& ADFD        					& ADFD+     													& Manual			\\ \hline
+
+1	&	drjava			& Assert						& assertEquals(i,j)			&  							& I != j\\ 
+2	&	junit			& Assert						& assertEquals(i,j)			&  							& I != j\\ 
+	&	megamek		& Board						& getTypeName(i)			&  							& I <= -910 I >= -908 I <= -809 I >= -807 I <= -708 I >= -706 I <= -607 I >= -605 I <= -506 I >= -504 I <= -405 I >= -403 I <= -304 I >= -302 I <= -203 I >= -201 I <= -102 I >= -100 I <= -1\\ 
+3	&	nekohtml		& HTMLEntities				& get(i)						&  							& I <= -910 I >= -908 I <= -809 I >= -807 I <= -708 I >= -706 I <= -607 I >= -605 I <= -506 I >= -504 I <= -405 I >= -403 I <= -304 I >= -302 I <= -203 I >= -201 I <= -102 I >= -100 I <= -1\\ 
+\hline
+\end{tabular}
+}
+\bigskip
+\label{table:failureDomains6}
+\end{table*}
+
+
+
+
+\begin{table*}[h]
+\caption{Table depicting results of ADFD and ADFD+}
+\centering
+{\renewcommand{\arraystretch}{1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+
+S\# & 	Project 			& Class						& Method 					& ADFD        & ADFD+     													& Manual			\\
+\hline
+1	&	aspectj			& AnnotationValue	  		& whatKindIsThis(i)			& I <= 63 I = {65, 69, 71, 72} I >= 75  I <= 82 I >= 84 I <= 89 I >= 92 I <= 98 I = 100 I >= 102 I <= 114 I >= 116		& I <= 63 I = {65, 69, 71, 72} I >= 75  I <= 82 I >= 84 I <= 89 I >= 92 I <= 98 I = 100 I >= 102 I <= 114 I >= 116\\ 
+
+2	&	htmlunit			& Token						& typeToName(i)				&  										& I <= -2 I = 73, 156,  I >= 162\\ 
+\hline
+\end{tabular}
+}
+\bigskip
+\label{table:failureDomains6}
+\end{table*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{table*}[h]
+\caption{Table depicting results of ADFD and ADFD+}
+\centering
+{\renewcommand{\arraystretch}{1}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
+
+S\# & 	Project 			& Class						& Method 					& ADFD        & ADFD+     													& Manual			\\
+\hline
+1	&	emma			& ClassLoaderResolver		& getCallerClass(i)			&  										& I <= -2 I >= 2\\ 
+2	&	poi				& Variant					& getVariantLength(i)			&  										& I >= 0 I <= 14 I >= 16 I <= 31 I >= 64 I <= 72 \\ 
+\hline
+\end{tabular}
+}
+\bigskip
+\label{table:failureDomains6}
+\end{table*}
 
 
 \section{Experimental results} \label{sec:result}
@@ -597,6 +872,38 @@ Thanks are also extended to Prof. Richard Paige for his valuable guidance, help 
 %
 %APPENDICES are optional
 %\balancecolumns
+
+
+
+
+
+
+
+
+
+\begin{comment}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \bigskip
 
 \newpage
@@ -616,6 +923,23 @@ Thanks are also extended to Prof. Richard Paige for his valuable guidance, help 
 
 \bigskip
 \noindent\textbf{Manuel Oriol} is a lecturer at the Department of Computer Science, the University of York, UK. He completed his PhD from University of Geneva and an MSc from ENSEEIHT in Toulouse, France. His research interests include software testing, software engineering, middleware, dynamic software updates, software architecture and real-time systems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \bigskip
 \bigskip
@@ -728,7 +1052,7 @@ Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 
 
 
-\begin{comment}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \scriptsize
