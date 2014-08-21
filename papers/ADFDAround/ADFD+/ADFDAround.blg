@@ -14,45 +14,45 @@ Database file #1: sigproc.bib
 Warning--empty journal in gilbert2008jfreechart
 
 Done.
-You've used 17 entries,
+You've used 11 entries,
             4039 wiz_defined-function locations,
-            931 strings with 10497 characters,
-and the built_in function-call counts, 13811 in all, are:
-= -- 1112
-> -- 306
-< -- 123
-+ -- 169
-- -- 49
-* -- 663
-:= -- 2032
-add.period$ -- 41
-call.type$ -- 17
-change.case$ -- 16
-chr.to.int$ -- 294
-cite$ -- 18
-duplicate$ -- 974
-empty$ -- 1146
-format.name$ -- 61
-if$ -- 3206
+            888 strings with 9126 characters,
+and the built_in function-call counts, 8063 in all, are:
+= -- 664
+> -- 164
+< -- 67
++ -- 89
+- -- 27
+* -- 385
+:= -- 1246
+add.period$ -- 25
+call.type$ -- 11
+change.case$ -- 10
+chr.to.int$ -- 150
+cite$ -- 12
+duplicate$ -- 581
+empty$ -- 656
+format.name$ -- 33
+if$ -- 1846
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 165
-newline$ -- 80
-num.names$ -- 17
-pop$ -- 386
+int.to.str$ -- 11
+missing$ -- 99
+newline$ -- 60
+num.names$ -- 11
+pop$ -- 225
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1068
+skip$ -- 628
 stack$ -- 0
-substring$ -- 712
-swap$ -- 808
-text.length$ -- 25
+substring$ -- 370
+swap$ -- 472
+text.length$ -- 17
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 17
+type$ -- 11
 warning$ -- 1
-while$ -- 69
-width$ -- 19
-write$ -- 192
+while$ -- 39
+width$ -- 13
+write$ -- 132
 (There was 1 warning)
