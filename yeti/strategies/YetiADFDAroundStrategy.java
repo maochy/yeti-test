@@ -406,21 +406,21 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 				+ " public static int range = "+ rangeToPlot + ";\n\n"
 
-//				+ " public static int xValue = " + argumentFirst  +";\n" 
-//				+ " public static int yValue = " + argumentSecond +";\n\n"
+				+ " public static int xValue = " + argumentFirst  +";\n" 
+				+ " public static int yValue = " + argumentSecond +";\n\n"
 				
 //				For boundary values of x = 0, y = 0
 //				+ " public static int xValue = " + 0  +";\n" 
 //				+ " public static int yValue = " + 0 +";\n\n"
 				
 //				For boundary values of x = Integer.Max_Int - 5000 and y = Integer.Max_Int - 5000
-				+ " public static int xValue = " + 0  +";\n" 
-				+ " public static int yValue = " + 0 +";\n\n"
+//				+ " public static int xValue = " + 0  +";\n" 
+//				+ " public static int yValue = " + 0 +";\n\n"
 
-//				+ " public static int starterX = xValue;\n" 
-//				+ " public static int stopperX = xValue;\n"
-//				+ " public static int starterY = yValue;\n"
-//				+ " public static int stopperY = yValue;\n\n"
+				+ " public static int starterX = xValue;\n" 
+				+ " public static int stopperX = xValue;\n"
+				+ " public static int starterY = yValue;\n"
+				+ " public static int stopperY = yValue;\n\n"
 				
 //				+ " public static int starterX = -2147483648;\n" 
 //				+ " public static int stopperX = 2147483647;\n"
@@ -441,10 +441,10 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 //				+ " public static int stopperY = 10000;\n\n"
 				
 //				This was done for ADFDBoundary10000 from back
-				+ " public static int starterX = -1000;\n" //10lac
-				+ " public static int stopperX = 1000;\n" //10+
-				+ " public static int starterY = 2147481647;\n"
-				+ " public static int stopperY = 2147483647;\n\n"
+//				+ " public static int starterX = -1000;\n" //10lac
+//				+ " public static int stopperX = 1000;\n" //10+
+//				+ " public static int starterY = 2147481647;\n"
+//				+ " public static int stopperY = 2147483647;\n\n"
 				
 				
 
@@ -460,8 +460,8 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "		xAxis = true;\n"
 				+ "		yAxis = false;\n"
 
-//				+ "		starterX = decrement(starterX); \n"
-//				+ "		stopperX = increment(stopperX); \n"
+				+ "		starterX = decrement(starterX); \n"
+				+ "		stopperX = increment(stopperX); \n"
 				+ "		int start1 = starterX;\n"
 				+ "		int stop1  = stopperX; \n"
 				+ "		checkFirstAndLastValue(start1 , yValue);\n"
@@ -474,8 +474,8 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 		if (oldyt.length == 2){
 			temp = temp + " xAxis = false;\n"
 					+ "		yAxis = true;"
-//					+ "		starterY = decrement(starterY); \n"
-//					+ "		stopperY = increment(stopperY); \n"
+					+ "		starterY = decrement(starterY); \n"
+					+ "		stopperY = increment(stopperY); \n"
 					+ "		int start2 = starterY;\n"
 					+ "		int stop2  = stopperY; \n" 
 					+ "		checkFirstAndLastValue(xValue , start2);\n"
@@ -620,7 +620,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			failY.add(i); \n"
 				+ "			failY.add(j - 1); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i,j-1);\n"
+				+ "    failureDomain(i,j-1);\n"
 				+ "			passY.add(i); \n"
 				+ "			passY.add(j); \n"
 				+ "			isCurrentlyFailing = false; \n"
@@ -629,7 +629,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "		}\n"
 				+ "		catch(Throwable t) { \n"
 				// added to see if daikon start working. Yes it worked.
-//				+ "    failureDomain(i,j);\n"
+				+ "    failureDomain(i,j);\n"
 				+ "			if (!isCurrentlyFailing) \n"
 				+ "			{\n"
 				+ "			if(xAxis) {\n"
@@ -647,7 +647,7 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 				+ "			failY.add(i); \n"
 				+ "			failY.add(j); \n"
 				// added now to check if i get better invariants.
-//				+ "    failureDomain(i,j);\n"
+				+ "    failureDomain(i,j);\n"
 				+ "			isCurrentlyFailing = true;\n"
 				+ "			}\n"
 				+ "			}\n"
@@ -657,31 +657,31 @@ public class YetiADFDAroundStrategy extends YetiRandomStrategy {
 
 				
 
-//				+ " public static int increment(int add){ \n"
-//				+ "	int localRange = range; \n"
-//				+ " int count = 1; \n"
-//				+ "	while (count <= localRange) { \n"
-//				+ "	add++; \n"
-//				+ "	count++; \n"
-//				+ "	if (add == 2147483647){ \n"
-//				+ "	break; \n"
-//				+ "	} \n"
-//				+ " } \n"
-//				+ "	return add;\n"
-//				+ "}\n"
+				+ " public static int increment(int add){ \n"
+				+ "	int localRange = range; \n"
+				+ " int count = 1; \n"
+				+ "	while (count <= localRange) { \n"
+				+ "	add++; \n"
+				+ "	count++; \n"
+				+ "	if (add == 2147483647){ \n"
+				+ "	break; \n"
+				+ "	} \n"
+				+ " } \n"
+				+ "	return add;\n"
+				+ "}\n"
 
-//				+ " public static int decrement(int sub){\n"
-//				+ "	int localRange = range; \n"
-//				+ "	int count = 1; \n"
-//				+ "	while (count <= localRange) { \n"
-//				+ "	sub--; \n"
-//				+ "	count++; \n"
-//				+ " if (sub == -2147483648){ \n"
-//				+ " break; \n"
-//				+ "	} \n"
-//				+ "	} \n"
-//				+ "	return sub; \n"
-//				+ "}"
+				+ " public static int decrement(int sub){\n"
+				+ "	int localRange = range; \n"
+				+ "	int count = 1; \n"
+				+ "	while (count <= localRange) { \n"
+				+ "	sub--; \n"
+				+ "	count++; \n"
+				+ " if (sub == -2147483648){ \n"
+				+ " break; \n"
+				+ "	} \n"
+				+ "	} \n"
+				+ "	return sub; \n"
+				+ "}"
 
 
 				+ "}\n";

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  22 AUG 2014 16:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  22 AUG 2014 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -300,7 +300,11 @@ Package color Info: Driver file: pdftex.def on input line 130.
 (/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2004/09/05 1.3 listings language file
 )
-(./ADFDAround.aux)
+(./ADFDAround.aux
+
+LaTeX Warning: Label `fig:ADFD+' multiply defined.
+
+)
 \openout1 = `ADFDAround.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
@@ -315,8 +319,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
 LaTeX Font Info:    ... okay on input line 48.
-
-(/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count121
 \scratchdimen=\dimen144
@@ -405,32 +408,90 @@ Underfull \hbox (badness 3872) in paragraph at lines 120--121
 
 
  <./point.png> <./block.png> <./strip.png>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 167.
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 270.
 
-[2]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 338.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `OT1/pcr/b/n' tried instead on input line 168.
 
- (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
+Overfull \hbox (66.00323pt too wide) in paragraph at lines 170--171
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.00262pt too wide) in paragraph at lines 173--174
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.00275pt too wide) in paragraph at lines 177--178
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (18.00275pt too wide) in paragraph at lines 181--182
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<adfdGraph.png, id=16, 796.9775pt x 582.175pt>
+File: adfdGraph.png Graphic file (type png)
+ <use adfdGraph.png>
+Package pdftex.def Info: adfdGraph.png used on input line 191.
+(pdftex.def)             Requested size: 241.84344pt x 199.16277pt.
+
+<adfdInvariants.png, id=17, 591.71063pt x 645.91313pt>
+File: adfdInvariants.png Graphic file (type png)
+
+<use adfdInvariants.png>
+Package pdftex.def Info: adfdInvariants.png used on input line 192.
+(pdftex.def)             Requested size: 241.84451pt x 199.16656pt.
+ <adfdPlusGraph.png, id=18, 890.82813pt x 684.05562pt>
+File: adfdPlusGraph.png Graphic file (type png)
+
+<use adfdPlusGraph.png>
+Package pdftex.def Info: adfdPlusGraph.png used on input line 200.
+(pdftex.def)             Requested size: 241.84532pt x 199.16432pt.
+
+<adfdPlusInvariants.png, id=19, 583.17876pt x 584.68437pt>
+File: adfdPlusInvariants.png Graphic file (type png)
+
+<use adfdPlusInvariants.png>
+Package pdftex.def Info: adfdPlusInvariants.png used on input line 201.
+(pdftex.def)             Requested size: 241.8456pt x 199.16475pt.
+
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 306.
+
+[2 <./adfdGraph.png> <./adfdInvariants.png>]
+Underfull \vbox (badness 1226) has occurred while \output is active []
+
+ [3 <./adfdPlusGraph.png> <./adfdPlusInvariants.png>]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 374.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 338.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 340.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 374.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 376.
 
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 376.
 
-Overfull \hbox (23.56395pt too wide) in paragraph at lines 333--424
+Overfull \hbox (23.56395pt too wide) in paragraph at lines 369--460
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 40.0324pt on input line 424.
+LaTeX Warning: Float too large for page by 40.0324pt on input line 460.
 
 (./ADFDAround.bbl)
 
@@ -444,30 +505,35 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[3] [4] [5] (./ADFDAround.aux)
+[4] [5] [6] (./ADFDAround.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 4906 strings out of 493315
- 72183 string characters out of 6137904
- 288369 words of memory out of 5000000
- 8266 multiletter control sequences out of 15000+600000
- 40779 words of font info for 77 fonts, out of 8000000 for 9000
+ 5035 strings out of 493315
+ 73882 string characters out of 6137904
+ 285369 words of memory out of 5000000
+ 8384 multiletter control sequences out of 15000+600000
+ 41809 words of font info for 81 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,40p,1347b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,40p,1347b,970s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
 live/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
-ve/2013/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/te
-xmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/
-fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on ADFDAround.pdf (5 pages, 96237 bytes).
+ve/2013/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2013/
+texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-di
+st/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/urw/times/utmbi8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on ADFDAround.pdf (6 pages, 380355 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
