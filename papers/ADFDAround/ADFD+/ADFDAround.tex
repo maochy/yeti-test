@@ -141,12 +141,42 @@ The rest of the paper is organized as follows: Section II presents an overview o
 
 %%%%%%%%%%%%%%%%%    ADFD and ADFD+   %%%%%%%%%%%%%%%%%%%
 
-\section{Automated Discovery of Failure-domain}
- 
+\section{Automated Techniques}
+The two automated techniques used in our experiments are ADFD and ADFD+. A short overview of both the techniques and the enhancements that have been made to both the techniques along with a motivating example are given below:
+
+
+ add the upgraded workflow with identification of the difference 
+
+
+\subsection{Overview of ADFD technique}
+Automated Discovery of Failure Domain is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD searches for failure domain between the specified lower and upper bound in uni-direction. It test and note only the ranges of pass and fail values and uses the scatter graph of the JFreeChart to plot them on the screen. For more details please see \cite{}.
+
+\subsection{Overview of ADFD+ technique}
+Automated Discovery of Failure Domain+ is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD+ searches for failure domain around the failure in specified range in multi-idirection. It test and note individual value as either pass or fail. The values are drawn using the vector graph of the JFreeChart. For more details please see \cite{}
+
+
+\subsection{Enhancement to ADFD and ADFD+ technique}
+
+Integration of Daikon
+Extension to support primitive types other than int type.
+Display of the test case causing an error in the sut.
+
+
+\subsection{Motivating Example to explain ADFD and ADFD+}
+
+add code of the program
+
+add picture of graph generated due to ADFD
+
+add picture of graph generated due to ADFD+
+
+Also show the invariants and the log
+
+you can also show the full interface of the program.
 
 
 
-\section{Automated Discovery of Failure-domain+}
+
 
 
 
@@ -275,13 +305,14 @@ Failure-domain can reside in the form of point, block or strip shape in the inpu
 
 
 \section{Experimental setup}
-We extracted main ``jar'' file of each of the 106 packages in Qualitas Corpus{} and tested all the classes individually using ADFD and ADFD+ strategies. The machine took approximately 100 hours to process the experiments. We found 57 faulty classes from 25 packages out of the total 4500 classes from 106 packages. Only the failing one and two dimensional methods with arguments (int, long, float, double and short) were taken in to consideration. This is because at the moment ADFD and ADFD+ are not capable of drawing/handling more than two dimensions. All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. The ADFD and ADFD+ executable files are available at \url{https://code.google.com/p/yeti-test/downloads/list/}. 
+We tested all the 4500 classes included in the main jar files of each of the 106 open-source packages contained in Qualitas Corpus~\cite{Tempero2010} using ADFD and ADFD+ technique. The Qualitas Corpus is selected for two reasons: (1) It is a database of open-source Java programs that spans across the whole set of Java applications. (2) It is specially built for empirical research which takes into account a large number of developmental models and programming styles. Each test on average took 40 seconds to complete. The YETI ran for 5 seconds while the remaining time is used for finding failure-domains, generating invariants and drawing graph. The machine took approximately 100 hours to process the experiments. Only the failing one and two dimensional methods with arguments (int, long, float, double and short) were taken in to consideration. This is because at the moment ADFD and ADFD+ are not capable of drawing/handling more than two dimensions. All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.7.0\_45]. The ADFD and ADFD+ executable files are available at \url{https://code.google.com/p/yeti-test/downloads/list/}. 
 
 
 
 \section{Results}
-Results of the experiments are given in Table 1, 2, 3 and 4. The 85 classes contain strip failure-domain as shown in Table 1.    The 4 classes contain point failure-domain as shown in Table 2. The 2 classes contain block failure domain as shown in Table 3. The 2 classes contain two types of failure-domains i.e. AnnotationValue with both point and block failure-domain and Token with point and Strip failure-domain as shown in Table 4.
+We found 57 faulty classes spread across 25 different packages. Results of the experiments are given in Table 1, 2, 3 and 4. All those failure-domains were declared as strip failure-domains in which 100 or more contagious failures were discovered. Accordingly, in 48 out of 57 classes strip failure-domain is detected as shown in Table~\ref{table:stripDomains}. The failure-domains in which 10 or more contagious failures were discovered. The failure-domains in which 5 or less contagious failures were discovered are termed as point failure-domains.There are 4 classes which contain point failure-domain as shown in Table~\ref{table:pointDomains}. The 2 classes contain block failure domain as shown in Table~\ref{table:blockDomains}. The 2 classes contain two types of failure-domains i.e. AnnotationValue with both point and block failure-domain and Token with point and Strip failure-domain as shown in Table~\ref{table:mixDomains}.
 
+The source code of all the 57 classes were analysed manually.
 
 %Randoop at \url{https://randoop.googlecode.com/files/randoop.1.3.3.zip}
 %The following two commands were used to run the ADFD+ and Randoop respectively. Both tools were executed with default settings, however, Randoop was provided with a seed value as well.% On running command (1) the ADFD+ starts with a GUI front-end given in Figure \ref{fig:adfdPlusExample}. On running command (2) Randoop starts in CLI mode as there is no GUI.
@@ -389,7 +420,7 @@ S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manua
 \end{tabular}
 }
 \bigskip
-\label{table:failureDomains6}
+\label{table:stripDomains}
 \end{table*}
 
 
@@ -431,7 +462,7 @@ S\# & Class			& Method 					& ADFD+        				& ADFD     								& Manual						
 \end{tabular}
 }
 \bigskip
-\label{table:failureDomains6}
+\label{table:pointDomains}
 \end{table*}
 
 
@@ -460,7 +491,7 @@ S\# & Class				& Method 					& ADFD+       											& ADFD     													& 
 \end{tabular}
 }
 \bigskip
-\label{table:failureDomains6}
+\label{table:blockDomains}
 \end{table*}
 
 
@@ -495,7 +526,7 @@ S\# & Class						& Method 					& ADFD     							       & ADFD+     												
 \end{tabular}
 }
 \bigskip
-\label{table:failureDomains6}
+\label{table:mixDomains}
 \end{table*}
 
 
@@ -559,6 +590,21 @@ S\# & Class						& Method 					& ADFD     							       & ADFD+     												
 
 
 \section{Threats to validity} \label{sec:threat}
+As in the case of any experimental study, the results are considered conclusive only if the programs tested represent general behaviour. We have tried to minimize this threat by choosing all the classes from all the projects included in the purpose built repository of Qualitas Corpus. 
+
+YETI with ADFD and ADFD+ strategies selected is executed only for 5 seconds to find a failure in the SUT. Since both the test strategies are based on random+ strategies which have high precedence for boundary values therefore most of the failures detected are boundary failures. Despite the fact that the failure-domains remained the same for a specific failure detected, It is likely possible that increasing the test duration may lead to the discovery of new failures exhibiting different behaviour.
+
+Another threat to validity may be related to hardware and software resources. For example the OutOfMemoryError occured at the value of 6980000 on the machine executing the test. On another machine the failure revealing value can increase or decrease depending on the hardware specifications and system load.
+
+
+
+
+
+
+
+
+
+
 %The study faces threats to external and internal validity. The external threats are common to most of the empirical evaluations. It includes the extent to which the programs under test the generation tools and the nature of seeded errors are representative of the true practice. The present findings will serve as foundation for future research studies needed to be undertaken with several types of classes, test generation tools and diversified nature of seeded errors in order to overcome the threats to external validity. The internal threats to validity includes error-seeded and limited number of classes used in the study. These may be avoided by taking real and higher number of classes in future studies.
 
 
