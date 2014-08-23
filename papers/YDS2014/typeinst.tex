@@ -66,10 +66,10 @@ showstringspaces=false}
 \mainmatter  % start of an individual contribution
 
 % first the title is needed
-\title{Automated Discovery of Failure Domain}
+\title{Finding the Effectiveness of ADFD and ADFD+}
 
 % a short form should be given in case it is too long for the running head
-\titlerunning{Automated Discovery of Failure Domain}
+\titlerunning{Finding the Effectiveness of ADFD and ADFD+}
 
 % the name(s) of the author(s) follow(s) next
 %
@@ -77,11 +77,11 @@ showstringspaces=false}
 % their surnames. This ensures that the names appear correctly in
 % the running heads and the author index.
 %
-\author{Mian Ahmad%
+\author{Mian Asbat Ahmad%
 %\thanks{Please note that the LNCS Editorial assumes that all authors have usedn the western naming convention, with given names preceding surnames. This determines the structure of the names in the running heads and the author index.}%
 \and Manuel Oriol}
 %
-\authorrunning{Automated Discovery of Failure Domain} %: Authors' Instructions}
+\authorrunning{Finding the Effectiveness of ADFD and ADFD+} %: Authors' Instructions}
 % (feature abused for this document to repeat the title also on left hand pages)
 
 % the affiliations are given next; don't give your e-mail address
@@ -107,9 +107,10 @@ Deramore Lane, YO10 5GH YORK, United Kingdom\\
 
 
 \begin{abstract}
-The achievement of up-to 50\% better results by Adaptive Random Testing verses Random Testing ensures that the pass and fail domains across the input domain are highly useful and need due consideration during selection of test inputs. The Automated Discovery of Failure Domain (ADFD) and its successor Automated Discovery of Failure Domain+ (ADFD+) techniques, automatically find failures and their domains in a specified range and provides their visualisation. They can precisely detect the failure-domain of the identified failure in an effective way. Performing exhaustive testing in a limited region around the failure is the key to the success of ADFD and ADFD+ techniques.
+The achievement of up-to 50\% better results by Adaptive Random Testing (ART) verses Random Testing (RT) ensures that the pass and fail domains in the input domain are useful and need due consideration during selection of test inputs. The Automated Discovery of Failure Domain (ADFD) and its successor Automated Discovery of Failure Domain+ (ADFD+) techniques, automatically find failures and their domains in a specified range and provides their visualisation.
+%They can precisely detect the failure-domain of the identified failure in an effective way. Performing exhaustive testing in a limited region around the failure is the key to the success of ADFD and ADFD+ techniques.
 
-We performed an extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. Furthermore the impact of nature, location, size, type and complexity of failure-domains on the testing techniques were also studied. The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners.
+We performed an extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques were studied. The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners.
 
 
 
@@ -124,8 +125,8 @@ We performed an extensive experimental analysis of Java projects contained in Qu
 
 
 
-
-The input-domain of a given SUT can be divided into two sub-domains. The pass-domain comprises of the values for which the software behaves correctly and the failure-domain comprises of the values for which the software behaves incorrectly. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes. They divided these into point, block and strip failure-domains as shown in Figure~\ref{fig:patterns2}. Adaptive Random Testing (ART) achieved up to 50\% better performance than random testing by taking into consideration the presence of failure-domains while selecting the test input~\cite{Chen2008}.
+\section{Introduction}
+The input-domain of a given SUT can be divided into two sub-domains. The pass-domain comprises of the values for which the software behaves correctly and the failure-domain comprises of the values for which the software behaves incorrectly. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes. They divided these into point, block and strip failure-domains as shown in Figure~\ref{fig:patterns}. Adaptive Random Testing achieved up to 50\% better performance than random testing by taking into consideration the presence of failure-domains while selecting the test input~\cite{Chen2008}.
 
 \smallskip
 \begin{figure} [H]
@@ -144,18 +145,18 @@ The input-domain of a given SUT can be divided into two sub-domains. The pass-do
 }
 \smallskip
 \caption{Failure domains across input domain~\cite{chan1996proportional}}
-\label{fig:patterns2}
+\label{fig:patterns}
 \end{figure} 
 
 %Adaptive Random Testing (ART) exploited the existence of the failure-domains and resultantly achieved up to 50\% better performance than random testing~\cite{Chen2008}. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure-domains. This insight motivated us to increase our understanding of failure-domains in production software.
 
-The cost of software testing alone constitute about half of the total cost of software development. Software testing is an essential but expensive process which becomes particularly tedious, laborious and error-prone when performed manually~\cite{Beizer1990}. Automated testing is an alternative approach to manual testing. The case study reveals that the 150 hours of automated testing found more faults in complex .NET code than a test engineer finds in one year by manual testing~\cite{pacheco2008finding}. 
+The cost of software testing constitute about half of the total cost of software development. Software testing is an expensive but essential process which is particularly time consuming, laborious and error-prone when performed manually. Alternatively, automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation~\cite{Beizer1990}. A case study conducted by Pacheco et al. reveals that the 150 hours of automated testing found more faults in complex .NET code than a test engineer finds in one year by manual testing~\cite{pacheco2008finding}.
 
-We have developed two fully automated techniques ADFD~\cite{ahmad2013adfd} and ADFD+~\cite{ahmad2014adfd2}, which effectively find failures and their domains in a specified range and provides visualisation of the pass and fail domain as either point, block or strip failure-domain. This is achieved in two steps: first, random testing is used to find the failure and secondly, exhaustive testing in a limited region around the detected failure is done to identify the failure domain. The ADFD strategy searches in one-dimensional and covers longer range than ADFD+ which is more effective in multi-dimensional and covers shorter range.
+We have developed two fully automated techniques ADFD~\cite{ahmad2013adfd} and ADFD+~\cite{ahmad2014adfd2}, which effectively find failures and their domains in a specified range and also provide visualisation of the pass and fail domains. The process is accomplished in two steps. In the first step, an upgraded random testing is used to find the failure. In the second step, exhaustive testing is performed in a limited region around the detected failure in order to identify the domains. The ADFD searches in one-dimension and covers longer range than ADFD+ which is more effective in multi-dimension and covers shorter range.
 
-Both ADFD and ADFD+ techniques are formed by the combination of three separate tools i.e. YETI, Daikon and JFreeChart. York Extensible Testing Infrastructure~\cite{Oriol2011yeti} is used to test the program automatically using random strategy (ADFD and ADFD+). Daikon~\cite{ernst2007daikon} observes the all the test execution and automatically generate invariants to show the failure-domains. Finally, JFreeChart~\cite{gilbert2008jfreechart} generates the graph from the test output to show the pass and failure-domains. 
+Three separate tools including YETI, Daikon and JFreeChart have been used in combination to develop ADFD and ADFD+ techniques. The York Extensible Testing Infrastructure~\cite{Oriol2011yeti} is used to test the program automatically with ADFD or ADFD+ strategy. The Daikon~\cite{ernst2007daikon} checks all test executions and automatically generates invariants to present failure-domains quantitatively. The JFreeChart~\cite{gilbert2008jfreechart} facilitates graphical representation of the pass and fail domains.
 
-Software testing can be performed either automatically or manually. Both the techniques have their own advantages and limitations. The main advantage of automated testing is execution of large number of tests in little time, whereas manual testing utilizes the tester experience to concentrate on error-prone part of the SUT and generate target oriented test cases~\cite{Leitner2007}. 
+%Software testing can be performed either automatically or manually. Both the techniques have their own advantages and limitations. The main advantage of automated testing is execution of large number of tests in little time, whereas manual testing utilizes the tester experience to concentrate on error-prone part of the SUT and generate target oriented test cases~\cite{Leitner2007}. 
 
 
 
@@ -175,74 +176,84 @@ The rest of the paper is organized as follows: Section II presents an overview o
 
 %%%%%%%%%%%%%%%%%    ADFD and ADFD+   %%%%%%%%%%%%%%%%%%%
 
-\section{Automated Techniques}
-The two automated techniques used in our experiments are ADFD and ADFD+. A short overview of both the techniques and the enhancements that have been made to both the techniques along with a motivating example are given below:
+%\section{Automated Techniques}
+%The two automated techniques used in our experiments are ADFD and ADFD+. A short overview of both the techniques and the enhancements that have been made to the techniques along with a motivating example are given below:
+ 
 
 
- add the upgraded workflow with identification of the difference 
+%\subsection{Overview of ADFD technique}
+%Automated Discovery of Failure Domain is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD searches for failure domain between the specified lower and upper bound in uni-direction. It test and note only the ranges of pass and fail values and uses the scatter graph of the JFreeChart to plot them on the screen. For more details please see \cite{ahmad2013adfd}.
+
+%\subsection{Overview of ADFD+ technique}
+%Automated Discovery of Failure Domain+ is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD+ searches for failure domain around the failure in specified range in multi-idirection. It test and note individual value as either pass or fail. The values are drawn using the vector graph of the JFreeChart. For more details please see \cite{ahmad2014adfd2}.
 
 
-\subsection{Overview of ADFD technique}
-Automated Discovery of Failure Domain is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD searches for failure domain between the specified lower and upper bound in uni-direction. It test and note only the ranges of pass and fail values and uses the scatter graph of the JFreeChart to plot them on the screen. For more details please see \cite{}.
+\section{Extension of ADFD and ADFD+ technique}
+The ADFD and ADFD+ techniques were extended before performing any experiments, to increase the code coverage, provide information about the identified failure and generate the invariants of the detected failure-domains. This is achieved in the following way.
+\begin{enumerate}
 
-\subsection{Overview of ADFD+ technique}
-Automated Discovery of Failure Domain+ is an automated technique for finding and drawing the failure domain of detected failure in the input domain. ADFD+ searches for failure domain around the failure in specified range in multi-idirection. It test and note individual value as either pass or fail. The values are drawn using the vector graph of the JFreeChart. For more details please see \cite{}
+\item To increase coverage, the ADFD and ADFD+ techniques were extended to support the testing of methods with byte, short, long, double and float arguments beside the int type arguments.
 
+\item To get details of the failure identified by YETI, the test case generated by YETI is added into the GUI of ADFD and ADFD+ techniques. The test case provides the name of the failing method, the value or values causing the failure and the complete stack trace of the failure. 
 
-\subsection{Enhancement to ADFD and ADFD+ technique}
+\item To auto-generate the invariants of a failure domain, we integrated the tool Daikon in ADFD and ADFD+. Daikon is an automated invariant detector that detect likely invariants in a program~\cite{ernst2007daikon}. The generated invariants are displayed in the GUI of ADFD and ADFD+ after the test is finished. 
 
-Integration of Daikon
-Extension to support primitive types other than int type.
-Display of the test case causing an error in the sut.
+\end{enumerate}
 
-
-\subsection{Motivating Example to explain ADFD and ADFD+}
+\section{Example to explain ADFD and ADFD+ techniques}
+To illustrate the difference between the working of ADFD and ADFD+ techniques, we take a simple Java program and test it with the two techniques. It has only one method which receives two integer data types as arguments. It is evident from the program code that an $ArithmeticException$ (divison by zero) failure is generated when the value of variable $x~is~one~of~\{4, 5, 6, 7, 8\}$ and the corresponding value of $y~is~one~of~\{2, 3, 4\}$. The values form a block failure-domain in the input domain. 
 
 \begin{lstlisting}
+/** 
+* A program with block failure-domain.
+* @author (Mian and Manuel)
+*/
 public class BlockErrorPlotTwoShort {
-
 	public static void blockErrorPlot (int x, int y){
 		int z;
-
-		if ((x >= 5) && (x <= 8) && (y==2))
+		if ((x >= 4) && (x <= 8) && (y == 2))
 			{ z = 50/0;}
-
-
 		if ((x >= 5) && (x <= 8) && (y == 3))
 			{ z = 50/0;}
-
-
-		if ((x >= 5) && (x <= 8) && (y == 4))
+		if ((x >= 6) && (x <= 8) && (y == 4))
 			{ z = 50/0;}
-
 	}
 }
 \end{lstlisting}
 
+The test output generated by ADFD+ technique is presented in Figure~\ref{fig:ADFD+}. The labelled graph correctly shows all the failing values in red whereas the passing values are shown in blue. The invariants are correct indicating that failing values. The test case shows the type of failure, the values causing the first failure and the stack trace of the failure.
 
-\begin{figure}[ht]
+The test output generated by ADFD technique is presented in Figure~\ref{fig:ADFD}. The labelled graph shows the correct failing values, however, it scans only in one-dimension therefore both the graph and the invariants failed to identify one of the failing values i.e. when the values of variable $x = 4$. 
+
+Having said this both have their advantages and disadvantage. The ADFD+ uses more resources and not feasible for large range. The ADFD uses very less resources as compared to ADFD and can easily cover long ranges around the failure. It may also be mentioned that both the techniques perform equally well for one-dimensional programs.
+
+
+\begin{figure}[H]
 \centering
-\includegraphics[width= 8.5cm,height=7cm]{adfdGraph.png}
-\includegraphics[width= 8.5cm,height=7cm]{adfdInvariants.png}
-\caption{Graph and Invariants generated by ADFD}
+\includegraphics[width= 12.5cm,height=6cm]{adfdPlusCombined.png}
+%\includegraphics[width= 8.5cm,height=7cm]{adfdPlus1.png}
+%\includegraphics[width= 8.5cm,height=7cm]{adfdPlus2.png}
+\caption{Graph, Invariants and Test case generated by ADFD+}
 \label{fig:ADFD+}
 \end{figure}
 
 
-\begin{figure}[ht]
+
+
+
+
+
+
+\begin{figure}[H]
 \centering
-\includegraphics[width= 8.5cm,height=7cm]{adfdPlusGraph.png}
-\includegraphics[width= 8.5cm,height=7cm]{adfdPlusInvariants.png}
-\caption{Graph and Invariants generated by ADFD+}
-\label{fig:ADFD+}
+\includegraphics[width= 12.5cm,height=6cm]{adfdCombined.png}
+%\includegraphics[width= 8.5cm,height=7cm]{adfdAround1.png}
+%\includegraphics[width= 8.5cm,height=7cm]{adfdAround2.png}
+\caption{Graph, Invariants and test case generated by ADFD}
+\label{fig:ADFD}
 \end{figure}
 
 
-add picture of graph generated due to ADFD+
-
-Also show the invariants and the log
-
-you can also show the full interface of the program.
 
 
 
@@ -250,7 +261,11 @@ you can also show the full interface of the program.
 
 
 
-\section{Automated Discovery of Failure Domain+}\label{sec:adfd+}
+
+
+
+
+%\section{Automated Discovery of Failure Domain+}\label{sec:adfd+}
 %It is an improved version of ADFD technique developed earlier by Ahmad and Oriol~\cite{ahmad2013adfd}. The technique automatically finds failures, failure domains and present the results in graphical form. In this technique, the test execution is initiated by random+ and continues till the first failure is found in the SUT. The technique then copies the values leading to the failure and the surrounding values to the dynamic list of interesting values. The resultant list provides relevant test data for the remaining test session and the generated test cases are effectively targeted towards finding new failures around the existing failures in the given SUT. \\*
 %The improvements made in ADFD+ over ADFD technique are stated as follows.
 %\begin{itemize}
@@ -337,29 +352,31 @@ you can also show the full interface of the program.
 
 
 \section{Evaluation} \label{sec:evaluation}
-To evaluate the presence, nature and type of failure-domains in production software we tested the main jar files of all the 106 projects in Qualitas Corpus~\cite{}. The source code of the programs containing failure-domains were also evaluated manually to verify the conformance of automated results. Only one and two dimensional numerical programs were selected for evaluation. Every program was tested independently by ADFD, ADFD+ and manual testing. All the programs in which failure-domains were identified are presented in Table~\ref{}.  Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
+To evaluate the presence, nature and type of failure-domains in production software we tested the main ``.jar'' files of all the 106 projects in Qualitas Corpus~\cite{}. The source code of the programs containing failure-domains were also evaluated manually to verify the conformance of automated results. Only one and two dimensional numerical programs were selected for evaluation. Every program was tested independently by ADFD, ADFD+ and manual testing. All the programs in which failure-domains were identified are presented in Table~\ref{}.  Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd, Oriol2012}.
 
 
 \subsection{Research questions} \label{sec:questions}
 The following research questions have been addressed in the study:
 \begin{enumerate}
 %
-\item \textit{Is ADFD and ADFD+ techniques capable of correctly identifying failure-domains in production software?} The experimental results claiming the correct identification of ADFD and ADFD+ were based on the purpose build error-seeded programs~\cite{}. To answer the question, we applied the two techniques to all the projects of Qualitas Corpus and examined the results.
-%
-\item \textit{What is the frequency of existence of point, block and strip failure-domains in production software?}
+\item \textit{If ADFD and ADFD+ techniques capable of correctly identifying and presenting the failure-domains in production software?} %The experimental results claiming the correct identification of ADFD and ADFD+ were based on the purpose build error-seeded programs~\cite{}. To answer the question, we applied the two techniques to all the projects of Qualitas Corpus and examined the results.
 
-\item \textit{What are the types of identified failure-domains?} There are strategies~\cite{}.  that exploit the presence of block and strip failure-domain to get better results. Therefore identifying the presence of underlying failure-domains in production software can help in high quality of software testing.  To answer the questions, we reviewed all the classes containing failure-domains manually, automatically and graphically.
+%\item \textit{If the graph and invariants generated, correctly represent the failure domains?} %Invariants generated by Daikon can identify the start and stop of the failure domain. To answer this question we compared the generated invariants with the source code and the failure-domain presented in graphical form.
 %
-\item \textit{If the nature of identified failure-domains simple or complex?} An interesting point is to know what failure is responsible for a failure-domain and how difficult it is to identify that failure by manual testing. To answer this question, we studied the test logs and test output of the automated testing and the source code of the program manually to identify the cause and complexity of failures of failure-domains. 
 %
-\item \textit{If the invariants generated by Daikon correctly represent the failure domains?} Invariants generated by Daikon can identify the start and stop of the failure domain. To answer this question we compared the generated invariants with the source code and the failure-domain presented in graphical form.
+\item \textit{What are the types and frequency of identified failure-domains?} %There are strategies~\cite{}.  that exploit the presence of block and strip failure-domain to get better results. Therefore identifying the presence of underlying failure-domains in production software can help in high quality of software testing.  To answer the questions, we reviewed all the classes containing failure-domains manually, automatically and graphically.
 %
-\item \textit{If the graph generated by ADFD correctly represent the pass and fail domains?} Both the ADFD and ADFD+ techniques generate graphs to represent failure-domains for simplicity. To answer the question we compared the generated graphs with the source code and the invariants generated by Daikon.
+\item \textit{If the nature of identified failure-domains is simple or complex and does it make any difference in its identification by manual and automated techniques?}% An interesting point is to know what failure is responsible for a failure-domain and how difficult it is to identify that failure by manual testing. To answer this question, we studied the test logs and test output of the automated testing and the source code of the program manually to identify the cause and complexity of failures of failure-domains. 
+
+%\item \textit{If the presence of a particular failure-domain can make it easy or hard to find using automated and manual techniques?} 
+%Failure-domain can reside in the form of point, block or strip shape in the input domain. To answer this question we analysed the source code of all the programs in which failure-domains were detected.
 %
-\item \textit{If obtained results consistent with previous theoretical and practical results presented?}  As per our knowledge, till now no specific study has been conducted to automatically identify the pass and fail domains however it has been claimed by some researchers~\cite{} that there exist more block and strip patterns then the point patterns. 
+
+%\item \textit{If the graph generated by ADFD correctly represent the pass and fail domains?} Both the ADFD and ADFD+ techniques generate graphs to represent failure-domains for simplicity. To answer the question we compared the generated graphs with the source code and the invariants generated by Daikon.
 %
-\item \textit{If the presence of a particular failure-domain can make it easy or hard to find using automated and manual techniques?} 
-Failure-domain can reside in the form of point, block or strip shape in the input domain. To answer this question we analysed the source code of all the programs in which failure-domains were detected.
+\item \textit{If obtained results consistent with previous theoretical and practical results presented?}  %As per our knowledge, till now no specific study has been conducted to automatically identify the pass and fail domains however it has been claimed by some researchers~\cite{} that there exist more block and strip patterns then the point patterns. 
+%
+
 \end{enumerate}
 
 
@@ -397,21 +414,21 @@ The source code of all the 57 classes were analysed manually.
 
 
 \begin{table*}[h]
-\caption{Table depicting classes with strip failure-domains found by ADFD and ADFD+ and Manual testing}
 \centering
-{\renewcommand{\arraystretch}{0.9}
-\begin{tabular}{llllllllll}
-%\hline
+\noindent\makebox[\textwidth]{
+{\renewcommand{\arraystretch}{0.5}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
 
 S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manual							\\
-%\hline
+\hline
 1	&LeadPipeInputStream 		& LeadPipeInputStream(i)		& I \textgreater= 2147483140				& I 										& I \textgreater~698000000			\\ 
 	&                                             &                                             & I \textless= 2147483647  					&										&									\\
 2	& BitSet				  		& BitSet.of(i,j)				& I \textless= -1, I \textgreater= -18,			& I one of \{-513, -1\}					& I \textless= -1						\\ 
 	&                                             &                                             & J \textless= 7, J \textgreater= -12  			& J one of \{-503, 507\}					& J != 0								\\
 3	& ToolPallete			  		& ToolPalette(i,j)				& I \textless= -1, I \textgreater= -18			& I one of \{ -515, -1\}					& I \textless= -1, 					\\ 
 	&                                             &                                             & 				  							& J one of \{-509, 501\}					& J any value			   				\\
-4	& IntMap			  		& idMap(i)					& I != 0, I \textless= -1, I \textgreater= -18	& I one of \{-1, -512\} 					& I \textless= -1						\\ 
+4	& IntMap			  		& idMap(i)					& I \textless= -1, I \textgreater= -18			& I one of \{-1, -512\} 					& I \textless= -1						\\ 
 5	& ExpressionFactory	  		& expressionOfType(i)		& I \textless= 13, I \textgreater= -7			& I one of \{-497, 513\}					& I \textgreater= -2147483648 		\\ 
 	&                                             & 				  			& 											&										& I \textless= 2147483647			\\
 6	& ArrayStack					& ArrayStack(i)				& I \textgreater= 2147483636				& I one of \{2147483142, 2147483647\}	& I \textgreater~698000000 			\\ 
@@ -424,7 +441,7 @@ S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manua
 	&                                             &                                             & I \textgreater= -2147483648				& 										&  			   						\\	
 10	& StaticBucketMap			& StaticBucketMap(i)			& I \textgreater= 2147483635				& I one of \{2147483140, 2147483647\} 	& I \textgreater~698000000			\\ 
 	&                                             &                                             & I \textless= 2147483647					& 										&  			   						\\	
-11	& PriorityBuffer				& PriorityBuffer(i)				& I != 0, I \textless= -1, I \textgreater= -14	& I one of \{-2147483647, -2147483142\}	& I \textless= 0						\\ 
+11	& PriorityBuffer				& PriorityBuffer(i)				& I \textless= -1, I \textgreater= -14			& I one of \{-2147483647, -2147483142\}	& I \textless= 0						\\ 
 12	& GenericPermuting			& permutation(i,j)			& I \textless= 0, I \textgreater= -18			& I one of \{ -498, 0\}					& I \textless= 0, I \textgreater= 2		\\ 
 	&                                             &                                             & 											& I one of \{2, 512\}						& J != 0			   					\\
 13	& LongArrayList				& LongArrayList(i)			& I \textless= -2147483640					& I one of \{-510, -1\}					& I \textless= -1						\\ 
@@ -468,7 +485,7 @@ S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manua
 	&                                             &                                             & I \textgreater= -15							& j one of {0}								& j = 0		   						\\
 34	& QMC						& halton(i,j)					& I \textless= -1, I \textgreater= -12			& I \textless= -1, I \textgreater= -508		& I \textless= -1						\\ 
 	&                                             &                                             & J \textless= -1, J \textgreater= -15			& j \textless= 499, j \textgreater= -511	& J any value			 		  		\\	
-35	& BenchmarkFramework		& BenchmarkFramework(i,j)	& I != 0, I \textless= -1, I \textgreater= -13	& I one of \{-501, -1\}					& I \textless= -1						\\ 
+35	& BenchmarkFramework		& BenchmarkFramework(i,j)	& I \textless= -1, I \textgreater= -13			& I one of \{-501, -1\}					& I \textless= -1						\\ 
 36	& IntArray					& IntArray(i)					& I \textless= -1, I \textgreater= -16			& I one of \{-2147483650, -2147483141\}	& I \textless= -1						\\ 
 37	& TDoubleStack				& TDoubleStack(i)			& I \textless= -1, I \textgreater= -13			& I one of \{-511, -1\}					& I \textless= -1						\\ 
 38	& TIntStack					& TIntStack(i)				& I \textless= -1, I \textgreater= -12			& I one of \{-2147483648, -2147483144\}	& I \textless= -1						\\ 
@@ -480,16 +497,18 @@ S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manua
 43	& SymbolHash				& SymbolHash(i)				& I \textless= -1,  I \textgreater= -16			& I one of \{-2147483648, -2147483592\}	& I \textless= -1						\\ 
 44	& SynchronizedSymbolTable	& SynchronizedSymbolTable(i) & I \textless= -2147483140					& I one of \{-2147483648, -2147483592\}	& I \textless= -1						\\ 
 	&                                             &                                             & I \textgreater= -2147483648				& 										&  			   						\\
-45	& XMLChar					& isSpace(i)					& I != 0, I \textless= -1, I \textgreater= -12	& I one of \{-510, -1\}					& I \textless= -1						\\
-46	& XMLGrammarPoolImpl		& XMLGrammarPoolImpl(i)		& I != 0, I \textless= -1, I \textgreater= -13	& I one of \{-2147483648, -2147483137\}	& I \textless= -1						\\ 
+45	& XMLChar					& isSpace(i)					& I \textless= -1, I \textgreater= -12			& I one of \{-510, -1\}					& I \textless= -1						\\
+46	& XMLGrammarPoolImpl		& XMLGrammarPoolImpl(i)		& I \textless= -1, I \textgreater= -13			& I one of \{-2147483648, -2147483137\}	& I \textless= -1						\\ 
 47	& XML11Char				& isXML11NCNameStart(i)		& I \textless= -1, I \textgreater= -16			& I one of \{ -512, -1\}					& I \textless= -1						\\ 
 48	& AttributeList				& AttributeList(i)				& I \textgreater= 2147483635				& I one of \{2147483590, 2147483647\}	& I \textgreater~698000000			\\ 
 	&                                             &                                             & I \textless= 2147483647					& 										&  			   						\\	
 
-%\hline
+\hline
 \end{tabular}
 }
+}
 \bigskip
+\caption{classes with strip failure-domains}
 \label{table:stripDomains}
 \end{table*}
 
@@ -499,17 +518,16 @@ S\#  & Class						& Method 					& ADFD+       								& ADFD     								& Manua
 
 
 \begin{table*}[h]
-\caption{Table depicting classes with point failure-domains found by ADFD and ADFD+ and Manual testing}
 \centering
+\noindent\makebox[\textwidth]{
 {\renewcommand{\arraystretch}{1}
-\begin{tabular}{llllllllll}
-%\hline
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
 
 S\# & Class			& Method 					& ADFD+        				& ADFD     								& Manual																						\\ 
-%\hline
+\hline
 
 1	& Assert			& assertEquals(i,j)		&  	I != J								& I != J															&  I != J																	\\ 
-	&                         &                                      & 										& 																&  			   															\\	
 2	& Board			& getTypeName(i)		&  	I \textless= -1						& I \textgreater= -504, I \textless= -405, I \textgreater= -403		&  I \textless= -910, I \textgreater= -908, I \textless= -809,    				  \\ 
 	&                         &                                      & 	I \textgreater= -18					& I \textless= -304, I \textgreater= -302, I \textless= -203			&  I \textgreater= -807, I \textless= -708, I \textgreater= -706, 				  \\	
 	&                         &                                      & 										& I \textgreater= -201, I \textless= -102, I \textgreater= -100		&  I \textless= -607, I \textgreater= -605, I \textless= -506,		 		 \\
@@ -528,10 +546,12 @@ S\# & Class			& Method 					& ADFD+        				& ADFD     								& Manual						
 4	& Assert			& assertEquals(i,j)		&	I \textless= 0, I \textgreater= 20		& I one of \{-2147483648, -2147483142\}	 						&  I != J																		  \\
 	&                         &                                      & 	J \textless= 18, j \textgreater= -2		& J one of \{-501, 509\}											&  			   																  \\
 
-%\hline
+\hline
 \end{tabular}
 }
+}
 \bigskip
+\caption{Classes with point failure-domains}
 \label{table:pointDomains}
 \end{table*}
 
@@ -539,14 +559,14 @@ S\# & Class			& Method 					& ADFD+        				& ADFD     								& Manual						
 
 
 \begin{table*}[h]
-\caption{Table depicting classes with block failure-domains found by ADFD and ADFD+ and Manual testing}
 \centering
+\noindent\makebox[\textwidth]{
 {\renewcommand{\arraystretch}{1}
-\begin{tabular}{llllllllll}
-%\hline
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
 
 S\# & Class				& Method 					& ADFD+       											& ADFD     													& Manual											\\
-%\hline
+\hline
 1	& AnnotationValue	& whatKindIsThis(i)			& I \textless= 85, I \textgreater= 92, I \textgreater= 98		& I <= 63, I = \{65, 69, 71, 72\}								& I \textless= 63, I = {65, 69, 71, 72}					\\
 	&                                &                                             &I = 100, I \textgreater= 102, I \textless= 104				& I \textgreater= 75, I <= 82, I \textgreater= 84				& I \textgreater= 75, I \textless= 82, I \textgreater= 84 \\	
 	&                               &                                             & 														& I \textless= 89, I \textgreater= 92, I <= 98					& I \textless= 89, I \textgreater= 92, I \textless= 98 	\\	
@@ -557,10 +577,12 @@ S\# & Class				& Method 					& ADFD+       											& ADFD     													& 
 2	& Token				& typeToName(i)				& I \textless= -2147483641								& I one of \{-510, -2\}										& I \textless= -2,   									\\ 
 	&                               &                                             & I \textgreater= -2147483648							& I = \{73, 156\}												& I = 73, 156, 						   				\\	
 	&                               &                                             & 														& I one of \{162, 500\}										& I \textgreater= 162							   		\\	
-%\hline
+\hline
 \end{tabular}
 }
+}
 \bigskip
+\caption{Classes with block failure-domains}
 \label{table:blockDomains}
 \end{table*}
 
@@ -577,14 +599,14 @@ S\# & Class				& Method 					& ADFD+       											& ADFD     													& 
 
 
 \begin{table*}[h]
-\caption{Table depicting classes with mix failure-domains found by ADFD and ADFD+ and Manual testing}
 \centering
+\noindent\makebox[\textwidth]{
 {\renewcommand{\arraystretch}{1}
-\begin{tabular}{llllllllll}
-%\hline
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|}
+\hline
 
 S\# & Class						& Method 					& ADFD     							       & ADFD+     													& Manual												\\
-%\hline
+\hline
 1	& ClassLoaderResolver		& getCallerClass(i)			&  I \textgreater= 2,						& I \textgreater= 500, I \textless= -2							& I \textless= -2, I \textgreater= 2									\\ 
 	&                                             &                                             &  I \textless= 18						& I \textgreater= 2, I \textless= 505							&  			   											\\	
 
@@ -592,15 +614,17 @@ S\# & Class						& Method 					& ADFD     							       & ADFD+     												
 2	& Variant					& getVariantLength(i)			& I \textgreater=0, I \textless= 12			& I \textgreater= 0, I \textless= 14, I \textgreater= 16 			& I \textgreater= 0, I \textless= 14, I \textgreater= 16		\\ 		
 	&                                             &                                             & 										& I \textless= 31, I \textgreater= 64, I \textless= 72			& I \textless= 31, I \textgreater= 64, I \textless= 72		\\
 	
-%\hline
+\hline
 \end{tabular}
 }
+}
 \bigskip
+\caption{Classes with mix failure-domains}
 \label{table:mixDomains}
 \end{table*}
 
 
-\section{Experimental results} \label{sec:result}
+%\section{Experimental results} \label{sec:result}
 %The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. 
 %Results are split in to two sections depicting efficiency and effectiveness of the two tools.
 %\subsection{Efficiency}
