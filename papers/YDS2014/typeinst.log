@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  23 AUG 2014 23:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  24 AUG 2014 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -382,38 +382,35 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 File: adfdPlusCombined.png Graphic file (type png)
 
 <use adfdPlusCombined.png>
-Package pdftex.def Info: adfdPlusCombined.png used on input line 233.
+Package pdftex.def Info: adfdPlusCombined.png used on input line 236.
 (pdftex.def)             Requested size: 355.66547pt x 170.72119pt.
 
-Overfull \hbox (8.54193pt too wide) in paragraph at lines 233--236
+Overfull \hbox (8.54193pt too wide) in paragraph at lines 236--239
  [][] 
  []
 
-
-Underfull \vbox (badness 1215) has occurred while \output is active []
-
- [3]
-<adfdCombined.png, id=27, 698.10812pt x 249.93375pt>
+[3] <adfdCombined.png, id=27, 698.10812pt x 249.93375pt>
 File: adfdCombined.png Graphic file (type png)
- <use adfdCombined.png>
-Package pdftex.def Info: adfdCombined.png used on input line 249.
+
+<use adfdCombined.png>
+Package pdftex.def Info: adfdCombined.png used on input line 252.
 (pdftex.def)             Requested size: 355.6576pt x 170.72305pt.
 
-Overfull \hbox (8.53406pt too wide) in paragraph at lines 249--252
+Overfull \hbox (8.53406pt too wide) in paragraph at lines 252--255
  [][] 
  []
 
+[4 <./adfdPlusCombined.png> <./adfdCombined.png>]
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 355.
+LaTeX Warning: Reference `' on page 5 undefined on input line 380.
 
 
-LaTeX Warning: Citation ` Oriol2012' on page 4 undefined on input line 355.
+LaTeX Warning: Citation ` Oriol2012' on page 5 undefined on input line 380.
 
-[4 <./adfdPlusCombined.png> <./adfdCombined.png>] [5]
+[5]
 LaTeX Font Info:    Try loading font information for OML+cmr on input line 509.
 
-
-(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <9> not available
@@ -450,11 +447,11 @@ LaTeX Warning: There were undefined references.
 Here is how much of TeX's memory you used:
  4063 strings out of 493315
  56616 string characters out of 6137904
- 193929 words of memory out of 5000000
+ 192929 words of memory out of 5000000
  7430 multiletter control sequences out of 15000+600000
  10781 words of font info for 42 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,9n,40p,1345b,988s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,9n,40p,1345b,990s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
@@ -467,7 +464,7 @@ exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texl
 ive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texli
 ve/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on typeinst.pdf (9 pages, 562710 bytes).
+Output written on typeinst.pdf (9 pages, 563475 bytes).
 PDF statistics:
  93 PDF objects out of 1000 (max. 8388607)
  59 compressed objects within 1 object stream
