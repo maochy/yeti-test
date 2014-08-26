@@ -35,7 +35,7 @@ The input domain comprises all possible inputs for a software, including all glo
 %  \vspace{-10pt}
 %\end{wrapfigure}
 Test case is an artifact which delineates the input, action and expected output corresponding to the input~\cite{ahmed2010software}. The test case is declared pass if the output obtained after executing the test case comply with the expected output meaning thereby that the functionality is working correctly. Alternatively the test case is declared fail if the output obtained after executing the test case does not comply with the expected output meaning thereby that the functionality is working incorrectly. %Interesting the test case which fails is considered successful from software testing point of view. 
-A test suite comprising a series of test cases is required commonly executed to establish the desired level of quality.
+A test suite comprising a series of test cases is commonly executed to establish the desired level of quality.
 
 
 \subsection{Test Oracle}
@@ -162,7 +162,8 @@ It is a testing technique in which new instructions are added to the code of the
 %  \label{fig:blackBox}
 %  \vspace{-18pt}
 % \end{wrapfigure}
-Black-box testing also known as functional testing is a technique that takes into consideration the function of the software. The testers may not know about the structure of the software. Test cases are derived from the software specifications and test passes if the result is according to expected output irrespective of the internal code followed during test execution~\cite{beizer1995black}. A simplified version of black-box testing is shown in Figure~\ref{fig:blackBox}.
+Black-box testing also known as functional testing is a technique that takes into consideration the function of the software. The testers may not know about the structure of the software. Test cases are derived from the software specifications and test passes if the result is according to expected output irrespective of the internal code followed during test execution~\cite{beizer1995black}. A simplified version of black-box testing is shown in Figure~\ref{fig:blackBox}. Some commonly used black-box testing techniques are as follows.
+
 \bigskip
 \begin{figure}[h]
 \begin{center}
@@ -174,7 +175,7 @@ Black-box testing also known as functional testing is a technique that takes int
 \end{figure}
 \bigskip
 
-Some commonly used black-box testing techniques are as follows.
+
 
 \subsubsection{Use-case Based Testing}
 % check if it is use case-based testing or use case testing.
@@ -188,7 +189,6 @@ It is a testing technique in which the input domain of a given SUT is divided in
 \subsubsection{Boundary Value Analysis}
 Boundary Value Analysis (BVA) is a testing technique based on the assumption that errors often reside along the boundaries of the input variables. Thus border values are taken as the test data set in BVA. According to IEEE standards~\cite{radatz1990ieee}, boundary values contain minimum, maximum, internal and external values specified for a system.
 The following code illustrates the ability of BVA to find a failure. 
-\bigskip
 \bigskip
 \begin{lstlisting}
  public void test (int arg) {
@@ -204,9 +204,9 @@ BVA and partition testing may be used in combination by choosing test values fro
 
 
 \subsubsection{Formal Specification Testing}
-It is a testing technique based on mathematical model which provides the opportunity to handle the specifications mathematically. This feature facilitates isolation, transformation, assembly and repackaging of the information available in the specifications for use as test cases~\cite{donat1997automating}.
+It is a testing technique based on mathematical model which provides the opportunity to handle the specifications mathematically. The mathematical notations express the formal specifications with precisely defined vocabulary, syntax and semantics. This feature facilitates isolation, transformation, assembly and repackaging of the information available in the specifications for use as test cases~\cite{donat1997automating}. The two approaches of formal specification testing are Algebraic and Model-based.
 
-The formal specification testing is more productive because of the creation of test cases independent from the code of the SUT~\cite{gaudel2010software}. The effort of generating test oracle is avoided by using available specification model for verifying the test results~\cite{bertolino2007software}.
+The formal specification testing is more productive because of the creation of test cases independent from the code of the SUT~\cite{gaudel2010software}. The effort of generating test oracle is avoided by using available specification model for verifying the test results~\cite{bertolino2007software}. The technique is highly effective in identifying errors, incompleteness and inconsistencies in software requirements~\cite{sommerville2013software}.
   
 
 %\section{Common Techniques of Software Testing}
@@ -259,7 +259,7 @@ Automated software testing refers to the technique in which an automated tool is
 A fully automated testing system is capable to test software without any user intervention. This is usually achieved by utilizing the contracts (preconditions, postconditions and invariants) embedded in the program code. Preconditions are used to filter out invalid inputs and postconditions are used as oracle~\cite{leitner2007reconciling}. Eiffel~\cite{ecma2005367} and Spec\#~{barnett2005spec} languages have built-in contracts whereas Java can use add-ons like JML~\cite{leavensjml}, iContract~\cite{kramer1998icontract} or OCL~\cite{richters1998formalizing} to enable it. 
 %Increase in functionality, higher productivity and lower cost of production without compromising quality are the desirable features in favour of automating the process of software testing. 
 Automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation. Automated testing is particularly effective when the nature of job is repetitive and it is performed on routine basis like unit testing and regression testing where the tests are re-executed after each modification~\cite{huang2003automated}. The use of automated software testing makes it possible to test large volumes of code, which may be impossible otherwise~\cite{ramamoorthy1975testing}.
-
+\newpage
 \section{Test Data Generation}
 Test data generation in software testing is the process of identifying and selecting input data which satisfies the given criterion. A test data generator is used to assist testers in the generation of data while the selection criterion defines the properties of test cases to be generated based on the test plan and perspective taken~\cite{korel1990automated}. Various artefacts of the SUT can be considered to generate test data like requirements, model, code etc. The choice of artefacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
@@ -357,7 +357,6 @@ Suppose we want the true branch of the if/else statement to be executed. An inpu
 \label{sec:randomgenerator_2}
 Random test data generator is the simplest approach for generation of test data. Its advantage is the adaptability to generate input data for any type of program. However, random test data generation is based solely on probability and cannot accomplish high coverage as its chances of finding semantically small faults are quite low~\cite{godefroid2005dart}. If a fault is only revealed by a small percentage of the program input it is said to be a semantically small fault. As an example of a semantically small fault, consider the following code:
 \bigskip
-\bigskip
 \begin{lstlisting}
 void test(int x, int y) {
     if (x==y){
@@ -386,17 +385,16 @@ Random testing is a dynamic black-box testing technique in which the software is
 %	\caption{Random Testing}
 %\end{figure}
 \bigskip
-\bigskip
 
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16.5cm, height=14cm ]{chapter2/randomTestingMechanism.png}}
+	\centerline{\includegraphics[width=16cm, height=12cm ]{chapter2/randomTestingMechanism.png}}
 	\bigskip
 	\caption{Working mechanism of random testing}
 	\label{fig:workingmechanism}
 \end{figure}
 \bigskip
-
+\bigskip
 Generating test data by random generator is economical and requires less intellectual and computational efforts~\cite{ciupa2008artoo}. Moreover, no human intervention is involved in data generation which ensures an unbiased testing process. However, generating test cases with out using any background information makes random testing susceptible to criticism. Random testing is criticized for generating many of the test cases that falls at the same state of software. It is also stated that random testing generates test inputs that violates requirements of the given SUT, which makes it less effective~\cite{pacheco2009directed, sen2007effective}. Myers mentioned random testing as one of the least effective testing technique~\cite{myers2011art}. However, Ciupa et al.~\cite{ciupa2007experimental} stated that Myers statement is not based on any experimental evidence. Later experiments performed by several researchers~\cite{ciupa2008finding, hamlet1994random,  leitner2007efficient} confirmed that random testing is as effective as any other testing technique. It is reported~\cite{duran1981report} that random testing can also discover subtle faults in a given SUT when subjected to large number of test cases. It is pointed out that the simplicity and cost effectiveness of random testing makes it more feasible to run large number of test cases as opposed to systematic testing techniques which require considerable time and resources for test case generation and execution. The empirical comparison shows that random testing and partition testing are equally effective~\cite{hamlet1990partition}. Ntafos~\cite{ntafos1998random} conducted a comparative study and concluded that random testing is more effective as compared to proportional partition testing. Miller et al.~\cite{miller1990empirical} generated random ASCII character streams and used the Unix utilities for abnormal terminating and non-terminating behaviours. Subsequently, the technique was extended to discover errors in software running on X Windows, Windows NT and Mac OS X~\cite{forrester2000empirical, miller2006empirical}. Other famous studies using random testing includes low-level system calls~\cite{kropp1998automated} and file systems used in missions at NASA~\cite{groce2007randomized}. The use of random testing at academic and commercial level reported in the literature cited above provides evidence to the fact that it is a well accepted and widely adapted technique for software testing.
 
 
@@ -416,15 +414,15 @@ The sequence of test data across the input domain for which the software behaves
 \begin{figure} [H]
 \centering
 \subfigure[Point domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter2/point.png}
+\includegraphics[width=3.4cm,height=3.4cm]{chapter2/point.png}
 \label{fig:point}
 }
 \subfigure[Block domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter2/block.png}
+\includegraphics[width=3.4cm,height=3.4cm]{chapter2/block.png}
 \label{fig:block}
 }
 \subfigure[Strip domain]{
-\includegraphics[width=3.6cm,height=3.6cm]{chapter2/strip.png}
+\includegraphics[width=3.4cm,height=3.4cm]{chapter2/strip.png}
 \label{fig:strip}
 }
 \bigskip
@@ -502,7 +500,7 @@ Restricted Random Testing (RRT) is another approach~\cite{chan2003normalized} to
 \bigskip
 \begin{figure}[h]
 	\centering
-	\includegraphics[width= 8cm, height = 6.5cm]{chapter2/RRT.pdf}
+	\includegraphics[width= 7.5cm, height = 5.5cm]{chapter2/RRT.pdf}
 	\bigskip
 	\caption{Input domain showing exclusion zones around selected test cases}
 \end{figure}
@@ -529,9 +527,7 @@ To achieve even spreading of test cases, QRT uses a class with a formula that fo
 %\subsection{Good Random Testing}
 
 \subsection{Feedback-directed Random Testing}
-Feedback-directed Random Testing (FDRT) is a technique that generates unit test suite at random for object-oriented programs~\cite{pacheco2007randoop}. As the name implies, FDRT uses the feedback received from the execution of first batch of randomly selected unit test suite to generate next batch of directed unit test suite. In this way redundant  and wrong unit tests are eliminated incrementally from the test suite with the help of filtration and application of contracts. For example a unit test that produces $IllegalArgumentException$ on execution is discarded because the arguments used in the unit test are not according to the required type. 
-
-Pacheco et al. performed a case study in which a team of testers applied FDRT to a critical component of .NET architecture. Results showed that the faults discovered by FDRT in 15 hours of manual processing and 150 hours of CPU processing are more than a test engineer finds in one year by manual and other automated techniques. As a result FDRT has been added to the tool list used at Microsoft for the betterment of software~\cite{pacheco2008finding}. 
+Feedback-directed Random Testing (FDRT) is a technique that generates unit test suite at random for object-oriented programs~\cite{pacheco2007randoop}. As the name implies, FDRT uses the feedback received from the execution of first batch of randomly selected unit test suite to generate next batch of directed unit test suite. In this way redundant  and wrong unit tests are eliminated incrementally from the test suite with the help of filtration and application of contracts. For example a unit test that produces $IllegalArgumentException$ on execution is discarded because the arguments used in the unit test are not according to the required type. Pacheco et al. performed a case study in which a team of testers applied FDRT to a critical component of .NET architecture. Results showed that the faults discovered by FDRT in 15 hours of manual processing and 150 hours of CPU processing are more than a test engineer finds in one year by manual and other automated techniques. As a result FDRT has been added to the tool list used at Microsoft for the betterment of software~\cite{pacheco2008finding}. 
 
 
 
@@ -573,7 +569,7 @@ The Artoo testing, implemented in AutoTest~\cite{ciupa2008artoo}, was evaluated 
 
 
 %\subsection{Daikon} % Generating high confidence contracts without user input using... page 6
-
+\newpage
 %\section{Automated Random Testing Tools}
 \section{Automatic Random Testing Tools}
 A number of automatic random testing tools used in research and reported in the literature are briefly described in the following section.
@@ -688,7 +684,7 @@ TestEra~\cite{marinov2001testera} is a novel framework for auto generation and e
 \bigskip
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=15cm, height=10.7cm]{chapter2/TestEra.png}}
+	\centerline{\includegraphics[width=15cm, height=10.9cm]{chapter2/TestEra.png}}
 	\bigskip
 	\caption{TestEra framework~\cite{marinov2001testera}}
 	\label{fig:testera}
@@ -729,7 +725,8 @@ York Extensible Testing Infrastructure (YETI) is an open-source automated random
 %\subsection{Test Report}
 
 \section{Summary}
-The software testing is summarized graphically with the help of two dimensional venn diagram as shown in Figure~\ref{fig:testDataGenerators_2}. The positive x-axis represent black-box while negative x-axis represent white-box testing. Similarly on positive y axis we have dynamic testing and on negative y axis we have static testing. If a testing technique is black-box and dynamic then it will fall in 0 to 90 degree and if it is black-box and static it will fall in 270 to 360 degree. On the other hand if the test is white-box and dynamic then it will fall in 90 to 180 degree and if the test is white-box and static then it will fall in 180 to 270 degrees.
+The software testing is summarized graphically with the help of two dimensional venn diagram as shown in Figure~\ref{fig:testDataGenerators_2}. 
+
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -739,6 +736,8 @@ The software testing is summarized graphically with the help of two dimensional 
 	\label{fig:testDataGenerators_2}
 \end{figure}
 \bigskip
+
+The positive x-axis represent black-box while negative x-axis represent white-box testing. Similarly on positive y axis we have dynamic testing and on negative y axis we have static testing. If a testing technique is black-box and dynamic then it will fall in 0 to 90 degree and if it is black-box and static it will fall in 270 to 360 degree. On the other hand if the test is white-box and dynamic then it will fall in 90 to 180 degree and if the test is white-box and static then it will fall in 180 to 270 degrees.
 
 The chapter gives an overview of software testing, including definition, common types, need, purpose and uses. It differentiates manual and automated software testing and describes various ways of software test data generation, being the crucial part of any testing system. The later part describes random testing and the various ways of improving the performance of random testing. Finally, information is presented on how the automated testing tools implement random technique for software testing. Main features of automatic testing tools used in random testing are summarized in Figure~\ref{fig:Tools}.
 
