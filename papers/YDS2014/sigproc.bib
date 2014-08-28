@@ -20,6 +20,25 @@
   organization={IEEE}
 }
 
+@article{claessen2011quickcheck,
+  title={Quick{C}heck: a lightweight tool for random testing of {H}askell programs},
+  author={Claessen, Koen and Hughes, John},
+  journal={Acm sigplan notices},
+  volume={46},
+  number={4},
+  pages={53--64},
+  year={2011},
+  publisher={ACM}
+}
+
+@inproceedings{forrester2000empirical,
+  title={An empirical study of the robustness of {W}indows {NT} applications using random testing},
+  author={Forrester, Justin E and Miller, Barton P},
+  booktitle={Proceedings of the 4th USENIX Windows System Symposium},
+  pages={59--68},
+  year={2000}
+}
+
 @inproceedings{oriol2012random,
   title={Random testing: Evaluation of a law describing the number of faults found},
   author={Oriol, Manuel},
@@ -93,6 +112,15 @@
   author={Pacheco, Carlos and Ernst, Michael D},
   year={2005},
   publisher={Springer}
+}
+
+@inproceedings{miller2006empirical,
+  title={An empirical study of the robustness of macos applications using random testing},
+  author={Miller, Barton P and Cooksey, Gregory and Moore, Fredrick},
+  booktitle={Proceedings of the 1st international workshop on Random testing},
+  pages={46--54},
+  year={2006},
+  organization={ACM}
 }
 
 @incollection{oriat2005jartege,
@@ -541,22 +569,13 @@
 	fault tolerance;}
 }
 
-@INPROCEEDINGS{Ciupa2008b,
-  author = {Ciupa, Ilinca and Pretschner, Alexander and Leitner, Andreas and
-	Oriol, Manuel and Meyer, Bertrand},
-  title = {On the Predictability of Random Tests for Object-Oriented Software},
-  booktitle = {Proceedings of the 2008 International Conference on Software Testing,
-	Verification, and Validation},
-  year = {2008},
-  pages = {72--81},
-  address = {Washington, DC, USA},
-  publisher = {IEEE Computer Society},
-  acmid = {1382069},
-  doi = {10.1109/ICST.2008.20},
-  isbn = {978-0-7695-3127-4},
-  keywords = {random testing, predictability, fault, failure},
-  numpages = {10},
-  url = {http://portal.acm.org/citation.cfm?id=1381305.1382069}
+@inproceedings{ciupa2008predictability,
+  title={On the predictability of random tests for object-oriented software},
+  author={Ciupa, Ilinca and Pretschner, Alexander and Leitner, Andreas and Oriol, Manuel and Meyer, Bertrand},
+  booktitle={Software Testing, Verification, and Validation, 2008 1st International Conference on},
+  pages={72--81},
+  year={2008},
+  organization={IEEE}
 }
 
 @ARTICLE{Ciupa2009,
@@ -616,15 +635,15 @@
   url = {http://doi.acm.org/10.1145/357766.351266}
 }
 
-@ARTICLE{Csallner2004,
-  author = {Christoph Csallner and Yannis Smaragdakis},
-  title = {JCrasher: An automatic robustness tester for {Java}},
-  journal = {Software---Practice \& Experience},
-  year = {2004},
-  volume = {34},
-  pages = {1025--1050},
-  number = {11},
-  month = sep
+@article{csallner2004jcrasher,
+  title={J{C}rasher: an automatic robustness tester for {J}ava},
+  author={Csallner, Christoph and Smaragdakis, Yannis},
+  journal={Software: Practice and Experience},
+  volume={34},
+  number={11},
+  pages={1025--1050},
+  year={2004},
+  publisher={Wiley Online Library}
 }
 
 @INCOLLECTION{Dijkstra1972,
@@ -1040,23 +1059,46 @@
 	testing;}
 }
 
-@INPROCEEDINGS{Oriol2010a,
-  author = {Oriol, Manuel and Tassis, Sotirios},
-  title = {Testing .NET Code with YETI},
-  booktitle = {Proceedings of the 2010 15th IEEE International Conference on Engineering
-	of Complex Computer Systems},
-  year = {2010},
-  series = {ICECCS '10},
-  pages = {264--265},
-  address = {Washington, DC, USA},
-  publisher = {IEEE Computer Society},
-  acmid = {1912578},
-  doi = {http://dx.doi.org/10.1109/ICECCS.2010.58},
-  isbn = {978-0-7695-4015-3},
-  keywords = {Automatic test software, Software engineering},
-  numpages = {2},
-  url = {http://dx.doi.org/10.1109/ICECCS.2010.58}
+@article{finelli1991nasa,
+  title={NASA software failure characterization experiments},
+  author={Finelli, George B},
+  journal={Reliability Engineering \& System Safety},
+  volume={32},
+  number={1},
+  pages={155--169},
+  year={1991},
+  publisher={Elsevier}
 }
+
+@inproceedings{bishop1993variation,
+  title={The Variation of Software Survival Time for Different Operational Input Profiles (or why you can wait a long time for a big bug to fail)},
+  author={Bishop, Peter G},
+  booktitle={Fault-Tolerant Computing, 1993. FTCS-23. Digest of Papers., The Twenty-Third International Symposium on},
+  pages={98--107},
+  year={1993},
+  organization={IEEE}
+}
+
+@inproceedings{oriol2010testing,
+  title={Testing {.NET} code with {YETI}},
+  author={Oriol, Manuel and Tassis, Sotirios},
+  booktitle={Engineering of Complex Computer Systems (ICECCS), 2010 15th IEEE International Conference on},
+  pages={264--265},
+  year={2010},
+  organization={IEEE}
+}
+
+@article{white1980domain,
+  title={A domain strategy for computer program testing},
+  author={White, Lee J and Cohen, Edward I},
+  journal={Software Engineering, IEEE Transactions on},
+  number={3},
+  pages={247--257},
+  year={1980},
+  publisher={IEEE}
+}
+
+
 
 @ARTICLE{Oriol2010,
   author = {Manuel Oriol and Faheem Ullah},
@@ -1076,12 +1118,11 @@
 
 
 
-@INPROCEEDINGS{Pacheco2005,
-  author = {Carlos Pacheco and Michael D. Ernst},
-  title = {Eclat: Automatic generation and classification of test inputs},
-  booktitle = {In 19th European Conference Object-Oriented Programming},
-  year = {2005},
-  pages = {504--527}
+@book{pacheco2005eclat,
+  title={Eclat: Automatic generation and classification of test inputs},
+  author={Pacheco, Carlos and Ernst, Michael D},
+  year={2005},
+  publisher={Springer}
 }
 
 @INPROCEEDINGS{Pacheco2007a,
