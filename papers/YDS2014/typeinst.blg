@@ -6,45 +6,45 @@ Database file #1: sigproc.bib
 Warning--entry type for "Oriol2011yeti" isn't style-file defined
 --line 117 of file sigproc.bib
 Warning--empty journal in gilbert2008jfreechart
-You've used 25 entries,
+You've used 26 entries,
             2087 wiz_defined-function locations,
-            647 strings with 7897 characters,
-and the built_in function-call counts, 8086 in all, are:
-= -- 869
-> -- 203
+            651 strings with 8007 characters,
+and the built_in function-call counts, 8279 in all, are:
+= -- 885
+> -- 214
 < -- 21
-+ -- 79
-- -- 54
-* -- 520
-:= -- 1012
-add.period$ -- 26
-call.type$ -- 25
++ -- 83
+- -- 57
+* -- 531
+:= -- 1040
+add.period$ -- 27
+call.type$ -- 26
 change.case$ -- 23
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 455
-empty$ -- 794
-format.name$ -- 54
-if$ -- 2024
+cite$ -- 27
+duplicate$ -- 466
+empty$ -- 816
+format.name$ -- 57
+if$ -- 2071
 int.to.chr$ -- 0
-int.to.str$ -- 25
-missing$ -- 26
-newline$ -- 128
-num.names$ -- 25
-pop$ -- 93
+int.to.str$ -- 26
+missing$ -- 28
+newline$ -- 133
+num.names$ -- 26
+pop$ -- 100
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 324
+skip$ -- 328
 stack$ -- 0
 substring$ -- 599
-swap$ -- 256
+swap$ -- 258
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 83
-width$ -- 27
-write$ -- 292
+while$ -- 84
+width$ -- 28
+write$ -- 302
 (There were 2 warnings)

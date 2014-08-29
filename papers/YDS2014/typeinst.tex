@@ -59,6 +59,9 @@ tabsize=4,
 showspaces=false,
 showstringspaces=false}
 
+\def\rot{\rotatebox}
+
+
 
 
 
@@ -111,10 +114,10 @@ Deramore Lane, YO10 5GH YORK, United Kingdom\\
 
 
 \begin{abstract}
-The achievement of up-to 50\% better results by Adaptive Random Testing (ART) verses Random Testing (RT) ensures that the pass and fail domains in the input domain are useful and need due consideration during selection of test inputs. The Automated Discovery of Failure Domain (ADFD) and its successor Automated Discovery of Failure Domain+ (ADFD+) techniques, automatically find failures and their domains in a specified range and provides their visualisation.
+The achievement of up-to 50\% better results by Adaptive Random Testing (ART) in comparison with Random Testing (RT) ensures that failure-domains within the input domain are useful and need due consideration in selection of test inputs. Our previously developed two automated techniques (ADFD and ADFD+), automatically find failure and its domain in a specific range and present it graphically.
 %They can precisely detect the failure-domain of the identified failure in an effective way. Performing exhaustive testing in a limited region around the failure is the key to the success of ADFD and ADFD+ techniques.
 
-We performed an extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques were studied. The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners.
+In this article, we performed an extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques were studied. The results provide insights into the effectiveness of automated techniques and a number of lessons for testing researchers and practitioners.
 
 %The abstract should summarize the contents of the paper and shouldcontain at least 70 and at most 150 words. It should be written using the \emph{abstract} environment.
 %\keywords{We would like to encourage you to list your keywords within the abstract section}
@@ -150,7 +153,7 @@ The input-domain of a given SUT can be divided into two sub-domains. The pass-do
 
 %Adaptive Random Testing (ART) exploited the existence of the failure-domains and resultantly achieved up to 50\% better performance than random testing~\cite{Chen2008}. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure-domains. This insight motivated us to increase our understanding of failure-domains in production software.
 
-The cost of software testing constitute about half of the total cost of software development. Software testing is an expensive but essential process which is particularly time consuming, laborious and error-prone when performed manually. Alternatively, automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation~\cite{Beizer1990}. A case study conducted by Pacheco et al. reveals that the 150 hours of automated testing found more faults in complex .NET code than a test engineer finds in one year by manual testing~\cite{pacheco2008finding}.
+The cost of software testing constitute about half of the total cost of software development~\cite{myers2011art}. Software testing is an expensive but essential process which is particularly time consuming, laborious and error-prone when performed manually. Alternatively, automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation~\cite{Beizer1990}. A case study conducted by Pacheco et al. reveals that the 150 hours of automated testing found more faults in complex .NET code than a test engineer finds in one year by manual testing~\cite{pacheco2008finding}.
 
 We have developed two fully automated techniques ADFD~\cite{ahmad2013adfd} and ADFD+~\cite{ahmad2014adfd2}, which effectively find failures and their domains in a specified range and also provide visualisation of the pass and fail domains. The process is accomplished in two steps. In the first step, an upgraded random testing is used to find the failure. In the second step, exhaustive testing is performed in a limited region around the detected failure in order to identify the domains. The ADFD searches in one-dimension and covers longer range than ADFD+ which is more effective in multi-dimension and covers shorter range.
 
@@ -161,7 +164,7 @@ Three separate tools including YETI, Daikon and JFreeChart have been used in com
 %The analysis of failures and failure-domains discovered in 57 classes from 25 open source Java projects of Qualitas Corpus through three different techniques---ADFD, ADFD+ and Manual testing---reveals that each is good at uncovering different type of failure-domains and each brings distinct contributions.
 
 
-The rest of the paper is organized as follows: Section II presents the enhancement of the techniques. Section III show the difference in working mechanism of the two techniques by an identical example. Section IV research questions. Section V explains evaluation of the techniques, experimental set up, experimental results and answer of research questions on the basis of the experimental results. Section VI presents the threats to validity. Section VII presents related work. Finally, Section VIII concludes the study.
+The rest of the paper is organized as follows: Section 2 presents enhancement of the techniques. Section 3 shows the difference in working mechanism of the two techniques by a motivating example. Section 4 highlights the key research questions. Section 5 explains the evaluation process, which contain experiments, results and answers of research questions in view of experiment results. Section 6 presents the threats to validity. Section 7 presents related work. Finally, Section 8 concludes the study.
 
 
  
@@ -273,18 +276,18 @@ Experimental evaluation of ADFD and ADFD+ techniques was carried out to determin
 
 
 \subsection{Experiments}
-In the present experiments we tested all 106 packages of Qualitas Corpus containing the total of 4500 classes. Qualitas Corpus was selected because it is a database of Java programs that spans across the whole set of Java applications, it is specially built for empirical research which takes into account a large number of developmental models and programming styles and it includes all packages that are open source with easy access to the source code.
+In the present experiments we tested all 106 packages of Qualitas Corpus containing the total of 4000 classes. Qualitas Corpus was selected because it is a database of Java programs that spans across the whole set of Java applications, it is specially built for empirical research which takes into account a large number of developmental models and programming styles. Its all included packages are open source with an easy access to the source code.
 
 Since YETI tests the byte code only therefore the main ``.jar'' file of each package was extracted to get the ``.class'' files. Each class was individually tested. The one and two dimensional methods with arguments (int, long, float, byte, double and short) of each class were selected for experimental testing. Non numerical arguments and more than two dimensional methods were ignored because the two proposed techniques support the one and two dimensional methods with numerical arguments. Each test took 40 seconds on the average to complete the execution. The initial 5 seconds were used by YETI to find the first failure while the remaining 35 seconds were jointly consumed by ADFD/ADFD+ technique, JFreeChart and Daikon to identify, draw graph and generate invariants of the failure-domains respectively. The machine took approximately 100 hours to perform the experiments. Due to the absence of contracts and assertions in the code under test, undeclared exceptions were taken as failures in accordance with the previous studies~\cite{ahmad2013adfd}\cite{oriol2012random}. The source code of the programs containing failure-domains were also evaluated manually to cross-examine the experimental results. All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.7.0\_45]. The ADFD and ADFD+ executable files are available at \url{https://code.google.com/p/yeti-test/downloads/list/}. 
 
 
 
 \subsection{Results}
-Among 106 packages we found 25 packages containing 57 classes with different types of failure-domains. Based on the type of failure-domains the results are presented in table \ref{table:stripDomains}, \ref{table:pointDomains}, \ref{table:blockDomains}, \ref{table:mixDomains}. The information available in the table includes the class showing failure domain, the method involved, the invariants generated by ADFD and ADFD+ (automatic techniques) and by manual analysis. 
+Among 106 packages we found 25 packages containing 57 classes with different types of failure-domains. Based on the type of failure-domains the results are presented in Table \ref{table:stripDomains}, \ref{table:pointDomains}, \ref{table:blockDomains}, \ref{table:mixDomains}. The information available in the table includes the class showing failure domain, the method involved, the invariants generated by ADFD and ADFD+ (automatic techniques) and by manual analysis. 
 
-Classification of failure-domains into strip, point, block and mix types is based on the degree of contiguity of failures detected in the input-domain. If failures detected as contiguous are 50 or more, the failure-domain is classified as strip. If failures detected as contiguous lie in the range of 6 to 49, the failure domain is classified as block. If failures detected as contiguous lie in the range of 1 to 5, the failure domain is classified as point. If more than one type of failure domains are detected in the input domain, the domain is classified as mix.
+Classification of failure-domains into strip, point, block and mix types is based on the degree of contiguity of failures detected in the input-domain as shown in Table~\ref{table:results}. If failures detected as contiguous are 50 or more, the failure-domain is classified as strip.  If failures detected as contiguous lie in the range of 1 to 5, the failure domain is classified as point. If failures detected as contiguous lie in the range of 6 to 49, the failure domain is classified as block. If more than one type of failure domains are detected in the input domain, the domain is classified as mix.
 
-The results obtained show that out of 57 classes 48 contain strip failure domain, 4 contain point failure domain, 2 contain block failure domain and 2 contain mix failure domain.
+The results obtained show that out of 57 classes 50 contain strip failure domain,2 contain point failure domain, 1 contain block failure domain and 4 contain mix failure domain. Mix failure-domain includes the combination of two or more failure domain types including point \& strip, point \& block and point, block \& strip. Invariants generated by manual and automated techniques, and analysis of the source code is also performed to differentiate the simplicity and complexity of the identified failure-domains as shown in Table~\ref{table:results}. Further explanation is available in the Nature of failure-domain subsection. The key research questions identified in the previous section are individually addressed in the following.
 
 
 %The failure-domains were declared as strip failure-domains if 50 or more contagious failures were detected. 
@@ -295,6 +298,39 @@ The results obtained show that out of 57 classes 48 contain strip failure domain
 %The failure-domains were declared as block failure-domains if more than 5 and less than 50 contagious failures were detected. Accordingly, in 2 out of 57 classes block failure-domains were detected as shown in Table~\ref{table:blockDomains}.
 
 %The remaining 2 classes contained two types of failure-domains i.e one containing both point and block failure-domain and the other containing point and Strip failure-domain as shown in Table~\ref{table:mixDomains}.
+
+
+\begin{table}[h]
+\scriptsize
+\caption{Results of the experiments} 
+
+\centering
+{\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{| l | l | l | l | l | l | l | l | l | l | l | } 
+\hline 
+Failure domain	& Contiguous failures	 & \rot{90}{No. of classes} 	& \rot{90}{No. of failure-domains}   & \rot{90}{Easy to Find FD by ADFD} & \rot{90}{Easy to Find FD by ADFD+}	& \rot{90}{Easy to Find FD by MT} & \rot{90}{Hard to find FD by ADFD} & \rot{90}{Hard to find FD by ADFD+} & \rot{90}{Hard to find FD by ADFD+}\\
+				 
+				 
+				 
+				 
+\hline 
+Strip 			 & 50 or more				&	50			&	50		& 50 	& 45 	& 48 	& 0 		& 5 		& 2 \\ 
+Point			 & between 1 and 5			&	2			&	2		& 2   	& 2		& 2		& 0 		& 0 		& 0 \\
+Block			 & between 6 and 49			&	1			&	1		& 0		& 1		& 1		& 1		& 0		& 0\\
+Mix				 &							&				&			& 		& 		& 		& 		&		&  \\
+				 & point and strip 			& 	3			&	3		& 3		& 0		& 2		& 0		& 3		& 1\\
+				 & point and block			&	0			&	0   		& 0		& 0		& 0		& 0		& 0		& 0\\
+				 & point, block \& strip		&     1 			&	1		& 1		& 0 		& 0 		& 0		& 1		& 1\\
+\hline
+Total			 & 							&    57  			&	57		& 57	& 48 	& 53	& 1		& 9		& 4\\
+\hline
+\end{tabular}
+}
+\label{table:results} % is used to refer this table in the text
+\end{table}
+
+
+
 
 
 
@@ -328,22 +364,21 @@ The generation of graph and invariants depends on range value, the greater the r
 
 
 \subsubsection{Type and Frequency of Failure-domains:}
-As evident from the results given in table 1 - 4, all the three techniques (ADFD, ADFD+ and Manual) detected the presence of strip, point and block types of failure domains in different frequencies. Out of 57 classes containing failure domains, 47 classes showed strip failure domain, 4 point failure domain, 2 point failure domain and 2 mix failure domains.  
+As evident from the results given in Table 3 - 6, all the three techniques (ADFD, ADFD+ and Manual) detected the presence of strip, point and block types of failure domains in different frequencies. Out of 57 classes containing failure domains, 50 classes showed strip failure domain, 2 point failure domain, 1 block failure domain and 4 mix failure domains.  
 
 The discovery of higher number of strip type of failure domains may be attributed to the fact that a limited time of 5 seconds were set in YETI testing tool for searching the first failure. The ADFD and ADFD+ strategies set in YETI for testing the classes are based on random+ strategy which gives high priority to boundary values, therefore the search by YETI was prioritised to the boundary area where there were greater chances of occurrence of failures constituting strip type of failure domain.
 
 %It may be noted that YETI, which is used to find the first failure, is executed only for five seconds which uses ADFD and ADFD+ testing strategies. Both the strategies are based on random+ strategy which gives high priority to boundary values. It may be possible that the high number of strip failure-domains are detected because most of the failures are found at the boundaries.
 
 \subsubsection{Nature of failure-domain:}
-The nature of failure domain as identified by automatic techniques (ADFD and ADFD+) and Manual technique was examined in terms of simplicity and complexity by comparing the invariants generated by the automatic techniques with the manual technique. The results indicated that x1 failure domains were simple in nature for automated techniques as against x2 for manual technique while y1 failure domains were simple in nature for automated technique as against y2 for manual technique. 
+The nature of failure domain as identified by automatic techniques (ADFD and ADFD+) and Manual technique was examined in terms of simplicity and complexity by comparing the invariants generated by the automatic techniques with the manual technique. The results were split into six categories on the basis of simplicity and complexity of failure-domains identified by each technique. The comparative results show that ADFD, ADFD+ and Manual testing can easily detect 56, 48 and 53 and difficultly detect 1, 9 and 4 failure domains respectively as shown in ~\ref{table:results}.
 
-The analysis of generated invariants indicated that the failure domains which are simple in nature are easily detectable by both automated and manual techniques irrespective of the type of failure domain (Strip, point, block). It was further indicated that the failure domains which are complex in nature are difficultly detectable by both automated and manual techniques. Both types are explained with the help of following examples.
-
-As an example we consider the results of ADFD, ADFD+ and Manual Analysis in Table 1 for class BitSet. The negativeArray failure is detected due to the input of negative value to the method bitSet.of(i). The invariants generated by ADFD are $\{i <= -1, i >= -18\}$, by ADFD+ are $\{i <= -1, i >= -512\}$ and by Manual Analysis are $\{i <= -1, i >= Integer.MIN\_INT\}$. These results indicate maximum degree of representation of failure-domain by Manual Analysis followed by ADFD and ADFD+ respectively.
+The analysis of generated invariants indicated that the failure domains which are simple in nature are easily detectable by both automated and manual techniques irrespective of the type of failure domain (Strip, point, block). It was further indicated that the failure domains which are complex in nature are difficultly detectable by both automated and manual techniques. %Both types are explained with the help of following examples.
+Consider the following class with a simple failure domain detectable by all three techniques, we consider the results of ADFD, ADFD+ and Manual Analysis in Table 1 for class BitSet. The negativeArray failure is detected due to the input of negative value to the method bitSet.of(i). The invariants generated by ADFD are $\{i <= -1, i >= -18\}$, by ADFD+ are $\{i <= -1, i >= -512\}$ and by Manual Analysis are $\{i <= -1, i >= Integer.MIN\_INT\}$. These results indicate maximum degree of representation of failure-domain by Manual Analysis followed by ADFD and ADFD+ respectively.
 
 %It was also found that ADFD+ is capable of identifying the failure domain to the large degree of accuracy in the case of point and block failure domain but not in the strip failure domain. While ADFD and Manual techniques are capable of correctly identifying all type of failure domain.
 
-As an example we consider the results of ADFD, ADFD+ and Manual Analysis in Table 1 for class ArrayStack. The OutOfMemoryError failure is detected due to the input of value to the method ArrayStack(i). The invariants generated by ADFD are $\{ i >= 2147483636, I <= 2147483647\}$, by ADFD+ are $\{ i >= 2147483142, i <= 2147483647\}$, by Manual analysis $\{ i >= 698000000 \}$.
+%As an example of complex failure, we consider the results of ADFD, ADFD+ and Manual Analysis in Table 1 for class ArrayStack. The OutOfMemoryError failure is detected due to the input of value to the method ArrayStack(i). The invariants generated by ADFD are $\{ i >= 2147483636, I <= 2147483647\}$, by ADFD+ are $\{ i >= 2147483142, i <= 2147483647\}$, by Manual analysis $\{ i >= 698000000 \}$.
 
 
 
@@ -423,9 +458,9 @@ All packages in Qualitas Corpus were tested by ADFD, ADFD+ and Manual techniques
 
 YETI using ADFD/ADFD+ strategy was executed only for 5 seconds to find the first failure in the given SUT. Since both ADFD and ADFD+ strategies are based on random+ strategy having high preference for boundary values therefore most of the failures detected are from the boundaries of input domain. It is quite possible that increasing the test duration of YETI may lead to the discovery of new failures with different failure domain.
 
-Another threat to validity may be related to hardware and software resources. For example the OutOfMemoryError occured at the value of 6980000 on the machine executing the test. On another machine the failure revealing value can increase or decrease depending on the hardware specifications and system load.
+Another threat to validity is related to the hardware and software resources. For example the OutOfMemoryError occured at the value of 6980000 on the machine executing the test. On another machine with different specification the failure revealing value can increase or decrease depending on the hardware and software.
 
-The errors due to strings etc were ignored because they cannot be drawn on the graph. Therefore the results may reflect less number of failures.
+It may be noted that all the non numerical and more than two dimensional methods were not considered in the experiments. The failures caught due to the error of non primitive type were also ignored because of the inability to present them. Therefore the results may reflect less number of failures.
 
 
 
@@ -518,70 +553,71 @@ Thanks are also extended to Prof. Richard Paige for his valuable guidance, help 
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 
-S\# 	& 	Project 		& Class					& Method 				& Dim   		& LOC 	& Failure-domain 							\\
+S\# 	& 	Project 		& Class					& Method 				& Dim   		& LOC 	& Failure 							\\
+	&				&						&						&			&		& domain							\\
 \hline
-1	&	ant			& LeadPipeInputStream	& LeadPipeInputStream(i) 	& one		& 159	& Strip     									\\ 
-2	&	antlr		& BitSet					& BitSet.of(i,j)			& two		& 324	& Strip 	 									\\
-3	&	artofillusion	& ToolPallete			  	& ToolPalette(i,j)			& two		& 293	& Strip										\\ 
-4	&	aspectj		& AnnotationValue	  	& whatKindIsThis(i)		& one		& 68	& Block										\\ 
-	&				& IntMap			  	& idMap(i)				& one		& 144	& Strip										\\ 
-5	&	cayenne		& ExpressionFactory	  	& expressionOfType(i)	& one		& 146	& Strip										\\ 
-6	&	collections	& ArrayStack				& ArrayStack(i)			& one		& 192	& Strip  										\\ 
-	&				& BinaryHeap			& BinaryHeap(i)			& one		& 63	& Strip  										\\
-	&				& BondedFifoBuffer		& BoundedFifoBuffer(i)	& one		& 55	& Strip  										\\
-	&				& FastArrayList			& FastArrayList(i)			& one		& 831	& Strip  										\\ 
-	&				& StaticBucketMap		& StaticBucketMap(i)		& one		& 103	& Strip  										\\ 
-	&				& PriorityBuffer			& PriorityBuffer(i)			& one		& 542	& Strip  										\\ 
-7	&	colt			& GenericPermuting		& permutation(i,j)		& two		& 64	& Strip  										\\ 
-	&				& LongArrayList			& LongArrayList(i)		& one		& 153	& Strip  										\\ 
-	&				& OpenIntDoubleHashMap& OpenIntDoubleHashMap(i) & one		& 47	& Strip  										\\ 
-8	&	drjava		& Assert					& assertEquals(i,j)		& two		& 780	& Point										\\ 
-	&				& ByteVector				& ByteVector(i)			& one		& 40	& Strip  										\\ 			
-9	&	emma		& ClassLoaderResolver	& getCallerClass(i)		& one		& 225	& Mix										\\ 
-	&				& ElementFactory			& newConstantCollection(i)& one		& 43	& Strip  										 \\ 
-	&				& IntIntMap				& IntIntMap(i)			& one		& 256	& Strip										\\ 
-	&				& ObjectIntMap			& ObjectIntMap(i)			& one		& 252	& Strip 										\\ 
-	&				& IntObjectMap			& IntObjectMap(i)			& one		& 214	& Strip 										\\ 
-10	&	heritrix		& ArchiveUtils			& padTo(i,j)				& two		& 772	& Strip  										\\ 
-	&				& BloomFilter32bit 		& BloomFilter32bit(i,j)		& two 		& 223	& Strip  										\\ 
-11	&	hsqld		& IntKeyLongValueHashMap& IntKeyLongValueHashMap(i)& one	& 52	& Strip 										\\ 
-	&				& ObjectCacheHashMap	& ObjectCacheHashMap(i)	& one		& 76	& Strip   										\\ 
-12	&	htmlunit		& ObjToIntMap			& ObjToIntMap(i)			& one		& 466	& Strip  										\\ 
-	&				& Token					& typeToName(i)			& one		& 462	& Block 										\\ 
-13	&	itext		& PRTokeniser			& isDelimiterWhitespace(i)	& one		& 593	& Strip  										\\ 
-	&				& PdfAction				& PdfAction(i)			& one		& 585	& Strip  										\\ 
-	&				& PdfLiteral				& PdfLiteral(i)			& one		& 101	& Strip 										\\ 
-14	&	jung		& PhysicalEnvironment	& PhysicalEnvironment(i)	& one		& 503	& Strip 										\\ 
-15	&	jedit		& IntegerArray			& IntegerArray(i)			& one		& 82	& Strip  										\\ 
-16	&	jgraph		& AttributeMap			& AttributeMap(i)			& one		& 105	& Strip										\\ 
-17	&	jruby		& ByteList				& ByteList(i)				& one		& 1321	& Strip 										\\ 
-	&				& WeakIdentityHashMap	& WeakIdentityHashMap(i)	& one		& 50	& Strip 										\\ 
-18	&	junit		& Assert					& assertEquals(i,j)		& two		& 780	& Point 										\\ 
-19	&	megamek	& AmmoType			& getMunitionsFor(i)		& one		& 268	& Strip	  									\\ 			
-	&				& Board					& getTypeName(i)		& one		& 1359	& Point 										\\ 
-20	&	nekohtml	& HTMLEntities			& get(i)					& one		& 63	& Point  										\\ 
-21	&	poi			& Variant				& getVariantLength(i)		& one		& 476	& Mix  										\\ 
-	&				& IntList					& IntList(i,j)				& two		& 643	& Strip 										\\ 	
-22	&	sunflow		& QMC					& halton(i,j)				& two		& 32	& Strip  										\\ 
-	&				& BenchmarkFramework	& BenchmarkFramework(i,j) & two		& 24	& Strip   										\\ 
-	&				& IntArray				& IntArray(i)				& one		& 47	& Strip 										\\ 	
-23	&	trove		& TDoubleStack			& TDoubleStack(i)		& one		& 120	& Strip  										\\ 
-	&				& TIntStack				& TIntStack(i)			& one		& 120	& Strip  										\\ 
-	&				& TLongArrayList			& TLongArrayList(i)		& one		& 927	& Strip  										\\ 
-24	&	weka		& AlgVector				& AlgVector(i)			& one		& 424	& Strip  										\\ 
-	&				& BinarySparseInstance	& BinarySparseInstance(i)& one		& 614	& Strip 										\\ 
-25	&	xerces		& SoftReferenceSymbolTable& SoftReferenceSymbolTable(i) & one	& 71	& Strip  										\\ 
-	&				& SymbolHash			& SymbolHash(i)			& one		& 82	& Strip 										\\ 
-	&				& SynchronizedSymbolTable& SynchronizedSymbolTable(i) & one	& 57	& Strip  										\\ 
-	&				& XMLChar				& isSpace(i)				& one		& 169	& Strip 										\\ 
-	&				& XMLGrammarPoolImpl	& XMLGrammarPoolImpl(i)	& one		& 96	& Strip   										\\ 
-	&				& XML11Char			& isXML11NCNameStart(i)	& one		& 184	& Strip  										\\ 
-	&				& AttributeList			& AttributeList(i)			& one		& 321	& Strip  										\\ 
+1	&	ant			& LeadPipeInputStream	& LeadPipeInputStream(i) 	& 1			& 159	& Strip     									\\ 
+2	&	antlr		& BitSet					& BitSet.of(i,j)			& 2			& 324	& Strip 	 									\\
+3	&	artofillusion	& ToolPallete			  	& ToolPalette(i,j)			& 2			& 293	& Strip										\\ 
+4	&	aspectj		& AnnotationValue	  	& whatKindIsThis(i)		& 1			& 68	& {\bf Mix}										\\ 
+	&				& IntMap			  	& idMap(i)				& 1			& 144	& Strip										\\ 
+5	&	cayenne		& ExpressionFactory	  	& expressionOfType(i)	& 1			& 146	& Strip										\\ 
+6	&	collections	& ArrayStack				& ArrayStack(i)			& 1			& 192	& Strip  										\\ 
+	&				& BinaryHeap			& BinaryHeap(i)			& 1			& 63	& Strip  										\\
+	&				& BondedFifoBuffer		& BoundedFifoBuffer(i)	& 1			& 55	& Strip  										\\
+	&				& FastArrayList			& FastArrayList(i)			& 1			& 831	& Strip  										\\ 
+	&				& StaticBucketMap		& StaticBucketMap(i)		& 1			& 103	& Strip  										\\ 
+	&				& PriorityBuffer			& PriorityBuffer(i)			& 1			& 542	& Strip  										\\ 
+7	&	colt			& GenericPermuting		& permutation(i,j)		& 2			& 64	& Strip  										\\ 
+	&				& LongArrayList			& LongArrayList(i)		& 1			& 153	& Strip  										\\ 
+	&				& OpenIntDoubleHashMap& OpenIntDoubleHashMap(i) & 1		& 47	& Strip  										\\ 
+8	&	drjava		& Assert					& assertEquals(i,j)		& 2			& 780	& {\bf Point}										\\ 
+	&				& ByteVector				& ByteVector(i)			& 1			& 40	& Strip  										\\ 			
+9	&	emma		& ClassLoaderResolver	& getCallerClass(i)		& 1			& 225	& Strip										\\ 
+	&				& ElementFactory			& newConstantCollection(i)& 1			& 43	& Strip  										 \\ 
+	&				& IntIntMap				& IntIntMap(i)			& 1			& 256	& Strip										\\ 
+	&				& ObjectIntMap			& ObjectIntMap(i)			& 1			& 252	& Strip 										\\ 
+	&				& IntObjectMap			& IntObjectMap(i)			& 1			& 214	& Strip 										\\ 
+10	&	heritrix		& ArchiveUtils			& padTo(i,j)				& 2			& 772	& Strip  										\\ 
+	&				& BloomFilter32bit 		& BloomFilter32bit(i,j)		& 2	 		& 223	& Strip  										\\ 
+11	&	hsqld		& IntKeyLongValueHashMap& IntKeyLongValueHashMap(i)& 1		& 52	& Strip 										\\ 
+	&				& ObjectCacheHashMap	& ObjectCacheHashMap(i)	& 1			& 76	& Strip   										\\ 
+12	&	htmlunit		& ObjToIntMap			& ObjToIntMap(i)			& 1			& 466	& Strip  										\\ 
+	&				& Token					& typeToName(i)			& 1			& 462	& {\bf Mix} 										\\ 
+13	&	itext		& PRTokeniser			& isDelimiterWhitespace(i)	& 1			& 593	& Strip  										\\ 
+	&				& PdfAction				& PdfAction(i)			& 1			& 585	& Strip  										\\ 
+	&				& PdfLiteral				& PdfLiteral(i)			& 1			& 101	& Strip 										\\ 
+14	&	jung		& PhysicalEnvironment	& PhysicalEnvironment(i)	& 1			& 503	& Strip 										\\ 
+15	&	jedit		& IntegerArray			& IntegerArray(i)			& 1			& 82	& Strip  										\\ 
+16	&	jgraph		& AttributeMap			& AttributeMap(i)			& 1			& 105	& Strip										\\ 
+17	&	jruby		& ByteList				& ByteList(i)				& 1			& 1321	& Strip 										\\ 
+	&				& WeakIdentityHashMap	& WeakIdentityHashMap(i)	& 1			& 50	& Strip 										\\ 
+18	&	junit		& Assert					& assertEquals(i,j)		& 2			& 780	& {\bf Point} 										\\ 
+19	&	megamek	& AmmoType			& getMunitionsFor(i)		& 1			& 268	& Strip	  									\\ 			
+	&				& Board					& getTypeName(i, j)		& 1			& 1359	& {\bf Mix} 										\\ 
+20	&	nekohtml	& HTMLEntities			& get(i)					& 1			& 63	& Strip  										\\ 
+21	&	poi			& Variant				& getVariantLength(i)		& 1			& 476	& {\bf Mix}  										\\ 
+	&				& IntList					& IntList(i,j)				& 2			& 643	& {\bf Block} 										\\ 	
+22	&	sunflow		& QMC					& halton(i,j)				& 2			& 32	& Strip  										\\ 
+	&				& BenchmarkFramework	& BenchmarkFramework(i,j) & 2		& 24	& Strip   										\\ 
+	&				& IntArray				& IntArray(i)				& 1			& 47	& Strip 										\\ 	
+23	&	trove		& TDoubleStack			& TDoubleStack(i)		& 1			& 120	& Strip  										\\ 
+	&				& TIntStack				& TIntStack(i)			& 1			& 120	& Strip  										\\ 
+	&				& TLongArrayList			& TLongArrayList(i)		& 1			& 927	& Strip  										\\ 
+24	&	weka		& AlgVector				& AlgVector(i)			& 1			& 424	& Strip  										\\ 
+	&				& BinarySparseInstance	& BinarySparseInstance(i)  & 1			& 614	& Strip 										\\ 
+25	&	xerces		& SoftReferenceSymbolTable& SoftReferenceSymbolTable(i) & 1	& 71	& Strip  										\\ 
+	&				& SymbolHash			& SymbolHash(i)			& 1			& 82	& Strip 										\\ 
+	&				& SynchronizedSymbolTable& SynchronizedSymbolTable(i) & 1	& 57	& Strip  										\\ 
+	&				& XMLChar				& isSpace(i)				& 1			& 169	& Strip 										\\ 
+	&				& XMLGrammarPoolImpl	& XMLGrammarPoolImpl(i)	& 1			& 96	& Strip   										\\ 
+	&				& XML11Char			& isXML11NCNameStart(i)	& 1			& 184	& Strip  										\\ 
+	&				& AttributeList			& AttributeList(i)			& 1			& 321	& Strip  										\\ 
 \hline
 \end{tabular}
 }
 \bigskip
-\label{table:failureDomains6}
+\label{table:packages}
 \end{table}
 
 
@@ -589,7 +625,7 @@ S\# 	& 	Project 		& Class					& Method 				& Dim   		& LOC 	& Failure-domain 			
 \begin{table*}[h]
 \centering
 \noindent\makebox[\textwidth]{
-{\renewcommand{\arraystretch}{0.1}
+{\renewcommand{\arraystretch}{0}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 
@@ -598,7 +634,7 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 1	&LeadPipeInputStream 		& I \textgreater= 2147483140				& I \textgreater= 2147483143			& I \textgreater~698000000					\\ 
 	&                                             & I \textless= 2147483647  					& I \textless= 2147483647 				& I \textless= 2147483647					\\
 2	& BitSet				  		& I \textless= -1, I \textgreater= -18,			& I \textless= -1, I \textgreater= -513		& I \textless= -1, I \textgreater= -2147483648	\\ 
-	&                                             & J \textless= 7, J \textgreater= -12  			& J \textgreater= -503, J \textless= 507	& J != 0										\\ % When J != 0.
+	&                                             & J \textless= 7, J \textgreater= -12  			& J \textgreater= -503, J \textless= 507	& J any value									\\ % When J != 0.	
 3	& ToolPallete			  		& I \textless= -1, I \textgreater= -18			& I \textless= -1, I \textgreater= -515		& I \textless= -1, I \textgreater= -2147483648	\\ 
 	&                                             & J \textless= 3, J \textgreater= -15			& J \textgreater= -509, J \textless= 501	& J any value			   						\\
 4	& IntMap			  		& I \textless= -1, I \textgreater= -18			& I \textless= -1, I \textgreater= -512		& I \textless= -1, I \textgreater= -2147483648	\\
@@ -614,8 +650,8 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 	&                                             & I \textgreater= -2147483648				& I \textgreater= -2147483139			& I \textgreater= -2147483648				\\	
 10	& StaticBucketMap			& I \textgreater= 2147483635				& I \textgreater= 2147483140			& I \textgreater~698000000					\\ 
 	&                                             & I \textless= 2147483647					& I \textless= 2147483647				& I \textless= 2147483647			   		\\	
-11	& PriorityBuffer				& I \textless= -1, I \textgreater= -14			& I \textless= -2147483647 				& I \textless= 0								\\
-	&                                             & 											& I \textgreater= -2147483142			& I \textgreater= -2147483648			   	\\	 
+11	& PriorityBuffer				& I \textless= -1, I \textgreater= -14			& I \textless=  -2147483142				& I \textless= 0								\\
+	&                                             & 											& I \textgreater= -2147483647			& I \textgreater= -2147483648			   	\\	 
 12	& GenericPermuting			& I \textless= 0, I \textgreater= -18			& I \textgreater= -498, I \textless= 0		& I \textless= 0, I \textgreater= -2147483648	\\ 	% point
 	&                                             & 											& I \textgreater= 2, I \textless= 512		& I \textgreater= 2, I \textless= 2147483647	\\
 13	& LongArrayList				& I \textless= -2147483640					& I \textless= -1, I \textgreater= -510		& I \textless= -1								\\ 
@@ -631,11 +667,11 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 	&                                             & I \textless= 2147483647					& I \textless= 2147483647				& I \textless= 2147483647					\\	
 19	& IntObjectMap				& I \textless= -1, I \textgreater= -17			& I \textless= -1, I \textgreater= -518		& I \textless= -1, I \textgreater= -2147483648\\ 
 20	& ArchiveUtils				& I \textgreater= 2147483641				& I \textgreater= -497					& I any value									\\ 
-	&							&  I \textless= 2147483647					& I \textless= 513						& 											\\ 
+	&							& I \textless= 2147483647					& I \textless= 513						& 											\\ 
 	&                                             & J \textgreater= 2147483639				& J \textgreater= 2147483591			& J \textgreater~698000000 	   				\\
-	&                                             &  J \textless= 2147483647					&  J \textless= 2147483647				&  	   										\\
-21	& BloomFilter32bit 			& I \textless= -1								& I \textless= -1, I \textgreater= -515		& I \textless -1 								\\ 
-	&                                             & I \textgreater= -18							& J may be any value						& J \textless -1 			   					\\	
+	&                                             & J \textless= 2147483647					&  J \textless= 2147483647				&  	   										\\
+21	& BloomFilter32bit 			& I \textless= -1, I \textgreater= -18			& I \textless= -1, I \textgreater= -515		& I \textless -1 								\\ 
+	&                                             & J may be any value							& J may be any value						& J \textless -1 			   					\\	
 22	& IntKeyLongValueHashMap	& I \textgreater= 2147483635				& I \textgreater= 2147483590			& I \textgreater~698000000					\\ 
 	&                                             & I \textless= 2147483647					& I \textless= 2147483647				& I \textless= 2147483647					\\	
 23	& ObjectCacheHashMap		& I \textless= -2147483641					& I \textgreater= -512, I \textless= 0		& I \textless= 0								\\ 
@@ -658,32 +694,38 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 	&                                             & I \textless= 2147483647					& I \textless= 2147483647				& I \textless= 2147483647					\\
 33	& AmmoType				& I \textless= -1								& I \textless= -1, I \textgreater= -514		& I \textless= -1, I \textgreater= -2147483648	\\ 			
 	&                                             & I \textgreater= -17							& I \textgreater= 93, I \textless= 496		& I \textgreater= 93, 	I \textless= 2147483647	\\
-34	& IntList						& I \textless= -1, I \textgreater= -15			& I \textless= -1, I \textgreater= -509		& I \textless= -1, I \textgreater= -2147483648	\\ 		
-	&                                             & J = 0										& J =0									& J = 0		   								\\
-35	& QMC						& I \textless= -1, I \textgreater= -12			& I \textless= -1, I \textgreater= -508		& I \textless= -1, I \textgreater= -2147483648	\\ 
+34	& QMC						& I \textless= -1, I \textgreater= -12			& I \textless= -1, I \textgreater= -508		& I \textless= -1, I \textgreater= -2147483648	\\ 
 	&                                             & J \textless= -1, J \textgreater= -15			& J \textless= 499, J \textgreater= -511	& J any value			 		  				\\	
-36	& BenchmarkFramework		& I \textless= -1, I \textgreater= -13			& I \textless= -1, I \textgreater= -508		& I \textless= -1, I \textgreater= -2147483648	\\ 
-37	& IntArray					& I \textless= -1, I \textgreater= -16			& I \textless= -2147483650				& I \textless= -1								\\ 
+35	& BenchmarkFramework		& I \textless= -1, I \textgreater= -13			& I \textless= -1, I \textgreater= -508		& I \textless= -1, I \textgreater= -2147483648	\\ 
+36	& IntArray					& I \textless= -1, I \textgreater= -16			& I \textless= -2147483650				& I \textless= -1								\\ 
 	&							&											& I \textgreater= -2147483141			&  I \textgreater= -2147483648				\\
-38	& TDoubleStack				& I \textless= -1, I \textgreater= -13			& I \textless= -1, I \textgreater= -511		& I \textless= -1, I \textgreater= -2147483648	\\ 
-39	& TIntStack					& I \textless= -1, I \textgreater= -12			& I \textless= -2147483648		 		& I \textless= -1 							\\ 
+37	& TDoubleStack				& I \textless= -1, I \textgreater= -13			& I \textless= -1, I \textgreater= -511		& I \textless= -1, I \textgreater= -2147483648	\\ 
+38	& TIntStack					& I \textless= -1, I \textgreater= -12			& I \textless= -2147483648		 		& I \textless= -1 							\\ 
 	&							&											& I \textgreater= -2147483144			& I \textgreater= -2147483648				\\
-40	& TLongArrayList				& I \textless= -1, I \textgreater= -16			& I \textless= -2147483648 				& I \textless= -1, 							\\ 
+39	& TLongArrayList				& I \textless= -1, I \textgreater= -16			& I \textless= -2147483648 				& I \textless= -1, 							\\ 
 	&							&											& I \textgreater= -2147483141			& I \textgreater= -2147483648				\\
-41	& AlgVector					& I \textless= -1, I \textgreater= -15			& I \textless= -1, I \textgreater= -511		& I \textless= -1, I \textgreater= -2147483648	\\ 
-42	& BinarySparseInstance		& I \textless= -1, I \textgreater= -15			& I \textless= -1, I \textgreater= -506		& I \textless= -1, I \textgreater= -2147483648	\\ 
-43	& SoftReferenceSymbolTable	& I \textgreater= 2147483635				& I \textgreater= 2147483140			& I \textgreater~698000000					\\ 
-	&                                             & I \textless= 2147483647					& I \textless= 2147483647				&  I \textless= 2147483647					\\	
-44	& SymbolHash				& I \textless= -1,  I \textgreater= -16			& I \textless= -2147483648			 	& I \textless= -1, 							\\ 
-	&							&											& I \textgreater= -2147483592			& I \textgreater= -2147483648				\\
-45	& SynchronizedSymbolTable	& I \textless= -2147483140					& I \textless= -2147483648,				& I \textless= -1, I \textgreater= -2147483648	\\ 
-	&                                             & I \textgreater= -2147483648				&  I \textgreater= -2147483592			&  			   								\\
+40	& AlgVector					& I \textless= -1, I \textgreater= -15			& I \textless= -1, I \textgreater= -511		& I \textless= -1, I \textgreater= -2147483648	\\ 
+41	& BinarySparseInstance		& I \textless= -1, I \textgreater= -15			& I \textless= -1, I \textgreater= -506		& I \textless= -1, I \textgreater= -2147483648	\\ 
+42	& SoftReferenceSymbolTable	& I \textgreater= 2147483635				& I \textgreater= 2147483140			& I \textgreater~698000000					\\ 
+	&                                             & I \textless= 2147483647					& I \textless= 2147483647				&  I \textless= 2147483647					\\
+43	& HTMLEntities				& I \textless=- 1								& I \textgreater= -504, I \textless= -405,	&  I \textless= -809, I \textless= -607, I \textgreater= -605,    		\\ 
+	&                         			& I \textgreater= -17							& I \textgreater= -403, I \textless= -304, 	&  I \textless= -506, I \textgreater= -504, I \textless= -405,		 \\	
+	&                         			& 											& I \textgreater= -302, I \textless= -203,	&  I \textgreater= -403, I \textless= -304, I \textgreater= -302,		 \\	
+	&                        				& 											& I \textgreater= -201, I \textless= -102, 	&  I \textless= -203, I \textgreater= -201, I \textless= -102,		 \\	
+	&                         			& 											& I \textgreater= -100, I \textless= -1		&  I \textgreater= -100, I \textless= -1				 			 \\	
+44	& SymbolHash				& I \textless= -1,  I \textgreater= -16			& I \textless= -2147483592			 	& I \textless= -1, 							\\ 
+	&							&											& I \textgreater= -2147483648			& I \textgreater= -2147483648				\\
+45	& SynchronizedSymbolTable	& I \textless= -2147483140					& I \textless= -2147483592,				& I \textless= -1, I \textgreater= -2147483648	\\ 
+	&                                             & I \textgreater= -2147483648				& I \textgreater= -2147483648 			&  			   								\\
 46	& XMLChar					& I \textless= -1, I \textgreater= -12			& I \textless= -1, I \textgreater= -510		& I \textless= -1, I \textgreater= -2147483648	\\
-47	& XMLGrammarPoolImpl		& I \textless= -1, I \textgreater= -13			& I \textless= -2147483648, 				& I \textless= -1, 							\\ 
-	&							&											& I \textgreater= -2147483137			& I \textgreater= -2147483648				\\
+47	& XMLGrammarPoolImpl		& I \textless= -1, I \textgreater= -13			& I \textless= -2147483137 				& I \textless= -1, 							\\ 
+	&							&											& I \textgreater= -2147483648			& I \textgreater= -2147483648				\\
 48	& XML11Char				& I \textless= -1, I \textgreater= -16			& I \textless= -1, I \textgreater= -512		& I \textless= -1, I \textgreater= -2147483648	\\ 
 49	& AttributeList				& I \textgreater= 2147483635				& I \textgreater= 2147483590			& I \textgreater~698000000					\\ 
-	&                                             & I \textless= 2147483647					& I \textless= 2147483647				&  I \textless= 2147483647					\\	
+	&                                             & I \textless= 2147483647					& I \textless= 2147483647				& I \textless= 2147483647 					\\
+50	& ClassLoaderResolver		&  I \textgreater= 2,						       & I \textgreater= 500, I \textless= -2			& I \textless= -2, I \textgreater -2147483648  								  \\ 
+	&                                             &  I \textless= 18						       & I \textgreater= 2, I \textless= 505			& I \textgreater= 2, I \textless= 2147483647			   					  \\
+	
 
 \hline
 \end{tabular}
@@ -693,6 +735,17 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 \caption{Classes with strip failure-domains}
 \label{table:stripDomains}
 \end{table*}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -709,31 +762,9 @@ S\#  & Class						& Invariants by ADFD+       					& Invariants by ADFD     				
 S\# & Class			& Invariants by ADFD+        				& Invariants by ADFD     								& Invariants by Manual			\\ 
 \hline
 
-1	& Assert			&  	I != J								& I != J															&  I != J																	\\ 
-
-
-
-2	& Board			&  	I \textless= -1						& I \textgreater= -504, I \textless= -405, I \textgreater= -403		&  I \textless= -910, I \textgreater= -908, I \textless= -809,    				  \\ 
-	&                         & 	I \textgreater= -18					& I \textless= -304, I \textgreater= -302, I \textless= -203			&  I \textgreater= -807, I \textless= -708, I \textgreater= -706, 				  \\	
-	&                         & 										& I \textgreater= -201, I \textless= -102, I \textgreater= -100		&  I \textless= -607, I \textgreater= -605, I \textless= -506,		 		 \\
-	&                         & 										& I \textless= -1													&  I \textgreater= -504, I \textless= -405, I \textgreater= -403,				  \\
-	&                         & 										& 																&  I \textless= -304, I \textgreater= -302, I \textless= -203,				  \\
-	&                         & 										& 																&  I \textgreater= -201, I \textless= -102, I \textgreater= -100 \\
-	&                         & 										& 																&   I \textless= -1 \\
-	
-	
-	
-3	& HTMLEntities	&  	I \textless=- 1						& I \textgreater= -504, I \textless= -405, I \textgreater= -403		&  I \textless= -910, I \textgreater= -908,    									\\ 
-	&                         & 	I \textgreater= -17					& I \textless= -304, I \textgreater= -302, I \textless= -203			&  I \textgreater= -807, I \textless= -708, I \textgreater= -706,  				 \\	
-	&                         & 										& I \textgreater= -201, I \textless= -102, I \textgreater= -100		&  I \textless= -809, I \textless= -607, I \textgreater= -605,					 \\	
-	&                         & 										& I \textless= -1													&  I \textless= -506, I \textgreater= -504, I \textless= -405,					 \\	
-	&                         & 										& 																&  I \textgreater= -403, I \textless= -304, I \textgreater= -302,					 \\	
-	&                         & 										& 																&  I \textless= -203, I \textgreater= -201, I \textless= -102,					  \\	
-	&                         & 										& 																&  I \textgreater= -100, I \textless= -1			   		  					  \\
-	
-			
-4	& Assert			&	I \textless= 0, I \textgreater= 20		& I \textless=  -2147483142, I \textgreater= -2147483648, 	 	&  I != J																		  \\
-	&                         & 	J \textless= 18, j \textgreater= -2		& J \textless=  J \textgreater= 509									&  			   																  \\
+1	& Assert			&  	I != J								& I != J															&  I != J				\\ 			
+2	& Assert			&	I \textless= 0, I \textgreater= 20		& I \textless=  -2147483142, I \textgreater= -2147483648, 	 	&  I any value		  \\
+	&                         & 	J = 0								& J = 0								  							&  J = 0 				  \\
 
 \hline
 \end{tabular}
@@ -754,18 +785,12 @@ S\# & Class			& Invariants by ADFD+        				& Invariants by ADFD     								
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 
-S\# & Class				& Invariants by ADFD+       								& Invariants by ADFD     										& Invariants by Manual											\\
+S\# & Class				& Invariants by ADFD+       								& Invariants by ADFD     										& Invariants by Manual								\\
 \hline
-1	& AnnotationValue	& I \textless= 85, I \textgreater= 92, I \textgreater= 98		& I 63, I = \{65, 69, 71, 72\}						& I \textless= 63, I = {65, 69, 71, 72}					\\
-	&                                &I = 100, I \textgreater= 102, I \textless= 104				& I \textgreater= 75, I \textless= 82, I \textgreater= 84			& I \textgreater= 75, I \textless= 82, I \textgreater= 84 \\	
-	&                               & 														& I \textless= 89, I \textgreater= 92, I \textless= 98			& I \textless= 89, I \textgreater= 92, I \textless= 98 	\\	
-	&                               & 														& I = 100, I \textgreater= 102, I \textless= 114					& I = 100, I \textgreater= 102, I \textless= 114 		\\	
-	&                               & 														& I \textgreater= 116											& I \textgreater= 116			   						\\	
+2	& IntList						& I \textless= -1, I \textgreater= -15		& I \textless= -1, I \textgreater= -509							& I \textless= -1, I \textgreater= -2147483648								  \\ 		
+	&                                             & J = 0									& J =0														& J = 0		   															  \\
 
 
-2	& Token				& I \textless= -2147483641								& I \textless=  -2, I \textgreater= -510						& I \textless= -2, I \textgreater -2147483648   									\\ 
-	&                               & I \textgreater= -2147483648							& I = \{73, 156\}												& I = 73, 156, 						   				\\	
-	&                               & 														& I \textgreater= 162, I \textless= 500							& I \textgreater= 162, I \textless= 2147483647						   		\\	
 \hline
 \end{tabular}
 }
@@ -794,14 +819,28 @@ S\# & Class				& Invariants by ADFD+       								& Invariants by ADFD     				
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 
-S\# & Class						& Invariants by ADFD     					& Invariants by ADFD+     										& Invariants by Manual												\\
+S\# & Class						& Invariants by ADFD     					& Invariants by ADFD+     										& Invariants by Manual												  	 \\
 \hline
-1	& ClassLoaderResolver		&  I \textgreater= 2,						& I \textgreater= 500, I \textless= -2							& I \textless= -2, I \textgreater -2147483648  									\\ 
-	&                                             &  I \textless= 18						& I \textgreater= 2, I \textless= 505							& I \textgreater= 2, I \textless= 2147483647			   											\\	
+1	& Board						& I \textless= -1							& I \textgreater= -504, I \textless= -405, 						&  I \textless= -910, I \textgreater= -908, I \textless= -809,    				  \\ 
+	&                         			& I \textgreater= -18						& I \textgreater= -403, I \textless= -304, 						&  I \textgreater= -807, I \textless= -708, I \textgreater= -706, 				  \\	
+	&                         			& J = 0									& I \textgreater= -302, I \textless= -203,						&  I \textless= -607, I \textgreater= -605, I \textless= -506,		 		  \\
+	&                         			& 										& I \textgreater= -201, I \textless= -102, 						&  I \textgreater= -504, I \textless= -405, I \textgreater= -403,				  \\
+	&                         			& 										& I \textgreater= -100, I \textless= -1							&  I \textless= -304, I \textgreater= -302, I \textless= -203,				  \\
+	&                        				& 										& J = 0														&  I \textgreater= -201, I \textless= -102, I \textgreater= -100 				  \\
+	&                         			& 										& 															&   I \textless= -1, 														  \\
+	&                         			& 										& 															&   J = 0  																  \\
+2	& Variant					& I \textgreater=0, I \textless= 12			& I \textgreater= 0, I \textless= 14, I \textgreater= 16 			& I \textgreater= 0, I \textless= 14, I \textgreater= 16						  \\ 		
+	&                                             & 										& I \textless= 31, I \textgreater= 64, I \textless= 72			& I \textless= 31, I \textgreater= 64, I \textless= 72						   \\
+3	& Token						& I \textless= -2147483641				& I \textless=  -2, I \textgreater= -510						& I \textless= -2, I \textgreater -2147483648   							   \\ % Point and Strip 
+	&                               			& I \textgreater= -2147483648			& I = \{73, 156\}												& I = 73, 156, 						   									    \\	
+	&                               			& 										& I \textgreater= 162, I \textless= 500							& I \textgreater= 162, I \textless= 2147483647						   	    \\	
+4	& AnnotationValue			& I \textless= 85, I \textgreater= 92, I \textgreater= 98		& I \textless=63, I = \{65, 69, 71, 72\}			& I \textless= 63, I = {65, 69, 71, 72}										     \\
+	&                              			& I \textless= 100, I \textgreater= 102, I \textless= 104	& I \textgreater= 75, I \textless= 82, I \textgreater= 84	& I \textgreater= 75, I \textless= 82, I \textgreater= 84 					     \\	
+	&                               			& 										& I \textless= 89, I \textgreater= 92, I \textless= 98			& I \textless= 89, I \textgreater= 92, I \textless= 98 	\\	
+	&                               			& 										& I = 100, I \textgreater= 102, I \textless= 114					& I = 100, I \textgreater= 102, I \textless= 114 		\\	
+	&                               			& 										& I \textgreater= 116											& I \textgreater= 116 and so on  						\\	
 
 
-2	& Variant					& I \textgreater=0, I \textless= 12			& I \textgreater= 0, I \textless= 14, I \textgreater= 16 			& I \textgreater= 0, I \textless= 14, I \textgreater= 16		\\ 		
-	&                                             & 										& I \textless= 31, I \textgreater= 64, I \textless= 72			& I \textless= 31, I \textgreater= 64, I \textless= 72		\\
 	
 \hline
 \end{tabular}
