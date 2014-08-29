@@ -1,0 +1,67 @@
+\externaldocument{chapter9}
+\chapter{Future Work}
+\label{chap:futureWork}
+	
+This chapter presents the scope and potential of future work as an extension of the present research study. The topics suggested include: use of contracts and assertions to discover failure; introducing object distance in DSSR strategy to enhance its testing ability; measuring code coverage of the three newly developed strategies to assess additional aspect of performance; extension of ADFD+ strategy for testing non numerical data; enhancing the plotting ability of ADFD+ strategy to more than two-dimensional charts; introducing additional features in the user interface of ADFD+; extension of ADFD+ to apply it to the real world scenario; research on the prevalence of point block and strip failure domains; improvement in the DSSR strategy to reduce overhead. \\
+
+	
+%While this research has demonstrated some of the potential of the newly developed automated random strategies, many opportunities for extending the work exist.
+%This chapter presents some potential directions that such extensions could take. These include improving the implementation of DSSR to reduce overhead; Use of contracts and assertions to find a failure; introducing object distance in DSSR suggested by Ciupa et al. \cite{ciupa2006object}; measure of the coverage achieved by DSSR, ADFD and ADFD+; extend tool to test non-numerical and reference type data in ADFD+;
+%adding the feature of plotting more than two dimensional charts; 
+%improving the user interface of ADFD+; 
+%evaluating the effectiveness of ADFD+ on real world applications; and characterizing the number of programs containing point, block and strip failure-domains.\\
+
+
+\textbf{Improvement in the DSSR strategy to reduce overhead}
+
+The DSSR strategy is an extension of random+ strategy based on the assumption that failure domains are contagious. The dirt spot sweeping feature of the strategy adds the neighbouring value of the failure finding value to the list of interesting values to cover the failure domain. This add 5\% overhead to DSSR strategy compared to R+ strategy. In future studies the algorithm may be modified to decrease the overhead and make the strategy more effective.\\
+
+\textbf{Use of contracts and assertions to discover failure}
+
+%No explicit oracles were defined in our experiments to keep the process fully automated. 
+The common practice to use undefined run-time exceptions of the programming language as test oracles in the absence of contracts and assertions was followed in the study. It is worthwhile to study the fault-detection ability of an automated strategy in the presence of contracts and assertions. To generate explicit oracles a tool like Daikon may be integrated in the system for achieving the automatic generation of invariants and their annotation in to source code.\\
+
+\textbf{Introducing object distance in DSSR strategy to enhance its testing ability}
+
+The newly developed DSSR strategy add the neighbouring values for primitive type data and Strings. It has a limitation that no neighbouring values are added when the failure is found by  a reference type data. It is suggested for future research work to extend the DSSR strategy by incorporating a suitable technique like Artoo to find the neighbouring objects for including these in the list of interesting values.  \\
+
+
+\textbf{Measuring code coverage of the three newly developed strategies to assess additional aspect of performance}
+
+In spite of the fact that the strategies developed in the study generate more test cases from the surrounding area where a failure is discovered for better coverage, it is worthwhile to measure the code coverage achieved by the new strategies to ensure the effectiveness. The instrumentation technique may be applied to the software under test to achieve the desired objective. \\
+%We predict that the techniques developed in the study will achieve better coverage because they generate more test cases from the area where one failure is discovered. The discovery of failure identifies a legitimate value in most of the cases. However, Random strategies typically achieve low level of coverage~\cite{oriol2010yeti} and all the techniques are originated from random strategy. Therefore, it would be interesting to measure the coverage achieved by DSSR, ADFD and ADFD+.\\
+
+\textbf{Extension of ADFD+ strategy for testing non numerical data}
+
+The ADFD+ strategy tests numerical programs and can be used for testing the software of numerical data types in the real world context. The strategy may be extended to include testing of  
+non numerical and reference data types to enable the strategy to test all types of data. \\
+
+
+
+
+
+%Current implementation of ADFD and ADFD+ tests only numerical programs. This restricts the usability of ADFD+ for production software of non-numerical data types. This can be solved by extending the tool to include testing of other primitive and reference data types. \\
+
+\textbf{Enhancing the plotting ability of ADFD+ strategy to more than two-dimensional charts}
+
+The newly developed ADFD+ has the capability of graphical representation of results for one and two-dimensional numerical programs. It is worthwhile to extend the strategy so as to be capable of graphical representation of results for multi-dimensional numerical and non numerical programs. \\
+
+\textbf{Introducing additional features in the user interface of ADFD+}
+
+The user interface of ADFD+ provides a fully automated mechanism of testing the program, processing the results and visually representing the results in graphical form. The user interface may be extended in future to give choice to the tester for real time interaction, manual addition of test cases, showing thumbnail view of previous graphs and 3D support to present multi-dimensional arguments.\\
+
+\textbf{Extension of ADFD+ to apply it to the real world scenario}
+
+The newly developed ADFD+ strategy uses error-seeded programs for assessment of accuracy and effectiveness. This may likely expose it to external validity threat.  Future studies may be undertaken in the real world scenario by including the feature of testing non numerical and reference data types so that there is no more threat to validity.  \\
+
+\textbf{Research on the prevalence of point block and strip failure domains}
+
+In accordance with the reported literature, the three newly developed strategies used the concept of failure laying in point block and strip failure domains. It is worthwhile to undertake study for determining the prevalence and proportionate distribution of the failure domains in the input domain. This will improve the testing efficiency by giving due focus to the more prevalent types of failure domain.  \\
+
+
+%While we know from the literature that the point, block and strip domain of failure exist in the input domain. There is no concrete study to verify how frequent they are and which failure-domain exist more in number than the other two. Its identification can help testers to apply the most appropriate testing technique to the SUT becuase we know that random testing performs better when errors forms block and strip domains as against point domains.\\
+	
+
+
+
+
