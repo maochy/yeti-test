@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  29 AUG 2014 23:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  29 AUG 2014 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -984,27 +984,27 @@ Overfull \hbox (1.29184pt too wide) detected at line 142
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 143
- []\OT1/phv/m/n/10.95 127
- []
-
-
-Overfull \hbox (1.29184pt too wide) detected at line 144
- []\OT1/phv/m/n/10.95 127
- []
-
-
-Overfull \hbox (1.29184pt too wide) detected at line 145
  []\OT1/phv/m/n/10.95 128
  []
 
 
+Overfull \hbox (1.29184pt too wide) detected at line 144
+ []\OT1/phv/m/n/10.95 128
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 145
+ []\OT1/phv/m/n/10.95 129
+ []
+
+
 Overfull \hbox (1.29184pt too wide) detected at line 149
- []\OT1/phv/m/n/10.95 130
+ []\OT1/phv/m/n/10.95 131
  []
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 150
- []\OT1/phv/m/n/10.95 131
+ []\OT1/phv/m/n/10.95 132
  []
 
 
@@ -1014,17 +1014,17 @@ Overfull \hbox (1.29184pt too wide) detected at line 151
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 153
- []\OT1/phv/m/n/10.95 137
+ []\OT1/phv/m/n/10.95 138
  []
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 156
- []\OT1/phv/m/n/10.95 143
+ []\OT1/phv/m/n/10.95 144
  []
 
 [8]
 Overfull \hbox (1.29184pt too wide) detected at line 157
- []\OT1/phv/m/n/10.95 145
+ []\OT1/phv/m/n/10.95 146
  []
 
 )
@@ -1105,7 +1105,7 @@ Overfull \hbox (1.29184pt too wide) detected at line 71
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 72
- []\OT1/phv/m/n/10.95 126
+ []\OT1/phv/m/n/10.95 127
  []
 
 )
@@ -1129,27 +1129,27 @@ Overfull \hbox (1.29184pt too wide) detected at line 15
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 19
- []\OT1/phv/m/n/10.95 133
- []
-
-
-Overfull \hbox (1.29184pt too wide) detected at line 20
  []\OT1/phv/m/n/10.95 134
  []
 
 
-Overfull \hbox (1.29184pt too wide) detected at line 21
+Overfull \hbox (1.29184pt too wide) detected at line 20
  []\OT1/phv/m/n/10.95 135
+ []
+
+
+Overfull \hbox (1.29184pt too wide) detected at line 21
+ []\OT1/phv/m/n/10.95 136
  []
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 22
- []\OT1/phv/m/n/10.95 135
+ []\OT1/phv/m/n/10.95 136
  []
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 23
- []\OT1/phv/m/n/10.95 135
+ []\OT1/phv/m/n/10.95 136
  []
 
 )
@@ -1965,23 +1965,20 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 7.
-
-LaTeX Warning: Citation `Chen2008' on page 123 undefined on input line 21.
-
-<chapter7/point.png, id=2260, 103.88812pt x 85.06781pt>
+<chapter7/point.png, id=2261, 103.88812pt x 85.06781pt>
 File: chapter7/point.png Graphic file (type png)
 
 <use chapter7/point.png>
 Package pdftex.def Info: chapter7/point.png used on input line 29.
 (pdftex.def)             Requested size: 71.13438pt x 56.90556pt.
 
-<chapter7/block.png, id=2261, 101.62968pt x 83.5622pt>
+<chapter7/block.png, id=2262, 101.62968pt x 83.5622pt>
 File: chapter7/block.png Graphic file (type png)
 
 <use chapter7/block.png>
 Package pdftex.def Info: chapter7/block.png used on input line 33.
 (pdftex.def)             Requested size: 71.13408pt x 56.90695pt.
- <chapter7/strip.png, id=2262, 103.88812pt x 84.315pt>
+ <chapter7/strip.png, id=2263, 103.88812pt x 84.315pt>
 File: chapter7/strip.png Graphic file (type png)
 
 <use chapter7/strip.png>
@@ -1993,87 +1990,72 @@ Package pdftex.def Info: chapter7/strip.png used on input line 37.
 
 ]
 
-LaTeX Warning: Citation `Beizer1990' on page 124 undefined on input line 45.
-
-
 LaTeX Warning: Citation `ahmad2014adfd2' on page 124 undefined on input line 47
 .
 
-
-LaTeX Warning: Citation `Oriol2011yeti' on page 124 undefined on input line 49.
-
-
-
-LaTeX Warning: Citation `ernst2007daikon' on page 124 undefined on input line 4
-9.
-
 [124 <./chapter7/point.png> <./chapter7/block.png> <./chapter7/strip.png>]
-
-LaTeX Warning: Citation `ernst2007daikon' on page 125 undefined on input line 8
-1.
-
-[125] <chapter7/adfdPlusCombined.png, id=2307, 700.11563pt x 253.44687pt>
+<chapter7/adfdPlusCombined.png, id=2290, 700.11563pt x 253.44687pt>
 File: chapter7/adfdPlusCombined.png Graphic file (type png)
 
 <use chapter7/adfdPlusCombined.png>
 Package pdftex.def Info: chapter7/adfdPlusCombined.png used on input line 110.
-(pdftex.def)             Requested size: 355.66547pt x 156.49345pt.
+(pdftex.def)             Requested size: 441.02177pt x 256.07985pt.
 
-<chapter7/adfdCombined.png, id=2309, 698.10812pt x 249.93375pt>
+Overfull \hbox (7.40178pt too wide) in paragraph at lines 110--114
+ [][] 
+ []
+
+[125] <chapter7/adfdCombined.png, id=2316, 698.10812pt x 249.93375pt>
 File: chapter7/adfdCombined.png Graphic file (type png)
 
 <use chapter7/adfdCombined.png>
-Package pdftex.def Info: chapter7/adfdCombined.png used on input line 122.
-(pdftex.def)             Requested size: 355.6576pt x 156.49423pt.
- [126 <./chapter7/adfdPlusCombined.png> <./chapter7/adfdCombined.png>] [127]
+Package pdftex.def Info: chapter7/adfdCombined.png used on input line 123.
+(pdftex.def)             Requested size: 441.0248pt x 256.09984pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Overfull \hbox (7.4048pt too wide) in paragraph at lines 123--126
+ [][] 
+ []
 
+[126 <./chapter7/adfdPlusCombined.png>] [127 <./chapter7/adfdCombined.png>]
 [128] [129] [130]
 
-LaTeX Warning: Citation `white1980domain' on page 131 undefined on input line 3
-67.
-
-
 LaTeX Warning: Citation `bishop1993variation' on page 131 undefined on input li
-ne 367.
+ne 368.
+
+[131]
+
+LaTeX Warning: Citation `ahmad2014adfd2' on page 132 undefined on input line 37
+0.
 
 
-LaTeX Warning: Citation `ahmad2014adfd2' on page 131 undefined on input line 36
-9.
-
-
-Overfull \hbox (28.65521pt too wide) in paragraph at lines 369--370
+Overfull \hbox (28.65521pt too wide) in paragraph at lines 370--371
 \OT1/phv/m/n/10.95 grams of var-i-ous plat-forms in-clud-ing Win-dows [[]], Uni
 x16, Java Li-braries citepacheco2005eclat,
  []
 
 
-LaTeX Warning: Citation `ahmad2014adfd2' on page 131 undefined on input line 37
-1.
+LaTeX Warning: Citation `ahmad2014adfd2' on page 132 undefined on input line 37
+2.
 
 
-LaTeX Warning: Citation `Duran1984' on page 131 undefined on input line 373.
+LaTeX Warning: Citation `Duran1984' on page 132 undefined on input line 374.
 
 
-LaTeX Warning: Citation `Gutjahr1999' on page 131 undefined on input line 373.
+LaTeX Warning: Citation `Gutjahr1999' on page 132 undefined on input line 374.
 
 
-LaTeX Warning: Citation `Arcuri2012' on page 131 undefined on input line 373.
+LaTeX Warning: Citation `Arcuri2012' on page 132 undefined on input line 374.
 
-[131]
-Overfull \hbox (76.26704pt too wide) in paragraph at lines 434--502
+[132]
+Overfull \hbox (76.26704pt too wide) in paragraph at lines 435--503
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 31.355pt on input line 502.
-
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Float too large for page by 286.39825pt on input line 618.
+LaTeX Warning: Float too large for page by 286.39825pt on input line 619.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -2087,7 +2069,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [132] [133] [134] [135]
+) [133] [134] [135] [136]
 \openout2 = `chapter8/chapter8.aux'.
 
  (./chapter8/chapter8.tex
@@ -2098,7 +2080,7 @@ LABELS NOT IMPORTED.
  on input line 1.
 
 Chapter 8.
-[136
+[137
 
 
 
@@ -2107,7 +2089,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[137]
+[138]
 Underfull \hbox (badness 10000) in paragraph at lines 77--78
 
  []
@@ -2132,7 +2114,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
-[138]
+[139]
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
@@ -2142,7 +2124,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-) [139]
+) [140]
 \openout2 = `chapter9/chapter9.aux'.
 
  (./chapter9/chapter9.tex
@@ -2168,7 +2150,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 
  []
 
-[140
+[141
 
 
 
@@ -2197,7 +2179,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-[141]
+[142]
 Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
@@ -2207,24 +2189,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-) [142]
+) [143]
 \openout2 = `appendix1/appendix1.aux'.
 
  (./appendix1/appendix1.tex
 Appendix A.
 LaTeX Font Info:    Font shape `OT1/pcr/bx/n' in size <8> not available
 (Font)              Font shape `OT1/pcr/b/n' tried instead on input line 15.
-[143
+[144
 
 
 
-] [144] [145] [146]) [147] (./ociamthesismain.bbl
+] [145] [146] [147]) [148] (./ociamthesismain.bbl
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 7.
- [148
+ [149
 
 
-] [149]
+] [150]
 Missing character: There is no â in font phvro7t!
 Missing character: There is no € in font phvro7t!
 Missing character: There is no ™ in font phvro7t!
@@ -2237,8 +2219,8 @@ Missing character: There is no ½ in font phvro7t!
 Missing character: There is no ï in font phvro7t!
 Missing character: There is no ¿ in font phvro7t!
 Missing character: There is no ½ in font phvro7t!
- [150]
-[151]
+ [151]
+[152]
 Missing character: There is no ï in font phvro7t!
 Missing character: There is no ¿ in font phvro7t!
 Missing character: There is no ½ in font phvro7t!
@@ -2260,7 +2242,7 @@ Missing character: There is no ½ in font phvro7t!
 Missing character: There is no ï in font phvro7t!
 Missing character: There is no ¿ in font phvro7t!
 Missing character: There is no ½ in font phvro7t!
- [152]
+ [153]
 Missing character: There is no ï in font phvr7t!
 Missing character: There is no ¿ in font phvr7t!
 Missing character: There is no ½ in font phvr7t!
@@ -2274,7 +2256,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 This document will not have a glossary.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 166.
-[153]
+[154]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 166.
  (./ociamthesismain.aux (./abstract/abstract.aux)
 (./dedication/dedication.aux) (./acknowlegements/acknowlegements.aux)
@@ -2296,10 +2278,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16219 strings out of 493315
- 245807 string characters out of 6137904
- 473427 words of memory out of 5000000
- 18257 multiletter control sequences out of 15000+600000
+ 16221 strings out of 493315
+ 245851 string characters out of 6137904
+ 473542 words of memory out of 5000000
+ 18255 multiletter control sequences out of 15000+600000
  41291 words of font info for 88 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  57i,12n,100p,2554b,1700s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2317,10 +2299,10 @@ ist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/font
 s/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
 /urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/he
 lvetic/uhvro8a.pfb>
-Output written on ociamthesismain.pdf (153 pages, 3764633 bytes).
+Output written on ociamthesismain.pdf (154 pages, 3765791 bytes).
 PDF statistics:
- 2897 PDF objects out of 2984 (max. 8388607)
- 2572 compressed objects within 26 object streams
- 913 named destinations out of 1000 (max. 500000)
+ 2910 PDF objects out of 2984 (max. 8388607)
+ 2584 compressed objects within 26 object streams
+ 917 named destinations out of 1000 (max. 500000)
  1466 words of extra memory for PDF output out of 10000 (max. 10000000)
 
