@@ -680,7 +680,7 @@ The default strategy creates random data to evaluate the methods/classes under t
 \end{enumerate}
 
 \subsection{TestEra}
-TestEra~\cite{marinov2001testera} is a novel framework for auto generation and evaluation of test inputs for a Java program. It takes specifications, numerical value and the method to be tested as input. It uses pre-conditions of a method to generate all non isomorphic valid test inputs to the specified limit. The test inputs are executed and the results are compared against the post-conditions of the method serving as oracle. Any test case that fails to satisfy post-condition is considered as a fault. 
+TestEra~\cite{marinov2001testera} is a novel framework of auto generation and evaluation of test inputs for a Java program. Input of the tool includes specifications, numerical value and method to be tested. It uses pre-conditions of the method to generate all non isomorphic valid test inputs in the specified limit. The test inputs are executed and the results obtained are compared against post-conditions of the method serving as oracle. A test case that fails to satisfy post-conditions is considered as fault. 
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -690,7 +690,7 @@ TestEra~\cite{marinov2001testera} is a novel framework for auto generation and e
 	\label{fig:testera}
 \end{figure}
 \bigskip
-TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints on test inputs and uses Alloy Analyser~\cite{jackson2000alcoa} to solve these constraints and generate test inputs. Alloy Analyzer performs the following three functions: (a) it translates Alloy predicates into propositional formulas%, i.e. constraints where all variables are boolean 
+TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints of test inputs from program specifications. The constraints are solved by the Alloy Analyser~\cite{jackson2000alcoa} which performs the following three functions: (a) it translates Alloy predicates into propositional formulas%, i.e. constraints where all variables are boolean 
  (b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
 
 
@@ -702,8 +702,9 @@ TestEra uses program specifications to guide the auto generation of test inputs 
 %Testera use specifications to guide the automatic generation of test inputs. It uses Alloy language for specification and Alloy Analyser to generate all non-isomorphic instances for a given size according to the specification automatically. Then, TestEra translate the instances to Java input as test cases for the program under test. After executing the test, TestEra then translate the outputs back to Alloy and Alloy Analyzer check the input and output against the correctness criteria given in Alloy. When it detects a violation, TestEra generates report in the form of concrete counterexamples. Figure 2.6 [50] illustrates the basic framework of TestEra.
 
 \subsection{Korat} % please read thesis of khurshid in Mendeley in phd thesis section for more information.
-Korat~\cite{boyapati2002korat} like TestEra~\cite{marinov2001testera}, both developed by the same team, is a framework for automated testing of Java programs based on the formal specifications~\cite{chang1999structural}. Korat uses Java Modelling Language (JML) for specifications. It uses bounded-exhaustive testing in which the code is tested against all possible inputs within the specified bounds~\cite{khurshid2001checking}. %Korat generates structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates it to a boolean value. 
-Korat takes imperative predicates and finitization value as inputs. It systematically explores the input space of the predicates and generates all non-isomorphic inputs for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter out the fields accessed during executions. These inputs are taken as test cases. 
+Korat~\cite{boyapati2002korat} is a framework for automated testing of Java programs based on formal specifications~\cite{chang1999structural}. %Korat and TestEra~\cite{marinov2001testera} are developed by the same team. 
+Korat uses Java Modelling Language (JML) for specifications. It uses bounded-exhaustive testing in which the code is tested against all possible inputs within the specified bounds~\cite{khurshid2001checking}. %Korat generates structurally complex inputs by solving imperative predicates. An imperative predicate is a piece of code that takes a structure as input and evaluates it to a boolean value. 
+Input to the tool includes imperative predicates and finitization value. Korat systematically explores the input space of the predicates and generates all non-isomorphic inputs for which the predicates return true. The core part of Korat monitors execution of the predicates on candidate inputs to filter out the fields accessed during executions. These inputs are taken as test cases. 
 
 Korat uses \verb+repOK()+ and \verb+checkRep()+ methods. The \verb+repOK()+ is used to check the class invariants for validating test inputs while \verb+checkRep()+ is used to verify the post-conditions for validating the test case. Korat does not require existing set of operations to create input values. Therefore it has the advantage of generating input values that may be difficult or impossible with a given set of operations. The disadvantage of the approach is the requirement of significant manual efforts \cite{pacheco2009directed}.    
 

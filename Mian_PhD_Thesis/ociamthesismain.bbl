@@ -714,11 +714,6 @@ Tao Xie, Darko Marinov, Wolfram Schulte, and David Notkin.
 \newblock In {\em Tools and Algorithms for the Construction and Analysis of
   Systems}, pages 365--381. Springer, 2005.
 
-\bibitem{Oriol2011yeti}
-Manuel Oriol.
-\newblock {YETI:}york extensible testing infrastructure.
-\newblock 2011.
-
 \bibitem{ernst2007daikon}
 Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos
   Pacheco, Matthew~S Tschantz, and Chen Xiao.
@@ -729,5 +724,17 @@ Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos
 Lee~J White and Edward~I Cohen.
 \newblock A domain strategy for computer program testing.
 \newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
+
+\bibitem{bishop1993variation}
+Peter~G Bishop.
+\newblock The variation of software survival time for different operational
+  input profiles (or why you can wait a long time for a big bug to fail).
+\newblock In {\em Fault-Tolerant Computing, 1993. FTCS-23. Digest of Papers.,
+  The Twenty-Third International Symposium on}, pages 98--107. IEEE, 1993.
+
+\bibitem{ahmad2014adfd2}
+Mian~A Ahmad and Manuel Oriol.
+\newblock Automated discovery of failure domain.
+\newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
 
 \end{thebibliography}
