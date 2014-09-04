@@ -6,20 +6,23 @@
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 
 
-\section{Introduction}\label{sec:intro4}
-The success of a software testing technique is mainly based on the number of faults it discovers in the SUT. An efficient testing process discovers the maximum number of faults in a minimum possible time. Exhaustive testing, where software is tested against all possible inputs, is mostly not feasible because of the large size of input domain, limited resources and strict time constraints. Therefore, strategies in automated software testing tools are developed with the aim to select more failure-finding test inputs from the input domain. Producing such targeted test input is difficult because each system has its own requirements and functionality.
+%\section{Introduction}\label{sec:intro4}
 
-Chan et al.~\cite{chan1996proportional} discovered that there are domains of failure-causing inputs across the input domain. They divided these into point, block and strip domains on the basis of their occurrence across the input domain. Chen et al.~\cite{chen2005adaptive} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance increases up to 50\% when test inputs are selected evenly across the whole input domain. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure domains. Similarly Restricted Random Testing \cite{chan2003normalized}, Feedback-Directed Random Testing \cite{pacheco2007randoop}, Mirror Adaptive Random Testing \cite{chen2004mirror} and Quasi Random Testing \cite{chen2007quasi} stress the need for test case selection covering the whole input domain to get better results.
+%The success of a software testing technique mainly depends on the number of faults discovered in the SUT. An efficient testing process discovers maximum number of faults in minimum possible time. In exhaustive testing software is tested against all possible inputs but it is mostly not feasible because of the large size of input domain, limited resources and strict time constraints. Therefore, strategies in automated software testing tools are developed for selecting more failure-finding test inputs from the input domain. Producing such targeted test inputs is difficult because each system has its own requirements and functionality.
 
-In this chapter we assume that failure domains are contiguous for a significant number of classes. Based on this assumption, we devised the Dirt Spot Sweeping %\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} 
-Random (DSSR) strategy  which starts as a random+ (R+) strategy focusing more on boundary values. When a new failure is found, it increases the chances of finding more failures by DSSR strategy using the neighbouring values. Since this strategy is an extension of random (R) strategy, it has the full potential to find all failures in the program, but additionally we expect it to be faster at finding failures, for classes in which failure domains are contiguous, as compared with R and R+ strategies.
+%Chan et al.~\cite{chan1996proportional} discovered that there are domains of failure-causing inputs across the input domain. They divided these into point, block and strip domains on the basis of their occurrence across the input domain. Chen et al.~\cite{chen2005adaptive} found that the performance of random testing can be increased by slightly altering the technique of test case selection. In adaptive random testing, they found that the performance increases up to 50\% when test inputs are selected evenly across the whole input domain. This was mainly attributed to the better distribution of input which increased the chance of selecting inputs from failure domains. Similarly Restricted Random Testing \cite{chan2003normalized}, Feedback-Directed Random Testing \cite{pacheco2007randoop}, Mirror Adaptive Random Testing \cite{chen2004mirror} and Quasi Random Testing \cite{chen2007quasi} stress the need for test case selection covering the whole input domain to get better results.
+
+% start by what is in the chapter and what you did.
+
+In this chapter we assume that failure domains are contiguous for sufficient number of classes. Based on this assumption, we devised the Dirt Spot Sweeping %\footnote{The name refers to the cleaning robots strategy which insists on places where dirt has been found in large amount.} 
+Random (DSSR) strategy  which begins as random+ (R+) strategy with higher focus on boundary values. When a new failure is found, DSSR strategy increases the chances of finding more failures by using neighbouring values around the identified failure. Since DSSR is an extension of R+ strategy, it has the potential of R+ to find all failures in the program with the additional feature of quickly finding the failures in classes where failure domains are contiguous, as compared with R and R+ strategies.
 
 % to be shifted to result section.
 
 
-We implemented the DSSR strategy in York Extensible Testing Infrastructure (YETI) \url{http://www.yetitest.org}. To evaluate our approach, we tested 30 times each one of the 60 classes of 32 different projects from the Qualitas Corpus \url{http://www.qualitascorpus.com} with each of the three strategies R, R+ and DSSR. We observed that for 53\% of the classes all three strategies perform equally, for remaining 47\% classes, DSSR strategy performed up to 33\% better than R and up to 17\% better than R+ strategy.
+We implemented DSSR strategy in York Extensible Testing Infrastructure (YETI). To evaluate the strategy, we tested each of the 60 classes of 32 different projects from the Qualitas Corpus 30 times with each of the three strategies R, R+ and DSSR. The results indicated that for 53\% of the classes all three strategies performed equally while in the remaining 47\% classes, DSSR strategy performed up to 33\% better than R and up to 17\% better than R+ strategy.
 
-We also validated the approach by comparing the significance of these results using t test and found out that for 7 classes DSSR was significantly better than both R+ and R, for 8 classes DSSR performed similarly to R+ and significantly better than R, while in 2 cases DSSR performed similarly to R and significantly better than R+. In all other classes, DSSR, R+ and R showed no significant difference statistically. Numerically however, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
+Statistical analysis was carried out to validate the results using t test. In 7 classes DSSR was significantly better than both R and R+, in 8 classes DSSR performed significantly better than R with no significant difference between DSSR and R+. However in 2 classes DSSR performed significantly better than R+ with no significantly difference between R and R+. In the remaining classes there was no significant difference between R, R+ and DSSR. Numerically, the DSSR strategy found 43 more unique failures than R and 12 more unique failures than R+ strategy. 
 
 %The rest of this paper is organised as follows: \\ Section~\ref{sec:dssr} describes the DSSR strategy. Section~\ref{sec:imp} presents implementation of the DSSR strategy. Section~\ref{sec:eval} explains the experimental setup. Section~\ref{sec:res} shows results of the experiments. Section~\ref{sec:discussion3} discusses the results. Section~\ref{sec:rw} presents related work and Section~\ref{sec:conc}, concludes the study.
 
@@ -29,10 +32,10 @@ We also validated the approach by comparing the significance of these results us
 %%%%%%%%%%%%%%%%%    DIRT SPOT SWEEPING STRATEGY  %%%%%%%%%%%%%%%
 
 \section{Dirt Spot Sweeping Random Strategy}\label{sec:dssr}
-The new software testing technique named, Dirt Spot Sweeping Random (DSSR) strategy combines the R+ strategy with a dirt spot sweeping functionality. It is based on two intuitions. First, boundaries have interesting values and using these values in isolation can provide high impact on test results. Second, failures reside more frequently in contiguous blocks and strip domain. If this is true, the Dirt Spot Sweeping (DSS) feature of the strategy will increase the performance of the test. Before presenting the details of the DSSR strategy, it is pertinent to review briefly the R and the R+ strategy.
+The new DSSR strategy extends the R+ strategy with the feature of dirt spot sweeping functionality. It is based on the intuitions. First, boundaries have interesting values and using these values individually in software testing can produce high impact on test results. Second, failures reside more frequently in contiguous block and strip domain. The feature of Dirt Spot Sweeping used in the DSSR strategy increases the performance of the test results. Before presenting the details of the DSSR strategy, a brief review of the R and R+ strategy is stated below.
 
 \subsection{Random Strategy}
-The random strategy is a black-box technique in which the SUT is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracles. Because of its black-box nature, this strategy is particularly effective in testing software where the developers want to keep the source code secret~\cite{chen2010adaptive}. The generation of random test data is comparatively cheap and does not require too much intellectual and computational efforts~\cite{ciupa2008finding, ciupa2011number}. It is mainly for this reason that various researchers have recommended R strategy for automated testing tools \cite{ciupa2008artoo}.
+Random strategy is a black-box testing technique in which the SUT is executed using randomly selected test data. Test results obtained are compared to the defined oracle, using SUT specifications in the form of contracts or assertions. In the absence of contracts and assertions the exceptions defined by the programming language are used as test oracles. Because of its black-box nature, this strategy is particularly effective in testing software where the developers want to keep the source code secret~\cite{chen2010adaptive}. The generation of random test data is comparatively cheap and does not require too much intellectual and computational efforts~\cite{ciupa2008finding, ciupa2011number}. It is mainly for this reason that various researchers have recommended R strategy for automated testing tools \cite{ciupa2008artoo}.
  YETI \cite{oriol2010yeti}, AutoTest \cite{leitner2007reconciling, ciupa2007experimental}, QuickCheck \cite{claessen2011quickcheck}, Randoop \cite{pacheco2007feedback} and Jartege \cite{oriat2005jartege} are some of the most common automated testing tools based on R strategy.
 
 \indent Efficiency of random testing was made suspicious with the intuitive statement of Myers \cite{myers2011art} who termed random testing as one of the poorest methods for software testing. However, experiments performed by various researchers, \cite{ciupa2007experimental, hamlet1994random, duran1981report, duran1984evaluation, ntafos2001comparisons} have proved experimentally that random testing is simple to implement, cost effective, efficient and free from human bias as compared to its rival techniques.
@@ -41,7 +44,7 @@ Programs tested at random typically fail a large number of times (there are a la
 
 \subsection{Random+ Strategy}
 The random+ strategy~\cite{leitner2007reconciling} is an extension of the R strategy. It uses some special pre-defined values which can be boundary values or values that have high tendency of finding failures in the SUT. Boundary values~\cite{beizer2003software} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MAX_INT-2+; \verb+MIN_INT+, \verb-MIN_INT+1-, \verb-MIN_INT+2-. These special values can add a significant improvement to any testing method. For example:
-
+\bigskip
 \begin{lstlisting}
 public void test (int arg) {
 	arg = arg + 1;
@@ -49,14 +52,14 @@ public void test (int arg) {
 	...
 }
 \end{lstlisting}
-
+\bigskip
 In the above piece of code, on passing interesting value \verb+MAX_INT+ as argument, the code increment it by 1 making it a negative value and thus an error is generated when the system tries to build an array of negative size. 
 
 Similarly, the tester might also add some other special values that he considers effective in finding failures for the SUT. For example, if a program under test has a loop from -50 to 50 then the tester can add -55 to -45, -5 to 5 and 45 to 55 to the pre-defined list of special values. This static list of interesting values is manually updated before the start of the test and has high priority than selection of random values because of more relevance and high chances of finding failures for the given SUT. These special values have high impact on the results, particularly for detecting problems in specifications~\cite{ciupa2008finding}.
 
 
 \subsection{Dirt Spot Sweeping}
-Chan et al.~\cite{chan1996proportional} found that there are domains of failure-causing inputs across the input domain. Section~\ref{sec:failuredomains_2} shows these domains for two-dimensional input domain. They divided these domains into three types called point, block and strip domains. The black area inside the box in the form of points, block and strip shows the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. They argue that a strategy has more chances of hitting these failure domains if test cases far away from each other are selected. Other researchers~\cite{chen2004mirror, chan2003normalized, chen2007quasi}, also tried to generate test cases further away from one another targeting these domains and achieved better performance. The increase in performance indicates that failures more often occur contiguously across the input domain. When test value reveals a failure in a program then DSS may not look farthest away for the selection of next test value but picks the closest test values for the next several tests to find another failure from the same region.
+Chan et al.~\cite{chan1996proportional} found that there are domains of failure-causing inputs across the input domain. Section~\ref{sec:failuredomains_2} shows the failure domains for two-dimensional input program. They divided these domains into three types called point, block and strip domains. The black area inside the box in the form of points, block and strip shows the input which causes the system to fail while white area inside the box represent the genuine input. Boundary of the box (black solid line) surrounds the complete input domain and represents the boundary values. It is argued that a strategy has more chances of hitting the failure domains if test cases far away from each other are selected. Other researchers~\cite{chan2003normalized, chen2004mirror, chen2007quasi} tried to generate test cases far away from each other targeting failure domains and achieved better performance, which indicates that failures more often occur contiguously across the input domain. When test value reveals a failure in a program then DSS may not look farthest away for the selection of next test value but picks the closest test values for the next several tests to find another failure from the same region.
 
 %\begin{figure} [H]
 %\centering
@@ -88,12 +91,15 @@ Chan et al.~\cite{chan1996proportional} found that there are domains of failure-
 
 Dirt spot sweeping is the feature of DSSR strategy that comes into action when a failure is found in the system. On finding a failure, it immediately adds the value causing the failure and its neighbouring values to the existing list of interesting values. For example, in a program when the \verb+int+ type value of 50 causes a failure in the system then spot sweeping will add values from 47 to 53 to the list of interesting values. If the failure lies in the block or strip domain, then adding it's neighbouring values will explore other failures present in the block or strip. In DSSR strategy the list of interesting values is dynamic and changes during the test execution of each program. While in R+ strategy, the list of interesting values remain static and manually changed before the start of each test.
 
+\bigskip
 \begin{figure}[ht]
 \centering
 \includegraphics[width=10cm,height=4cm]{chapter4/block2.png}
+\bigskip
 \caption{Exploration of failures by DSS in block and strip domain}
 \label{fig:block2}
 \end{figure}
+\bigskip
 
 Figure \ref{fig:block2} shows how DSS explores the failures residing in the block and strip domains of a program. The coverage of block and strip domain is shown in spiral form because first failure leads to second, second to third and so on till the end. In case the failure is positioned on the point domain then the added values may not be effective because point domain is only an arbitrary failure point in the whole input domain.
 
@@ -199,10 +205,12 @@ The above process explains that including the border, failure-finding and surrou
 \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
 \fbox{\includegraphics[width=15cm,height=9cm]{chapter4/random.png}}
+\bigskip
 \caption{Test result of random strategy for the example code}
 \label{fig:random_result}
 \end{figure}
 
+\bigskip
 \bigskip
 
 \begin{figure}[H]
@@ -210,6 +218,7 @@ The above process explains that including the border, failure-finding and surrou
 \setlength{\fboxsep}{0pt}%
 \setlength{\fboxrule}{1pt}%
 \fbox{\includegraphics[width=15cm,height=9cm]{chapter4/DSSR.png}}
+\bigskip
 \caption{Test result of DSSR strategy for the example code}
 \label{fig:dssr_result}
 \end{figure}
@@ -323,14 +332,15 @@ The literature review revealed that the F-measure is used where testing stops af
 
 
 %%%%%%%%%%%%%%%%%    RESULTS   %%%%%%%%%%%%%%%%%%%%
-
+\bigskip
 \begin{figure}[h]
 	\centering
-	\centerline{\includegraphics[width=16cm, height=12cm]{chapter4/DssrImprove.png}}
+	\centerline{\includegraphics[width=16cm, height=11cm]{chapter4/DssrImprove.png}}
+	\bigskip
 	\caption{Performance of DSSR in comparison with R and R+ strategies.}
 	\label{fig:LineChart}
 \end{figure}
-
+\bigskip
 
 %\begin{figure}[h]
 %\centerline{\includegraphics[width=16.5cm,height=9cm]{chapter4/DssrImprove.png}}
@@ -571,6 +581,7 @@ The DSSR strategy performed better when the number of failures was higher in the
 \textbf{Effect of identification of first failure on the results:}
 During the experiments, It was noticed that quick identification of first failure was highly desirable in achieving better results from DSSR strategy. This was due to the feature of DSS which added the failure finding and surrounding values to the list of interesting values. However, when identification of first failure was delayed, no values were added to the list of interesting values and the DSSR performed equivalent to R+ strategy. This indicated that better ways of populating failure-inducing values were needed for sufficient leverage to DSSR strategy. As an example, the following piece of code would be unlikely to fail under the current setting:
 
+\bigskip
 \begin{lstlisting}
 public void test(float value){
  if(value == 34.4445)   {
@@ -578,6 +589,7 @@ public void test(float value){
  }
 }
 \end{lstlisting}
+\bigskip
 
 In this case, we could add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained from the constant pool in the class files of the SUT. In the example above the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the failure right away.
 

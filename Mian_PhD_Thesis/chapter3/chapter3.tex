@@ -14,11 +14,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Overview}
-York Extensible Testing Infrastructure (YETI), an automated random testing tool developed in Java, is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
+York Extensible Testing Infrastructure (YETI) is an automated random testing tool developed in Java. It is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
 \bigskip
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=4cm]{chapter3/yetiOverview.png}
+	\includegraphics[width=15.3cm, height=5cm]{chapter3/workingProcess.png}
 	\bigskip
 	\caption{Working process of YETI}
 	\label{fig:yetiOverview}
@@ -30,13 +30,15 @@ YETI has been designed with the provision of extensibility for future growth. YE
 
 \subsection{Core Infrastructure}
 The core infrastructure is responsible for test data generation, test process management and test report generation. The core infrastructure is split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The package yeti uses classes from yeti.monitoring and yeti.strategies packages and calls classes in the yeti.environment package as shown in the Figure \ref{fig:yetiCore}. 
-
+\smallskip
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=15cm, height=7cm]{chapter3/yetiCore.png}
+	\includegraphics[width=14cm, height=9cm]{chapter3/yetiStructure.png}
+	\smallskip
 	\caption{Main packages of YETI with dependencies }
 	\label{fig:yetiCore}
 \end{figure}
+\bigskip
 
 The most essential classes included in the YETI core infrastructure are:
 \begin{enumerate}
@@ -79,7 +81,11 @@ YETI construct test cases by creating objects of the classes under test and rand
 
 \subsection{Call sequence of YETI}
 
-\begin{figure}[h]
+
+
+
+
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=15cm, height=10cm]{chapter3/sequenceDiagram.png}
 	\caption{Call sequence of YETI with Java binding}
@@ -87,24 +93,22 @@ YETI construct test cases by creating objects of the classes under test and rand
 \end{figure}
 
 
-
-
-
 \subsection{Command-line Options}
 YETI is provided with several command line options which a tester can enable or disable according to the test requirement. These options are case insensitive and can be provided in any order as input to YETI from command line interface. As an example, a tester can use command line option $-nologs$ to bypass real time logging and save processing power by reducing overhead. Table~\ref{table:cliOptions} includes some of the common command line options available in YETI.
 
+\begin{center}
 \begin{table}[H]
 %\scriptsize
 \caption{YETI command line options} % title of Table
 \bigskip
-\centering
+%\centering
 \hspace{-0.8cm}
 \noindent\makebox[\textwidth]{
-{\renewcommand{\arraystretch}{1.1}
+{\renewcommand{\arraystretch}{1.6}
 \begin{tabular}{|l|l|} % centered columns (4 columns)
 \hline
 
-Options							&Purpose 										\\ \hline
+\textbf{Options}					&\textbf{Purpose} 								\\ \hline
 -java, -Java						&To test Java programs	 						\\ \hline
 -jml	, -JML						&To test JML programs							\\ \hline
 -dotnet, -DOTNET				&To test .NET programs						\\ \hline
@@ -139,24 +143,25 @@ Options							&Purpose 										\\ \hline
 \bigskip
 \label{table:cliOptions} % is used to refer this table in the text
 \end{table}
-
+\end{center}
 
 \subsection{Execution}
-YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.\\
-
-\begin{figure}[h!]
+YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the $project$ and the relevant $jar$ library files, particularly $javassist.jar$ in the $CLASSPATH$. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.
+\smallskip
+\begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width= 15cm, height = 2cm]{chapter3/yetiCommandCLI.pdf}}
+	\frame{\includegraphics[width= 15.3cm, height = 1.5cm]{chapter3/cli.png}}
+	\smallskip
 	\caption{Command to launch YETI from CLI}
 	\label{fig:yeticommand}
 \end{figure}
-
+\smallskip
+In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 10 minutes using the default random strategy. Other CLI options are already indicated in Table~\ref{table:cliOptions}. To execute YETI from GUI, $YetiLauncher$ presented in Figure~\ref{fig:yetiLauncher} has been created for use in the present study.
 \bigskip
-In this command YETI tests java.lang.String and yeti.test.YetiTest modules for 90 minutes using the default random strategy. Other CLI options are already indicated in Table \ref{table:cliOptions}. To execute YETI from GUI, $YetiLauncher$ presented in Figure \ref{fig:yetiLauncher} has been created for use in the present study.
-
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width= 9.5cm, height = 11.5cm]{chapter3/yetiCommandGUI.pdf}}
+	\frame{\includegraphics[width= 8cm, height = 9cm]{chapter3/yetiCommandGUI.pdf}}
+	\smallskip
 	\caption{GUI launcher of YETI}
 	\label{fig:yetiLauncher}
 \end{figure}
@@ -171,18 +176,20 @@ If specifications or assertions are absent, YETI performs robustness testing whi
 
 \subsection{Report}
 YETI gives a complete test report at the end of each test session. The report contains all the successful calls with the name of the routines and the unique identifiers for the parameters in each execution. These identifiers are recorded with the assigned values to help in debugging the identified fault. 
-
-\begin{figure}[h]
+\bigskip
+\begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport1.png}}
+	\frame{\includegraphics[width= 15cm, height = 3.5cm]{chapter3/yetiReport1.png}}
+	\smallskip
 	\caption{Successful method calls of YETI}
 \end{figure}
 
 YETI separates the found bugs from successful executions to simplify the test report. This helps debuggers to easily track the origin of the problem rectification. When a bug is identified during testing, YETI saves the details and present it in the bug report as shown in Figure \ref{bugReport}. The information includes all identifiers of the parameters the method call had along with the time at which the exception occurs.
 \bigskip
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\frame{\includegraphics[width= 15cm, height = 5cm]{chapter3/yetiReport2.png}}
+	\frame{\includegraphics[width= 15cm, height = 3.5cm]{chapter3/yetiReport2.png}}
+	\smallskip
 	\caption{A sample of YETI bug report}
 	\label{bugReport}
 \end{figure}
@@ -200,7 +207,7 @@ YETI supports a GUI that allows testers to monitor the test session and modify t
 
 \begin{sidewaysfigure}[htp]
 \centering
-\centerline{\includegraphics[width=24cm,height=16cm]{chapter3/yetiGUI.png}}
+\centerline{\includegraphics[width=23cm,height=16cm]{chapter3/yetiGUI.png}}
 %\includegraphics[width=14cm,height=20cm]{myfigures/plan/project_table.pdf}
 \caption{GUI front-end of YETI}
 \label{fig:yetiGUI_3}
