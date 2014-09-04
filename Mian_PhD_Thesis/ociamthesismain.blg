@@ -18,25 +18,29 @@ A level-1 auxiliary file: chapter9/chapter9.aux
 A level-1 auxiliary file: appendix1/appendix1.aux
 The style file: unsrt.bst
 Database file #1: references1/refs.bib
-Repeated entry---line 860 of file references1/refs.bib
+Repeated entry---line 891 of file references1/refs.bib
  : @article{claessen2011quickcheck
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1079 of file references1/refs.bib
+Repeated entry---line 1110 of file references1/refs.bib
  : @article{radatz1990ieee
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1448 of file references1/refs.bib
+Repeated entry---line 1479 of file references1/refs.bib
  : @incollection{oriat2005jartege
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1537 of file references1/refs.bib
+Repeated entry---line 1568 of file references1/refs.bib
  : @inproceedings{miller2006empirical
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1594 of file references1/refs.bib
+Repeated entry---line 1625 of file references1/refs.bib
  : @inproceedings{pacheco2007randoop
  :                                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1754 of file references1/refs.bib
+ : @article{yoo2012test
+ :                     ,
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in howden1986functional
 Warning--can't use both volume and number fields in mccabe1983structured
@@ -52,45 +56,45 @@ Warning--can't use both volume and number fields in boyapati2002korat
 Warning--there's a number but no volume in duran1984evaluation
 Warning--can't use both volume and number fields in offutt1996semantic
 Warning--there's a number but no volume in white1980domain
-You've used 128 entries,
+You've used 130 entries,
             1791 wiz_defined-function locations,
-            1120 strings with 24007 characters,
-and the built_in function-call counts, 34872 in all, are:
-= -- 3446
-> -- 1142
-< -- 64
-+ -- 437
-- -- 309
-* -- 2094
-:= -- 4982
-add.period$ -- 433
-call.type$ -- 128
-change.case$ -- 111
+            1129 strings with 24336 characters,
+and the built_in function-call counts, 35479 in all, are:
+= -- 3510
+> -- 1157
+< -- 65
++ -- 443
+- -- 313
+* -- 2132
+:= -- 5065
+add.period$ -- 440
+call.type$ -- 130
+change.case$ -- 113
 chr.to.int$ -- 0
-cite$ -- 142
-duplicate$ -- 1765
-empty$ -- 3537
-format.name$ -- 309
-if$ -- 8257
+cite$ -- 144
+duplicate$ -- 1795
+empty$ -- 3599
+format.name$ -- 313
+if$ -- 8402
 int.to.chr$ -- 0
-int.to.str$ -- 128
-missing$ -- 139
-newline$ -- 640
-num.names$ -- 128
-pop$ -- 521
+int.to.str$ -- 130
+missing$ -- 141
+newline$ -- 650
+num.names$ -- 130
+pop$ -- 528
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 945
+skip$ -- 962
 stack$ -- 0
-substring$ -- 2564
-swap$ -- 631
-text.length$ -- 64
+substring$ -- 2621
+swap$ -- 643
+text.length$ -- 65
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 14
-while$ -- 375
-width$ -- 131
-write$ -- 1435
-(There were 5 error messages)
+while$ -- 382
+width$ -- 133
+write$ -- 1458
+(There were 6 error messages)
