@@ -126,18 +126,17 @@ Based on the perspective taken, software testing is divided into white-box and b
 %  \caption{White-box testing}
 % \vspace{-18pt}
 %\end{wrapfigure}
-White-box testing also known as structural testing is a technique that takes into consideration the structure of the software. The testers should know about the complete structure of the software in order to make necessary modifications, if so required. Test cases are derived from the code structure and test passes if the results are correct  and the proper code is followed during test execution~\cite{ostrand2002white}. A simplified version of white-box testing is shown in Figure~\ref{fig:whiteBox}. 
+White-box testing also known as structural testing is a technique that takes into consideration the structure of the software. The testers should know about the complete structure of the software in order to make necessary modifications, if so required. Test cases are derived from the code structure and test passes if the results are correct  and the proper code is followed during test execution~\cite{ostrand2002white}. A simplified version of white-box testing is shown in Figure~\ref{fig:whiteBox}. Some commonly used white-box testing techniques are as follows:
+
 \bigskip
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-	\includegraphics[width=5cm, height=5.5cm ]{chapter2/whiteBox.png}
+	\includegraphics[width=4cm, height=4.5cm ]{chapter2/whiteBox.png}
 	\bigskip
 	\caption{White-box testing}
 	\label{fig:whiteBox}
 \end{center}  
 \end{figure}
-\bigskip
-Some commonly used white-box testing techniques are as follows:
 
 \subsubsection{Data Flow Analysis}
 Data Flow Analysis (DFA) is a technique which focuses on the input values by observing the behaviour of respective variables during execution of the SUT~\cite{clarke1989formal}. In this technique a Control Flow Graph (CFG) representing all possible states of a program is drawn to determine the paths that are traversed by the program during test execution. Test cases are generated and executed to verify conformance with CFG on the basis of data flow. 
@@ -147,8 +146,12 @@ The data flow analysis observes the program execution as data flow from input to
 \subsubsection{Control Flow Analysis}
 Control Flow Analysis (CFA) is a technique which takes into consideration the control structure of a given SUT. Control structure is the order in which the statements, instructions and function-calls are executed. Like DFA, this technique also involves drawing of CFG to determine the traversable paths by a program during the execution. Test cases are generated and executed to verify conformance with CFG on the basis of control flow. For example, the CFA ensures that the selected test cases execute all possible control choices at least once when two or more control choices are available to reach a particular state in the given SUT. %Two of the most common measurement criteria defined by Vilkomir et al. are Branch coverage and Condition coverage~\cite{vilkomir2003tolerance}. 
 
-\subsubsection{Code-based Fault Injection Testing}
-It is a testing technique in which new instructions are added to the code of the SUT at one or more locations to analyse the software behaviour in response to the given instructions~\cite{voas1997software}. The process of code addition (instrumentation) is performed before compilation and execution of software. Code is added to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process.    
+\subsubsection{Fault Injection Testing}
+Fault injection testing is a validation technique to find error handling behaviour of software, examine the capability of test procedure and measure the code coverage achieved by the testing process~\cite{arlat1990validation}. The fault injection is usually software-based or hardware-based as stated below:
+
+\textbf{Software-based fault injection:} In this technique faulty code is injected in to the SUT at one or more locations to analyse the software behaviour in response to the faults~\cite{voas1997software}. For example, changing value of a variable or return type of a method. The process of code addition (instrumentation) is performed before compilation and execution of software. 
+
+\textbf{Hardware-based fault injection:} In this technique faults are injected by disturbing physical environment of the system to analyse the system behaviour in response to the change condition. For example injecting different voltage sags, introducing electromagnetic interference and change in temperature.
 
 \subsection{Black-box Testing}
 %\begin{wrapfigure}{r}{0.36\textwidth}
@@ -167,7 +170,7 @@ Black-box testing also known as functional testing is a technique that takes int
 \bigskip
 \begin{figure}[h]
 \begin{center}
-	\includegraphics[width=5cm, height=5.5cm ]{chapter2/blackBox.png}
+	\includegraphics[width=4cm, height=4.5cm ]{chapter2/blackBox.png}
 	\bigskip
 	\caption{Black-box testing}
  	\label{fig:blackBox}
@@ -240,9 +243,9 @@ The formal specification testing is more productive because of the creation of t
 \section{Software Testing Types}
 There are two types of software testing: static and dynamic.
 
-Static testing involves analysis of test cases statically for checking errors without executing the test cases. Static analysis is applicable to evaluate the quality of software code and supporting documents including requirements, design, user manual, technical notes and marketing information. Reviews, walkthroughs and inspections are most commonly used techniques for static testing.
+\textbf{Static testing:} It involves analysis of test cases statically for checking errors without executing the test cases. Static analysis is applicable to evaluate the quality of software code and supporting documents including requirements, design, user manual, technical notes and marketing information. Reviews, walkthroughs and inspections are most commonly used techniques for static testing.
 
-Dynamic testing involves execution of test cases against SUT. The results obtained are analysed against expected output to find any error in the software. Unit testing, integration testing, system testing and acceptance testing are most commonly used methods for dynamic testing~\cite{fairley1978tutorial}.
+\textbf{Dynamic testing:} It involves execution of test cases against SUT. The results obtained are analysed against expected output to find any error in the software. Unit testing, integration testing, system testing and acceptance testing are most commonly used methods for dynamic testing~\cite{fairley1978tutorial}.
 
 %Dynamic testing can be manual or automated. In manual testing the programmer develops the test cases which are executed by the developed software to find any error in processing or output. Similarly in automated testing the software or components of the software is given as input to testing software that automatically generates test cases and executes the SUT against them to find any errors. Manual testing typically consumes more time and resources than automated testing.
 
@@ -259,7 +262,7 @@ Automated software testing refers to the technique in which an automated tool is
 A fully automated testing system is capable to test software without any user intervention. This is usually achieved by utilizing the contracts (preconditions, postconditions and invariants) embedded in the program code. Preconditions are used to filter out invalid inputs and postconditions are used as oracle~\cite{leitner2007reconciling}. Eiffel~\cite{ecma2005367} and Spec\#~{barnett2005spec} languages have built-in contracts whereas Java can use add-ons like JML~\cite{leavensjml}, iContract~\cite{kramer1998icontract} or OCL~\cite{richters1998formalizing} to enable it. 
 %Increase in functionality, higher productivity and lower cost of production without compromising quality are the desirable features in favour of automating the process of software testing. 
 Automated software testing may involve higher initial cost but brings the key benefits of lower cost of production, higher productivity, maximum availability, greater reliability, better performance and ultimately proves highly beneficial for any organisation. Automated testing is particularly effective when the nature of job is repetitive and it is performed on routine basis like unit testing and regression testing where the tests are re-executed after each modification~\cite{huang2003automated}. The use of automated software testing makes it possible to test large volumes of code, which may be impossible otherwise~\cite{ramamoorthy1975testing}.
-\newpage
+
 \section{Test Data Generation}
 Test data generation in software testing is the process of identifying and selecting input data which satisfies the given criterion. A test data generator is used to assist testers in the generation of data while the selection criterion defines the properties of test cases to be generated based on the test plan and perspective taken~\cite{korel1990automated}. Various artefacts of the SUT can be considered to generate test data like requirements, model, code etc. The choice of artefacts selected limits the kind of test selection criteria that can be applied in guiding the test case generation. 
 
@@ -307,7 +310,7 @@ The genetic algorithm is a heuristic that mimics the evolution of natural specie
 % Please paraphrase the above section genetic algorithm.
 
 \subsection{Search-based Test Data Generator} \label{sec:search_based_2}
-Search-based test data generator uses meta-heuristic algorithms to generate test data. In this technique each input vector~\verb+x+ is associated with a measure~\verb+cost(x)+ which represents the difference between the input value~\verb+x+ and the set goal. Input value closer to the set goal has low cost value as against the input value away from the set goal. \\*
+Search-based test data generation is mentioned in the literature for the first time by Webb Miller and David Spooner in 1976~\cite{miller1976automatic}. It uses meta-heuristic algorithms to generate test data. In this technique each input vector~\verb+x+ is associated with a measure~\verb+cost(x)+ which represents the difference between the input value~\verb+x+ and the set goal. Input value closer to the set goal has low cost value as against the input value away from the set goal. \\*
 Let us consider the following program.
 \bigskip
 \bigskip

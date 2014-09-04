@@ -80,8 +80,30 @@ The language-specific binding facilitates modelling of programming languages. It
 YETI construct test cases by creating objects of the classes under test and randomly calls methods with random inputs according to the parameter's-space. YETI splits input values into two types i.e. primitive data types and user defined classes. For primitive data types as methods parameters, YETI in random strategy calls $Math.random()$ method to generate arithmetic values are converted to the required type using Java cast operation. In the case of user-defined classes as a parameter YETI calls constructor or method to generate object of the class at run time. The constructor may possibly require another object, then YETI recursively calls the constructor or method of that object. This process is continued till an object with empty constructor or a constructor with only primitive types or the set level of recursion is reached.
 
 \subsection{Call sequence of YETI}
+% check testing jml code with yeti for more details.
+The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts interaction of processes and their order when a Java program is tested by YETI for specific number of times using the default random strategy.  The steps involved are as follows:
+\begin{itemize}
+\item When the test begins, the test engine (\textit{YetiEngine}) instruments the test manager (\textit{YetiJavaTestManager}) to initiate the testing of given class (\textit{YetiJavaModule}) for N number of times (\textit{testModuleForNumberofTimes}) using the test strategy (\textit{YetiRandomStrategy}).
+
+\item The test manager creates (\textit{makeNextCall}) thread (\textit{CallerThread}) which handles the testing of given program.
+
+\item The thread requests the test strategy to fetch a routine (\textit{constructor or method}) from the program under test (\textit{getNextRoutine}). 
+
+\item The test strategy randomly selects (\textit{getRoutineAtRandom} a routine from the class (\textit{YetiJavaModule}).
+
+\item The thread requests the test strategy to generate the arguments (\textit{cards}) for the selected routine (\textit{getAllCards}).
+
+ \item The test strategy randomly generates the required arguments and send them to the requesting thread.
+ 
+ \item The thread tests the selected routine (\textit{YetiJavaMethod}) of the module with the generated arguments (\textit{makeCall}).
+ 
+ \item The routine is mapped to the instance of method with the help of class inheritance and dynamic binding. YetiJavaMethod executes the method under test using Java Reflection API (\textit{makeEffectiveCall}).
+ 
+\item The output obtained from MakeEffectiveCall is evaluated against Java oracle which resides in the makeCall method of YetiJavaMethod.
 
 
+
+\end{itemize}
 
 
 
@@ -89,7 +111,7 @@ YETI construct test cases by creating objects of the classes under test and rand
 	\centering
 	\includegraphics[width=15cm, height=10cm]{chapter3/sequenceDiagram.png}
 	\caption{Call sequence of YETI with Java binding}
-	\label{fig:yetiCore}
+	\label{fig:yetiSequenceDiagram}
 \end{figure}
 
 

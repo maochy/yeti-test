@@ -54,10 +54,10 @@ Ron Patton.
 \newblock {\em Software testing}, volume~2.
 \newblock Sams Indianapolis, 2001.
 
-\bibitem{myers2011art}
-Glenford~J Myers, Corey Sandler, and Tom Badgett.
-\newblock {\em The art of software testing}.
-\newblock John Wiley \& Sons, 2011.
+\bibitem{beizer2003software}
+Boris Beizer.
+\newblock {\em Software testing techniques}.
+\newblock Dreamtech Press, 2003.
 
 \bibitem{howden1986functional}
 William~E. Howden.
@@ -88,6 +88,12 @@ Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
 \newblock In {\em Proceedings of the 2007 international symposium on Software
   testing and analysis}, pages 84--94. ACM, 2007.
 
+\bibitem{chen2005adaptive}
+T.~Y. Chen.
+\newblock Adaptive random testing.
+\newblock {\em Eighth International Conference on Qualify Software}, 0:443,
+  2008.
+
 \bibitem{dahl1972structured}
 Ole-Johan Dahl, Edsger~Wybe Dijkstra, and Charles Antony~Richard Hoare.
 \newblock {\em Structured programming}.
@@ -97,6 +103,11 @@ Ole-Johan Dahl, Edsger~Wybe Dijkstra, and Charles Antony~Richard Hoare.
 Patrice Godefroid, Nils Klarlund, and Koushik Sen.
 \newblock {DART:} directed automated random testing.
 \newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
+
+\bibitem{myers2011art}
+Glenford~J Myers, Corey Sandler, and Tom Badgett.
+\newblock {\em The art of software testing}.
+\newblock John Wiley \& Sons, 2011.
 
 \bibitem{white1987software}
 Lee~J. White.
@@ -174,6 +185,12 @@ Lori~A Clarke, Andy Podgurski, Debra~J. Richardson, and Steven~J. Zeil.
 Lloyd~D Fosdick and Leon~J Osterweil.
 \newblock Data flow analysis in software reliability.
 \newblock {\em ACM Computing Surveys (CSUR)}, 8(3):305--330, 1976.
+
+\bibitem{arlat1990validation}
+Jean Arlat.
+\newblock {\em Validation de la s{\^u}ret{\'e} de fonctionnement par injection
+  de fautes, m{\'e}thode- mise en oeuvre- application}.
+\newblock PhD thesis, 1990.
 
 \bibitem{voas1997software}
 Jeffrey~M Voas and Gary McGraw.
@@ -315,6 +332,11 @@ Roy~P Pargas, Mary~Jean Harrold, and Robert~R Peck.
 \newblock {\em Software Testing Verification and Reliability}, 9(4):263--282,
   1999.
 
+\bibitem{miller1976automatic}
+Webb Miller and David~L. Spooner.
+\newblock Automatic generation of floating-point test data.
+\newblock {\em IEEE Transactions on Software Engineering}, 2(3):223--226, 1976.
+
 \bibitem{hanford1970automatic}
 Kenneth~V. Hanford.
 \newblock Automatic generation of test cases.
@@ -396,17 +418,6 @@ Alex Groce, Gerard Holzmann, and Rajeev Joshi.
 \newblock Randomized differential testing as a prelude to formal verification.
 \newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
   Conference on}, pages 621--631. IEEE, 2007.
-
-\bibitem{beizer2003software}
-Boris Beizer.
-\newblock {\em Software testing techniques}.
-\newblock Dreamtech Press, 2003.
-
-\bibitem{chen2005adaptive}
-T.~Y. Chen.
-\newblock Adaptive random testing.
-\newblock {\em Eighth International Conference on Qualify Software}, 0:443,
-  2008.
 
 \bibitem{chen2004mirror}
 Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
