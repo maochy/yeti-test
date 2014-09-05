@@ -12,7 +12,7 @@ Testing is a fundamental requirement for assessing the quality of any software. 
 
 The fact that exhaustive testing for any non-trivial program is not possible, compels the testers to come up with some strategy of input selection from the whole input domain. Random is one of the possible strategies widely used in automated tools. It is intuitively simple and easy to implement~\cite{ciupa2008finding, miller2006empirical}. It involves minimum or no overhead in input selection and lacks human bias~\cite{hamlet1994random, linger1993cleanroom}. Random testing has several benefits but there are some limitations as well, including low code coverage~\cite{offutt1996semantic} and discovery of lower number of faults~\cite{Chen1994}. To overcome these limitations and retain the benefits intact many researchers have successfully refined random testing. Adaptive Random Testing (ART) is one of the most significant refined version of of random testing. Experiments performed using ART showed up to 50\% better results compared to the traditional random testing ~\cite{chen2005adaptive}.  Similarly Restricted Random Testing (RRT)~\cite{chan2006restricted}, Mirror Adaptive Random Testing (MART) ~\cite{chen2004mirror}, Adaptive random testing for object oriented program (Artoo)~\cite{ciupa2008artoo}, Directed Adaptive Random Testing (DART) ~\cite{godefroid2005dart}, Lattice-based Adaptive Random Testing (LART)~\cite{mayer2005lattice} and Feedback-directed Random Testing (FDRT)~\cite{pacheco2007randoop, pacheco2007feedback} are some of the improved versions of random testing.
 
-All the above-mentioned versions of random testing are based on the observation of Chan et al.~\cite{chan1996proportional} that failure causing inputs across the whole input domain form certain kinds of domains. They classified these domains into point, block \& strip failure domain and suggested that the failure finding ability of testing could be improved by taking into consideration these failure domains. In Section~\ref{sec:failuredomains_2} the square boxes represent the whole input domain. The black points, block and strip inside the boxes represent the faulty values while the white area inside the boxes represent legitimate values for a specific system. 
+All the above-mentioned versions of random testing are based on the observation of Chan et al.~\cite{chan1996proportional} that failure causing inputs across the whole input domain form certain kinds of domains. They classified these domains into point, block \& strip failure domain and suggested that the failure finding ability of testing could be improved by taking into consideration these failure domains (see Section~\ref{sec:failuredomains_2}). %In Section~\ref{sec:failuredomains_2} the square boxes represent the whole input domain. The black points, block and strip inside the boxes represent the faulty values while the white area inside the boxes represent legitimate values for a specific system. 
 
 %\begin{figure}[h]
 %\centering
@@ -182,15 +182,24 @@ The values from the pass and fail files are used to plot (x, y) chart using JFre
 %Figure shows the example of strip pattern. Here we have two strip failure pattern for test 1 shown in \ref{fig1:a} and \ref{fig1:b} while 1 other for test 2 given in . The failure values are given in table .\\
 
 \section{Implementation}\label{sec:implementation}
-The ADFD strategy is implemented in a tool called York Extensible Testing Infrastructure (YETI). YETI is available in open-source at \url{http://code.google.com/p/yeti-test/}. In this section a brief overview of YETI is given with the focus on the parts relevant to the implementation of ADFD strategy. For integration of ADFD strategy in YETI, a program is used as an example to illustrate the working of ADFD strategy. Please refer to~\ref{chap:yeti_3} for more details on YETI.
+The ADFD strategy is also implemented implemented in YETI. Please refer to Chapter~\ref{chap:yeti_3} for details on YETI. In this section we give a brief overview of implementation of ADFD strategy in YETI and illustrate it with the help of an example. 
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm,height=8cm]{chapter5/classHierarchy2.png}
+\caption{Class Hierarchy of ADFD strategy in YETI}
+\label{fig:hierarchyofADFD}
+\end{figure}
+%\subsection{York Extensible Testing Infrastructure}
+%YETI is a testing tool developed in Java that tests programs using random strategies in an automated fashion. YETI meta-model is language-agnostic which enables it to test programs written in functional, procedural and object-oriented languages.
 
-\subsection{York Extensible Testing Infrastructure}
-YETI is a testing tool developed in Java that tests programs using random strategies in an automated fashion. YETI meta-model is language-agnostic which enables it to test programs written in functional, procedural and object-oriented languages.
-
-YETI consists of three main parts including core infrastructure for extendibility through specialisation, strategies section for adjustment of multiple strategies and languages section for supporting multiple languages. Both the languages and strategies sections have a pluggable architecture to easily incorporate new strategies and languages making YETI a favourable choice to implement ADFD strategy. YETI is also capable of generating test cases to reproduce the failures found during the test session.
+%YETI consists of three main parts including core infrastructure for extendibility through specialisation, strategies section for adjustment of multiple strategies and languages section for supporting multiple languages. Both the languages and strategies sections have a pluggable architecture to easily incorporate new strategies and languages making YETI a favourable choice to implement ADFD strategy. YETI is also capable of generating test cases to reproduce the failures found during the test session.
  
  \subsection{ADFD strategy in YETI}
 ADFD strategy is implemented in the strategies section of YETI. This section contains various strategies including random, random+ and DSSR to be selected for testing according to the specific needs. The default strategy for testing YETI is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and it is further extended to get ADFD strategy.
+
+
+
 % as shown in figure \ref{fig:hierarchy}. 
  
 %\begin{figure}[h]
@@ -271,7 +280,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 %\begin{center}
 
 %\end{center}
-
+\bigskip
 \begin{table}[h]
 %\renewcommand{\arraystretch}{2}
 \caption{Experimental results of programs tested with ADFD strategy}
@@ -319,8 +328,9 @@ To elucidate the results, six programs were developed so as to have separate pro
 \label{table:failtable}
 \end{table}
 
+\bigskip
 
-\newpage
+\clearpage
 
 \noindent \textbf{Point Fault Domain:}  Two separate Java programs Pro2 and Pro3, given in Appendix \ref{sec:appendix1} (2, 3), were tested with ADFD strategy in YETI to get the findings for point fault domain in one and two-dimension program. Figure \ref{fig:PFDOne} presents range of pass and fail values for point fault domain in one-dimension whereas Figure \ref{fig:PFDTwo} presents range of pass and fail values for point fault domain in two-dimension program. The range of pass and fail values for each program in point fault domain is given in Table \ref{table:failtable}.
 %%%%%%%%%%%%%%%%Point Domain%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -355,7 +365,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 %\label{fig:PFDTwo}
 %\end{figure}
 
-
+\newpage
 \noindent \textbf{Block Fault Domain:}  Two separate Java programs Pro4 and Pro5 given in Appendix \ref{sec:appendix1} (4, 5) were tested with ADFD strategy in YETI to get the findings for block fault domain in one and two-dimensional program. Figure \ref{fig:BFDOne} presents range of pass and fail values for block fault domain in one-dimension whereas Figure \ref{fig:BFDTwo} presents range of pass and fail values for block fault domain in two-dimension program. The range of pass and fail values for each program in block fault domain is given in Table \ref{table:failtable}.
 %%%%%%%%%%%%%%%Block domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%
@@ -397,7 +407,7 @@ To elucidate the results, six programs were developed so as to have separate pro
 %\end{figure}
 
 
-
+\newpage
 \noindent \textbf{Strip Fault Domain:} Two separate Java programs Pro6 and Pro7 given in Appendix \ref{sec:appendix1} (6, 7) were tested with ADFD strategy in YETI to get the findings for strip fault domain in one and two-dimension program. Figure \ref{fig:SFDOne} presents range of pass and fail values for strip fault domain in one-dimension whereas Figure \ref{fig:SFDTwo} presents range of pass and fail values for strip fault domain in two-dimension program. The range of pass and fail values for each program in strip fault domain is given in Table \ref{table:failtable}.
 
 

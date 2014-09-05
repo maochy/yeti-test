@@ -13,8 +13,10 @@
 %														 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%In this chapter we describe York Extensible Testing Infrastructure (YETI). YETI is used as a platform for implementation of all the strategies developed in the current research study. 
+
 \section{Overview}
-York Extensible Testing Infrastructure (YETI) is an automated random testing tool developed in Java. It is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with random generated but syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which make YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. The latest version of YETI can be downloaded from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
+York Extensible Testing Infrastructure (YETI) is an automated random testing tool developed in Java. It is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes program byte code as input and execute it with randomly generated syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent feature is Graphical User Interface (GUI), which makes YETI user friendly and provides option to change testing process in real time. It can also distribute large testing tasks in cloud for parallel execution~\cite{oriol2010yeti}. YETI is an open-source project and its latest version can be downloaded freely from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
 \bigskip
 \begin{figure}[h]
 	\centering
@@ -26,11 +28,12 @@ York Extensible Testing Infrastructure (YETI) is an automated random testing too
 
 
 \section{Design}
-YETI has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
+YETI is a lightweight platform with around 5000 lines of code. It has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
 
-\subsection{Core Infrastructure}
-The core infrastructure is responsible for test data generation, test process management and test report generation. The core infrastructure is split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The package yeti uses classes from yeti.monitoring and yeti.strategies packages and calls classes in the yeti.environment package as shown in the Figure \ref{fig:yetiCore}. 
-\smallskip
+\subsection{Core Infrastructure of YETI}
+The core infrastructure of YETI provides extendibility through specialization. The abstract classes included in this section can be extended to create new strategies and language bindings. It is responsible for test data generation, test process management and test report production. The core infrastructure is split into four packages: yeti, yeti.environments, yeti.monitoring, yeti.strategies. The package yeti uses classes from yeti.monitoring and yeti.strategies packages and calls classes in the yeti.environment package as shown in the Figure \ref{fig:yetiCore}. 
+
+\bigskip
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=14cm, height=9cm]{chapter3/yetiStructure.png}
@@ -39,7 +42,8 @@ The core infrastructure is responsible for test data generation, test process ma
 	\label{fig:yetiCore}
 \end{figure}
 \bigskip
-
+\bigskip
+\bigskip
 The most essential classes included in the YETI core infrastructure are:
 \begin{enumerate}
 \item {\textbf{Yeti:}} It is the entry point to YETI and contains the main method. It parses the arguments, sets up the environment, initializes the testing and delivers the reports of the test results.
@@ -52,13 +56,14 @@ The most essential classes included in the YETI core infrastructure are:
 \end{enumerate}
 
 \subsection{Strategy}
-The strategy defines a specific way to generate test inputs. This part contains six essential strategies stated below.
+The strategy defines a specific way to generate test inputs. This part contains seven essential strategies stated below.
 \begin{enumerate}
 \item {\textbf{YetiStrategy:}} It is an abstract class which provides interface for every strategy in YETI.
 \item {\textbf{YetiRandomStrategy:}} It implements the random strategy and generates random values for testing. The strategy gives choice to the user to adjust null values probability and the percentage of creating new objects for the test session. 
 \item {\textbf{YetiRandomPlusStrategy:}} It extends the random strategy by adding interesting values to the list of test values. The strategy gives the choice to the user to select the percentage of interesting values used in the test session.
 \item {\textbf{DSSRStrategy:}} It extends random+ strategy by adding the values surrounding the failure value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
-\item {\textbf{ADFDStrategy:}} It extends random+ strategy by adding the feature of graphical representation of failures and their domains. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{ADFDStrategy:}} It extends random+ strategy by adding the feature of graphical representation of failures and their domains within the given lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{ADFD+Strategy:}} It extends random+ strategy by adding the feature of graphical representation of failures and their domains within the given radius. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
 \item {\textbf{YetiRandomDecreasingStrategy:}} It extends the random+ strategy by setting the probability value to starts at 100\% and ends at 0\% when the test finishes.
 \item {\textbf{YetiRandomPeriodicStrategy:}} It extends random+ strategy by setting the probability in such a way that it decreases and increases randomly during test session.
 \end{enumerate}
@@ -82,7 +87,18 @@ YETI construct test cases by creating objects of the classes under test and rand
 \subsection{Call sequence of YETI}
 % check testing jml code with yeti for more details.
 The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts interaction of processes and their order when a Java program is tested by YETI for specific number of times using the default random strategy.  The steps involved are as follows:
-\begin{itemize}
+
+\bigskip
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=15cm, height=10cm]{chapter3/sequenceDiagram.png}
+	\bigskip
+	\caption{Call sequence of YETI with Java binding}
+	\label{fig:yetiSequenceDiagram}
+\end{figure}
+\bigskip
+
+\begin{enumerate}
 \item When the test begins, the test engine (\textit{YetiEngine}) instruments the test manager (\textit{YetiJavaTestManager}) to initiate the testing of given class (\textit{YetiJavaModule}) for N number of times (\textit{testModuleForNumberofTimes}) using the test strategy (\textit{YetiRandomStrategy}).
 
 \item The test manager creates (\textit{makeNextCall}) thread (\textit{CallerThread}) which handles the testing of given program.
@@ -101,18 +117,10 @@ The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts inter
  
 \item The output obtained from MakeEffectiveCall is evaluated against Java oracle which resides in the makeCall method of YetiJavaMethod.
 
-
-
-\end{itemize}
+\end{enumerate}
 
 
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=15cm, height=10cm]{chapter3/sequenceDiagram.png}
-	\caption{Call sequence of YETI with Java binding}
-	\label{fig:yetiSequenceDiagram}
-\end{figure}
 
 
 \subsection{Command-line Options}
@@ -270,7 +278,7 @@ class names in the test module.
 
 
 \section{Summary}
-The chapter explains in detail the tool YETI which is being used in this study. YETI has been thoroughly reviewed including an overview, design, core infrastructure, strategy, language-specific binding, construction of test cases, command line options, execution, test oracle, report generation and graphical user interface.
+The chapter explains in detail the automated random testing tool YETI which is being used in this study. YETI has been thoroughly reviewed including an overview, design, core infrastructure, strategy, language-specific binding, construction of test cases, command line options, execution, test oracle, report generation and graphical user interface.
 
 
 %The main features of all the tools are noted in the following table.

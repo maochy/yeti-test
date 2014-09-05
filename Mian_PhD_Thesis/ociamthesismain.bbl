@@ -29,6 +29,13 @@ Darko Marinov and Sarfraz Khurshid.
 \newblock In {\em Automated Software Engineering, 2001.(ASE 2001). Proceedings.
   16th Annual International Conference on}, pages 22--31. IEEE, 2001.
 
+\bibitem{ernst2001dynamically}
+Michael~D Ernst, Jake Cockrell, William~G Griswold, and David Notkin.
+\newblock Dynamically discovering likely program invariants to support program
+  evolution.
+\newblock {\em Software Engineering, IEEE Transactions on}, 27(2):99--123,
+  2001.
+
 \bibitem{wilkes1985memoirs}
 Maurice Wilkes.
 \newblock {\em Memoirs of a computer pioneer}.
@@ -568,18 +575,6 @@ Carlos Pacheco, Shuvendu~K Lahiri, Michael~D Ernst, and Thomas Ball.
 \newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
   Conference on}, pages 75--84. IEEE, 2007.
 
-\bibitem{duran1984evaluation}
-Joe~W Duran and Simeon~C. Ntafos.
-\newblock An evaluation of random testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, (4):438--444, 1984.
-
-\bibitem{ntafos2001comparisons}
-Simeon~C. Ntafos.
-\newblock On comparisons of random, partition, and proportional partition
-  testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, 27(10):949--960,
-  2001.
-
 \bibitem{oriol2012random}
 Manuel Oriol.
 \newblock Random testing: Evaluation of a law describing the number of faults
@@ -637,6 +632,11 @@ Shin Yoo and Mark Harman.
   data.
 \newblock {\em Software Testing, Verification and Reliability}, 22(3):171--201,
   2012.
+
+\bibitem{duran1984evaluation}
+Joe~W Duran and Simeon~C. Ntafos.
+\newblock An evaluation of random testing.
+\newblock {\em Software Engineering, IEEE Transactions on}, (4):438--444, 1984.
 
 \bibitem{gutjahr1999partition}
 Walter~J Gutjahr.
