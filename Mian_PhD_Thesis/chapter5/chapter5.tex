@@ -98,36 +98,35 @@ The process is divided into five major steps given below and each step is briefl
 \bigskip
 \begin{figure}[ht]
 \centering
-\includegraphics[width=15cm,height=10cm]{chapter5/ADFD_Diagram1.png}
+\includegraphics[width=15cm,height=11cm]{chapter5/ADFD_Diagram1.png}
 \bigskip
 \caption{Work flow of ADFD strategy}
 \label{fig:ADFD-workflow}
 \end{figure}
 \bigskip
 
-\bigskip
-\begin{figure}[htp]
+\subsection{GUI front-end for Providing Input:}
+ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input, including program language, strategy, duration, enable or disable YETI GUI, logs and program in byte code. In addition, it also takes minimum and maximum values to search for failure domain in the specified range. Default range for minimum and maximum is taken as Integer.MIN\_INT and Integer.MAX\_INT respectively. The GUI front-end of ADFD technique is given in \ref{fig:ADFD-frontend}.
+
+
+\subsection{Automated Finding of Failure:}
+ADFD, being extended form of R+ strategy, relies on R+ strategy to find the first failure. Random+ strategy is an improvement on random strategy with preference for the boundary values to provide better failure finding ability. % ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\
+
+\begin{figure}[H]
 \begin{center}
 %\centring
-\includegraphics[width=15cm,height=10cm]{chapter5/ADFD_front_end.png}
+\includegraphics[width=15cm,height=11cm]{chapter5/ADFD_front_end.png}
 \bigskip
 \caption{Front-end of ADFD strategy}
 \label{fig:ADFD-frontend}
 \end{center}
 \end{figure}
-\bigskip
-
-\subsection{GUI front-end for Providing Input:}
-ADFD strategy is provided with an easy to use GUI front-end to get input from the user. It takes YETI specific input, including program language, strategy, duration, enable or disable YETI GUI, logs and program in byte code. In addition, it also takes minimum and maximum values to search for failure domain in the specified range. Default range for minimum and maximum is taken as Integer.MIN\_INT and Integer.MAX\_INT respectively.\\
-
-\subsection{Automated Finding of Failure:}
-ADFD, being extended form of R+ strategy, relies on R+ to find the first failure. Random+ is an improvement on random strategy with preference for the boundary values to provide better failure finding ability. % ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\
 
 \subsection{Automated Generation of Modules:}
 After a failure is found in the SUT, ADFD strategy generates complete new Java program to search for failure domains in the given SUT.  These programs with ``.java" extensions are generated through dynamic compiler API included in Java 6 under javax.tools package. The number of programs generated can be one or more, depending on the number of arguments in the test module i.e. for module with one argument one program is generated, for module with two arguments two programs and so on. To track failure domain, the program keeps only one argument as variable and the remaining arguments as constant in the program generated at run time.
 
 \subsection{Automated Compilation and Execution of Modules:}
-The java modules generated in previous step are compiled using $javac *$ command to get their binary $.class$ files. The $java *$ command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receives all the values ranging, from minimum to maximum, specified in the beginning of the test. After execution is completed we get two text files of $Pass.txt$ and $Fail.txt$. Pass file contains all the values for which the modules behave correctly while fail file contains all the values for which the modules fail.\\*
+The java modules generated in previous step are compiled using $javac *$ command to get their binary $.class$ files. The $java *$ command is applied to execute the compiled programs. During execution the constant arguments of the module remain the same but the variable argument receives all the values ranging, from minimum to maximum, specified in the beginning of the test. After execution is completed we get two text files of $Pass.txt$ and $Fail.txt$. Pass file contains all the values for which the modules behave correctly while fail file contains all the values for which the modules fail.
 
 \subsection{Automated Generation of Graph:}
 The values from the pass and fail files are used to plot (x, y) chart using JFreeChart. JFreeChart is a free open-source java library that helps developers to display complex charts and graphs~\cite{gilbert2008jfreechart}. Lines and circles with blue colour represent pass values while lines and squares with red colour represents fail values. Resultant graph clearly depicts both the pass and fail domain across the specified input domain. The graph shows red points when the program fails for only one value, blocks when the program fails for multiple values and strips when the program fails for a long range of values.%\subsection{Flow Chart of the process}
