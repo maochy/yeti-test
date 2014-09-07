@@ -10,8 +10,8 @@
 \contentsline {section}{\numberline {1.6}Contributions}{27}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}Dirt Spot Sweeping Random Strategy}{27}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}Automated Discovery of Failure Domain}{27}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Automated Discovery of Failure Domain+}{27}{subsection.1.6.3}
-\contentsline {subsection}{\numberline {1.6.4}Evaluation of ADFD and ADFD+ using Qualitas Corpus}{28}{subsection.1.6.4}
+\contentsline {subsection}{\numberline {1.6.3}Automated Discovery of Failure Domain$^+$}{27}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.4}Evaluation of ADFD and ADFD$^+$ using Qualitas Corpus}{28}{subsection.1.6.4}
 \contentsline {section}{\numberline {1.7}Structure of the Thesis}{28}{section.1.7}
 \contentsline {chapter}{\numberline {2}Literature Review}{31}{chapter.2}
 \contentsline {section}{\numberline {2.1}Software Testing}{31}{section.2.1}
@@ -46,7 +46,7 @@
 \contentsline {section}{\numberline {2.8}Random Testing}{45}{section.2.8}
 \contentsline {section}{\numberline {2.9}Pass and Failure-domain}{47}{section.2.9}
 \contentsline {section}{\numberline {2.10}Versions of Random testing}{48}{section.2.10}
-\contentsline {subsection}{\numberline {2.10.1}Random+ Testing}{49}{subsection.2.10.1}
+\contentsline {subsection}{\numberline {2.10.1}Random$^+$ Testing}{49}{subsection.2.10.1}
 \contentsline {subsection}{\numberline {2.10.2}Adaptive Random Testing}{49}{subsection.2.10.2}
 \contentsline {subsection}{\numberline {2.10.3}Mirror Adaptive Random Testing}{50}{subsection.2.10.3}
 \contentsline {subsection}{\numberline {2.10.4}Restricted Random Testing}{51}{subsection.2.10.4}
@@ -82,7 +82,7 @@
 \contentsline {chapter}{\numberline {4}Dirt Spot Sweeping Random Strategy}{76}{chapter.4}
 \contentsline {section}{\numberline {4.1}Dirt Spot Sweeping Random Strategy}{76}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Random Strategy}{77}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Random+ Strategy}{77}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Random$^+$ Strategy}{77}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Dirt Spot Sweeping}{77}{subsection.4.1.3}
 \contentsline {subsection}{\numberline {4.1.4}Working of DSSR Strategy}{78}{subsection.4.1.4}
 \contentsline {subsection}{\numberline {4.1.5}Explanation of DSSR Strategy by Example}{80}{subsection.4.1.5}
@@ -92,9 +92,9 @@
 \contentsline {subsection}{\numberline {4.3.2}Experiments}{84}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Performance Measurement Criteria}{86}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Results}{86}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Absolute best in R, R+ \& DSSR strategies}{88}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.1}Absolute best in R, R$^+$ \& DSSR strategies}{88}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Classes for which any of the three strategies perform better}{89}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}The best default strategy in R, R+ \& DSSR}{89}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.3}The best default strategy in R, R$^+$ \& DSSR}{89}{subsection.4.4.3}
 \contentsline {section}{\numberline {4.5}Discussion}{89}{section.4.5}
 \contentsline {section}{\numberline {4.6}Related Work}{91}{section.4.6}
 \contentsline {section}{\numberline {4.7}Summary}{93}{section.4.7}
@@ -116,10 +116,10 @@
 \contentsline {section}{\numberline {5.8}Summary}{107}{section.5.8}
 \contentsline {chapter}{\numberline {6}Automated Discovery of Failure Domain Plus}{108}{chapter.6}
 \contentsline {section}{\numberline {6.1}Introduction}{108}{section.6.1}
-\contentsline {section}{\numberline {6.2}Automated Discovery of Failure Domain+}{109}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Workflow of ADFD+}{109}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Implementation of ADFD+}{110}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Example to illustrate working of ADFD+}{111}{subsection.6.2.3}
+\contentsline {section}{\numberline {6.2}Automated Discovery of Failure Domain$^+$}{109}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Workflow of ADFD$^+$}{109}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Implementation of ADFD$^+$}{110}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Example to illustrate working of ADFD$^+$}{111}{subsection.6.2.3}
 \contentsline {section}{\numberline {6.3}Evaluation}{112}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Research questions}{114}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Randoop}{114}{subsection.6.3.2}
@@ -133,7 +133,7 @@
 \contentsline {section}{\numberline {6.7}Related Work}{119}{section.6.7}
 \contentsline {section}{\numberline {6.8}Conclusion}{120}{section.6.8}
 \contentsline {section}{\numberline {6.9}Future Work}{120}{section.6.9}
-\contentsline {chapter}{\numberline {7}Evaluation of ADFD and ADFD+}{123}{chapter.7}
+\contentsline {chapter}{\numberline {7}Evaluation of ADFD and ADFD$^+$}{123}{chapter.7}
 \contentsline {section}{\numberline {7.1}Enhancement of the techniques}{123}{section.7.1}
 \contentsline {section}{\numberline {7.2}Daikon}{125}{section.7.2}
 \contentsline {subsection}{\numberline {7.2.1}Types of invariants detected by Daikon}{125}{subsection.7.2.1}
@@ -142,12 +142,12 @@
 \contentsline {section}{\numberline {7.5}Evaluation}{129}{section.7.5}
 \contentsline {subsection}{\numberline {7.5.1}Experiments}{129}{subsection.7.5.1}
 \contentsline {subsection}{\numberline {7.5.2}Results}{130}{subsection.7.5.2}
-\contentsline {subsubsection}{\numberline {7.5.2.1}Effectiveness of ADFD and ADFD+ techniques:}{131}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.1}Effectiveness of ADFD and ADFD$^+$ techniques:}{131}{subsubsection.7.5.2.1}
 \contentsline {subsubsection}{\numberline {7.5.2.2}Type and Frequency of Failure-domains:}{131}{subsubsection.7.5.2.2}
 \contentsline {subsubsection}{\numberline {7.5.2.3}Nature of failure-domain:}{132}{subsubsection.7.5.2.3}
 \contentsline {section}{\numberline {7.6}Threats to validity}{132}{section.7.6}
 \contentsline {section}{\numberline {7.7}Related Work}{133}{section.7.7}
-\contentsline {section}{\numberline {7.8}Conclusion}{134}{section.7.8}
+\contentsline {section}{\numberline {7.8}Summary}{134}{section.7.8}
 \contentsline {chapter}{\numberline {8}Conclusions}{139}{chapter.8}
 \contentsline {section}{\numberline {8.1}Lessons Learned}{140}{section.8.1}
 \contentsline {chapter}{\numberline {9}Future Work}{143}{chapter.9}

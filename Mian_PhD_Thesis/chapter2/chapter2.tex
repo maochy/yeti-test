@@ -39,7 +39,7 @@ A test suite comprising a series of test cases is commonly executed to establish
 
 
 \subsection{Test Oracle}
-Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function which verifies that the output from \verb+P+ is the same as the output from a ‘correct’ version of \verb+P+~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
+Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function which verifies that the output from \verb+P+$ is the same as the output from a ‘correct’ version of \verb+P+$~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
 Some common issues related to the design of test oracle are as follows:
 
 \begin{enumerate}
@@ -195,7 +195,7 @@ The following code illustrates the ability of BVA to find a failure.
 \bigskip
 \begin{lstlisting}
  public void test (int arg) {
-	arg = arg + 1;
+	arg = arg $^+$ 1;
 	int [] intArray = new intArray[arg];
 	...
  }
@@ -297,7 +297,7 @@ The chaining approach uses data dependent analysis to guide the test data genera
 \subsubsection{Assertion-oriented Approach}
 The assertion-oriented approach adds assertions to the program code with the goal to identify program input on which an assertion is violated indicating a fault in the SUT. An assertion is a constraint applicable to a state of computation which can be either true or false. For example, consider a given assertion A, now find program input x on which assertion A is false, i.e. when the program is executed on input x and the execution reaches assertion A, it is evaluated as false indicating a fault in the SUT. It is not always possible to generate test cases that violate assertions. However, experiments have shown that assertion-oriented test data generation may frequently detect errors in the program related to assertion violation. The major advantage of this approach is that each generated test data uncovers an error in the program with violation of an assertion. An assertion is violated due to fault in program code, in pre or post-condition or a fault in the assertion itself.
 
-% check the korel1996assertion for the above whole text and assertion oriented approach + the model hard copy thesis.
+% check the korel1996assertion for the above whole text and assertion oriented approach $^+$ the model hard copy thesis.
 
 
 \subsection{Intelligent Test Data Generator}
@@ -455,8 +455,8 @@ Researchers have tried various approaches to develop new versions of random test
 	\label{fig:randomTestingVersions_2}
 \end{figure}
 
-\subsection{Random+ Testing} \label{subsec:randomPlusTesting}
-The random+ testing~\cite{leitner2007reconciling} is an extension of the random testing. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{beizer2003software} are the values at the start and end of a particular data type. For instance, such values for \verb+int+ could be -3, -2, -1, 0, 1, 2, 3, \verb+Integer.MAX_VALUE+, \verb+Integer.MAX_VALUE-1+, \verb+Integer.MAX_VALUE-2+, \verb+Integer.MIN_VALUE+, \verb-Integer.MIN_VALUE+1-, \verb-Integer.MIN_VALUE+2-. These special values can add a significant improvement to a testing method. \\*
+\subsection{Random$^+$ Testing} \label{subsec:randomPlusTesting}
+The random$^+$ testing~\cite{leitner2007reconciling} is an extension of the random testing. It uses some special pre-defined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{beizer2003software} are the values at the start and end of a particular data type. For instance, such values for \verb+int+ could be -3, -2, -1, 0, 1, 2, 3, \verb+Integer.MAX_VALUE+, \verb+Integer.MAX_VALUE-1+, \verb+Integer.MAX_VALUE-2+, \verb+Integer.MIN_VALUE+, \verb-Integer.MIN_VALUE+1-, \verb-Integer.MIN_VALUE+2-. These special values can add a significant improvement to a testing method. \\*
 Let us consider the following piece of code:
 \bigskip
 \bigskip

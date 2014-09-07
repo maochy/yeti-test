@@ -83,7 +83,7 @@ It is interesting that where many random strategies are based on the principle o
 
 \section{Automated Discovery of Failure Domain}\label{sec:adfd}
 
-Automated Discovery of Failure Domain (ADFD) strategy is proposed as improvement on R+ strategy with capability of finding failures as well as the failure domains. The output produced at the end of test session is a chart showing the passing value or range of values in green and failing value or range of values in red. The complete work flow of ADFD strategy is given in Figure \ref{fig:ADFD-workflow}.
+Automated Discovery of Failure Domain (ADFD) strategy is proposed as improvement on R$^+$ strategy with capability of finding failures as well as the failure domains. The output produced at the end of test session is a chart showing the passing value or range of values in green and failing value or range of values in red. The complete work flow of ADFD strategy is given in Figure \ref{fig:ADFD-workflow}.
 
 The process is divided into five major steps given below and each step is briefly explained in the following paras.
 
@@ -110,7 +110,7 @@ ADFD strategy is provided with an easy to use GUI front-end to get input from th
 
 
 \subsection{Automated Finding of Failure:}
-ADFD, being extended form of R+ strategy, relies on R+ strategy to find the first failure. Random+ strategy is an improvement on random strategy with preference for the boundary values to provide better failure finding ability. % ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\
+ADFD, being extended form of R$^+$ strategy, relies on R$^+$ strategy to find the first failure. Random$^+$ strategy is an improvement on random strategy with preference for the boundary values to provide better failure finding ability. % ADFD strategy is implemented in YETI which is famous for its simplicity, high speed and proven ability of finding potentially hazardous faults in many systems~\cite{Oriol2011, Oriol2012}. YETI is quick and can call up to one million instructions in one second on Java code. It is also capable of testing VB.Net, C, JML and CoFoJa beside Java. \\
 
 \begin{figure}[H]
 \begin{center}
@@ -195,7 +195,7 @@ The ADFD strategy is also implemented implemented in YETI. Please refer to Chapt
 %YETI consists of three main parts including core infrastructure for extendibility through specialisation, strategies section for adjustment of multiple strategies and languages section for supporting multiple languages. Both the languages and strategies sections have a pluggable architecture to easily incorporate new strategies and languages making YETI a favourable choice to implement ADFD strategy. YETI is also capable of generating test cases to reproduce the failures found during the test session.
  
  \subsection{ADFD strategy in YETI}
-ADFD strategy is implemented in the strategies section of YETI. This section contains various strategies including random, random+ and DSSR to be selected for testing according to the specific needs. The default strategy for testing YETI is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and it is further extended to get ADFD strategy.
+ADFD strategy is implemented in the strategies section of YETI. This section contains various strategies including random, random$^+$ and DSSR to be selected for testing according to the specific needs. The default strategy for testing YETI is random. On top of the hierarchy in strategies, is an abstract class YetiStrategy, which is extended by YetiRandomPlusStrategy and it is further extended to get ADFD strategy.
 
 
 
@@ -329,9 +329,8 @@ To elucidate the results, six programs were developed so as to have separate pro
 
 \bigskip
 
-\clearpage
-
-\noindent \textbf{Point Fault Domain:}  Two separate Java programs Pro2 and Pro3, given in Appendix \ref{sec:appendix1} (2, 3), were tested with ADFD strategy in YETI to get the findings for point fault domain in one and two-dimension program. Figure \ref{fig:PFDOne} presents range of pass and fail values for point fault domain in one-dimension whereas Figure \ref{fig:PFDTwo} presents range of pass and fail values for point fault domain in two-dimension program. The range of pass and fail values for each program in point fault domain is given in Table \ref{table:failtable}.
+\clearpage 
+\textbf{Point Fault Domain:}  Two separate Java programs Pro2 and Pro3, given in Appendix \ref{sec:appendix1} (2, 3), were tested with ADFD strategy in YETI to get the findings for point fault domain in one and two-dimension program. Figure \ref{fig:PFDOne} presents range of pass and fail values for point fault domain in one-dimension whereas Figure \ref{fig:PFDTwo} presents range of pass and fail values for point fault domain in two-dimension program. The range of pass and fail values for each program in point fault domain is given in Table \ref{table:failtable}.
 %%%%%%%%%%%%%%%%Point Domain%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure} [H]
@@ -454,7 +453,7 @@ ADFD, with a simple graphical user interface, is a fully automated testing strat
 
 As evident from the results, ADFD strategy effectively identified failures and failure domains in a program. Identification of failure domain is simple for one and two-dimensional numerical program but as the dimension increases the process gets more and more complicated. Moreover, no clear boundaries are defined for non-numerical data, therefore it is not possible to plot domains for non-numerical data unless some boundary criteria are defined.
 
-ADFD strategy initiates testing with random+ strategy to find the failure and later switches to brute-force strategy to apply all the values between upper and lower bounds for finding pass and failure domains. It was found that failures at boundary of the input domain usually passes unnoticed through random test strategy but not through ADFD strategy because it scans all the values between lower and upper bounds.
+ADFD strategy initiates testing with random$^+$ strategy to find the failure and later switches to brute-force strategy to apply all the values between upper and lower bounds for finding pass and failure domains. It was found that failures at boundary of the input domain usually passes unnoticed through random test strategy but not through ADFD strategy because it scans all the values between lower and upper bounds.
 
 
 The overhead in terms of execution time associated with ADFD strategy is dependent mainly on the lower and upper bounds. If the lower and upper bounds are set to maximum range (i.e. minimum for int is Integer.MIN\_INT and maximum Integer.MAX\_INT) then the test duration is also maximum. It is rightly so because for identification of failure domain the program is executed for every input available in the specified range. Similarly increasing the range also shrinks the produced graph making it difficult to identify clearly point, block and strip domains unless they are of considerable size. Test duration is also influenced by identification of the first failure and the complexity of module under test.

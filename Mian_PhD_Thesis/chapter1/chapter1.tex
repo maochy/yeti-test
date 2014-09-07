@@ -113,33 +113,42 @@ Research goals of the current study are: to understand the nature of failures, t
 The main contributions of the thesis research are as follows: 
 
 \subsection{Dirt Spot Sweeping Random Strategy}
-%Development of a new enhanced and improved form of automated random testing: the Dirt Spot Sweeping Random (DSSR) strategy. This strategy is based on the assumption that faults and unique failures reside in contiguous blocks and stripes. The DSSR strategy starts as a regular random+ testing strategy � a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failures found in hope of finding failures of different kind in its vicinity.
-%The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random (R) and random+ (R+) strategies by testing 60 classes (35,785 line of code) with one million ($10^\text{6}$) calls for each session, 30 times for each strategy. The results indicate that for 31 classes, all three strategies find the same unique failures. We analysed the 29 remaining classes using t-tests and found that for 7 classes DSSR is significantly better than both R+ and R, for 8 classes it performs similarly to R+ and is significantly better than R, and for 2 classes it performs similarly to random and is better than R+. In all other cases, DSSR, R+ and R do not perform significantly differently. Numerically, the DSSR strategy finds 43 more unique failures than R and 12 more unique failures than R+.
+%Development of a new enhanced and improved form of automated random testing: the Dirt Spot Sweeping Random (DSSR) strategy. This strategy is based on the assumption that faults and unique failures reside in contiguous blocks and stripes. The DSSR strategy starts as a regular random$^+$ testing strategy � a random testing technique with preference for boundary values. When a failure is found, it increases the chances of using neighbouring values of the failure in subsequent tests, thus slowly sweeping values around the failures found in hope of finding failures of different kind in its vicinity.
+%The DSSR strategy is implemented in the YETI random testing tool. It is evaluated against random (R) and random$^+$ (R$^+$) strategies by testing 60 classes (35,785 line of code) with one million ($10^\text{6}$) calls for each session, 30 times for each strategy. The results indicate that for 31 classes, all three strategies find the same unique failures. We analysed the 29 remaining classes using t-tests and found that for 7 classes DSSR is significantly better than both R$^+$ and R, for 8 classes it performs similarly to R$^+$ and is significantly better than R, and for 2 classes it performs similarly to random and is better than R$^+$. In all other cases, DSSR, R$^+$ and R do not perform significantly differently. Numerically, the DSSR strategy finds 43 more unique failures than R and 12 more unique failures than R$^+$.
 
-The failure-finding ability of random testing technique decreases when the failures lie in contiguous locations across the input domain. Dirt Spot Sweeping Random (DSSR) strategy was developed as a new automated technique to overcome the problem. It is based on the assumption that unique failures reside in contiguous blocks and strips. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Results presented in Chapter~\ref{chap:DSSR} indicate higher failure-finding ability of DSSR strategy as compared with Random and Random+ strategies.
+The failure-finding ability of random testing technique decreases when the unique failures lie in contiguous locations across the input domain. Dirt Spot Sweeping Random (DSSR) strategy was developed as a new automated technique to overcome the problem. It is based on the assumption that unique failures reside in contiguous blocks and strips. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Results presented in Chapter~\ref{chap:DSSR} indicate higher failure-finding ability of DSSR strategy as compared with Random and Random$^+$ strategies.
 
 \subsection{Automated Discovery of Failure Domain}
-The existing random strategies of software testing discover the failures in the SUT but lack the capability of presenting the failure domains. In the present study, a fully automated testing strategy named, ``Automated Discovery of Failure Domain (ADFD)" is developed with the ability to find failures as well as failure domains in a given SUT and provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results provide evidence that the newly developed ADFD strategy performs identification of failures as well as failure-domains and provides the results in graphical form.
+The existing random strategies of software testing discover the failures in the SUT but lack the capability of identifying and presenting the failure domains. In the present study, Automated Discovery of Failure Domain (ADFD) is developed as a fully automated testing strategy with the ability to find failures as well as failure domains in a given SUT. It also provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results provide evidence that the newly developed ADFD strategy performs identification of failures as well as failure-domains and provides the results in graphical form.
 
-\subsection{Automated Discovery of Failure Domain+}
-Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure-domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. In addition, ADFD output is improved to provide labelled graphs which make ADFD+ output easily understandable and user friendly. ADFD+ is compared with an automated testing tool Randoop to ﬁnd the comparative performance of the two techniques on similar programs. The results in Chapter~\ref{chap:ADFD+} indicated that in comparison with Randoop, its efﬁciency is evident by taking two orders of magnitude less time and its effectiveness is shown by taking 50\% or less number of test cases to discover failure domains.
+\subsection{Automated Discovery of Failure Domain$^+$}
+Automated Discovery of Failure Domain$^+$ (ADFD$^+$) is developed as upgraded version of ADFD technique with respect to algorithm and graphical representation of failure-domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. In addition, ADFD output is improved to provide labelled graphs which make the output easily understandable and user friendly. ADFD$^+$ is compared with an automated testing tool Randoop to find the comparative performance of the two techniques on similar programs. 
+The experimental results showing comparative performance of ADFD$^+$ and Randoop in terms of execution time and number of test cases required to identify failure domain are presented in Chapter~\ref{chap:ADFD+}.
 
-
-\subsection{Evaluation of ADFD and ADFD+ using Qualitas Corpus}
-An experimental evaluation of ADFD and ADFD+ techniques to measure their effectiveness in revealing failure-domains. The analysis of comparative performance of automated techniques with manual technique. The subject programs include open source packages included in the Qualitas Corpus.
-
-
-%ADFD+ has the added advantage of presenting the output in graphical form showing point, block and strip domains visually as against Randoop, which lacks graphical user interface.
+%The experimental results in Chapter~\ref{chap:ADFD+} indicated that in comparison with Randoop, its efﬁciency is evident by taking two orders of magnitude less time and its effectiveness is shown by taking 50\% or less number of test cases to discover failure domains.
 
 
 
-%To find the effectiveness of ADFD+, it was compared with Daikon by using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
 
-%IGRS is an extended form of Random+ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon, filtered by using DynComp and annotated in to source code as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:ADFD+} indicate improved features of IGRS in terms of higher code coverage and identification of subtle errors that R, R+ and DSSR strategies are either unable to accomplish or require larger duration.  
+
+\subsection{Evaluation of ADFD and ADFD$^+$ using Qualitas Corpus}
+%Experimental evaluation of ADFD and ADFD$^+$ techniques was carried out to measure their effectiveness in revealing failure-domains. The analysis of comparative performance of automated techniques with manual technique. The subject programs include open source packages included in the Qualitas Corpus.
+
+An extensive experimental analysis was carried out on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques was also studied. The results obtained are presented in Chapter~\ref{chap:Evaluation}.
+
+
+
+%ADFD$^+$ has the added advantage of presenting the output in graphical form showing point, block and strip domains visually as against Randoop, which lacks graphical user interface.
+
+
+
+%To find the effectiveness of ADFD$^+$, it was compared with Daikon by using error seeded programs. The ADFD$^+$ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
+
+%IGRS is an extended form of Random$^+$ strategy guided by software invariants. Invariants from the given SUT are collected by Daikon, filtered by using DynComp and annotated in to source code as assertions. The IGRS is implemented in YETI and generates values in compliance with the added assertions. Experimental results presented in Chapter~\ref{chap:ADFD+} indicate improved features of IGRS in terms of higher code coverage and identification of subtle errors that R, R$^+$ and DSSR strategies are either unable to accomplish or require larger duration.  
 
 %\section{Structure of the Thesis}
 %
-%The rest of the thesis is organized as follows: In Chapter 2, a thorough review of the relevant literature is given. It includes a brief introduction of software testing techniques followed by automated random testing tools. Chapter~\ref{chap:DSSR} describes Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. Chapter~\ref{chap:ADFD} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. Chapter~\ref{chap:IGR+S} presents the new strategy Invariant Guided Random+ Strategy (IGR+S) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. Chapter 6 summarizes contributions of the thesis research, discusses the strength and weaknesses of the study, gives conclusion and suggests avenues for future work. Chapter 7 ?
+%The rest of the thesis is organized as follows: In Chapter 2, a thorough review of the relevant literature is given. It includes a brief introduction of software testing techniques followed by automated random testing tools. Chapter~\ref{chap:DSSR} describes Dirt Spot Sweeping Random (DSSR) strategy, which is based on sweeping of fault clusters in the input domain. Chapter~\ref{chap:ADFD} presents the newly developed Automated Discovery of Fault Domains  (ADFD) strategy, which focuses on dynamically finding the faults and domains along with their graphical representation. Chapter~\ref{chap:IGR$^+$S} presents the new strategy Invariant Guided Random$^+$ Strategy (IGR$^+$S) developed with the focus on quick identification of faults and increase in code coverage with the help of assertions. Chapter 6 summarizes contributions of the thesis research, discusses the strength and weaknesses of the study, gives conclusion and suggests avenues for future work. Chapter 7 ?
 \bigskip
 \section{Structure of the Thesis}
 
@@ -148,19 +157,19 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:softwareTesting}} provides literature review on software testing. Software testing is introduced with particular reference to its level, purpose, perspective and execution. Various types of software testing followed by major stages of testing including test data generation, execution, oracle and report production are reviewed with particular focus on literature relevant to random testing. Various versions of random testing and the most commonly used automated testing tools based on random algorithms are reviewed. \\
+\textbf{Chapter~\ref{chap:softwareTesting}} provides literature review on software testing. It is introduced with particular reference to the level, purpose, perspective and execution. Various types of software testing followed by major stages of testing including test data generation, execution, oracle and report production are reviewed with particular focus on literature relevant to random testing. Different versions of random testing and the most commonly used automated testing tools based on random algorithms are reviewed. \\
 
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:yeti_3}} presents the York Extensible Testing Infrastructure (YETI), used as a tool in our experiments. YETI has been thoroughly reviewed including an overview, design, core infrastructure, strategy, language-specific binding, construction of test cases, command line options, execution, test oracle, report generation and graphical user interface.\\
+\textbf{Chapter~\ref{chap:yeti_3}} presents the York Extensible Testing Infrastructure (YETI) used as a tool in our experiments. YETI has been thoroughly reviewed including an overview, design, core infrastructure, strategy, language-specific binding, construction of test cases, command line options, execution, test oracle, report generation and graphical user interface.\\
 
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:DSSR}} describes the Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures and failure domains as compared with random and random+ strategies. \\
-% In majority of the classes DSSR strategy indicates higher fault-finding ability than random and random+ strategies. \\
+\textbf{Chapter~\ref{chap:DSSR}} describes the Dirt Spot Sweeping Random (DSSR) strategy. The proposed new testing technique is implemented in YETI. Experimental evidence is presented in support of the effectiveness of DSSR strategy in finding failures and failure domains as compared with random and random$^+$ strategies. \\
+% In majority of the classes DSSR strategy indicates higher fault-finding ability than random and random$^+$ strategies. \\
 
 \hangindent=\parindent
 \hangafter=1
@@ -171,16 +180,16 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:ADFD+}} presents the Automated Discovery of Failure Domain+ (ADFD+) strategy. It is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs and the results are reported.\\ 
+\textbf{Chapter~\ref{chap:ADFD+}} presents the Automated Discovery of Failure Domain$^+$ (ADFD$^+$) strategy. It is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD$^+$, it was compared with automated testing tool Randoop using error seeded programs. The experimental results are presented.\\ 
 
 
-%Automated Discovery of Failure Domain+ (ADFD+) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD+, it was compared with Daikon using error seeded programs. The ADFD+ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
-%The IGRS technique like DSSR and ADFD is also implemented in YETI. Experimental study is presented in which the effectiveness of IGRS in finding faults is compared with the random, random+ and DSSR strategies. 
+%Automated Discovery of Failure Domain$^+$ (ADFD$^+$) is an upgraded version of ADFD technique with respect to algorithm and graphical representation of failure domains. To find the effectiveness of ADFD$^+$, it was compared with Daikon using error seeded programs. The ADFD$^+$ correctly pointed out all the seeded failure domains while Daikon identified individual failures but was unable to discover the failure domains.
+%The IGRS technique like DSSR and ADFD is also implemented in YETI. Experimental study is presented in which the effectiveness of IGRS in finding faults is compared with the random, random$^+$ and DSSR strategies. 
 % For the majority of the classes IGRS indicated higher fault-finding ability than the rival strategies.\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:Evaluation}} presents the extensive experimental analysis of Java projects contained in Qualitas Corpus for finding the effectiveness of automated techniques (ADFD and ADFD+). The results obtained were analysed and cross-checked using manual testing. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques were studied. \\
+\textbf{Chapter~\ref{chap:Evaluation}} presents extensive experimental analysis on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques was also studied. The experimental results are presented. \\
 
 \hangindent=\parindent
 \hangafter=1
@@ -196,7 +205,7 @@ The rest of the thesis is organized as follows:\\
  \hangindent=\parindent
  \hangafter=1
  \noindent
- \textbf{Appendix~\ref{chap:appendix1}} includes ADFD logic implementation and Java programs with point, block and strip failure domains.\\
+ \textbf{Appendix~\ref{chap:appendix1}} includes logic of the strategies implemented in the study and Java programs containing error-seeded point, block and strip failure domains.\\
 
 \newpage
 \begin{figure}[h]
