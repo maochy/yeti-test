@@ -615,6 +615,12 @@ Ilinca Ciupa, Alexander Pretschner, Andreas Leitner, Manuel Oriol, and Bertrand
 \newblock In {\em Software Testing, Verification, and Validation, 2008 1st
   International Conference on}, pages 72--81. IEEE, 2008.
 
+\bibitem{chan2004good}
+Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
+\newblock Good random testing.
+\newblock In {\em Reliable Software Technologies-Ada-Europe 2004}, pages
+  200--212. Springer, 2004.
+
 \bibitem{chan2006restricted}
 Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Restricted random testing.
@@ -665,23 +671,11 @@ Ewan Tempero.
 \newblock In {\em Software Engineering Conference, 2008. APSEC'08. 15th
   Asia-Pacific}, pages 33--40. IEEE, 2008.
 
-\bibitem{linger1993cleanroom}
-Richard~C Linger.
-\newblock Cleanroom software engineering for zero-defect software.
-\newblock In {\em Proceedings of the 15th international conference on Software
-  Engineering}, pages 2--13. IEEE Computer Society Press, 1993.
-
-\bibitem{offutt1996semantic}
-A~Jefferson Offutt and J~Huffman Hayes.
-\newblock A semantic model of program faults.
-\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
-  195--200. ACM, 1996.
-
-\bibitem{Chen1994}
-T.Y. Chen and Y.T. Yu.
-\newblock On the relationship between partition and random testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, 20(12):977 --980,
-  dec 1994.
+\bibitem{parnin2011automated}
+Chris Parnin and Alessandro Orso.
+\newblock Are automated debugging techniques actually helping programmers?
+\newblock In {\em Proceedings of the 2011 international symposium on software
+  testing and analysis}, pages 199--209. ACM, 2011.
 
 \bibitem{mayer2005lattice}
 Johannes Mayer.
@@ -694,6 +688,12 @@ D~Gilbert.
 \newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloper�s
   guide.
 \newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
+
+\bibitem{offutt1996semantic}
+A~Jefferson Offutt and J~Huffman Hayes.
+\newblock A semantic model of program faults.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
+  195--200. ACM, 1996.
 
 \bibitem{podgurski2003automated}
 Andy Podgurski, David Leon, Patrick Francis, Wes Masri, Melinda Minch, Jiayang

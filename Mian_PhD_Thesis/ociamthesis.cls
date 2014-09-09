@@ -21,7 +21,7 @@
 \raggedbottom
 
 %define the default submitted text
-\newcommand{\submittedtext}{{A thesis submitted for the degree of}}
+\newcommand{\submittedtext}{{  }}
 
 %
 % DECLARATIONS
@@ -105,11 +105,11 @@
 
 %{\large \vspace*{40mm} {\logo \par} \vspace*{25mm}}
 
-    {{\vspace*{35mm} Enterprise Systems Research Group} \par}
-{\vspace*{0.5ex}
+    {{\vspace*{35mm}Doctor of Philosophy} \par}
+{\vspace*{3.5ex}
     {{\@college} \par}
 \vspace*{0.5ex}
-    {University of York, UK \par}
+    {The University of York \par}
 
 \vspace*{15mm}
     {\@degreedate}
