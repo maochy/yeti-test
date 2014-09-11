@@ -70,7 +70,7 @@ Despite the benefits of random testing, its simplistic and non-systematic nature
 
 \begin{enumerate}
 \item Limitation of RT to discover contiguous failures.
-\item Inability of RT to identify failure-domains.
+\item Inability of RT to identify failure domains.
 \item Incompetence of RT to present results in graphical form. 
 \end{enumerate}
 
@@ -78,14 +78,14 @@ Despite the benefits of random testing, its simplistic and non-systematic nature
 Chan et al.~\cite{chan1996proportional} observed that failure-inducing inputs are contiguous and form certain geometrical patterns in the whole input domain. They divided them into point, block and strip domains on the basis of their shape (Section~\ref{sec:failuredomains_2}). % put the failure domains section label in the preceeding reference.
 The failure-finding ability of random testing technique is quite low to detect the contiguous block and strip failure domains within the input domain. Attempts are needed to overcome this limitation of RT by developing a suitable extended random strategy.
 
-\subsection{Inability of RT to Identify Failure-domains}
+\subsection{Inability of RT to Identify Failure domains}
 %As stated above, the failures in the input domain are contiguous and form point, block and strip patterns. 
-Majority of failures reside in contiguous locations and form certain failure domains across the input domain~\cite{chan1996proportional}. The existing random strategies of software testing tries to discover failures individually from the domains and lack the capability to discover the failure-domains. Endeavours are required to be undertaken for developing appropriate random strategy with the potential to identify the failures, as well as failure-domains. 
+Majority of failures reside in contiguous locations and form certain failure domains across the input domain~\cite{chan1996proportional}. The existing random strategies of software testing tries to discover failures individually from the domains and lack the capability to discover the failure domains. Endeavours are required to be undertaken for developing appropriate random strategy with the potential to identify the failures, as well as failure domains. 
 
 %Random testing is also considered weak in providing high code coverage~\cite{cohen1997aetg, offutt1996semantic}. For example, in random testing when the conditional statement  ``$if (x == 25) then ... $"  is exposed to execution then there is only one chance, of the ``$then...$" part of the statement, to be executed out of $2^\text{32}$ available options. If $x$ is an integer variable of 32 bit value~\cite{godefroid2005dart}. 
 
 \subsection{Incompetence of RT to Present Results in Graphical Form}
-Random testing is no exception when it comes to the complexity of understanding and evaluating test results. Modern testing techniques simplify results by truncating the lengthy log files and displaying only the fault-revealing test cases in the form of unit tests. No random strategy seems to provide the graphical representation of the failures and failure-domains. Efforts are therefore required to get the test results of random testing in user-friendly graphical form in addition to the textual form. 
+Random testing is no exception when it comes to the complexity of understanding and evaluating test results. Modern testing techniques simplify results by truncating the lengthy log files and displaying only the fault-revealing test cases in the form of unit tests. No random strategy seems to provide the graphical representation of the failures and failure domains. Efforts are therefore required to get the test results of random testing in user-friendly graphical form in addition to the textual form. 
 
 %\subsection{To study the nature of Failure domain}
 
@@ -119,10 +119,10 @@ The main contributions of the thesis research are as follows:
 The failure-finding ability of random testing technique decreases when the unique failures lie in contiguous locations across the input domain. Dirt Spot Sweeping Random (DSSR) strategy was developed as a new automated technique to overcome the problem. It is based on the assumption that unique failures reside in contiguous blocks and strips. When a failure is identified, the DSSR strategy selects neighbouring values for the subsequent tests. The selected values sweep around the failure, leading to the discovery of new failures in the vicinity. Results presented in Chapter~\ref{chap:DSSR} indicate higher failure-finding ability of DSSR strategy as compared with Random and Random$^+$ strategies.
 
 \subsection{Automated Discovery of Failure Domain}
-The existing random strategies of software testing discover the failures in the SUT but lack the capability of identifying and presenting the failure domains. In the present study, Automated Discovery of Failure Domain (ADFD) is developed as a fully automated testing strategy with the ability to find failures as well as failure domains in a given SUT. It also provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results provide evidence that the newly developed ADFD strategy performs identification of failures as well as failure-domains and provides the results in graphical form.
+The existing random strategies of software testing discover the failures in the SUT but lack the capability of identifying and presenting the failure domains. In the present study, Automated Discovery of Failure Domain (ADFD) is developed as a fully automated testing strategy with the ability to find failures as well as failure domains in a given SUT. It also provides visualisation of the identified pass and fail domains in a graphical form. The strategy implemented in YETI is described and practically illustrated by executing several programs of one and two dimensions in Chapter~\ref{chap:ADFD}. The experimental results provide evidence that the newly developed ADFD strategy performs identification of failures as well as failure domains and provides the results in graphical form.
 
 \subsection{Automated Discovery of Failure Domain$^+$}
-Automated Discovery of Failure Domain$^+$ (ADFD$^+$) is developed as upgraded version of ADFD technique with respect to the algorithm and graphical representation of failure-domains. The new algorithm searches for the failure-domain around the failure in a given radius as against ADFD, which limits the search between lower and upper bounds. In addition, ADFD output is improved to provide labelled graphs that make the output easily understandable and user-friendly. ADFD$^+$ is compared with an automated testing tool Randoop to find the comparative performance of the two techniques on similar programs. 
+Automated Discovery of Failure Domain$^+$ (ADFD$^+$) is developed as upgraded version of ADFD technique with respect to the algorithm and graphical representation of failure domains. The new algorithm searches for the failure domain around the failure in a given radius as against ADFD, which limits the search between lower and upper bounds. In addition, ADFD output is improved to provide labelled graphs that make the output easily understandable and user-friendly. ADFD$^+$ is compared with an automated testing tool Randoop to find the comparative performance of the two techniques on similar programs. 
 The experimental results showing comparative performance of ADFD$^+$ and Randoop in terms of execution time and number of test cases required to identify failure domain are presented in Chapter~\ref{chap:ADFD+}.
 
 %The experimental results in Chapter~\ref{chap:ADFD+} indicated that in comparison with Randoop, its efﬁciency is evident by taking two orders of magnitude less time and its effectiveness is shown by taking 50\% or less number of test cases to discover failure domains.
@@ -134,7 +134,7 @@ The experimental results showing comparative performance of ADFD$^+$ and Randoop
 \subsection{Evaluation of ADFD and ADFD$^+$ using Qualitas Corpus}
 %Experimental evaluation of ADFD and ADFD$^+$ techniques was carried out to measure their effectiveness in revealing failure-domains. The analysis of comparative performance of automated techniques with manual technique. The subject programs include open source packages included in the Qualitas Corpus.
 
-An extensive experimental analysis was carried out on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques was also studied. The results obtained are presented in Chapter~\ref{chap:Evaluation}.
+An extensive experimental analysis was carried out on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure domains on the testing techniques was also studied. The results obtained are presented in Chapter~\ref{chap:Evaluation}.
 
 
 
@@ -189,7 +189,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:Evaluation}} presents extensive experimental analysis on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure-domains on the testing techniques was also studied. The experimental results are presented. \\
+\textbf{Chapter~\ref{chap:Evaluation}} presents extensive experimental analysis on Java projects contained in Qualitas Corpus to find the effectiveness of the two automated techniques (ADFD and ADFD$^+$) in comparison with manual technique. The impact of nature, location, size, type and complexity of failure domains on the testing techniques was also studied. The experimental results are presented. \\
 
 \hangindent=\parindent
 \hangafter=1

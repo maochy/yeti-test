@@ -590,13 +590,15 @@ The DSSR strategy performed better when the number of failures was higher in the
 During the experiments, It was noticed that quick identification of first failure was highly desirable in achieving better results from DSSR strategy. This was due to the feature of DSS which added the failure finding and surrounding values to the list of interesting values. However, when identification of first failure was delayed, no values were added to the list of interesting values and the DSSR performed equivalently to R$^+$ strategy. This indicated that better ways of populating failure-inducing values were needed for sufficient leverage to DSSR strategy. As an example, the following piece of code would be unlikely to fail under the current setting:
 
 \bigskip
+\bigskip
 \begin{lstlisting}
 public void test(float value){
  if(value == 34.4445)   {
- 	abort(); 		* error *
+ 	abort(); 		/*  error  */
  }
 }
 \end{lstlisting}
+\bigskip
 \bigskip
 
 In this case, we could add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained from the constant pool in the class files of the SUT. In the example above, the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the failure right away.
@@ -613,9 +615,7 @@ In this case, we could add constant literals from the SUT to the list of interes
 
 Random testing is a popular technique with a simple algorithm but proven to find subtle faults in complex programs and Java libraries~\cite{csallner2004jcrasher, pacheco2005eclat,claessen2011quickcheck}. It's simplicity, ease of implementation and efficiency in generating test cases make it the best choice for test automation~\cite{hamlet1994random}. Some of the well known automated tools based on R strategy includes JCrasher~\cite{csallner2004jcrasher}, Eclat~\cite{pacheco2005eclat}, AutoTest~\cite{ciupa2007experimental, ciupa2008artoo}, Jartege~\cite{oriat2005jartege} and YETI~\cite{oriol2010yeti, oriol2012random}.
 
-In the pursuit of better test results and lower overhead, many variations of R strategy have been proposed~\cite{chen2004mirror, chen2007quasi, chen2010adaptive, chan2006restricted, chen2004adaptive}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. ART through dynamic partitioning and MART are the two strategies developed to improve the performance of ART by reducing the overhead. This was achieved mainly by the even spread of test input to increase the chance of exploring the failure domains present in the input domain.
-
-A more recent research study~\cite{yoo2012test} stresses on the effectiveness of data regeneration in close vicinity of the existing test data. Their findings showed up to two orders of magnitude more efficient test data generation than the existing techniques. Two major limitations of their study are the requirement of existing test cases to regenerate new test cases, and increased overhead due to ``meta-heuristics search'' based on hill climbing algorithm to regenerate new data. In DSSR, no pre-existing test cases are required because it utilises the border values from R$^+$ and regenerate the data very cheaply in a dynamic fashion different for each class under test without any prior test data and with comparatively lower overhead. 
+In the pursuit of better test results and lower overhead, many variations of R strategy have been proposed~\cite{chen2004mirror, chen2007quasi, chen2010adaptive, chan2006restricted, chen2004adaptive}. Adaptive random testing (ART), Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. ART through dynamic partitioning and MART are the two strategies developed to improve the performance of ART by reducing the overhead. This was achieved mainly by the even spread of test input to increase the chance of exploring the failure domains present in the input domain. A more recent research study~\cite{yoo2012test} stresses on the effectiveness of data regeneration in close vicinity of the existing test data. Their findings showed up to two orders of magnitude more efficient test data generation than the existing techniques. Two major limitations of their study are the requirement of existing test cases to regenerate new test cases, and increased overhead due to ``meta-heuristics search'' based on hill climbing algorithm to regenerate new data. In DSSR, no pre-existing test cases are required because it utilises the border values from R$^+$ and regenerate the data very cheaply in a dynamic fashion without any prior test data and with comparatively lower overhead. 
   
 The R$^+$ strategy is an extension of the R strategy in which interesting values, beside pure random values, are added to the list of test inputs~\cite{leitner2007reconciling}. These interesting values include border values, which have the high tendency of finding failures in the given SUT~\cite{beizer2003software}. Results obtained with R$^+$ strategy showed significant improvement over R strategy~\cite{leitner2007reconciling}. DSSR strategy is an extension of R$^+$ strategy that starts testing as R$^+$ until a failure is found and then switches to dirt spot sweeping.
 

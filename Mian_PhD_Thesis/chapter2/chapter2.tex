@@ -1,4 +1,4 @@
-\externaldocument{chapter2} 
+\externaldocument{chapter2} .
 \chapter{Literature Review}
 \label{chap:softwareTesting}
 The famous quote of Paul Ehrlich, ``to err is human, but to really foul things up you need a computer", is quite relevant to the software programmers. Programmers being humans are prone to errors. In spite of best efforts, some errors may remain in the software after it is finalised.  Errors cannot be tolerated in software because a single error may lead to a large upset in the system. The destruction of Mariner 1 rocket (1962) costing \$18.5 million, Hartford Coliseum Collapse (1978) costing \$70 million, Wall Street crash (1987) costing \$500 billion, failing of long division by Pentium\texttrademark (1993) costing \$475 million, Ariane 5 Rocket disaster (1996) costing \$500 million and many more were caused by minor errors in the software \cite{garfinkel2005history}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software faults while one-third of it can be eliminated by improving the testing infrastructure~\cite{tassey2002economic}. A software has to satisfy rigorous stages of testing to achieve high quality. The more complex the software, the higher the requirements for software testing because of the consequent larger damage involved if a fault remains in the software.
@@ -39,7 +39,7 @@ A test suite comprising a series of test cases is commonly executed to establish
 
 
 \subsection{Test Oracle}
-Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function that verifies that the output from \verb+P+$ is the same as the output from a ‘correct’ version of \verb+P+$~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
+Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function that verifies that the output from \verb+P+ is the same as the output from a ‘correct’ version of \verb+P+~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
 Some common issues related to the design of test oracle are as follows:
 
 \begin{enumerate}
@@ -404,14 +404,14 @@ The generation of test data without using any background information makes rando
 
 
 
-\section{Pass and Failure-domain} \label{sec:failuredomains_2}
+\section{Pass and Fail domain} \label{sec:failuredomains_2}
 \label{sec:genuineandfailuredomain}
-The sequence of test data across the input domain for which the software behaves correctly is called pass-domain, and for which the software behave incorrectly is called failure-domain. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes in the whole input domain. They divided these into point, block and strip failure-domains as described below.
+The sequence of test data across the input domain for which the software behaves correctly is called pass-domain, and for which the software behave incorrectly is called failure domain. Chan et al.~\cite{chan1996proportional} observed that input inducing failures are contiguous and form certain geometrical shapes in the whole input domain. They divided these into point, block and strip failure domains as described below.
 
 \begin{enumerate}
-\item Point domain: In the point failure-domain, input inducing failures are scattered across the input domain in the form of stand-alone points. Example of point failure-domain is the failure caused by the statement: $total = num1/num2;$ where $num1$, $num2$ and $total$ are variables of type integer.
-\item Block domain: In the block failure-domain, input inducing failures lie in close vicinity to form a block in the input domain. Example of block failure-domain is failure caused by the statement: $if ( (num \textgreater 10) \&\& (num \textless 20) )$. Here 11 to 19 are a block of failures.
-\item Strip domain: In the strip failure-domain, input inducing failures form a strip across the input domain. Example of strip failure-domain is failure caused by the statement: $num1 + num2 = 20$. Here multiple values of $num1$ and $num2$ can lead to the fault value 20. 
+\item Point domain: In the point failure domain, input inducing failures are scattered across the input domain in the form of stand-alone points. Example of point failure domain is the failure caused by the statement: $total = num1/num2;$ where $num1$, $num2$ and $total$ are variables of type integer.
+\item Block domain: In the block failure domain, input inducing failures lie in close vicinity to form a block in the input domain. Example of block failure domain is failure caused by the statement: $if ( (num \textgreater 10) \&\& (num \textless 20) )$. Here 11 to 19 are a block of failures.
+\item Strip domain: In the strip failure domain, input inducing failures form a strip across the input domain. Example of strip failure domain is failure caused by the statement: $num1 + num2 = 20$. Here multiple values of $num1$ and $num2$ can lead to the fault value 20. 
 \end{enumerate}
 \smallskip
 \begin{figure} [H]
@@ -441,10 +441,10 @@ The sequence of test data across the input domain for which the software behaves
 %	\label{fig:patterns2}
 %\end{figure}
 
-The Figure~\ref{fig:patterns2} shows failure domains across the input domains. The squares in the figure indicate the whole input domain. The white space in each square shows legitimate and faultless values while the black colour in the form of points, block and strip indicate failures in the form of point, block and strip failure-domains.
+The Figure~\ref{fig:patterns2} shows failure domains across the input domains. The squares in the figure indicate the whole input domain. The white space in each square shows legitimate and faultless values while the black colour in the form of points, block and strip indicate failures in the form of point, block and strip failure domains.
 
 \newpage
-\section{Versions of Random testing}
+\section{Versions of Random testing} \label{sec:versionsOfRT}
 Researchers have tried various approaches to develop new versions of random testing for better performance. The prominent improved versions of random testing are shown in Figure \ref{fig:randomTestingVersions_2}.
 
 \begin{figure}[H]
@@ -631,7 +631,7 @@ Csallner and Smaragdakis~\cite{csallner2004jcrasher} compared Eclat with JCrashe
 %Jtest also shows the code coverage of the program by colour coding the statements that are not executed by the unit tests.
 
 
-\subsection{Randoop}
+\subsection{Randoop} \label{sec:Randoop}
 Random tester for object-oriented programs (Randoop) is a tool used for implementing FDRT technique~\cite{pacheco2007randoop}. Randoop is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes a set of classes, contracts, filters and time limit as input and gives a suite of JUnit for Java and NUnit for .Net program as output. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting a public method from the class under test.  Arguments for these methods are selected from a predefined pool in case of primitive type and as a sequence of null values in case of reference type. Randoop maintains two sets called $ErrorSeqs$ and $NonErrorSeqs$ to record the feedback. It extends $ErrorSeqs$ set in case of contract or filter violation and $NonErrorSeqs$ set when no violation is recorded in the feedback. The use of this dynamic feedback evaluation at runtime brings an object to an interesting state. On test completion, $ErrorSeqs$ and $NonErrorSeqs$ are produced as JUnit or NUnit test suite. The following command runs Randoop to test OneDimPointFailDomain for 100 seconds in CLI mode. Values is a text file containing interesting values which is maintained manually by the tester.
 \bigskip
 

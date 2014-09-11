@@ -2,77 +2,76 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Three main phases of random testing\relax }}{25}{figure.caption.4}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Structure of thesis outline\relax }}{30}{figure.caption.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A simplified version of software testing process\relax }}{32}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Software testing from various viewpoints\relax }}{34}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces White-box testing\relax }}{36}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Black-box testing\relax }}{37}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Types of test data generator\relax }}{41}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Working mechanism of random testing\relax }}{46}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Failure domains across input domain\nobreakspace {}\cite {chan1996proportional}\relax }}{47}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Various versions of random testing\relax }}{48}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Mirror functions for mapping of test cases\relax }}{50}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point domain}}}{50}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block domain}}}{50}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip domain}}}{50}{figure.caption.14}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Input domain showing exclusion zones around selected test cases\relax }}{51}{figure.caption.15}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic\nobreakspace {}\cite {csallner2004jcrasher}\relax }}{54}{figure.caption.16}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces The input selection technique. Implicit in the diagram is the program under test. Rectangles with rounded corners represent steps in the technique, and rectangles with square corners represent artifacts\nobreakspace {}\cite {pacheco2005eclat}\relax }}{56}{figure.caption.17}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces AutoTest architecture\nobreakspace {}\cite {leitner2007reconciling}\relax }}{58}{figure.caption.18}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces TestEra framework\nobreakspace {}\cite {marinov2001testera}\relax }}{59}{figure.caption.19}
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Main features of automatic testing tools using random testing\relax }}{61}{figure.caption.20}
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Types of software testing\relax }}{62}{figure.caption.21}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A simplified version of software testing process\relax }}{33}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Software testing from various viewpoints\relax }}{35}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces White-box testing\relax }}{37}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Black-box testing\relax }}{38}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Types of test data generator\relax }}{42}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Working mechanism of random testing\relax }}{47}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Failure domains across input domain\nobreakspace {}\cite {chan1996proportional}\relax }}{48}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Various versions of random testing\relax }}{49}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Mirror functions for mapping of test cases\relax }}{51}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point domain}}}{51}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block domain}}}{51}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip domain}}}{51}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Input domain showing exclusion zones around selected test cases\relax }}{52}{figure.caption.15}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces How a class T can be checked for robustness with JCrasher. First, the JCrasher application generates a range of test cases for T and writes them to TTest.java. Second, the test cases can be executed with JUnit, and third, the JCrasher runtime filters exceptions according to the robustness heuristic\nobreakspace {}\cite {csallner2004jcrasher}\relax }}{55}{figure.caption.16}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The input selection technique. Implicit in the diagram is the program under test. Rectangles with rounded corners represent steps in the technique, and rectangles with square corners represent artifacts\nobreakspace {}\cite {pacheco2005eclat}\relax }}{57}{figure.caption.17}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces AutoTest architecture\nobreakspace {}\cite {leitner2007reconciling}\relax }}{59}{figure.caption.18}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces TestEra framework\nobreakspace {}\cite {marinov2001testera}\relax }}{60}{figure.caption.19}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Main features of automatic testing tools using random testing\relax }}{62}{figure.caption.20}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Types of software testing\relax }}{63}{figure.caption.21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Working process of YETI\relax }}{64}{figure.caption.22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Main packages of YETI with dependencies \relax }}{65}{figure.caption.23}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Call sequence of YETI with Java binding\relax }}{68}{figure.caption.24}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Command to launch YETI from CLI\relax }}{71}{figure.caption.26}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces GUI launcher of YETI\relax }}{71}{figure.caption.27}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Successful method calls of YETI\relax }}{72}{figure.caption.28}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces A sample of YETI bug report\relax }}{72}{figure.caption.29}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces GUI front-end of YETI\relax }}{74}{figure.caption.30}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Working process of YETI\relax }}{65}{figure.caption.22}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Main packages of YETI with dependencies \relax }}{66}{figure.caption.23}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Call sequence of YETI with Java binding\relax }}{69}{figure.caption.24}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Command to launch YETI from CLI\relax }}{72}{figure.caption.26}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces GUI launcher of YETI\relax }}{72}{figure.caption.27}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Successful method calls of YETI\relax }}{73}{figure.caption.28}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces A sample of YETI bug report\relax }}{73}{figure.caption.29}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces GUI front-end of YETI\relax }}{75}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Exploration of failures by DSS in block and strip domain\relax }}{78}{figure.caption.31}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Working mechanism of DSSR Strategy\relax }}{79}{figure.caption.32}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Test result of random strategy for the example code\relax }}{82}{figure.caption.34}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Test result of DSSR strategy for the example code\relax }}{82}{figure.caption.35}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Class Hierarchy of DSSR strategy in YETI\relax }}{83}{figure.caption.36}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance of DSSR in comparison with R and R$^+$ strategies.\relax }}{88}{figure.caption.38}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Results of DSSR strategy in comparison to Random and Random$^+$\relax }}{93}{figure.caption.41}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Exploration of failures by DSS in block and strip domain\relax }}{79}{figure.caption.31}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Working mechanism of DSSR Strategy\relax }}{80}{figure.caption.32}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Test result of random strategy for the example code\relax }}{83}{figure.caption.34}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Test result of DSSR strategy for the example code\relax }}{83}{figure.caption.35}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Class Hierarchy of DSSR strategy in YETI\relax }}{84}{figure.caption.36}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Performance of DSSR in comparison with R and R$^+$ strategies.\relax }}{89}{figure.caption.38}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Results of DSSR strategy in comparison to Random and Random$^+$\relax }}{94}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Work flow of ADFD strategy\relax }}{96}{figure.caption.42}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Front-end of ADFD strategy\relax }}{97}{figure.caption.43}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Class Hierarchy of ADFD strategy in YETI\relax }}{98}{figure.caption.44}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces ADFD strategy plotting pass and fail domain of a given class\relax }}{99}{figure.caption.45}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Chart generated by ADFD strategy presenting point fault domain\relax }}{101}{figure.caption.47}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Chart generated by ADFD strategy presenting block fault domain\relax }}{102}{figure.caption.48}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Chart generated by ADFD strategy presenting Strip fault domain\relax }}{103}{figure.caption.49}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Work flow of ADFD strategy\relax }}{97}{figure.caption.42}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Front-end of ADFD strategy\relax }}{98}{figure.caption.43}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Class Hierarchy of ADFD strategy in YETI\relax }}{99}{figure.caption.44}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces ADFD strategy plotting pass and fail domain of a given class\relax }}{100}{figure.caption.45}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Chart generated by ADFD strategy presenting point failure domain\relax }}{102}{figure.caption.47}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Chart generated by ADFD strategy presenting block failure domain\relax }}{103}{figure.caption.48}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Chart generated by ADFD strategy presenting Strip failure domain\relax }}{104}{figure.caption.49}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Workflow of ADFD$^+$\relax }}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{109}{figure.caption.50}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{109}{figure.caption.50}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Class Hierarchy of ADFD strategy in YETI\relax }}{110}{figure.caption.51}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces The output of ADFD$^+$ for the above code.\relax }}{111}{figure.caption.52}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Time taken to find failures\relax }}{114}{figure.caption.54}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Number of test cases taken to find failures\relax }}{114}{figure.caption.55}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Time taken to find failure domains\relax }}{115}{figure.caption.56}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Test cases taken to find failure domains\relax }}{116}{figure.caption.57}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Pass and fail values of plotted by ADFD$^+$ in three different cases of two-dimension programs\relax }}{120}{figure.caption.58}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point failure domain in one-dimension}}}{120}{figure.caption.58}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block failure domain in one-dimension}}}{120}{figure.caption.58}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip failure domain in one dimension}}}{120}{figure.caption.58}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Pass and fail values of plotted by ADFD$^+$ in three different cases of two-dimension programs\relax }}{121}{figure.caption.59}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point failure domain in two-dimension}}}{121}{figure.caption.59}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block failure domain in two-dimension}}}{121}{figure.caption.59}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip failure domain in two-dimension}}}{121}{figure.caption.59}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Workflow of ADFD$^+$\relax }}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {One dimension module}}}{110}{figure.caption.50}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Two dimension module}}}{110}{figure.caption.50}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces The output of ADFD$^+$ for the above code.\relax }}{111}{figure.caption.51}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Pass and fail values of plotted by ADFD$^+$ in three different cases of two-dimension programs\relax }}{113}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point failure domain in one-dimension}}}{113}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block failure domain in one-dimension}}}{113}{figure.caption.53}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip failure domain in one dimension}}}{113}{figure.caption.53}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pass and fail values of plotted by ADFD$^+$ in three different cases of two-dimension programs\relax }}{114}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Point failure domain in two-dimension}}}{114}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Block failure domain in two-dimension}}}{114}{figure.caption.54}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Strip failure domain in two-dimension}}}{114}{figure.caption.54}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Time taken to find failures\relax }}{116}{figure.caption.55}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Number of test cases taken to find failures\relax }}{116}{figure.caption.56}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Time taken to find failure domains\relax }}{117}{figure.caption.57}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Test cases taken to find failure domains\relax }}{118}{figure.caption.58}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces GUI front end of upgraded ADFD and ADFD$^+$\relax }}{123}{figure.caption.60}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Architecture of Daikon\nobreakspace {}\cite {ernst2001dynamically}\relax }}{124}{figure.caption.61}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Graph, Invariants and Test case generated by ADFD$^+$\relax }}{127}{figure.caption.62}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Graph, Invariants and test case generated by ADFD\relax }}{127}{figure.caption.63}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces GUI front end of upgraded ADFD and ADFD$^+$\relax }}{123}{figure.caption.59}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Architecture of Daikon\nobreakspace {}\cite {ernst2001dynamically}\relax }}{124}{figure.caption.60}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Graph, Invariants and Test case generated by ADFD$^+$\relax }}{127}{figure.caption.61}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Graph, Invariants and test case generated by ADFD\relax }}{127}{figure.caption.62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
