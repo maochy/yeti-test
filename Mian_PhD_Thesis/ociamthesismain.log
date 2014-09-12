@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  11 SEP 2014 22:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  12 SEP 2014 22:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,7 +1007,7 @@ Overfull \hbox (1.29184pt too wide) detected at line 143
 
 
 Overfull \hbox (1.29184pt too wide) detected at line 147
- []\OT1/phv/m/n/10.95 131
+ []\OT1/phv/m/n/10.95 132
  []
 
 
@@ -1736,60 +1736,60 @@ Package pdftex.def Info: chapter4/DSSR.png used on input line 230.
 File: chapter4/classHierarchy1.png Graphic file (type png)
 
 <use chapter4/classHierarchy1.png>
-Package pdftex.def Info: chapter4/classHierarchy1.png used on input line 248.
+Package pdftex.def Info: chapter4/classHierarchy1.png used on input line 250.
 (pdftex.def)             Requested size: 199.16454pt x 298.75037pt.
  [84 <./chapter4/classHierarchy1.png>]
 [85] [86] <chapter4/DssrImprove.png, id=1851, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
-Package pdftex.def Info: chapter4/DssrImprove.png used on input line 346.
+Package pdftex.def Info: chapter4/DssrImprove.png used on input line 348.
 (pdftex.def)             Requested size: 455.2431pt x 312.98297pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (93.70477pt too wide) in alignment at lines 443--443
+Overfull \hbox (93.70477pt too wide) in alignment at lines 445--445
 [][][][][][][][][][][][][][][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 457.
+(hyperref)                removing `math shift' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 457.
+(hyperref)                removing `superscript' on input line 459.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 457.
+(hyperref)                removing `math shift' on input line 459.
 
 [87] [88] [89 <./chapter4/DssrImprove.png>]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 476.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 478.
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 482.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 484.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 568.
+(hyperref)                removing `math shift' on input line 570.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 568.
+(hyperref)                removing `superscript' on input line 570.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 568.
+(hyperref)                removing `math shift' on input line 570.
 
 [90] [91] [92] [93]
 <chapter4/resultsOfDSSRPie.png, id=1940, 384.4764pt x 237.0456pt>
 File: chapter4/resultsOfDSSRPie.png Graphic file (type png)
 
 <use chapter4/resultsOfDSSRPie.png>
-Package pdftex.def Info: chapter4/resultsOfDSSRPie.png used on input line 638.
+Package pdftex.def Info: chapter4/resultsOfDSSRPie.png used on input line 640.
 (pdftex.def)             Requested size: 398.34415pt x 256.0886pt.
 ) [94 <./chapter4/resultsOfDSSRPie.png>]
 \openout2 = `chapter5/chapter5.aux'.
@@ -2093,7 +2093,10 @@ Overfull \hbox (7.3881pt too wide) in paragraph at lines 116--120
  []
 
 [124 <./chapter7/daikon.png>] [125]
-<chapter7/adfdPlusCombined.png, id=2315, 700.11563pt x 253.44687pt>
+LaTeX Font Info:    Font shape `OMS/phv/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+
+<chapter7/adfdPlusCombined.png, id=2316, 700.11563pt x 253.44687pt>
 File: chapter7/adfdPlusCombined.png Graphic file (type png)
 
 <use chapter7/adfdPlusCombined.png>
@@ -2116,22 +2119,13 @@ Overfull \hbox (7.4048pt too wide) in paragraph at lines 218--221
  []
 
 [127 <./chapter7/adfdPlusCombined.png> <./chapter7/adfdCombined.png>] [128]
-[129] [130]
-LaTeX Font Info:    Font shape `OMS/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 360.
- [131]
-Overfull \hbox (28.65521pt too wide) in paragraph at lines 463--464
-\OT1/phv/m/n/10.95 grams of var-i-ous plat-forms in-clud-ing Win-dows [[]], Uni
-x16, Java Li-braries citepacheco2005eclat,
- []
-
-[132] [133]
+[129] [130] [131] [132] [133]
 Overfull \vbox (24.56476pt too high) has occurred while \output is active []
 
 
 [134] [135]
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 722.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 733.
  [136
 
 ]) [137]
@@ -2340,9 +2334,9 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  17007 strings out of 493315
- 257148 string characters out of 6137904
- 487465 words of memory out of 5000000
- 18997 multiletter control sequences out of 15000+600000
+ 257144 string characters out of 6137904
+ 487571 words of memory out of 5000000
+ 18998 multiletter control sequences out of 15000+600000
  45270 words of font info for 112 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  57i,12n,100p,2608b,1700s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2364,10 +2358,10 @@ type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/ur
 w/helvetic/uhvb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helve
 tic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/helvetic/uhv
 ro8a.pfb>
-Output written on ociamthesismain.pdf (156 pages, 4071203 bytes).
+Output written on ociamthesismain.pdf (156 pages, 4072792 bytes).
 PDF statistics:
- 2968 PDF objects out of 2984 (max. 8388607)
- 2634 compressed objects within 27 object streams
- 948 named destinations out of 1000 (max. 500000)
+ 2976 PDF objects out of 2984 (max. 8388607)
+ 2642 compressed objects within 27 object streams
+ 947 named destinations out of 1000 (max. 500000)
  1450 words of extra memory for PDF output out of 10000 (max. 10000000)
 
