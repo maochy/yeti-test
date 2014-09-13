@@ -116,7 +116,7 @@ Random testing test values at random while exhaustive testing test the whole inp
 
 \textbf{Easy to understand user-friendly test output}
 
-Random testing is no exception when it comes to the complexity of understanding and evaluating test results. No random strategy seems to provide the graphical representation of the failures and failure domains. The issue of getting in easy to understand user-friendly format has been addressed the present study. The ADFD strategy has been developed with the feature of giving the result output in the visualized graphical form. This feature has been further improved in the ADFD$^+$ strategy which clarify and label individual failures and the failure domains in a two-dimensional graph. The identification of failures and failure domains in graphical form helps developers to follow the test reports easily while fixing the faults.  \\
+Random testing is no exception when it comes to the complexity of understanding and evaluating test results. No random strategy seems to provide the graphical representation of the failures and failure domains. The issue of getting an easy to understand user-friendly format has been addressed in the present study. The ADFD strategy has been developed with the feature of giving the result output in the visualized graphical form. This feature has been further improved in the ADFD$^+$ strategy which clarify and label individual failures and the failure domains in a two-dimensional graph. The identification of failures and failure domains in graphical form helps developers to follow the test reports easily while fixing the faults.  \\
 
 
 %Random testing lacks the capability to 
@@ -141,6 +141,9 @@ We noticed that auto-generation of user-defined data type is more complex as com
 
 
 %\subsection{Random testing may be a good way to go on with robustness testing}
+
+\textbf{Integration of Daikon in ADFD and ADFD$^+$ techniques}
+Daikon is integrated into both automated techniques to generate invariants of a failure domain and present the results in textual form besides graphical form. We predicted that difficulty might arise in plotting multi-dimension methods graphically, therefore, Daikon is introduced, which automatically detect and generate likely program invariants. It serves two additional purpose besides providing information about the failure domain: (1) It helps in cross checking the results with graphical form; (2) It works as a backup method, and can generate invariants of failure domain when it is not possible to present the domain graphically. Daikon's output is displayed in the GUI window at the end of the test for further action.\\
 
 
 \textbf{Nature of failure domain}
