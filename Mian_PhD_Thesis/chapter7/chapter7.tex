@@ -486,7 +486,7 @@ Our current approach of evaluation is inspired from several studies \cite{hamlet
 
 The chapter examined the effectiveness of ADFD and ADFD$^+$ techniques by analysing the comparative performance of the two techniques on production applications from Qualitas Corpus. The involved classes were further examined and cross-checked by manual testing. The results reveal that the two techniques can effectively identify and present all types of failure domains to a certain degree of accuracy. We further explain how the degree of accuracy can be increased in ADFD and ADFD$^+$ techniques. 
 %The analysis further show that simple failure and its underlying failure domain can also be discovered easily by manual testing. However testing all 4000 classes manually will be a tedious and laborious process. 
-During the analysis of impact of nature, type and size of failure domains on automated testing, it was found that the strip failure domain, with large size and low complexity are quickly identified by automated techniques whereas small sized and non trivial point and block failure domains are difficult to identify by both automated and manual techniques. Based on the results, it can be stated that on overall basis automated techniques (ADFD and ADFD+) provide highly effective assistance to manual testing but are not an alternative to manual testing.  
+During analysis the impact of nature, type and size of failure domains on automated testing, it was found that the strip failure domain, with large size and low complexity are quickly identified by automated techniques whereas small sized and non trivial point and block failure domains are difficult to identify by both automated and manual techniques. Based on the results, it can be stated that automated techniques (ADFD and ADFD+) can be highly effective in assistance to manual testing but are not an alternative to manual testing.  
 
 %Failures within the input domain are contiguous and form point, block and strip failure domains. Existing automated testing tools, such as JCrasher and Jartege, search for individual failure ignoring the failure domain. We have developed ADFD and ADFD$^+$ techniques for identification of failure domains and its presentation by graph and invariants. We have conducted automated and manual experiments that evaluate the effectiveness of our techniques on detecting and presenting the failure domains in production software contained in Qualitas Corpus. The results show that the two techniques can effectively identify and present the failure domains to a certain degree of accuracy. We further explain how the degree of accuracy can be increased in ADFD and ADFD$^+$ techniques.  
 %\smallskip
@@ -721,12 +721,11 @@ S\# & Class						& Invariants by ADFD     					& Invariants by ADFD$^+$     				
 \clearpage
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strip Failure Domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
 {\scriptsize
-\begin{longtable}{|l|l|l|l|l|l|l|l|l|}
- \caption{Classes with strip failure domains}\\
-  
-  \hline
+
+\begin{longtable}{|l|l|l|l|l|}
+\caption{Classes with strip failure domains}\\
+\hline
 S\#  & Class						& Invariants by ADFD$^+$       		& Invariants by ADFD     			& Invariants by Manual	\\
   \hline
   \endhead
@@ -782,6 +781,7 @@ S\#  & Class						& Invariants by ADFD$^+$       		& Invariants by ADFD     			&
 26	& PdfAction					& I $\le$ -2147483640 			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0, I $\ge$ -2147483648 	\\ 
 	&                                             & I $\ge$ -2147483648			& I $\ge$ 6, I $\le$ 496			& I $\ge$ 6,  I $\le$ 2147483647	\\	
 27	& PdfLiteral					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&							&								&								&									\\
 28	& PhysicalEnvironment		& I $\le$ -1, I $\ge$ -11			& I $\le$ -2147483646			& I $\le$ -1, 							\\ 
 	& 							& 								& I $\ge$ -2147483648 			& I $\ge$ -2147483648				\\ 
 29	& IntegerArray				& I $\ge$ 2147483636			& I $\ge$ 2147483587			& I \textgreater~698000000					\\ 
@@ -823,10 +823,8 @@ S\#  & Class						& Invariants by ADFD$^+$       		& Invariants by ADFD     			&
 49	& AttributeList				& I $\ge$ 2147483635			& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
 	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647 					\\
 50	& ClassLoaderResolver		&  I $\ge$ 2,						& I $\ge$ 500, I $\le$ -2			& I $\le$ -2, I \textgreater -2147483648  	\\ 
-	&                                             &  I $\le$ 18						& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ 2147483647	\\
-	\hline
-\label{table:stripDomains7}	
+	& \label{table:stripDomains7}  &  I $\le$ 18						& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ 2147483647	\\ \hline
+	
 \end{longtable}
-
 }
 

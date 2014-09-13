@@ -195,7 +195,7 @@ The following code illustrates the ability of BVA to find a failure.
 \bigskip
 \begin{lstlisting}
  public void test (int arg) {
-	arg = arg $^+$ 1;
+	arg = arg + 1;
 	int [] intArray = new intArray[arg];
 	...
  }
@@ -318,12 +318,12 @@ Let us consider the following program.
 \bigskip
 
 \begin{lstlisting}
-void test(int x,int y) {
-	if (x >= 20) {
-		y = z; 
+public void test(int arg1, int arg2) {
+	if (arg1 >= 20) {
+		arg2 = arg3; 
 	}
 	else {
-		y = 2 * z;
+		arg2 = 2 * arg3;
 	}
 }
 \end{lstlisting}
@@ -365,12 +365,12 @@ Suppose we want the true branch of the if/else statement to be executed. An inpu
 Random test data generator is the simplest approach for generation of test data. Its advantage is the adaptability to generate input data for any type of program. However, random test data generation is based solely on probability and cannot accomplish high coverage as its chances of finding semantically small faults are quite low~\cite{godefroid2005dart}. If a fault is only revealed by a small percentage of the program input, it is said to be a semantically small fault. As an example of a semantically small fault, consider the following code:
 \bigskip
 \begin{lstlisting}
-void test(int x, int y) {
-    if (x==y){
-        System.out.println("Equal");
+public void test(int arg1, int arg2) {
+    if (arg1 == arg2){
+        System.out.println( arg1 + " is equal to " + arg2);
     }
     else {
-        System.out.println("Not Equal");
+        System.out.println(arg1 + " is not equal to " + arg2);
     }
 }
 \end{lstlisting}

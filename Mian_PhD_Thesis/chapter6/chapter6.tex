@@ -501,17 +501,17 @@ The ADFD$^+$ was found quite efficient and effective in the case of block and st
 
 \begin{lstlisting}
 public class ErrorClass {
-  public static void errorMethod (int x, int y){
-  	int z;
-	if (x == 10000) {	
-		abort();		/*error*/
+  public static void errorMethod (int arg1, int arg2){
+	if (arg1 == 10000) {	
+		abort();		/* error */
 	}	 
-	if (y == -20000) {	
-		abort();		/*error*/	
+	if (arg2 == -20000) {	
+		abort();		/* error */	
 	}
   } 
 }
 \end{lstlisting}
+\bigskip
 \bigskip
 
 %As a pilot study, we also ran an empirical study to evaluate several error-seeded programs. While it would be surprising if production programs produced much different results, it would be worthwhile to check.
