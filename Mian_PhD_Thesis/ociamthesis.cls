@@ -100,19 +100,19 @@
     \thispagestyle{empty}
   \null\vfill
   \begin{center}
-    { \huge {\@title} \par}
-    {\large \vspace*{35mm} {\Large \@author} \par}
+    { \Huge {\@title} \par}
+    {\Large \vspace*{45mm} {\huge \@author} \par}
 
 %{\large \vspace*{40mm} {\logo \par} \vspace*{25mm}}
 
-    {{\vspace*{35mm}Doctor of Philosophy} \par}
-{\vspace*{3.5ex}
-    {{\@college} \par}
+    {{\vspace*{35mm}{\Large Doctor of Philosophy}} \par}
+{\vspace*{5.5ex}
+    {{{\Large \@college}} \par}
 \vspace*{0.5ex}
-    {The University of York \par}
+    {{\Large The University of York }\par}
 
 \vspace*{15mm}
-    {\@degreedate}
+    {{\Large \@degreedate}}
 
 
 \vspace*{15mm}
