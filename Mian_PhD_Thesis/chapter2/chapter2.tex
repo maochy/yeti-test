@@ -363,7 +363,7 @@ Suppose we want the true branch of the if/else statement to be executed. An inpu
 
 \subsection{Random Test Data Generator}
 \label{sec:randomgenerator_2}
-Random test data generator is the simplest approach for generation of test data. Its advantage is the adaptability to generate input data for any type of program. However, random test data generation is based solely on probability and cannot accomplish high coverage as its chances of finding semantically small faults are quite low~\cite{godefroid2005dart}. If a fault is only revealed by a small percentage of the program input, it is said to be a semantically small fault. As an example of a semantically small fault, consider the following code:
+Random test data generator is the simplest approach for generation of test data. In this technique data set is generated randomly from the input domain for testing software. The generated data set is in accordance with the software requirements, software specifications or any other test adequacy criteria. Its advantage is the adaptability to generate input data for any type of program. However, random test data generation is based solely on probability and cannot accomplish high coverage as its chances of finding semantically small faults are quite low~\cite{godefroid2005dart}. If a fault is only revealed by a small percentage of the program input, it is said to be a semantically small fault. As an example of a semantically small fault, consider the following code:
 \bigskip
 \begin{lstlisting}
 public void test(int arg1, int arg2) {
