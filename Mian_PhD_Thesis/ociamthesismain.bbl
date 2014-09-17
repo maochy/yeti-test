@@ -193,6 +193,11 @@ Lloyd~D Fosdick and Leon~J Osterweil.
 \newblock Data flow analysis in software reliability.
 \newblock {\em ACM Computing Surveys (CSUR)}, 8(3):305--330, 1976.
 
+\bibitem{allen1970control}
+Frances~E Allen.
+\newblock Control flow analysis.
+\newblock In {\em ACM Sigplan Notices}, volume~5, pages 1--19. ACM, 1970.
+
 \bibitem{arlat1990validation}
 Jean Arlat.
 \newblock {\em Validation de la s{\^u}ret{\'e} de fonctionnement par injection
@@ -273,12 +278,10 @@ Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
 \newblock In {\em Software Reliability Engineering, 2008. ISSRE 2008. 19th
   International Symposium on}, pages 157--166. IEEE, 2008.
 
-\bibitem{leitner2009effectiveness}
-Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
-  Oriol.
-\newblock On the effectiveness of test extraction without overhead.
-\newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
-  International Conference on}, pages 416--425. IEEE, 2009.
+\bibitem{venolia2005software}
+G~Venolia, Robert DeLine, and Thomas LaToza.
+\newblock Software development at microsoft observed.
+\newblock {\em Microsoft Research, TR}, 2005.
 
 \bibitem{tretmans2000automatic}
 Jan Tretmans and Axel Belinfante.
@@ -449,6 +452,12 @@ Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
 \newblock Mirror adaptive random testing.
 \newblock {\em Information and Software Technology}, 46(15):1001--1010, 2004.
 
+\bibitem{chan2006restricted}
+Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
+\newblock Restricted random testing.
+\newblock In {\em Software Quality�ECSQ 2002}, pages 321--330. Springer,
+  2006.
+
 \bibitem{chen2007quasi}
 Tsong~Yueh Chen and Robert Merkel.
 \newblock Quasi-random testing.
@@ -588,6 +597,13 @@ Manuel Oriol.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
 
+\bibitem{leitner2009effectiveness}
+Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
+  Oriol.
+\newblock On the effectiveness of test extraction without overhead.
+\newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
+  International Conference on}, pages 416--425. IEEE, 2009.
+
 \bibitem{tempero2010empirical}
 Ewan Tempero, Steve Counsell, and James Noble.
 \newblock An empirical study of overriding in open source java.
@@ -626,12 +642,6 @@ Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Good random testing.
 \newblock In {\em Reliable Software Technologies-Ada-Europe 2004}, pages
   200--212. Springer, 2004.
-
-\bibitem{chan2006restricted}
-Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
-\newblock Restricted random testing.
-\newblock In {\em Software Quality�ECSQ 2002}, pages 321--330. Springer,
-  2006.
 
 \bibitem{chen2004adaptive}
 Tsong~Yueh Chen, Robert~G Merkel, G~Eddy, and PK~Wong.
