@@ -238,6 +238,12 @@ Simeon Ntafos.
 \newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~23, pages
   42--48. ACM, 1998.
 
+\bibitem{ramachandran2003testing}
+Muthu Ramachandran.
+\newblock Testing software components using boundary value analysis.
+\newblock In {\em Euromicro Conference, 2003. Proceedings. 29th}, pages 94--98.
+  IEEE, 2003.
+
 \bibitem{radatz1990ieee}
 Jane Radatz, Anne Geraci, and Freny Katki.
 \newblock I{EEE} standard glossary of software engineering terminology.
@@ -584,18 +590,18 @@ Ilinca Ciupa, Alexander Pretschner, Manuel Oriol, Andreas Leitner, and Bertrand
 \newblock {\em Software Testing, Verification and Reliability}, 21(1):3--28,
   2011.
 
-\bibitem{pacheco2007feedback}
-Carlos Pacheco, Shuvendu~K Lahiri, Michael~D Ernst, and Thomas Ball.
-\newblock Feedback-directed random test generation.
-\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
-  Conference on}, pages 75--84. IEEE, 2007.
-
 \bibitem{oriol2012random}
 Manuel Oriol.
 \newblock Random testing: Evaluation of a law describing the number of faults
   found.
 \newblock In {\em Software Testing, Verification and Validation (ICST), 2012
   IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
+
+\bibitem{pacheco2007feedback}
+Carlos Pacheco, Shuvendu~K Lahiri, Michael~D Ernst, and Thomas Ball.
+\newblock Feedback-directed random test generation.
+\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
+  Conference on}, pages 75--84. IEEE, 2007.
 
 \bibitem{leitner2009effectiveness}
 Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
@@ -650,6 +656,12 @@ Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \newblock Good random testing.
 \newblock In {\em Reliable Software Technologies-Ada-Europe 2004}, pages
   200--212. Springer, 2004.
+
+\bibitem{offutt1996semantic}
+A~Jefferson Offutt and J~Huffman Hayes.
+\newblock A semantic model of program faults.
+\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
+  195--200. ACM, 1996.
 
 \bibitem{chen2004adaptive}
 Tsong~Yueh Chen, Robert~G Merkel, G~Eddy, and PK~Wong.
@@ -711,12 +723,6 @@ D~Gilbert.
 \newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloper�s
   guide.
 \newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
-
-\bibitem{offutt1996semantic}
-A~Jefferson Offutt and J~Huffman Hayes.
-\newblock A semantic model of program faults.
-\newblock In {\em ACM SIGSOFT Software Engineering Notes}, volume~21, pages
-  195--200. ACM, 1996.
 
 \bibitem{podgurski2003automated}
 Andy Podgurski, David Leon, Patrick Francis, Wes Masri, Melinda Minch, Jiayang

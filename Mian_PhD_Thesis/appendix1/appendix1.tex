@@ -36,7 +36,7 @@ public class PointDomainOneArgument{
  * Point Fault Domain example for two arguments
  * @author (Mian and Manuel)
  */
-public class PointDomainOneArgument{
+public class PointDomainTwoArgument{
 
 	public static void pointErrors (int x, int y){
 		int z = x/y;
@@ -57,13 +57,13 @@ public class BlockDomainOneArgument{
 
 public static void blockErrors (int x){
 	
-	if((x > -2) \&\& (x < 2))
+	if((x > -2) && (x < 2))
 		x = 5/0;
 	
-	if((x > -30) \&\& (x < -25))
+	if((x > -30) && (x < -25))
 		x = 5/0;
 	
-	if((x > 50) \&\& (x < 55))
+	if((x > 50) && (x < 55))
 		x = 5/0;
 
    }
@@ -79,7 +79,7 @@ public static void blockErrors (int x){
  */
 public class BlockDomainTwoArgument{
 
-	public static void pointErrors (int x, int y){
+	public static void blockErrors (int x, int y){
 
 		if(((x > 0)&&(x < 20)) || ((y > 0) && (y < 20))){
 		x = 5/0;
@@ -116,7 +116,7 @@ public class StripDomainOneArgument{
  */
 public class StripDomainTwoArgument{
 
-	public static void pointErrors (int x, int y){
+	public static void stripErrors (int x, int y){
 
 		if(((x > 0)&&(x < 40)) || ((y > 0) && (y < 40))){
 		x = 5/0;
