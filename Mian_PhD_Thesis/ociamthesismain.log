@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  18 SEP 2014 18:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  18 SEP 2014 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1188,9 +1188,21 @@ Overfull \hbox (1.29184pt too wide) detected at line 58
  []\OT1/phv/m/n/10.95 117
  []
 
+
+Overfull \hbox (12.62502pt too wide) in paragraph at lines 58--58
+ [][] [][][]\OT1/phv/m/n/10.95 Pass and fail val-ues plot-ted by ADFD$[]$ in th
+ree dif-fer-ent cases of two-dimension 
+ []
+
 [12]
 Overfull \hbox (1.29184pt too wide) detected at line 62
  []\OT1/phv/m/n/10.95 118
+ []
+
+
+Overfull \hbox (12.62502pt too wide) in paragraph at lines 62--62
+ [][] [][][]\OT1/phv/m/n/10.95 Pass and fail val-ues plot-ted by ADFD$[]$ in th
+ree dif-fer-ent cases of two-dimension 
  []
 
 
@@ -2065,7 +2077,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 135.
 
-[113] <chapter6/adfdPlusWorkflow.png, id=2137, 906.38625pt x 557.08125pt>
+[113] <chapter6/adfdPlusWorkflow.png, id=2138, 906.38625pt x 557.08125pt>
 File: chapter6/adfdPlusWorkflow.png Graphic file (type png)
 
 <use chapter6/adfdPlusWorkflow.png>
@@ -2085,28 +2097,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 158.
 
 [114 <./chapter6/adfdPlusWorkflow.png>]
-<chapter6/exampleError.png, id=2144, 960.08687pt x 654.94687pt>
+<chapter6/exampleError.png, id=2145, 960.08687pt x 654.94687pt>
 File: chapter6/exampleError.png Graphic file (type png)
 
 <use chapter6/exampleError.png>
 Package pdftex.def Info: chapter6/exampleError.png used on input line 175.
 (pdftex.def)             Requested size: 341.42653pt x 227.61586pt.
  [115 <./chapter6/exampleError.png>] [116]
-<chapter6/PFDOne.png, id=2183, 790.955pt x 575.14874pt>
+<chapter6/PFDOne.png, id=2184, 790.955pt x 575.14874pt>
 File: chapter6/PFDOne.png Graphic file (type png)
 
 <use chapter6/PFDOne.png>
 Package pdftex.def Info: chapter6/PFDOne.png used on input line 249.
 (pdftex.def)             Requested size: 284.52634pt x 184.93773pt.
 
-<chapter6/BFDOne.png, id=2184, 794.97pt x 575.14874pt>
+<chapter6/BFDOne.png, id=2185, 794.97pt x 575.14874pt>
 File: chapter6/BFDOne.png Graphic file (type png)
 
 <use chapter6/BFDOne.png>
 Package pdftex.def Info: chapter6/BFDOne.png used on input line 253.
 (pdftex.def)             Requested size: 284.52713pt x 184.93773pt.
 
-<chapter6/SFDOne.png, id=2185, 789.95125pt x 573.14125pt>
+<chapter6/SFDOne.png, id=2186, 789.95125pt x 573.14125pt>
 File: chapter6/SFDOne.png Graphic file (type png)
 
 <use chapter6/SFDOne.png>
@@ -2116,21 +2128,21 @@ Package pdftex.def Info: chapter6/SFDOne.png used on input line 257.
 
 LaTeX Warning: Float too large for page by 15.01427pt on input line 261.
 
-<chapter6/PFDTwo.png, id=2186, 1187.43625pt x 772.8875pt>
+<chapter6/PFDTwo.png, id=2187, 1187.43625pt x 772.8875pt>
 File: chapter6/PFDTwo.png Graphic file (type png)
 
 <use chapter6/PFDTwo.png>
 Package pdftex.def Info: chapter6/PFDTwo.png used on input line 271.
 (pdftex.def)             Requested size: 284.51944pt x 184.9425pt.
 
-<chapter6/BFDTwo.png, id=2187, 1192.455pt x 772.8875pt>
+<chapter6/BFDTwo.png, id=2188, 1192.455pt x 772.8875pt>
 File: chapter6/BFDTwo.png Graphic file (type png)
 
 <use chapter6/BFDTwo.png>
 Package pdftex.def Info: chapter6/BFDTwo.png used on input line 275.
 (pdftex.def)             Requested size: 284.52107pt x 184.9425pt.
 
-<chapter6/SFDTwo.png, id=2188, 1192.455pt x 772.8875pt>
+<chapter6/SFDTwo.png, id=2189, 1192.455pt x 772.8875pt>
 File: chapter6/SFDTwo.png Graphic file (type png)
 
 <use chapter6/SFDTwo.png>
@@ -2144,28 +2156,28 @@ LaTeX Warning: Float too large for page by 15.02693pt on input line 283.
 [118 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.png>]
 [119
 
-] <chapter6/timetaken.png, id=2220, 389.2944pt x 515.526pt>
+] <chapter6/timetaken.png, id=2221, 389.2944pt x 515.526pt>
 File: chapter6/timetaken.png Graphic file (type png)
 
 <use chapter6/timetaken.png>
 Package pdftex.def Info: chapter6/timetaken.png used on input line 361.
 (pdftex.def)             Requested size: 284.533pt x 256.08685pt.
 
-<chapter6/TestCases.png, id=2221, 450.9648pt x 491.436pt>
+<chapter6/TestCases.png, id=2222, 450.9648pt x 491.436pt>
 File: chapter6/TestCases.png Graphic file (type png)
 
 <use chapter6/TestCases.png>
 Package pdftex.def Info: chapter6/TestCases.png used on input line 368.
 (pdftex.def)             Requested size: 284.54283pt x 256.08809pt.
  [120 <./chapter6/timetaken.png> <./chapter6/TestCases.png>] <chapter6/timeTake
-nBar.png, id=2229, 346.4142pt x 260.6538pt>
+nBar.png, id=2230, 346.4142pt x 260.6538pt>
 File: chapter6/timeTakenBar.png Graphic file (type png)
 
 <use chapter6/timeTakenBar.png>
 Package pdftex.def Info: chapter6/timeTakenBar.png used on input line 380.
 (pdftex.def)             Requested size: 298.75613pt x 298.78304pt.
  [121 <./chapter6/timeTakenBar.png>]
-<chapter6/testCasesBar.png, id=2237, 312.2064pt x 263.0628pt>
+<chapter6/testCasesBar.png, id=2238, 312.2064pt x 263.0628pt>
 File: chapter6/testCasesBar.png Graphic file (type png)
 
 <use chapter6/testCasesBar.png>
@@ -2203,7 +2215,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 
 
-] <chapter7/adfdUpgraded1.png, id=2291, 1003.75pt x 386.44376pt>
+] <chapter7/adfdUpgraded1.png, id=2292, 1003.75pt x 386.44376pt>
 File: chapter7/adfdUpgraded1.png Graphic file (type png)
 
 <use chapter7/adfdUpgraded1.png>
@@ -2215,7 +2227,7 @@ Overfull \hbox (7.40341pt too wide) in paragraph at lines 96--100
  []
 
 [127 <./chapter7/adfdUpgraded1.png>]
-<chapter7/daikon.png, id=2303, 680.7834pt x 224.037pt>
+<chapter7/daikon.png, id=2304, 680.7834pt x 224.037pt>
 File: chapter7/daikon.png Graphic file (type png)
 
 <use chapter7/daikon.png>
@@ -2230,7 +2242,7 @@ Overfull \hbox (7.3881pt too wide) in paragraph at lines 116--120
 LaTeX Font Info:    Font shape `OMS/phv/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
 
-<chapter7/adfdPlusCombined.png, id=2342, 700.11563pt x 253.44687pt>
+<chapter7/adfdPlusCombined.png, id=2343, 700.11563pt x 253.44687pt>
 File: chapter7/adfdPlusCombined.png Graphic file (type png)
 
 <use chapter7/adfdPlusCombined.png>
@@ -2241,7 +2253,7 @@ Overfull \hbox (7.40178pt too wide) in paragraph at lines 206--209
  [][] 
  []
 
-[130] <chapter7/adfdCombined.png, id=2365, 698.10812pt x 249.93375pt>
+[130] <chapter7/adfdCombined.png, id=2366, 698.10812pt x 249.93375pt>
 File: chapter7/adfdCombined.png Graphic file (type png)
 
 <use chapter7/adfdCombined.png>
@@ -2475,9 +2487,9 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  17214 strings out of 493315
- 260379 string characters out of 6137904
- 489382 words of memory out of 5000000
- 19162 multiletter control sequences out of 15000+600000
+ 260382 string characters out of 6137904
+ 488402 words of memory out of 5000000
+ 19163 multiletter control sequences out of 15000+600000
  94820 words of font info for 208 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  57i,12n,100p,2683b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2496,10 +2508,10 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbo
 l/usyr.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (161 pages, 4041597 bytes).
+Output written on ociamthesismain.pdf (161 pages, 4041752 bytes).
 PDF statistics:
  3003 PDF objects out of 3580 (max. 8388607)
  2666 compressed objects within 27 object streams
- 955 named destinations out of 1000 (max. 500000)
+ 954 named destinations out of 1000 (max. 500000)
  1442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
