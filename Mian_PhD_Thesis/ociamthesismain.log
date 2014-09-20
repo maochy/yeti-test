@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  18 SEP 2014 22:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  20 SEP 2014 17:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2320,11 +2320,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--132
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--147
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
-[145]) [146]
+[145]) [146
+
+]
 \openout2 = `chapter9/chapter9.aux'.
 
  (./chapter9/chapter9.tex
@@ -2508,10 +2510,10 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbo
 l/usyr.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (161 pages, 4041752 bytes).
+Output written on ociamthesismain.pdf (161 pages, 4042414 bytes).
 PDF statistics:
- 3003 PDF objects out of 3580 (max. 8388607)
- 2666 compressed objects within 27 object streams
+ 3008 PDF objects out of 3580 (max. 8388607)
+ 2671 compressed objects within 27 object streams
  954 named destinations out of 1000 (max. 500000)
  1442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
