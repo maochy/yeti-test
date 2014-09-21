@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  20 SEP 2014 17:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  21 SEP 2014 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1745,57 +1745,61 @@ Overfull \hbox (1.7078pt too wide) in paragraph at lines 23--25
 File: chapter3/yetiStructure.png Graphic file (type png)
 
 <use chapter3/yetiStructure.png>
-Package pdftex.def Info: chapter3/yetiStructure.png used on input line 39.
+Package pdftex.def Info: chapter3/yetiStructure.png used on input line 40.
 (pdftex.def)             Requested size: 398.33136pt x 256.07227pt.
  [70 <./chapter3/yetiStructure.png>] [71]
 [72] <chapter3/sequenceDiagram.png, id=1668, 2974.11125pt x 1767.60374pt>
 File: chapter3/sequenceDiagram.png Graphic file (type png)
 
 <use chapter3/sequenceDiagram.png>
-Package pdftex.def Info: chapter3/sequenceDiagram.png used on input line 94.
-(pdftex.def)             Requested size: 426.76505pt x 284.52158pt.
- [73 <./chapter3/sequenceDiagram.png>]
-[74]
-Overfull \vbox (18.45137pt too high) has occurred while \output is active []
+Package pdftex.def Info: chapter3/sequenceDiagram.png used on input line 95.
+(pdftex.def)             Requested size: 441.01476pt x 312.97644pt.
 
-
-[75] <chapter3/cli.png, id=1694, 1201.99063pt x 104.89188pt>
-File: chapter3/cli.png Graphic file (type png)
-
-<use chapter3/cli.png>
-Package pdftex.def Info: chapter3/cli.png used on input line 183.
-(pdftex.def)             Requested size: 435.32071pt x 42.67943pt.
-
-Overfull \hbox (1.70071pt too wide) in paragraph at lines 183--185
+Overfull \hbox (7.39476pt too wide) in paragraph at lines 95--97
  [][] 
  []
 
-<chapter3/yetiCommandGUI.pdf, id=1697, 433.62pt x 494.84875pt>
+[73 <./chapter3/sequenceDiagram.png>] [74]
+Overfull \vbox (18.45137pt too high) has occurred while \output is active []
+
+
+[75] <chapter3/cli.png, id=1696, 1201.99063pt x 104.89188pt>
+File: chapter3/cli.png Graphic file (type png)
+
+<use chapter3/cli.png>
+Package pdftex.def Info: chapter3/cli.png used on input line 185.
+(pdftex.def)             Requested size: 435.32071pt x 42.67943pt.
+
+Overfull \hbox (1.70071pt too wide) in paragraph at lines 185--187
+ [][] 
+ []
+
+<chapter3/yetiCommandGUI.pdf, id=1699, 433.62pt x 494.84875pt>
 File: chapter3/yetiCommandGUI.pdf Graphic file (type pdf)
 
 <use chapter3/yetiCommandGUI.pdf>
-Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 193.
+Package pdftex.def Info: chapter3/yetiCommandGUI.pdf used on input line 195.
 (pdftex.def)             Requested size: 227.62082pt x 256.0694pt.
  [76 <./chapter3/cli.png> <./chapter3/yetiCommandGUI.pdf>] <chapter3/yetiReport
-1.png, id=1713, 607.26875pt x 154.5775pt>
+1.png, id=1716, 607.26875pt x 154.5775pt>
 File: chapter3/yetiReport1.png Graphic file (type png)
 
 <use chapter3/yetiReport1.png>
-Package pdftex.def Info: chapter3/yetiReport1.png used on input line 212.
+Package pdftex.def Info: chapter3/yetiReport1.png used on input line 214.
 (pdftex.def)             Requested size: 426.79947pt x 99.58731pt.
 
-<chapter3/yetiReport2.png, id=1715, 617.30624pt x 153.57375pt>
+<chapter3/yetiReport2.png, id=1718, 617.30624pt x 153.57375pt>
 File: chapter3/yetiReport2.png Graphic file (type png)
 
 <use chapter3/yetiReport2.png>
-Package pdftex.def Info: chapter3/yetiReport2.png used on input line 221.
+Package pdftex.def Info: chapter3/yetiReport2.png used on input line 224.
 (pdftex.def)             Requested size: 426.79892pt x 99.58507pt.
  [77 <./chapter3/yetiReport1.png> <./chapter3/yetiReport2.png>] <chapter3/yetiG
-UI.png, id=1723, 1440.13031pt x 873.2625pt>
+UI.png, id=1726, 1440.13031pt x 873.2625pt>
 File: chapter3/yetiGUI.png Graphic file (type png)
 
 <use chapter3/yetiGUI.png>
-Package pdftex.def Info: chapter3/yetiGUI.png used on input line 240.
+Package pdftex.def Info: chapter3/yetiGUI.png used on input line 243.
 (pdftex.def)             Requested size: 654.40332pt x 455.24506pt.
  [78] [79 <./chapter3/yetiGUI.png>]) [80]
 \openout2 = `chapter4/chapter4.aux'.
@@ -1826,42 +1830,42 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 49.
 
-[82] <chapter4/block2.png, id=1793, 271.0125pt x 122.70844pt>
+[82] <chapter4/block2.png, id=1796, 271.0125pt x 122.70844pt>
 File: chapter4/block2.png Graphic file (type png)
 
 <use chapter4/block2.png>
 Package pdftex.def Info: chapter4/block2.png used on input line 104.
 (pdftex.def)             Requested size: 284.53842pt x 113.81433pt.
  [83 <./chapter4/block2.png>]
-<chapter4/flowchart1.png, id=1801, 403.46008pt x 404.31366pt>
+<chapter4/flowchart1.png, id=1804, 403.46008pt x 404.31366pt>
 File: chapter4/flowchart1.png Graphic file (type png)
 
 <use chapter4/flowchart1.png>
 Package pdftex.def Info: chapter4/flowchart1.png used on input line 121.
 (pdftex.def)             Requested size: 341.4467pt x 398.3346pt.
  [84 <./chapter4/flowchart1.png>] [85] [86]
-<chapter4/random.png, id=1835, 385.44pt x 197.73875pt>
+<chapter4/random.png, id=1838, 385.44pt x 197.73875pt>
 File: chapter4/random.png Graphic file (type png)
 
 <use chapter4/random.png>
 Package pdftex.def Info: chapter4/random.png used on input line 217.
 (pdftex.def)             Requested size: 341.42903pt x 184.94513pt.
 
-<chapter4/DSSR.png, id=1836, 383.4325pt x 193.72375pt>
+<chapter4/DSSR.png, id=1839, 383.4325pt x 193.72375pt>
 File: chapter4/DSSR.png Graphic file (type png)
  <use chapter4/DSSR.png>
 Package pdftex.def Info: chapter4/DSSR.png used on input line 229.
 (pdftex.def)             Requested size: 341.45277pt x 184.94695pt.
 
 [87 <./chapter4/random.png> <./chapter4/DSSR.png>]
-<chapter4/classHierarchy1.png, id=1845, 640.3925pt x 1335.99126pt>
+<chapter4/classHierarchy1.png, id=1848, 640.3925pt x 1335.99126pt>
 File: chapter4/classHierarchy1.png Graphic file (type png)
 
 <use chapter4/classHierarchy1.png>
 Package pdftex.def Info: chapter4/classHierarchy1.png used on input line 259.
 (pdftex.def)             Requested size: 170.70967pt x 270.29211pt.
  [88 <./chapter4/classHierarchy1.png>]
-[89] [90] <chapter4/DssrImprove.png, id=1880, 986.2446pt x 479.391pt>
+[89] [90] <chapter4/DssrImprove.png, id=1883, 986.2446pt x 479.391pt>
 File: chapter4/DssrImprove.png Graphic file (type png)
 
 <use chapter4/DssrImprove.png>
@@ -1911,7 +1915,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 578.
 
 [94] [95] [96] [97]
-<chapter4/resultsOfDSSRPie.png, id=1967, 384.4764pt x 237.0456pt>
+<chapter4/resultsOfDSSRPie.png, id=1971, 384.4764pt x 237.0456pt>
 File: chapter4/resultsOfDSSRPie.png Graphic file (type png)
 
 <use chapter4/resultsOfDSSRPie.png>
@@ -1933,28 +1937,28 @@ Chapter 5.
 
 
 
-] <chapter5/ADFD_Diagram1.png, id=1992, 589.20125pt x 414.54875pt>
+] <chapter5/ADFD_Diagram1.png, id=1995, 589.20125pt x 414.54875pt>
 File: chapter5/ADFD_Diagram1.png Graphic file (type png)
 
 <use chapter5/ADFD_Diagram1.png>
 Package pdftex.def Info: chapter5/ADFD_Diagram1.png used on input line 101.
 (pdftex.def)             Requested size: 426.79584pt x 312.99188pt.
  [100]
-<chapter5/ADFD_front_end.png, id=2003, 1342.01375pt x 767.86874pt>
+<chapter5/ADFD_front_end.png, id=2006, 1342.01375pt x 767.86874pt>
 File: chapter5/ADFD_front_end.png Graphic file (type png)
 
 <use chapter5/ADFD_front_end.png>
 Package pdftex.def Info: chapter5/ADFD_front_end.png used on input line 121.
 (pdftex.def)             Requested size: 426.7911pt x 312.9887pt.
  [101 <./chapter5/ADFD_Diagram1.png>] [102 <./chapter5/ADFD_front_end.png>]
-<chapter5/classHierarchy2.png, id=2015, 640.3925pt x 1053.9375pt>
+<chapter5/classHierarchy2.png, id=2018, 640.3925pt x 1053.9375pt>
 File: chapter5/classHierarchy2.png Graphic file (type png)
 
 <use chapter5/classHierarchy2.png>
 Package pdftex.def Info: chapter5/classHierarchy2.png used on input line 191.
 (pdftex.def)             Requested size: 170.70967pt x 270.3024pt.
  [103 <./chapter5/classHierarchy2.png>]
-<chapter5/pointDomainOneArgument.png, id=2022, 780.9175pt x 570.13pt>
+<chapter5/pointDomainOneArgument.png, id=2025, 780.9175pt x 570.13pt>
 File: chapter5/pointDomainOneArgument.png Graphic file (type png)
 
 <use chapter5/pointDomainOneArgument.png>
@@ -1962,42 +1966,42 @@ Package pdftex.def Info: chapter5/pointDomainOneArgument.png used on input line
  242.
 (pdftex.def)             Requested size: 398.33415pt x 213.38934pt.
  [104 <./chapter5/pointDomainOneArgument.png>] [105] <chapter5/PFDOne.png, id=2
-056, 790.955pt x 575.14874pt>
+059, 790.955pt x 575.14874pt>
 File: chapter5/PFDOne.png Graphic file (type png)
 
 <use chapter5/PFDOne.png>
 Package pdftex.def Info: chapter5/PFDOne.png used on input line 342.
 (pdftex.def)             Requested size: 426.79555pt x 213.3897pt.
 
-<chapter5/PFDTwo.png, id=2057, 785.93625pt x 573.14125pt>
+<chapter5/PFDTwo.png, id=2060, 785.93625pt x 573.14125pt>
 File: chapter5/PFDTwo.png Graphic file (type png)
 
 <use chapter5/PFDTwo.png>
 Package pdftex.def Info: chapter5/PFDTwo.png used on input line 348.
 (pdftex.def)             Requested size: 426.79773pt x 213.39699pt.
  [106 <./chapter5/PFDOne.png> <./chapter5/PFDTwo.png>] <chapter5/BFDOne.png, id
-=2070, 794.97pt x 575.14874pt>
+=2073, 794.97pt x 575.14874pt>
 File: chapter5/BFDOne.png Graphic file (type png)
 
 <use chapter5/BFDOne.png>
 Package pdftex.def Info: chapter5/BFDOne.png used on input line 381.
 (pdftex.def)             Requested size: 426.80284pt x 213.3897pt.
 
-<chapter5/BFDTwo.png, id=2071, 793.96625pt x 576.1525pt>
+<chapter5/BFDTwo.png, id=2074, 793.96625pt x 576.1525pt>
 File: chapter5/BFDTwo.png Graphic file (type png)
 
 <use chapter5/BFDTwo.png>
 Package pdftex.def Info: chapter5/BFDTwo.png used on input line 387.
 (pdftex.def)             Requested size: 426.797pt x 213.39287pt.
  [107 <./chapter5/BFDOne.png> <./chapter5/BFDTwo.png>] <chapter5/SFDOne.png, id
-=2085, 789.95125pt x 573.14125pt>
+=2088, 789.95125pt x 573.14125pt>
 File: chapter5/SFDOne.png Graphic file (type png)
 
 <use chapter5/SFDOne.png>
 Package pdftex.def Info: chapter5/SFDOne.png used on input line 420.
 (pdftex.def)             Requested size: 426.79634pt x 213.39699pt.
 
-<chapter5/SFDTwo.png, id=2086, 788.9475pt x 578.16pt>
+<chapter5/SFDTwo.png, id=2089, 788.9475pt x 578.16pt>
 File: chapter5/SFDTwo.png Graphic file (type png)
 
 <use chapter5/SFDTwo.png>
@@ -2077,7 +2081,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 135.
 
-[113] <chapter6/adfdPlusWorkflow.png, id=2138, 906.38625pt x 557.08125pt>
+[113] <chapter6/adfdPlusWorkflow.png, id=2141, 906.38625pt x 557.08125pt>
 File: chapter6/adfdPlusWorkflow.png Graphic file (type png)
 
 <use chapter6/adfdPlusWorkflow.png>
@@ -2097,28 +2101,28 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 158.
 
 [114 <./chapter6/adfdPlusWorkflow.png>]
-<chapter6/exampleError.png, id=2145, 960.08687pt x 654.94687pt>
+<chapter6/exampleError.png, id=2148, 960.08687pt x 654.94687pt>
 File: chapter6/exampleError.png Graphic file (type png)
 
 <use chapter6/exampleError.png>
 Package pdftex.def Info: chapter6/exampleError.png used on input line 175.
 (pdftex.def)             Requested size: 341.42653pt x 227.61586pt.
  [115 <./chapter6/exampleError.png>] [116]
-<chapter6/PFDOne.png, id=2184, 790.955pt x 575.14874pt>
+<chapter6/PFDOne.png, id=2187, 790.955pt x 575.14874pt>
 File: chapter6/PFDOne.png Graphic file (type png)
 
 <use chapter6/PFDOne.png>
 Package pdftex.def Info: chapter6/PFDOne.png used on input line 249.
 (pdftex.def)             Requested size: 284.52634pt x 184.93773pt.
 
-<chapter6/BFDOne.png, id=2185, 794.97pt x 575.14874pt>
+<chapter6/BFDOne.png, id=2188, 794.97pt x 575.14874pt>
 File: chapter6/BFDOne.png Graphic file (type png)
 
 <use chapter6/BFDOne.png>
 Package pdftex.def Info: chapter6/BFDOne.png used on input line 253.
 (pdftex.def)             Requested size: 284.52713pt x 184.93773pt.
 
-<chapter6/SFDOne.png, id=2186, 789.95125pt x 573.14125pt>
+<chapter6/SFDOne.png, id=2189, 789.95125pt x 573.14125pt>
 File: chapter6/SFDOne.png Graphic file (type png)
 
 <use chapter6/SFDOne.png>
@@ -2128,21 +2132,21 @@ Package pdftex.def Info: chapter6/SFDOne.png used on input line 257.
 
 LaTeX Warning: Float too large for page by 15.01427pt on input line 261.
 
-<chapter6/PFDTwo.png, id=2187, 1187.43625pt x 772.8875pt>
+<chapter6/PFDTwo.png, id=2190, 1187.43625pt x 772.8875pt>
 File: chapter6/PFDTwo.png Graphic file (type png)
 
 <use chapter6/PFDTwo.png>
 Package pdftex.def Info: chapter6/PFDTwo.png used on input line 271.
 (pdftex.def)             Requested size: 284.51944pt x 184.9425pt.
 
-<chapter6/BFDTwo.png, id=2188, 1192.455pt x 772.8875pt>
+<chapter6/BFDTwo.png, id=2191, 1192.455pt x 772.8875pt>
 File: chapter6/BFDTwo.png Graphic file (type png)
 
 <use chapter6/BFDTwo.png>
 Package pdftex.def Info: chapter6/BFDTwo.png used on input line 275.
 (pdftex.def)             Requested size: 284.52107pt x 184.9425pt.
 
-<chapter6/SFDTwo.png, id=2189, 1192.455pt x 772.8875pt>
+<chapter6/SFDTwo.png, id=2192, 1192.455pt x 772.8875pt>
 File: chapter6/SFDTwo.png Graphic file (type png)
 
 <use chapter6/SFDTwo.png>
@@ -2156,28 +2160,28 @@ LaTeX Warning: Float too large for page by 15.02693pt on input line 283.
 [118 <./chapter6/PFDTwo.png> <./chapter6/BFDTwo.png> <./chapter6/SFDTwo.png>]
 [119
 
-] <chapter6/timetaken.png, id=2221, 389.2944pt x 515.526pt>
+] <chapter6/timetaken.png, id=2224, 389.2944pt x 515.526pt>
 File: chapter6/timetaken.png Graphic file (type png)
 
 <use chapter6/timetaken.png>
 Package pdftex.def Info: chapter6/timetaken.png used on input line 361.
 (pdftex.def)             Requested size: 284.533pt x 256.08685pt.
 
-<chapter6/TestCases.png, id=2222, 450.9648pt x 491.436pt>
+<chapter6/TestCases.png, id=2225, 450.9648pt x 491.436pt>
 File: chapter6/TestCases.png Graphic file (type png)
 
 <use chapter6/TestCases.png>
 Package pdftex.def Info: chapter6/TestCases.png used on input line 368.
 (pdftex.def)             Requested size: 284.54283pt x 256.08809pt.
  [120 <./chapter6/timetaken.png> <./chapter6/TestCases.png>] <chapter6/timeTake
-nBar.png, id=2230, 346.4142pt x 260.6538pt>
+nBar.png, id=2233, 346.4142pt x 260.6538pt>
 File: chapter6/timeTakenBar.png Graphic file (type png)
 
 <use chapter6/timeTakenBar.png>
 Package pdftex.def Info: chapter6/timeTakenBar.png used on input line 380.
 (pdftex.def)             Requested size: 298.75613pt x 298.78304pt.
  [121 <./chapter6/timeTakenBar.png>]
-<chapter6/testCasesBar.png, id=2238, 312.2064pt x 263.0628pt>
+<chapter6/testCasesBar.png, id=2241, 312.2064pt x 263.0628pt>
 File: chapter6/testCasesBar.png Graphic file (type png)
 
 <use chapter6/testCasesBar.png>
@@ -2211,56 +2215,51 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-[126
-
-
-
-] <chapter7/adfdUpgraded1.png, id=2292, 1003.75pt x 386.44376pt>
+<chapter7/adfdUpgraded1.png, id=2287, 1003.75pt x 386.44376pt>
 File: chapter7/adfdUpgraded1.png Graphic file (type png)
 
 <use chapter7/adfdUpgraded1.png>
-Package pdftex.def Info: chapter7/adfdUpgraded1.png used on input line 96.
-(pdftex.def)             Requested size: 441.0234pt x 284.531pt.
+Package pdftex.def Info: chapter7/adfdUpgraded1.png used on input line 90.
+(pdftex.def)             Requested size: 542.04756pt x 284.531pt.
+ [126
 
-Overfull \hbox (7.40341pt too wide) in paragraph at lines 96--100
- [][] 
- []
 
-[127 <./chapter7/adfdUpgraded1.png>]
-<chapter7/daikon.png, id=2304, 680.7834pt x 224.037pt>
+
+] [127 <./chapter7/adfdUpgraded1.png>]
+<chapter7/daikon.png, id=2307, 680.7834pt x 224.037pt>
 File: chapter7/daikon.png Graphic file (type png)
 
 <use chapter7/daikon.png>
-Package pdftex.def Info: chapter7/daikon.png used on input line 116.
+Package pdftex.def Info: chapter7/daikon.png used on input line 128.
 (pdftex.def)             Requested size: 441.0081pt x 156.49323pt.
 
-Overfull \hbox (7.3881pt too wide) in paragraph at lines 116--120
+Overfull \hbox (7.3881pt too wide) in paragraph at lines 128--132
  [][] 
  []
 
 [128 <./chapter7/daikon.png>] [129]
 LaTeX Font Info:    Font shape `OMS/phv/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 208.
 
-<chapter7/adfdPlusCombined.png, id=2343, 700.11563pt x 253.44687pt>
+<chapter7/adfdPlusCombined.png, id=2346, 700.11563pt x 253.44687pt>
 File: chapter7/adfdPlusCombined.png Graphic file (type png)
 
 <use chapter7/adfdPlusCombined.png>
-Package pdftex.def Info: chapter7/adfdPlusCombined.png used on input line 206.
+Package pdftex.def Info: chapter7/adfdPlusCombined.png used on input line 218.
 (pdftex.def)             Requested size: 441.02177pt x 227.62825pt.
 
-Overfull \hbox (7.40178pt too wide) in paragraph at lines 206--209
+Overfull \hbox (7.40178pt too wide) in paragraph at lines 218--221
  [][] 
  []
 
-[130] <chapter7/adfdCombined.png, id=2366, 698.10812pt x 249.93375pt>
+[130] <chapter7/adfdCombined.png, id=2369, 698.10812pt x 249.93375pt>
 File: chapter7/adfdCombined.png Graphic file (type png)
 
 <use chapter7/adfdCombined.png>
-Package pdftex.def Info: chapter7/adfdCombined.png used on input line 218.
+Package pdftex.def Info: chapter7/adfdCombined.png used on input line 230.
 (pdftex.def)             Requested size: 441.0248pt x 227.63075pt.
 
-Overfull \hbox (7.4048pt too wide) in paragraph at lines 218--221
+Overfull \hbox (7.4048pt too wide) in paragraph at lines 230--233
  [][] 
  []
 
@@ -2271,7 +2270,7 @@ Overfull \vbox (24.56476pt too high) has occurred while \output is active []
 
 [138] [139]
 LaTeX Font Info:    Font shape `OML/phv/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 732.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 744.
  [140
 
 ]) [141]
@@ -2488,10 +2487,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 17214 strings out of 493315
- 260382 string characters out of 6137904
- 488402 words of memory out of 5000000
- 19163 multiletter control sequences out of 15000+600000
+ 17215 strings out of 493315
+ 260397 string characters out of 6137904
+ 488468 words of memory out of 5000000
+ 19164 multiletter control sequences out of 15000+600000
  94820 words of font info for 208 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  57i,12n,100p,2683b,1660s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2510,10 +2509,10 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbo
 l/usyr.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (161 pages, 4042414 bytes).
+Output written on ociamthesismain.pdf (161 pages, 4046954 bytes).
 PDF statistics:
- 3008 PDF objects out of 3580 (max. 8388607)
- 2671 compressed objects within 27 object streams
+ 3011 PDF objects out of 3580 (max. 8388607)
+ 2674 compressed objects within 27 object streams
  954 named destinations out of 1000 (max. 500000)
  1442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
