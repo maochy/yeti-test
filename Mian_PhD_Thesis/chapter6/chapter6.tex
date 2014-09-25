@@ -239,57 +239,7 @@ Two &x=2, y=10			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 \end{table}
 
 
-\newpage
 
-\begin{figure} [htp]
-\centering
-\subfigure[Point failure domain in one-dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDOne.png}
-\label{fig:PFDOne6}
-}
-\subfigure[Block failure domain in one-dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDOne.png}
-\label{fig:BFDOne6}
-}
-\subfigure[Strip failure domain in one dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDOne.png}
-\label{fig:SFDOne6}
-}
-\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of two-dimension programs}
-
-\label{fig:failureDomainsOneDimension6}
-\end{figure}
-
-
-
-
-\begin{figure} [htp]
-\centering
-\subfigure[Point failure domain in two-dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDTwo.png}
-\label{fig:PFDTwo6}
-}
-\subfigure[Block failure domain in two-dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDTwo.png}
-\label{fig:BFDTwo6}
-}
-\subfigure[Strip failure domain in two-dimension]{
-\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDTwo.png}
-\label{fig:SFDTwo6}
-}
-\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of two-dimension programs}
-
-\label{fig:failureDomainsTwoDimension6}
-\end{figure}
-
-
-
-
-
-
-
-\clearpage
-\newpage
 \subsection{Research questions} \label{sec:questions}
 The following research questions have been addressed in the study for evaluating ADFD$^+$ technique with respect to efficiency, effectiveness and presentation of failure domains:
 \begin{enumerate}
@@ -403,7 +353,57 @@ Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD$^+$ and 
  The comparative results of the two tools with respect to presentation of the identified failure domains reveal better performance of ADFD$^+$ by providing the benefit of presenting the failure domains in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension6} and \ref{fig:failureDomainsTwoDimension6}. The user can also enable or disable the option of showing the failing values on the graph. In comparison, Randoop lacks the ability of graphical presentation and the option of showing the failure domains separately. It provides the results scattered across textual files. 
  
  
+\newpage
 
+\begin{figure} [htp]
+\centering
+\subfigure[Point failure domain in one-dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDOne.png}
+\label{fig:PFDOne6}
+}
+\subfigure[Block failure domain in one-dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDOne.png}
+\label{fig:BFDOne6}
+}
+\subfigure[Strip failure domain in one dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDOne.png}
+\label{fig:SFDOne6}
+}
+\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of two-dimension programs}
+
+\label{fig:failureDomainsOneDimension6}
+\end{figure}
+
+
+
+
+\begin{figure} [htp]
+\centering
+\subfigure[Point failure domain in two-dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/PFDTwo.png}
+\label{fig:PFDTwo6}
+}
+\subfigure[Block failure domain in two-dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/BFDTwo.png}
+\label{fig:BFDTwo6}
+}
+\subfigure[Strip failure domain in two-dimension]{
+\includegraphics[width=10cm,height=6.5cm]{chapter6/SFDTwo.png}
+\label{fig:SFDTwo6}
+}
+\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of two-dimension programs}
+
+\label{fig:failureDomainsTwoDimension6}
+\end{figure}
+
+
+
+
+
+
+
+\clearpage
+\newpage
 
 %\subsubsection{Test of one-dimension programs by ADFD+}
 %In each of the 30 experiments, The ADFD+ successfully discovered and plotted the failure domains for point, block and strip pattern as shown in the Figure~\ref{fig:failureDomainsOneDimension}. The lower and upper bound for each experiment are set to -100 and 100 respectively.
@@ -490,7 +490,7 @@ Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD$^+$ and 
 
 
 \section{Discussion}\label{sec:discussion6}
-The results indicated that ADFD$^+$ is a promising technique for finding failure and failure domain efficiently and effectively. It has the added advantage of showing the results in graphical form. The pictorial representation of failure domains facilitates the debuggers to easily identify the underlying failure domain and its boundaries for troubleshooting.
+The results indicate that ADFD$^+$ is a promising technique for finding failure and failure domain efficiently and effectively. It has the advantage of showing the results in graphical form. The pictorial representation of failure domains facilitates the debuggers to easily identify the underlying failure domain and its boundaries for troubleshooting.
 
 In the initial set of experiments Randoop was executed for several minutes with default settings. The results indicated no identification of failures after several executions. On analysis of the generated unit tests and Randoop's manual, it was found that the pool of values stored in Randoop database for $int$ primitive type contains only 5 values including -1, 0, 1, 10 and 100. To enable Randoop to select different values, we supplied a configuration file with the option to generate random values between -500 and 500 for the test cases as all the seeded errors were in this range. 
 

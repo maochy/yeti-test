@@ -21,7 +21,6 @@
 \usepackage{float}
 \usepackage{tabu}
 \usepackage{longtable,tabu}
-
 \usepackage{glossaries}
 \usepackage{epsfig}
 \usepackage{latexsym}
@@ -36,6 +35,7 @@
 \usepackage{setspace}
 \usepackage{lscape}
 \usepackage{mathptmx}
+
 \usepackage{ctable}
 \usepackage{xcolor}
 \definecolor{javared}{rgb}{0.6,0,0} % for strings
@@ -136,7 +136,6 @@ showstringspaces=false}
 \clearpage\null\newpage
 \include{acknowlegements/acknowlegements} %include an acknowledgements.tex file
 \clearpage\null\newpage
-\include{glossary1/glossary1}
 \include{declaration/declaration}
 
 
@@ -151,25 +150,26 @@ showstringspaces=false}
 
 
 \clearpage\null\newpage
-\include{chapter1/chapter1}
+%\include{chapter1/chapter1}
 \clearpage\null\newpage
-\include{chapter2/chapter2}
-\include{chapter3/chapter3}
-\include{chapter4/chapter4}
-\include{chapter5/chapter5}
-\include{chapter6/chapter6}
+%\include{chapter2/chapter2}
+%\include{chapter3/chapter3}
+%\include{chapter4/chapter4}
+%\include{chapter5/chapter5}
+%\include{chapter6/chapter6}
 \include{chapter7/chapter7}
-\include{chapter8/chapter8}
-\include{chapter9/chapter9}
+%\include{chapter8/chapter8}
+%\include{chapter9/chapter9}
 
 
+\include{glossary1/glossary1}
+\include{appendix1/appendix1}
 
 
 %\end{spacing}
-
 %now enable appendix numbering format and include any appendices
-\appendix
-\include{appendix1/appendix1}
+%\appendix
+
 %\include{appendix2/appendix2}
 
 %next line adds the Bibliography to the contents page
