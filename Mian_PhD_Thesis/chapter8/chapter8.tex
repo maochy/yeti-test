@@ -5,11 +5,14 @@
 %\section{Introduction}\label{sec:intro7}
 
 
-This research study aims at understanding the nature of failures in software, manipulating failure domains for finding more bugs and developing new improved automated random test strategies. The existing random test strategies find individual failures and do not focus on failure domain. The knowledge of failures as well as failure domains is highly beneficial to developers for quick and effective removal of failures.
+The present research study aims at understanding the nature of failures in software, manipulating failure domains for finding more bugs and developing new improved automated random test strategies. The existing random test strategies find individual failures and do not focus on failure domain. The knowledge of failures as well as failure domains is highly beneficial to developers for quick and effective removal of failures.
 
-Various aspects of failure domains with respect to automated random testing and manual testing were explored. The study focused on four main issues. First, to minimize the number of test cases required to discover a failure domain. Second, to identify the pass and fail input domains and generate the result in graphical form. Third, to compare the developed strategy with the automated random testing tool Randoop for finding the failure domain. Fourth, to experimentally evaluate the effectiveness of ADFD and ADFD$^+$ by applying the techniques to production software contained in Qualitas Corpus. The source code of the involved classes were also analysed manually and the results were compared with those of automated testing.
+
+We developed three new techniques to find failures and failure domains: Dirt Spot Sweeping Random (DSSR), Automated Discovery of Failure Domain (ADFD) and Automated Discovery of Failure Domain$^+$ techniques. We evaluated each technique independently. ADFD and ADFD$^+$ have the potential to present developer with the failure domain graphically and invariantly by using JFreeChart and Daikon respectively. We also evaluated the two automated techniques independently against manual inspection of the code.
+
+%Various aspects of failure domains with respect to automated random testing and manual testing were explored. The study focused on four main issues. First, to minimize the number of test cases required to discover a failure domain. Second, to identify the pass and fail input domains and generate the result in graphical form. Third, to compare the developed strategy with the automated random testing tool Randoop for finding the failure domain. Fourth, to experimentally evaluate the effectiveness of ADFD and ADFD$^+$ by applying the techniques to production software contained in Qualitas Corpus. The source code of the involved classes were also analysed manually and the results were compared with those of automated testing.
  
-It was revealed in the study that the input inducing failures residue in contagious locations forming certain geometrical shapes in the input domain. These shapes can be divided into point, block and strip domains. A set of techniques and tools have been developed for improving the effectiveness of automated random testing in finding failures and failure domains. 
+It was revealed in the study that the input inducing failures reside in contagious locations forming certain geometrical shapes in the input domain. These shapes can be divided into point, block and strip domains. A set of techniques and tools have been developed for improving the effectiveness of automated random testing in finding failures and failure domains. 
 
 
 %Three new techniques were developed which could effectively identify and plot failure domains.
@@ -75,7 +78,7 @@ Research in the field of software testing has been proceeding for more than thre
 
 
 
-\textbf{Selection of performance measurement criteria}
+\textbf{Number of failures detected per unit tests as performance measurement criteria for random testing}
 
 Among the three measuring techniques usually used for finding the effectiveness of random testing, the E-measure and P-measure have been criticised~\cite{chen2005adaptive, chen2007quasi, chan2006restricted} whereas the F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, the F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing and counts the number of test cases used to find the first failure. The system is then handed over to developers for fixing the identified failure. Automated testing tools test the whole system and report all discovered failures in one go, thus the F-measure is not a favourable choice. We addressed the issue by measuring the maximum number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the test strategy.\\
 
