@@ -126,7 +126,9 @@ showstringspaces=false}
 %\begin{spacing}{1.5}
 \clearpage\null\newpage
 \doublespacing
+ \linespread{1}
 \tableofcontents            % generate and include a table of contents
+\clearpage\null\newpage
 \listoffigures  				  % generate and include a list of tables
 \clearpage\null\newpage
 \listoftables              % generate and include a list of figures
@@ -151,14 +153,16 @@ showstringspaces=false}
 
 \clearpage\null\newpage
 \include{chapter1/chapter1}
-\clearpage\null\newpage
 \include{chapter2/chapter2}
 \include{chapter3/chapter3}
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
+\clearpage\null\newpage
 \include{chapter6/chapter6}
 \include{chapter7/chapter7}
+\clearpage\null\newpage
 \include{chapter8/chapter8}
+\clearpage\null\newpage
 \include{chapter9/chapter9}
 
 
@@ -171,7 +175,7 @@ showstringspaces=false}
 %\appendix
 
 %\include{appendix2/appendix2}
-
+\clearpage\null\newpage
 %next line adds the Bibliography to the contents page
 \addcontentsline{toc}{chapter}{Bibliography}
 %uncomment next line to change bibliography name to references
