@@ -1,5 +1,5 @@
 \externaldocument{chapter7}
-\chapter{Evaluation of ADFD and ADFD$^+$}
+\chapter{Evaluation of ADFD and ADFD$^+$ techniques}
 \label{chap:Evaluation}
 	
 The newly developed ADFD and ADFD$^+$ techniques have been described in detail in the preceding chapters (\ref{chap:ADFD} and~\ref{chap:ADFD+}). Experimental evaluation of the two techniques through purpose built error-seeded numerical programs presented in the two chapters revealed that both techniques were capable of identifying the planted faults effectively. In this chapter, we have evaluated the precision of identifying the failure domains in the two techniques. For this purpose, we have incorporated Daikon in ADFD and ADFD$^+$. Daikon was selected on the basis of its capability to automatically generate invariants of failure domains, precisely point out the boundaries of failure domains and present the failure domains generated in more than two dimensional programs. We have performed extensive experimental analysis of real world Java projects contained in Qualitas Corpus. The results obtained were analysed and cross-checked using manual testing. The impact of nature, location, size, type and complexity of failure domains on the testing techniques were also studied. 
@@ -373,7 +373,7 @@ S\# 	& 	Project 		& Class					& Method 				& Dim.   		& LOC 	& Failure 							\\
 1	&	ant			& LeadPipeInputStream	& LeadPipeInputStream(i) 	& 1			& 159	& Strip     									\\ 
 2	&	antlr		& BitSet					& BitSet.of(i,j)			& 2			& 324	& Strip 	 									\\
 3	&	artofillusion	& ToolPallete			  	& ToolPalette(i,j)			& 2			& 293	& Strip										\\ 
-4	&	aspectj		& AnnotationValue	  	& whatKindIsThis(i)		& 1			& 68	& {\bf Mix}										\\ 
+4	&	aspectj		& AnnotationValue	  	& whatKindIsThis(i)		& 1			& 68	& Mix										\\ 
 	&				& IntMap			  	& idMap(i)				& 1			& 144	& Strip										\\ 
 5	&	cayenne		& ExpressionFactory	  	& expressionOfType(i)	& 1			& 146	& Strip										\\ 
 6	&	collections	& ArrayStack				& ArrayStack(i)			& 1			& 192	& Strip  										\\ 
@@ -385,7 +385,7 @@ S\# 	& 	Project 		& Class					& Method 				& Dim.   		& LOC 	& Failure 							\\
 7	&	colt			& GenericPermuting		& permutation(i,j)		& 2			& 64	& Strip  										\\ 
 	&				& LongArrayList			& LongArrayList(i)		& 1			& 153	& Strip  										\\ 
 	&				& OpenIntDoubleHashMap& OpenIntDoubleHashMap(i) & 1		& 47	& Strip  										\\ 
-8	&	drjava		& Assert					& assertEquals(i,j)		& 2			& 780	& {\bf Point}										\\ 
+8	&	drjava		& Assert					& assertEquals(i,j)		& 2			& 780	& Point										\\ 
 	&				& ByteVector				& ByteVector(i)			& 1			& 40	& Strip  										\\ 			
 9	&	emma		& ClassLoaderResolver	& getCallerClass(i)		& 1			& 225	& Strip										\\ 
 	&				& ElementFactory			& newConstantCollection(i)& 1			& 43	& Strip  										 \\ 
@@ -397,7 +397,7 @@ S\# 	& 	Project 		& Class					& Method 				& Dim.   		& LOC 	& Failure 							\\
 11	&	hsqld		& IntKeyLongValueHashMap& IntKeyLongValueHashMap(i)& 1		& 52	& Strip 										\\ 
 	&				& ObjectCacheHashMap	& ObjectCacheHashMap(i)	& 1			& 76	& Strip   										\\ 
 12	&	htmlunit		& ObjToIntMap			& ObjToIntMap(i)			& 1			& 466	& Strip  										\\ 
-	&				& Token					& typeToName(i)			& 1			& 462	& {\bf Mix} 										\\ 
+	&				& Token					& typeToName(i)			& 1			& 462	& Mix 										\\ 
 13	&	itext		& PRTokeniser			& isDelimiterWhitespace(i)	& 1			& 593	& Strip  										\\ 
 	&				& PdfAction				& PdfAction(i)			& 1			& 585	& Strip  										\\ 
 	&				& PdfLiteral				& PdfLiteral(i)			& 1			& 101	& Strip 										\\ 
@@ -406,12 +406,12 @@ S\# 	& 	Project 		& Class					& Method 				& Dim.   		& LOC 	& Failure 							\\
 16	&	jgraph		& AttributeMap			& AttributeMap(i)			& 1			& 105	& Strip										\\ 
 17	&	jruby		& ByteList				& ByteList(i)				& 1			& 1321	& Strip 										\\ 
 	&				& WeakIdentityHashMap	& WeakIdentityHashMap(i)	& 1			& 50	& Strip 										\\ 
-18	&	junit		& Assert					& assertEquals(i,j)		& 2			& 780	& {\bf Point} 										\\ 
+18	&	junit		& Assert					& assertEquals(i,j)		& 2			& 780	& Point 										\\ 
 19	&	megamek	& AmmoType			& getMunitionsFor(i)		& 1			& 268	& Strip	  									\\ 			
-	&				& Board					& getTypeName(i, j)		& 1			& 1359	& {\bf Mix} 										\\ 
+	&				& Board					& getTypeName(i, j)		& 1			& 1359	& Mix 										\\ 
 20	&	nekohtml	& HTMLEntities			& get(i)					& 1			& 63	& Strip  										\\ 
-21	&	poi			& Variant				& getVariantLength(i)		& 1			& 476	& {\bf Mix}  										\\ 
-	&				& IntList					& IntList(i,j)				& 2			& 643	& {\bf Block} 										\\ 	
+21	&	poi			& Variant				& getVariantLength(i)		& 1			& 476	& Mix  										\\ 
+	&				& IntList					& IntList(i,j)				& 2			& 643	& Block 										\\ 	
 22	&	sunflow		& QMC					& halton(i,j)				& 2			& 32	& Strip  										\\ 
 	&				& BenchmarkFramework	& BenchmarkFramework(i,j) & 2		& 24	& Strip   										\\ 
 	&				& IntArray				& IntArray(i)				& 1			& 47	& Strip 										\\ 	
@@ -523,7 +523,7 @@ The generation of graph and invariants and the time of test execution directly d
 
 \subsubsection{Type and Frequency of Failure domains}
 
-As evident from the results given in Table \ref{table:blockDomains} - \ref{table:stripDomains7}, all the three techniques (ADFD, ADFD$^+$ and Manual) detected the presence of strip, point and block types of failure domains in different frequencies. The results obtained show that out of 57 classes 2 contain point failure domain, 1 contains block failure domain, 50 contain strip failure domain and 4 contain mix failure domain. Mix failure domain includes the combination of two or more types of failure domains including point \& block, point \& strip and point, block \& strip.
+As evident from the results given in Table \ref{table:blockDomains}~-~\ref{table:stripDomains7}, all the three techniques (ADFD, ADFD$^+$ and Manual) detected the presence of strip, point and block types of failure domains in different frequencies. The results obtained show that out of 57 classes 2 contain point failure domain, 1 contains block failure domain, 50 contain strip failure domain and 4 contain mix failure domain. Mix failure domain includes the combination of two or more types of failure domains including point \& block, point \& strip and point, block \& strip.
 
 %Out of 57 classes containing failure domains, 50 classes showed strip failure domain, 2 point failure domain, 1 block failure domain and 4 mix failure domains.  
 
@@ -546,7 +546,7 @@ The discovery of higher number of strip failure domains may be attributed to the
 \hline
 
 S\# & Class			& Invariants by ADFD$^+$       				& Invariants by ADFD     						& Invariants by Manual	\\ \hline
-1	& IntList			& I $\le$ -1, I $\ge$ -15						& I $\le$ -1, I $\ge$ -509						& I $\le$ -1, I $\ge$ -2147483648	 \\ 		
+1	& IntList			& I $\le$ -1, I $\ge$ -15						& I $\le$ -1, I $\ge$ -509						& I $\le$ -1, I $\ge$ min\_int	 \\ 		
 	&                         & J = 0										& J =0										& J = 0		   			\\
 
 
@@ -572,7 +572,7 @@ S\# & Class			& Invariants by ADFD$^+$        				& Invariants by ADFD     					
 \hline
 
 1	& Assert			&  	I != J								& I != J															&  I != J				\\ 			
-2	& Assert			&	I $\le$ 0, I $\ge$ 20		& I $\le$  -2147483142, I $\ge$ -2147483648, 	 	&  I any value		  \\
+2	& Assert			&	I $\le$ 0, I $\ge$ 20					& I $\le$  -2147483142, I $\ge$ min\_int							&  I any value		  \\
 	&                         & 	J = 0								& J = 0								  							&  J = 0 				  \\
 
 \hline
@@ -602,9 +602,9 @@ S\# & Class						& Invariants by ADFD     					& Invariants by ADFD$^+$     				
 	&                         			& 										& 												&   J = 0  												  \\
 2	& Variant					& I $\ge$0, I $\le$ 12					& I $\ge$ 0, I $\le$ 14, I $\ge$ 16 				& I $\ge$ 0, I $\le$ 14, I $\ge$ 16						  	  \\ 		
 	&                                             & 										& I $\le$ 31, I $\ge$ 64, I $\le$ 72				& I $\le$ 31, I $\ge$ 64, I $\le$ 72						   \\
-3	& Token						& I $\le$ -2147483641					& I $\le$  -2, I $\ge$ -510						& I $\le$ -2, I \textgreater -2147483648   					   \\ % Point and Strip 
-	&                               			& I $\ge$ -2147483648					& I = \{73, 156\}									& I = 73, 156, 						   					    \\	
-	&                               			& 										& I $\ge$ 162, I $\le$ 500						& I $\ge$ 162, I $\le$ 2147483647						     \\	
+3	& Token						& I $\le$ -2147483641					& I $\le$  -2, I $\ge$ -510						& I $\le$ -2, I \textgreater min\_int   					   \\ % Point and Strip 
+	&                               			& I $\ge$ min\_int					& I = \{73, 156\}									& I = 73, 156, 						   					    \\	
+	&                               			& 										& I $\ge$ 162, I $\le$ 500						& I $\ge$ 162, I $\le$ max\_int						     \\	
 4	& AnnotationValue			& I $\le$ 85, I $\ge$ 92, 					& I $\le$63, I = \{65, 69, 71, 72\}					& I $\le$ 63, I = {65, 69, 71, 72}							     \\
 	&                              			& I $\ge$ 98, I $\le$ 100, 				& I $\ge$ 75, I $\le$ 82, I $\ge$ 84				& I $\ge$ 75, I $\le$ 82, I $\ge$ 84 					    		 \\	
 	&                               			& I $\ge$ 102, I $\le$ 104				& I $\le$ 89, I $\ge$ 92, I $\le$ 98				& I $\le$ 89, I $\ge$ 92, I $\le$ 98 							\\	
@@ -631,100 +631,100 @@ S\#  & Class						& Invariants by ADFD$^+$       		& Invariants by ADFD     			&
   \hline
   \endhead
 1	&LeadPipeInputStream 		& I $\ge$ 2147483140			& I $\ge$ 2147483143			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647	  		& I $\le$ 2147483647 			& I $\le$ 2147483647					\\
-2	& BitSet				  		& I $\le$ -1, I $\ge$ -18,			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&                                             & I $\le$ max\_int			  		& I $\le$ max\_int					& I $\le$ max\_int				\\
+2	& BitSet				  		& I $\le$ -1, I $\ge$ -18,			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
 	&                                             & J $\le$ 7, J $\ge$ -12  			& J $\ge$ -503, J $\le$ 507		& J any value									\\ % When J != 0.	
-3	& ToolPallete			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -515			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+3	& ToolPallete			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -515			& I $\le$ -1, I $\ge$ min\_int	\\ 
 	&                                             & J $\le$ 3, J $\ge$ -15			& J $\ge$ -509, J $\le$ 501		& J any value			   						\\
-4	& IntMap			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ -2147483648	\\
-5	& ExpressionFactory	  		& I $\le$ 13, I $\ge$ -7			& I $\ge$ -497, I $\le$ 513		& I $\ge$ -2147483648 				\\ % For any value of I.
-	&                                             & 								&								& I $\le$ 2147483647					\\
+4	& IntMap			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\
+5	& ExpressionFactory	  		& I $\le$ 13, I $\ge$ -7			& I $\ge$ -497, I $\le$ 513		& I $\ge$ min\_int 				\\ % For any value of I.
+	&                                             & 								&								& I $\le$ max\_int					\\
 6	& ArrayStack					& I $\ge$ 2147483636			& I $\ge$ 2147483142			& I \textgreater~698000000 					\\ 
-	&                                             & I $\le$ 2147483647 			& I $\le$ 2147483647 			& I $\le$ 2147483647 					\\
+	&                                             & I $\le$ max\_int		 			& I $\le$ max\_int					& I $\le$ max\_int 					\\
 7	& BinaryHeap				& I $\le$ -2147483637			& I $\le$ -2147483142			& I $\le$ 0								 \\	
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483648			& I $\ge$ -2147483648				\\
+	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int				\\
 8	& BondedFifoBuffer			& I $\le$ -2147483639 			& I $\ge$ -505, I $\le$ 0			& I $\le$ 0 								\\
-	&                                             & I $\ge$ -2147483648			& 								& I $\ge$ -2147483648				\\	
+	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\	
 9	& FastArrayList				& I $\le$ -2147483641 			& I $\le$ -2147483644, 			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483139			& I $\ge$ -2147483648				\\	
+	&                                             & I $\ge$ min\_int					& I $\ge$ -2147483139			& I $\ge$ min\_int				\\	
 10	& StaticBucketMap			& I $\ge$ 2147483635			& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647			   		\\	
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			   		\\	
 11	& PriorityBuffer				& I $\le$ -1, I $\ge$ -14			& I $\le$  -2147483142			& I $\le$ 0								\\
-	&                                             & 								& I $\ge$ -2147483647			& I $\ge$ -2147483648			   	\\	 
-12	& GenericPermuting			& I $\le$ 0, I $\ge$ -18			& I $\ge$ -498, I $\le$ 0			& I $\le$ 0, I $\ge$ -2147483648	\\ 	% point
-	&                                             & 								& I $\ge$ 2, I $\le$ 512			& I $\ge$ 2, I $\le$ 2147483647	\\
+	&                                             & 								& I $\ge$ -2147483647			& I $\ge$ min\_int			   	\\	 
+12	& GenericPermuting			& I $\le$ 0, I $\ge$ -18			& I $\ge$ -498, I $\le$ 0			& I $\le$ 0, I $\ge$ min\_int	\\ 	% point
+	&                                             & 								& I $\ge$ 2, I $\le$ 512			& I $\ge$ 2, I $\le$ max\_int	\\
 13	& LongArrayList				& I $\le$ -2147483640			& I $\le$ -1, I $\ge$ -510			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ -2147483648			& 								& I $\ge$ -2147483648				\\
-14	& OpenIntDoubleHashMap	& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\
+14	& OpenIntDoubleHashMap	& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 
 15	& ByteVector					& I $\le$ -2147483639			& I $\le$ -2147483141			& I $\le$ -1								\\ 	% Strip
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483648			& I $\ge$ -2147483648				\\	
+	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int				\\	
 16	& ElementFactory				& I $\ge$ 2147483636			& I $\ge$ 2147483141			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647  					\\	
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int						\\	
 17	& IntIntMap					& I $\le$ -2147483638			& I $\le$ -2147483644			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483139			& I $\ge$ -2147483648 				\\	
+	&                                             & I $\ge$ min\_int					& I $\ge$ -2147483139			& I $\ge$ min\_int 				\\	
 18	& ObjectIntMap				& I $\ge$ 2147483640			& I $\ge$ 2147483591			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647					\\	
-19	& IntObjectMap				& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -518			& I $\le$ -1, I $\ge$ -2147483648\\ 
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\	
+19	& IntObjectMap				& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -518			& I $\le$ -1, I $\ge$ min\_int\\ 
 20	& ArchiveUtils				& I $\ge$ 2147483641			& I $\ge$ -497					& I any value									\\ 
-	&							& I $\le$ 2147483647			& I $\le$ 513					& 											\\ 
+	&							& I $\le$ max\_int					& I $\le$ 513					& 											\\ 
 	&                                             & J $\ge$ 2147483639			& J $\ge$ 2147483591			& J \textgreater~698000000 	   				\\
-	&                                             & J $\le$ 2147483647			&  J $\le$ 2147483647			&  	   										\\
+	&                                             & J $\le$ max\_int					&  J $\le$ max\_int				&  	   										\\
 21	& BloomFilter32bit 			& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -515			& I \textless -1 								\\ 
 	&                                             & J may be any value				& J may be any value				& J \textless -1 			   					\\	
 22	& IntKeyLongValueHashMap	& I $\ge$ 2147483635			& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647					\\	
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\	
 23	& ObjectCacheHashMap		& I $\le$ -2147483641			& I $\ge$ -512, I $\le$ 0			& I $\le$ 0								\\ 
-	&                                             & I $\ge$ -2147483648			& 								& I $\ge$ -2147483648				\\	
+	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\	
 24	& ObjToIntMap				& I $\le$ -2147483636			& I $\le$ -2147483646			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483648			& I $\ge$ -2147483648			   	\\	
-25	& PRTokeniser				& I $\le$ -2						& I $\le$ -2, I $\ge$ -509			& I $\le$ -2 , I $\ge$ -2147483648\\ 
-	&                                             & I $\ge$ -18					& I $\ge$ 256, I $\le$ 501		& I $\ge$ 256	, I $\le$ 2147483647\\
-26	& PdfAction					& I $\le$ -2147483640 			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0, I $\ge$ -2147483648 	\\ 
-	&                                             & I $\ge$ -2147483648			& I $\ge$ 6, I $\le$ 496			& I $\ge$ 6,  I $\le$ 2147483647	\\	
-27	& PdfLiteral					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int			   	\\	
+25	& PRTokeniser				& I $\le$ -2						& I $\le$ -2, I $\ge$ -509			& I $\le$ -2 , I $\ge$ min\_int\\ 
+	&                                             & I $\ge$ -18					& I $\ge$ 256, I $\le$ 501		& I $\ge$ 256 , I $\le$ max\_int\\
+26	& PdfAction					& I $\le$ -2147483640 			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0, I $\ge$ min\_int 	\\ 
+	&                                             & I $\ge$ min\_int					& I $\ge$ 6, I $\le$ 496			& I $\ge$ 6,  I $\le$ max\_int	\\	
+27	& PdfLiteral					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
 	&							&								&								&									\\
 28	& PhysicalEnvironment		& I $\le$ -1, I $\ge$ -11			& I $\le$ -2147483646			& I $\le$ -1, 							\\ 
-	& 							& 								& I $\ge$ -2147483648 			& I $\ge$ -2147483648				\\ 
+	& 							& 								& I $\ge$ min\_int	 			& I $\ge$ min\_int				\\ 
 29	& IntegerArray				& I $\ge$ 2147483636			& I $\ge$ 2147483587			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			&  I $\le$ 2147483647					\\	
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					&  I $\le$ max\_int				\\	
 30	& AttributeMap				& I $\le$ -2147483639			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0								\\ 
-	&                                             & I $\ge$ -2147483648			& 								& I $\ge$ -2147483648 			   	\\	
-31	& ByteList					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int 			   	\\	
+31	& ByteList					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
 32	& WeakIdentityHashMap		& I $\ge$ 2147483636			& I $\ge$ 2147483140			& I \textgreater 698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647					\\
-33	& AmmoType				& I $\le$ -1						& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ -2147483648	\\ 			
-	&                                             & I $\ge$ -17					& I $\ge$ 93, I $\le$ 496			& I $\ge$ 93, 	I $\le$ 2147483647	\\
-34	& QMC						& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int					\\
+33	& AmmoType				& I $\le$ -1						& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 			
+	&                                             & I $\ge$ -17					& I $\ge$ 93, I $\le$ 496			& I $\ge$ 93, 	I $\le$ max\_int	\\
+34	& QMC						& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
 	&                                             & J $\le$ -1, J $\ge$ -15			& J $\le$ 499, J $\ge$ -511		& J any value			 		  				\\	
-35	& BenchmarkFramework		& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+35	& BenchmarkFramework		& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
 36	& IntArray					& I $\le$ -1, I $\ge$ -16			& I $\le$ -2147483650			& I $\le$ -1								\\ 
-	&							&								& I $\ge$ -2147483141			& I $\ge$ -2147483648				\\
-37	& TDoubleStack				& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ -2147483648	\\ 
-38	& TIntStack					& I $\le$ -1, I $\ge$ -12			& I $\le$ -2147483648		 	& I $\le$ -1 							\\ 
-	&							&								& I $\ge$ -2147483144			& I $\ge$ -2147483648				\\
-39	& TLongArrayList				& I $\le$ -1, I $\ge$ -16			& I $\le$ -2147483648 			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ -2147483141			& I $\ge$ -2147483648				\\
-40	& AlgVector					& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ -2147483648	\\ 
-41	& BinarySparseInstance		& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -506			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&							&								& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
+37	& TDoubleStack				& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
+38	& TIntStack					& I $\le$ -1, I $\ge$ -12			& I $\le$ min\_int				 	& I $\le$ -1 							\\ 
+	&							&								& I $\ge$ -2147483144			& I $\ge$ min\_int				\\
+39	& TLongArrayList				& I $\le$ -1, I $\ge$ -16			& I $\le$ min\_int 			& I $\le$ -1, 							\\ 
+	&							&								& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
+40	& AlgVector					& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
+41	& BinarySparseInstance		& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -506			& I $\le$ -1, I $\ge$ min\_int	\\ 
 42	& SoftReferenceSymbolTable	& I $\ge$ 2147483635			& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647					\\
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\
 43	& HTMLEntities				& I $\le$- 1						& I $\ge$ -504, I $\le$ -405,		& I $\le$ -809, I $\le$ -607, I $\ge$ -605,    		\\ 
 	&                         			& I $\ge$ -17					& I $\ge$ -403, I $\le$ -304, 		& I $\le$ -506, I $\ge$ -504, I $\le$ -405,		 \\	
 	&                         			& 								& I $\ge$ -302, I $\le$ -203,		& I $\ge$ -403, I $\le$ -304, I $\ge$ -302,		 \\	
 	&                        				& 								& I $\ge$ -201, I $\le$ -102, 		& I $\le$ -203, I $\ge$ -201, I $\le$ -102,		 \\	
 	&                         			& 								& I $\ge$ -100, I $\le$ -1			& I $\ge$ -100, I $\le$ -1				 			 \\	
 44	& SymbolHash				& I $\le$ -1,  I $\ge$ -16			& I $\le$ -2147483592			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ -2147483648			& I $\ge$ -2147483648				\\
-45	& SynchronizedSymbolTable	& I $\le$ -2147483140			& I $\le$ -2147483592,			& I $\le$ -1, I $\ge$ -2147483648	\\ 
-	&                                             & I $\ge$ -2147483648			& I $\ge$ -2147483648 			&  			   								\\
-46	& XMLChar					& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -510			& I $\le$ -1, I $\ge$ -2147483648	\\
+	&							&								& I $\ge$ min\_int				& I $\ge$ min\_int				\\
+45	& SynchronizedSymbolTable	& I $\le$ -2147483140			& I $\le$ -2147483592,			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int	 			&  			   								\\
+46	& XMLChar					& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -510			& I $\le$ -1, I $\ge$ min\_int	\\
 47	& XMLGrammarPoolImpl		& I $\le$ -1, I $\ge$ -13			& I $\le$ -2147483137 			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ -2147483648			& I $\ge$ -2147483648				\\
-48	& XML11Char				& I $\le$ -1, I $\ge$ -16			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ -2147483648	\\ 
+	&							&								& I $\ge$ min\_int				& I $\ge$ min\_int				\\
+48	& XML11Char				& I $\le$ -1, I $\ge$ -16			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\ 
 49	& AttributeList				& I $\ge$ 2147483635			& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ 2147483647			& I $\le$ 2147483647			& I $\le$ 2147483647 					\\
-50	& ClassLoaderResolver		&  I $\ge$ 2,						& I $\ge$ 500, I $\le$ -2			& I $\le$ -2, I \textgreater -2147483648  	\\ 
-	& \label{table:stripDomains7}  &  I $\le$ 18						& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ 2147483647	\\ \hline
+	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int				\\
+50	& ClassLoaderResolver		&  I $\ge$ 2,						& I $\ge$ 500, I $\le$ -2			& I $\le$ -2, I \textgreater min\_int  	\\ 
+	& \label{table:stripDomains7}  &  I $\le$ 18						& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ max\_int	\\ \hline
 	
 \end{longtable}
 }
@@ -783,7 +783,7 @@ The simplicity of failure domain is illustrated by taking an example of ADFD, AD
 
 %It was also found that ADFD+ is capable of identifying the failure domain to the large degree of accuracy in the case of point and block failure domain but not in the strip failure domain. While ADFD and Manual techniques are capable of correctly identifying all type of failure domain.
 
-The complexity of failure domain is illustrated by taking an example of ADFD, ADFD+ and Manual Analysis in Table~\ref{table:stripDomains7} for class ArrayStack. The \verb+OutOfMemoryError+ failure is detected due to the input of value to the method ArrayStack(i). The invariants generated by ADFD are \textit{\{ i $\ge$ 698000000, i $\le$ 698000300\}}, by ADFD+ are \textit{\{ i $\ge$ 2147483636, I $\le$ 2147483647\}}, by Manual analysis \textit{\{ i $\ge$ 698000000 \}}. All the three strategies indicate the same failure but at different intervals. The ADFD+ is unable to show the starting point of failure due to its small range value. The ADFD easily discovers the breaking point due to its bigger range value while manual testing requires over 50 attempts to find the breaking point.
+The complexity of failure domain is illustrated by taking an example of ADFD, ADFD+ and Manual Analysis in Table~\ref{table:stripDomains7} for class ArrayStack. The \verb+OutOfMemoryError+ failure is detected due to the input of value to the method ArrayStack(i). The invariants generated by ADFD are \textit{\{ i $\ge$ 698000000, i $\le$ 698000300\}}, by ADFD+ are \textit{\{ i $\ge$ 2147483636, I $\le$ MAX\_INT\}}, by Manual analysis \textit{\{ i $\ge$ 698000000 \}}. All the three strategies indicate the same failure but at different intervals. The ADFD+ is unable to show the starting point of failure due to its small range value. The ADFD easily discovers the breaking point due to its bigger range value while manual testing requires over 50 attempts to find the breaking point.
 
 
 
