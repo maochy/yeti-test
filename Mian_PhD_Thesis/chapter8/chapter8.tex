@@ -37,6 +37,7 @@ The third technique, Automated Discovery of Failure Domain$^+$ (ADFD$^+$) is an 
 
 Finally, on the basis of comparative analysis of automated techniques (ADFD, ADFD$^+$) and manual technique, it is revealed that both the techniques can effectively identify and present all types of failure domains to a certain degree of accuracy. However, manual technique is more effective in identifying the simple (long strip) failure domain but is tedious and labour intensive. The two automated techniques are more effective in identifying and presenting complex (point and block) failure domains with minimal labour. The precision to identify failure domains by automated techniques can be increased by increasing the range value provided that more resources are dedicated. Based on the results in Chapter~\ref{chap:Evaluation}, we can state that automated techniques (ADFD and ADFD$^+$) can be highly effective in providing assistance to manual testing but are not an alternative to manual testing
 
+\bigskip
 
 %The results are collected and represented on a graph in a more clarified form. 
 %relying on prior existence of test cases to generate invariants, was not able to correctly identify the failure domain
@@ -81,7 +82,7 @@ Research in the field of software testing has been in progress for more than thr
 
 \textbf{Number of failures detected per unit test as performance measurement criteria for random testing}
 
-Among the three measuring criteria usually used for finding the effectiveness of random testing, the E-measure and P-measure have been criticised~\cite{chen2005adaptive, chen2007quasi, chan2006restricted} whereas the F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, the F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing and counts the number of test cases used to find the first failure. The system is then handed over to developers for fixing the identified failure. Automated testing tools test the whole system and report all discovered failures in one go, thus the F-measure is not a favourable choice. We addressed the issue by measuring the number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the testing technique.\\
+Among the three measuring criteria usually used for finding the effectiveness of random testing, the E-measure and P-measure have been criticised~\cite{chen2005adaptive, chan2006restricted, chen2007quasi} whereas the F-measure has been often used by researchers~\cite{chen2004statistical, chen1996expected}. In our experiments, the F-measure was initially used but its weakness was soon realised as stated in Section \ref{measurementCriteria_4}. The F-measure is effective in traditional testing and counts the number of test cases used to find the first failure. The system is then handed over to developers for fixing the identified failure. Automated testing tools test the whole system and report all discovered failures in one go, thus the F-measure is not a favourable choice. We addressed the issue by measuring the number of failures detected in a particular number of test calls as the criterion for finding the effectiveness of the testing technique.\\
 
 %In some experiments a strategy found the first fault quickly than the other but on completion of test session that very strategy found lower number of total faults than the rival strategy. The preference given to a strategy by F-measure because it finds the first fault quickly without giving due consideration to the total number of faults is not fair
 %~\cite{liu2012comparison}. 
@@ -154,6 +155,7 @@ Daikon is integrated in the two automated techniques for generating invariants o
 
 
 \textbf{Effectiveness of ADFD and ADFD$^+$ techniques in production programs}
+
 The experimental analysis of production applications from Qualitas Corpus show that the automated techniques (ADFD and ADFD+) are highly effective in identifying failure domains. The effectiveness of automated techniques can be enhanced by increasing the range value provided that more resources are dedicated.\\
 
 
