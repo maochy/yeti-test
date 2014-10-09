@@ -12,22 +12,6 @@ Chen, T.Y.:
 \newblock Eighth International Conference on Qualify Software \textbf{0} (2008)
    443
 
-\bibitem{myers2011art}
-Myers, G.J., Sandler, C., Badgett, T.:
-\newblock The art of software testing.
-\newblock John Wiley \& Sons (2011)
-
-\bibitem{Beizer1990}
-Beizer, B.:
-\newblock Software testing techniques (2nd ed.).
-\newblock Van Nostrand Reinhold Co., New York, NY, USA (1990)
-
-\bibitem{pacheco2008finding}
-Pacheco, C., Lahiri, S.K., Ball, T.:
-\newblock Finding errors in. net with feedback-directed random testing.
-\newblock In: Proceedings of the 2008 international symposium on Software
-  testing and analysis, ACM (2008)  87--96
-
 \bibitem{ahmad2013adfd}
 Ahmad, M.A., Oriol, M.:
 \newblock Automated discovery of failure domain.
@@ -85,6 +69,16 @@ Forrester, J.E., Miller, B.P.:
 \newblock In: Proceedings of the 4th USENIX Windows System Symposium. (2000)
   59--68
 
+\bibitem{miller1990empirical}
+Miller, B.P., Fredriksen, L., So, B.:
+\newblock An empirical study of the reliability of {UNIX} utilities.
+\newblock Communications of the ACM \textbf{33}(12) (1990)  32--44
+
+\bibitem{pacheco2005eclat}
+Pacheco, C., Ernst, M.D.:
+\newblock Eclat: Automatic generation and classification of test inputs.
+\newblock Springer (2005)
+
 \bibitem{claessen2011quickcheck}
 Claessen, K., Hughes, J.:
 \newblock Quickcheck: a lightweight tool for random testing of haskell
@@ -102,11 +96,6 @@ Miller, B.P., Cooksey, G., Moore, F.:
 Csallner, C., Smaragdakis, Y.:
 \newblock J{C}rasher: an automatic robustness tester for {J}ava.
 \newblock Software: Practice and Experience \textbf{34}(11) (2004)  1025--1050
-
-\bibitem{pacheco2005eclat}
-Pacheco, C., Ernst, M.D.:
-\newblock Eclat: Automatic generation and classification of test inputs.
-\newblock Springer (2005)
 
 \bibitem{ciupa2008predictability}
 Ciupa, I., Pretschner, A., Leitner, A., Oriol, M., Meyer, B.:
@@ -132,22 +121,34 @@ Oriol, M., Tassis, S.:
 \newblock In: Engineering of Complex Computer Systems (ICECCS), 2010 15th IEEE
   International Conference on, IEEE (2010)  264--265
 
-\bibitem{Duran1984}
-Duran, J.W., Ntafos, S.C.:
-\newblock An evaluation of random testing.
-\newblock Software Engineering, IEEE Transactions on \textbf{SE-10}(4) (july
-  1984)  438 --444
+\bibitem{hamlet1990partition}
+Hamlet, D., Taylor, R.:
+\newblock Partition testing does not inspire confidence (program testing).
+\newblock IEEE Transactions on Software Engineering \textbf{16}(12) (1990)
+  1402--1411
 
-\bibitem{Gutjahr1999}
-Gutjahr, W.:
-\newblock Partition testing vs. random testing: the influence of uncertainty.
-\newblock Software Engineering, IEEE Transactions on \textbf{25}(5) (sep/oct
-  1999)  661 --674
+\bibitem{weyuker1991analyzing}
+Weyuker, E.J., Jeng, B.:
+\newblock Analyzing partition testing strategies.
+\newblock Software Engineering, IEEE Transactions on \textbf{17}(7) (1991)
+  703--711
 
-\bibitem{Arcuri2012}
-Arcuri, A., Iqbal, M.Z., Briand, L.:
-\newblock Random testing: Theoretical results and practical implications.
-\newblock IEEE Transactions on Software Engineering \textbf{38} (2012)
-  258--277
+\bibitem{gutjahr1999partition}
+Gutjahr, W.J.:
+\newblock Partition testing vs. random testing: The influence of uncertainty.
+\newblock Software Engineering, IEEE Transactions on \textbf{25}(5) (1999)
+  661--674
+
+\bibitem{leitner2007reconciling}
+Leitner, A., Ciupa, I.:
+\newblock Reconciling manual and automated testing: the autotest experience.
+\newblock In: Proceedings of the 40th Hawaii International Conference on System
+  Sciences - 2007, Software Technology, Technology (2007)  3--6
+
+\bibitem{ciupa2008finding}
+Ciupa, I., Meyer, B., Oriol, M., Pretschner, A.:
+\newblock Finding faults: Manual testing vs. random+ testing vs. user reports.
+\newblock In: Software Reliability Engineering, 2008. ISSRE 2008. 19th
+  International Symposium on, IEEE (2008)  157--166
 
 \end{thebibliography}

@@ -8,43 +8,43 @@ Warning--entry type for "Oriol2011yeti" isn't style-file defined
 Warning--empty journal in gilbert2008jfreechart
 You've used 26 entries,
             2087 wiz_defined-function locations,
-            651 strings with 8007 characters,
-and the built_in function-call counts, 8279 in all, are:
-= -- 885
-> -- 214
-< -- 21
-+ -- 83
-- -- 57
-* -- 531
-:= -- 1040
+            648 strings with 8163 characters,
+and the built_in function-call counts, 8598 in all, are:
+= -- 929
+> -- 218
+< -- 23
++ -- 84
+- -- 58
+* -- 561
+:= -- 1074
 add.period$ -- 27
 call.type$ -- 26
-change.case$ -- 23
+change.case$ -- 25
 chr.to.int$ -- 0
 cite$ -- 27
-duplicate$ -- 466
-empty$ -- 816
-format.name$ -- 57
-if$ -- 2071
+duplicate$ -- 479
+empty$ -- 837
+format.name$ -- 58
+if$ -- 2142
 int.to.chr$ -- 0
 int.to.str$ -- 26
-missing$ -- 28
+missing$ -- 26
 newline$ -- 133
 num.names$ -- 26
-pop$ -- 100
+pop$ -- 93
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 328
+skip$ -- 344
 stack$ -- 0
-substring$ -- 599
-swap$ -- 258
-text.length$ -- 21
+substring$ -- 657
+swap$ -- 274
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 84
+while$ -- 93
 width$ -- 28
-write$ -- 302
+write$ -- 305
 (There were 2 warnings)
