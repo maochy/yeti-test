@@ -71,15 +71,15 @@ Warning--there's a number but no volume in duran1984evaluation
 Warning--there's a number but no volume in white1980domain
 You've used 137 entries,
             1791 wiz_defined-function locations,
-            1158 strings with 25388 characters,
-and the built_in function-call counts, 37613 in all, are:
-= -- 3719
-> -- 1243
+            1157 strings with 25366 characters,
+and the built_in function-call counts, 37582 in all, are:
+= -- 3718
+> -- 1236
 < -- 71
-+ -- 474
-- -- 337
-* -- 2260
-:= -- 5369
++ -- 472
+- -- 335
+* -- 2255
+:= -- 5363
 add.period$ -- 466
 call.type$ -- 137
 change.case$ -- 120
@@ -87,8 +87,8 @@ chr.to.int$ -- 0
 cite$ -- 152
 duplicate$ -- 1909
 empty$ -- 3804
-format.name$ -- 337
-if$ -- 8916
+format.name$ -- 335
+if$ -- 8910
 int.to.chr$ -- 0
 int.to.str$ -- 137
 missing$ -- 148

@@ -17,6 +17,7 @@
 
 
 \documentclass[runningheads,a4paper]{llncs}
+ %\pagestyle{empty}
 
 \usepackage{amssymb}
 \setcounter{tocdepth}{3}
@@ -563,8 +564,7 @@ The nature of failure domain identified by two automatic techniques (ADFD and AD
 
 %\rot{90}{failure domain}	& \rot{90}{No. of classes} 	& \rot{90}{No. of FD}   & \rot{90}{Easy to find FD by ADFD} & \rot{90}{Easy to find FD by ADFD$^+$}	& \rot{90}{Easy to find FD by MT} & \rot{90}{Hard to find FD by ADFD} & \rot{90}{Hard to find FD by ADFD$^+$} & \rot{90}{Hard to find FD by MT}\\
 				 
-				 
-				 
+
 \hline 
 Point			 &	2			&	2		& 2   	& 2		& 2		& 0 		& 0 		& 0 \\
 \hline 
@@ -573,12 +573,11 @@ Block			 &	1			&	1		& 0		& 1		& 1		& 1		& 0		& 0\\
 Strip 			 &	50			&	50		& 50 	& 45 	& 48 	& 0 		& 5 		& 2 \\ 
 %Mix			 &				&			& 		& 		& 		& 		&		&  \\
 \hline 
-				 &	0			&	0   		& 0		& 0		& 0		& 0		& 0		& 0\\
-Mix				 & 	3			&	3		& 3		& 0		& 2		& 0		& 3		& 1\\
-				 &   1 			&	1		& 1		& 0 		& 0 		& 0		& 1		& 1\\
+Mix				 & 	4			&	8		& 5		& 4		& 5		& 3		& 4		& 3\\
 \hline
-Total			 &   57  			&	57		& 57	& 48 	& 53	& 1		& 9		& 4\\
+Total			 &   57  			&	61		& 57	& 52 	& 56	& 4		& 9		& 5\\
 \hline
+
 \end{tabular}
 }
 \label{table:simpleComplex} % is used to refer this table in the text

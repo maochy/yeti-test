@@ -6,6 +6,7 @@
 \externaldocument{chapter1}
 \chapter{Introduction}
 \label{Introduction1}
+\setcounter{section}{-1}
 \invisiblesection{Preliminaries}
 %This chapter includes motivation for the research study followed by the problems in random testing, the alternative approaches to overcome these problems, the research objectives and contributions of the study. At the end of the chapter, the structure of the remaining thesis is given.
 %\section{Motivation} %In recent years there has been a particular increase in performing automated random testing and, specifically, the techniques for automatic generation of fault targeting test data. 
@@ -19,7 +20,7 @@ Software is a set of clearly defined instructions for computer hardware to perfo
 ``As soon as we started programming, we found to our surprise that it was not as easy to get programs right as we had thought. Debugging had to be discovered. I can remember the exact instant when I realized that a large part of my life from then on was going to be spent in finding mistakes in my own programs."
 \end{quote}
 \bigskip
-The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to large economic losses~\cite{huang2004securing}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures, and that improvements in software testing infrastructure might save one-third of this cost~\cite{tassey2002economic}. Software testing is the most recognized and widely used technique to verify the correctness and ensure quality of the software~\cite{patton2001software}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software before its practical application. According to Myers et al. some software companies spend up to 50\% of the elapsed time and more than 50\% of the total development and maintenance cost on software testing~\cite{beizer2003software}. The success of a software testing technique mainly depends on the number of faults discovered in the Software Under Test (SUT). An efficient testing process discovers maximum number of faults in minimum possible time. There is therefore a strong motivation for improving the existing strategies and developing new efficient test strategies. This research study is a contribution to the literature on the subject with the aim to improve software testing by devising new and improved automated software testing techniques based on random strategy.
+The margin of error in mission-critical and safety-critical systems is so small that a minor fault can lead to large economic losses~\cite{huang2004securing}. According to the National Institute of Standards and Technology, US companies alone bear \$59.5 billion loss every year due to software failures, and that improvements in software testing infrastructure might save one-third of this cost~\cite{tassey2002economic}. Software testing is the most recognized and widely used technique to verify the correctness and ensure quality of the software~\cite{patton2001software}. Therefore, software companies leave no stone unturned to ensure the reliability and accuracy of the software before its practical application. According to Myers et al. some software companies spend up to 50\% of the elapsed time and more than 50\% of the total development and maintenance cost on software testing~\cite{myers2011art}. The success of a software testing technique mainly depends on the number of faults discovered in the Software Under Test (SUT). An efficient testing process discovers maximum number of faults in minimum possible time. There is therefore a strong motivation for improving the existing strategies and developing new efficient test strategies. This research study is a contribution to the literature on the subject with the aim to improve software testing by devising new and improved automated software testing techniques based on random strategy.
 
 Ideally, exhaustive testing, where software is tested against all possible inputs, may look more attractive, but it is commonly not feasible because of large size of the input domain, limited resources and strict time constraints. The usual practice is therefore to use a test strategy for the selection of test data set from a large/infinite domain. Careful selection of the test data set, as a subset of the whole input domain, is a crucial factor in any testing technique because it represents the whole domain for evaluating the structural and/or functional properties of the SUT~\cite{howden1986functional, mccabe1983structured}. Miller and Maloney were the first who comprehensively described a systematic approach of test data set selection known as path coverage. They proposed that testers should select the test data set so that all paths of the SUT are executed at least once~\cite{miller1963systematic}. The approach resulted in the higher standard of test quality. %A large number of test strategies were subsequently developed such as boundary value analysis and equivalence class. 
 
@@ -52,7 +53,7 @@ Random testing is a testing technique in which test data set is randomly generat
 	\label{fig:SoftwareTesting1}
 \end{figure}
 
-\textbf{Test Data Generation:} It consist of generation/selection of test data set for use as input to the SUT. In this phase, the tester is free to generate test data set arbitrarily from the input domain without any test adequacy criteria. Nevertheless, the two most commonly used methods are uniform distribution and operational profile. In uniform distribution, all inputs are equally probable for selection. In operational profile, the test data are selected as if the program under test is used in the operational environment.
+\textbf{Test Data Generation:} It consists of generation/selection of test data set for use as input to the SUT. In this phase, the tester is free to generate test data set arbitrarily from the input domain without any test adequacy criteria. Nevertheless, the two most commonly used methods are uniform distribution and operational profile. In uniform distribution, all inputs are equally probable for selection. In operational profile, the test data are selected as if the program under test is used in the operational environment.
 
 \textbf{Test Data Execution:} It refers to application of generated test data to the SUT. The process consists of three steps: supplying test data as input to the software, executing the software and logging the output obtained. 
 These steps can be achieved manually by hand or automatically by using a script or tool. 
@@ -73,11 +74,11 @@ Despite the benefits of random testing, its simplistic and non-systematic nature
 \item Incompetence of RT to present results in graphical form. 
 \end{enumerate}
 
-\subsection{Limitation of RT to discover contiguous failures}
+\subsection{Limitation of RT to Discover Contiguous Failures}
 Chan et al.~\cite{chan1996proportional} observed that failure-inducing inputs are contiguous and form certain geometrical patterns in the whole input domain. They divided them into point, block and strip domains on the basis of their shape (see Section~\ref{sec:failuredomains_2} for details). % put the failure domains section label in the preceeding reference.
 The failure-finding ability of random testing technique is quite low to detect the contiguous block and strip failure domains within the input domain. Attempts are needed to overcome this limitation of RT by developing a suitable extended random strategy.
 
-\subsection{Inability of RT to Identify Failure domains}
+\subsection{Inability of RT to Identify Failure Domains}
 %As stated above, the failures in the input domain are contiguous and form point, block and strip patterns. 
 A majority of failures reside in contiguous locations and form certain failure domains across the input domain~\cite{chan1996proportional}. The existing random strategies of software testing tries to discover failures individually from the domains and lack the capability to discover the failure domains. Endeavours are required to be undertaken for developing appropriate random strategy with the potential to identify the failures, as well as failure domains. 
 
@@ -191,7 +192,7 @@ The rest of the thesis is organized as follows:\\
 \hangindent=\parindent
 \hangafter=1
 \noindent
-\textbf{Chapter~\ref{chap:Evaluation}} presents evaluation of the precision of identifying failure domains by ADFD and ADFD+. For the purpose of comparative analysis, Daikon has been integrated in the two techniques and extensive experimental analysis of real world Java projects contained in Qualitas Corpus are performed. The results obtained are analysed and cross-checked with the results of Manual testing. The impact of nature, location, size, type and complexity of failure domains on the testing techniques are reflected. \\
+\textbf{Chapter~\ref{chap:Evaluation}} presents evaluation of the precision of identifying failure domains by ADFD and ADFD$^+$. For the purpose of comparative analysis, Daikon has been integrated in the two techniques and extensive experimental analysis of real world Java projects contained in Qualitas Corpus are performed. The results obtained are analysed and cross-checked with the results of Manual testing. The impact of nature, location, size, type and complexity of failure domains on the testing techniques are reflected. \\
 
 \hangindent=\parindent
 \hangafter=1
@@ -211,7 +212,7 @@ The rest of the thesis is organized as follows:\\
 
 \begin{figure}[!H]
 	\centering
-		\includegraphics[width=16cm, height=20cm ]{chapter1/thesisOutline5.png}
+		\includegraphics[width=16cm, height=20cm ]{chapter1/thesisOutline6.png}
 		\bigskip
 		\caption{Structure of the thesis outline}
 	\label{fig:thesisOutline}

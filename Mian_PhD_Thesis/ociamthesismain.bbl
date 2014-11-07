@@ -61,10 +61,10 @@ Ron Patton.
 \newblock {\em Software testing}, volume~2.
 \newblock Sams Indianapolis, 2001.
 
-\bibitem{beizer2003software}
-Boris Beizer.
-\newblock {\em Software testing techniques}.
-\newblock Dreamtech Press, 2003.
+\bibitem{myers2011art}
+Glenford~J Myers, Corey Sandler, and Tom Badgett.
+\newblock {\em The art of software testing}.
+\newblock John Wiley \& Sons, 2011.
 
 \bibitem{howden1986functional}
 William~E. Howden.
@@ -102,19 +102,14 @@ T.~Y. Chen.
   2008.
 
 \bibitem{dahl1972structured}
-Ole-Johan Dahl, Edsger~Wybe Dijkstra, and Charles Antony~Richard Hoare.
-\newblock {\em Structured programming}.
-\newblock Academic Press Ltd., 1972.
+Edsger~Wybe Dijkstra.
+\newblock {\em Notes on structured programming}.
+\newblock Technological University Eindhoven Netherlands, 1970.
 
 \bibitem{godefroid2005dart}
 Patrice Godefroid, Nils Klarlund, and Koushik Sen.
 \newblock {DART:} directed automated random testing.
 \newblock In {\em ACM Sigplan Notices}, volume~40, pages 213--223. ACM, 2005.
-
-\bibitem{myers2011art}
-Glenford~J Myers, Corey Sandler, and Tom Badgett.
-\newblock {\em The art of software testing}.
-\newblock John Wiley \& Sons, 2011.
 
 \bibitem{white1987software}
 Lee~J. White.
@@ -463,6 +458,11 @@ Alex Groce, Gerard Holzmann, and Rajeev Joshi.
 \newblock Randomized differential testing as a prelude to formal verification.
 \newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
   Conference on}, pages 621--631. IEEE, 2007.
+
+\bibitem{beizer2003software}
+Boris Beizer.
+\newblock {\em Software testing techniques}.
+\newblock Dreamtech Press, 2003.
 
 \bibitem{chen2004mirror}
 Tsong~Yueh Chen, F-C Kuo, Robert~G Merkel, and Sebastian~P Ng.
