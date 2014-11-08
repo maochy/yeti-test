@@ -28,7 +28,7 @@ The York Extensible Testing Infrastructure (YETI) is an automated random testing
 
 
 \section{Design}
-YETI is a lightweight platform with around 7000 lines of code. It has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
+YETI is a lightweight platform with around 10000 lines of code. It has been designed with the provision of extensibility for future growth. YETI enforces strong decoupling between test strategies and the actual language constructs, which adds new binding, without any modification in the available test strategies. YETI can be divided into three main parts on the basis of functionality: the core infrastructure, the strategy and the language-specific binding. Each part is briefly described below. 
 
 \subsection{Core Infrastructure of YETI}
 The core infrastructure of YETI provides extendibility through specialization. The abstract classes included in this section can be extended to create new strategies and language bindings. It is responsible for test data generation, test process management and test report production. The core infrastructure of YETI is split into four packages, i.e.~\verb+yeti+, \verb+yeti.environments+, \verb+yeti.monitoring+ and~\verb+yeti.strategies+. The package~\verb+yeti+ uses
@@ -64,7 +64,7 @@ The strategy defines a specific way to generate test inputs. The strategy sectio
 \item {\textbf{YetiRandomPlusStrategy}} extends the random strategy by adding values to the list of interesting values. It allows the user to adjust the percentage of using interesting values in the test session.
 \item {\textbf{DSSRStrategy}} extends random$^+$ strategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
 \item {\textbf{ADFDStrategy}} extends random$^+$ strategy by adding the feature of graphical representation of failures and their domains in the set lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
-\item {\textbf{ADFD$^+$Satrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
+\item {\textbf{ADFDPlusStrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
 \item {\textbf{YetiRandomDecreasingStrategy}} extends the random$^+$ strategy in which the probability value is 100\% at the beginning and decreases to 0 at the end of the test.
 \item {\textbf{YetiRandomPeriodicStrategy}} extends the random$^+$ strategy in which the probability value decreases and increases at random within the given range.
 \end{enumerate}
@@ -92,7 +92,7 @@ YETI constructs test cases by creating objects of the classes under test and ran
 
 \subsection{Call sequence of YETI}
 % check testing jml code with yeti for more details.
-The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the interaction of processes and their order when a Java program in byte-code is tested by YETI for ~\verb+n+ number of times using the default random strategy.  The steps involved are as follows:
+The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the interaction of processes and their order when a Java program in byte-code is tested by YETI for~\verb+n+ number of times using the default random strategy.  The steps involved are as follows:
 
 \bigskip
 \begin{figure}[H]
@@ -107,7 +107,7 @@ The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the i
 \begin{enumerate}
 \item When the test starts, the test engine (\verb+YetiEngine+) instructs the test manager (\verb+YetiJavaTestManager+) to initiate the testing of given class (\verb+YetiJavaModule+) for~\verb+n+ number of times (\verb+testModuleForNumberofTimes+) using the test strategy (\verb+YetiRandomStrategy+).
 
-\item The test manager creates (\verb+makeNextCall+) a thread (\verb+CallerThread+) which handles the testing of a given program. Threading is introduced for two reasons: (1) To enable the test manager to block/terminate the thread, which is stuck because of an infinite loop inside the method or taking too long because recursive calls. (2) To increase the speed of testing process when multiple classes are under test.
+\item The test manager creates (\verb+makeNextCall+) a thread (\verb+CallerThread+) which handles the testing of a given program. Threading is introduced for two reasons: (1) To enable the test manager to block/terminate the thread, which is stuck because of an infinite loop inside the method or taking too long because of recursive calls. (2) To increase the speed of testing process when multiple classes are under test.
 
 \item The thread on instantiation, requests the test strategy (\verb+YetiRandomStrategy+) to fetch a routine (\verb+constructor/method+) from the given SUT (\verb+getNextRoutine+).
 

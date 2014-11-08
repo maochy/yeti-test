@@ -47,7 +47,7 @@ Random strategy is a test data generation technique in which random data set is 
 Programs tested at random typically fail a large number of times (there are a large number of calls), therefore, it is necessary to cluster failures that likely represent the same fault. The traditional way of doing it is to compare the full stack traces and error types and use this as an equivalence class~\cite{ciupa2007experimental, oriol2012random} called a unique failure. This way of grouping failures is also used for R$^+$ and DSSR techniques. 
 
 \subsection{Random$^+$ Strategy}
-The random$^+$ strategy~\cite{leitner2007reconciling} is an extension of the R strategy. It uses some special pre-defined values, which can be boundary values or values that have a high tendency of finding failures in the SUT. Boundary values~\cite{beizer2003software} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MAX_INT-2+; \verb+MIN_INT+, \verb-MIN_INT+1-, \verb-MIN_INT+2-. These special values can add a significant improvement to any testing method. See Section~\ref{subsec:randomPlusTesting} for more details on R$^+$ strategy and testing.
+The random$^+$ strategy~\cite{ciupa2007experimental, ciupa2008finding} is an extension of the R strategy. It uses some special pre-defined values, which can be boundary values or values that have a high tendency of finding failures in the SUT. Boundary values~\cite{beizer2003software} are the values on the start and end of a particular type. For instance, such values for \verb+int+ could be \verb+MAX_INT+, \verb+MAX_INT-1+, \verb+MAX_INT-2+; \verb+MIN_INT+, \verb-MIN_INT+1-, \verb-MIN_INT+2-. These special values can add a significant improvement to any testing method. See Section~\ref{subsec:randomPlusTesting} for more details on R$^+$ strategy and testing.
 
 %For example:
 %\bigskip
@@ -120,7 +120,7 @@ The DSSR strategy continuously tracks the number of failures during the executio
 \centering
 \includegraphics[width=12cm, height=14cm]{chapter4/flowchart1.png}
 \bigskip
-\caption{Working mechanism of DSSR Strategy}
+\caption{Working mechanism of DSSR strategy}
 \label{fig:Working_DSSS}
 \end{figure}
 \bigskip
@@ -139,7 +139,7 @@ Table \ref{table:addvalues2} presents the values added to the list of interestin
 \bigskip
 \begin{table}[ht]
 %\scriptsize
-\caption{Data types and Corresponding values to be added} % title of Table
+\caption{Data types and corresponding values to be added} % title of Table
 \bigskip
 \centering % used for centering table
 {\renewcommand{\arraystretch}{1.6} 
@@ -207,7 +207,7 @@ As the test starts, three failures are quickly discovered by DSSR strategy in th
 
 \indent \textbf{Failure 2:} After discovering the first failure, the strategy adds it and its surrounding values to the list of interesting values i.e. \verb+0, 1, 2, 3 and -1, -2, -3+ in this case. In the second test case the strategy may pick \verb+-3+ as a test value which may lead to the failure where assertion (2) fails because the square root of \verb+9+ is \verb+3+ instead of the input value \verb+-3+.
 
-\indent \textbf{Failure 3:} After a few tests the strategy may select \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of another failure because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a negative value \verb+-1+ (Java language rule) to variable \verb+result1+ that will lead to the failure where assertion (1) fails.
+\indent \textbf{Failure 3:} After a few tests the strategy may select \verb+Integer.MAX_VALUE+ for variable \verb+num1+  from the list of interesting values leading to the discovery of another failure because int variable \verb+result1+ will not be able to store the square of \verb+Integer.MAX_VALUE+. Instead of the actual square value Java assigns a positive value \verb+1+ (Java language rule) to variable \verb+result1+ that will lead to the failure where assertion (1) fails.
 
 \bigskip
 \begin{figure}[H]
@@ -269,7 +269,7 @@ The strategies part define the procedure of selecting the modules (classes), the
 
 \section{Evaluation}\label{sec:eval}
 
-The DSSR strategy is experimentally evaluated by comparing its performance with that of R and R$^+$ strategy~\cite{leitner2007reconciling}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and the interesting value injection probability have been kept constant in the experiments.
+The DSSR strategy is experimentally evaluated by comparing its performance with that of R and R$^+$ strategy~\cite{ciupa2007experimental, ciupa2008finding}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and the interesting value injection probability have been kept constant in the experiments.
 
 \subsection{Research Questions}
 For evaluating the DSSR strategy, the following research questions have been addressed in this study:
@@ -467,7 +467,7 @@ DSSR found the higher number of maximum unique failures (1118) than R (1075) and
 \subsection{Absolute best in R, R$^+$ \& DSSR strategies}
 Based on our findings DSSR is at least as good as R and R$^+$ in almost all cases, it is significantly better than both R and R$^+$ in 12\% of the classes. Figure~\ref{fig:LineChart} presents the performance of DSSR in comparison with R and R$^+$ strategies in 17 classes showing significant difference. The blue line with a diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R$^+$ strategy. 
 
-The improvement of DSSR over R and R$^+$ strategy is calculated by applying the formula (1) and (2) respectively. This is in accordance with the previous work of Chan et al.~\cite{chan2004good}.
+The improvement of DSSR over R and R$^+$ strategy is calculated by applying the formula (4.1) and (4.2) respectively. This is in accordance with the previous work of Chan et al.~\cite{chan2004good}.
 
 \begin{equation} \frac{Averagefailures_{(DSSR)} - Averagefailures_{(R)}}{Averagefailures_{(R)}} * 100  \end{equation}
 
@@ -477,7 +477,7 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 
 \begin{table*}[htp]
 \small
-\caption{Results of t-test applied on experimental}
+\caption{Results of t-test applied on experimental data}
 \bigskip
 \centering
 {\renewcommand{\arraystretch}{1.5} 
@@ -495,23 +495,23 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 6		&	DomParser		&	\textbf{0.05}	 	& 0.23			& 0.13			& Difference not significant		\\
 7		&	EntityDecoder	&	\textbf{0.04}	 	& 0.28			& 0.3			& Difference not significant		\\			
 8		&	Font			&	0.18	 		& 0.18			& 1				& Difference not significant		\\
-9		&	Group			&	0.33	 		& \textbf{0.03}	& \textbf{0.04}	& DSSR = R \textgreater R$^+$		\\
+9		&	Group			&	0.33	 		& \textbf{0.03}	& \textbf{0.04}	& DSSR = R \textgreater~R$^+$		\\
 10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61			& DSSR \textgreater~R \& R$^+$ 				\\		
 11		&	InstrumentTask	&	0.16			& 0.33			& 0.57			& Difference not significant		\\
-12		&	JavaWrapper		&	\textbf{0.001}	& 0.57			& 0.004			& DSSR = R$^+$ \textgreater R 		\\
+12		&	JavaWrapper		&	\textbf{0.001}	& 0.57			& 0.004			& DSSR = R$^+$ \textgreater~R 		\\
 13		& 	JmxUtilities		&	0.13			& 0.71			& 0.08			& Difference not significant		\\
-14		&	List				& 	\textbf{0.01}		&0.25			&\textbf{0}		& DSSR = R$^+$ \textgreater R 		\\
-15		&	NodeSequence	&	0.97			&\textbf{0.04}	&\textbf{0.06}	& DSSR = R \textgreater R$^+$ 		\\
+14		&	List				& 	\textbf{0.01}		&0.25			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+15		&	NodeSequence	&	0.97			&\textbf{0.04}	&\textbf{0.06}	& DSSR = R \textgreater~R$^+$ 		\\
 16		&	NodeSet			&	\textbf{0.03}		&0.42			&0.26			& Difference not significant		\\
 17		&	Project			&	\textbf{0.001}	&0.57			&\textbf{0.004}	& DSSR \textgreater~R \& R$^+$ 				\\		
-18		&	Repository		&	\textbf{0}		&1				&\textbf{0}		& DSSR = R$^+$ \textgreater R 		\\
+18		&	Repository		&	\textbf{0}		&1				&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
 19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR \textgreater~R \& R$^+$  				\\
 20		&	Scene			&	\textbf{0}		&\textbf{0}		& 1				& DSSR \textgreater~R \& R$^+$  				\\
-21		&	Server			&	\textbf{0.03}		& 0.88			&\textbf{0.03} 	& DSSR = R$^+$ \textgreater R 		\\
-22		&	Sorter			& 	\textbf{0}		& 0.33			&\textbf{0}		& DSSR = R$^+$ \textgreater R 		\\
-23		&	Statistics		&	\textbf{0}		& 0.43			&\textbf{0}		& DSSR = R$^+$ \textgreater R 		\\
-24		&	Stopwords		&	\textbf{0}		& 0.23			&\textbf{0}		& DSSR = R$^+$ \textgreater R 		\\
-25		&	StringHelper		&	\textbf{0.03}		& 0.44			&0.44			& DSSR = R$^+$ \textgreater R 		\\
+21		&	Server			&	\textbf{0.03}		& 0.88			&\textbf{0.03} 	& DSSR = R$^+$ \textgreater~R 		\\
+22		&	Sorter			& 	\textbf{0}		& 0.33			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+23		&	Statistics		&	\textbf{0}		& 0.43			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+24		&	Stopwords		&	\textbf{0}		& 0.23			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+25		&	StringHelper		&	\textbf{0.03}		& 0.44			&0.44			& DSSR = R$^+$ \textgreater~R 		\\
 26		& 	Trie				&	0.1				& 0.33			&0.47			& DSSR \textgreater~R \& R$^+$  				\\
 27		&	WebMacro		&	0.33			& 1				&0.16			& Difference not significant		\\
 28		&	XMLEntityManager&	0.33			& 0.33			&0.16			& Difference not significant		\\
@@ -627,7 +627,7 @@ Random testing is a popular technique with a simple algorithm but proven to find
 
 In the pursuit of better test results and lower overhead, many variations of R strategy have been proposed~\cite{chen2004mirror, chan2006restricted, chen2007quasi, chen2010adaptive, chen2004adaptive}. ART, Quasi-random testing (QRT) and Restricted Random testing (RRT) achieved better results by selecting test inputs randomly but evenly spread across the input domain. ART through dynamic partitioning and MART are the two strategies developed to improve the performance of ART by reducing the overhead. This was achieved mainly by the even spread of test input to increase the chance of exploring the failure domains present in the input domain. A more recent research study~\cite{yoo2012test} stresses on the effectiveness of data regeneration in close vicinity of the existing test data. Their findings showed up to two orders of magnitude more efficient test data generation than the existing techniques. Two major limitations of their study are the requirement of existing test cases to regenerate new test cases, and increased overhead due to ``meta-heuristics search'' based on hill climbing algorithm to regenerate new data. In DSSR, no pre-existing test cases are required because it utilises the border values from R$^+$ and regenerate the data very cheaply in a dynamic fashion without any prior test data and with comparatively lower overhead. 
   
-The R$^+$ strategy is an extension of the R strategy in which interesting values, beside pure random values, are added to the list of test inputs~\cite{leitner2007reconciling}. These interesting values include border values, which have the high tendency of finding failures in the given SUT~\cite{beizer2003software}. Results obtained with R$^+$ strategy showed significant improvement over R strategy~\cite{leitner2007reconciling}. DSSR strategy is an extension of R$^+$ strategy that starts testing as R$^+$ until a failure is found and then switches to dirt spot sweeping.
+The R$^+$ strategy is an extension of the R strategy in which interesting values, beside pure random values, are added to the list of test inputs~\cite{ciupa2007experimental, ciupa2008finding}. These interesting values include border values, which have the high tendency of finding failures in the given SUT~\cite{beizer2003software}. Results obtained with R$^+$ strategy showed significant improvement over R strategy~\cite{leitner2007reconciling}. DSSR strategy is an extension of R$^+$ strategy that starts testing as R$^+$ until a failure is found and then switches to dirt spot sweeping.
 
 %It is interesting that numerous efforts have been made to discover the fault domains~\cite{Chen2010, Chen2005, Chan2002, Chen2004a, Chen2003}, etc. but in our knowledge, none has been published on covering/sweeping all the faults lying in a specific domain once it has been discovered.
 

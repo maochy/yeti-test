@@ -18,39 +18,39 @@ A level-1 auxiliary file: glossary1/glossary1.aux
 A level-1 auxiliary file: appendix1/appendix1.aux
 The style file: unsrt.bst
 Database file #1: references1/refs.bib
-Repeated entry---line 1013 of file references1/refs.bib
+Repeated entry---line 1011 of file references1/refs.bib
  : @article{claessen2011quickcheck
  :                                ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1201 of file references1/refs.bib
+Repeated entry---line 1199 of file references1/refs.bib
  : @inproceedings{reid1997empirical
  :                                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1232 of file references1/refs.bib
+Repeated entry---line 1230 of file references1/refs.bib
  : @article{radatz1990ieee
  :                        ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1252 of file references1/refs.bib
+Repeated entry---line 1250 of file references1/refs.bib
  : @article{gutjahr1999partition
  :                              ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1601 of file references1/refs.bib
+Repeated entry---line 1599 of file references1/refs.bib
  : @incollection{oriat2005jartege
  :                               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1690 of file references1/refs.bib
+Repeated entry---line 1688 of file references1/refs.bib
  : @inproceedings{miller2006empirical
  :                                   ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1707 of file references1/refs.bib
+Repeated entry---line 1705 of file references1/refs.bib
  : @article{miller1990empirical
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1867 of file references1/refs.bib
+Repeated entry---line 1865 of file references1/refs.bib
  : @article{yoo2012test
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1896 of file references1/refs.bib
+Repeated entry---line 1894 of file references1/refs.bib
  : @inproceedings{korel1996assertion
  :                                  ,
 I'm skipping whatever remains of this entry
@@ -71,43 +71,43 @@ Warning--there's a number but no volume in duran1984evaluation
 Warning--there's a number but no volume in white1980domain
 You've used 137 entries,
             1791 wiz_defined-function locations,
-            1157 strings with 25366 characters,
-and the built_in function-call counts, 37582 in all, are:
-= -- 3718
-> -- 1236
-< -- 71
-+ -- 472
-- -- 335
-* -- 2255
-:= -- 5363
-add.period$ -- 466
+            1160 strings with 25496 characters,
+and the built_in function-call counts, 37800 in all, are:
+= -- 3744
+> -- 1243
+< -- 72
++ -- 474
+- -- 337
+* -- 2267
+:= -- 5384
+add.period$ -- 467
 call.type$ -- 137
 change.case$ -- 120
 chr.to.int$ -- 0
 cite$ -- 152
-duplicate$ -- 1909
-empty$ -- 3804
-format.name$ -- 335
-if$ -- 8910
+duplicate$ -- 1922
+empty$ -- 3823
+format.name$ -- 337
+if$ -- 8970
 int.to.chr$ -- 0
 int.to.str$ -- 137
 missing$ -- 148
 newline$ -- 685
 num.names$ -- 137
-pop$ -- 561
+pop$ -- 566
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1023
+skip$ -- 1034
 stack$ -- 0
-substring$ -- 2746
-swap$ -- 690
-text.length$ -- 71
+substring$ -- 2769
+swap$ -- 699
+text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 15
-while$ -- 405
+while$ -- 407
 width$ -- 140
-write$ -- 1540
+write$ -- 1541
 (There were 9 error messages)

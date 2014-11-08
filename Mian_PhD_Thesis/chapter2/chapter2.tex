@@ -7,7 +7,7 @@ The famous quote of Paul Ehrlich, ``to err is human, but to really foul things u
 \section{Software Testing} \label{sec:softwareTesting}
 According to the ANSI/IEEE standard glossary of software engineering~\cite{american1984}, testing is defined as, ``the process of exercising or evaluating a system or system component by manual or automated means to verify that it satisfies specified requirements or to identify differences between expected and actual results". The testing process is an integral part of Software Development Life Cycle, which starts from requirement phase and continues throughout the life of the software according to a predefined test plan. Test plan is a document which defines the goal, scope, method, resources and time schedule of testing \cite{futrell2001quality}. It includes the testable deliverables and the associated risk assessment. The test plan explains \verb+who, when, why+ and \verb+how+ to perform a specific activity in the testing process. 
 
-In traditional testing, when a fault is found by the testers, the software is returned to the developers for rectification and the updated version is given back to the testers for retesting. It is important to note that a successful test is the one that fails a software or identifies a fault in the software~\cite{myers2011art} while fault denotes error made by programmers during software development~\cite{american1984}. The faulty code on execution can lead to software failures. A software that passes all tests without giving any error is not guaranteed to be free from errors. However, the testing process increases confidence of users and reliability of the tested product~\cite{dahl1972structured}. 
+In traditional testing, when a fault is found by the testers, the software is returned to the developers for rectification and the updated version is given back to the testers for retesting~\cite{chen2005adaptive}. It is important to note that a successful test is the one that fails a software or identifies a fault in the software~\cite{myers2011art} while fault denotes error made by programmers during software development~\cite{american1984}. The faulty code on execution can lead to software failures. A software that passes all tests without giving any error is not guaranteed to be free from errors. However, the testing process increases confidence of users and reliability of the tested product~\cite{dahl1972structured}. 
 
 \bigskip
 \bigskip
@@ -42,7 +42,7 @@ A test suite comprising a series of test cases is commonly executed to establish
 
 
 \subsection{Test Oracle}
-Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function that verifies that the output from \verb+P+ is the same as the output from a ‘correct’ version of \verb+P+~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
+Test oracle is defined as, ``a source containing expected results for comparison with the actual result of the SUT"~\cite{ahmed2010software}. For a program \verb+P+, an oracle is a function, which verifies that the output from \verb+P+ is the same as the output from a ‘correct’ version of \verb+P+~\cite{howden1986functional}. Test oracle sets the acceptable behaviour for test execution~\cite{baresi2001test}. Software testing techniques depend on the availability of test oracle~\cite{gaudel2010software}. Designing test oracle for ordinary software may be simple and straightforward. However, for relatively complex software, designing of oracle is quite cumbersome and requires special expertise. 
 Some common issues related to the design of test oracle are as follows:
 
 \begin{enumerate}
@@ -63,12 +63,12 @@ Postconditions are commonly used test oracle in automated software testing. Post
 \item Manual analysis by human experts to verify the test results. %\cite{jalote1997integrated}. 
 \end{enumerate}
 
-\section{Software testing from various viewpoints}
+\section{Software Testing from Various Viewpoints}
 Software testing from various viewpoints is presented in Figure~\ref{fig:softwareTestingFlow_2} and each one is described in the following sections.
 
 \begin{figure}[H]
 	\centering
-	\centerline{\includegraphics[width=16cm, height=19cm]{chapter2/softwareTestingFlow.png}}
+	\centerline{\includegraphics[width=16cm, height=19cm]{chapter2/softwareTestingFlow3.png}}
 	%\centerline{\includegraphics[width=\textwidth]{chapter2/softwareTestingFlow.png}}
 	\caption{Software testing from various viewpoints}
 	\label{fig:softwareTestingFlow_2}
@@ -450,7 +450,7 @@ Researchers have tried various approaches to develop new versions of random test
 \end{figure}
 
 \subsection{Random$^+$ Testing} \label{subsec:randomPlusTesting}
-The random$^+$ testing~\cite{leitner2007reconciling} is an extension of the random testing. It uses some special predefined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{beizer2003software} are the values at the start and end of a particular data type. For instance, such values for \verb+int+ could be -3, -2, -1, 0, 1, 2, 3, \verb+Integer.MAX_VALUE+, \verb+Integer.MAX_VALUE-1+, \verb+Integer.MAX_VALUE-2+, \verb+Integer.MIN_VALUE+, \verb-Integer.MIN_VALUE+1-, \verb-Integer.MIN_VALUE+2-. These special values can add a significant improvement to a testing method. \\*
+The random$^+$ testing~\cite{ciupa2007experimental, ciupa2008finding} is an extension of the random testing. It uses some special predefined values which can be simple boundary values or values that have high tendency of finding faults in the SUT. Boundary values~\cite{beizer2003software} are the values at the start and end of a particular data type. For instance, such values for \verb+int+ could be -3, -2, -1, 0, 1, 2, 3, \verb+Integer.MAX_VALUE+, \verb+Integer.MAX_VALUE-1+, \verb+Integer.MAX_VALUE-2+, \verb+Integer.MIN_VALUE+, \verb-Integer.MIN_VALUE+1-, \verb-Integer.MIN_VALUE+2-. These special values can add a significant improvement to a testing method. \\*
 Let us consider the following piece of code:
 \bigskip
 \bigskip
@@ -468,9 +468,9 @@ In the given code, on passing interesting value \verb+MAX_INT+ as argument, the 
 
 \subsection{Adaptive Random Testing}
 \label{sec:artpatterns_2}
-Adaptive random testing (ART) proposed by Chen et al.~\cite{chen2005adaptive} is based on the previous work of Chan et al.~\cite{chan1996proportional} regarding the existence of failure domains across the input domain (Section~\ref{sec:genuineandfailuredomain}). Chen et al.~\cite{chen2005adaptive} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more fault-targeted test inputs, they proposed ART as a modified version of random testing where test values are selected at random as usual but are evenly spread across the input domain.  The technique uses the candidate set as well as the executed set both of which are initially and as soon as the testing begins ART fills the candidate set with randomly selected test cases from the input domain. The first test case selected at random from the candidate set is executed and stored in the executed set. The second test case is the one selected from the candidate set which is located far away from the previously executed test case. The process continues till test completion and provides greater chances of finding failures from failure domains.
+Adaptive random testing (ART) proposed by Chen et al.~\cite{chen2005adaptive} is based on the previous work of Chan et al.~\cite{chan1996proportional} regarding the existence of failure domains across the input domain (Section~\ref{sec:genuineandfailuredomain}). Chen et al.~\cite{chen2005adaptive} argued that ordinary random testing might generate test inputs lurking too close or too far from the input inducing failure and thus fails to discover the fault. To generate more fault-targeted test inputs, they proposed ART as a modified version of random testing where test values are selected at random as usual but are evenly spread across the input domain. The technique uses the candidate set as well as the executed set both of which are initially empty and as soon as the testing begins ART fills the candidate set with randomly selected test cases from the input domain. The first test case selected at random from the candidate set is executed and stored in the executed set. The second test case is the one selected from the candidate set which is located far away from the previously executed test case. The process continues till test completion and provides greater chances of finding failures from failure domains.
 
-Chen et al.~\cite{chen2005adaptive} used ART in their experiments with the number of test cases required to detect first fault (F-measure) as a performance matrix instead of the traditional matrices (P-measure) and (E-measure). The results showed up to 50\% increase in performance compared to random testing. However, the authors pointed out indicated their concern regarding the issues of spreading test cases across the input domain for complex objects, efficient ways of selecting candidate test cases and higher overhead. %Chen et al. continued their work on ART for addressing the issues and proposed the following upgraded versions. %~\cite{chen2009enhanced} 
+Chen et al.~\cite{chen2005adaptive} used ART in their experiments with the number of test cases required to detect first fault (F-measure) as a performance metric instead of the traditional metrics (P-measure and E-measure). The results showed up to 50\% increase in performance compared to random testing. However, the authors pointed out their concern regarding the issues of spreading test cases across the input domain for complex objects, efficient ways of selecting candidate test cases and higher overhead. %Chen et al. continued their work on ART for addressing the issues and proposed the following upgraded versions. %~\cite{chen2009enhanced} 
 
 \subsection{Mirror Adaptive Random Testing}
 %As discussed in the above section ART provide better results, however the increase in overhead due to extra computation to achieve even spread of test inputs makes it less cost effective. 
@@ -679,8 +679,8 @@ TestEra~\cite{marinov2001testera} is a novel framework of auto-generation and ev
 	\label{fig:testera}
 \end{figure}
 \bigskip
-TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints of test inputs from program specifications. The constraints are solved by the Alloy Analyser~\cite{jackson2000alcoa} which performs the following three functions: (a) it translates Alloy predicates into propositional formulas%, i.e. constraints where all variables are boolean 
- (b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
+TestEra uses the Alloy modelling language~\cite{jackson2001micromodularity} to express constraints of test inputs from program specifications. The constraints are solved by the Alloy Analyser~\cite{jackson2000alcoa} which performs the following three functions: (a) it translates Alloy predicates into propositional formulas~%, i.e. constraints where all variables are boolean
+(b) it evaluates the propositional formulas to find the outcome (c) it translates each outcome from propositional domain into the relational domain.
 
 
 

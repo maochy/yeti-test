@@ -155,7 +155,7 @@ The work-flow of ADFD$^+$ is given in Figure~\ref{fig:Workflow6}. As soon as the
 %%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Example to illustrate working of ADFD$^+$}
+\subsection{Example to Illustrate Working of ADFD$^+$}
 Suppose we have the following error-seeded class under test. It is evident from the program code that a failure is generated when the value of variable $x$ ranges between 5 to 8 and the value of variable $y$ between 2 to 4.
 
 \begin{lstlisting}
@@ -279,13 +279,13 @@ The following research questions have been addressed in the study for evaluating
 
 
 \subsection{Randoop} \label{sec:randoop}
-Random tester for object-oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, time limit or number of tests and optionally a set of configuration files to assist testing. Randoop checks for assertion violations, access violations and un-expected program termination in a given class. Its output is a suite of JUnit for Java and NUnit for .Net program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting public methods from the class under test. Arguments for these methods are selected from the pre-defined pool in case of primitive types and as a sequence of null values in case of reference type. Randoop uses the feedback mechanism to filter out duplicate test cases. For more details about Randoop, please see Section~\ref{sec:Randoop} for more details.
+Random tester for object-oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, time limit or number of tests and optionally a set of configuration files to assist testing. Randoop checks for assertion violations, access violations and un-expected program termination in a given class. Its output is a suite of JUnit for Java and NUnit for .Net program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting public methods from the class under test. Arguments for these methods are selected from the pre-defined pool in case of primitive types and as a sequence of null values in case of reference type. Randoop uses the feedback mechanism to filter out duplicate test cases. For more details about Randoop, please see Section~\ref{sec:Randoop}.
 
 
 %The code for the programs under test is given in Appendix~\ref{} while the test details are presented in Table~\ref{table:Results}. 
 %Every class was evaluated through $10^5$ calls in each test session of ADFD+.
 %\footnote{The total number of tests is equal to $60\times 30\times 3 \times 10^5 = 540\times10^6~tests$.} 
-\subsection{Experimental setup}
+\subsection{Experimental Setup}
 All experiments were conducted with a 64-bit Mac OS X Mountain lion version 10.8.5 running on 2.7 GHz Intel Core i7 quad core with 16 GB (1600 MHz DDR3) of RAM. YETI runs on top of the Java\texttrademark  SE Runtime Environment [version 1.6.0\_35]. %The machine took approximately 100 hours to process the experiments.
 The ADFD$^+$ Jar file is available at \url{https://code.google.com/p/yeti-test/downloads/list/} and Randoop at \url{https://randoop.googlecode.com/files/randoop.1.3.3.zip}.
 
@@ -303,7 +303,7 @@ $ java randoop.main.Main gentests \
 
 
 
-\section{Experimental results} \label{sec:result6}
+\section{Experimental Results} \label{sec:result6}
 %The experimental results show that the ADFD+ outperformed Randoop in both the time taken and number of tests used to detect all the injected faults. The ADFD+ also provide the added benefit of presenting the results in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension} and \ref{fig:failureDomainsTwoDimension}. 
 %Results are split in to two sections depicting efficiency and effectiveness of the two tools.
 \begin{figure}[H]
@@ -369,7 +369,7 @@ Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD$^+$ and 
 \includegraphics[width=10cm,height=6.5cm]{chapter6/SFDOne.png}
 \label{fig:SFDOne6}
 }
-\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of two-dimension programs}
+\caption{Pass and fail values plotted by ADFD$^+$ in three different cases of one-dimension programs}
 
 \label{fig:failureDomainsOneDimension6}
 \end{figure}
@@ -519,7 +519,7 @@ The number of test cases to be undertaken in search of failures around the previ
 
 %The implementation of ADFD+ for this pilot study has some limitations in practice, as it requires only one and two dimensional numerical programs. Though it is not difficult to extend the approach to test more than two-dimensional programs containing other primitive types, it would however be difficult to plot them on the chart as the number of coordinates increases. The approach can also be extended to test object-oriented programs by implementing objects distance proposed by Ciupa et al. \cite{ciupa2006object}. The details of such an implementation will take some effort.
 
-\section{Threats to validity} \label{sec:threat6}
+\section{Threats to Validity} \label{sec:threat6}
 The study faces threats to external and internal validity. The external threats are common to most of the empirical evaluations. It includes the extent to which the programs under test, the generation tools and the nature of seeded errors are representative of the true practice. The present findings will serve as the foundation for future research studies needed to be undertaken with several types of classes, test generation tools and diversified nature of seeded errors in order to overcome the threats to external validity. The internal threats to validity include error-seeded and limited number of classes used in the study. These may be avoided by taking real and higher number of classes in future studies.
 
 
@@ -534,7 +534,7 @@ Some previous research studies have reported work on Identification, classificat
 
 
 \section{Summary} \label{sec:conclusion}
-The newly developed ADFD$^+$ technique is distinct from other random testing techniques because it not only identifies failures but also discovers failure domains and provides the resulting output in easily understandable graphical form.  The paper highlights the improved features of ADFD$^+$ in comparison with ADFD technique previously developed by our team~\cite{ahmad2013adfd}.  The paper then analyses and compares the experimental results of ADFD$^+$ and Randoop for the point, block and strip failure domains. The ADFD$^+$ demonstrated extra ordinary efficiency  by taking less time to the tune of two orders of magnitude to discover the failure domains and it also surpassed Randoop in terms of effectiveness by identifying the failure domains in 50\% or less number of test cases.  
+The newly developed ADFD$^+$ technique is distinct from other random testing techniques because it not only identifies failures but also discovers failure domains and provides the resulting output in easily understandable graphical form.  The chapter highlights the improved features of ADFD$^+$ in comparison with ADFD technique previously developed by our team~\cite{ahmad2013adfd}.  The chapter then analyses and compares the experimental results of ADFD$^+$ and Randoop for the point, block and strip failure domains. The ADFD$^+$ demonstrated extra ordinary efficiency  by taking less time to the tune of two orders of magnitude to discover the failure domains and it also surpassed Randoop in terms of effectiveness by identifying the failure domains in 50\% or less number of test cases.  
 %The rationale for better performance of ADFD+ has been given in the paper. 
 The better performance of ADFD$^+$ may be attributed mainly to its ability to dynamically change algorithm to exhaustive testing in a specified radius around the first identified failure as against Randoop which uses the same random algorithm continuously for searching failures.
 
