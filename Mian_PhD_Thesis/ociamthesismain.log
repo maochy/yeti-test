@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  11 NOV 2014 02:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.11.2)  11 NOV 2014 10:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1808,18 +1808,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 606.
 
-[88] [89] [90] [91]
-<chapter4/resultsOfDSSRPie.png, id=1920, 384.4764pt x 237.0456pt>
-File: chapter4/resultsOfDSSRPie.png Graphic file (type png)
+[88] [89] [90] [91] <chapter4/pie4.png, id=1920, 447.5922pt x 363.2772pt>
+File: chapter4/pie4.png Graphic file (type png)
 
-<use chapter4/resultsOfDSSRPie.png>
-Package pdftex.def Info: chapter4/resultsOfDSSRPie.png used on input line 676.
-(pdftex.def)             Requested size: 398.34415pt x 256.0886pt.
-) [92 <./chapter4/resultsOfDSSRPie.png>]
+<use chapter4/pie4.png>
+Package pdftex.def Info: chapter4/pie4.png used on input line 677.
+(pdftex.def)             Requested size: 341.45074pt x 284.54686pt.
+) [92 <./chapter4/pie4.png>]
 \openout2 = `chapter5/chapter5.aux'.
 
-
-(./chapter5/chapter5.tex
+ (./chapter5/chapter5.tex
 
 Package xr Warning: 
 No file chapter5.aux
@@ -2354,7 +2352,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  17213 strings out of 493315
- 260390 string characters out of 6137904
+ 260330 string characters out of 6137904
  489822 words of memory out of 5000000
  19166 multiletter control sequences out of 15000+600000
  94820 words of font info for 208 fonts, out of 8000000 for 9000
@@ -2375,7 +2373,7 @@ pe1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw
 /helvetic/uhvro8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/symbo
 l/usyr.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ociamthesismain.pdf (161 pages, 4025463 bytes).
+Output written on ociamthesismain.pdf (161 pages, 4051857 bytes).
 PDF statistics:
  2976 PDF objects out of 2984 (max. 8388607)
  2640 compressed objects within 27 object streams

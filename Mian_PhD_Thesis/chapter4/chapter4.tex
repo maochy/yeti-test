@@ -669,11 +669,13 @@ In our experiments, we selected projects from the Qualitas Corpus~\cite{tempero2
 
 
 \section{Summary}\label{sec:conc}
-The main goal of the present study was to develop a new random strategy which could find more failures in a lower number of test cases. We developed the ``DSSR strategy'' as an extension of R$^+$, based on the assumption that in a significant number of classes, failure domains are contiguous. The DSS feature of DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. The strategy was implemented in the random testing tool YETI to test 60 classes from Qualitas Corpus, 30 times each with each of the three strategies i.e. R, R$^+$ and DSSR. The newly developed DSSR strategy uncovered more unique failures than both R and R$^+$ strategies with a 5\% overhead. We found out that for 7 (12\%) classes DSSR was significantly better than both R and R$^+$, for 8 (13\%) classes DSSR performed significantly better than R, while in 2 (3\%) classes DSSR performed significantly better than R$^+$. In all other cases, performance of DSSR, R and R$^+$ showed no significant difference. Overall, DSSR produced encouraging results. 
+The main goal of the present study was to develop a new random strategy which could find more failures in a lower number of test cases. We developed the ``DSSR strategy'' as an extension of R$^+$, based on the assumption that in a significant number of classes, failure domains are contiguous. The DSS feature of DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. The strategy was implemented in the random testing tool YETI to test 60 classes from Qualitas Corpus, 30 times each with each of the three strategies i.e. R, R$^+$ and DSSR. The newly developed DSSR strategy uncovered more unique failures than both R and R$^+$ strategies with a 5\% overhead. We found out that for 5 (8\%) classes DSSR was significantly better than both R and R$^+$, for 8 (13\%) classes DSSR performed significantly better than R, while in 3 (5\%) classes DSSR performed significantly better than R$^+$. In all other cases, performance of DSSR, R and R$^+$ showed no significant difference. Overall, DSSR produced encouraging results. 
 
+\bigskip
 \begin{figure}[h]
 \centering
-\includegraphics[width=14cm,height=9cm]{chapter4/resultsOfDSSRPie.png}
+\includegraphics[width=12cm,height=10cm]{chapter4/pie4.png}
+\bigskip
 \caption{Results of DSSR strategy in comparison with R and R$^+$}
 \label{fig:resultsOfDSSRPie}
 \end{figure}
