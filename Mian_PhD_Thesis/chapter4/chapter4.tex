@@ -464,7 +464,7 @@ DSSR found the higher number of maximum unique failures (1118) than R (1075) and
 % How to write relative standard deviation.
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
 
-\subsection{Absolute best in R, R$^+$ \& DSSR strategies}
+\subsection{Absolute Best in R, R$^+$ and DSSR Strategies}
 Based on our findings DSSR is at least as good as R and R$^+$ in almost all cases, it is significantly better than both R and R$^+$ in 12\% of the classes. Figure~\ref{fig:LineChart} presents the performance of DSSR in comparison with R and R$^+$ strategies in 17 classes showing significant difference. The blue line with a diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R$^+$ strategy. 
 
 The improvement of DSSR over R and R$^+$ strategy is calculated by applying the formula (4.1) and (4.2) respectively. This is in accordance with the previous work of Chan et al.~\cite{chan2004good}.
@@ -488,33 +488,61 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 		&					& 	DSSR - R		& DSSR - R$^+$		&  R - R$^+$ 		& 		\\
 \hline
 1		&	AjTypeImpl		&	1 				& 1 				& 1				& Difference not significant		\\	
+
 2		&	Apriori			&	\textbf{0.03}	 	& 0.49			& 0.16			& Difference not significant		\\	
+
 3		&	CheckAssociator	&	\textbf{0.04}	 	& \textbf{0.05}	& 0.44			& DSSR \textgreater~R \& R$^+$ 				\\	
+
 4		&	Debug			&	\textbf{0.03}	 	& 0.14			& 0.56			& Difference not significant		\\	
+
 5		&	DirectoryScanner	&	\textbf{0.04}	 	& \textbf{0.01}	& 0.43			& DSSR \textgreater~R \& R$^+$				\\
+
 6		&	DomParser		&	\textbf{0.05}	 	& 0.23			& 0.13			& Difference not significant		\\
+
 7		&	EntityDecoder	&	\textbf{0.04}	 	& 0.28			& 0.3			& Difference not significant		\\			
+
 8		&	Font			&	0.18	 		& 0.18			& 1				& Difference not significant		\\
+
 9		&	Group			&	0.33	 		& \textbf{0.03}	& \textbf{0.04}	& DSSR = R \textgreater~R$^+$		\\
+
 10		&	Image			&	\textbf{0.03}		& \textbf{0.01}	& 0.61			& DSSR \textgreater~R \& R$^+$ 				\\		
+
 11		&	InstrumentTask	&	0.16			& 0.33			& 0.57			& Difference not significant		\\
-12		&	JavaWrapper		&	\textbf{0.001}	& 0.57			& 0.004			& DSSR = R$^+$ \textgreater~R 		\\
+
+12		&	JavaWrapper		&	\textbf{0.001}	& 0.57			& \textbf{0.004}	& DSSR = R$^+$ \textgreater~R 		\\
+
 13		& 	JmxUtilities		&	0.13			& 0.71			& 0.08			& Difference not significant		\\
+
 14		&	List				& 	\textbf{0.01}		&0.25			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+
 15		&	NodeSequence	&	0.97			&\textbf{0.04}	&\textbf{0.06}	& DSSR = R \textgreater~R$^+$ 		\\
+
 16		&	NodeSet			&	\textbf{0.03}		&0.42			&0.26			& Difference not significant		\\
-17		&	Project			&	\textbf{0.001}	&0.57			&\textbf{0.004}	& DSSR \textgreater~R \& R$^+$ 				\\		
+
+17		&	Project			&	\textbf{0.001}	&\textbf{0.01}	&0.65			& DSSR \textgreater~R \& R$^+$  				\\		
+
 18		&	Repository		&	\textbf{0}		&1				&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
-19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR \textgreater~R \& R$^+$  				\\
+
+19		&	Scanner			&	1				&\textbf{0.03}	&\textbf{0.01}	& DSSR = R \textgreater~R$^+$  				\\
+
 20		&	Scene			&	\textbf{0}		&\textbf{0}		& 1				& DSSR \textgreater~R \& R$^+$  				\\
+
 21		&	Server			&	\textbf{0.03}		& 0.88			&\textbf{0.03} 	& DSSR = R$^+$ \textgreater~R 		\\
+
 22		&	Sorter			& 	\textbf{0}		& 0.33			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+
 23		&	Statistics		&	\textbf{0}		& 0.43			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
+
 24		&	Stopwords		&	\textbf{0}		& 0.23			&\textbf{0}		& DSSR = R$^+$ \textgreater~R 		\\
-25		&	StringHelper		&	\textbf{0.03}		& 0.44			&0.44			& DSSR = R$^+$ \textgreater~R 		\\
-26		& 	Trie				&	0.1				& 0.33			&0.47			& DSSR \textgreater~R \& R$^+$  				\\
+
+25		&	StringHelper		&	\textbf{0.03}		& 0.44			&\textbf{0.01}	& DSSR = R$^+$ \textgreater~R		\\
+
+26		& 	Trie				&	0.1				& 0.33			&0.47			& Difference not significant  				\\
+
 27		&	WebMacro		&	0.33			& 1				&0.16			& Difference not significant		\\
+
 28		&	XMLEntityManager&	0.33			& 0.33			&0.16			& Difference not significant		\\
+
 29 		&	XString			&	0.14			&\textbf{0.03}	&0.86			& Difference not significant		\\
 
 
@@ -524,9 +552,9 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \label{table:ttest}
 \end{table*}
 
-\subsection{Classes for which any of the three strategies performs better}
+\subsection{Classes for which any of the Three Strategies Performs Better}
 
-T-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 7 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 2 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R$^+$ strategy. 
+T-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 5 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 3 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R$^+$ strategy. 
 
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
@@ -575,7 +603,7 @@ T-test applied to data given in Table~\ref{table:ttest} indicated significantly 
 %Category 9 and 10 shows that neither R nor R+ performed better than DSSR strategy.
 %The last category shows each strategy performing equally well for 43 classes. Expressing in percentage, 72\% classes do not show different behaviours whereas in 28\% of classes, the DSSR strategy performs better than R and R+ strategy. It is interesting to note that in no single case R and R+ strategies performed better than DSSR strategy. This is attributed to the fact that DSSR strategy possess the qualities of R and R+ and has the additional advantage of spot sweeping.
 
-\subsection{The best default strategy in R, R$^+$ \& DSSR}
+\subsection{The Best Default Strategy in R, R$^+$ and DSSR}
 
 Analysis of the experimental data revealed that DSSR strategy had an edge over R and R$^+$. This is due to the additional feature of spot sweeping in DSSR strategy. In spite of the better performance of DSSR as compared to R and R$^+$ strategies, the present study does not provide ample evidence to pick it as the best default strategy. This is primarily due to the overhead induced by DSSR strategy, discussed in Section~\ref{sec:discussion3}. Further study might provide some conclusive findings. 
 
@@ -611,7 +639,7 @@ public void test(float value){
 \bigskip
 \bigskip
 
-In this case, we could add constant literals from the SUT to the list of interesting values in a dynamic fashion. These literals can be obtained from the constant pool in the class files of the SUT. In the example above, the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the failure right away.
+In this case, we could add constant literals from the SUT to the list of interesting values in a dynamic fashion~\cite{godefroid2005dart}. These literals can be obtained from the constant pool in the class files of the SUT. In the example above, the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the failure right away.
 
 \textbf{Level of coverage:} Random strategies typically achieve a low level of coverage~\cite{offutt1996semantic}, and DSSR might be no exception. However, it might be interesting to compare DSSR with R and R$^+$ with respect to the achieved coverage.
 
@@ -634,7 +662,7 @@ The R$^+$ strategy is an extension of the R strategy in which interesting values
 
 A common practice to evaluate the performance of an extended strategy is to compare the results obtained by applying a new and existing strategy to identical programs~\cite{hamlet1990partition, duran1984evaluation, gutjahr1999partition}. Arcuri et al.~\cite{arcuri2012random}, stress on the use of random testing as a baseline for comparison with other test strategies. We followed the procedure and evaluated DSSR strategy against R and R$^+$ strategies under identical conditions.
 
-In our experiments, we selected projects from the Qualitas Corpus~\cite{tempero2010qualitas} which is a collection of open source java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of java applications~\cite{oriol2012random, tempero2010empirical, tempero2008empirical}.
+In our experiments, we selected projects from the Qualitas Corpus~\cite{tempero2010qualitas} which is a collection of open source Java programs maintained for independent empirical research. The projects in Qualitas Corpus are carefully selected that spans across the whole set of Java applications~\cite{oriol2012random, tempero2010empirical, tempero2008empirical}.
 
 
 %%%%%%%%%%%%%%%%%    CONCLUSIONS   %%%%%%%%%%%%%%%%%%%%

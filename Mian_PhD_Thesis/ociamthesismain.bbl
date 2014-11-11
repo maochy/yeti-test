@@ -26,15 +26,14 @@ Andreas Leitner and Ilinca Ciupa.
 Darko Marinov and Sarfraz Khurshid.
 \newblock Test{E}ra: A novel framework for automated testing of {J}ava
   programs.
-\newblock In {\em Automated Software Engineering, 2001.(ASE 2001). Proceedings.
-  16th Annual International Conference on}, pages 22--31. IEEE, 2001.
+\newblock In {\em Proceedings. 16th Annual International Conference on
+  Automated Software Engineering}, pages 22--31. IEEE, 2001.
 
 \bibitem{ernst2001dynamically}
 Michael~D Ernst, Jake Cockrell, William~G Griswold, and David Notkin.
 \newblock Dynamically discovering likely program invariants to support program
   evolution.
-\newblock {\em Software Engineering, IEEE Transactions on}, 27(2):99--123,
-  2001.
+\newblock {\em IEEE Transactions on Software Engineering}, 27(2):99--123, 2001.
 
 \bibitem{wilkes1985memoirs}
 Maurice Wilkes.
@@ -69,7 +68,7 @@ Glenford~J Myers, Corey Sandler, and Tom Badgett.
 \bibitem{howden1986functional}
 William~E. Howden.
 \newblock A functional approach to program testing and analysis.
-\newblock {\em Software Engineering, IEEE Transactions on}, (10):997--1005,
+\newblock {\em IEEE Transactions on Software Engineering}, (10):997--1005,
   1986.
 
 \bibitem{mccabe1983structured}
@@ -85,7 +84,7 @@ Joan~C Miller and Clifford~J Maloney.
 \bibitem{korel1990automated}
 Bogdan Korel.
 \newblock Automated software test data generation.
-\newblock {\em Software Engineering, IEEE Transactions on}, 16(8):870--879,
+\newblock {\em IEEE Transactions on Software Engineering}, 16(8):870--879,
   1990.
 
 \bibitem{ciupa2007experimental}
@@ -158,7 +157,7 @@ Elaine~J Weyuker.
 Bertrand Meyer, Arno Fiva, Ilinca Ciupa, Andreas Leitner, Yi~Wei, and Emmanuel
   Stapf.
 \newblock Programs that test themselves.
-\newblock {\em Computer}, 42(9):46--55, 2009.
+\newblock {\em Computer, IEEE}, 42(9):46--55, 2009.
 
 \bibitem{chilenski1994applicability}
 John~Joseph Chilenski and Steven~P Miller.
@@ -180,7 +179,7 @@ Thomas Ostrand.
 \bibitem{clarke1989formal}
 Lori~A Clarke, Andy Podgurski, Debra~J. Richardson, and Steven~J. Zeil.
 \newblock A formal evaluation of data flow path selection criteria.
-\newblock {\em Software Engineering, IEEE Transactions on}, 15(11):1318--1332,
+\newblock {\em IEEE Transactions on Software Engineering}, 15(11):1318--1332,
   1989.
 
 \bibitem{fosdick1976data}
@@ -207,7 +206,7 @@ Jeffrey~M Voas and Gary McGraw.
 \bibitem{hsueh1997fault}
 Mei-Chen Hsueh, Timothy~K Tsai, and Ravishankar~K Iyer.
 \newblock Fault injection techniques and tools.
-\newblock {\em Computer}, 30(4):75--82, 1997.
+\newblock {\em Computer, IEEE}, 30(4):75--82, 1997.
 
 \bibitem{beizer1995black}
 Boris Beizer.
@@ -229,7 +228,7 @@ Dick Hamlet and Ross Taylor.
 \bibitem{weyuker1991analyzing}
 Elaine~J. Weyuker and Bingchiang Jeng.
 \newblock Analyzing partition testing strategies.
-\newblock {\em Software Engineering, IEEE Transactions on}, 17(7):703--711,
+\newblock {\em IEEE Transactions on Software Engineering}, 17(7):703--711,
   1991.
 
 \bibitem{ntafos1998random}
@@ -241,7 +240,7 @@ Simeon Ntafos.
 \bibitem{ramachandran2003testing}
 Muthu Ramachandran.
 \newblock Testing software components using boundary value analysis.
-\newblock In {\em Euromicro Conference, 2003. Proceedings. 29th}, pages 94--98.
+\newblock In {\em Proceedings of 29th Euromicro Conference}, pages 94--98.
   IEEE, 2003.
 
 \bibitem{radatz1990ieee}
@@ -253,8 +252,8 @@ Jane Radatz, Anne Geraci, and Freny Katki.
 Stuart~C Reid.
 \newblock An empirical analysis of equivalence partitioning, boundary value
   analysis and random testing.
-\newblock In {\em Software Metrics Symposium, 1997. Proceedings., Fourth
-  International}, pages 64--73. IEEE, 1997.
+\newblock In {\em Proceedings of the fourth International Software Metrics
+  Symposium}, pages 64--73. IEEE, 1997.
 
 \bibitem{donat1997automating}
 Michael~R Donat.
@@ -281,8 +280,8 @@ Richard~E Fairley.
 \bibitem{ciupa2008finding}
 Ilinca Ciupa, Bertrand Meyer, Manuel Oriol, and Alexander Pretschner.
 \newblock Finding faults: Manual testing vs. random+ testing vs. user reports.
-\newblock In {\em Software Reliability Engineering, 2008. ISSRE 2008. 19th
-  International Symposium on}, pages 157--166. IEEE, 2008.
+\newblock In {\em 19th International Symposium on Software Reliability
+  Engineering}, pages 157--166. IEEE, 2008.
 
 \bibitem{venolia2005software}
 G~Venolia, Robert DeLine, and Thomas LaToza.
@@ -312,9 +311,9 @@ GT~Leavens, E~Poll, C~Clifton, Y~Cheon, C~Ruby, D~Cok, and J~Kiniry.
 
 \bibitem{kramer1998icontract}
 Reto Kramer.
-\newblock icontract-the java tm design by contract tm tool.
-\newblock In {\em Technology of Object-Oriented Languages, 1998. TOOLS 26.
-  Proceedings}, pages 295--307. IEEE, 1998.
+\newblock icontract-the java design by contract tool.
+\newblock In {\em Proceedings of Tools 26 - USA 98, IEEE Computer Society},
+  pages 295--307. IEEE, 1998.
 
 \bibitem{richters1998formalizing}
 Mark Richters and Martin Gogolla.
@@ -368,9 +367,8 @@ Webb Miller and David~L. Spooner.
 \bibitem{mcminn2011search}
 Phil McMinn.
 \newblock Search-based software testing: Past, present and future.
-\newblock In {\em Software Testing, Verification and Validation Workshops
-  (ICSTW), 2011 IEEE Fourth International Conference on}, pages 153--163. IEEE,
-  2011.
+\newblock In {\em In International Workshop on Search-Based Software Testing
+  (SBST 2011)}, pages 153--163. IEEE, 2011.
 
 \bibitem{jones1996automatic}
 Bryan~F Jones, H-H Sthamer, and David~E Eyres.
@@ -400,7 +398,7 @@ Richard Hamlet.
 
 \bibitem{ciupa2008artoo}
 Ilinca Ciupa, Andreas Leitner, Manuel Oriol, and Bertrand Meyer.
-\newblock Artoo: adaptive random testing for object-oriented software.
+\newblock {ARTOO}: Adaptive random testing for object-oriented software.
 \newblock In {\em Software Engineering, 2008. ICSE'08. ACM/IEEE 30th
   International Conference on}, pages 71--80. IEEE, 2008.
 
@@ -450,14 +448,15 @@ Barton~P Miller, Gregory Cooksey, and Fredrick Moore.
 \bibitem{kropp1998automated}
 Nathan~P Kropp, Philip~J Koopman, and Daniel~P Siewiorek.
 \newblock Automated robustness testing of off-the-shelf software components.
-\newblock In {\em Fault-Tolerant Computing, 1998. Digest of Papers.
-  Twenty-Eighth Annual International Symposium on}, pages 230--239. IEEE, 1998.
+\newblock In {\em Twenty-Eighth Annual International Symposium on
+  Fault-Tolerant Computing, 1998. Digest of Papers}, pages 230--239. IEEE,
+  1998.
 
 \bibitem{groce2007randomized}
 Alex Groce, Gerard Holzmann, and Rajeev Joshi.
 \newblock Randomized differential testing as a prelude to formal verification.
-\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
-  Conference on}, pages 621--631. IEEE, 2007.
+\newblock In {\em 29th International Conference on Software Engineering, 2007.
+  ICSE 2007}, pages 621--631. IEEE, 2007.
 
 \bibitem{beizer2003software}
 Boris Beizer.
@@ -477,7 +476,7 @@ Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
 \bibitem{chen2007quasi}
 Tsong~Yueh Chen and Robert Merkel.
 \newblock Quasi-random testing.
-\newblock {\em Reliability, IEEE Transactions on}, 56(3):562--568, 2007.
+\newblock {\em IEEE Transactions on Reliability}, 56(3):562--568, 2007.
 
 \bibitem{pacheco2007randoop}
 Carlos Pacheco and Michael~D Ernst.
@@ -543,7 +542,7 @@ Paul Hudak, John Hughes, Simon Peyton~Jones, and Philip Wadler.
 Ilinca Ciupa, Andreas Leitner, et~al.
 \newblock Automatic testing of object-oriented software.
 \newblock In {\em In Proceedings of SOFSEM 2007 (Current Trends in Theory and
-  Practice of Computer Science}. Citeseer, 2007.
+  Practice of Computer Science)}. Citeseer, 2007.
 
 \bibitem{jackson2001micromodularity}
 Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
@@ -553,8 +552,8 @@ Daniel Jackson, Ilya Shlyakhter, and Manu Sridharan.
 \bibitem{jackson2000alcoa}
 Daniel Jackson, Ian Schechter, and Ilya Shlyakhter.
 \newblock {ALCOA}: The alloy constraint analyzer.
-\newblock In {\em Software Engineering, 2000. Proceedings of the 2000
-  International Conference on}, pages 730--733. IEEE, 2000.
+\newblock In {\em Proceedings of the 2000 International Conference on Software
+  Engineering}, pages 730--733. IEEE, 2000.
 
 \bibitem{boyapati2002korat}
 Chandrasekhar Boyapati, Sarfraz Khurshid, and Darko Marinov.
@@ -579,14 +578,15 @@ Sarfraz Khurshid and Darko Marinov.
 \bibitem{oriol2010testing}
 Manuel Oriol and Sotirios Tassis.
 \newblock Testing {.NET} code with {YETI}.
-\newblock In {\em Engineering of Complex Computer Systems (ICECCS), 2010 15th
-  IEEE International Conference on}, pages 264--265. IEEE, 2010.
+\newblock In {\em 15th IEEE International Conference on Engineering of Complex
+  Computer Systems (ICECCS)}, pages 264--265. IEEE, 2010.
 
 \bibitem{oriol2010yeti}
 Manuel Oriol and Faheem Ullah.
 \newblock {YETI} on the cloud.
-\newblock In {\em Software Testing, Verification, and Validation Workshops
-  (ICSTW), 2010 Third International Conference on}, pages 434--437. IEEE, 2010.
+\newblock In {\em Third International Conference on Software Testing,
+  Verification, and Validation Workshops (ICSTW), 2010}, pages 434--437. IEEE,
+  2010.
 
 \bibitem{chen2010adaptive}
 Tsong~Yueh Chen, Fei-Ching Kuo, Robert~G Merkel, and TH~Tse.
@@ -604,21 +604,21 @@ Ilinca Ciupa, Alexander Pretschner, Manuel Oriol, Andreas Leitner, and Bertrand
 Manuel Oriol.
 \newblock Random testing: Evaluation of a law describing the number of faults
   found.
-\newblock In {\em Software Testing, Verification and Validation (ICST), 2012
-  IEEE Fifth International Conference on}, pages 201--210. IEEE, 2012.
+\newblock In {\em IEEE Fifth International Conference on Software Testing,
+  Verification and Validation (ICST)}, pages 201--210. IEEE, 2012.
 
 \bibitem{pacheco2007feedback}
 Carlos Pacheco, Shuvendu~K Lahiri, Michael~D Ernst, and Thomas Ball.
 \newblock Feedback-directed random test generation.
-\newblock In {\em Software Engineering, 2007. ICSE 2007. 29th International
-  Conference on}, pages 75--84. IEEE, 2007.
+\newblock In {\em 29th International Conference on Software Engineering, 2007.
+  ICSE 2007}, pages 75--84. IEEE, 2007.
 
 \bibitem{leitner2009effectiveness}
 Andreas Leitner, Alexander Pretschner, Stefan Mori, Bertrand Meyer, and Manuel
   Oriol.
 \newblock On the effectiveness of test extraction without overhead.
-\newblock In {\em Software Testing Verification and Validation, 2009. ICST'09.
-  International Conference on}, pages 416--425. IEEE, 2009.
+\newblock In {\em International Conference on Software Testing Verification and
+  Validation, 2009. ICST'09}, pages 416--425. IEEE, 2009.
 
 \bibitem{tempero2010qualitas}
 Ewan Tempero, Craig Anslow, Jens Dietrich, Ted Han, Jing Li, Markus Lumpe,
@@ -638,14 +638,14 @@ St{\'e}phane Ducasse, Manuel Oriol, and Alexandre Bergel.
 \bibitem{chen2004statistical}
 Tsong~Yueh Chen, Fei-Ching Kuo, and Robert Merkel.
 \newblock On the statistical properties of the f-measure.
-\newblock In {\em Quality Software, 2004. QSIC 2004. Proceedings. Fourth
-  International Conference on}, pages 146--153. IEEE, 2004.
+\newblock In {\em Proceedings. Fourth International Conference on Quality
+  Software}, pages 146--153. IEEE, 2004.
 
 \bibitem{chen1996expected}
 Tsong~Yueh Chen and Yuen~Tak Yu.
 \newblock On the expected number of failures detected by subdomain testing and
   random testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, 22(2):109--119,
+\newblock {\em IEEE Transactions on Software Engineering}, 22(2):109--119,
   1996.
 
 \bibitem{liu2012comparison}
@@ -658,8 +658,8 @@ Huai Liu, Fei-Ching Kuo, and Tsong~Yueh Chen.
 Ilinca Ciupa, Alexander Pretschner, Andreas Leitner, Manuel Oriol, and Bertrand
   Meyer.
 \newblock On the predictability of random tests for object-oriented software.
-\newblock In {\em Software Testing, Verification, and Validation, 2008 1st
-  International Conference on}, pages 72--81. IEEE, 2008.
+\newblock In {\em 1st International Conference on Software Testing,
+  Verification, and Validation}, pages 72--81. IEEE, 2008.
 
 \bibitem{chan2004good}
 Kwok~Ping Chan, Tsong~Yueh Chen, and Dave Towey.
@@ -688,18 +688,18 @@ Shin Yoo and Mark Harman.
 \bibitem{duran1984evaluation}
 Joe~W Duran and Simeon~C. Ntafos.
 \newblock An evaluation of random testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, (4):438--444, 1984.
+\newblock {\em IEEE Transactions on Software Engineering}, (4):438--444, 1984.
 
 \bibitem{gutjahr1999partition}
 Walter~J Gutjahr.
 \newblock Partition testing vs. random testing: The influence of uncertainty.
-\newblock {\em Software Engineering, IEEE Transactions on}, 25(5):661--674,
+\newblock {\em IEEE Transactions on Software Engineering}, 25(5):661--674,
   1999.
 
 \bibitem{arcuri2012random}
 Andrea Arcuri, Muhammad~Zohaib Iqbal, and Lionel Briand.
 \newblock Random testing: Theoretical results and practical implications.
-\newblock {\em Software Engineering, IEEE Transactions on}, 38(2):258--277,
+\newblock {\em IEEE Transactions on Software Engineering}, 38(2):258--277,
   2012.
 
 \bibitem{tempero2010empirical}
@@ -730,22 +730,21 @@ Johannes Mayer.
 
 \bibitem{gilbert2008jfreechart}
 D~Gilbert.
-\newblock The {JF}ree{C}hart class library version 1.0. 9: {D}eveloper�s
-  guide.
+\newblock The {JF}ree{C}hart class library version 1.0. 9: {D}evelopers guide.
 \newblock {\em Refinery Limited, Hertfordshire}, 48, 2008.
 
 \bibitem{podgurski2003automated}
 Andy Podgurski, David Leon, Patrick Francis, Wes Masri, Melinda Minch, Jiayang
   Sun, and Bin Wang.
 \newblock Automated support for classifying software failure reports.
-\newblock In {\em Software Engineering, 2003. Proceedings. 25th International
-  Conference on}, pages 465--475. IEEE, 2003.
+\newblock In {\em Proceedings of the 25th International Conference on Software
+  Engineering (ICSE-03)}, pages 465--475. IEEE, 2003.
 
 \bibitem{agrawal1995fault}
 Hiraral Agrawal, Joseph~R Horgan, Saul London, and W~Eric Wong.
 \newblock Fault localization using execution slices and dataflow tests.
-\newblock In {\em Software Reliability Engineering, 1995. Proceedings., Sixth
-  International Symposium on}, pages 143--151. IEEE, 1995.
+\newblock In {\em Proceedings of IEEE Software Reliability Engineering}, pages
+  143--151. IEEE, 1995.
 
 \bibitem{jones2002visualization}
 James~A Jones, Mary~Jean Harrold, and John Stasko.
@@ -780,7 +779,7 @@ Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos
 \bibitem{white1980domain}
 Lee~J White and Edward~I Cohen.
 \newblock A domain strategy for computer program testing.
-\newblock {\em Software Engineering, IEEE Transactions on}, (3):247--257, 1980.
+\newblock {\em IEEE Transactions on Software Engineering}, (3):247--257, 1980.
 
 \bibitem{finelli1991nasa}
 George~B Finelli.
@@ -791,8 +790,8 @@ George~B Finelli.
 Peter~G Bishop.
 \newblock The variation of software survival time for different operational
   input profiles (or why you can wait a long time for a big bug to fail).
-\newblock In {\em Fault-Tolerant Computing, 1993. FTCS-23. Digest of Papers.,
-  The Twenty-Third International Symposium on}, pages 98--107. IEEE, 1993.
+\newblock In {\em 23rd International Symposium on Fault-Tolerant Computing,
+  1993. FTCS-23}, pages 98--107. IEEE, 1993.
 
 \bibitem{ahmad2014adfd2}
 Mian~A Ahmad and Manuel Oriol.
