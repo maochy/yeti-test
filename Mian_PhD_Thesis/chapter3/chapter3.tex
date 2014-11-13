@@ -62,11 +62,11 @@ The strategy defines a specific way to generate test inputs. The strategy sectio
 \item {\textbf{YetiStrategy}} is an abstract class which provides an interface for every strategy in YETI.
 \item {\textbf{YetiRandomStrategy}} implements the random strategy and generates random values for testing. It allows the user to adjust null values probability and percentage of creating new objects for the test session. 
 \item {\textbf{YetiRandomPlusStrategy}} extends the random strategy by adding values to the list of interesting values. It allows the user to adjust the percentage of using interesting values in the test session.
-\item {\textbf{DSSRStrategy}} extends random$^+$ strategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
-\item {\textbf{ADFDStrategy}} extends random$^+$ strategy by adding the feature of graphical representation of failures and their domains in the set lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
-\item {\textbf{ADFDPlusStrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
-\item {\textbf{YetiRandomDecreasingStrategy}} extends the random$^+$ strategy in which the probability value is 100\% at the beginning and decreases to 0 at the end of the test.
-\item {\textbf{YetiRandomPeriodicStrategy}} extends the random$^+$ strategy in which the probability value decreases and increases at random within the given range.
+\item {\textbf{YetiDSSRStrategy}} extends random$^+$ strategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
+\item {\textbf{YetiADFDStrategy}} extends random$^+$ strategy by adding the feature of graphical representation of failures and their domains in the specified lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{YetiADFDPlusStrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
+\item {\textbf{YetiRandomDecreasingStrategy}} extends the random$^+$ strategy in which all the three probability values (null values, new objects, interesting values) are 100\% at the beginning and decreases to 0 at the end of the test.
+\item {\textbf{YetiRandomPeriodicStrategy}} extends the random$^+$ strategy in which all the three probability values (null values, new objects, interesting values) decreases and increases at random within the given range.
 \end{enumerate}
 
 

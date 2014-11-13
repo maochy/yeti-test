@@ -465,7 +465,7 @@ DSSR found the higher number of maximum unique failures (1118) than R (1075) and
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
 
 \subsection{Absolute Best in R, R$^+$ and DSSR Strategies}
-Based on our findings DSSR is at least as good as R and R$^+$ in almost all cases, it is significantly better than both R and R$^+$ in 12\% of the classes. Figure~\ref{fig:LineChart} presents the performance of DSSR in comparison with R and R$^+$ strategies in 17 classes showing significant difference. The blue line with a diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R$^+$ strategy. 
+Based on our findings DSSR is at least as good as R and R$^+$ in almost all cases, it is significantly better than both R and R$^+$ in 12\% (5/29) of the classes. Figure~\ref{fig:LineChart} presents the performance of DSSR in comparison with R and R$^+$ strategies in 16 classes showing significant difference. The blue line with a diamond symbol shows performance of DSSR over R and the red line with square symbols depicts the improvement of DSSR over R$^+$ strategy. 
 
 The improvement of DSSR over R and R$^+$ strategy is calculated by applying the formula (4.1) and (4.2) respectively. This is in accordance with the previous work of Chan et al.~\cite{chan2004good}.
 
@@ -552,9 +552,9 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \label{table:ttest}
 \end{table*}
 
-\subsection{Classes for which any of the Three Strategies Performs Better}
+\subsection{Classes For Which any of the Three Strategies Performs Better}
 
-T-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 5 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 3 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. Expressed in percentage, 72\%  of the classes showed statistically no significant difference whereas in 28\% of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R$^+$ strategy. 
+T-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 5 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 3 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. Expressed in percentage, 73\% (44/60) of the classes showed statistically no significant difference whereas in 27\% (16/60) of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in R$^+$ strategy. 
 
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
@@ -669,7 +669,7 @@ In our experiments, we selected projects from the Qualitas Corpus~\cite{tempero2
 
 
 \section{Summary}\label{sec:conc}
-The main goal of the present study was to develop a new random strategy which could find more failures in a lower number of test cases. We developed the ``DSSR strategy'' as an extension of R$^+$, based on the assumption that in a significant number of classes, failure domains are contiguous. The DSS feature of DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. The strategy was implemented in the random testing tool YETI to test 60 classes from Qualitas Corpus, 30 times each with each of the three strategies i.e. R, R$^+$ and DSSR. The newly developed DSSR strategy uncovered more unique failures than both R and R$^+$ strategies with a 5\% overhead. We found out that for 5 (8\%) classes DSSR was significantly better than both R and R$^+$, for 8 (13\%) classes DSSR performed significantly better than R, while in 3 (5\%) classes DSSR performed significantly better than R$^+$. In all other cases, performance of DSSR, R and R$^+$ showed no significant difference. Overall, DSSR produced encouraging results. 
+The main goal of the present study was to develop a new random strategy which could find more failures in a lower number of test cases. We developed the ``DSSR strategy'' as an extension of R$^+$, based on the assumption that in a significant number of classes, failure domains are contiguous. The DSS feature of DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. The strategy was implemented in the random testing tool YETI to test 60 classes from Qualitas Corpus, 30 times each with each of the three strategies i.e. R, R$^+$ and DSSR. The newly developed DSSR strategy uncovered more unique failures than both R and R$^+$ strategies with a 5\% overhead. We found out that for 5/29 (8\%) classes DSSR was significantly better than both R and R$^+$, for 8/29 (13\%) classes DSSR performed significantly better than R, while in 3/29 (5\%) classes DSSR performed significantly better than R$^+$. In all other cases, performance of DSSR, R and R$^+$ showed no significant difference. Overall, DSSR produced encouraging results. 
 
 \bigskip
 \begin{figure}[h]
