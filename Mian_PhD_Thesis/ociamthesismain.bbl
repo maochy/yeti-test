@@ -763,12 +763,24 @@ Mian~A Ahmad and Manuel Oriol.
 \newblock Automated discovery of failure domain.
 \newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
 
+\bibitem{ahmad2014adfd2}
+Mian~A Ahmad and Manuel Oriol.
+\newblock Adfd+: An automatic testing technique for finding and presenting
+  failure domains.
+\newblock {\em Lecture Notes on Software Engineering}, 02(4):331--336, 2014.
+
 \bibitem{xie2005symstra}
 Tao Xie, Darko Marinov, Wolfram Schulte, and David Notkin.
 \newblock Symstra: A framework for generating object-oriented unit tests using
   symbolic execution.
 \newblock In {\em Tools and Algorithms for the Construction and Analysis of
   Systems}, pages 365--381. Springer, 2005.
+
+\bibitem{ahmad2014evaluation}
+Mian~Asbat Ahmad and Manuel Oriol.
+\newblock Evaluation of adfd and adfd+ techniques.
+\newblock In {\em Seventh York Doctoral Symposium on Computer Science \&
+  Electronics}, page~47, 2014.
 
 \bibitem{ernst2007daikon}
 Michael~D Ernst, Jeff~H Perkins, Philip~J Guo, Stephen McCamant, Carlos
@@ -792,11 +804,5 @@ Peter~G Bishop.
   input profiles (or why you can wait a long time for a big bug to fail).
 \newblock In {\em 23rd International Symposium on Fault-Tolerant Computing,
   1993. FTCS-23}, pages 98--107. IEEE, 1993.
-
-\bibitem{ahmad2014adfd2}
-Mian~A Ahmad and Manuel Oriol.
-\newblock Adfd+: An automatic testing technique for finding and presenting
-  failure domains.
-\newblock {\em Lecture Notes on Software Engineering}, 02(4):331--336, 2014.
 
 \end{thebibliography}
