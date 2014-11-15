@@ -537,6 +537,7 @@ The discovery of higher number of strip failure domains may be attributed to the
 
 
 \begin{table*}[!H]
+\scriptsize
 \caption{Class with block failure domain}
 \centering
 \noindent\makebox[\textwidth]{
@@ -560,10 +561,11 @@ S\# & Class			& Invariants by ADFD$^+$       				& Invariants by ADFD     						
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Point Failure domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \begin{table*}[!H]
+\scriptsize
 \caption{Classes with point failure domains}
 \centering
 \noindent\makebox[\textwidth]{
-{\renewcommand{\arraystretch}{1}
+{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 
@@ -583,10 +585,11 @@ S\# & Class			& Invariants by ADFD$^+$        				& Invariants by ADFD     					
 \bigskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Mix Failure Domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{table*}[!H]
+\scriptsize
 \caption{Classes with mix failure domains}
 \centering
 \noindent\makebox[\textwidth]{
-{\renewcommand{\arraystretch}{1}
+{\renewcommand{\arraystretch}{1.5}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 \hline
 S\# & Class						& Invariants by ADFD$^+$     					& Invariants by ADFD	     										& Invariants by Manual												  	 \\
@@ -626,109 +629,168 @@ S\# & Class						& Invariants by ADFD$^+$     					& Invariants by ADFD	     			
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strip Failure Domain %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 {\scriptsize
-\begin{longtable}{|l|l|l|l|l|}
+\begin{longtable}{|l|l|l|l|l|l|l|}
 \caption{Classes with strip failure domains}\\
 \hline
-S\#  & Class						& Invariants by ADFD$^+$       		& Invariants by ADFD     			& Invariants by Manual	\\
+S\#  & Class						& FF & Invariants by ADFD$^+$       & FF & Invariants by ADFD     			& Invariants by Manual	\\
   \hline
   \endhead
-1	&LeadPipeInputStream 		& I $\ge$ 2147483140			& I $\ge$ 2147483143			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int			  		& I $\le$ max\_int					& I $\le$ max\_int				\\
-2	& BitSet				  		& I $\le$ -1, I $\ge$ -18,			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
-	&                                             & J $\le$ 7, J $\ge$ -12  			& J $\ge$ -503, J $\le$ 507		& J any value									\\ % When J != 0.	
-3	& ToolPallete			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -515			& I $\le$ -1, I $\ge$ min\_int	\\ 
-	&                                             & J $\le$ 3, J $\ge$ -15			& J $\ge$ -509, J $\le$ 501		& J any value			   						\\
-4	& IntMap			  		& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\
-5	& ExpressionFactory	  		& I $\le$ 13, I $\ge$ -7			& I $\ge$ -497, I $\le$ 513		& I $\ge$ min\_int 				\\ % For any value of I.
-	&                                             & 								&								& I $\le$ max\_int					\\
-6	& ArrayStack					& I $\ge$ 2147483636			& I $\ge$ 2147483142			& I \textgreater~698000000 					\\ 
-	&                                             & I $\le$ max\_int		 			& I $\le$ max\_int					& I $\le$ max\_int 					\\
-7	& BinaryHeap				& I $\le$ -2147483637			& I $\le$ -2147483142			& I $\le$ 0								 \\	
-	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int				\\
-8	& BondedFifoBuffer			& I $\le$ -2147483639 			& I $\ge$ -505, I $\le$ 0			& I $\le$ 0 								\\
-	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\	
-9	& FastArrayList				& I $\le$ -2147483641 			& I $\le$ -2147483644, 			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ min\_int					& I $\ge$ -2147483139			& I $\ge$ min\_int				\\	
-10	& StaticBucketMap			& I $\ge$ 2147483635			& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			   		\\	
-11	& PriorityBuffer				& I $\le$ -1, I $\ge$ -14			& I $\le$  -2147483142			& I $\le$ 0								\\
-	&                                             & 								& I $\ge$ -2147483647			& I $\ge$ min\_int			   	\\	 
-12	& GenericPermuting			& I $\le$ 0, I $\ge$ -18			& I $\ge$ -498, I $\le$ 0			& I $\le$ 0, I $\ge$ min\_int	\\ 	% point
-	&                                             & 								& I $\ge$ 2, I $\le$ 512			& I $\ge$ 2, I $\le$ max\_int	\\
-13	& LongArrayList				& I $\le$ -2147483640			& I $\le$ -1, I $\ge$ -510			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\
-14	& OpenIntDoubleHashMap	& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 
-15	& ByteVector					& I $\le$ -2147483639			& I $\le$ -2147483141			& I $\le$ -1								\\ 	% Strip
-	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int				\\	
-16	& ElementFactory				& I $\ge$ 2147483636			& I $\ge$ 2147483141			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int						\\	
-17	& IntIntMap					& I $\le$ -2147483638			& I $\le$ -2147483644			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ min\_int					& I $\ge$ -2147483139			& I $\ge$ min\_int 				\\	
-18	& ObjectIntMap				& I $\ge$ 2147483640			& I $\ge$ 2147483591			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\	
-19	& IntObjectMap				& I $\le$ -1, I $\ge$ -17			& I $\le$ -1, I $\ge$ -518			& I $\le$ -1, I $\ge$ min\_int\\ 
-20	& ArchiveUtils				& I $\ge$ 2147483641			& I $\ge$ -497					& I any value									\\ 
-	&							& I $\le$ max\_int					& I $\le$ 513					& 											\\ 
-	&                                             & J $\ge$ 2147483639			& J $\ge$ 2147483591			& J \textgreater~698000000 	   				\\
-	&                                             & J $\le$ max\_int					&  J $\le$ max\_int				&  	   										\\
-21	& BloomFilter32bit 			& I $\le$ -1, I $\ge$ -18			& I $\le$ -1, I $\ge$ -515			& I \textless -1 								\\ 
-	&                                             & J may be any value				& J may be any value				& J \textless -1 			   					\\	
-22	& IntKeyLongValueHashMap	& I $\ge$ 2147483635			& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\	
-23	& ObjectCacheHashMap		& I $\le$ -2147483641			& I $\ge$ -512, I $\le$ 0			& I $\le$ 0								\\ 
-	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int				\\	
-24	& ObjToIntMap				& I $\le$ -2147483636			& I $\le$ -2147483646			& I $\le$ -1								\\ 
-	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int				& I $\ge$ min\_int			   	\\	
-25	& PRTokeniser				& I $\le$ -2						& I $\le$ -2, I $\ge$ -509			& I $\le$ -2 , I $\ge$ min\_int\\ 
-	&                                             & I $\ge$ -18					& I $\ge$ 256, I $\le$ 501		& I $\ge$ 256 , I $\le$ max\_int\\
-26	& PdfAction					& I $\le$ -2147483640 			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0, I $\ge$ min\_int 	\\ 
-	&                                             & I $\ge$ min\_int					& I $\ge$ 6, I $\le$ 496			& I $\ge$ 6,  I $\le$ max\_int	\\	
-27	& PdfLiteral					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
-	&							&								&								&									\\
+1	& LeadPipe- 			 		&& I $\ge$ 2147483140			&& I $\ge$ 2147483143			& I \textgreater~698000000					\\ 
+	& InputStrea                            && I $\le$ max\_int			  	&& I $\le$ max\_int				& I $\le$ max\_int				\\ 
+	\hline
+2	& BitSet				  		& -8 & I $\le$ -1, I $\ge$ -18,	&-3 & I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&                                             &-2 & J $\le$ 7, J $\ge$ -12  		& 2 & J $\ge$ -503, J $\le$ 507		& J any value									\\ % When J != 0.	
+	\hline
+3	& ToolPallete			  		&-8 & I $\le$ -1, I $\ge$ -18		&-5 & I $\le$ -1, I $\ge$ -515			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&                                             &-5 & J $\le$ 3, J $\ge$ -15		&-4 & J $\ge$ -509, J $\le$ 501		& J any value			   						\\
+	\hline
+4	& IntMap			  		&-8 & I $\le$ -1, I $\ge$ -18		&-2 & I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\
+	\hline
+5	& Expression-		  		&3 & I $\le$ 13, I $\ge$ -7		& 3 & I $\ge$ -497, I $\le$ 513		& I $\ge$ min\_int 				\\ % For any value of I.
+	& Factory                                 &&	 							&&								& I $\le$ max\_int					\\
+	\hline
+6	& ArrayStack					&& I $\ge$ 2147483636			&& I $\ge$ 2147483142			& I \textgreater~698000000 					\\ 
+	&                                             && I $\le$ max\_int		 		&& I $\le$ max\_int					& I $\le$ max\_int 					\\
+	\hline
+7	& BinaryHeap				&& I $\le$ -2147483637			&& I $\le$ -2147483142			& I $\le$ 0								 \\	
+	&                                             && I $\ge$ min\_int				&& I $\ge$ min\_int				& I $\ge$ min\_int				\\
+	\hline
+8	& Bonded-					&& I $\le$ -2147483639 			&& I $\ge$ -505, I $\le$ 0			& I $\le$ 0 								\\
+	& FifoBuffer					&& I $\ge$ min\_int				&& 								& I $\ge$ min\_int				\\	
+	\hline
+9	& FastArrayList				&& I $\le$ -2147483641 			&& I $\le$ -2147483644, 			& I $\le$ -1								\\ 
+	&                                             && I $\ge$ min\_int				&& I $\ge$ -2147483139			& I $\ge$ min\_int				\\	
+	\hline
+10	& Static-						&& I $\ge$ 2147483635			&& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
+	& BucketMap                           && I $\le$ max\_int				&& I $\le$ max\_int					& I $\le$ max\_int			   		\\	
+	\hline
+11	& PriorityBuffer				&-4 & I $\le$ -1, I $\ge$ -14		&	& I $\le$  -2147483142			& I $\le$ 0								\\
+	&                                             && 								&& I $\ge$ -2147483647			& I $\ge$ min\_int			   	\\	 
+	\hline
+12	& Generic-					&-8 & I $\le$ 0, I $\ge$ -18		& 7 & I $\ge$ -498, I $\le$ 0			& I $\le$ 0, I $\ge$ min\_int	\\ 	% point
+	& Permuting                            && 								&& I $\ge$ 2, I $\le$ 512			& I $\ge$ 2, I $\le$ max\_int	\\
+	\hline
+13	& LongArrayList				&& I $\le$ -2147483640			& -10 & I $\le$ -1, I $\ge$ -510			& I $\le$ -1								\\ 
+	&                                             && I $\ge$ min\_int				&& 								& I $\ge$ min\_int				\\
+	\hline
+14	& OpenIntDouble- 			&-7 & I $\le$ -1, I $\ge$ -17		&-4 & I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	& HashMap					&& 								&& 								& 	\\ 
+	\hline
+15	& ByteVector					&& I $\le$ -2147483639			&& I $\le$ -2147483141			& I $\le$ -1								\\ 	% Strip
+	&                                             && I $\ge$ min\_int				&& I $\ge$ min\_int				& I $\ge$ min\_int				\\	
+	\hline
+16	& ElementFactory				&& I $\ge$ 2147483636			&& I $\ge$ 2147483141			& I \textgreater~698000000					\\ 
+	&                                             && I $\le$ max\_int				&& I $\le$ max\_int					& I $\le$ max\_int						\\	
+	\hline
+17	& IntIntMap					&& I $\le$ -2147483638			&& I $\le$ -2147483644			& I $\le$ -1								\\ 
+	&                                             && I $\ge$ min\_int				&& I $\ge$ -2147483139			& I $\ge$ min\_int 				\\	
+	\hline
+18	& ObjectIntMap				&& I $\ge$ 2147483640			&& I $\ge$ 2147483591			& I \textgreater~698000000					\\ 
+	&                                             && I $\le$ max\_int				&& I $\le$ max\_int					& I $\le$ max\_int			\\	
+	\hline
+19	& IntObjectMap				&-7 & I $\le$ -1, I $\ge$ -17		&-10 & I $\le$ -1, I $\ge$ -518			& I $\le$ -1, I $\ge$ min\_int\\ 
+	\hline
+20	& ArchiveUtils				&& I $\ge$ 2147483641			& 7 & I $\ge$ -497					& I any value									\\ 
+	&							&& I $\le$ max\_int				&& I $\le$ 513					& 											\\ 
+	&                                             && J $\ge$ 2147483639			&& J $\ge$ 2147483591			& J \textgreater~698000000 	   				\\
+	&                                             && J $\le$ max\_int				&& J $\le$ max\_int				&  	   										\\
+	\hline
+21	& Bloom- 					&-10 & I $\le$ -1, I $\ge$ -18	& -5 & I $\le$ -1, I $\ge$ -515			& I \textless -1 								\\ 
+	& Filter32bit                            && J may be any value				&& J may be any value				& J \textless -1 			   					\\	
+	\hline
+22	& IntKeyLong-				&& I $\ge$ 2147483635			&& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
+	& ValueHashMap                     && I $\le$ max\_int				&& I $\le$ max\_int					& I $\le$ max\_int			\\	
+	\hline
+23	& ObjectCache-				&& I $\le$ -2147483641			& -7 & I $\ge$ -512, I $\le$ 0			& I $\le$ 0								\\ 
+	& HashMap                              && I $\ge$ min\_int				&& 								& I $\ge$ min\_int				\\	
+	\hline
+24	& ObjToIntMap				&& I $\le$ -2147483636			&& I $\le$ -2147483646			& I $\le$ -1								\\ 
+	&                                             && I $\ge$ min\_int				&& I $\ge$ min\_int				& I $\ge$ min\_int			   	\\	
+	\hline
+25	& PRTokeniser				&-10& I $\le$ -2, I $\ge$ -18		&-4 & I $\le$ -2, I $\ge$ -509			& I $\le$ -2 , I $\ge$ min\_int\\ 
+	&                                             && 								& & I $\ge$ 256, I $\le$ 501		& I $\ge$ 256 , I $\le$ max\_int\\
+
 \hline
-28	& PhysicalEnvironment		& I $\le$ -1, I $\ge$ -11			& I $\le$ -2147483646			& I $\le$ -1, 							\\ 
-	& 							& 								& I $\ge$ min\_int	 			& I $\ge$ min\_int				\\ 
-29	& IntegerArray				& I $\ge$ 2147483636			& I $\ge$ 2147483587			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					&  I $\le$ max\_int				\\	
-30	& AttributeMap				& I $\le$ -2147483639			& I $\le$ 0, I $\ge$ -514			& I $\le$ 0								\\ 
-	&                                             & I $\ge$ min\_int					& 								& I $\ge$ min\_int 			   	\\	
-31	& ByteList					& I $\le$ -1, I $\ge$ -14			& I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
-32	& WeakIdentityHashMap		& I $\ge$ 2147483636			& I $\ge$ 2147483140			& I \textgreater 698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int					\\
-33	& AmmoType				& I $\le$ -1						& I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 			
-	&                                             & I $\ge$ -17					& I $\ge$ 93, I $\le$ 496			& I $\ge$ 93, 	I $\le$ max\_int	\\
-34	& QMC						& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
-	&                                             & J $\le$ -1, J $\ge$ -15			& J $\le$ 499, J $\ge$ -511		& J any value			 		  				\\	
-35	& BenchmarkFramework		& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
-36	& IntArray					& I $\le$ -1, I $\ge$ -16			& I $\le$ -2147483650			& I $\le$ -1								\\ 
-	&							&								& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
-37	& TDoubleStack				& I $\le$ -1, I $\ge$ -13			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
-38	& TIntStack					& I $\le$ -1, I $\ge$ -12			& I $\le$ min\_int				 	& I $\le$ -1 							\\ 
-	&							&								& I $\ge$ -2147483144			& I $\ge$ min\_int				\\
-39	& TLongArrayList				& I $\le$ -1, I $\ge$ -16			& I $\le$ min\_int 			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
-40	& AlgVector					& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
-41	& BinarySparseInstance		& I $\le$ -1, I $\ge$ -15			& I $\le$ -1, I $\ge$ -506			& I $\le$ -1, I $\ge$ min\_int	\\ 
-42	& SoftReferenceSymbolTable	& I $\ge$ 2147483635			& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int			\\
-43	& HTMLEntities				& I $\le$- 1						& I $\ge$ -504, I $\le$ -405,		& I $\le$ -809, I $\le$ -607, I $\ge$ -605,    		\\ 
-	&                         			& I $\ge$ -17					& I $\ge$ -403, I $\le$ -304, 		& I $\le$ -506, I $\ge$ -504, I $\le$ -405,		 \\	
-	&                         			& 								& I $\ge$ -302, I $\le$ -203,		& I $\ge$ -403, I $\le$ -304, I $\ge$ -302,		 \\	
-	&                        				& 								& I $\ge$ -201, I $\le$ -102, 		& I $\le$ -203, I $\ge$ -201, I $\le$ -102,		 \\	
-	&                         			& 								& I $\ge$ -100, I $\le$ -1			& I $\ge$ -100, I $\le$ -1				 			 \\	
-44	& SymbolHash				& I $\le$ -1,  I $\ge$ -16			& I $\le$ -2147483592			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ min\_int				& I $\ge$ min\_int				\\
-45	& SynchronizedSymbolTable	& I $\le$ -2147483140			& I $\le$ -2147483592,			& I $\le$ -1, I $\ge$ min\_int	\\ 
-	&                                             & I $\ge$ min\_int					& I $\ge$ min\_int	 			&  			   								\\
-46	& XMLChar					& I $\le$ -1, I $\ge$ -12			& I $\le$ -1, I $\ge$ -510			& I $\le$ -1, I $\ge$ min\_int	\\
-47	& XMLGrammarPoolImpl		& I $\le$ -1, I $\ge$ -13			& I $\le$ -2147483137 			& I $\le$ -1, 							\\ 
-	&							&								& I $\ge$ min\_int				& I $\ge$ min\_int				\\
-48	& XML11Char				& I $\le$ -1, I $\ge$ -16			& I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\ 
-49	& AttributeList				& I $\ge$ 2147483635			& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
-	&                                             & I $\le$ max\_int					& I $\le$ max\_int					& I $\le$ max\_int				\\
-50	& ClassLoaderResolver		&  I $\ge$ 2,						& I $\ge$ 500, I $\le$ -2			& I $\le$ -2, I \textgreater min\_int  	\\ 
-	& \label{table:stripDomains7}  &  I $\le$ 18						& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ max\_int	\\ \hline
-	
+
+
+
+26	& PdfAction					&& I $\le$ -2147483640 			&-6 & I $\le$ 0, I $\ge$ -514			& I $\le$ 0, I $\ge$ min\_int 	\\ 
+	&                                             && I $\ge$ min\_int				&& I $\ge$ 6, I $\le$ 496			& I $\ge$ 6,  I $\le$ max\_int	\\	
+	\hline
+27	& PdfLiteral					&-4& I $\le$ -1, I $\ge$ -14		&& I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&							&&								&&								&									\\
+
+
+
+
+	\hline
+28	& Physical-					&-1 & I $\le$ -1, I $\ge$ -11		&	& I $\le$ -2147483646			& I $\le$ -1, 							\\ 
+	& Environment				&& 								&& I $\ge$ min\_int	 			& I $\ge$ min\_int				\\ 
+	\hline
+29	& IntegerArray				&& I $\ge$ 2147483636			&& I $\ge$ 2147483587			& I \textgreater~698000000					\\ 
+	&                                             && I $\le$ max\_int				&& I $\le$ max\_int				&  I $\le$ max\_int				\\	
+	\hline
+30	& AttributeMap				&& I $\le$ -2147483639			&-9 & I $\le$ 0, I $\ge$ -514			& I $\le$ 0								\\ 
+	&                                             && I $\ge$ min\_int				&& 								& I $\ge$ min\_int 			   	\\	
+	\hline
+31	& ByteList					&-4 & I $\le$ -1, I $\ge$ -14		&-3 & I $\le$ -1, I $\ge$ -513			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	\hline
+32	& WeakIdentity-				&& I $\ge$ 2147483636			&& I $\ge$ 2147483140			& I \textgreater 698000000					\\ 
+	& HashMap                              && I $\le$ max\_int				&& I $\le$ max\_int				& I $\le$ max\_int					\\
+	\hline
+33	& AmmoType				&-7 & I $\le$ -1, I $\ge$ -17		&-9 & I $\le$ -1, I $\ge$ -514			& I $\le$ -1, I $\ge$ min\_int	\\ 			
+	&                                             && 								&& I $\ge$ 93, I $\le$ 496			& I $\ge$ 93, 	I $\le$ max\_int	\\
+	\hline
+34	& QMC						&-2 & I $\le$ -1, I $\ge$ -12		&-3 & I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&                                             &-5 & J $\le$ -1, J $\ge$ -15		&-6 & J $\le$ 499, J $\ge$ -511		& J any value			 		  				\\	
+	\hline
+35	& Benchmark-				&-3 & I $\le$ -1, I $\ge$ -13		&-3 & I $\le$ -1, I $\ge$ -508			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	&Framework					&&								&&								&						\\
+	\hline
+36	& IntArray					&-6 & I $\le$ -1, I $\ge$ -16		&& I $\le$ -2147483650			& I $\le$ -1								\\ 
+	&							&&								&& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
+	\hline
+37	& TDoubleStack				&-3 & I $\le$ -1, I $\ge$ -13		&-6 & I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	\hline
+38	& TIntStack					&-2 & I $\le$ -1, I $\ge$ -12		&	& I $\le$ min\_int				& I $\le$ -1 							\\ 
+	&							&&								&& I $\ge$ -2147483144			& I $\ge$ min\_int				\\
+	\hline
+39	& TLongArrayList				&-6 & I $\le$ -1, I $\ge$ -16		&	& I $\le$ min\_int 				& I $\le$ -1, 							\\ 
+	&							&&								&& I $\ge$ -2147483141			& I $\ge$ min\_int				\\
+	\hline
+40	& AlgVector					&-5 & I $\le$ -1, I $\ge$ -15		&-6 & I $\le$ -1, I $\ge$ -511			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	\hline
+41	& BinarySparse-				&-5 & I $\le$ -1, I $\ge$ -15		&-1 & I $\le$ -1, I $\ge$ -506			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	& Instance					&&								&&								&				\\
+	\hline
+42	& SoftReference-				&& I $\ge$ 2147483635			&& I $\ge$ 2147483140			& I \textgreater~698000000					\\ 
+	& SymbolTable                         && I $\le$ max\_int				&& I $\le$ max\_int					& I $\le$ max\_int			\\
+	\hline
+43	& HTMLEntities				&-7 & I $\le$- 1, I $\ge$ -17		&& I $\ge$ -504, I $\le$ -405,		& I $\le$ -809, I $\le$ -607, I $\ge$ -605,    		\\ 
+	&                         			&& 								&& I $\ge$ -403, I $\le$ -304, 		& I $\le$ -506, I $\ge$ -504, I $\le$ -405,		 \\	
+	&                         			&& 								&& I $\ge$ -302, I $\le$ -203,		& I $\ge$ -403, I $\le$ -304, I $\ge$ -302,		 \\	
+	&                        				&& 								&& I $\ge$ -201, I $\le$ -102, 		& I $\le$ -203, I $\ge$ -201, I $\le$ -102,		 \\	
+	&                         			&& 								&& I $\ge$ -100, I $\le$ -1			& I $\ge$ -100, I $\le$ -1				 			 \\	
+	\hline
+44	& SymbolHash				&-6 & I $\le$ -1,  I $\ge$ -16		&	& I $\le$ -2147483592			& I $\le$ -1, 							\\ 
+	&							&&								&& I $\ge$ min\_int				& I $\ge$ min\_int				\\
+	\hline
+45	& Synchronized-				&& I $\le$ -2147483140			&& I $\le$ -2147483592,			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	& SymbolTable                       	&& I $\ge$ min\_int				&& I $\ge$ min\_int	 			&  			   								\\
+	\hline
+46	& XMLChar					&-2 & I $\le$ -1, I $\ge$ -12		&-5 & I $\le$ -1, I $\ge$ -510			& I $\le$ -1, I $\ge$ min\_int	\\
+	\hline
+47	& XMLGrammar- 				&-3 & I $\le$ -1, I $\ge$ -13		&	& I $\le$ -2147483137 			& I $\le$ -1, 							\\ 
+	& PoolImpl					&&								&& I $\ge$ min\_int				& I $\ge$ min\_int				\\
+	\hline
+48	& XML11Char				&-6 & I $\le$ -1, I $\ge$ -16		&-7 & I $\le$ -1, I $\ge$ -512			& I $\le$ -1, I $\ge$ min\_int	\\ 
+	\hline
+49	& AttributeList				&& I $\ge$ 2147483635			&& I $\ge$ 2147483590			& I \textgreater~698000000					\\ 
+	&                                             && I $\le$ max\_int				&& I $\le$ max\_int				& I $\le$ max\_int				\\
+	\hline
+50	& ClassLoader-				&8& I $\ge$ 2, I $\le$ 18			&-5 & I $\ge$ 500, I $\le$ -2			& I $\le$ -2, I \textgreater min\_int  	\\ 
+	& Resolver					&& 								&	& I $\ge$ 2, I $\le$ 505			& I $\ge$ 2, I $\le$ max\_int	\\ 
+	& \label{table:stripDomains7}	&&								&&								&		\\\hline
 \end{longtable}
 }
 
