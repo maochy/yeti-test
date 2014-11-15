@@ -153,16 +153,15 @@ Figure~\ref{fig:daikon} presents the architecture of Daikon. To generate invaria
 \bigskip
 \begin{figure}[H]
 \centering
-\includegraphics[width= 15.5cm,height=5.5cm]{chapter7/daikon.png}
-%\includegraphics[width= 8.5cm,height=7cm]{adfdPlus1.png}
-%\includegraphics[width= 8.5cm,height=7cm]{adfdPlus2.png}
+%\includegraphics[width= 15.5cm,height=5.5cm]{chapter7/daikon.png}
+\includegraphics[width= 15.5cm,height=5.5cm]{chapter7/daikonWorking1.png}
 \bigskip
 \caption{Architecture of Daikon~\cite{ernst2001dynamically}}
 \label{fig:daikon}
 \end{figure}
 \bigskip
 
-\subsection{Types of invariants detected by Daikon}
+\subsection{Types of Invariants Detected by Daikon}
 Daikon is usually used to detect common types of likely invariants. However, it can be used to search for more specific invariants if it is tuned for the purpose by the user. The most common types of invariants detected by Daikon are quoted below ~\cite{ernst2001dynamically}. 
 \begin{enumerate}
 \item Invariants over any variable: 
@@ -538,7 +537,7 @@ The discovery of higher number of strip failure domains may be attributed to the
 
 
 \begin{table*}[!H]
-\caption{Classes with block failure domains}
+\caption{Class with block failure domain}
 \centering
 \noindent\makebox[\textwidth]{
 {\renewcommand{\arraystretch}{1.5}
@@ -571,7 +570,7 @@ S\# & Class			& Invariants by ADFD$^+$       				& Invariants by ADFD     						
 S\# & Class			& Invariants by ADFD$^+$        				& Invariants by ADFD     								& Invariants by Manual			\\ 
 \hline
 
-1	& Assert			&  	I != J								& I != J															&  I != J				\\ 			
+1	& Assert			&  	I != J								& I != J															&  I != J				\\ 	\hline		
 2	& Assert			&	I $\le$ 0, I $\ge$ 20					& I $\le$  -2147483142, I $\ge$ min\_int							&  I any value		  \\
 	&                         & 	J = 0								& J = 0								  							&  J = 0 				  \\
 
@@ -599,13 +598,16 @@ S\# & Class						& Invariants by ADFD$^+$     					& Invariants by ADFD	     			
 	&                         			& 										& I $\ge$ -100, I $\le$ -1							&  I $\le$ -304, I $\ge$ -302, I $\le$ -203,				  \\
 	&                        				& 										& J = 0											&  I $\ge$ -201, I $\le$ -102, I $\ge$ -100 				  \\
 	&                         			& 										& 												&   I $\le$ -1, 											  \\
-	&                         			& 										& 												&   J = 0  												  \\
+	&                         			& 										& 												&   J = 0  												  \\ \hline
+	
 2	& Variant					& I $\ge$0, I $\le$ 12					& I $\ge$ 0, I $\le$ 14, I $\ge$ 16 				& I $\ge$ 0, I $\le$ 14, I $\ge$ 16						  	  \\ 		
-	&                                             & 										& I $\le$ 31, I $\ge$ 64, I $\le$ 72				& I $\le$ 31, I $\ge$ 64, I $\le$ 72						   \\
+	&                                             & 										& I $\le$ 31, I $\ge$ 64, I $\le$ 72				& I $\le$ 31, I $\ge$ 64, I $\le$ 72						   \\ \hline
+	
 3	& Token						& I $\le$ -2147483641					& I $\le$  -2, I $\ge$ -510						& I $\le$ -2, I \textgreater min\_int   					   \\ % Point and Strip 
-	&                               			& I $\ge$ min\_int					& I = \{73, 156\}									& I = 73, 156, 						   					    \\	
-	&                               			& 										& I $\ge$ 162, I $\le$ 500						& I $\ge$ 162, I $\le$ max\_int						     \\	
-4	& AnnotationValue			& I $\le$ 85, I $\ge$ 92, 					& I $\le$63, I = \{65, 69, 71, 72\}					& I $\le$ 63, I = {65, 69, 71, 72}							     \\
+	&                               			& I $\ge$ min\_int						& I = \{73, 156\}									& I = \{73, 156\} 						   					    \\	
+	&                               			& 										& I $\ge$ 162, I $\le$ 500						& I $\ge$ 162, I $\le$ max\_int						     \\	\hline
+	
+4	& AnnotationValue			& I $\le$ 85, I $\ge$ 92, 					& I $\le$63, I = \{65, 69, 71, 72\}					& I $\le$ 63, I = \{65, 69, 71, 72\}							     \\
 	&                              			& I $\ge$ 98, I $\le$ 100, 				& I $\ge$ 75, I $\le$ 82, I $\ge$ 84				& I $\ge$ 75, I $\le$ 82, I $\ge$ 84 					    		 \\	
 	&                               			& I $\ge$ 102, I $\le$ 104				& I $\le$ 89, I $\ge$ 92, I $\le$ 98				& I $\le$ 89, I $\ge$ 92, I $\le$ 98 							\\	
 	&                               			& 										& I = 100, I $\ge$ 102, I $\le$ 114				& I = 100, I $\ge$ 102, I $\le$ 114 							\\	
