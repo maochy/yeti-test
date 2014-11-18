@@ -4,9 +4,6 @@
 
 %This paper presents Automated Discovery of Failure Domain+ (ADFD+), an upgraded version of ADFD technique with respect to algorithm and graphical presentation of failure domains. The new algorithm used in ADFD+ searches for failure domain around the failure in a given radius as against ADFD which limits the search between lower and upper bounds. This results in consumption of lower number of test cases for detecting failure domain. The output has been improved in ADFD+ to provide labelled graphs for depicting the results in easily understandable user friendly form. ADFD+ is compared with Randoop to find the comparative performance of the two techniques. The results indicate that ADFD+ is a promising technique for finding failure and failure domain efficiently and effectively. In comparison with Randoop, its efficiency is evident by taking two orders of magnitude less time and its effectiveness is shown by taking 50\% or less number of test cases to discover failure domains. ADFD+ has the added advantage of presenting the output in graphical form showing point, block and strip domains visually as against Randoop which lacks graphical user interface.
 
-
-
-
 %This paper presents Automated Discovery of Failure Domain+ (ADFD+), an improvement on our previously developed Automated Discovery of Failure Domain (ADFD) technique.  ADFD+ is a random testing technique which after identifying a failure searches its surrounding to find its domain within the set range. The result obtained is graphically presented. To find the effectiveness of our Technique, several error-seeded one and two-dimensional numerical programs fwith point, block and strip failure domain were evaluated independently for 30 times by both ADFD+ and Randoop. Results indicated that ADFD+ can identify failure and failure-domain sufficiently quick and in fewer number of test cases as compared to Randoop. Additionally ADFD+ presents the failure and failure domains in a graphical form.
 %\end{abstract}
 
@@ -241,7 +238,7 @@ Two &x=2, y=2			&	x = 5, y = 2		&	x = 7,~~y = 0	\\
 
 
 
-\subsection{Research questions} \label{sec:questions}
+\subsection{Research Questions} \label{sec:questions}
 The following research questions have been addressed in the study for evaluating ADFD$^+$ technique with respect to efficiency, effectiveness and presentation of failure domains:
 \begin{enumerate}
 %\item \textbf{Efficiency:} How efficient is ADFD+, compared to Randoop, across different failure domains?
@@ -280,7 +277,7 @@ The following research questions have been addressed in the study for evaluating
 
 
 \subsection{Randoop} \label{sec:randoop}
-Random tester for object-oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .Net binaries. It takes as input a set of classes, time limit or number of tests and optionally a set of configuration files to assist testing. Randoop checks for assertion violations, access violations and un-expected program termination in a given class. Its output is a suite of JUnit for Java and NUnit for .Net program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting public methods from the class under test. Arguments for these methods are selected from the pre-defined pool in case of primitive types and as a sequence of null values in case of reference type. Randoop uses the feedback mechanism to filter out duplicate test cases. For more details about Randoop, please see Section~\ref{sec:Randoop}.
+Random tester for object-oriented programs (Randoop) is a fully automatic tool, capable of testing Java classes and .NET binaries. It takes as input a set of classes, time limit or number of tests and optionally a set of configuration files to assist testing. Randoop checks for assertion violations, access violations and un-expected program termination in a given class. Its output is a suite of JUnit for Java and NUnit for .NET program. Each unit test in a test suite is a sequence of method calls (hereafter referred as sequence). Randoop builds the sequence incrementally by randomly selecting public methods from the class under test. Arguments for these methods are selected from the pre-defined pool in case of primitive types and as a sequence of null values in case of reference type. Randoop uses the feedback mechanism to filter out duplicate test cases. For more details about Randoop, please see Section~\ref{sec:Randoop}.
 
 
 %The code for the programs under test is given in Appendix~\ref{} while the test details are presented in Table~\ref{table:Results}. 
@@ -350,7 +347,7 @@ Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD$^+$ and 
   \caption{Test cases taken to find failure domains}
   \label{fig:testcases6}
 \end{figure}
-\subsection{Failure Domains}
+\subsection{Presentation of Failure Domains}
  The comparative results of the two tools with respect to presentation of the identified failure domains reveal better performance of ADFD$^+$ by providing the benefit of presenting the failure domains in graphical form as shown in Figure \ref{fig:failureDomainsOneDimension6} and \ref{fig:failureDomainsTwoDimension6}. The user can also enable or disable the option of showing the failing values on the graph. In comparison, Randoop lacks the ability of graphical presentation and the option of showing the failure domains separately. It provides the results scattered across textual files. 
  
  
@@ -526,7 +523,7 @@ The study faces threats to external and internal validity. The external threats 
 
 \section{Related Work}
 The increase in complexity of programs poses new challenges to researchers for finding more efficient and effective ways of software testing with user-friendly easy to understand test results. Adaptive Random Testing \cite{chen2005adaptive}, Proportional random testing \cite{chan1996proportional} and feedback-directed random testing \cite{pacheco2007randoop} are some of the prominent upgraded versions of random testing with better performance. Automated random testing is simple to implement and capable of finding hitherto bugs in complex programs \cite{csallner2004jcrasher, pacheco2005eclat}. %ADFD+ is an upgraded version of ADFD technique \cite{ahmad2013adfd} to find a failure and using it can effectively and efficiently detect the whole failure domain.
-ADFD$^+$ is a promising technique for finding failures and failure domains efficiently and effectively with the added advantage of presenting the output in graphical form showing point, block and strip domains.
+ADFD$^+$ is a promising technique for finding failures and failure domains efficiently and effectively with the added advantage of presenting the output in graphical form showing point, block and strip failure domains.
 
 
 Some previous research studies have reported work on Identification, classification and visualisation of pass and fail domains in the past \cite{podgurski2003automated, agrawal1995fault, jones2002visualization}. This includes Xslice~\cite{agrawal1995fault} is used to differentiate the execution slices of passing and failing part of the test in a visual form. Another tool called Tarantula uses colour coding to track the statements of a program during and after the execution of the test suite~\cite{jones2002visualization}. Hierarchical Multi Dimension Scaling (HMDS) describes a semi-automated procedure of classifying and plotting the faults \cite{podgurski2003automated}. A serious limitation of the above-mentioned tools is that they are not fully automated and require human intervention during execution. Moreover, these tools need the requirement of existing test cases to work on whereas ADFD$^+$ strategy generates test cases, discovers failures, identifies pass and fail domains and visualises the results in a graphical form operating in fully automated manner. 
