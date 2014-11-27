@@ -105,11 +105,11 @@
 
 %{\large \vspace*{40mm} {\logo \par} \vspace*{25mm}}
 
-    {{\vspace*{35mm}{\Large Doctor of Philosophy}} \par}
+    {{\vspace*{35mm}{\Large PhD}} \par}
 {\vspace*{5.5ex}
     {{{\Large \@college}} \par}
 \vspace*{0.5ex}
-    {{\Large The University of York }\par}
+    {{ }\par}
 
 \vspace*{15mm}
     {{\Large \@degreedate}}

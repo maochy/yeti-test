@@ -84,10 +84,14 @@ showstringspaces=false}
         Automated Random Testing}   %note \\[1ex] is a line break in the title
 
 \author{Mian Asbat Ahmad}             %your name
-\college{Department of Computer Science}  %your college
+
+\degree{}     %the degree
+
+\college{University of York\\[1ex]
+		Computer Science}  %your college
 
 %\renewcommand{\submittedtext}{change the default text here if needed}
-\degree{ }     %the degree
+
 \degreedate{September 2014}         %the degree date
 
 %end the preamble and start the document
@@ -123,9 +127,9 @@ showstringspaces=false}
 
 % I have commented the following line to start numbering from the first page.
 % The following end tag is also commented. Mian
-%\begin{romanpages}          % start roman page numbering
+\begin{romanpages}          % start roman page numbering
 
-\clearpage\thispagestyle{empty}\null\newpage
+%\clearpage\thispagestyle{empty}\null\newpage
 \include{abstract/abstract}          % include the abstract
 %\doublespacing
 %\begin{spacing}{1.5}
@@ -146,7 +150,7 @@ showstringspaces=false}
 \include{declaration/declaration}
 
 
-%\end{romanpages}            % end roman page numbering
+\end{romanpages}            % end roman page numbering
 
 
 
@@ -156,7 +160,7 @@ showstringspaces=false}
 
 
 
-\clearpage\thispagestyle{empty}\null\newpage
+%\clearpage\thispagestyle{empty}\null\newpage
 \include{chapter1/chapter1}
 \include{chapter2/chapter2}
 \include{chapter3/chapter3}
