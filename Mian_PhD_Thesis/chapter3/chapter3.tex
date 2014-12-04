@@ -16,7 +16,7 @@
 %In this chapter we describe York Extensible Testing Infrastructure (YETI). YETI is used as a platform for implementation of all the strategies developed in the current research study. 
 
 \section{Overview}
-The York Extensible Testing Infrastructure (YETI) is an automated random testing tool developed in Java. It is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes the program byte-code as input and executes it with randomly generated syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent features is Graphical User Interface (GUI), which makes YETI user-friendly and provides an option to change the testing parameters in real time. It can also distribute large testing tasks in the cloud for parallel execution~\cite{oriol2010yeti}. The main motivation for developing YETI is provision of a testing workbench to testers and developers for research. YETI by design is easily extendable to facilitate researchers for incorporating new languages and testing strategies. YETI is an open-source project, and its latest version can be downloaded freely from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
+The York Extensible Testing Infrastructure (YETI) is an automated random testing tool developed in Java. It is capable of testing programs written in Java, JML and .NET languages~\cite{oriol2010testing}. YETI takes the program byte-code as input and executes it with randomly generated syntactically-correct inputs to find a failure. It runs at a high level of performance with $10^6$ calls per minute on Java code. One of its prominent features is the Graphical User Interface (GUI), which makes YETI user-friendly and provides an option to change the testing parameters in real time. It can also distribute large testing tasks in the cloud for parallel execution~\cite{oriol2010yeti}. The main motivation for developing YETI is provision of a testing workbench to testers and developers for research. YETI by design is easily extendable to facilitate researchers incorporate new languages and testing strategies. YETI is an open-source project, and its latest version can be downloaded freely from \url{www.yetitest.org}. Figure \ref{fig:yetiOverview} briefly presents the working process of YETI. 
 
 \begin{figure}[h]
 	\centering
@@ -51,7 +51,7 @@ The most essential classes included in the YETI core infrastructure are:
 \item {\textbf{YetiLog}} prints debugging and testing logs. 
 \item {\textbf{YetiLogProcessor}} is an interface for processing testing logs.
 \item {\textbf{YetiEngine}} binds~\verb+YetiStrategy+ and~\verb+YetiTestManager+ together and carries-out the actual testing process.
-\item {\textbf{YetiTestManager}} makes the actual calls based on the~\verb+YetiEngine+ configuration, activates the~\verb+YetiStrategy+ to generate test data and select the routines.
+\item {\textbf{YetiTestManager}} makes the actual calls based on the~\verb+YetiEngine+ configuration, and activates the~\verb+YetiStrategy+ to generate test data and select the routines.
 \item {\textbf{YetiProgrammingLanguageProperties}} is a place-holder for all language-related instances.
 \item {\textbf{YetiInitializer}} is an abstract class for test initialization.
 \end{enumerate}
@@ -62,11 +62,11 @@ The strategy defines a specific way to generate test inputs. The strategy sectio
 \item {\textbf{YetiStrategy}} is an abstract class which provides an interface for every strategy in YETI.
 \item {\textbf{YetiRandomStrategy}} implements the random strategy and generates random values for testing. It allows the user to adjust null values probability and percentage of creating new objects for the test session. 
 \item {\textbf{YetiRandomPlusStrategy}} extends the random strategy by adding values to the list of interesting values. It allows the user to adjust the percentage of using interesting values in the test session.
-\item {\textbf{YetiDSSRStrategy}} extends random$^+$ strategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
-\item {\textbf{YetiADFDStrategy}} extends random$^+$ strategy by adding the feature of graphical representation of failures and their domains in the specified lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{YetiDSSRStrategy}} extends YetiRandomPlusStrategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
+\item {\textbf{YetiADFDStrategy}} extends YetiRandomPlusStrategy by adding the feature of graphical representation of failures and their domains in the specified lower and upper bound. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
 \item {\textbf{YetiADFDPlusStrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
-\item {\textbf{YetiRandomDecreasingStrategy}} extends the random$^+$ strategy in which all the three probability values (null values, new objects, interesting values) are 100\% at the beginning and decreases to 0 at the end of the test.
-\item {\textbf{YetiRandomPeriodicStrategy}} extends the random$^+$ strategy in which all the three probability values (null values, new objects, interesting values) decreases and increases at random within the given range.
+\item {\textbf{YetiRandomDecreasingStrategy}} extends the YetiRandomPlusStrategy in which all the three probability values (null values, new objects, interesting values) are 100\% at the beginning and decreases to 0 at the end of the test.
+\item {\textbf{YetiRandomPeriodicStrategy}} extends the YetiRandomPlusStrategy in which all the three probability values (null values, new objects, interesting values) decreases and increases at random within the given range.
 \end{enumerate}
 
 
@@ -88,11 +88,11 @@ The language-specific binding facilitates modelling of programming languages. It
 % if java binding example is required or instead of adding new steps if you want to show only java binding then for material check the msc thesis page 40 of test c code with Yeti.
 
 \subsection{Construction of Test Cases} \label{sec:constructionOfTestCases}
-YETI constructs test cases by creating objects of the classes under test and randomly calls methods with random inputs according to the parameter's-space. YETI splits input values into two types i.e. primitive data types and user-defined classes. For primitive data types as methods parameters, YETI in random strategy calls~\verb+Math.random()+ method to generate arithmetic values, which are converted to the required type using Java cast operation. In the case of user-defined classes as methods parameters YETI calls constructor or method to generate object of the class at run time. In the case, when the constructor require another object, YETI recursively calls the constructor or method of that object. This process is continued till an object with an empty constructor or a constructor with only primitive types or the set level of recursion is reached.
+YETI constructs test cases by creating objects of the classes under test and randomly calls methods with random inputs according to the parameter's-space. YETI splits input values into two types i.e. primitive data types and user-defined classes. For primitive data types as methods parameters, YETI in random strategy calls~\verb+Math.random()+ method to generate arithmetic values, which are converted to the required type using Java cast operation. In the case of user-defined classes as methods parameters YETI calls constructor or method to generate object of the class at run time. In the case, when the constructor requires another object, YETI recursively calls the constructor or method of that object. This process is continued till an object with an empty constructor or a constructor with only primitive types or the set level of recursion is reached.
 
 \subsection{Call sequence of YETI}
 % check testing jml code with yeti for more details.
-The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the interaction of processes and their order when a Java program in byte-code is tested by YETI for~\verb+n+ number of times using the default random strategy.  The steps involved are as follows:
+The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the interactions of processes and their order when a Java program in byte-code is tested by YETI for~\verb+n+ number of times using the default random strategy.  The steps involved are as follows:
 
 \bigskip
 \begin{figure}[H]
@@ -131,7 +131,7 @@ The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the i
 \bigskip
 
 \subsection{Command-line Options}
-YETI is originally developed as a command line program, which can be initiated from the Command Line Interface (CLI) as shown in Figure~\ref{fig:yeticommand}. During this study a \verb+yeti.jar+ package is created which allows to set the main parameters and initiate YETI from GUI by double clicking the icon as shown in Figure~\ref{fig:yetiLauncher}. YETI is provided with several command line options which a tester can enable or disable according to the test requirement. These options are case insensitive and can be provided in any order as input to YETI from command line interface. As an example, a tester can use command line option $-nologs$ to bypass real-time logging and save processing power by reducing overhead. Table~\ref{table:cliOptions} includes some of the common command line options available in YETI.
+YETI is originally developed as a command line program, which can be initiated from the Command Line Interface (CLI) as shown in Figure~\ref{fig:yeticommand}. During this study a \verb+yeti.jar+ package is created which allows to set the main parameters and initiate YETI from GUI by double clicking the icon as shown in Figure~\ref{fig:yetiLauncher}. YETI is provided with several command line options which a tester can enable or disable according to the test requirement. These options are case insensitive and can be provided in any order as input to YETI from command line interface. As an example, a tester can use command line option $-nologs$ to bypass real-time logging and save processing power by reducing overheads. Table~\ref{table:cliOptions} includes some of the common command line options available in YETI.
 
 \begin{center}
 \begin{table}[H]
@@ -183,7 +183,7 @@ YETI is originally developed as a command line program, which can be initiated f
 \end{center}
 
 \subsection{Execution}
-YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both CLI and GUI. To execute YETI, it is necessary to specify the \verb+project+ and the relevant \verb+jar+ library files, particularly \verb+javassist.jar+ in the \verb+CLASSPATH+. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.
+YETI, developed in Java, is highly portable and can easily run on any operating system with Java Virtual Machine (JVM) installed. It can be executed from both the CLI and GUI. To execute YETI, it is necessary to specify the \verb+project+ and the relevant \verb+jar+ library files, particularly \verb+javassist.jar+ in the \verb+CLASSPATH+. The typical command to execute YETI from CLI is given in Figure~\ref{fig:yeticommand}.
 \smallskip
 \begin{figure}[H]
 	\centering
@@ -193,7 +193,7 @@ YETI, developed in Java, is highly portable and can easily run on any operating 
 	\label{fig:yeticommand}
 \end{figure}
 \smallskip
-In this command YETI tests \verb+java.lang.String+ and \verb+yeti.test.YetiTest+ modules for \verb+10+ minutes using the default random strategy. Other CLI options are already indicated in Table~\ref{table:cliOptions}. To execute YETI from GUI, \verb+YetiLauncher+ presented in Figure~\ref{fig:yetiLauncher} has been created for use in the present study.
+In this command YETI tests \verb+java.lang.String+ and \verb+yeti.test.YetiTest+ modules for \verb+10+ minutes using the default random strategy. Other CLI options are already indicated in Table~\ref{table:cliOptions}. To execute YETI from the GUI, \verb+YetiLauncher+ presented in Figure~\ref{fig:yetiLauncher} has been created for use in the present study.
 \bigskip
 \begin{figure}[H]
 	\centering
@@ -205,7 +205,7 @@ In this command YETI tests \verb+java.lang.String+ and \verb+yeti.test.YetiTest+
 
 
 \subsection{Test Oracle}
-Oracles in YETI are language-dependent. In the presence of program specifications, it checks for inconsistencies between the code and the specifications. In the absence of specifications, it checks for assertion violation, which are considered as failures. % if assert statements are included by the programmer. However in the absence of 
+Oracles in YETI are language-dependent. In the presence of program specifications, it checks for inconsistencies between the code and the specifications. In the absence of specifications, it checks for assertion violations, which are considered as failures. % if assert statements are included by the programmer. However in the absence of 
 If specifications or assertions are absent, YETI performs robustness testing, which considers any undeclared runtime exceptions as failures. 
 
 %If code contracts are available, YETI uses them as oracle, however, in their absence YETI uses undeclared runtime exceptions of the underlying language as oracle. The test cases revealing errors are reproduced at the end of each test session for unit and regression testing.
@@ -222,7 +222,7 @@ YETI gives a complete test report at the end of each test session. The report co
 	\label{successReport}
 \end{figure}
 
-YETI separates the found bugs from successful executions to simplify the test report. This helps debuggers to easily track the origin of the problem rectification. When a bug is identified during testing, YETI saves the details and present it in the bug report as shown in Figure \ref{bugReport}. The information includes all identifiers of the parameters the method call had along with the time at which the exception occurs.
+YETI separates the found bugs from successful executions to simplify the test report. This helps debuggers to easily track the origin of the problem rectification. When a bug is identified during testing, YETI saves the details and presents it in the bug report as shown in Figure \ref{bugReport}. The information includes all identifiers of the parameters the method call had along with the time at which the exception occurs.
 \bigskip
 \begin{figure}[H]
 	\centering
@@ -233,7 +233,7 @@ YETI separates the found bugs from successful executions to simplify the test re
 \end{figure}
 
 \subsection{Graphical User Interface}
-YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI_3} present the YETI GUI comprising of thirteen labelled components.
+YETI supports a GUI that allows testers to monitor the test session and modify the characteristics in real time during test execution. It is useful to have the option of modifying the test parameters at run time and observing the test behaviour in response. Figure \ref{fig:yetiGUI_3} presents the YETI GUI comprising of thirteen labelled components.
 
 %\begin{figure}[h]
 %	\centering
@@ -263,7 +263,7 @@ YETI supports a GUI that allows testers to monitor the test session and modify t
 \item \textbf{Slider of \% null values:} displays the set probability of null values in percentage used as null instance for each variable. The default value of the probability is 10\%. 
 \item \textbf{Slider of \% new variables:} displays the set probability of creating new instances at each call. The default value of the probability is 10\%. 
 \item \textbf{Text-box of Max variables per type:} displays the number of variables created for a given type. The default value is 1000.
-\item \textbf{Progress bar of testing session:} displays the test progress in percentage.
+\item \textbf{Progress bar of testing session:} displays the test progress as a percentage.
 \item \textbf{Slider of strategy:} displays the set random strategy for the test session. Each strategy has its control to change its various parameters. 
 \item \textbf{Module Name:} shows the list of modules under test. 
 \item \textbf{Graph window 1:} displays the total number of unique failures over time in the module under test.
