@@ -587,6 +587,11 @@ Sarfraz Khurshid and Darko Marinov.
 \newblock {\em Electronic Notes in Theoretical Computer Science},
   55(3):322--342, 2001.
 
+\bibitem{Oriol2011yeti}
+Manuel Oriol.
+\newblock {YETI:} {Y}ork {E}xtensible {T}esting {I}nfrastructure.
+\newblock 2011.
+
 \bibitem{oriol2010testing}
 Manuel Oriol and Sotirios Tassis.
 \newblock Testing {.NET} code with {YETI}.
@@ -599,6 +604,34 @@ Manuel Oriol and Faheem Ullah.
 \newblock In {\em Third International Conference on Software Testing,
   Verification, and Validation Workshops (ICSTW), 2010}, pages 434--437. IEEE,
   2010.
+
+\bibitem{Dimitraiadis2009}
+Vasileios Dimitraiadis.
+\newblock Testing {JML} code with {YETI}.
+\newblock Master's thesis, Department of Computer Science, The University of
+  York, September 2009.
+
+\bibitem{Khawaja2010}
+Muneeb~Waseem Khawaja.
+\newblock {YETI:} increase branch coverage.
+\newblock Master's thesis, Department of Computer Science, The University of
+  York, September 2010.
+
+\bibitem{ahmad2014dirt}
+Mian~Asbat Ahmad and Manuel Oriol.
+\newblock Dirt {S}pot {S}weeping {R}andom {S}trategy.
+\newblock {\em Lecture Notes on Software Engineering}, 2(4), 2014.
+
+\bibitem{ahmad2013adfd}
+Mian~A. Ahmad and Manuel Oriol.
+\newblock Automated discovery of failure domain.
+\newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
+
+\bibitem{ahmad2014adfd2}
+Mian~A. Ahmad and Manuel Oriol.
+\newblock {ADFD+:} {A}n automatic testing technique for finding and presenting
+  failure domains.
+\newblock {\em Lecture Notes on Software Engineering}, 02(4):331--336, 2014.
 
 \bibitem{chen2010adaptive}
 Tsong~Yueh Chen, Fei-Ching Kuo, Robert~G Merkel, and TH~Tse.
@@ -761,17 +794,6 @@ Per Runeson, Carina Andersson, Thomas Thelin, Anneliese Andrews, and Tomas
   Berling.
 \newblock What do we know about defect detection methods?[software testing].
 \newblock {\em Software, IEEE}, 23(3):82--90, 2006.
-
-\bibitem{ahmad2013adfd}
-Mian~A. Ahmad and Manuel Oriol.
-\newblock Automated discovery of failure domain.
-\newblock {\em Lecture Notes on Software Engineering}, 03(1):289--294, 2013.
-
-\bibitem{ahmad2014adfd2}
-Mian~A. Ahmad and Manuel Oriol.
-\newblock {ADFD+:} {A}n automatic testing technique for finding and presenting
-  failure domains.
-\newblock {\em Lecture Notes on Software Engineering}, 02(4):331--336, 2014.
 
 \bibitem{xie2005symstra}
 Tao Xie, Darko Marinov, Wolfram Schulte, and David Notkin.

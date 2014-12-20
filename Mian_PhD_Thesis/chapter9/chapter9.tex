@@ -20,7 +20,7 @@ The DSSR strategy has a limitation of not adding the neighbouring values when th
 \textbf{Reducing the overhead of DSSR strategy for better performances}
 
 %The DSSR strategy is an extension of random$^+$ strategy based on the assumption that failure domains are contiguous. 
-The DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. This adds up to 5\% overhead to the strategy. The algorithm needs up-gradation to achieve better performance by reducing the overhead.
+The DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. This adds up to 5\% overhead to the strategy. The algorithm needs up-grading to achieve better performance by reducing the overhead.
 
 %\textbf{Use of contracts and assertions to discover failure}
 
@@ -69,6 +69,11 @@ The user interface of the two strategies may be extended to give choice to the t
 %The newly developed ADFD$^+$ strategy uses error-seeded programs for assessment of accuracy and effectiveness. This may likely expose it to external validity threat.  Future studies may be undertaken in the real world scenario by including the feature of testing non numerical and reference data types so that there is no more threat to validity.  \\
 \clearpage
 \newpage
+
+\textbf{Deterministic nature of the ADFD and ADFD$^+$ techniques}
+
+Both the techniques ADFD and ADFD$^+$ are deterministic in nature. They describe how a domain is traversed once a failure is discovered in it. This also suggests that a variety of seeding techniques other than random generation can also be used.
+
 
 \textbf{Research on the prevalence of point, block and strip failure domains}
 
