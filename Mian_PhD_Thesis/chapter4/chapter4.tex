@@ -117,7 +117,7 @@ The DSSR strategy continuously tracks the number of failures during the executio
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=12cm, height=13.5cm]{chapter4/flowchart1.png}
+\includegraphics[width=10.5cm, height=11cm]{chapter4/flowchart1.png}
 \bigskip
 \caption{Working mechanism of DSSR strategy}
 \label{fig:Working_DSSS}
@@ -143,14 +143,10 @@ Boundary and other special values having a high tendency of finding failures in 
 12. $\quad$ $\quad$$\quad$ $\quad$$\quad$ \textbf{end if}\newline
 13. $\quad$ $\quad$$\quad$ $\quad$\textbf{end if}\newline
 \begin{center} Algorithm of failure spot sweeping due to primitive type in DSSR strategy \end{center}
-\bigskip
 
 
 
-
-
-
-Table \ref{table:addvalues2} presents the values added to the list of interesting values when a failure is found. In the table the test value is represented by \verb+X+ where \verb+X+ can be a primitive type, string or user-defined objects. All values are converted to their respective types before adding them to the list of interesting values.
+The rationale for the choice of data types and values to be added is the values causing a failure. When a failure is detected, the strategy analyse the methods argument list to find the values and types which caused a failure. The strategy adds the neighbouring values of that particular type to the list of interesting values. Table \ref{table:addvalues2} presents the values added to the list of interesting values when a failure is found. The number of values are motivated from the literature \cite{ramachandran2003testing, reid1997empirical}. In the table the test value is represented by \verb+X+ where \verb+X+ can be a primitive type, string or user-defined objects. All values are converted to their respective types before adding them to the list of interesting values.
 
 \bigskip
 
@@ -567,8 +563,7 @@ The DSSR strategy performed up to 33\% better than R and up to 17\% better than 
 \end{table*}
 
 \subsection{Classes For Which any of the Three Strategies Performs Better}
-
-The t-test applied to data given in Table~\ref{table:ttest} indicated significantly better performance of DSSR in 5 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 3 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. 73\% (44/60) of the classes showed statistically no significant difference whereas in 27\% (16/60) of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in the R$^+$ strategy. 
+The t-test is used to identify which of the strategies performed significant better because it compares the actual difference between two means in relation to the variation in the data (expressed as the standard deviation of the difference between the means). Result of the t-test analysis, given in Table~\ref{table:ttest}, indicated significantly better performance of DSSR in 5 classes from both R and R$^+$ strategies, in 8 classes from R strategy and in 3 classes from R$^+$ strategy. In no class R and R$^+$ strategies performed significantly better than DSSR strategy. 73\% (44/60) of the classes showed statistically no significant difference whereas in 27\% (16/60) of the classes, the DSSR strategy performed significantly better than either R or R$^+$. The better performance of DSSR may be attributed to the additional feature of spot sweeping over and above the desirable characteristics present in the R$^+$ strategy. 
 
 
 %Results of the 60 classes tested in the study are divided in to 11 different categories as presented in ~\ref{table:categories}. 
@@ -641,8 +636,6 @@ The DSSR strategy performed better when the number of failures was higher in the
 \textbf{Effect of identification of first failure on the results:}
 During the experiments, It was noticed that quick identification of first failure was highly desirable in achieving better results from DSSR strategy. This was due to the feature of DSS which added the failure finding and surrounding values to the list of interesting values. However, when identification of first failure was delayed, no values were added to the list of interesting values and the DSSR performed equivalently to R$^+$ strategy. This indicated that better ways of populating failure-inducing values were needed for sufficient leverage to DSSR strategy. As an example, the following piece of code would be unlikely to fail under the current setting:
 
-\bigskip
-\bigskip
 \begin{lstlisting}
 public void test(float value){
  if(value == 34.4445)   {
@@ -650,8 +643,6 @@ public void test(float value){
  }
 }
 \end{lstlisting}
-\bigskip
-\bigskip
 
 In this case, we could add constant literals from the SUT to the list of interesting values in a dynamic fashion~\cite{godefroid2005dart}. These literals can be obtained from the constant pool in the class files of the SUT. In the example above, the value 34.4445 and its surrounding values would  be added to the list of interesting values before the test starts and the DSSR strategy would find the failure right away.
 
