@@ -24,7 +24,7 @@
 %%%%%%%%%%%%%%%%%    INTRODUCTION   %%%%%%%%%%%%%%%%%%%%
 
 \section{Introduction}\label{sec:intro6}
-Efforts have been continuously made by researchers to make the testing process more and more effective and efficient. Testing is efficient when maximum number of test cases are executed in minimum possible time and it is effective when it finds the maximum number of faults in minimum number of test cases~\cite{runeson2006we}. During up-grading and development of testing techniques, the focus is always on increasing the efficiency by introducing partial or complete automation of the testing process and the effectiveness by improving the algorithm. 
+Software testing is most widely used for verification and validation. Efforts have been continuously made by researchers to make the testing process more effective and efficient. Testing is efficient when maximum number of test cases are executed in minimum possible time and it is effective when it finds the maximum number of faults in minimum number of test cases~\cite{runeson2006we}. During up-grading and development of testing techniques, the focus is always on increasing the efficiency by introducing partial or complete automation of the testing process and the effectiveness by improving the algorithm. 
 
 %\blfootnote{Manuscript received Feb 5, 2014; revised March 20, 2013. The authors are with the Department of Computer Science, University of York, YO10 5DD, UK (e-mail: mian.ahmad@york.ac.uk, manuel.oriol@york.ac.uk).}
 
@@ -101,7 +101,7 @@ The improvements made in ADFD$^+$ over ADFD technique are stated as follows.
 
 \item ADFD$^+$ takes a single value for the radius within which the strategy searches for a failure domain whereas ADFD takes two values as lower and upper bounds representing x and y-axis respectively. This results in consumption of fewer test cases for detecting failure domain.
 
-\item In ADFD$^+$, the algorithm of dynamically generating a Java file at run-time is simpler and more efficient made compared to ADFD, resulting in reduced overhead.
+\item In ADFD$^+$, the algorithm of dynamically generating a Java file at run-time is simpler and more efficient compared to ADFD, resulting in reduced overhead.
 
 \item In ADFD$^+$, the point, block and strip failure domains generated in the output graph present a clear view of pass and fail domains with individually labelled points of failures as against a less clear view of the pass and fail domains and lack of individually labelled points in ADFD. %The points are also labelled for clarification. % as shown in Figure~\ref{fig:Workflow}. 
 
@@ -139,8 +139,8 @@ The work-flow of ADFD$^+$ is given in the following pseudocode. The default valu
 02. $\quad$ Specify YETI specific parameters \newline
 03. $\quad$ Specify the value of range \newline
 04. $\quad$ Specify method for testing  \newline
-05. $\quad$ Click Draw Fault Domain button to start test \newline
-06. $\quad$ YETI execute the method to find failure \newline
+05. $\quad$ Click the Draw Fault Domain button to start test \newline
+06. $\quad$ YETI executes the method to find failure \newline
 07. $\quad$ On finding failure, a file C.java is dynamically created \newline
 08. $\quad$ The file is compiled using javac C.java to get C.class file \newline
 09. $\quad$ The C.class file is executed on inputs specified in range \newline
@@ -506,7 +506,7 @@ Figure \ref{fig:testcases6} shows the comparative effectiveness of ADFD$^+$ and 
 \section{Discussion}\label{sec:discussion6}
 The results indicate that ADFD$^+$ is a promising technique for finding failures and failure domains efficiently and effectively. It has the advantage of showing the results in graphical form. The pictorial representation of failure domains can serve to provide insight into the failure logic of the SUT.
 
-In the initial set of experiments Randoop was executed for several minutes with default settings. The results indicated no identification of failures after several executions. On analysis of the generated unit tests and Randoop's manual, it was found that the pool of values stored in Randoop database for $int$ primitive type contains only 5 values including -1, 0, 1, 10 and 100. To enable Randoop to select different values, we supplied a configuration file with the option to generate random values between -500 and 500 for the test cases as all the seeded errors were in this range. 
+In the initial set of experiments Randoop was executed for several minutes with default settings. This did not discover any faults. On analysis of the generated unit tests and Randoop's manual, it was found that the pool of values stored in Randoop database for $int$ primitive type contains only 5 values including -1, 0, 1, 10 and 100. To enable Randoop to select different values, we supplied a configuration file with the option to generate random values between -500 and 500 for the test cases as all the seeded errors were in this range. 
 
 As revealed in the results, ADFD$^+$ outperformed Randoop by taking two orders of magnitude less time to discover the failure domains. This was partially attributed to the very fast processing of YETI integrated with ADFD$^+$. To counter the effect of YETI the comparative performance of ADFD$^+$ and Randoop was determined in terms of the number of test cases required to identify the failure domains giving no consideration to the time taken for completing the test session. As shown in the results ADFD$^+$ identified all failure domains in 50\% or less number of test cases.
 
@@ -548,7 +548,7 @@ Some previous research studies have reported work on identification, classificat
 
 
 \section{Summary} \label{sec:conclusion}
-The newly developed ADFD$^+$ technique is distinct from other random testing techniques because it not only identifies failures but also discovers failure domains and presents them easily understandable graphical form.  The chapter highlights the improved features of ADFD$^+$ in comparison with the ADFD technique presented in Chapter~\ref{chap:ADFD}.  The chapter then analyses and compares the experimental results of ADFD$^+$ and Randoop for the point, block and strip failure domains. The ADFD$^+$ demonstrated extraordinary efficiency  by taking less time to the tune of two orders of magnitude to discover the failure domains and it also surpassed Randoop in terms of effectiveness by identifying the failure domains in 50\% or less number of test cases.  
+The newly developed ADFD$^+$ technique is distinct from other random testing techniques because it not only identifies failures but also discovers failure domains and presents them in an easily understandable graphical form.  The chapter highlights the improved features of ADFD$^+$ in comparison with the ADFD technique presented in Chapter~\ref{chap:ADFD}.  The chapter then analyses and compares the experimental results of ADFD$^+$ and Randoop for point, block and strip failure domains. The ADFD$^+$ strongly discovered two orders of magnitude faster than Random. It also surpassed Randoop in terms of effectiveness by identifying the failure domains in 50\% or less number of test cases.  
 %The rationale for better performance of ADFD+ has been given in the paper. 
 The better performance of ADFD$^+$ may be attributed mainly to its ability to dynamically change algorithm to exhaustive testing in a specified radius around the first identified failure as against Randoop which uses the same random algorithm continuously for searching failures.
 

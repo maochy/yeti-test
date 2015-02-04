@@ -62,7 +62,7 @@ The strategy defines a specific way to generate test inputs. The strategy sectio
 \item {\textbf{YetiRandomStrategy}} implements the random strategy and generates random values for testing. In this strategy the user can change the null values probability and the percentage of creating new objects for the test session. 
 \item {\textbf{YetiRandomPlusStrategy}} extends the random strategy by adding values to the list of interesting values. It allows the user to adjust the percentage of using interesting values in the test session.
 \item {\textbf{YetiDSSRStrategy}} extends YetiRandomPlusStrategy by adding values surrounding the failure finding value. The strategy is described in detail in Chapter~\ref{chap:DSSR}.
-\item {\textbf{YetiADFDStrategy}} extends YetiRandomPlusStrategy by adding the feature of graphical representation of failures and their domains with in the specified lower and upper bounds. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
+\item {\textbf{YetiADFDStrategy}} extends YetiRandomPlusStrategy by adding the feature of graphical representation of failures and their domains within the specified lower and upper bounds. The strategy is described in detail in Chapter~\ref{chap:ADFD}.
 \item {\textbf{YetiADFDPlusStrategy}} extends ADFD strategy by adding the feature of graphical representation of failures and failure domains in a given radius in simplified form. The strategy is described in detail in Chapter~\ref{chap:ADFD+}.
 \item {\textbf{YetiRandomDecreasingStrategy}} extends the YetiRandomPlusStrategy in which all three probability values (null values, new objects, interesting values) are 100\% at the beginning and decrease to 0 at the end of the test.
 \item {\textbf{YetiRandomPeriodicStrategy}} extends the YetiRandomPlusStrategy in which all three probability values (null values, new objects, interesting values) decrease and increase at random within the given range.
@@ -114,7 +114,7 @@ The sequence diagram given in Figure~\ref{fig:yetiSequenceDiagram} depicts the i
 
 \item The thread requests the test strategy to generate the arguments (\verb+cards+) for the selected routine (\verb+getAllCards+).
 
- \item The test strategy (\verb+YetiRandomStrategy+) generates the required arguments and sents them to the requesting thread.
+ \item The test strategy (\verb+YetiRandomStrategy+) generates the required arguments and sends them to the requesting thread.
  
  \item The thread tests the selected routine (\verb+YetiJavaMethod+) of the module with the generated arguments (\verb+makeCall+).
  

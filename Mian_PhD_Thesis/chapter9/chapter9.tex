@@ -17,7 +17,7 @@ The chapter presents the scope and potential of future work related to the prese
 The DSSR strategy has a limitation of not adding the neighbouring values when the failure is found by an object e.g. String. Future research is desirable for extending the strategy by incorporating a suitable technique like ARTOO to find the neighbouring objects of the failure finding object and add these to the list of interesting values.  
 
 
-\textbf{Reducing the overhead of DSSR strategy for better performances}
+\textbf{Reducing the overhead of the DSSR strategy for better performances}
 
 %The DSSR strategy is an extension of random$^+$ strategy based on the assumption that failure domains are contiguous. 
 The DSSR strategy adds neighbouring values of the failure finding value to the list of interesting values. This adds up to 5\% overhead to the strategy. The algorithm needs up-grading to achieve better performance by reducing the overhead.
@@ -40,9 +40,9 @@ The DSSR strategy adds neighbouring values of the failure finding value to the l
 %The ADFD and ADFD$^+$ strategies tests numerical programs and can be used for testing the software of numerical data types in the real world context. The strategy may be extended to include testing of non-numerical and reference data types to enable the strategy to test all types of data. \\
 
 
-\textbf{Extension of ADFD and ADFD$^+$ strategies for testing non-numerical and more than two-dimensional programs}
+\textbf{Extension of the ADFD and ADFD$^+$ strategies for testing non-numerical and more than two-dimensional programs}
 
-The two strategies need to be extended to facilitate testing and graphical presentation of results for non-numerical and more than two-dimensional programs. As an additional benefit, the code coverage will increase for better performance.
+The two strategies need to be extended to facilitate testing and graphical presentation of results for non-numerical and programs with more then two inputs. 
 
 
 %it is worthwhile to measure the code coverage achieved by the new strategies to ensure the effectiveness. The instrumentation technique may be applied to the software under test to achieve the desired objective. 
@@ -57,10 +57,14 @@ The two strategies need to be extended to facilitate testing and graphical prese
 
 %The newly developed ADFD and ADFD$^+$ have the capability of graphical representation of results for one and two-dimensional numerical programs. It is worthwhile to extend the strategy so as to be capable of graphical representation of results for multi-dimensional numerical and non-numerical programs. \\
 
-\textbf{Introducing additional features in the user interface of ADFD and ADFD$^+$}
+%\textbf{Introducing additional features in the user interface of ADFD and ADFD$^+$}
 
 %The user interface of ADFD provides a fully automated mechanism of testing the program, processing the results and visually representing the results in graphical form. 
-The user interface of the two strategies may be extended to give choice to the tester for real-time interaction, manual addition of test cases, showing thumbnail view of previous graphs and 3D support to present multi-dimensional arguments.
+%The user interface of the two strategies may be extended to give choice to the tester for real-time interaction, manual addition of test cases, showing thumbnail view of previous graphs and 3D support to present multi-dimensional arguments.
+\textbf{Deterministic nature of the ADFD and ADFD$^+$ strategies}
+
+Both the techniques ADFD and ADFD$^+$ are deterministic in nature. They describe how a domain is traversed once a failure is discovered in it. This also suggests that a variety of seeding techniques other than random generation can also be used.
+
 
 
 
@@ -70,14 +74,11 @@ The user interface of the two strategies may be extended to give choice to the t
 \clearpage
 \newpage
 
-\textbf{Deterministic nature of the ADFD and ADFD$^+$ techniques}
-
-Both the techniques ADFD and ADFD$^+$ are deterministic in nature. They describe how a domain is traversed once a failure is discovered in it. This also suggests that a variety of seeding techniques other than random generation can also be used.
-
 
 \textbf{Research on the prevalence of point, block and strip failure domains}
 
-The present study has revealed the abundance of strip failure domains as compared to point and block types within the input domain. It is worthwhile to further explore and determine the prevalence and proportionate distribution of the failure domains in the input domain of all available data types instead of only primitive data types. This will improve the testing efficiency by giving due focus to the various types of failure domains.
+The present study has revealed the abundance of strip failure domains as compared to point and block types within the input domain. It is worthwhile to further explore and determine the prevalence and proportionate distribution of the failure domains in the input domain of all available data types instead of only primitive data types. 
+
 %In accordance with the reported literature, the three newly developed strategies used the concept of failure laying in point, block and strip failure domains. It is evident from the experimental analysis performed in Chapter~\ref{chap:Evaluation} that all the three types of failure domains can exist individually or combined. It is also found that strip failure-domain exist more frequently than point and block failure domain. However, the greater number of strip failure domain may be because they are easy to find by automated random testing. Therefore, it is worthwhile to undertake study for determining the prevalence and proportionate distribution of the failure domains in the input domain. This will improve the testing efficiency by giving due focus to the most prevalent types of failure domain.  \\
 
 
@@ -88,7 +89,7 @@ The present study has revealed the abundance of strip failure domains as compare
 %After detection of first failure, both ADFD and ADFD$^+$ techniques, stop searching for another failure and start exploring the failure domain of the identified failure. In second test execution the strategy may find a different failure because of its random nature, however, if the failure is simple (long strip failure domain) to detect, the strategy may pick the same failure, may be at different location. Therefore, efforts should be made to exempt the identified failure and its domain from next execution so that new failure and failure domain is discovered in each test execution.\\
 
 
-The ADFD and ADFD$^+$ techniques stop searching for new failures after detection of the first failure and starts working on exploring the related failure domain. In the next test execution, the strategy may pick an identical failure lying on the same or different location making it a futile exercise. Efforts are required to incorporate the feature of exempting the identified failure from next test execution so that new failures and failure domains are discovered each time.\\
+The ADFD and ADFD$^+$ techniques stop searching for new failures after detection of the first failure and start working on exploring the related failure domain. In the next test execution, the strategy may pick an identical failure lying on the same or different location making it a futile exercise. Efforts are required to incorporate the feature of exempting identified failures from the next test execution so that new failures and failure domains are discovered each time.\\
 
 
 

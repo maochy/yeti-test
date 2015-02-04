@@ -14,7 +14,7 @@
 
 % start by what is in the chapter and what you did.
 
-There is a strong evidence that Adaptive Random Testing (ART) is more efficient than Random Testing (RT) to detect the first failure in a given SUT~\cite{chen2005adaptive}. This is mainly attributed to the better distribution of test data set which focus on the failure domains within the input domain. On the assumption of the existence of different types of failure domains (see Section~\ref{sec:failuredomains_2} for details), we developed a new test strategy called Dirt Spot Sweeping Random (DSSR) strategy. It has two main advantages. Firstly, it is based on the Random (R) strategy which makes it highly cost effective. Secondly, it discovers more failures than R and Random$^+$ (R$^+$) strategies in applications under identical conditions, which makes it highly efficient.  
+There is a strong evidence that Adaptive Random Testing (ART) detects the first failure in a given SUT more efficiently than Random Testing (RT)~\cite{chen2005adaptive}. This is mainly attributed to the better distribution of test data set which focus on the failure domains within the input domain. On the assumption of the existence of different types of failure domains (see Section~\ref{sec:failuredomains_2} for details), we developed a new test strategy called Dirt Spot Sweeping Random (DSSR) strategy. It has two main advantages. Firstly, it is based on the Random (R) strategy which makes it highly cost effective. Secondly, it discovers more failures than R and Random$^+$ (R$^+$) strategies in applications under identical conditions, which makes it highly efficient.  
 
 In this chapter, we present the DSSR strategy and describe its various parts. We then explain the working mechanism of the new strategy and illustrate its function with the help of an example. In the later part,  experimental evidence is presented in support of the effectiveness of the DSSR strategy in finding failures and failure domains as compared with R and R$^+$ strategies.
 
@@ -130,7 +130,7 @@ Boundary and other special values having a high tendency of finding failures in 
 \bigskip
 \newline
 1. $\quad$ $\quad$$\quad$ $\quad$oldFailures $\leftarrow$ 0 \newline
-2. $\quad$ $\quad$$\quad$ $\quad$n  $\leftarrow$ 5~~~~~~~/\ /\ It is the radius value to search around the failure set by the tester. \newline
+2. $\quad$ $\quad$$\quad$ $\quad$n  $\leftarrow$ 5~~~~~~~/\ /\ This is the radius value to search around the failure set by the tester. \newline
 3. $\quad$ $\quad$$\quad$ $\quad$\textbf{if} currentFailures $\textgreater$ oldFailures \newline
 4. $\quad$ $\quad$$\quad$ $\quad$$\quad$ oldFailures $\leftarrow$ currentFailures \newline
 5. $\quad$ $\quad$$\quad$ $\quad$$\quad$ \textbf{if} type.isPrimitiveType == true\newline
@@ -146,7 +146,7 @@ Boundary and other special values having a high tendency of finding failures in 
 
 
 
-The rationale for the choice of data types and values to be added is the values causing a failure. When a failure is detected, the strategy analyse the methods argument list to find the values and types which caused a failure. The strategy adds the neighbouring values of that particular type to the list of interesting values. Table \ref{table:addvalues2} presents the values added to the list of interesting values when a failure is found. The number of values are motivated from the literature \cite{ramachandran2003testing, reid1997empirical}. In the table the test value is represented by \verb+X+ where \verb+X+ can be a primitive type, string or user-defined objects. All values are converted to their respective types before adding them to the list of interesting values.
+When a failure is detected, the strategy analyses the methods argument list to find the values and types which caused a failure. The strategy adds the neighbouring values of that particular type to the list of interesting values. Table \ref{table:addvalues2} presents the values added to the list of interesting values when a failure is found. The specific choices of extra interesting values are motivated by the literature \cite{ramachandran2003testing, reid1997empirical}. They also correspond to faults intuitive values for exploration about the initial value. In the table the test value is represented by \verb+X+ where \verb+X+ can be a primitive type, string or user-defined objects. All values are converted to their respective types before adding them to the list of interesting values.
 
 \bigskip
 
@@ -279,12 +279,12 @@ The strategies part define the procedure of selecting the modules (classes), the
 
 \section{Evaluation}\label{sec:eval}
 
-The DSSR strategy is experimentally evaluated by comparing its performance with that of the R and R$^+$ strategy~\cite{ciupa2007experimental, ciupa2008finding}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and the interesting value injection probability have been kept constant in the experiments.
+The DSSR strategy is experimentally evaluated by comparing its performance with that of the R and R$^+$ strategies~\cite{ciupa2007experimental, ciupa2008finding}. General factors such as system software and hardware, YETI specific factors like percentage of null values, percentage of newly created objects and the interesting value injection probability have been kept constant in the experiments.
 
 \subsection{Research Questions}
 For evaluating the DSSR strategy, the following research questions have been addressed in this study:
 \begin{enumerate}
-\item Is there an empirical evidence in support of declaring the most efficient strategy among the R, R$^+$ and DSSR strategies?
+\item Is there empirical evidence in support of declaring the most efficient strategy among the R, R$^+$ and DSSR strategies?
 \item Are there classes for which any of the three strategies provide better results?
 \item Can we pick the best default strategy amongst R, R$^+$ and DSSR?
 \end{enumerate}
@@ -469,7 +469,7 @@ The literature review revealed that the F-measure is used where testing stops af
 \section{Results}\label{sec:res}
 Results of the experiments including class name, Lines of Code (LOC), mean value, maximum and minimum number of unique failures, and relative standard deviation for each of the 60 classes tested using the R, R$^+$ and DSSR strategies are presented in Table~\ref{table:Results}. Each strategy found an equal number of failures in 31 classes while in the remaining 29 classes the three strategies performed differently from one another. The total of mean values of unique failures was higher in DSSR (1075) as compared to R (1040) and R$^+$ (1061) strategies. 
 %Results given in Table~\ref{table:ttest} can be split into three different categories as shown in Table~\ref{table:categories}. 
-DSSR found the higher number of maximum unique failures (1118) than R (1075) and R$^+$ (1106). DSSR found 43 and 12 more unique failures compared to R and R$^+$ strategies respectively. The minimum number of unique failures found by DSSR (1032) is also higher than for R (973) and R$^+$ (1009) which indicates the higher efficiency of DSSR strategy over R and R$^+$ strategies. 
+DSSR found the higher number of maximum unique failures (1118) than R (1075) and R$^+$ (1106). DSSR found 43 and 12 more unique failures compared to R and R$^+$ strategies respectively. The minimum number of unique failures found by DSSR (1032) is also higher than for R (973) and R$^+$ (1009) which indicates the higher efficiency of the DSSR strategy over R and R$^+$ strategies. 
 
 % How to write relative standard deviation.
 % Eventually, the standard deviations are all of the order of magnitude of .1\% for all strategies.
