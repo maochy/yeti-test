@@ -1,137 +1,143 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.1.0}{Preliminaries}{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.1}{Software Testing}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{Random Testing}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.3}{The Problems}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.3.1}{Limitation of RT to Discover Contiguous Unique Failures}{section.1.3}% 6
-\BOOKMARK [2][-]{subsection.1.3.2}{Inability of RT to Identify Failure Domains}{section.1.3}% 7
-\BOOKMARK [2][-]{subsection.1.3.3}{Lack of Techniques to Present RT Results in Graphical Form}{section.1.3}% 8
-\BOOKMARK [1][-]{section.1.4}{Research Goals}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.5}{Contributions}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.6}{Thesis Structure}{chapter.1}% 11
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 12
-\BOOKMARK [1][-]{section.2.1}{Software Testing}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.1.1}{Input Domain}{section.2.1}% 14
-\BOOKMARK [2][-]{subsection.2.1.2}{Test Case}{section.2.1}% 15
-\BOOKMARK [2][-]{subsection.2.1.3}{Test Oracle}{section.2.1}% 16
-\BOOKMARK [1][-]{section.2.2}{Software Testing from Various Viewpoints}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.3}{Software Testing Levels}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.4}{Software Testing Purpose}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.5}{Software Testing Perspective}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.5.1}{White-box Testing}{section.2.5}% 21
-\BOOKMARK [2][-]{subsection.2.5.2}{Black-box Testing}{section.2.5}% 22
-\BOOKMARK [1][-]{section.2.6}{Software Testing Types}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.6.1}{Manual Software Testing}{section.2.6}% 24
-\BOOKMARK [2][-]{subsection.2.6.2}{Automated Software Testing}{section.2.6}% 25
-\BOOKMARK [1][-]{section.2.7}{Test Data Generation}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.7.1}{Path-wise Test Data Generator}{section.2.7}% 27
-\BOOKMARK [2][-]{subsection.2.7.2}{Goal-oriented Test Data Generator}{section.2.7}% 28
-\BOOKMARK [2][-]{subsection.2.7.3}{Intelligent Test Data Generator}{section.2.7}% 29
-\BOOKMARK [2][-]{subsection.2.7.4}{Search-based Test Data Generator}{section.2.7}% 30
-\BOOKMARK [2][-]{subsection.2.7.5}{Random Test Data Generator}{section.2.7}% 31
-\BOOKMARK [1][-]{section.2.8}{Random Testing}{chapter.2}% 32
-\BOOKMARK [1][-]{section.2.9}{Pass and Fail domains}{chapter.2}% 33
-\BOOKMARK [1][-]{section.2.10}{Versions of Random testing}{chapter.2}% 34
-\BOOKMARK [2][-]{subsection.2.10.1}{Random+ Testing}{section.2.10}% 35
-\BOOKMARK [2][-]{subsection.2.10.2}{Adaptive Random Testing}{section.2.10}% 36
-\BOOKMARK [2][-]{subsection.2.10.3}{Mirror Adaptive Random Testing}{section.2.10}% 37
-\BOOKMARK [2][-]{subsection.2.10.4}{Restricted Random Testing}{section.2.10}% 38
-\BOOKMARK [2][-]{subsection.2.10.5}{Directed Automated Random Testing}{section.2.10}% 39
-\BOOKMARK [2][-]{subsection.2.10.6}{Feedback-directed Random Testing}{section.2.10}% 40
-\BOOKMARK [2][-]{subsection.2.10.7}{The ARTOO Testing}{section.2.10}% 41
-\BOOKMARK [1][-]{section.2.11}{Automatic Random Testing Tools}{chapter.2}% 42
-\BOOKMARK [2][-]{subsection.2.11.1}{JCrasher}{section.2.11}% 43
-\BOOKMARK [2][-]{subsection.2.11.2}{Jartege}{section.2.11}% 44
-\BOOKMARK [2][-]{subsection.2.11.3}{Eclat}{section.2.11}% 45
-\BOOKMARK [2][-]{subsection.2.11.4}{Randoop}{section.2.11}% 46
-\BOOKMARK [2][-]{subsection.2.11.5}{QuickCheck}{section.2.11}% 47
-\BOOKMARK [2][-]{subsection.2.11.6}{AutoTest}{section.2.11}% 48
-\BOOKMARK [2][-]{subsection.2.11.7}{TestEra}{section.2.11}% 49
-\BOOKMARK [2][-]{subsection.2.11.8}{Korat}{section.2.11}% 50
-\BOOKMARK [2][-]{subsection.2.11.9}{YETI}{section.2.11}% 51
-\BOOKMARK [1][-]{section.2.12}{Summary}{chapter.2}% 52
-\BOOKMARK [1][-]{section.2.13}{The Proposed Area of Research}{chapter.2}% 53
-\BOOKMARK [0][-]{chapter.3}{York Extensible Testing Infrastructure}{}% 54
-\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 55
-\BOOKMARK [1][-]{section.3.2}{Design}{chapter.3}% 56
-\BOOKMARK [2][-]{subsection.3.2.1}{Core Infrastructure of YETI}{section.3.2}% 57
-\BOOKMARK [2][-]{subsection.3.2.2}{Strategy}{section.3.2}% 58
-\BOOKMARK [2][-]{subsection.3.2.3}{Language-specific Binding}{section.3.2}% 59
-\BOOKMARK [2][-]{subsection.3.2.4}{Construction of Test Cases}{section.3.2}% 60
-\BOOKMARK [2][-]{subsection.3.2.5}{Call sequence of YETI}{section.3.2}% 61
-\BOOKMARK [2][-]{subsection.3.2.6}{Command-line Options}{section.3.2}% 62
-\BOOKMARK [2][-]{subsection.3.2.7}{Execution}{section.3.2}% 63
-\BOOKMARK [2][-]{subsection.3.2.8}{Test Oracle}{section.3.2}% 64
-\BOOKMARK [2][-]{subsection.3.2.9}{Report}{section.3.2}% 65
-\BOOKMARK [2][-]{subsection.3.2.10}{Graphical User Interface}{section.3.2}% 66
-\BOOKMARK [1][-]{section.3.3}{Summary}{chapter.3}% 67
-\BOOKMARK [0][-]{chapter.4}{Dirt Spot Sweeping Random Strategy}{}% 68
-\BOOKMARK [1][-]{section.4.1}{Dirt Spot Sweeping Random Strategy}{chapter.4}% 69
-\BOOKMARK [2][-]{subsection.4.1.1}{Random Strategy}{section.4.1}% 70
-\BOOKMARK [2][-]{subsection.4.1.2}{Random+ Strategy}{section.4.1}% 71
-\BOOKMARK [2][-]{subsection.4.1.3}{Dirt Spot Sweeping}{section.4.1}% 72
-\BOOKMARK [2][-]{subsection.4.1.4}{Working of DSSR Strategy}{section.4.1}% 73
-\BOOKMARK [2][-]{subsection.4.1.5}{Explanation of DSSR Strategy by Example}{section.4.1}% 74
-\BOOKMARK [1][-]{section.4.2}{Implementation of DSSR Strategy}{chapter.4}% 75
-\BOOKMARK [1][-]{section.4.3}{Evaluation}{chapter.4}% 76
-\BOOKMARK [2][-]{subsection.4.3.1}{Research Questions}{section.4.3}% 77
-\BOOKMARK [2][-]{subsection.4.3.2}{Experiments}{section.4.3}% 78
-\BOOKMARK [2][-]{subsection.4.3.3}{Performance Measurement Criteria}{section.4.3}% 79
-\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 80
-\BOOKMARK [2][-]{subsection.4.4.1}{Absolute Best in R, R+ and DSSR Strategies}{section.4.4}% 81
-\BOOKMARK [2][-]{subsection.4.4.2}{Classes For Which any of the Three Strategies Performs Better}{section.4.4}% 82
-\BOOKMARK [2][-]{subsection.4.4.3}{The Best Default Strategy in R, R+ and DSSR}{section.4.4}% 83
-\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 84
-\BOOKMARK [1][-]{section.4.6}{Related Work}{chapter.4}% 85
-\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 86
-\BOOKMARK [0][-]{chapter.5}{Automated Discovery of Failure Domain}{}% 87
-\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 88
-\BOOKMARK [1][-]{section.5.2}{Automated Discovery of Failure Domain}{chapter.5}% 89
-\BOOKMARK [2][-]{subsection.5.2.1}{GUI Front-end for Providing Input}{section.5.2}% 90
-\BOOKMARK [2][-]{subsection.5.2.2}{Automated Finding of Failure}{section.5.2}% 91
-\BOOKMARK [2][-]{subsection.5.2.3}{Automated Generation of Modules}{section.5.2}% 92
-\BOOKMARK [2][-]{subsection.5.2.4}{Automated Compilation and Execution of Modules}{section.5.2}% 93
-\BOOKMARK [2][-]{subsection.5.2.5}{Automated Generation of Graph}{section.5.2}% 94
-\BOOKMARK [2][-]{subsection.5.2.6}{Implementation of ADFD Strategy}{section.5.2}% 95
-\BOOKMARK [2][-]{subsection.5.2.7}{Explanation of ADFD Strategy by Example}{section.5.2}% 96
-\BOOKMARK [1][-]{section.5.3}{Experimental Results}{chapter.5}% 97
-\BOOKMARK [1][-]{section.5.4}{Discussion}{chapter.5}% 98
-\BOOKMARK [1][-]{section.5.5}{Threats to Validity}{chapter.5}% 99
-\BOOKMARK [1][-]{section.5.6}{Related Work}{chapter.5}% 100
-\BOOKMARK [1][-]{section.5.7}{Summary}{chapter.5}% 101
-\BOOKMARK [0][-]{chapter.6}{Automated Discovery of Failure Domain+}{}% 102
-\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 103
-\BOOKMARK [1][-]{section.6.2}{Automated Discovery of Failure Domain+}{chapter.6}% 104
-\BOOKMARK [2][-]{subsection.6.2.1}{Implementation of ADFD+}{section.6.2}% 105
-\BOOKMARK [2][-]{subsection.6.2.2}{Workflow of ADFD+}{section.6.2}% 106
-\BOOKMARK [2][-]{subsection.6.2.3}{Example to Illustrate Working of ADFD+}{section.6.2}% 107
-\BOOKMARK [1][-]{section.6.3}{Evaluation}{chapter.6}% 108
-\BOOKMARK [2][-]{subsection.6.3.1}{Research Questions}{section.6.3}% 109
-\BOOKMARK [2][-]{subsection.6.3.2}{Randoop}{section.6.3}% 110
-\BOOKMARK [2][-]{subsection.6.3.3}{Experimental Setup}{section.6.3}% 111
-\BOOKMARK [1][-]{section.6.4}{Experimental Results}{chapter.6}% 112
-\BOOKMARK [2][-]{subsection.6.4.1}{Efficiency}{section.6.4}% 113
-\BOOKMARK [2][-]{subsection.6.4.2}{Effectiveness}{section.6.4}% 114
-\BOOKMARK [2][-]{subsection.6.4.3}{Presentation of Failure Domains}{section.6.4}% 115
-\BOOKMARK [1][-]{section.6.5}{Discussion}{chapter.6}% 116
-\BOOKMARK [1][-]{section.6.6}{Threats to Validity}{chapter.6}% 117
-\BOOKMARK [1][-]{section.6.7}{Related Work}{chapter.6}% 118
-\BOOKMARK [1][-]{section.6.8}{Summary}{chapter.6}% 119
-\BOOKMARK [0][-]{chapter.7}{Evaluation of ADFD and ADFD+ techniques}{}% 120
-\BOOKMARK [1][-]{section.7.1}{Enhancement of the Techniques}{chapter.7}% 121
-\BOOKMARK [1][-]{section.7.2}{Daikon}{chapter.7}% 122
-\BOOKMARK [2][-]{subsection.7.2.1}{Types of Invariants Detected by Daikon}{section.7.2}% 123
-\BOOKMARK [1][-]{section.7.3}{Difference in Working Mechanism of the Two Techniques}{chapter.7}% 124
-\BOOKMARK [1][-]{section.7.4}{Research Questions}{chapter.7}% 125
-\BOOKMARK [1][-]{section.7.5}{Evaluation}{chapter.7}% 126
-\BOOKMARK [2][-]{subsection.7.5.1}{Experiments}{section.7.5}% 127
-\BOOKMARK [2][-]{subsection.7.5.2}{Results}{section.7.5}% 128
-\BOOKMARK [1][-]{section.7.6}{Threats to Validity}{chapter.7}% 129
-\BOOKMARK [1][-]{section.7.7}{Related Work}{chapter.7}% 130
-\BOOKMARK [1][-]{section.7.8}{Summary}{chapter.7}% 131
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 132
-\BOOKMARK [1][-]{section.8.1}{Lessons Learned}{chapter.8}% 133
-\BOOKMARK [0][-]{chapter.9}{Future Work}{}% 134
-\BOOKMARK [0][-]{chapter*.68}{Glossary}{}% 135
-\BOOKMARK [0][-]{chapter*.69}{Appendix}{}% 136
-\BOOKMARK [0][-]{lstnumber.-19.94}{Bibliography}{}% 137
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 3
+\BOOKMARK [0][-]{chapter*.5}{Dedication}{}% 4
+\BOOKMARK [0][-]{chapter*.6}{Acknowledgements}{}% 5
+\BOOKMARK [0][-]{chapter*.7}{Decleration}{}% 6
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 7
+\BOOKMARK [1][-]{section.1.0}{Preliminaries}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.1}{Software Testing}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.2}{Random Testing}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.3}{The Problems}{chapter.1}% 11
+\BOOKMARK [2][-]{subsection.1.3.1}{Limitation of RT to Discover Contiguous Unique Failures}{section.1.3}% 12
+\BOOKMARK [2][-]{subsection.1.3.2}{Inability of RT to Identify Failure Domains}{section.1.3}% 13
+\BOOKMARK [2][-]{subsection.1.3.3}{Lack of Techniques to Present RT Results in Graphical Form}{section.1.3}% 14
+\BOOKMARK [1][-]{section.1.4}{Research Goals}{chapter.1}% 15
+\BOOKMARK [1][-]{section.1.5}{Contributions}{chapter.1}% 16
+\BOOKMARK [1][-]{section.1.6}{Thesis Structure}{chapter.1}% 17
+\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 18
+\BOOKMARK [1][-]{section.2.1}{Software Testing}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.1.1}{Input Domain}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.2}{Test Case}{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.3}{Test Oracle}{section.2.1}% 22
+\BOOKMARK [1][-]{section.2.2}{Software Testing from Various Viewpoints}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.3}{Software Testing Levels}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.4}{Software Testing Purpose}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.5}{Software Testing Perspective}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.5.1}{White-box Testing}{section.2.5}% 27
+\BOOKMARK [2][-]{subsection.2.5.2}{Black-box Testing}{section.2.5}% 28
+\BOOKMARK [1][-]{section.2.6}{Software Testing Types}{chapter.2}% 29
+\BOOKMARK [2][-]{subsection.2.6.1}{Manual Software Testing}{section.2.6}% 30
+\BOOKMARK [2][-]{subsection.2.6.2}{Automated Software Testing}{section.2.6}% 31
+\BOOKMARK [1][-]{section.2.7}{Test Data Generation}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.7.1}{Path-wise Test Data Generator}{section.2.7}% 33
+\BOOKMARK [2][-]{subsection.2.7.2}{Goal-oriented Test Data Generator}{section.2.7}% 34
+\BOOKMARK [2][-]{subsection.2.7.3}{Intelligent Test Data Generator}{section.2.7}% 35
+\BOOKMARK [2][-]{subsection.2.7.4}{Search-based Test Data Generator}{section.2.7}% 36
+\BOOKMARK [2][-]{subsection.2.7.5}{Random Test Data Generator}{section.2.7}% 37
+\BOOKMARK [1][-]{section.2.8}{Random Testing}{chapter.2}% 38
+\BOOKMARK [1][-]{section.2.9}{Pass and Fail domains}{chapter.2}% 39
+\BOOKMARK [1][-]{section.2.10}{Versions of Random testing}{chapter.2}% 40
+\BOOKMARK [2][-]{subsection.2.10.1}{Random+ Testing}{section.2.10}% 41
+\BOOKMARK [2][-]{subsection.2.10.2}{Adaptive Random Testing}{section.2.10}% 42
+\BOOKMARK [2][-]{subsection.2.10.3}{Mirror Adaptive Random Testing}{section.2.10}% 43
+\BOOKMARK [2][-]{subsection.2.10.4}{Restricted Random Testing}{section.2.10}% 44
+\BOOKMARK [2][-]{subsection.2.10.5}{Directed Automated Random Testing}{section.2.10}% 45
+\BOOKMARK [2][-]{subsection.2.10.6}{Feedback-directed Random Testing}{section.2.10}% 46
+\BOOKMARK [2][-]{subsection.2.10.7}{The ARTOO Testing}{section.2.10}% 47
+\BOOKMARK [1][-]{section.2.11}{Automatic Random Testing Tools}{chapter.2}% 48
+\BOOKMARK [2][-]{subsection.2.11.1}{JCrasher}{section.2.11}% 49
+\BOOKMARK [2][-]{subsection.2.11.2}{Jartege}{section.2.11}% 50
+\BOOKMARK [2][-]{subsection.2.11.3}{Eclat}{section.2.11}% 51
+\BOOKMARK [2][-]{subsection.2.11.4}{Randoop}{section.2.11}% 52
+\BOOKMARK [2][-]{subsection.2.11.5}{QuickCheck}{section.2.11}% 53
+\BOOKMARK [2][-]{subsection.2.11.6}{AutoTest}{section.2.11}% 54
+\BOOKMARK [2][-]{subsection.2.11.7}{TestEra}{section.2.11}% 55
+\BOOKMARK [2][-]{subsection.2.11.8}{Korat}{section.2.11}% 56
+\BOOKMARK [2][-]{subsection.2.11.9}{YETI}{section.2.11}% 57
+\BOOKMARK [1][-]{section.2.12}{Summary}{chapter.2}% 58
+\BOOKMARK [1][-]{section.2.13}{The Proposed Area of Research}{chapter.2}% 59
+\BOOKMARK [0][-]{chapter.3}{York Extensible Testing Infrastructure}{}% 60
+\BOOKMARK [1][-]{section.3.1}{Overview}{chapter.3}% 61
+\BOOKMARK [1][-]{section.3.2}{Design}{chapter.3}% 62
+\BOOKMARK [2][-]{subsection.3.2.1}{Core Infrastructure of YETI}{section.3.2}% 63
+\BOOKMARK [2][-]{subsection.3.2.2}{Strategy}{section.3.2}% 64
+\BOOKMARK [2][-]{subsection.3.2.3}{Language-specific Binding}{section.3.2}% 65
+\BOOKMARK [2][-]{subsection.3.2.4}{Construction of Test Cases}{section.3.2}% 66
+\BOOKMARK [2][-]{subsection.3.2.5}{Call sequence of YETI}{section.3.2}% 67
+\BOOKMARK [2][-]{subsection.3.2.6}{Command-line Options}{section.3.2}% 68
+\BOOKMARK [2][-]{subsection.3.2.7}{Execution}{section.3.2}% 69
+\BOOKMARK [2][-]{subsection.3.2.8}{Test Oracle}{section.3.2}% 70
+\BOOKMARK [2][-]{subsection.3.2.9}{Report}{section.3.2}% 71
+\BOOKMARK [2][-]{subsection.3.2.10}{Graphical User Interface}{section.3.2}% 72
+\BOOKMARK [1][-]{section.3.3}{Summary}{chapter.3}% 73
+\BOOKMARK [0][-]{chapter.4}{Dirt Spot Sweeping Random Strategy}{}% 74
+\BOOKMARK [1][-]{section.4.1}{Dirt Spot Sweeping Random Strategy}{chapter.4}% 75
+\BOOKMARK [2][-]{subsection.4.1.1}{Random Strategy}{section.4.1}% 76
+\BOOKMARK [2][-]{subsection.4.1.2}{Random+ Strategy}{section.4.1}% 77
+\BOOKMARK [2][-]{subsection.4.1.3}{Dirt Spot Sweeping}{section.4.1}% 78
+\BOOKMARK [2][-]{subsection.4.1.4}{Working of DSSR Strategy}{section.4.1}% 79
+\BOOKMARK [2][-]{subsection.4.1.5}{Explanation of DSSR Strategy by Example}{section.4.1}% 80
+\BOOKMARK [1][-]{section.4.2}{Implementation of DSSR Strategy}{chapter.4}% 81
+\BOOKMARK [1][-]{section.4.3}{Evaluation}{chapter.4}% 82
+\BOOKMARK [2][-]{subsection.4.3.1}{Research Questions}{section.4.3}% 83
+\BOOKMARK [2][-]{subsection.4.3.2}{Experiments}{section.4.3}% 84
+\BOOKMARK [2][-]{subsection.4.3.3}{Performance Measurement Criteria}{section.4.3}% 85
+\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 86
+\BOOKMARK [2][-]{subsection.4.4.1}{Absolute Best in R, R+ and DSSR Strategies}{section.4.4}% 87
+\BOOKMARK [2][-]{subsection.4.4.2}{Classes For Which any of the Three Strategies Performs Better}{section.4.4}% 88
+\BOOKMARK [2][-]{subsection.4.4.3}{The Best Default Strategy in R, R+ and DSSR}{section.4.4}% 89
+\BOOKMARK [1][-]{section.4.5}{Discussion}{chapter.4}% 90
+\BOOKMARK [1][-]{section.4.6}{Related Work}{chapter.4}% 91
+\BOOKMARK [1][-]{section.4.7}{Summary}{chapter.4}% 92
+\BOOKMARK [0][-]{chapter.5}{Automated Discovery of Failure Domain}{}% 93
+\BOOKMARK [1][-]{section.5.1}{Introduction}{chapter.5}% 94
+\BOOKMARK [1][-]{section.5.2}{Automated Discovery of Failure Domain}{chapter.5}% 95
+\BOOKMARK [2][-]{subsection.5.2.1}{GUI Front-end for Providing Input}{section.5.2}% 96
+\BOOKMARK [2][-]{subsection.5.2.2}{Automated Finding of Failure}{section.5.2}% 97
+\BOOKMARK [2][-]{subsection.5.2.3}{Automated Generation of Modules}{section.5.2}% 98
+\BOOKMARK [2][-]{subsection.5.2.4}{Automated Compilation and Execution of Modules}{section.5.2}% 99
+\BOOKMARK [2][-]{subsection.5.2.5}{Automated Generation of Graph}{section.5.2}% 100
+\BOOKMARK [2][-]{subsection.5.2.6}{Implementation of ADFD Strategy}{section.5.2}% 101
+\BOOKMARK [2][-]{subsection.5.2.7}{Explanation of ADFD Strategy by Example}{section.5.2}% 102
+\BOOKMARK [1][-]{section.5.3}{Experimental Results}{chapter.5}% 103
+\BOOKMARK [1][-]{section.5.4}{Discussion}{chapter.5}% 104
+\BOOKMARK [1][-]{section.5.5}{Threats to Validity}{chapter.5}% 105
+\BOOKMARK [1][-]{section.5.6}{Related Work}{chapter.5}% 106
+\BOOKMARK [1][-]{section.5.7}{Summary}{chapter.5}% 107
+\BOOKMARK [0][-]{chapter.6}{Automated Discovery of Failure Domain+}{}% 108
+\BOOKMARK [1][-]{section.6.1}{Introduction}{chapter.6}% 109
+\BOOKMARK [1][-]{section.6.2}{Automated Discovery of Failure Domain+}{chapter.6}% 110
+\BOOKMARK [2][-]{subsection.6.2.1}{Implementation of ADFD+}{section.6.2}% 111
+\BOOKMARK [2][-]{subsection.6.2.2}{Workflow of ADFD+}{section.6.2}% 112
+\BOOKMARK [2][-]{subsection.6.2.3}{Example to Illustrate Working of ADFD+}{section.6.2}% 113
+\BOOKMARK [1][-]{section.6.3}{Evaluation}{chapter.6}% 114
+\BOOKMARK [2][-]{subsection.6.3.1}{Research Questions}{section.6.3}% 115
+\BOOKMARK [2][-]{subsection.6.3.2}{Randoop}{section.6.3}% 116
+\BOOKMARK [2][-]{subsection.6.3.3}{Experimental Setup}{section.6.3}% 117
+\BOOKMARK [1][-]{section.6.4}{Experimental Results}{chapter.6}% 118
+\BOOKMARK [2][-]{subsection.6.4.1}{Efficiency}{section.6.4}% 119
+\BOOKMARK [2][-]{subsection.6.4.2}{Effectiveness}{section.6.4}% 120
+\BOOKMARK [2][-]{subsection.6.4.3}{Presentation of Failure Domains}{section.6.4}% 121
+\BOOKMARK [1][-]{section.6.5}{Discussion}{chapter.6}% 122
+\BOOKMARK [1][-]{section.6.6}{Threats to Validity}{chapter.6}% 123
+\BOOKMARK [1][-]{section.6.7}{Related Work}{chapter.6}% 124
+\BOOKMARK [1][-]{section.6.8}{Summary}{chapter.6}% 125
+\BOOKMARK [0][-]{chapter.7}{Evaluation of ADFD and ADFD+ techniques}{}% 126
+\BOOKMARK [1][-]{section.7.1}{Enhancement of the Techniques}{chapter.7}% 127
+\BOOKMARK [1][-]{section.7.2}{Daikon}{chapter.7}% 128
+\BOOKMARK [2][-]{subsection.7.2.1}{Types of Invariants Detected by Daikon}{section.7.2}% 129
+\BOOKMARK [1][-]{section.7.3}{Difference in Working Mechanism of the Two Techniques}{chapter.7}% 130
+\BOOKMARK [1][-]{section.7.4}{Research Questions}{chapter.7}% 131
+\BOOKMARK [1][-]{section.7.5}{Evaluation}{chapter.7}% 132
+\BOOKMARK [2][-]{subsection.7.5.1}{Experiments}{section.7.5}% 133
+\BOOKMARK [2][-]{subsection.7.5.2}{Results}{section.7.5}% 134
+\BOOKMARK [1][-]{section.7.6}{Threats to Validity}{chapter.7}% 135
+\BOOKMARK [1][-]{section.7.7}{Related Work}{chapter.7}% 136
+\BOOKMARK [1][-]{section.7.8}{Summary}{chapter.7}% 137
+\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 138
+\BOOKMARK [1][-]{section.8.1}{Lessons Learned}{chapter.8}% 139
+\BOOKMARK [0][-]{chapter.9}{Future Work}{}% 140
+\BOOKMARK [0][-]{chapter*.72}{Appendix}{}% 141
+\BOOKMARK [0][-]{chapter*.73}{Glossary}{}% 142
+\BOOKMARK [0][-]{chapter*.73}{Bibliography}{}% 143

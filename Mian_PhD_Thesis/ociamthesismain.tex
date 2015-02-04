@@ -22,6 +22,7 @@
 \usepackage{tabu}
 \usepackage{longtable,tabu}
 \usepackage{glossaries}
+\usepackage{afterpage}
 \usepackage{epsfig}
 \usepackage{latexsym}
 \usepackage{enumerate}
@@ -139,11 +140,14 @@ showstringspaces=false}
 %\begin{spacing}{1.5}
 \clearpage\thispagestyle{empty}\null\newpage
 \doublespacing
- \linespread{1}
+ \linespread{0.7}
 \tableofcontents            % generate and include a table of contents
+
 \clearpage\thispagestyle{empty}\null\newpage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures  				  % generate and include a list of tables
 \clearpage\thispagestyle{empty}\null\newpage
+\addcontentsline{toc}{chapter}{\listtablename}
 \listoftables              % generate and include a list of figures
 \onehalfspacing
 \clearpage\thispagestyle{empty}\null\newpage
@@ -161,12 +165,13 @@ showstringspaces=false}
 %now include the files of latex for each of the chapters etc
 %\onehalfspacing
 %\doublespacing
-
+\pagenumbering{arabic}
 
 
 %\clearpage\thispagestyle{empty}\null\newpage
 \include{chapter1/chapter1}
 \include{chapter2/chapter2}
+\clearpage\thispagestyle{empty}\null\newpage
 \include{chapter3/chapter3}
 \include{chapter4/chapter4}
 \include{chapter5/chapter5}
@@ -178,9 +183,10 @@ showstringspaces=false}
 \clearpage\thispagestyle{empty}\null\newpage
 \include{chapter9/chapter9}
 
-
-\include{glossary1/glossary1}
 \include{appendix1/appendix1}
+\clearpage\thispagestyle{empty}\null\newpage
+\include{glossary1/glossary1}
+
 
 
 %\end{spacing}
